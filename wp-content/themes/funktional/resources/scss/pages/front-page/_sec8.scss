@@ -1,0 +1,78 @@
+.sec8 {
+    margin-top: 170px;
+    .opinion {
+        margin-top: 35px;
+        border: 1px solid #edeff5;
+        position: relative;
+        &:before {
+            content: "";
+            position: absolute;
+            width: 268px;
+            height: 268px;
+            background-image: url("../img/sec1-patern.png");
+            background-size: auto;
+            background-repeat: no-repeat;
+            bottom: -115px;
+            left: -223px;
+            z-index: -1;
+        }
+    }
+    .opinion-nav {
+        position: absolute;
+        width: 170px;
+        bottom: 40px;
+        right: 50px;
+        .swiper-button-next,
+        .swiper-button-prev {
+            &::after {
+                display: none;
+            }
+            width: 28px;
+            height: 25px;
+        }
+        .swiper-pagination {
+            color: #8d8d9a;
+            bottom: 0;
+            pointer-events: none;
+            font-weight: normal;
+            font-size: 16px;
+            .swiper-pagination-current {
+                color: $gold;
+            }
+        }
+        .swiper-button-next {
+            background-image: url("../img/arrow-slider.png");
+            background-repeat: no-repeat;
+            background-size: contain;
+        }
+        .swiper-button-prev {
+            background-image: url("../img/arrow-slider.png");
+            transform: rotate(-180deg);
+            background-repeat: no-repeat;
+            background-size: contain;
+        }
+    }
+    @media (max-width: 767px) {
+        margin-top: 70px;
+        .opinion {
+            margin-top: 30px;
+            .sec8-opinion {
+                padding-top: 30px;
+            }
+            &:before {
+                display: none;
+            }
+            &__content{
+                padding:20px 15px 60px 15px;
+            }
+        }
+        .opinion-nav {
+            position: relative;
+            bottom:15px;
+            left:5px;
+            right: auto;
+            width: 130px;
+            margin:0 auto;
+        }
+    }
+}

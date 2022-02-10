@@ -1,0 +1,102 @@
+.page-blog {
+    .ekspertRadzi {
+        .ekspertRadzi-header {
+            margin-top: 60px;
+            padding-bottom: 90px;
+            margin-bottom: 110px;
+            border-bottom: 1px solid #edeff5;
+            position: relative;
+            display: block;
+            .page-blog__header {
+                span {
+                    font-weight: bold;
+                    font-family: $font-main;
+                    font-style: initial;
+                    position: relative;
+                    color: $gold;
+                    &:before {
+                        content: "";
+                        height: 100px;
+                        width: 100px;
+                        position: absolute;
+                        right: -110px;
+                        top: 0;
+                        background-image: url(../img/blog/ico-ekspert.svg);
+                    }
+                }
+            }
+            &:before {
+                content: "";
+                position: absolute;
+                width: 268px;
+                height: 268px;
+                background-image: url(../img/sec1-patern.png);
+                background-size: auto;
+                background-repeat: no-repeat;
+                bottom: -206px;
+                right: -100px;
+                z-index: -1;
+                left: -330px;
+                top: 230px;
+            }
+        }
+        &__postList {
+            position: relative;
+            &:before {
+                content: "";
+                position: absolute;
+                width: 1px;
+                height: 100%;
+                right: -65px;
+                top: 0;
+                background-color: #edeff5;
+            }
+        }
+        &__loadMore {
+            margin-top: 80px;
+            cursor: pointer;
+        }
+        .slider-pytania.slider-blog {
+            margin-top: 120px;
+        }
+    }
+    @media (max-width: 991px) {
+        .ekspertRadzi {
+            .ekspertRadzi-header {
+                margin-top: 0;
+                padding-bottom: 40px;
+                margin-bottom: 40px;
+                .page-blog__header {
+                    span {
+                        &:before {
+                            content: "";
+                            height: 40px;
+                            width: 40px;
+                            right: -50px;
+                            background-size: contain;
+                        }
+                    }
+                }
+            }
+            &__posts {
+                .container {
+                    .row {
+                        flex-direction: column-reverse;
+                    }
+                }
+            }
+            &__postList {
+                margin-top: 30px;
+                &:before {
+                    display: none;
+                }
+            }
+            &__loadMore {
+                margin-top: 40px;
+            }
+            .slider-pytania.slider-blog {
+                margin-top: 40px;
+            }
+        }
+    }
+}

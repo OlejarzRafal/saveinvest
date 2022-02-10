@@ -1,0 +1,135 @@
+.page-searchResult {
+    padding-top: 150px;
+    &__header {
+        // margin-top:60px;
+    }
+    .slider-aktualnosci {
+        display: none;
+    }
+    .slider-authors {
+        margin-top: 120px;
+    }
+    .page-searchResult-top {
+        position: relative;
+        .blog-sec-header {
+            position: relative;
+            &:before {
+                content: "";
+                position: absolute;
+                width: 268px;
+                height: 268px;
+                background-image: url(../img/sec1-patern.png);
+                background-size: auto;
+                background-repeat: no-repeat;
+                bottom: -206px;
+                right: -100px;
+                z-index: -1;
+                left: -330px;
+                top: 100px;
+            }
+        }
+    }
+    .searchResults {
+        &__header {
+            padding-top: 60px;
+            margin-top: 70px;
+            border-top: 1px solid #edeff5;
+            h4 {
+                font-size: 32px;
+                font-weight: 700;
+                color: $dark-blue;
+                span {
+                    color: $gold;
+                }
+            }
+        }
+        &__postList {
+            margin-top: 50px;
+        }
+        &__post {
+            display: block;
+            border-bottom: 1px solid #edeff5;
+            padding: 50px 0;
+            transition: all 0.2s;
+            &:nth-child(1) {
+                border-top: none;
+            }
+        }
+        &__loadMore {
+            display: inline-block;
+            margin-top: 80px;
+            cursor: pointer;
+        }
+        &__postCpt {
+            font-size: 10px;
+            font-weight: 700;
+            text-transform: uppercase;
+            color: $gold;
+            letter-spacing: 0.1em;
+        }
+        &__postName {
+            font-weight: bold;
+            font-size: 26px;
+            color: $dark-blue;
+            margin-top: 20px;
+            transition: all 0.2s;
+            &:hover {
+                color: $gold;
+            }
+        }
+        &__postExcerpt {
+            font-size: 16px;
+            line-height: 160%;
+            color: #8d8d9a;
+        }
+    }
+    @media (max-width: 991px) {
+        padding-top: 70px;
+        .searchResults {
+            &__postName {
+                margin-top: 10px;
+                font-size: 22px;
+                line-height: normal;
+            }
+            &__postExcerpt {
+                font-size: 14px;
+                line-height: normal;
+            }
+            &__post {
+                padding: 40px 0;
+            }
+            &__header {
+                padding-top: 40px;
+                margin-top: 40px;
+                h4 {
+                    font-size: 22px;
+                    line-height: normal;
+                }
+            }
+            &__noPosts {
+                margin-top: 30px;
+                h4 {
+                    font-size: 22px;
+                    line-height: normal;
+                }
+            }
+            &__postList {
+                margin-top: 0;
+            }
+            &__loadMore {
+                margin-top: 40px;
+            }
+        }
+        .slider-authors {
+            margin-top: 40px;
+        }
+    }
+}
+
+.search-no-results .page-searchResult .slider-aktualnosci {
+    display: block;
+    margin-top: 150px;
+    @media (max-width: 991px) {
+        margin-top: 80px;
+    }
+}

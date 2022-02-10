@@ -1,0 +1,22 @@
+.post-terms {
+    font-size: 10px;
+    color: $gold;
+    font-weight: bold;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    span {
+        display: flex;
+        width: 3px;
+        height: 3px;
+        background-color: $gold;
+        margin: 0 6px;
+        border-radius: 50%;
+        &:last-child {
+            display: none;
+        }
+    }
+}
+

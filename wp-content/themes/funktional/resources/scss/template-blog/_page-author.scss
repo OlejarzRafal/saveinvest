@@ -1,0 +1,145 @@
+.page-author {
+    padding-top: 150px;
+    .author-header {
+        margin-top: 20px;
+        h1 {
+            color: $dark-blue;
+            font-size: 32px;
+            font-weight: 700;
+        }
+        &__wrapper {
+            margin-top: 40px;
+            display: flex;
+            align-items: flex-start;
+        }
+        &__img {
+            width: 166px;
+            height: 166px;
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                object-position: center;
+            }
+        }
+        .author-header-content {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            margin-left: 30px;
+            &__name {
+                color: $dark-blue;
+                font-size: 32px;
+                font-weight: 700;
+            }
+            &__position {
+                color: #8d8d9a;
+                margin-top: 5px;
+                letter-spacing: 0.1em;
+                text-transform: uppercase;
+                font-size: 10px;
+                font-weight: bold;
+            }
+            &__desc {
+                font-size: 14px;
+                line-height: 150%;
+                color: $dark-blue;
+                margin-top: 20px;
+            }
+        }
+    }
+    .author-posts {
+        &__header {
+            color: $dark-blue;
+            font-size: 32px;
+            font-weight: 700;
+            padding-top: 60px;
+            margin-top: 70px;
+            border-top: 1px solid #edeff5;
+        }
+        &__postList {
+            margin-top: 50px;
+        }
+        &__post {
+            display: block;
+            border-bottom: 1px solid #edeff5;
+            padding: 50px 0;
+            transition: all 0.2s;
+            &:nth-child(1) {
+                border-top: none;
+            }
+        }
+        &__postCpt {
+            font-size: 10px;
+            font-weight: 700;
+            text-transform: uppercase;
+            color: $gold;
+            letter-spacing: 0.1em;
+        }
+        &__postName {
+            font-weight: bold;
+            font-size: 26px;
+            color: $dark-blue;
+            margin-top: 20px;
+            transition: all 0.2s;
+            &:hover{
+                color:$gold;
+            }
+        }
+        &__postExcerpt {
+            font-size: 16px;
+            line-height: 160%;
+            color: #8d8d9a;
+        }
+    }
+    .slider-authors {
+        margin-top: 100px;
+    }
+    @media (max-width: 991px) {
+        padding-top: 70px;
+        .author-header {
+            &__wrapper {
+                margin-top: 20px;
+            }
+            &__img {
+                width: 100px;
+                height: 100px;
+                position: relative;
+                top: 6px;
+            }
+            .author-header-content {
+                margin-left: 15px;
+                &__name {
+                    font-size: 22px;
+                }
+                &__desc {
+                    margin-top: 10px;
+                }
+            }
+        }
+        .author-posts {
+            &__postList{
+                margin-top:0;
+            }
+            &__post{
+                padding:40px 0;
+            }
+            &__postName{
+                margin-top: 10px;
+                font-size: 22px;
+                line-height: normal;
+            }
+            &__postExcerpt {
+                font-size: 14px;
+                line-height: normal;
+            }
+            &__header {
+                padding-top: 40px;
+                margin-top: 40px;
+            }
+        }
+        .slider-authors{
+            margin-top:40px;
+        }
+    }
+}

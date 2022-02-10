@@ -1,0 +1,27 @@
+.page-blog {
+    padding-top: 150px;
+    color: $dark-blue;
+    &__header {
+        margin-top: 20px;
+        font-size: 70px;
+        font-weight: 700;
+        color: $dark-blue;
+        line-height: 79.2px;
+        margin-top: 20px;
+        span {
+            color: $gold;
+            font-style: italic;
+            font-weight: 400;
+            font-family: $font-main-serif;
+        }
+    }
+    @media (max-width: 991px) {
+        font-size:14px;
+        padding-top: 40px;
+        &__header {
+            margin-top: 0;
+            font-size: 32px;
+            line-height: normal;
+        }
+    }
+}
