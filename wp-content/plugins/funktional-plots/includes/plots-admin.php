@@ -4,7 +4,17 @@ class PlotsAdmin
 {
     function __construct()
     {
+        add_action('init', array($this, 'redirectToValidPlotsPage'));
         add_action('rest_api_init', array($this, 'addAdminPlotsApiRoute'));
+    }
+
+    public function redirectToValidPlotsPage () {
+        global $pagenow;
+
+        if ($pagenow === 'edit.php' && isset($_GET) && isset($_GET['post_type']) && $_GET['post_type'] === 'plots') {
+            wp_redirect(admin_url('/admin.php?page=plots'));
+            exit();
+        }
     }
 
     public function addAdminPlotsApiRoute()
@@ -46,7 +56,10 @@ class PlotsAdmin
             }
         }
 
-        $sql = "SELECT meta_key as name, GROUP_CONCAT(meta_value) as value FROM " . $wpdb->prefix . "postmeta WHERE meta_key IN (" . implode(',', $fieldsNames) . ") GROUP BY meta_key";
+        $sql = "SELECT pm.meta_key as name, GROUP_CONCAT(pm.meta_value) as value 
+                FROM " . $wpdb->prefix . "postmeta pm
+                INNER JOIN " . $wpdb->prefix . "posts p
+                WHERE p.post_status = 'publish' meta_key IN (" . implode(',', $fieldsNames) . ") GROUP BY pm.meta_key";
 
         $filtersValues = $wpdb->get_results($sql);
 
