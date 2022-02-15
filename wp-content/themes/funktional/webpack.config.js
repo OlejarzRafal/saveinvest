@@ -6,10 +6,14 @@ const BrowserSyncPlugin = require("browser-sync-webpack-plugin");
 const autoprefixer = require("autoprefixer");
 
 module.exports = {
-  entry: "./resources/js/index.js",
+  entry: {
+    // HERE YOU CAN ADD MORE BUNDLES FOR PAGES
+    main: './resources/js/main.js',
+    jaworek: './resources/js/jaworek.js',
+  },
   output: {
     path: path.resolve(__dirname, "./assets/js"),
-    filename: "main.js",
+    filename: "[name].js",
   },
   module: {
     rules: [
@@ -85,7 +89,8 @@ module.exports = {
   },
   plugins: [
     new MiniCssExtractPlugin({
-      filename: "../css/style.css",
+      filename: "../css/[name].css",
+      allChunks: true,
     }),
     new BrowserSyncPlugin({
       host: "localhost",
