@@ -58,8 +58,8 @@ class PlotsAdmin
 
         $sql = "SELECT pm.meta_key as name, GROUP_CONCAT(pm.meta_value) as value 
                 FROM " . $wpdb->prefix . "postmeta pm
-                INNER JOIN " . $wpdb->prefix . "posts p
-                WHERE p.post_status = 'publish' meta_key IN (" . implode(',', $fieldsNames) . ") GROUP BY pm.meta_key";
+                INNER JOIN " . $wpdb->prefix . "posts p ON p.ID = pm.post_id
+                WHERE p.post_status = 'publish' AND pm.meta_key IN (" . implode(',', $fieldsNames) . ") GROUP BY pm.meta_key";
 
         $filtersValues = $wpdb->get_results($sql);
 

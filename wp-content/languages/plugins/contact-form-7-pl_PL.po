@@ -1677,6 +1677,6 @@ msgid "Contact"
 msgstr "Kontakt"
 
 #. Plugin Name of the plugin
-#: admin/admin.php:29 modules/flamingo.php:208 includes/block-editor/index.js:1
+#: admin/admin.php:29 modules/flamingo.php:208 includes/block-editor/main.js:1
 msgid "Contact Form 7"
 msgstr "Contact Form 7"

@@ -1,3 +1,5 @@
+// HERE ARE MAIN PAGE IMPORTS
+
 import "../scss/style.scss";
 
 import "../js/components/scrollToDiv.js";
