@@ -3,7 +3,7 @@ function add_theme_assets()
 {
   //styles
   wp_enqueue_style('swipercss', get_template_directory_uri() . '/assets/vendors/swiper.min.css', false, 1, 'all');
-  wp_enqueue_style('style', get_template_directory_uri() . '/assets/css/style.css?ver2', false, 1, 'all');
+  wp_enqueue_style('style', get_template_directory_uri() . '/assets/css/main.css?ver2', false, 1, 'all');
 
   //script
   wp_deregister_script('jquery');
