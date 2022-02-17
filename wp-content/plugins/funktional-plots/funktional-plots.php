@@ -33,7 +33,7 @@ class FunktionalPlots
             )
         );
 
-       $this->registerInvestitionPagesCpt('investition-jaworek', 'Osada Jaworek');
+        $this->registerInvestitionPagesCpt('investition-jaworek', 'Osada Jaworek');
     }
 
     public function addInwestitionsMenuItem()
@@ -63,29 +63,21 @@ class FunktionalPlots
 
     public function getInvestitionTemplates($post_templates, $theme, $post, $post_type)
     {
-        $files = (array)FunktionalPlots::scandir(get_stylesheet_directory(), 'php', 3);
+        $files = (array)FunktionalPlots::scandir(get_stylesheet_directory(), 3);
 
-        foreach ($files as $file => $full_path) {
-            if(!is_string($full_path)) {
-                continue;
-            }
-            if (!preg_match('|Template Name:(.*)$|mi', file_get_contents($full_path), $header)) {
+        foreach ($files as $index => $file) {
+            if (!preg_match('|Template Name:(.*)$|mi', file_get_contents($file), $header)) {
                 continue;
             }
 
-            $types = array();
-            if (preg_match('|Template Post Type:(.*)$|mi', file_get_contents($full_path), $type)) {
-                $types = explode(',', _cleanup_header_comment($type[1]));
+            if (empty($header) || !preg_match('|Template Post Type:(.*)' . $post_type . '(.*)$|mi', file_get_contents($file))) {
+                continue;
             }
 
-            foreach ($types as $type) {
-                $type = sanitize_key($type);
-                if (!isset($post_templates[$type])) {
-                    $post_templates[$type] = array();
-                }
+            $templateName = str_replace('Template Name:', '', $header[0]);
+            $templateFile = str_replace(get_theme_file_path(), '', $file);
 
-                $post_templates[$type][$file] = _cleanup_header_comment($header[1]);
-            }
+            $post_templates[$post_type][$templateFile] = $templateName;
         }
 
         return $post_templates[$post_type];
@@ -101,7 +93,8 @@ class FunktionalPlots
         acf_add_local_field_group($plotsAcfArray);
     }
 
-    private function registerInvestitionPagesCpt($postType, $name) {
+    private function registerInvestitionPagesCpt($postType, $name)
+    {
         register_post_type($postType,
             array(
                 'labels' => array(
@@ -120,46 +113,34 @@ class FunktionalPlots
         add_filter('theme_' . $postType . '_templates', array($this, 'getInvestitionTemplates'), 1, 4);
     }
 
-    private static function scandir($path, $extensions = null, $depth = 0)
+    private static function scandir($path, $depth = 0)
     {
         if (!is_dir($path)) {
             return false;
         }
 
-        if ($extensions) {
-            $extensions = (array)$extensions;
-            $_extensions = implode('|', $extensions);
-        }
-
-        $relative_path = trailingslashit($relative_path);
-        if ('/' === $relative_path) {
-            $relative_path = '';
-        }
-
         $results = scandir($path);
         $files = array();
 
-        /**
-         * Filters the array of excluded directories and files while scanning theme folder.
-         *
-         * @param string[] $exclusions Array of excluded directories and files.
-         * @since 4.7.4
-         *
-         */
-        $exclusions = (array)apply_filters('theme_scandir_exclusions', array('CVS', 'node_modules', 'vendor', 'bower_components'));
-
         foreach ($results as $result) {
-            if ('.' === $result[0] || in_array($result, $exclusions, true)) {
+            if ('.' === $result[0]) {
                 continue;
             }
+
             if (is_dir($path . '/' . $result)) {
                 if (!$depth) {
                     continue;
                 }
-                $found = self::scandir($path . '/' . $result, $extensions, $depth - 1, $relative_path . $result);
-                $files = array_merge_recursive($files, $found);
-            } elseif (!$extensions || preg_match('~\.(' . $_extensions . ')$~', $result)) {
-                $files[$relative_path . $result] = $path . '/' . $result;
+
+                $files = array_merge_recursive($files, self::scandir($path . '/' . $result, $depth - 1));
+            } else {
+                $fileParts = explode('.', $result);
+
+                if (array_pop($fileParts) !== 'php') {
+                    continue;
+                }
+
+                $files[] = $path . '/' . $result;
             }
         }
 
