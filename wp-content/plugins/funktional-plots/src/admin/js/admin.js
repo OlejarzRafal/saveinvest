@@ -3,9 +3,6 @@ import toastr from 'toastr';
 import DoubleSlider from 'double-slider';
 
 class FunktionalPlotsService {
-    constructor() {
-    }
-
     getFiltersValues() {
         return $.post('/wp-json/funktional-plots/v1/filters');
     }

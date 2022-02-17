@@ -27,7 +27,6 @@ gulp.task('front-sass', () => {
         .pipe(sass())
         .pipe(autoprefixer())
         .pipe(minifyCss())
-        .pipe(sourcemaps.write('.', {}))
         .pipe(concat('front.css'))
         .pipe(gulp.dest(distFolder + '/front/css'))
         .pipe(browserSync.stream());
