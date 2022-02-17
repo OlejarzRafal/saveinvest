@@ -33,7 +33,8 @@ class FunktionalPlots
             )
         );
 
-        $this->registerInvestitionPagesCpt('investition-jaworek', 'Osada Jaworek');
+        $this->registerInvestitionPagesCpt('osada-jaworek', 'Osada Jaworek');
+        $this->registerInvestitionPagesCpt('enklawa-dziwnowek', 'Enklawa Dziwnówek');
     }
 
     public function addInwestitionsMenuItem()

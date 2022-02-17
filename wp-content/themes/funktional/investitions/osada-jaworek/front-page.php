@@ -1,7 +1,7 @@
 <?php
 /**
 * Template Name: Strona główna
-* Template Post Type: investition-jaworek
+* Template Post Type: osada-jaworek
 */
 
 wp_head();
