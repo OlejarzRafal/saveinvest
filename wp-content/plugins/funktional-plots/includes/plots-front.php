@@ -2,6 +2,12 @@
 
 class PlotsFront
 {
+    public function getScriptsAndStyles($investitionName) {
+        echo '<script> window.funktionalPlots = ' . json_encode($this->getPlotsForInvestition($investitionName)) . '</script>';
+        echo '<link rel="stylesheet" href="'. home_url('/wp-content/plugins/funktional-plots/dist/front/css/front.css') .'">';
+        echo '<script src="'. home_url('/wp-content/plugins/funktional-plots/dist/front/js/front.js') .'"></script>';
+    }
+
     public function getPlotsForInvestition($investitionName)
     {
         $plotsPosts = get_posts(array(
@@ -33,24 +39,30 @@ class PlotsFront
                 $plotsData[$index][$field['name']] = get_field($field['name'], $plotPost->ID);
             }
 
-            $plotsData[$index]['priceBrutto'] = $this->calculatePlotPriceBrutto($plotsData[$index]);
+            $plotsData[$index] = $this->calculatePlotPrices($plotsData[$index]);
         }
 
         return $plotsData;
     }
 
-    private function calculatePlotPriceBrutto($plotData)
+    private function calculatePlotPrices($plotData)
     {
-        $priceBrutto = 0;
         $investition = $plotData['investition']['value'];
 
         switch ($investition) {
-            case 'Osada Jaworek':
-                $priceBrutto = (int) $plotData['priceNetto'] * 1.23;
+            case 'INVESTITION':
+                // TODO do something special for some investitions!
+                break;
+            default:
+                $plotData['area'] = (int) $plotData['area'];
+                $plotData['priceNetto'] = (int) $plotData['priceNetto'];
+                $plotData['priceBrutto'] = $plotData['priceNetto'] * 1.23;
+                $plotData['priceRate'] = $plotData['priceBrutto'] / 24;
+                $plotData['priceByM2'] = $plotData['priceBrutto'] / $plotData['area'];
                 break;
         }
 
-        return $priceBrutto;
+        return $plotData;
     }
 }
 
