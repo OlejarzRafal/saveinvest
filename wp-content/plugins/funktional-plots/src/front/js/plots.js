@@ -1,6 +1,6 @@
 class FunktionalPlotsMap {
     constructor() {
-        if(!window.funktionalPlots || typeof window.funktionalPlots !== 'object') {
+        if (!window.funktionalPlots || typeof window.funktionalPlots !== 'object') {
             console.error('funktionalPlots data not found!');
             return;
         }
@@ -11,6 +11,7 @@ class FunktionalPlotsMap {
         this.sector = null;
         this.plots = null;
         this.plotSelected = null;
+        this.plotInfoModal = $('[data-plots-info]');
 
         this.initSectorsEvents();
         this.setPlotsStatus();
@@ -25,6 +26,14 @@ class FunktionalPlotsMap {
             this.initPlotsEvent();
         }
 
+        this.plotInfoModal.find('[data-plots-info-close]').click((event) => {
+            if(event) {
+                event.preventDefault();
+            }
+            this.hidePlotInfo(true)
+        });
+        this.plotInfoModal.find('[data-plots-info-next]').click(this.showNextPlotInfo.bind(this));
+        this.plotInfoModal.find('[data-plots-info-prev]').click(this.showPrevPlotInfo.bind(this));
         this.mainMap.find('[data-plots-back-to-sectors]').click(this.handleBackToMainMap.bind(this));
     }
 
@@ -73,7 +82,7 @@ class FunktionalPlotsMap {
                 plotEl = $(this.sector).find(`[data-plots-plot="${plot.plotNr}"]`)
             }
 
-            if(plotEl && plotEl.length) {
+            if (plotEl && plotEl.length) {
                 plotEl.addClass(`plot-status--${plot.status.value}`);
             } else {
                 console.log(`plot ${plot} element not found!`);
@@ -122,13 +131,115 @@ class FunktionalPlotsMap {
             this.plotSelected = plotData;
         }
 
-        console.log('plotData', plotData);
+        this.prepareInfoModalForPlot(plotData);
+        this.plotInfoModal.show();
+    }
+
+    showNextPlotInfo(event) {
+        if (event) {
+            event.preventDefault();
+        }
+
+        this.showPlotInfo((parseInt(this.plotSelected.plotNr) + 1).toString(), true);
+    }
+
+    showPrevPlotInfo(event) {
+        if (event) {
+            event.preventDefault();
+        }
+
+        this.showPlotInfo((parseInt(this.plotSelected.plotNr) - 1).toString(), true);
     }
 
     hidePlotInfo(withSelected) {
         if (withSelected) {
             this.plotSelected = null;
+        } else if (this.plotSelected) {
+            return;
         }
+
+        this.plotInfoModal.hide();
+    }
+
+    prepareInfoModalForPlot(plotData) {
+        this.prepareInfoModalConditionalElementsForPlot(plotData);
+        this.prepareInfoModalParamElementsForPlot(plotData);
+
+        // TODO set src to plot preview
+        $('[data-plots-info-image]').attr('src', '');
+
+        $('[data-plots-info-on-selected]')[this.plotSelected ? 'show' : 'hide']();
+
+        const prevPlot = window.funktionalPlots.find((plot) => plot.plotNr === (parseInt(plotData.plotNr) - 1).toString());
+        const nextPlot = window.funktionalPlots.find((plot) => plot.plotNr === (parseInt(plotData.plotNr) + 1).toString());
+
+        this.plotInfoModal.find('[data-plots-info-prev]')[prevPlot ? 'show' : 'hide']();
+        this.plotInfoModal.find('[data-plots-info-next]')[nextPlot ? 'show' : 'hide']();
+    }
+
+    prepareInfoModalConditionalElementsForPlot(plotData) {
+        const conditionalElements = this.plotInfoModal.find('[data-plots-info-show-if]');
+
+        if (!conditionalElements || !conditionalElements.length) {
+            return;
+        }
+        conditionalElements.hide();
+
+        conditionalElements.toArray().forEach(element => {
+            let condition = $(element).attr('data-plots-info-show-if');
+
+            if (condition.includes('=')) {
+                condition = condition.split('=');
+
+                if (plotData[condition[0]]) {
+                    const plotConditionData = plotData[condition[0]];
+
+                    if (typeof plotConditionData === 'object') {
+                        if (plotConditionData.value === condition[1]) {
+                            $(element).show();
+                        }
+                    } else if (plotConditionData === condition[1]) {
+                        $(element).show();
+                    }
+                }
+            } else if (plotData[condition]) {
+                $(element).show();
+            }
+        })
+    }
+
+    prepareInfoModalParamElementsForPlot(plotData) {
+        const paramElements = this.plotInfoModal.find('[data-plots-info-param]');
+
+        if (!paramElements || !paramElements.length) {
+            return;
+        }
+
+        paramElements.toArray().forEach(paramElement => {
+            const param = $(paramElement).attr('data-plots-info-param');
+            const conditionAbove = $(paramElement).closest('[data-plots-info-show-if]');
+
+            if(conditionAbove.css('display') === 'none') {
+                $(paramElement).text('');
+                return;
+            }
+
+            const getPlotDataParam = (plotParamData) => {
+                if (!plotParamData) {
+                    return '';
+                }
+
+                return typeof plotParamData === 'object' ? plotParamData.label : plotParamData;
+            }
+
+            if(param.includes('|')) {
+                const params = param.split('|');
+
+                $(paramElement).text(params.map((param) => getPlotDataParam(plotData[param])).join(''));
+            } else {
+                $(paramElement).text(getPlotDataParam(plotData[param]));
+            }
+        })
     }
 }
 

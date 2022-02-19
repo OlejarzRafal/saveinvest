@@ -11,13 +11,22 @@
     z-index: 1;
   }
 
-  img {
+  [data-plots-info] {
+    display: none;
+    position: absolute;
+    left: 100px;
+    top: 100px;
+    z-index: 3;
+    background: #ffffff;
+  }
+
+  [data-plots-sector] > img, [data-plots-sectors] > img {
     position: absolute;
     left: 0;
     top: 0;
   }
 
-  svg {
+  [data-plots-sector] > svg, [data-plots-sectors] > svg {
     position: relative;
     z-index: 1;
 
