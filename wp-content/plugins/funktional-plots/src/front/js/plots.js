@@ -1,13 +1,19 @@
 class FunktionalPlotsMap {
     constructor() {
+        if(!window.funktionalPlots || typeof window.funktionalPlots !== 'object') {
+            console.error('funktionalPlots data not found!');
+            return;
+        }
+
         this.mainMap = $('[data-plots-map]');
         this.sectorsSelection = $('[data-plots-sectors]');
         this.sectors = $('[data-plots-sector]');
         this.sector = null;
         this.plots = null;
-        this.plotInfoShowed = false;
+        this.plotSelected = null;
 
         this.initSectorsEvents();
+        this.setPlotsStatus();
     }
 
     initSectorsEvents() {
@@ -18,6 +24,8 @@ class FunktionalPlotsMap {
             this.sector.show();
             this.initPlotsEvent();
         }
+
+        this.mainMap.find('[data-plots-back-to-sectors]').click(this.handleBackToMainMap.bind(this));
     }
 
     initPlotsEvent() {
@@ -34,19 +42,43 @@ class FunktionalPlotsMap {
 
                 if (event.type === 'click') {
                     this.showPlotInfo(plotNumber, true);
-                } else if (!this.plotInfoShowed) {
+                } else if (!this.plotSelected) {
                     this.showPlotInfo(plotNumber, false);
                 }
             } else {
-                console.error('Selected plot has wrong attribute!')
+                console.error('Selected plot has wrong attribute! Event:', event)
             }
         });
 
         this.plots.on('mouseout blur', () => {
-            if (!this.plotInfoShowed) {
+            if (!this.plotSelected) {
                 this.hidePlotInfo();
             }
         });
+    }
+
+    setPlotsStatus() {
+        window.funktionalPlots.forEach((plot) => {
+            let plotEl;
+
+            if (plot.sector && plot.sector.value) {
+                const sectorEl = $(`[data-plots-sector="${plot.sector.value}"]`);
+
+                if (sectorEl && sectorEl.length) {
+                    plotEl = sectorEl.find(`[data-plots-plot="${plot.plotNr}"]`)
+                } else {
+                    console.log(`sector element for plot ${plot} not found!`);
+                }
+            } else if (this.sector) {
+                plotEl = $(this.sector).find(`[data-plots-plot="${plot.plotNr}"]`)
+            }
+
+            if(plotEl && plotEl.length) {
+                plotEl.addClass(`plot-status--${plot.status.value}`);
+            } else {
+                console.log(`plot ${plot} element not found!`);
+            }
+        })
     }
 
     handleSelectSector(event) {
@@ -61,30 +93,42 @@ class FunktionalPlotsMap {
                 this.plots = this.sector.find('[data-plots-plot]');
                 this.initPlotsEvent();
             } else {
-                console.error('Sector was not found!');
+                console.error(`Sector ${sector} was not found!`);
             }
         } else {
-            console.error('Selected sector has wrong attribute!');
+            console.error(`Selected ${sector} sector has wrong attribute!`);
         }
     }
 
-    showPlotInfo(plotNr, stayOnBlur) {
+    handleBackToMainMap(event) {
+        if (event) {
+            event.preventDefault();
+        }
+
+        this.sector.hide();
+        this.sector = null;
+        this.sectorsSelection.show();
+    }
+
+    showPlotInfo(plotNr, selectPlot) {
         const plotData = window.funktionalPlots.find((plot) => plot.plotNr === plotNr);
 
         if (!plotData) {
-            console.error('Plot data not found!');
+            console[selectPlot ? 'error' : 'warn'](`Plot ${plotNr} data not found!`);
             return;
         }
 
-        if (stayOnBlur) {
-            this.plotInfoShowed = true;
+        if (selectPlot) {
+            this.plotSelected = plotData;
         }
 
         console.log('plotData', plotData);
     }
 
-    hidePlotInfo() {
-        this.plotInfoShowed = false;
+    hidePlotInfo(withSelected) {
+        if (withSelected) {
+            this.plotSelected = null;
+        }
     }
 }
 
