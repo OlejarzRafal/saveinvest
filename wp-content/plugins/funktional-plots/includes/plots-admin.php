@@ -19,6 +19,8 @@ class PlotsAdmin
 
     public function addAdminPlotsApiRoute()
     {
+        // TODO add security to this endpoints
+
         register_rest_route('funktional-plots/v1', '/filters', array(
             'methods' => 'POST',
             'callback' => array($this, 'getFiltersValues'),

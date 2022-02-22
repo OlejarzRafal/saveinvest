@@ -4,16 +4,16 @@ import DoubleSlider from 'double-slider';
 
 class FunktionalPlotsService {
     getFiltersValues() {
-        return $.post('/wp-json/funktional-plots/v1/filters');
+        return $.post(`${window.FunktionalGlobals.homeUrl}wp-json/funktional-plots/v1/filters`);
     }
 
     getPlots(filters) {
-        return $.post('/wp-json/funktional-plots/v1/plots', {filters});
+        return $.post(`${window.FunktionalGlobals.homeUrl}wp-json/funktional-plots/v1/plots`, {filters});
     }
 
     updatePlot(data) {
         return $.ajax({
-            url: '/wp-json/funktional-plots/v1/update',
+            url: `${window.FunktionalGlobals.homeUrl}wp-json/funktional-plots/v1/update`,
             method: 'PUT',
             data: { data }
         });
@@ -21,7 +21,7 @@ class FunktionalPlotsService {
 
     updatePlots(data) {
         return $.ajax({
-            url: '/wp-json/funktional-plots/v1/update-multiple',
+            url: `${window.FunktionalGlobals.homeUrl}wp-json/funktional-plots/v1/update-multiple`,
             method: 'PUT',
             data: { data }
         });

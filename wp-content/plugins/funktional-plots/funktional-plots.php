@@ -18,6 +18,8 @@ class FunktionalPlots
         $this->addAcfFields();
         add_action('admin_menu', array($this, 'addInwestitionsMenuItem'));
         add_action('init', array($this, 'registerInwestitionsCpt'));
+        add_action('wp_head', array($this, 'setFunktionalJsGlobals'));
+        add_action('admin_head', array($this, 'setFunktionalJsGlobals'));
     }
 
     public function registerInwestitionsCpt()
@@ -83,6 +85,15 @@ class FunktionalPlots
         }
 
         return $post_templates[$post_type];
+    }
+
+    public function setFunktionalJsGlobals() {
+        echo '<script>
+                window.FunktionalGlobals = {
+                    homeUrl: "'. home_url('/') .'",
+                    adminUrl: "'. admin_url('/') .'"
+                };
+            </script>';
     }
 
     private function addAcfFields()
