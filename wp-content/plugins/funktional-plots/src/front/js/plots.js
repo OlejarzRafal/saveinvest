@@ -117,6 +117,7 @@ class FunktionalPlotsMap {
         this.sector.hide();
         this.sector = null;
         this.sectorsSelection.show();
+        this.hidePlotInfo(true);
     }
 
     showPlotInfo(plotNr, selectPlot) {
