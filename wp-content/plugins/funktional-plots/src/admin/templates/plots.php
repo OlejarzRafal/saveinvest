@@ -6,7 +6,8 @@
         <div id="wpbody-content">
             <div class="wrap">
                 <h1 class="wp-heading-inline">Ceny działek</h1>
-                <a href="http://saveinvest.local/wp-admin/post-new.php?post_type=plots"
+                
+                <a href="<?= home_url('/wp-admin/post-new.php?post_type=plots') ?>"
                    class="page-title-action" target="_blank">Dodaj nową działkę</a>
 
                 <hr class="wp-header-end">
