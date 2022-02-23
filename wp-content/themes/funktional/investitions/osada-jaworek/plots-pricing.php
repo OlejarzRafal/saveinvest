@@ -101,6 +101,46 @@ $PlotsFront->getScriptsAndStyles('Osada Jaworek');
     </div>
 </section>
 
+<section class="plots-list" data-plot-list>
+  <h2>Lista działek</h2>
+
+    <select data-plot-list-filter="sector">
+    </select>
+
+    <div class="plot-list__sorting">
+        <div class="plot-list__sorting__item">
+            <span>Numer działki</span>
+            <div class="plot-list__sorting__item__direction">
+                <button class="asc" data-plot-list-sort="plotNr|asc"></button>
+                <button class="desc" data-plot-list-sort="plotNr|desc"></button>
+            </div>
+        </div>
+        <div class="plot-list__sorting__item">
+            <span>Cena</span>
+            <div class="plot-list__sorting__item__direction">
+                <button class="asc" data-plot-list-sort="priceNetto|asc"></button>
+                <button class="desc" data-plot-list-sort="priceNetto|desc"></button>
+            </div>
+        </div>
+        <div class="plot-list__sorting__item">
+            <span>Powierzchnia</span>
+            <div class="plot-list__sorting__item__direction">
+                <button class="asc" data-plot-list-sort="area|asc"></button>
+                <button class="desc" data-plot-list-sort="area|desc"></button>
+            </div>
+        </div>
+        <div class="plot-list__sorting__item">
+            <span>Typ działki</span>
+            <div class="plot-list__sorting__item__direction">
+                <button class="asc" data-plot-list-sort="plot_type|asc"></button>
+                <button class="desc" data-plot-list-sort="plot_type|desc"></button>
+            </div>
+        </div>
+
+
+    </div>
+</section>
+
 <?php
 wp_footer();
 ?>
