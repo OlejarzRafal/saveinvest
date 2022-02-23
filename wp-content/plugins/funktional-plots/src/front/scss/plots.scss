@@ -104,4 +104,9 @@
       }
     }
   }
+
+  [data-plot-list-plot-template],
+  [data-plot-list-baner-template] {
+    display: none !important;
+  }
 }
