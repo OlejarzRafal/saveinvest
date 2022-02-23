@@ -1,7 +1,7 @@
 <?php
 
 /**
- * @package Murami
+ * @package SaveInvest
  */
 ?>
 <!DOCTYPE html>
@@ -17,7 +17,7 @@
     <?php wp_head(); ?>
 </head>
 
-<body <?php body_class(); ?>>
+<body class="test <?php echo is_page_template();?>">
     <!-- Preload -->
     <!-- <div class="fullpage-loader">
         <div class="fullpage-loader__logo">

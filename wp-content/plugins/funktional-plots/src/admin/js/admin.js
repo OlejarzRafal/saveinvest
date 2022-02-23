@@ -177,7 +177,7 @@ class FunktionalPlots {
                             <td class="column-primary"><button data-save-plot class="button action">Zapisz</button></td>
                             <td class="column-primary">
                                 <a class="button action" 
-                                    href="/wp-admin/post.php?action=edit&post=${params.postId}"
+                                    href="${window.FunktionalGlobals.homeUrl}wp-admin/post.php?action=edit&post=${params.postId}"
                                     target="_blank">Edytuj działkę</a>
                             </td>
                         </tr>` : '';
