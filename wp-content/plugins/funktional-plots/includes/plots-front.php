@@ -2,10 +2,11 @@
 
 class PlotsFront
 {
-    public function getScriptsAndStyles($investitionName) {
+    public function getScriptsAndStyles($investitionName)
+    {
         echo '<script> window.FunktionalPlots = ' . json_encode($this->getPlotsForInvestition($investitionName)) . '</script>';
-        echo '<link rel="stylesheet" href="'. home_url('/wp-content/plugins/funktional-plots/dist/front/css/front.css?') . filemtime(__DIR__.'/../dist/front/css/front.css') .'">';
-        echo '<script src="'. home_url('/wp-content/plugins/funktional-plots/dist/front/js/front.js?') . filemtime(__DIR__.'/../dist/front/js/front.js') . '"></script>';
+        echo '<link rel="stylesheet" href="' . home_url('/wp-content/plugins/funktional-plots/dist/front/css/front.css?') . filemtime(__DIR__ . '/../dist/front/css/front.css') . '">';
+        echo '<script src="' . home_url('/wp-content/plugins/funktional-plots/dist/front/js/front.js?') . filemtime(__DIR__ . '/../dist/front/js/front.js') . '"></script>';
     }
 
     public function getPlotsForInvestition($investitionName)
@@ -39,7 +40,7 @@ class PlotsFront
                 $plotsData[$index][$field['name']] = get_field($field['name'], $plotPost->ID);
 
                 if ($field['type'] === 'number') {
-                    $plotsData[$index][$field['name']] = (float) $plotsData[$index][$field['name']];
+                    $plotsData[$index][$field['name']] = (float)$plotsData[$index][$field['name']];
                 }
             }
 
@@ -58,8 +59,8 @@ class PlotsFront
                 // TODO do something special for some investitions!
                 break;
             default:
-                $plotData['area'] = (int) $plotData['area'];
-                $plotData['priceNetto'] = (int) $plotData['priceNetto'];
+                $plotData['area'] = (int)$plotData['area'];
+                $plotData['priceNetto'] = (int)$plotData['priceNetto'];
                 $plotData['priceBrutto'] = $plotData['priceNetto'] * 1.23;
                 $plotData['priceRate'] = $plotData['priceBrutto'] / 24;
                 $plotData['priceByM2'] = $plotData['priceBrutto'] / $plotData['area'];

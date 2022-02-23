@@ -4,11 +4,11 @@
 * Template Post Type: ostoja-kladno
 */
 
-wp_head();
+get_template_part('investitions/ostoja-kladno/header');
 ?>
 
 Strona główna kładno
 
 <?php
-wp_footer();
+get_template_part('investitions/ostoja-kladno/footer');
 ?>

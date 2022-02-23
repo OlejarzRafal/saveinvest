@@ -4,11 +4,11 @@
 * Template Post Type: osada-jaworek
 */
 
-wp_head();
+get_template_part('investitions/osada-jaworek/header');
 ?>
 
 Strona główna osady jaworek!
 
 <?php
-wp_footer();
+get_template_part('investitions/osada-jaworek/footer');
 ?>

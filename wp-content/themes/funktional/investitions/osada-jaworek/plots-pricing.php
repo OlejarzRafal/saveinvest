@@ -4,7 +4,7 @@
  * Template Post Type: osada-jaworek
  */
 
-wp_head();
+get_template_part('investitions/osada-jaworek/header');
 global $PlotsFront;
 
 $PlotsFront->getScriptsAndStyles('Osada Jaworek');
@@ -212,5 +212,5 @@ $PlotsFront->getScriptsAndStyles('Osada Jaworek');
 </div>
 
 <?php
-wp_footer();
+get_template_part('investitions/osada-jaworek/footer');
 ?>
