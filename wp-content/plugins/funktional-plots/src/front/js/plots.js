@@ -139,7 +139,7 @@ class FunktionalPlotsMap {
             event.preventDefault();
         }
 
-        this.showPlotInfo((parseInt(this.plotSelected.plotNr) + 1).toString(), true);
+        this.showPlotInfo(this.plotSelected.plotNr + 1, true);
     }
 
     showPrevPlotInfo(event) {
@@ -147,7 +147,7 @@ class FunktionalPlotsMap {
             event.preventDefault();
         }
 
-        this.showPlotInfo((parseInt(this.plotSelected.plotNr) - 1).toString(), true);
+        this.showPlotInfo(this.plotSelected.plotNr - 1, true);
     }
 
     hidePlotInfo(withSelected) {
@@ -169,8 +169,8 @@ class FunktionalPlotsMap {
 
         $('[data-plots-info-on-selected]')[this.plotSelected ? 'show' : 'hide']();
 
-        const prevPlot = window.FunktionalPlots.find((plot) => plot.plotNr === (parseInt(plotData.plotNr) - 1).toString());
-        const nextPlot = window.FunktionalPlots.find((plot) => plot.plotNr === (parseInt(plotData.plotNr) + 1).toString());
+        const prevPlot = window.FunktionalPlots.find((plot) => plot.plotNr === (plotData.plotNr - 1));
+        const nextPlot = window.FunktionalPlots.find((plot) => plot.plotNr === (plotData.plotNr + 1));
 
         this.plotInfoModal.find('[data-plots-info-prev]')[prevPlot ? 'show' : 'hide']();
         this.plotInfoModal.find('[data-plots-info-next]')[nextPlot ? 'show' : 'hide']();
@@ -200,6 +200,12 @@ class FunktionalPlotsMap {
                     } else if (plotConditionData === condition[1]) {
                         $(element).show();
                     }
+                }
+            } else if(condition[0] === '!') {
+                condition = condition.replace('!', '');
+
+                if (!plotData[condition]) {
+                    $(element).show();
                 }
             } else if (plotData[condition]) {
                 $(element).show();

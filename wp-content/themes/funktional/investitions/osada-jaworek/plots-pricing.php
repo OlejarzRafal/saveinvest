@@ -13,15 +13,14 @@ $PlotsFront->getScriptsAndStyles('Osada Jaworek');
 <section class="plots-map" data-plots-map>
     <div data-plots-info class="plotModal">
         <div class="plotModal-arrows" data-plots-info-on-selected>
-            <button data-plots-info-prev class="plotModal-arrows__prev active"></button>
-            <button data-plots-info-next class="plotModal-arrows__next active"></button>
+            <button data-plots-info-prev class="plotModal-arrows__prev"></button>
+            <button data-plots-info-next class="plotModal-arrows__next"></button>
         </div>
         <button data-plots-info-on-selected
-                data-plots-info-close class="plotModal-close active"></button>
+                data-plots-info-close class="plotModal-close"></button>
 
         <div class="plotModal-discount d-none" data-plots-info-show-if="discount">
-            <div>TANIEJ O <span data-plots-info-param="discount"></span> ZŁ
-            </div>
+            <div>TANIEJ O <span data-plots-info-param="discount"></span> ZŁ</div>
         </div>
         <div class="row">
             <figure class="plotModal-img">
@@ -31,35 +30,43 @@ $PlotsFront->getScriptsAndStyles('Osada Jaworek');
                 <div class="row">
                     <div class="plotModal-top">
                         <div class="plotModal-top__nr">
-                            <p data-plots-info-param="sector|plotNr">D3</p>
+                            <p data-plots-info-param="sector|plotNr">=</p>
                         </div>
                         <div class="plotModal-top__status">
-                            <img class="status-ico" data-plots-info-show-if="status=wolna"
-                                 src="https://osadajaworek.pl/1/wp-content/themes/starter/assets/img/prices/status-wolna.png">
-                            <p data-plots-info-param="status">wolna</p>
+                            <div data-plots-info-show-if="status=wolna">
+                                <img class="status-ico"
+                                     src="https://osadajaworek.pl/1/wp-content/themes/starter/assets/img/prices/status-wolna.png">
+                                <p>Wolna</p>
+                            </div>
+                            <div data-plots-info-show-if="status=sprzedana">
+                                <img class="status-ico"
+                                     src="https://osadajaworek.pl/1/wp-content/themes/starter/assets/img/prices/status-wolna.png">
+                                <p>Sprzedana</p>
+                            </div>
+                            <div data-plots-info-show-if="status=zarezerwowana">
+                                <img class="status-ico"
+                                     src="https://osadajaworek.pl/1/wp-content/themes/starter/assets/img/prices/status-wolna.png">
+                                <p>Zarezerwowana</p>
+                            </div>
                         </div>
                     </div>
                 </div>
                 <div class="row">
                     <div class="plotModal-left">
-                        <div>Typ działki:</div>
-                        <div>Powierzchnia:</div>
-                        <div class="plotModal-left__price" data-plots-info-show-if="status=wolna">Cena
-                            <span>brutto</span>:
-                        </div>
-                        <div class="plotModal-left__rate" data-plots-info-show-if="status=wolna">
-                            <span>lub miesięcznie:</span></div>
+                        <p class="plotModal-left__type">Typ działki:</p>
+                        <p class="plotModal-left__surface">Powierzchnia:</p>
+                        <p class="plotModal-left__price" data-plots-info-show-if="status=wolna">Cena brutto:</p>
+                        <p class="plotModal-left__rate" data-plots-info-show-if="status=wolna">lub miesięcznie:</p>
                     </div>
                     <div class="plotModal-right">
-                        <p class="plot-type" data-plots-info-param="plot_type">Budowlana</p>
-                        <p class="plotModal-right__surface" data-plots-info-param="area">1046 m<sup>2</sup></p>
+                        <p class="plotModal-right__type" data-plots-info-param="plot_type">Budowlana</p>
+                        <p class="plotModal-right__surface"><span data-plots-info-param="area"></span>m<sup>2</sup></p>
                         <div class="plotModal-right__price" data-plots-info-show-if="status=wolna">
-                            <p data-plots-info-param="area">167360 zł</p>
-                            <span class="plot-priceBeforeSales-JS d-none">167360 zł</span>
+                            <p><span data-plots-info-param="priceBrutto"></span> zł</p>
                         </div>
                         <div class="plotModal-right__rate" data-plots-info-show-if="status=wolna">
-                            <p class="plot-rate-JS">brak możliwości zakupu na raty</p>
-                            <span class="plot-rateBeforeSales-JS d-none"></span>
+                            <p data-plots-info-show-if="!rate">brak możliwości zakupu na raty</p>
+                            <p data-plots-info-show-if="rate"><span data-plots-info-param="rate"></span></p>
                         </div>
                     </div>
                 </div>
@@ -102,10 +109,9 @@ $PlotsFront->getScriptsAndStyles('Osada Jaworek');
 </section>
 
 <section class="plots-list" data-plot-list>
-  <h2>Lista działek</h2>
+    <h2>Lista działek</h2>
 
-    <select data-plot-list-filter="sector">
-    </select>
+    <select data-plot-list-filter="sector"></select>
 
     <div class="plot-list__sorting">
         <div class="plot-list__sorting__item">
@@ -136,9 +142,17 @@ $PlotsFront->getScriptsAndStyles('Osada Jaworek');
                 <button class="desc" data-plot-list-sort="plot_type|desc"></button>
             </div>
         </div>
+    </div>
 
+    <div data-plot-list-plot-template>
 
     </div>
+
+    <div data-plot-list-baner-template>
+
+    </div>
+
+    <div data-plot-list-container></div>
 </section>
 
 <?php
