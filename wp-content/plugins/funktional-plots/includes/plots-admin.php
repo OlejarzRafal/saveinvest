@@ -185,7 +185,7 @@ class PlotsAdmin
                 continue;
             }
 
-            if (is_array($filter['value'])) {
+            if (is_array($filter['value']) && isset($filter['value']['min']) && isset($filter['value']['max'])) {
                 $meta_query[] = array(
                     'key' => $filter['name'],
                     'value' => array((int)$filter['value']['min'], (int)$filter['value']['max']),
@@ -195,7 +195,7 @@ class PlotsAdmin
             } else if (!empty($filter['value'])) {
                 $meta_query[] = array(
                     'key' => $filter['name'],
-                    'value' => array($filter['value'] === 'empty' ? '' : $filter['value']),
+                    'value' => is_array($filter['value']) ? $filter['value'] : array($filter['value'] === 'empty' ? '' : $filter['value']),
                     'compare' => 'IN'
                 );
             }

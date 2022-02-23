@@ -1,6 +1,7 @@
 import $ from 'jquery';
 import toastr from 'toastr';
 import DoubleSlider from 'double-slider';
+import 'select2';
 
 class FunktionalPlotsService {
     getFiltersValues() {
@@ -8,6 +9,7 @@ class FunktionalPlotsService {
     }
 
     getPlots(filters) {
+        console.log('filters', filters);
         return $.post(`${window.FunktionalGlobals.homeUrl}wp-json/funktional-plots/v1/plots`, {filters});
     }
 
@@ -64,8 +66,25 @@ class FunktionalPlots {
     }
 
     getFilters() {
+        const filters = {};
+
+        this.filtersForm.serializeArray().forEach((filter) => {
+            if (!filters[filter.name]) {
+                filters[filter.name] = filter.value;
+            } else {
+                if (Array.isArray(filters[filter.name])) {
+                    filters[filter.name].push(filter.value);
+                } else {
+                    filters[filter.name] = [
+                        filters[filter.name],
+                        filter.value
+                    ]
+                }
+            }
+        });
+
         return [
-            ...this.filtersForm.serializeArray(),
+            ...Object.keys(filters).map(filterName => ({ name: filterName, value: filters[filterName] })),
             ...Object.keys(this.rangeSliders).map((name) => ({name, value: this.rangeSliders[name].value}))
         ];
     }
@@ -136,6 +155,13 @@ class FunktionalPlots {
                     if (addEmptyOption) {
                         filterEl.append(`<option value="empty">Brak</option>`);
                     }
+
+                    filterEl.select2({
+                        placeholder: 'Wszystkie',
+                        multiple: true
+                    });
+
+                    filterEl.val(null).trigger('change');
                 }
             }
         });
