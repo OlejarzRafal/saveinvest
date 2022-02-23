@@ -20,6 +20,7 @@ class FunktionalPlots
         add_action('init', array($this, 'registerInwestitionsCpt'));
         add_action('wp_head', array($this, 'setFunktionalJsGlobals'));
         add_action('admin_head', array($this, 'setFunktionalJsGlobals'));
+        add_action('admin_init', array($this, 'removePlotCptTitleField'));
     }
 
     public function registerInwestitionsCpt()
@@ -38,6 +39,14 @@ class FunktionalPlots
 
         $this->registerInvestitionPagesCpt('osada-jaworek', 'Osada Jaworek');
         $this->registerInvestitionPagesCpt('ostoja-kladno', 'Ostoja Kładno');
+    }
+
+    public function removePlotCptTitleField() {
+        global $pagenow;
+
+        if ($pagenow === 'post-new.php' && isset($_GET) && isset($_GET['post_type']) && $_GET['post_type'] === 'plots') {
+            echo '<style> #post-body-content #titlediv { display: none !important; } </style>';
+        }
     }
 
     public function addInwestitionsMenuItem()
@@ -118,7 +127,7 @@ class FunktionalPlots
                 'has_archive' => true,
                 'show_in_menu' => 'investitions',
                 'capability_type' => 'page',
-                'supports' => array('title', 'custom-fields', 'page-attributes'),
+                'supports' => array('custom-fields', 'page-attributes'),
                 'rewrite' => array('slug' => 'oferta/' . $postType)
             )
         );

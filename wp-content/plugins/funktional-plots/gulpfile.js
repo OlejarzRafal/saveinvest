@@ -24,7 +24,9 @@ gulp.task('front-sass', () => {
         .pipe(sourcemaps.init({}))
         .pipe(plumber())
         .pipe(dependents())
-        .pipe(sass())
+        .pipe(sass({
+            includePaths: ['./node_modules']
+        }))
         .pipe(autoprefixer())
         .pipe(minifyCss())
         .pipe(concat('front.css'))
@@ -39,7 +41,9 @@ gulp.task('admin-sass', () => {
         .pipe(sourcemaps.init({}))
         .pipe(plumber())
         .pipe(dependents())
-        .pipe(sass())
+        .pipe(sass({
+            includePaths: ['./node_modules']
+        }))
         .pipe(autoprefixer())
         .pipe(minifyCss())
         .pipe(concat('admin.css'))

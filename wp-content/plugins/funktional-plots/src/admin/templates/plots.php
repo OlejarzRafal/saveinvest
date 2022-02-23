@@ -7,7 +7,7 @@
             <div class="wrap">
                 <h1 class="wp-heading-inline">Ceny działek</h1>
                 
-                <a href="<?= home_url('/wp-admin/post-new.php?post_type=plots') ?>"
+                <a href="<?= admin_url('/post-new.php?post_type=plots') ?>"
                    class="page-title-action" target="_blank">Dodaj nową działkę</a>
 
                 <hr class="wp-header-end">
@@ -15,16 +15,11 @@
 
                 <form class="funktional-plots__filters">
                     <label>
-                        <span>Inwestycja</span>
-                        <select name="investition">
-                            <option value="">Wszystkie</option>
-                        </select>
+                        <span>Inwestycja</span><select name="investition"></select>
                     </label>
                     <label>
                         <span>Sektor</span>
-                        <select name="sector">
-                            <option value="">Wszystkie</option>
-                        </select>
+                        <select name="sector"></select>
                     </label>
                     <label>
                         <span>Nr działki</span>
@@ -33,15 +28,11 @@
                     </label>
                     <label>
                         <span>Typ działki</span>
-                        <select name="plot_type">
-                            <option value="">Wszystkie</option>
-                        </select>
+                        <select name="plot_type"></select>
                     </label>
                     <label>
                         <span>Status</span>
-                        <select name="status">
-                            <option value="">Wszystkie</option>
-                        </select>
+                        <select name="status"></select>
                     </label>
                     <label>
                         <span>Cena netto</span>

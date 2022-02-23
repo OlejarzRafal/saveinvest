@@ -1,3 +1,5 @@
+@import "../../../node_modules/select2/dist/css/select2.min.css";
+
 [data-plots-map] {
   position: relative;
 
@@ -74,5 +76,37 @@
   .plots-map__back-btn {
     position: absolute;
     z-index: 2;
+  }
+}
+
+[data-plot-list] {
+  .select2 {
+    min-width: 100px;
+  }
+
+  .plot-list__sorting {
+    display: flex;
+    margin: 0 -20px;
+
+    &__item {
+      display: flex;
+      margin: 0 20px;
+      align-items: center;
+
+      &__direction {
+        display: flex;
+        flex-direction: column;
+        margin-left: 5px;
+
+        button {
+          margin: 3px 0;
+        }
+      }
+    }
+  }
+
+  [data-plot-list-plot-template],
+  [data-plot-list-baner-template] {
+    display: none !important;
   }
 }

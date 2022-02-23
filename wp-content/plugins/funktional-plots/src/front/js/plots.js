@@ -1,17 +1,91 @@
-class FunktionalPlotsMap {
-    constructor() {
-        if (!window.funktionalPlots || typeof window.funktionalPlots !== 'object') {
-            console.error('funktionalPlots data not found!');
+import $ from 'jquery';
+import 'select2';
+
+class PlotDataElement {
+    static prepareConditionalElementsForPlot(plotData, element) {
+        const conditionalElements = element.find('[data-plot-info-show-if]');
+
+        if (!conditionalElements || !conditionalElements.length) {
+            return;
+        }
+        conditionalElements.hide();
+
+        conditionalElements.toArray().forEach(element => {
+            let condition = $(element).attr('data-plot-info-show-if');
+
+            if (condition.includes('=')) {
+                condition = condition.split('=');
+
+                if (plotData[condition[0]]) {
+                    const plotConditionData = plotData[condition[0]];
+
+                    if (typeof plotConditionData === 'object') {
+                        if (plotConditionData.value === condition[1]) {
+                            $(element).show();
+                        }
+                    } else if (plotConditionData === condition[1]) {
+                        $(element).show();
+                    }
+                }
+            } else if (condition[0] === '!') {
+                condition = condition.replace('!', '');
+
+                if (!plotData[condition]) {
+                    $(element).show();
+                }
+            } else if (plotData[condition]) {
+                $(element).show();
+            }
+        })
+    }
+
+    static prepareParamElementsForPlot(plotData, element) {
+        const paramElements = element.find('[data-plot-info-param]');
+
+        if (!paramElements || !paramElements.length) {
             return;
         }
 
+        paramElements.toArray().forEach(paramElement => {
+            const param = $(paramElement).attr('data-plot-info-param');
+            const conditionAbove = $(paramElement).closest('[data-plot-info-show-if]');
+
+            if (conditionAbove && conditionAbove.length && conditionAbove.css('display') === 'none') {
+                $(paramElement).text('');
+                return;
+            }
+
+            const getPlotDataParam = (plotParamData) => {
+                if (!plotParamData) {
+                    return '';
+                }
+
+                return typeof plotParamData === 'object' ? plotParamData.label : plotParamData;
+            }
+
+            if (param.includes('|')) {
+                const params = param.split('|');
+
+                $(paramElement).text(params.map((param) => getPlotDataParam(plotData[param])).join(''));
+            } else {
+                $(paramElement).text(getPlotDataParam(plotData[param]));
+            }
+        });
+
+        // TODO set src to plot preview
+        element.find('[data-plot-info-image]').attr('src', '');
+    }
+}
+
+class FunktionalPlotsMap {
+    constructor() {
         this.mainMap = $('[data-plots-map]');
-        this.sectorsSelection = $('[data-plots-sectors]');
-        this.sectors = $('[data-plots-sector]');
+        this.sectorsSelection = this.mainMap.find('[data-plots-sectors]');
+        this.sectors = this.mainMap.find('[data-plots-sector]');
         this.sector = null;
         this.plots = null;
         this.plotSelected = null;
-        this.plotInfoModal = $('[data-plots-info]');
+        this.plotInfoModal = this.mainMap.find('[data-plots-info]');
 
         this.initSectorsEvents();
         this.setPlotsStatus();
@@ -21,13 +95,13 @@ class FunktionalPlotsMap {
         if (this.sectorsSelection.length) {
             this.sectorsSelection.find('[data-plots-sector-selector]').click(this.handleSelectSector.bind(this));
         } else {
-            this.sector = $('[data-plots-sector]');
+            this.sector = this.mainMap.find('[data-plots-sector]');
             this.sector.show();
             this.initPlotsEvent();
         }
 
         this.plotInfoModal.find('[data-plots-info-close]').click((event) => {
-            if(event) {
+            if (event) {
                 event.preventDefault();
             }
             this.hidePlotInfo(true)
@@ -47,7 +121,7 @@ class FunktionalPlotsMap {
             const plot = $(event.target).is('[data-plots-plot]') ? $(event.target) : $(event.target).closest('[data-plots-plot]');
 
             if (plot) {
-                const plotNumber = plot.attr('data-plots-plot');
+                const plotNumber = parseInt(plot.attr('data-plots-plot'));
 
                 if (event.type === 'click') {
                     this.showPlotInfo(plotNumber, true);
@@ -67,7 +141,7 @@ class FunktionalPlotsMap {
     }
 
     setPlotsStatus() {
-        window.funktionalPlots.forEach((plot) => {
+        window.FunktionalPlots.forEach((plot) => {
             let plotEl;
 
             if (plot.sector && plot.sector.value) {
@@ -76,7 +150,7 @@ class FunktionalPlotsMap {
                 if (sectorEl && sectorEl.length) {
                     plotEl = sectorEl.find(`[data-plots-plot="${plot.plotNr}"]`)
                 } else {
-                    console.log(`sector element for plot ${plot} not found!`);
+                    console.warn('sector element for plot not found! Plot data: ', plot);
                 }
             } else if (this.sector) {
                 plotEl = $(this.sector).find(`[data-plots-plot="${plot.plotNr}"]`)
@@ -85,7 +159,7 @@ class FunktionalPlotsMap {
             if (plotEl && plotEl.length) {
                 plotEl.addClass(`plot-status--${plot.status.value}`);
             } else {
-                console.log(`plot ${plot} element not found!`);
+                console.warn('plot element not found! Plot data: ', plot);
             }
         })
     }
@@ -121,7 +195,7 @@ class FunktionalPlotsMap {
     }
 
     showPlotInfo(plotNr, selectPlot) {
-        const plotData = window.funktionalPlots.find((plot) => plot.plotNr === plotNr);
+        const plotData = window.FunktionalPlots.find((plot) => plot.plotNr === plotNr);
 
         if (!plotData) {
             console[selectPlot ? 'error' : 'warn'](`Plot ${plotNr} data not found!`);
@@ -141,7 +215,7 @@ class FunktionalPlotsMap {
             event.preventDefault();
         }
 
-        this.showPlotInfo((parseInt(this.plotSelected.plotNr) + 1).toString(), true);
+        this.showPlotInfo(this.plotSelected.plotNr + 1, true);
     }
 
     showPrevPlotInfo(event) {
@@ -149,7 +223,7 @@ class FunktionalPlotsMap {
             event.preventDefault();
         }
 
-        this.showPlotInfo((parseInt(this.plotSelected.plotNr) - 1).toString(), true);
+        this.showPlotInfo(this.plotSelected.plotNr - 1, true);
     }
 
     hidePlotInfo(withSelected) {
@@ -163,89 +237,243 @@ class FunktionalPlotsMap {
     }
 
     prepareInfoModalForPlot(plotData) {
-        this.prepareInfoModalConditionalElementsForPlot(plotData);
-        this.prepareInfoModalParamElementsForPlot(plotData);
+        PlotDataElement.prepareConditionalElementsForPlot(plotData, this.plotInfoModal)
+        PlotDataElement.prepareParamElementsForPlot(plotData, this.plotInfoModal);
 
-        // TODO set src to plot preview
-        $('[data-plots-info-image]').attr('src', '');
+        this.plotInfoModal.find('[data-plots-info-on-selected]')[this.plotSelected ? 'show' : 'hide']();
 
-        $('[data-plots-info-on-selected]')[this.plotSelected ? 'show' : 'hide']();
-
-        const prevPlot = window.funktionalPlots.find((plot) => plot.plotNr === (parseInt(plotData.plotNr) - 1).toString());
-        const nextPlot = window.funktionalPlots.find((plot) => plot.plotNr === (parseInt(plotData.plotNr) + 1).toString());
+        const prevPlot = window.FunktionalPlots.find((plot) => plot.plotNr === (plotData.plotNr - 1));
+        const nextPlot = window.FunktionalPlots.find((plot) => plot.plotNr === (plotData.plotNr + 1));
 
         this.plotInfoModal.find('[data-plots-info-prev]')[prevPlot ? 'show' : 'hide']();
         this.plotInfoModal.find('[data-plots-info-next]')[nextPlot ? 'show' : 'hide']();
     }
+}
 
-    prepareInfoModalConditionalElementsForPlot(plotData) {
-        const conditionalElements = this.plotInfoModal.find('[data-plots-info-show-if]');
+class FunktionalPlotsList {
+    constructor() {
+        this.mainList = $('[data-plot-list]');
+        this.filters = {};
+        this.sort = 'asc';
+        this.sortBy = 'plotNr';
+        this.activePage = 0;
+        this.perPage = 2;
+        this.bannerAfterPlots = 1;
+        this.hideSold = false;
+        this.plotTemplate = this.mainList.find('[data-plot-list-plot-template]').clone();
+        this.banerTemplate = this.mainList.find('[data-plot-list-baner-template]').clone();
+        this.plotsContainer = this.mainList.find('[data-plot-list-container]');
+        this.pagination = this.mainList.find('[data-plot-list-pagination]');
 
-        if (!conditionalElements || !conditionalElements.length) {
-            return;
-        }
-        conditionalElements.hide();
+        this.initFilters();
+        this.initSorting();
+        this.reloadList();
 
-        conditionalElements.toArray().forEach(element => {
-            let condition = $(element).attr('data-plots-info-show-if');
-
-            if (condition.includes('=')) {
-                condition = condition.split('=');
-
-                if (plotData[condition[0]]) {
-                    const plotConditionData = plotData[condition[0]];
-
-                    if (typeof plotConditionData === 'object') {
-                        if (plotConditionData.value === condition[1]) {
-                            $(element).show();
-                        }
-                    } else if (plotConditionData === condition[1]) {
-                        $(element).show();
-                    }
-                }
-            } else if (plotData[condition]) {
-                $(element).show();
-            }
-        })
+        this.mainList.find('[data-plot-list-plot-template]').remove();
+        this.mainList.find('[data-plot-list-baner-template]').remove();
     }
 
-    prepareInfoModalParamElementsForPlot(plotData) {
-        const paramElements = this.plotInfoModal.find('[data-plots-info-param]');
+    initFilters() {
+        this.mainList.find('[data-plot-list-filter]').toArray().forEach(filter => {
+            const filterName = $(filter).attr('data-plot-list-filter');
 
-        if (!paramElements || !paramElements.length) {
-            return;
+            if ($(filter).is('select')) {
+                this.addFilterValuesToSelect(this.getFilterValues(filterName), $(filter));
+            }
+
+            $(filter).on('change', this.handleFilterChange.bind(this));
+        });
+    }
+
+    initSorting() {
+        this.mainList.find('[data-plot-list-sort]').on('click', this.handleSortChange.bind(this))
+        this.setSortButtonsClasses();
+    }
+
+    getFilterValues(filterName) {
+        const values = {};
+
+        window.FunktionalPlots.forEach(plot => {
+            if (plot[filterName]) {
+                if (typeof plot[filterName] === 'object') {
+                    values[plot[filterName].label] = plot[filterName].value;
+                } else {
+                    values[plot[filterName]] = plot[filterName];
+                }
+            }
+        });
+
+        return values;
+    }
+
+    addFilterValuesToSelect(values, selectFilter) {
+        Object.keys(values).sort((labelA, labelB) => labelA > labelB ? 1 : -1).forEach(label => {
+            selectFilter.append(`<option value="${values[label]}">${label}</option>`);
+        });
+
+        $(selectFilter).select2({
+            placeholder: 'Wszystkie',
+            multiple: true
+        });
+
+        $(selectFilter).val(null).trigger('change');
+    }
+
+    handleFilterChange(event) {
+        const filter = $(event.target);
+        const filterName = filter.attr('data-plot-list-filter');
+        const filterValue = filter.val();
+
+        if (filterValue) {
+            this.filters[filterName] = filterValue;
+        } else {
+            delete this.filters[filterName];
         }
 
-        paramElements.toArray().forEach(paramElement => {
-            const param = $(paramElement).attr('data-plots-info-param');
-            const conditionAbove = $(paramElement).closest('[data-plots-info-show-if]');
+        this.activePage = 0;
+        this.reloadList();
+    }
 
-            if(conditionAbove.css('display') === 'none') {
-                $(paramElement).text('');
-                return;
+    handleSortChange(event) {
+        const sortEl = $(event.target);
+
+        [this.sortBy, this.sort] = sortEl.attr('data-plot-list-sort').split('|');
+
+        this.activePage = 0;
+        this.setSortButtonsClasses();
+        this.reloadList();
+    }
+
+    setSortButtonsClasses() {
+        this.mainList.find('[data-plot-list-sort]').removeClass('active');
+        this.mainList.find(`[data-plot-list-sort="${this.sortBy}-${this.sort}"]`).addClass('active');
+    }
+
+    reloadList() {
+        const plots = this.getPlotsList();
+
+        this.plotsContainer.html('');
+
+        plots.plots.forEach((plot, index) => {
+            const plotElement = this.plotTemplate.clone();
+
+            plotElement.removeAttr('data-plot-list-plot-template');
+            plotElement.addClass('plots-list__item');
+            PlotDataElement.prepareConditionalElementsForPlot(plot, plotElement)
+            PlotDataElement.prepareParamElementsForPlot(plot, plotElement);
+
+            this.plotsContainer.append(plotElement);
+
+            if (index % this.bannerAfterPlots === 0) {
+                const banerElement = this.banerTemplate.clone();
+
+                banerElement.removeAttr('data-plot-list-baner-template');
+                banerElement.addClass('plots-list__baner');
+                this.plotsContainer.append(banerElement);
+
             }
+        });
 
-            const getPlotDataParam = (plotParamData) => {
-                if (!plotParamData) {
-                    return '';
+        this.reloadPagination(plots.all);
+    }
+
+    reloadPagination(allCount) {
+        this.pagination.html('');
+        const currentItemsCount = this.activePage * this.perPage;
+
+        if (this.activePage) {
+            this.pagination.append('<button data-plot-list-pagination-prev><<</button>');
+        }
+
+        for (let i = this.perPage; i <= allCount; i += this.perPage) {
+            this.pagination.append(`<button ${((i / this.perPage) - 1) === this.activePage ? 'class="active" ' : ''}data-plot-list-pagination-page="${(i / this.perPage) - 1}">${i / this.perPage}</button>`);
+        }
+
+        if (currentItemsCount + this.perPage < allCount) {
+            this.pagination.append('<button data-plot-list-pagination-next>>></button>');
+        }
+
+        if (this.pagination.find('button').length) {
+            $('[data-plot-list-pagination-prev]').on('click', (event) => {
+                event.preventDefault();
+                this.activePage = Math.max((this.activePage - 1), 0);
+                this.scrollToList();
+                this.reloadList();
+            });
+
+            $('[data-plot-list-pagination-next]').on('click', (event) => {
+                event.preventDefault();
+                this.activePage = Math.min((this.activePage + 1), (allCount / this.perPage));
+                this.scrollToList();
+                this.reloadList();
+            });
+
+            $('[data-plot-list-pagination-page]').on('click', (event) => {
+                event.preventDefault();
+                const page = parseInt($(event.target).attr('data-plot-list-pagination-page'));
+
+                if (page !== this.activePage) {
+                    this.activePage = Math.max(Math.min(page, (allCount / this.perPage)), 0);
+                    this.scrollToList();
+                    this.reloadList();
                 }
+            });
+        }
+    }
 
-                return typeof plotParamData === 'object' ? plotParamData.label : plotParamData;
-            }
+    scrollToList() {
+        $(document).scrollTop(this.mainList.offset().top);
+    }
 
-            if(param.includes('|')) {
-                const params = param.split('|');
+    getPlotsList() {
+        const filteredPlots = window.FunktionalPlots.filter((plot) => Object.keys(this.filters).length ? Object.keys(this.filters).some(filterName => {
+            let filterResult = false;
 
-                $(paramElement).text(params.map((param) => getPlotDataParam(plotData[param])).join(''));
+            if (typeof plot[filterName] === 'undefined') {
+                filterResult = true;
             } else {
-                $(paramElement).text(getPlotDataParam(plotData[param]));
+                if (typeof plot[filterName] === 'object') {
+                    if (Array.isArray(this.filters[filterName])) {
+                        filterResult = this.filters[filterName].includes(plot[filterName].value);
+                    } else {
+                        filterResult = plot[filterName].value === this.filters[filterName];
+                    }
+                } else {
+                    if (Array.isArray(this.filters[filterName])) {
+                        filterResult = this.filters[filterName].includes(plot[filterName]);
+                    } else {
+                        filterResult = plot[filterName] === this.filters[filterName];
+                    }
+                }
             }
-        })
+
+            return this.hideSold ? filterResult && plot.status.value !== 'sprzedana' : filterResult;
+
+        }) : true).sort((plotA, plotB) => {
+            const valueA = Number.isNaN(parseFloat(plotA[this.sortBy])) ? plotA[this.sortBy] : parseFloat(plotA[this.sortBy]);
+            const valueB = Number.isNaN(parseFloat(plotB[this.sortBy])) ? plotB[this.sortBy] : parseFloat(plotB[this.sortBy]);
+
+            return this.sort === 'asc' ? (valueA > valueB ? 1 : -1) : (valueA > valueB ? -1 : 1);
+        });
+
+        return {
+            plots: filteredPlots.slice(this.activePage * this.perPage, (this.activePage * this.perPage) + this.perPage),
+            all: filteredPlots.length
+        };
     }
 }
 
 $(() => {
+    if (!window.FunktionalPlots || typeof window.FunktionalPlots !== 'object') {
+        console.error('FunktionalPlots data not found!');
+        return;
+    }
+
     if ($('[data-plots-map]').length) {
         new FunktionalPlotsMap();
+    }
+
+    if ($('[data-plot-list]').length) {
+        new FunktionalPlotsList();
     }
 });
