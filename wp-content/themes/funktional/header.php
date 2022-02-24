@@ -1,7 +1,7 @@
 <?php
 
 /**
- * @package SaveInvest
+ * @package Murami
  */
 ?>
 <!DOCTYPE html>
@@ -16,15 +16,35 @@
     <link rel='shortcut icon' href='<?php echo get_template_directory_uri(); ?>/assets/img/favicon.svg' type='image/x-icon' />
     <?php wp_head(); ?>
 </head>
+<style>
+    @media(max-width:991px) {
+        .page-blog {
+            padding-top: 80px;
+        }
 
-<body class="test <?php echo is_page_template();?>">
-    <!-- Preload -->
-    <!-- <div class="fullpage-loader">
-        <div class="fullpage-loader__logo">
-            <img src="<?php bloginfo('template_url'); ?>/assets/img/logo-layer1.svg" alt="saveinvest">
-        </div>
-    </div> -->
-    <!-- end preload -->
+        .news-post__content {
+            margin-left: 10px;
+        }
+    }
+
+    @media(max-width:767px) {
+
+        .news-post__content {
+            margin-left: 0;
+        }
+    }
+</style>
+
+<body <?php body_class(); ?>>
+    <?php if (is_front_page()) : ?>
+        <!-- Preload -->
+        <!-- <div class="fullpage-loader">
+            <div class="fullpage-loader__logo">
+                <img src="<?php bloginfo('template_url'); ?>/assets/img/logo-layer1.svg" alt="saveinvest">
+            </div>
+        </div> -->
+        <!-- end preload -->
+    <?php endif; ?>
 
     <header class=" header <?php if (is_front_page()) : ?> header__front-page <?php else : ?> header__subpage <?php endif; ?>">
         <!-- HEADER FRONT PAGE -->
@@ -55,9 +75,9 @@
                     </ul>
                 </div>
                 <div class="nav__menu-blog">
-                    <ul>
+                    <!-- <ul>
                         <li><a href="<?php echo get_home_url(); ?>/blog">BLOG SAVEINVEST</a></li>
-                    </ul>
+                    </ul> -->
                 </div>
                 <div id="hamburger" class="hamburger">
                     <span class="hamburger__bar"></span>
@@ -110,7 +130,7 @@
                         <li><a class="<?php if (strpos($_SERVER['REQUEST_URI'], "/aktualnosci-z-terenow") !== false) {; ?> nav-blog__menu--active <?php }; ?>" href="<?php echo get_home_url(); ?>/aktualnosci-z-terenow">AKTUALNOŚCI Z TERENÓW</a></li>
                         <li><a class="<?php if (strpos($_SERVER['REQUEST_URI'], "/ekspert-saveinvest-radzi") !== false) {; ?> nav-blog__menu--active  <?php }; ?>" href="<?php echo get_home_url(); ?>/ekspert-saveinvest-radzi">EXPERT SAVEINVEST</a></li>
                         <li><a class="<?php if (strpos($_SERVER['REQUEST_URI'], "/pytania-klientow") !== false) {; ?> nav-blog__menu--active  <?php }; ?>" href="<?php echo get_home_url(); ?>/pytania-klientow">PYTANIA KLIENTÓW</a></li>
-                        <li class="nav-blog__menu--itemMobile"><a href="<?php echo get_home_url(); ?>/pytania-klientow">WRÓĆ DA SAVEINVEST</a></li>
+                        <li class="nav-blog__menu--itemMobile"><a href="<?php echo get_home_url(); ?>">WRÓĆ DA SAVEINVEST</a></li>
                     </ul>
                 </div>
                 <div id="hamburger" class="hamburger">

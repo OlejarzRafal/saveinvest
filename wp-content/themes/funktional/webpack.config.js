@@ -8,8 +8,10 @@ const autoprefixer = require("autoprefixer");
 module.exports = {
   entry: {
     // HERE YOU CAN ADD MORE BUNDLES FOR PAGES
-    main: './resources/js/main.js',
-    jaworek: './resources/js/jaworek.js',
+    main: './resources/js/index.js',
+    jaworek: './resources/js/invest-jaworek.js',
+    kladno: './resources/js/invest-kladno.js',
+    
   },
   output: {
     path: path.resolve(__dirname, "./assets/js"),
