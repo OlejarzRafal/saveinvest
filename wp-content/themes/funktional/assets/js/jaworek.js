@@ -81,31 +81,31 @@
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = "./resources/js/jaworek.js");
+/******/ 	return __webpack_require__(__webpack_require__.s = "./resources/js/invest-jaworek.js");
 /******/ })
 /************************************************************************/
 /******/ ({
 
-/***/ "./resources/js/jaworek.js":
-/*!*********************************!*\
-  !*** ./resources/js/jaworek.js ***!
-  \*********************************/
+/***/ "./resources/js/invest-jaworek.js":
+/*!****************************************!*\
+  !*** ./resources/js/invest-jaworek.js ***!
+  \****************************************/
 /*! no exports provided */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _scss_jaworek_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../scss/jaworek.scss */ \"./resources/scss/jaworek.scss\");\n/* harmony import */ var _scss_jaworek_scss__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_scss_jaworek_scss__WEBPACK_IMPORTED_MODULE_0__);\n// HERE ARE IMPORTS FOR JAWOREK\n\n\n//# sourceURL=webpack:///./resources/js/jaworek.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _scss_invest_jaworek_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../scss/invest-jaworek.scss */ \"./resources/scss/invest-jaworek.scss\");\n/* harmony import */ var _scss_invest_jaworek_scss__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_scss_invest_jaworek_scss__WEBPACK_IMPORTED_MODULE_0__);\n// HERE ARE IMPORTS FOR JAWOREK\n\n\n//# sourceURL=webpack:///./resources/js/invest-jaworek.js?");
 
 /***/ }),
 
-/***/ "./resources/scss/jaworek.scss":
-/*!*************************************!*\
-  !*** ./resources/scss/jaworek.scss ***!
-  \*************************************/
+/***/ "./resources/scss/invest-jaworek.scss":
+/*!********************************************!*\
+  !*** ./resources/scss/invest-jaworek.scss ***!
+  \********************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-eval("// extracted by mini-css-extract-plugin\n\n//# sourceURL=webpack:///./resources/scss/jaworek.scss?");
+eval("// extracted by mini-css-extract-plugin\n\n//# sourceURL=webpack:///./resources/scss/invest-jaworek.scss?");
 
 /***/ })
 
