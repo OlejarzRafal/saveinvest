@@ -1,35 +1,33 @@
-// HERE ARE MAIN STYLES
-
-@import "abstracts/variables";
-@import "abstracts/base";
-@import "abstracts/typography";
-@import "abstracts/grid";
+@import "saveinvest/abstracts/variables";
+@import "saveinvest/abstracts/base";
+@import "saveinvest/abstracts/typography";
+@import "saveinvest/abstracts/grid";
 // @import "abstracts/mixin";
 
-@import "layout/header";
-@import "layout/footer";
-@import "layout/404";
-@import "layout/backtotop";
+@import "saveinvest/layout/header";
+@import "saveinvest/layout/footer";
+@import "saveinvest/layout/404";
+@import "saveinvest/layout/backtotop";
 
-@import "pages/front-page/sec1";
-@import "pages/front-page/sec2";
-@import "pages/front-page/sec3";
-@import "pages/front-page/sec4";
-@import "pages/front-page/sec5";
-@import "pages/front-page/sec6";
-@import "pages/front-page/sec7";
-@import "pages/front-page/sec8";
-@import "pages/front-page/sec9";
-@import "pages/front-page";
-@import "pages/articles";
-@import "pages/single";
-@import "pages/page";
+@import "saveinvest/pages/front-page/sec1";
+@import "saveinvest/pages/front-page/sec2";
+@import "saveinvest/pages/front-page/sec3";
+@import "saveinvest/pages/front-page/sec4";
+@import "saveinvest/pages/front-page/sec5";
+@import "saveinvest/pages/front-page/sec6";
+@import "saveinvest/pages/front-page/sec7";
+@import "saveinvest/pages/front-page/sec8";
+@import "saveinvest/pages/front-page/sec9";
+@import "saveinvest/pages/front-page";
+@import "saveinvest/pages/articles";
+@import "saveinvest/pages/single";
+@import "saveinvest/pages/page";
 
-@import "components/opinion";
-@import "components/section-header";
-@import "components/btn";
-@import "components/form";
-@import "components/loader";
+@import "saveinvest/components/opinion";
+@import "saveinvest/components/section-header";
+@import "saveinvest/components/btn";
+@import "saveinvest/components/form";
+@import "saveinvest/components/loader";
 
 @import "template-blog-cpt/aktualnosc-glowna";
 @import "template-blog-cpt/aktualnosc-wpis";

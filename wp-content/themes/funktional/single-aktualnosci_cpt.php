@@ -1,15 +1,11 @@
 <?php
-/*
-Template Name: Aktualności z terenów (wpis)
-Template Post Type: aktualnosci_cpt
-*/
 
 get_header();
 
 ?>
 <?php while (have_posts()) : the_post();
     $user_id = get_the_author_meta('ID');
-    $author_image = get_avatar_url($user_id);
+    $author_image = get_field('zdjecie_autora', 'user_' .  $user_id);
     $author_name = get_the_author_meta('display_name');
     $author_url = get_author_posts_url($user_id);
     $author_position = get_field('stanowisko_autora', 'user_' . $user_id);
@@ -31,7 +27,7 @@ get_header();
                         <div class="singlePost-datainfo">
                             <div class="singlePost-datainfo__author">
                                 <div class="singlePost-datainfo__authorImg">
-                                    <img src="<?php echo $author_image; ?>">
+                                    <img src="<?php echo esc_url($author_image['url']); ?>" alt="<?php echo esc_attr($author_image['alt']); ?>" />
                                 </div>
                                 <div class="singlePost-datainfo__authorName">
                                     <a href="<?php echo  $author_url  ?>">
@@ -52,8 +48,12 @@ get_header();
                             <?php endforeach; ?>
                         </div>
                     </div>
-                    <div class="singlePost-hero__img">
-                        <img src="<?php bloginfo('template_url'); ?>/assets/img/blog/post-photo.jpg" alt="saveinvest">
+                    <?php
+                    $zdjecie_hero_post = get_field('zdjecie_hero_post'); ?>
+                    <div class="singlePost-hero__img <?php if (!$zdjecie_hero_post) : ?> singlePost-hero__img--no-image <?php endif; ?>">
+                        <?php if ($zdjecie_hero_post) : ?>
+                            <img src="<?php echo esc_url($zdjecie_hero_post['url']); ?>" alt="<?php echo esc_attr($zdjecie_hero_post['alt']); ?>" />
+                        <?php endif; ?>
                     </div>
                 </div>
                 <!-- content -->
@@ -67,7 +67,7 @@ get_header();
                             <!-- author -->
                             <div class="singlePost-authorFull">
                                 <div class="singlePost-authorFull__img">
-                                    <img src="<?php echo $author_image; ?>">
+                                    <img src="<?php echo esc_url($author_image['url']); ?>" alt="<?php echo esc_attr($author_image['alt']); ?>" />
                                 </div>
                                 <div class="singlePost-authorFull__content">
                                     <h2 class="singlePost-authorFull__name"> <a href="<?php echo  $author_url  ?>"><?php echo $author_name; ?></a></h2>
