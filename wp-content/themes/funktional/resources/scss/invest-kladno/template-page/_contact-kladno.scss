@@ -1,0 +1,644 @@
+.contact-kladno {
+    position: relative;
+    width: 100%;
+    height: auto;
+    margin-top: 80px;
+    background-image: url("/invest-kladno/kladno-photo/contact/background-contanct.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-position-y: bottom;
+    padding-bottom: 200px;
+
+    &__form,
+    &__sales-box {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        .text-form,
+        .sales-text {
+            margin-top: 30px;
+            display: flex;
+            flex-wrap: wrap;
+            a:hover {
+                color: $gold;
+            }
+        }
+    }
+    &__sales-box {
+        .person-sales {
+            margin-top: 80px;
+            display: flex;
+            width: 100%;
+            height: auto;
+            padding: 0 0 0 30px;
+            border: 1px solid $gold;
+            background-color: $white;
+            &__photo {
+                margin-top: -30px;
+                height: 235px;
+                width: 205px;
+                margin-bottom: 20px;
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: none;
+                    object-position: center;
+                }
+            }
+            .person-info {
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-start;
+                padding: 45px 20px 40px 35px;
+                &__email {
+                    margin-top: 12px;
+                    display: flex;
+                    justify-content: flex-start;
+                    align-items: center;
+                    gap: 18px;
+                    margin-bottom: 3px;
+                    img {
+                        width: fit-content;
+                        height: fit-content;
+                    }
+                    a {
+                        position: relative;
+                        // &::after {
+                        //     content: "";
+                        //     position: absolute;
+                        //     top: 50%;
+                        //     transform: translateY(-50%);
+                        //     right: -40px;
+                        //     background: url("/invest-kladno/kladno-photo/contact/icon-hover.png");
+                        //     height: 24px;
+                        //     width: 24px;
+                        //     transition: all 0.2s;
+                        //     visibility: hidden;
+                        //     opacity: 0;
+                        // }
+                        // &:hover::after {
+                        //     visibility: visible;
+                        //     opacity: 1;
+                        // }
+                        &:hover {
+                            color: $gold;
+                        }
+                    }
+                }
+                &__phone {
+                    display: flex;
+                    justify-content: flex-start;
+                    align-items: center;
+                    gap: 18px;
+                    img {
+                        width: fit-content;
+                        height: fit-content;
+                    }
+                    a {
+                        position: relative;
+                        // &::after {
+                        //     content: "";
+                        //     position: absolute;
+                        //     top: 50%;
+                        //     transform: translateY(-50%);
+                        //     right: -40px;
+                        //     background: url("/invest-kladno/kladno-photo/contact/icon-hover.png");
+                        //     height: 24px;
+                        //     width: 24px;
+                        //     transition: all 0.2s;
+                        //     visibility: hidden;
+                        //     opacity: 0;
+                        // }
+                        // &:hover::after {
+                        //     visibility: visible;
+                        //     opacity: 1;
+                        // }
+                        &:hover {
+                            color: $gold;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    &__service {
+        margin-top: 65px;
+        .service-text {
+            margin-top: 10px;
+        }
+    }
+
+    .person-service {
+        margin-top: 80px;
+        display: flex;
+        width: 100%;
+        height: auto;
+        padding: 0 0 0 30px;
+        border: 1px solid $gold;
+        background-color: $white;
+        &__photo {
+            margin-top: -30px;
+            height: 235px;
+            width: 205px;
+            margin-bottom: 20px;
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: none;
+                object-position: center;
+            }
+        }
+        .person-info {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            padding: 45px 20px 40px 35px;
+            &__email {
+                margin-top: 20px;
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+                gap: 18px;
+                margin-bottom: 3px;
+                img {
+                    width: fit-content;
+                    height: fit-content;
+                }
+                a {
+                    position: relative;
+                    // &::after {
+                    //     content: "";
+                    //     position: absolute;
+                    //     top: 50%;
+                    //     transform: translateY(-50%);
+                    //     right: -40px;
+                    //     background: url("/invest-kladno/kladno-photo/contact/icon-hover.png");
+                    //     height: 24px;
+                    //     width: 24px;
+                    //     transition: all 0.2s;
+                    //     visibility: hidden;
+                    //     opacity: 0;
+                    // }
+                    // &:hover::after {
+                    //     visibility: visible;
+                    //     opacity: 1;
+                    // }
+                    &:hover {
+                        color: $gold;
+                    }
+                }
+            }
+            &__phone {
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+                gap: 18px;
+                img {
+                    width: fit-content;
+                    height: fit-content;
+                }
+                a {
+                    position: relative;
+                    // &::after {
+                    //     content: "";
+                    //     position: absolute;
+                    //     top: 50%;
+                    //     transform: translateY(-50%);
+                    //     right: -40px;
+                    //     background: url("/invest-kladno/kladno-photo/contact/icon-hover.png");
+                    //     height: 24px;
+                    //     width: 24px;
+                    //     transition: all 0.2s;
+                    //     visibility: hidden;
+                    //     opacity: 0;
+                    // }
+                    // &:hover::after {
+                    //     visibility: visible;
+                    //     opacity: 1;
+                    // }
+                    &:hover {
+                        color: $gold;
+                    }
+                }
+            }
+        }
+    }
+    @media (max-width: $xxxl) {
+        &__sales-box {
+            .person-sales {
+                padding: 0 0 0 20px;
+                .person-info {
+                    padding: 25px 20px 20px 20px;
+                    &__email {
+                        margin-bottom: 10px;
+                    }
+                    &__email,
+                    &__phone {
+                        gap: 5px;
+                        a {
+                            position: relative;
+                            &::after {
+                                right: -30px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .person-service {
+            padding: 0 0 0 20px;
+            .person-info {
+                padding: 25px 20px 20px 20px;
+                &__email {
+                    margin-bottom: 10px;
+                }
+            }
+        }
+    }
+    @media (max-width: $xxl) {
+        &__form,
+        &__sales-box {
+            .sales-title {
+                margin-top: 50px;
+            }
+            .text-form,
+            .sales-text {
+                margin-top: 10px;
+            }
+            .person-sales {
+                margin-top: 50px;
+                width: fit-content;
+                .person-info {
+                    min-width: 350px;
+                }
+            }
+        }
+        .person-service {
+            margin-top: 50px;
+            width: fit-content;
+            .person-info {
+                min-width: 350px;
+            }
+        }
+        &__service {
+            margin-top: 50px;
+        }
+    }
+    @media (max-width: $md) {
+        padding: 0 15px 70px;
+        &__sales-box {
+            .person-sales {
+                flex-direction: column;
+                width: 100%;
+                .person-info {
+                    min-width: auto;
+                    padding: 0px 20px 20px 0px;
+                    &__email,
+                    &__phone {
+                        gap: 5px;
+                        a {
+                            position: relative;
+                            font-size: 14px;
+                            &::after {
+                                right: -30px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .person-service {
+            flex-direction: column;
+            width: 100%;
+            .person-info {
+                min-width: auto;
+                padding: 0px 20px 20px 0px;
+                &__email,
+                &__phone {
+                    gap: 5px;
+                    a {
+                        position: relative;
+                        font-size: 14px;
+                        &::after {
+                            right: -30px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.about-company-contact {
+    margin-top: 100px;
+
+    .row {
+        padding: 150px 0 150px;
+        position: relative;
+        z-index: 1;
+        &::before {
+            content: "";
+            position: absolute;
+            top: 0px;
+            right: -65px;
+            width: 105vw;
+            height: 100%;
+            border-top: 1px solid $gold;
+            border-right: 1px solid $gold;
+            border-bottom: 1px solid $gold;
+            background-color: $white;
+        }
+    }
+    &__logo {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        img {
+            height: 250px;
+            width: 360px;
+            object-fit: cover;
+            object-position: center;
+        }
+    }
+    &__content {
+        .text-content {
+            margin-top: 20px;
+        }
+    }
+    @media (max-width: $xl) {
+        &__content {
+            .title-content {
+                margin-top: 30px;
+            }
+            .text-content {
+                margin-top: 20px;
+            }
+        }
+    }
+    @media (max-width: $md) {
+        padding: 50px 0;
+        .row {
+            padding: 30px 15px;
+            &::before {
+                content: "";
+                position: absolute;
+                top: 0px;
+                right: 15px;
+                width: calc(100% - 30px);
+                height: 100%;
+                border: 1px solid $gold;
+            }
+        }
+        &__content {
+            .title-content {
+                margin-top: 20px;
+            }
+            .text-content {
+                margin-top: 15px;
+            }
+        }
+        &__logo {
+            img {
+                height: auto;
+                width: 60%;
+                object-fit: cover;
+                object-position: center;
+            }
+        }
+    }
+}
+
+.contact-number {
+    position: relative;
+    margin-top: -100px;
+    width: 100%;
+    height: auto;
+    background-image: url("/invest-kladno/kladno-photo/contact/background-contact-numbers.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    padding-top: 330px;
+
+    &__box {
+        width: 100%;
+        margin-bottom: 170px;
+        display: flex;
+        flex-direction: column;
+        gap: 80px;
+        .box-row {
+            display: flex;
+            justify-content: space-between;
+            &__info {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                .numbers-info {
+                    display: flex;
+                    justify-content: center;
+                    align-items: flex-end;
+                    gap: 10px;
+
+                    .f-h4 {
+                        font-size: 40px;
+                        line-height: 70px;
+                    }
+                }
+            }
+            .box-row__info:last-child {
+                width: 223px;
+            }
+        }
+    }
+    @media (max-width: $xl) {
+        padding-top: 200px;
+        &__box {
+            margin-bottom: 110px;
+            .box-row {
+                &__info {
+                    .numbers-info {
+                        .f-special {
+                            font-size: 60px;
+                        }
+
+                        .f-h4 {
+                            font-size: 35px;
+                            line-height: 55px;
+                        }
+                    }
+                }
+                .box-row__info:last-child {
+                    width: 223px;
+                }
+            }
+        }
+    }
+    @media (max-width: $lg) {
+        &__box {
+            .box-row {
+                &__info {
+                    .numbers-info {
+                        .f-special {
+                            font-size: 45px;
+                        }
+
+                        .f-h4 {
+                            font-size: 25px;
+                            line-height: 40px;
+                        }
+                    }
+                }
+                .box-row__info:last-child {
+                    width: 223px;
+                }
+            }
+        }
+    }
+    @media (max-width: $md) {
+        padding-top: 100px;
+        &__box {
+            gap: 0;
+            .box-row {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                &__info {
+                    width: 100%;
+                    margin-top: 30px;
+                }
+                .box-row__info:last-child {
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
+
+.location-klando {
+    margin-top: 130px;
+    .row {
+        padding: 80px 0 80px;
+        position: relative;
+        z-index: 1;
+        &::before {
+            content: "";
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            width: 105vw;
+            height: 100%;
+            border-top: 1px solid $gold;
+            border-left: 1px solid $gold;
+            border-bottom: 1px solid $gold;
+            background-color: $white;
+        }
+    }
+    &__map {
+        position: relative;
+        margin-top: -110px;
+        height: 545px;
+    }
+    &__content {
+        display: flex;
+        flex-direction: column;
+        .locat-logo {
+            width: fit-content;
+        }
+        .locat-info {
+            margin-top: 40px;
+            display: flex;
+            justify-content: flex-start;
+            gap: 20px;
+            &__data-firm,
+            &__data-person {
+                p:nth-child(even) {
+                    line-height: 30px;
+                }
+                p:nth-child(3),
+                p:nth-child(4) {
+                    margin-top: 25px;
+                }
+                p:nth-child(3) {
+                    line-height: 20px;
+                }
+                a {
+                    position: relative;
+                    &:hover {
+                        color: $gold;
+                    }
+                }
+            }
+            &__data-firm {
+                width: 38%;
+            }
+            &__data-person {
+                width: 55%;
+            }
+        }
+    }
+    @media (max-width: $xxl) {
+        &__content {
+            .locat-info {
+                &__data-firm {
+                    width: 49%;
+                }
+                &__data-person {
+                    width: 51%;
+                }
+            }
+        }
+    }
+    @media (max-width: $xl) {
+        .row {
+            padding: 40px 15px;
+        }
+
+        &__content {
+            margin-top: 50px;
+            .locat-info {
+                &__data-firm {
+                    width: 49%;
+                }
+                &__data-person {
+                    width: 51%;
+                }
+            }
+        }
+    }
+    @media (max-width: $md) {
+        margin-top: 50px;
+        padding: 0;
+        .row {
+            padding: 30px 15px;
+            &::before {
+                content: "";
+                position: absolute;
+                left: 15px;
+                width: calc(100% - 30px);
+                height: 100%;
+                border: 1px solid $gold;
+            }
+        }
+        &__map {
+            position: relative;
+            margin-top: 0px;
+            width: 100%;
+            height: 300px;
+        }
+        &__content {
+            margin-top: 30px;
+            .locat-info {
+                margin-top: 30px;
+                display: flex;
+                flex-direction: column;
+                gap: 30px;
+                &__data-firm,
+                &__data-person {
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
