@@ -59,14 +59,63 @@
                     <table class="wp-list-table widefat fixed striped table-view-list posts">
                         <thead>
                         <tr>
-                            <th scope="col" class="manage-column"><span>Inwestycja</span></th>
-                            <th scope="col" class="manage-column"><span>Sektor</span></th>
-                            <th scope="col" class="manage-column"><span>Nr działki</span></th>
-                            <th scope="col" class="manage-column"><span>Typ działki</span></th>
-                            <th scope="col" class="manage-column"><span>Status</span></th>
-                            <th scope="col" class="manage-column"><span>Cena netto</span><input data-all-plots-price type="number"></th>
-                            <th scope="col" class="manage-column"><span>Powierzchnia</span></th>
-                            <th scope="col" class="manage-column"><span>Rabat</span></th>
+                            <th scope="col" class="manage-column">
+                                <span>Inwestycja</span>
+                                <div class="sorting-buttons">
+                                    <button class="sorting-buttons_desc" data-sort="investition-desc"></button>
+                                    <button class="sorting-buttons_asc active" data-sort="investition-asc"></button>
+                                </div>
+                            </th>
+                            <th scope="col" class="manage-column">
+                                <span>Sektor</span>
+                                <div class="sorting-buttons">
+                                    <button class="sorting-buttons_desc" data-sort="sector-desc"></button>
+                                    <button class="sorting-buttons_asc" data-sort="sector-asc"></button>
+                                </div>
+                            </th>
+                            <th scope="col" class="manage-column">
+                                <span>Nr działki</span>
+                                <div class="sorting-buttons">
+                                    <button class="sorting-buttons_desc" data-sort="plotNr-desc"></button>
+                                    <button class="sorting-buttons_asc" data-sort="plotNr-asc"></button>
+                                </div>
+                            </th>
+                            <th scope="col" class="manage-column">
+                                <span>Typ działki</span>
+                                <div class="sorting-buttons">
+                                    <button class="sorting-buttons_desc" data-sort="plot_type-desc"></button>
+                                    <button class="sorting-buttons_asc" data-sort="plot_type-asc"></button>
+                                </div>
+                            </th>
+                            <th scope="col" class="manage-column">
+                                <span>Status</span>
+                                <div class="sorting-buttons">
+                                    <button class="sorting-buttons_desc" data-sort="status-desc"></button>
+                                    <button class="sorting-buttons_asc" data-sort="status-asc"></button>
+                                </div>
+                            </th>
+                            <th scope="col" class="manage-column">
+                                <span>Cena netto</span>
+                                <div class="sorting-buttons">
+                                    <button class="sorting-buttons_desc" data-sort="discount-desc"></button>
+                                    <button class="sorting-buttons_asc" data-sort="priceNetto-asc"></button>
+                                </div>
+                                <input data-all-plots-price type="number">
+                            </th>
+                            <th scope="col" class="manage-column">
+                                <span>Powierzchnia</span>
+                                <div class="sorting-buttons">
+                                    <button class="sorting-buttons_desc" data-sort="area-desc"></button>
+                                    <button class="sorting-buttons_asc" data-sort="area-asc"></button>
+                                </div>
+                            </th>
+                            <th scope="col" class="manage-column">
+                                <span>Rabat</span>
+                                <div class="sorting-buttons">
+                                    <button class="sorting-buttons_desc" data-sort="discount-desc"></button>
+                                    <button class="sorting-buttons_asc" data-sort="discount-asc"></button>
+                                </div>
+                            </th>
                             <th scope="col" class="manage-column"><button data-save-all-plots class="page-title-action">Zapisz Wszystkie</button></th>
                             <th scope="col" class="manage-column"></th>
                         </tr>
