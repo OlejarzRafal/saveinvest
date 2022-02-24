@@ -77,11 +77,11 @@ $PlotsFront->getScriptsAndStyles('Osada Jaworek');
                 <div class="plotModal-bottom__empty">KLIKNIJ DZIAŁKĘ</div>
                 <div class="plotModal-buttons" data-plots-info-on-selected>
                     <a href="https://osadajaworek.pl/1/PlotsFiles/D/karty/D-3.pdf"
-                       class="btn-pdf" target="_blank">
+                       class="btn-pdf" target="_blank" data-plot-info-image-pdf-card>
                         Pobierz kartę
                     </a>
                     <a href="#"
-                       class="btn-message" target="_blank">
+                       class="btn-message" target="_blank" data-plot-info-image-send-message>
                         Wiadomość
                     </a>
                 </div>
@@ -105,6 +105,29 @@ $PlotsFront->getScriptsAndStyles('Osada Jaworek');
 
         <img class="plots-map__img" src="<?= get_theme_file_uri('/investitions/osada-jaworek/assets/sectorA.jpg') ?>">
         <?= file_get_contents(get_theme_file_path('/investitions/osada-jaworek/assets/sector-a-plots.svg')) ?>
+    </div>
+</section>
+
+<section plots-collected-info>
+    <div class="container">
+        <div class="row">
+            <div class="col">Sektor</div>
+            <div class="col">A</div>
+            <div class="col">B</div>
+            <div class="col">C</div>
+        </div>
+        <div class="row">
+            <div class="col">Liczba działek</div>
+            <div class="col"><span plots-collected-count-by-sector="A"></span></div>
+            <div class="col"><span plots-collected-count-by-sector="B"></span></div>
+            <div class="col"><span plots-collected-count-by-sector="C"></span></div>
+        </div>
+        <div class="row">
+            <div class="col">Wolne</div>
+            <div class="col"><span plots-collected-available-count-by-sector="A"></span></div>
+            <div class="col"><span plots-collected-available-count-by-sector="B"></span></div>
+            <div class="col"><span plots-collected-available-count-by-sector="C"></span></div>
+        </div>
     </div>
 </section>
 

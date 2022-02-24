@@ -74,6 +74,12 @@ class PlotDataElement {
 
         // TODO set src to plot preview
         element.find('[data-plot-info-image]').attr('src', '');
+
+        // TODO set href to plot pdf card
+        element.find('[data-plot-info-image-pdf-card]').attr('href', '');
+
+        // TODO set href to plotcotact form or change it to click action
+        element.find('[data-plot-info-image-send-message]').attr('href', '');
     }
 }
 
@@ -463,6 +469,28 @@ class FunktionalPlotsList {
     }
 }
 
+class FunktionalPlotsCollectedInfo {
+    constructor() {
+        this.collectedInfo = $('[plots-collected-info]');
+
+        this.setCollectedInfo();
+    }
+
+    setCollectedInfo() {
+        this.collectedInfo.find('[plots-collected-count-by-sector]').toArray().forEach((countEl) => {
+            const sector = $(countEl).attr('plots-collected-count-by-sector');
+
+            $(countEl).text(window.FunktionalPlots.filter(plot => plot.sector.value === sector).length);
+        });
+
+        this.collectedInfo.find('[plots-collected-available-count-by-sector]').toArray().forEach((countEl) => {
+            const sector = $(countEl).attr('plots-collected-available-count-by-sector');
+
+            $(countEl).text(window.FunktionalPlots.filter(plot => plot.status.value === 'wolna' && plot.sector.value === sector).length);
+        });
+    }
+}
+
 $(() => {
     if (!window.FunktionalPlots || typeof window.FunktionalPlots !== 'object') {
         console.error('FunktionalPlots data not found!');
@@ -475,5 +503,9 @@ $(() => {
 
     if ($('[data-plot-list]').length) {
         new FunktionalPlotsList();
+    }
+
+    if ($('[plots-collected-info]').length) {
+        new FunktionalPlotsCollectedInfo();
     }
 });

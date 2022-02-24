@@ -8,9 +8,8 @@ class FunktionalPlotsService {
         return $.post(`${window.FunktionalGlobals.homeUrl}wp-json/funktional-plots/v1/filters`);
     }
 
-    getPlots(filters) {
-        console.log('filters', filters);
-        return $.post(`${window.FunktionalGlobals.homeUrl}wp-json/funktional-plots/v1/plots`, {filters});
+    getPlots(filters, sort) {
+        return $.post(`${window.FunktionalGlobals.homeUrl}wp-json/funktional-plots/v1/plots`, { filters, sort });
     }
 
     updatePlot(data) {
@@ -63,6 +62,20 @@ class FunktionalPlots {
             event.preventDefault();
             this.saveAllPlotsData();
         });
+
+        this.plotsTableHead.find('.sorting-buttons button').on('click', (event) => {
+            event.preventDefault();
+
+            this.plotsTableHead.find('.sorting-buttons button').removeClass('active');
+            $(event.target).addClass('active');
+            this.rebuildPlotsTable();
+        });
+    }
+
+    getSortData() {
+        const sortData = this.plotsTableHead.find('.sorting-buttons button.active').attr('data-sort').split('-');
+
+        return { sortBy: sortData[0], sort: sortData[1] };
     }
 
     getFilters() {
@@ -173,7 +186,7 @@ class FunktionalPlots {
         this.timeout = setTimeout(() => {
             this.plotsTableBody.html('');
 
-            this.service.getPlots(this.getFilters()).then((plotsData) => {
+            this.service.getPlots(this.getFilters(), this.getSortData()).then((plotsData) => {
                 this.appendPlotsToTable(plotsData);
             }).catch(this.displayError.bind(this));
         }, 300);
