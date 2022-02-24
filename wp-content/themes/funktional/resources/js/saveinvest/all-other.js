@@ -27,6 +27,6 @@ $(document).ready(function () {
   
   
 });
-// $(window).on("load", function () {
-//   $(".fullpage-loader").delay(1500).fadeOut("slow");
-// });
+$(window).on("load", function () {
+  $(".fullpage-loader").delay(1500).fadeOut("slow");
+});

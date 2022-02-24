@@ -18,7 +18,7 @@
                 $loop = new WP_Query($ekspertRadzi_Filtrations_args);
                 while ($loop->have_posts()) : $loop->the_post(); ?>
                     <?php if (!get_field('wyrozniony_wpis_na_stronie_zbiorczej_blog')) : ?>
-                        <div  class="slider-expert-loop__item swiper-slide">
+                        <a href="<?php echo get_permalink(); ?>" class="slider-expert-loop__item swiper-slide">
                             <div class="slider-expert-loop__terms post-terms">
                                 <?php
                                 $subterms = get_the_terms($post->ID, 'subjects');
@@ -38,7 +38,7 @@
                             $user_name = get_author_name($user_id);
                             $user_image = get_field('zdjecie_autora', 'user_' .  $user_id);
                             ?>
-                            <a href="<?php echo get_author_posts_url($user_id); ?>" class="slider-expert-loop__authors">
+                            <div class="slider-expert-loop__authors">
                                 <div class="slider-expert-loop__authorimg">
                                     <img src="<?php echo esc_url($user_image['url']); ?>" alt="<?php echo esc_attr($user_image['alt']); ?>" />
                                 </div>
@@ -46,11 +46,11 @@
                                 <div class="slider-expert-loop__author">
                                     <?php echo $user_name; ?>
                                 </div>
-                            </a>
-                        </div>
-                        <?php endif; ?>
-                    <?php endwhile;
-                    ?>
+                            </div>
+                        </a>
+                    <?php endif; ?>
+                <?php endwhile;
+                ?>
             </div>
             <div class="slider-blog__nav">
                 <div class="swiper-pagination"></div>

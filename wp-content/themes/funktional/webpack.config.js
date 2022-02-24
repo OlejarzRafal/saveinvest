@@ -8,7 +8,7 @@ const autoprefixer = require("autoprefixer");
 module.exports = {
   entry: {
     // HERE YOU CAN ADD MORE BUNDLES FOR PAGES
-    main: './resources/js/main.js',
+    main: './resources/js/index.js',
     jaworek: './resources/js/jaworek.js',
   },
   output: {

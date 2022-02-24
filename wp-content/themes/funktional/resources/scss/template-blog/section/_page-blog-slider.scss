@@ -336,10 +336,6 @@
                 &:before {
                     opacity: 1;
                 }
-                .slider-authors-loop__count{
-                    opacity: 1;
-                }
-
             }
         }
         &__img {
@@ -362,8 +358,6 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            opacity: 0;
-            transition: all 0.2s;
             span {
                 color: white;
                 display: block;
