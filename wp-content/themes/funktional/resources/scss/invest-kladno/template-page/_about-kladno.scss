@@ -1,300 +1,245 @@
-.kladno-home-nav {
-    height: 100px;
-    width: 100%;
-    background-color: $white;
-    // position: fixed;
-    z-index: 99;
-    &__box {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        height: 100px;
-        ul {
-            display: flex;
-            flex-direction: row;
-            justify-content: center;
-            align-items: center;
-            width: 100%;
-            gap: 5.2%;
-            li {
-                display: flex;
-                flex-direction: row;
-                justify-content: center;
-                align-items: center;
-                position: relative;
-                &::after,
-                &::before {
-                    content: "";
-                    position: absolute;
-                    top: 50%;
-                    transform: translateY(-50%);
-                    height: 2px;
-                    width: 20px;
-                    background-color: $gold;
-                    transition: 0.2s;
-                }
-                &:hover::after {
-                    left: -30px;
-                }
-                &:hover::before {
-                    right: -30px;
-                }
-                &::after {
-                    left: 0;
-                }
-                &::before {
-                    right: 0;
-                }
-                a {
-                    background-color: $white;
-                    z-index: 999;
-                }
-            }
-        }
-    }
-}
-
-.hero1-about {
-    position: relative;
-    height: 785px;
-    width: 100%;
-    background: url("/invest-kladno/kladno-photo/about-kladno/about-header.jpg");
-    background-size: auto;
-    background-position: right;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    &__box {
-        margin-bottom: 50px;
-        padding: 55px 70px 60px 55px;
-        border: 1px solid $gold;
-        background: rgba(255, 255, 255, 0.9);
-        .text-main {
-            margin-top: 30px;
-        }
-    }
-    @media (max-width: $xxl) {
-        &__box {
-            padding: 50px 40px 40px 50px;
-        }
-    }
-    @media (max-width: $xl) {
-        justify-content: flex-start;
-        &__box {
-            margin-top: 40px;
-            padding: 35px 35px 30px 35px;
-            .text-main {
-                margin-top: 20px;
-            }
-        }
-    }
-}
-
-.scroll-bottom {
-    margin: 50px 0 65px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.icon-ostoja {
-    margin: 45px 0 100px;
-
-    .row {
+.ik-about {
+    .hero1-about {
         position: relative;
-        &::before {
-            content: "";
-            position: absolute;
-            top: 0px;
-            right: -65px;
-            width: 105vw;
-            height: 100%;
-            border-top: 1px solid $gold;
-            border-right: 1px solid $gold;
-            border-bottom: 1px solid $gold;
-        }
-    }
-    &__content {
-        margin: 120px 0;
-        display: flex;
-        flex-direction: column;
+        height: 785px;
         width: 100%;
-        gap: 90px 15px;
-
-        .content-boxs {
-            display: flex;
-            justify-content: space-between;
-            gap: 20px;
-            .content-box {
-                flex-basis: 22%;
-                display: flex;
-                flex-direction: column;
-                justify-content: flex-start;
-                align-items: center;
-                h6 {
-                    margin-top: 15px;
-                    text-align: center;
-                }
-                p {
-                    margin-top: 10px;
-                    text-align: center;
-                }
-            }
-        }
-    }
-    @media (max-width: $xxl) {
-        .content-box {
-            h6 {
-                font-size: 25px;
-            }
-            p {
-                font-size: 17px;
-            }
-        }
-    }
-    @media (max-width: $xl) {
-        &__content {
-            flex-wrap: nowrap;
-            overflow: scroll;
-            max-width: 100%;
-            padding-bottom: 40px;
-            margin: 30px 0;
-            gap: 30px 15px;
-            .content-boxs {
-                gap: 30px;
-                .content-box {
-                    position: relative;
-                    min-width: 220px;
-                    img {
-                        width: 50%;
-                    }
-                    p {
-                        font-size: 13px;
-                    }
-                }
-            }
-        }
-    }
-    @media (max-width: $md) {
-        .row {
-            padding: 0 15px;
-            &::before {
-                content: "";
-                position: absolute;
-                top: 0px;
-                right: 15px;
-                width: calc(100% - 30px);
-                height: 100%;
-                border: 1px solid $gold;
-            }
-        }
-    }
-}
-
-.financing-ostoja {
-    background-color: green;
-    display: flex;
-    justify-content: center;
-    padding-bottom: 240px;
-    &__content {
+        background: url("../img/invest-kladno/about/about-header.jpg");
+        background-size: auto;
+        background-position: right;
         display: flex;
         flex-direction: column;
-        align-items: center;
-        h2,
-        p {
-            text-align: center;
-            margin-top: 30px;
-        }
-        .btn {
-            margin-top: 50px;
-        }
-    }
-}
-
-.location-ostoja {
-    padding: 180px 0 0;
-    width: 100%;
-    height: auto;
-    .row {
-        position: relative;
-        &::before {
-            content: "";
-            position: absolute;
-            top: 0px;
-            left: -65px;
-            width: 105vw;
-            height: 100%;
-            border-top: 1px solid $gold;
-            border-left: 1px solid $gold;
-            border-bottom: 1px solid $gold;
-            z-index: 999;
-        }
-    }
-    &__border {
-        border-top: 1px solid $gold;
-        border-left: 1px solid $gold;
-        border-bottom: 1px solid $gold;
-    }
-    &__content {
-        position: relative;
-        padding: 140px 0 70px;
-        // left: -50px;
-        min-height: 715px;
-        .contnet-text {
+        justify-content: flex-end;
+        &__box {
+            margin-bottom: 50px;
+            padding: 55px 70px 60px 55px;
+            border: 1px solid $gold;
+            background: rgba(255, 255, 255, 0.9);
             .text-main {
                 margin-top: 30px;
             }
         }
+        @media (max-width: $xxl) {
+            &__box {
+                padding: 50px 40px 40px 50px;
+            }
+        }
+        @media (max-width: $xl) {
+            justify-content: flex-start;
+            &__box {
+                margin-top: 40px;
+                padding: 35px 35px 30px 35px;
+                .text-main {
+                    margin-top: 20px;
+                }
+            }
+        }
     }
-    &__photo {
-        position: relative;
-        top: -70px;
-        left: 0;
-        width: 50vw;
+
+    .scroll-bottom {
+        margin: 50px 0 65px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
-    @media (max-width: 1199px) {
-        padding: 100px 0 0;
+
+    .icon-ostoja {
+        margin: 45px 0 100px;
+
+        .row {
+            position: relative;
+            &::before {
+                content: "";
+                position: absolute;
+                top: 0px;
+                right: -65px;
+                width: 105vw;
+                height: 100%;
+                border-top: 1px solid $gold;
+                border-right: 1px solid $gold;
+                border-bottom: 1px solid $gold;
+            }
+        }
+        &__content {
+            margin: 120px 0;
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            gap: 90px 15px;
+
+            .content-boxs {
+                display: flex;
+                justify-content: space-between;
+                gap: 20px;
+                .content-box {
+                    flex-basis: 22%;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: flex-start;
+                    align-items: center;
+                    h6 {
+                        margin-top: 15px;
+                        text-align: center;
+                    }
+                    p {
+                        margin-top: 10px;
+                        text-align: center;
+                    }
+                }
+            }
+        }
+        @media (max-width: $xxl) {
+            .content-box {
+                h6 {
+                    font-size: 25px;
+                }
+                p {
+                    font-size: 17px;
+                }
+            }
+        }
+        @media (max-width: $xl) {
+            &__content {
+                flex-wrap: nowrap;
+                overflow: scroll;
+                max-width: 100%;
+                padding-bottom: 40px;
+                margin: 30px 0;
+                gap: 30px 15px;
+                .content-boxs {
+                    gap: 30px;
+                    .content-box {
+                        position: relative;
+                        min-width: 220px;
+                        img {
+                            width: 50%;
+                        }
+                        p {
+                            font-size: 13px;
+                        }
+                    }
+                }
+            }
+        }
+        @media (max-width: $md) {
+            .row {
+                padding: 0 15px;
+                &::before {
+                    content: "";
+                    position: absolute;
+                    top: 0px;
+                    right: 15px;
+                    width: calc(100% - 30px);
+                    height: 100%;
+                    border: 1px solid $gold;
+                }
+            }
+        }
+    }
+
+    .financing-ostoja {
+        background-color: green;
+        display: flex;
+        justify-content: center;
+        padding-bottom: 240px;
+        &__content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            h2,
+            p {
+                text-align: center;
+                margin-top: 30px;
+            }
+            .btn {
+                margin-top: 50px;
+            }
+        }
+    }
+
+    .location-ostoja {
+        padding: 180px 0 0;
+        width: 100%;
+        height: auto;
+        .row {
+            position: relative;
+            &::before {
+                content: "";
+                position: absolute;
+                top: 0px;
+                left: -65px;
+                width: 105vw;
+                height: 100%;
+                border-top: 1px solid $gold;
+                border-left: 1px solid $gold;
+                border-bottom: 1px solid $gold;
+                z-index: 999;
+            }
+        }
+        &__border {
+            border-top: 1px solid $gold;
+            border-left: 1px solid $gold;
+            border-bottom: 1px solid $gold;
+        }
         &__content {
             position: relative;
-            padding: 40px 0 40px;
-            min-height: auto;
+            padding: 140px 0 70px;
+            // left: -50px;
+            min-height: 715px;
             .contnet-text {
                 .text-main {
                     margin-top: 30px;
                 }
             }
-            .btn {
-                margin-top: 30px;
-            }
         }
         &__photo {
             position: relative;
-            top: 0px;
-            right: 0;
-            width: 100%;
-            margin-bottom: 40px;
+            top: -70px;
+            left: 0;
+            width: 50vw;
         }
-    }
-    @media (max-width: 767px) {
-        padding: 50px 0 0;
-        .row {
-            padding: 0 15px;
-            &::before {
-                content: "";
-                position: absolute;
+        @media (max-width: 1199px) {
+            padding: 100px 0 0;
+            &__content {
+                position: relative;
+                padding: 40px 0 40px;
+                min-height: auto;
+                .contnet-text {
+                    .text-main {
+                        margin-top: 30px;
+                    }
+                }
+                .btn {
+                    margin-top: 30px;
+                }
+            }
+            &__photo {
+                position: relative;
                 top: 0px;
-                left: 15px;
-                width: calc(100% - 30px);
-                height: 100%;
-                border: 1px solid $gold;
+                right: 0;
+                width: 100%;
+                margin-bottom: 40px;
             }
         }
-        &__content {
-            padding: 30px 0 30px;
-        }
-        &__photo {
-            margin-bottom: 30px;
+        @media (max-width: 767px) {
+            padding: 50px 0 0;
+            .row {
+                padding: 0 15px;
+                &::before {
+                    content: "";
+                    position: absolute;
+                    top: 0px;
+                    left: 15px;
+                    width: calc(100% - 30px);
+                    height: 100%;
+                    border: 1px solid $gold;
+                }
+            }
+            &__content {
+                padding: 30px 0 30px;
+            }
+            &__photo {
+                margin-bottom: 30px;
+            }
         }
     }
 }

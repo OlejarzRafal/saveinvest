@@ -1,370 +1,200 @@
-.kladno-nav {
-    height: 100px;
-    width: 100%;
-    background-color: $white;
-    position: fixed;
-    z-index: 99;
-    .kladno-nav-container {
-        display: flex;
+.ik-lokalizations {
+    .hero1-location {
+        position: relative;
+        height: 2000px;
         width: 100%;
-        height: 100px;
-        justify-content: flex-start;
-        &__logo {
-            // height: 100px;
-            display: flex;
-            align-items: center;
-            margin-right: 100px;
-        }
+        background: url("../img/invest-kladno/localization/background-location.jpg");
+        background-size: cover;
+        background-position: right top;
+        display: flex;
+        align-items: flex-end;
+        background-repeat: no-repeat;
+        z-index: 1;
         &__box {
+            padding-top: 310px;
+            padding-bottom: 170px;
             display: flex;
             flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            height: 100px;
-            width: 74%;
-            ul {
-                display: flex;
-                flex-direction: row;
-                justify-content: center;
-                align-items: center;
-                width: 100%;
-                gap: 5%;
-                li {
-                    display: flex;
-                    flex-direction: row;
-                    justify-content: center;
-                    align-items: center;
-                    position: relative;
-                    &::after,
-                    &::before {
-                        content: "";
-                        position: absolute;
-                        top: 50%;
-                        transform: translateY(-50%);
-                        height: 2px;
-                        width: 20px;
-                        background-color: $gold;
-                        transition: 0.2s;
-                    }
-                    &:hover::after {
-                        left: -30px;
-                    }
-                    &:hover::before {
-                        right: -30px;
-                    }
-                    &::after {
-                        left: 0;
-                    }
-                    &::before {
-                        right: 0;
-                    }
-                    a {
-                        background-color: $white;
-                        z-index: 999;
-                    }
-                }
+            justify-content: flex-start;
+            .box-text {
+                margin-top: 30px;
             }
-        }
-        &__burger {
-            display: none;
-            @media (max-width: 1199px) {
-                display: block;
-                width: 28px;
-                height: 25px;
-                position: absolute;
-                top: 50%;
-                left: auto;
-                right: 15px;
-                transform: translate(0, -50%) rotate(0deg);
-                // transform: ;
-                transition-duration: 0.3s;
-                cursor: pointer;
-                span {
-                    display: block;
-                    position: absolute;
-                    height: 3px;
-                    width: 100%;
-                    background: $grant;
-                    border-radius: 0px;
-                    opacity: 1;
-                    left: 0;
-                    transform: rotate(0deg);
-                    transition: 0.25s ease-in-out;
-                }
-                span:nth-child(1) {
-                    top: 0px;
-                }
-
-                span:nth-child(2),
-                span:nth-child(3) {
-                    top: 9px;
-                }
-                span:nth-child(2) {
-                    visibility: hidden;
-                }
-
-                span:nth-child(4) {
-                    top: 18px;
-                }
-
-                &.open span:nth-child(1) {
-                    top: 9px;
-                    width: 0%;
-                    left: 50%;
-                }
-
-                &.open span:nth-child(2) {
-                    visibility: visible;
-                    -webkit-transform: rotate(45deg);
-                    -moz-transform: rotate(45deg);
-                    -o-transform: rotate(45deg);
-                    transform: rotate(45deg);
-                }
-
-                &.open span:nth-child(3) {
-                    -webkit-transform: rotate(-45deg);
-                    -moz-transform: rotate(-45deg);
-                    -o-transform: rotate(-45deg);
-                    transform: rotate(-45deg);
-                }
-
-                &.open span:nth-child(4) {
-                    top: 9px;
-                    width: 0%;
-                    left: 50%;
-                }
-            }
-        }
-    }
-
-    @media (max-width: $xxl) {
-        .kladno-nav-container {
-            &__logo {
-                margin-right: 50px;
-                width: 205px;
-            }
-            &__box {
+            .table-location {
                 display: flex;
                 flex-direction: column;
-                justify-content: center;
-                align-items: center;
-                height: 100px;
-                width: 78%;
-                ul {
-                    gap: 5%;
-                }
-            }
-        }
-    }
+                margin-top: 60px;
+                .row-table {
+                    display: flex;
+                    width: 100%;
+                    border-top: 1px solid #b68b1d;
+                    &__title {
+                        flex-basis: 50%;
+                        padding-left: 3px;
+                    }
+                    &__time {
+                        flex-basis: 30%;
+                    }
+                    &__distance {
+                        flex-basis: 20%;
+                    }
 
-    @media (max-width: $xl) {
-        .kladno-nav-container {
-            &__logo {
-                margin-right: 50px;
-                width: 100%;
-            }
-            &__box {
-                display: none;
-            }
-        }
-    }
-}
-
-.hero1-location {
-    position: relative;
-    height: 2000px;
-    width: 100%;
-    background: url("../img/invest-kladno/localization/background-location.jpg");
-    background-size: cover;
-    background-position: right top;
-    display: flex;
-    align-items: flex-end;
-    background-repeat: no-repeat;
-    z-index: 1;
-    &__box {
-        padding-top: 310px;
-        padding-bottom: 170px;
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
-        .box-text {
-            margin-top: 30px;
-        }
-        .table-location {
-            display: flex;
-            flex-direction: column;
-            margin-top: 60px;
-            .row-table {
-                display: flex;
-                width: 100%;
-                border-top: 1px solid #b68b1d;
-                &__title {
-                    flex-basis: 50%;
-                    padding-left: 3px;
-                }
-                &__time {
-                    flex-basis: 30%;
-                }
-                &__distance {
-                    flex-basis: 20%;
-                }
-
-                &:first-child {
-                    border-top: 0px solid #b68b1d;
-                }
-                &:nth-child(2) {
-                    position: relative;
-                    .row-table__time {
-                        p {
-                            position: relative;
-                            &::after {
-                                content: "";
-                                position: absolute;
-                                top: 28%;
-                                left: 65px;
-                                background: url("../img/invest-kladno/localization/time-icon.png");
-                                height: 17px;
-                                width: 11px;
+                    &:first-child {
+                        border-top: 0px solid #b68b1d;
+                    }
+                    &:nth-child(2) {
+                        position: relative;
+                        .row-table__time {
+                            p {
+                                position: relative;
+                                &::after {
+                                    content: "";
+                                    position: absolute;
+                                    top: 28%;
+                                    left: 65px;
+                                    background: url("../img/invest-kladno/localization/time-icon.png");
+                                    height: 17px;
+                                    width: 11px;
+                                }
                             }
                         }
                     }
-                }
-                p {
-                    padding: 13px 0;
-                    text-align: start;
-                }
-            }
-        }
-    }
-    &__map {
-        padding-top: 260px;
-    }
-    @media (max-width: $xl) {
-        background-size: 1300px auto;
-        background-position: right top;
-        align-items: flex-start;
-        &__box {
-            padding-top: 75%;
-            padding-bottom: 50px;
-        }
-        &__map {
-            padding-top: 0px;
-            padding-bottom: 50px;
-            position: relative;
-            &::before {
-                content: "";
-                position: absolute;
-                bottom: 0px;
-                left: -20vw;
-                width: 130vw;
-                height: 97%;
-                background: #003b5c;
-                z-index: -1;
-            }
-        }
-    }
-    @media (max-width: $lg) {
-        margin-top: 80px;
-        background-size: 1000px auto;
-        background-position: right top;
-        &__box {
-            padding-top: 85%;
-            padding-left: 15px;
-            padding-right: 15px;
-        }
-        &__map {
-            &::before {
-                content: "";
-                position: absolute;
-                height: 128%;
-            }
-        }
-    }
-    @media (max-width: $md) {
-        &__box {
-            padding-top: 100%;
-            padding-bottom: 30px;
-            h2 {
-                font-size: 35px;
-            }
-            .table-location {
-                overflow-x: scroll;
-                padding-bottom: 10px;
-                margin-top: 30px;
-                .row-table {
-                    min-width: 550px;
-                    &__title {
-                        min-width: 300px;
-                    }
-                    &__time {
-                        min-width: 150px;
-                    }
-                    &__distance {
-                        min-width: 100px;
+                    p {
+                        padding: 13px 0;
+                        text-align: start;
                     }
                 }
             }
         }
         &__map {
-            &::before {
-                content: "";
-                position: absolute;
-                height: 115%;
+            padding-top: 260px;
+        }
+        @media (max-width: $xl) {
+            background-size: 1300px auto;
+            background-position: right top;
+            align-items: flex-start;
+            &__box {
+                padding-top: 75%;
+                padding-bottom: 50px;
+            }
+            &__map {
+                padding-top: 0px;
+                padding-bottom: 50px;
+                position: relative;
+                &::before {
+                    content: "";
+                    position: absolute;
+                    bottom: 0px;
+                    left: -20vw;
+                    width: 130vw;
+                    height: 97%;
+                    background: #003b5c;
+                    z-index: -1;
+                }
+            }
+        }
+        @media (max-width: $lg) {
+            margin-top: 80px;
+            background-size: 1000px auto;
+            background-position: right top;
+            &__box {
+                padding-top: 85%;
+                padding-left: 15px;
+                padding-right: 15px;
+            }
+            &__map {
+                &::before {
+                    content: "";
+                    position: absolute;
+                    height: 128%;
+                }
+            }
+        }
+        @media (max-width: $md) {
+            &__box {
+                padding-top: 100%;
+                padding-bottom: 30px;
+                h2 {
+                    font-size: 35px;
+                }
+                .table-location {
+                    overflow-x: scroll;
+                    padding-bottom: 10px;
+                    margin-top: 30px;
+                    .row-table {
+                        min-width: 550px;
+                        &__title {
+                            min-width: 300px;
+                        }
+                        &__time {
+                            min-width: 150px;
+                        }
+                        &__distance {
+                            min-width: 100px;
+                        }
+                    }
+                }
+            }
+            &__map {
+                &::before {
+                    content: "";
+                    position: absolute;
+                    height: 115%;
+                }
+            }
+        }
+        @media (max-width: $sm) {
+            background-size: 750px auto;
+            &__box {
+                padding-top: 85%;
+            }
+            &__map {
+                &::before {
+                    content: "";
+                    position: absolute;
+                    height: 152%;
+                }
+            }
+        }
+        @media (max-width: 450px) {
+            background-size: 600px auto;
+            &__map {
+                &::before {
+                    content: "";
+                    position: absolute;
+                    height: 181vw;
+                }
+            }
+        }
+        @media (max-width: 414px) {
+            &__map {
+                &::before {
+                    content: "";
+                    position: absolute;
+                    height: 186vw;
+                }
+            }
+        }
+        @media (max-width: 373px) {
+            &__map {
+                &::before {
+                    content: "";
+                    position: absolute;
+                    height: 193vw;
+                }
+            }
+        }
+        @media (max-width: 347px) {
+            &__map {
+                &::before {
+                    content: "";
+                    position: absolute;
+                    height: 204vw;
+                }
             }
         }
     }
-    @media (max-width: $sm) {
-        background-size: 750px auto;
-        &__box {
-            padding-top: 85%;
-        }
-        &__map {
-            &::before {
-                content: "";
-                position: absolute;
-                height: 152%;
-            }
-        }
+    .map-location {
+        margin-top: 70px;
+        margin-bottom: -110px;
     }
-    @media (max-width: 450px) {
-        background-size: 600px auto;
-        &__map {
-            &::before {
-                content: "";
-                position: absolute;
-                height: 181vw;
-            }
-        }
-    }
-    @media (max-width: 414px) {
-        &__map {
-            &::before {
-                content: "";
-                position: absolute;
-                height: 186vw;
-            }
-        }
-    }
-    @media (max-width: 373px) {
-        &__map {
-            &::before {
-                content: "";
-                position: absolute;
-                height: 193vw;
-            }
-        }
-    }
-    @media (max-width: 347px) {
-        &__map {
-            &::before {
-                content: "";
-                position: absolute;
-                height: 204vw;
-            }
-        }
-    }
-}
-.map-location {
-    margin-top: 70px;
-    margin-bottom: -110px;
 }
