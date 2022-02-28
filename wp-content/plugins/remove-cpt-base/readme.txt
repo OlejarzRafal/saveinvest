@@ -4,8 +4,8 @@ Donate link: https://www.paypal.me/jakubnovaksl
 Tags: permalink, custom post type, base, slug, remove
 Requires at least: 3.0
 Requires PHP: 5.4
-Tested up to: 5.7
-Stable tag: 5.7
+Tested up to: 5.9
+Stable tag: 5.8
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -26,6 +26,9 @@ Remove custom post type base slug from url
 2. Activate the plugin through the 'Plugins' menu in WordPress
 
 == Changelog ==
+
+= 5.8 =
+* tested on WP 5.9
 
 = 5.7 =
 * tested on WP 5.5

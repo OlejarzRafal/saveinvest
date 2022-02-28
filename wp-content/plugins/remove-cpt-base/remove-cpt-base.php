@@ -3,7 +3,7 @@
 	Plugin Name: Remove CPT base
 	Plugin URI: https://www.paypal.me/jakubnovaksl
 	Description: Remove custom post type base slug from url
-	Version: 5.7
+	Version: 5.8
 	Author: KubiQ
 	Author URI: https://kubiq.sk
 	Text Domain: remove_cpt_base
