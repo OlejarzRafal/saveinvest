@@ -1,14 +1,17 @@
 <?php
+
 /**
  * Template Name: Ceny działek
- * Template Post Type: osada-jaworek
+ * Template Post Type: ostoja-kladno
  */
 
-get_template_part('investitions/osada-jaworek/header');
+get_template_part('investitions/ostoja-kladno/header');
 global $PlotsFront;
 
 $PlotsFront->getScriptsAndStyles('Osada Jaworek');
 ?>
+
+
 
 <section class="plots-map" data-plots-map>
     <div data-plots-info class="plotModal">
@@ -16,8 +19,7 @@ $PlotsFront->getScriptsAndStyles('Osada Jaworek');
             <button data-plots-info-prev class="plotModal-arrows__prev"></button>
             <button data-plots-info-next class="plotModal-arrows__next"></button>
         </div>
-        <button data-plots-info-on-selected
-                data-plots-info-close class="plotModal-close"></button>
+        <button data-plots-info-on-selected data-plots-info-close class="plotModal-close"></button>
 
         <div class="plotModal-discount d-none" data-plot-info-show-if="discount">
             <div>TANIEJ O <span data-plot-info-param="discount"></span> ZŁ</div>
@@ -34,18 +36,15 @@ $PlotsFront->getScriptsAndStyles('Osada Jaworek');
                         </div>
                         <div class="plotModal-top__status">
                             <div data-plot-info-show-if="status=wolna">
-                                <img class="status-ico"
-                                     src="https://osadajaworek.pl/1/wp-content/themes/starter/assets/img/prices/status-wolna.png">
+                                <img class="status-ico" src="https://osadajaworek.pl/1/wp-content/themes/starter/assets/img/prices/status-wolna.png">
                                 <p>Wolna</p>
                             </div>
                             <div data-plot-info-show-if="status=sprzedana">
-                                <img class="status-ico"
-                                     src="https://osadajaworek.pl/1/wp-content/themes/starter/assets/img/prices/status-wolna.png">
+                                <img class="status-ico" src="https://osadajaworek.pl/1/wp-content/themes/starter/assets/img/prices/status-wolna.png">
                                 <p>Sprzedana</p>
                             </div>
                             <div data-plot-info-show-if="status=zarezerwowana">
-                                <img class="status-ico"
-                                     src="https://osadajaworek.pl/1/wp-content/themes/starter/assets/img/prices/status-wolna.png">
+                                <img class="status-ico" src="https://osadajaworek.pl/1/wp-content/themes/starter/assets/img/prices/status-wolna.png">
                                 <p>Zarezerwowana</p>
                             </div>
                         </div>
@@ -76,12 +75,10 @@ $PlotsFront->getScriptsAndStyles('Osada Jaworek');
             <div class="plotModal-bottom">
                 <div class="plotModal-bottom__empty">KLIKNIJ DZIAŁKĘ</div>
                 <div class="plotModal-buttons" data-plots-info-on-selected>
-                    <a href="https://osadajaworek.pl/1/PlotsFiles/D/karty/D-3.pdf"
-                       class="btn-pdf" target="_blank" data-plot-info-image-pdf-card>
+                    <a href="https://osadajaworek.pl/1/PlotsFiles/D/karty/D-3.pdf" class="btn-pdf" target="_blank" data-plot-info-image-pdf-card>
                         Pobierz kartę
                     </a>
-                    <a href="#"
-                       class="btn-message" target="_blank" data-plot-info-image-send-message>
+                    <a href="#" class="btn-message" target="_blank" data-plot-info-image-send-message>
                         Wiadomość
                     </a>
                 </div>
@@ -90,8 +87,8 @@ $PlotsFront->getScriptsAndStyles('Osada Jaworek');
     </div>
 
     <div data-plots-sectors>
-        <img class="plots-map__img" src="<?= get_theme_file_uri('/investitions/osada-jaworek/assets/main-map.png') ?>">
-        <?= file_get_contents(get_theme_file_path('/investitions/osada-jaworek/assets/main-map-sectors.svg')) ?>
+        <img class="plots-map__img" src="<?= get_theme_file_uri('/investitions/ostoja-kladno/assets/main-map.png') ?>">
+        <?= file_get_contents(get_theme_file_path('/investitions/ostoja-kladno/assets/main-map-sectors.svg')) ?>
     </div>
 
     <div data-plots-sector="A">
@@ -103,12 +100,17 @@ $PlotsFront->getScriptsAndStyles('Osada Jaworek');
             </div>
         </div>
 
-        <img class="plots-map__img" src="<?= get_theme_file_uri('/investitions/osada-jaworek/assets/sectorA.jpg') ?>">
-        <?= file_get_contents(get_theme_file_path('/investitions/osada-jaworek/assets/sector-a-plots.svg')) ?>
+        <img class="plots-map__img" src="<?= get_theme_file_uri('/investitions/ostoja-kladno/assets/sectorA.jpg') ?>">
+        <?= file_get_contents(get_theme_file_path('/investitions/ostoja-kladno/assets/sector-a-plots.svg')) ?>
     </div>
 </section>
 
-<section plots-collected-info>
+<!-- ****************************** -->
+<!-- ****************************** -->
+<!-- INFO O DOSTĘPNOŚCI-->
+<!-- ****************************** -->
+<!-- ****************************** -->
+<!-- <section plots-collected-info>
     <div class="container">
         <div class="row">
             <div class="col">Sektor</div>
@@ -129,44 +131,81 @@ $PlotsFront->getScriptsAndStyles('Osada Jaworek');
             <div class="col"><span plots-collected-available-count-by-sector="C"></span></div>
         </div>
     </div>
-</section>
+</section> -->
 
+<!-- ****************************** -->
+<!-- ****************************** -->
+<!-- LISTA DZIAŁEK -->
+<!-- ****************************** -->
+<!-- ****************************** -->
 <div class="container">
     <div class="row">
         <div class="col-12">
             <section class="plots-list" data-plot-list>
-                <h2>Lista działek</h2>
 
-                <select data-plot-list-filter="sector"></select>
+                <div class="plots-list__header">
+                    <div class="row">
+                        <div class="col-10">
+                            <div class="plots-list__header__desc">
+                                <h2 class="f-h2">Lista działek</h2>
+                                <div class="text-main">
+                                    Do ceny netto należy doliczyć 23% podatku VAT. Przedsiębiorca otrzymuje zwrot podatku VAT w ciągu 30 lub 60 dni od wystąpienia o zwrot do urzędu skarbowego. Nakłady inwestycyjne związane z budową basenu i części rekreacyjnej oraz utwardzeniem drogi wewnętrznej zostaną podzielone na wszystkich właścicieli działek.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-2">
+                            <div class="plots-list__header__img">
+                                <!-- <img src="<?php bloginfo('template_url'); ?>/assets/img/prices-qaulity-logo/image1.svg') ?>" alt="17 lat doświadczenia"> -->
+                                <img src="<?php bloginfo('template_url'); ?>/assets/img/prices-qaulity-logo/image2big.svg') ?>" alt="gwarancja najwyższej jakości">
+                                <!-- <img src="<?php bloginfo('template_url'); ?>/assets/img/prices-qaulity-logo/image3.svg') ?>" alt="700 zadowolonych klientów"> -->
+                                <!-- <img src="<?php bloginfo('template_url'); ?>/assets/img/prices-qaulity-logo/image2small.svg') ?>" alt="gwarancja najwyższej jakości"> -->
 
-                <div class="plot-list__sorting">
-                    <div class="plot-list__sorting__item">
-                        <span>Numer działki</span>
-                        <div class="plot-list__sorting__item__direction">
-                            <button class="asc" data-plot-list-sort="plotNr|asc"></button>
-                            <button class="desc" data-plot-list-sort="plotNr|desc"></button>
+                            </div>
                         </div>
                     </div>
-                    <div class="plot-list__sorting__item">
-                        <span>Cena</span>
-                        <div class="plot-list__sorting__item__direction">
-                            <button class="asc" data-plot-list-sort="priceNetto|asc"></button>
-                            <button class="desc" data-plot-list-sort="priceNetto|desc"></button>
+                </div>
+
+                <!-- <select data-plot-list-filter="sector"></select> -->
+
+                <div class="plots-list__sorting">
+                    <div class="plots-list__sorting__list">
+                        <div>
+                            <span class="plots-list__sorting__header">Sortuj po:</span>
+                        </div>
+                        <div class="plots-list__sorting__item">
+                            <span>Numer działki</span>
+                            <div class="plots-list__sorting__item__direction">
+                                <button class="asc" data-plot-list-sort="plotNr|asc"></button>
+                                <button class="desc" data-plot-list-sort="plotNr|desc"></button>
+                            </div>
+                        </div>
+                        <div class="plots-list__sorting__item">
+                            <span>Cena</span>
+                            <div class="plots-list__sorting__item__direction">
+                                <button class="asc" data-plot-list-sort="priceNetto|asc"></button>
+                                <button class="desc" data-plot-list-sort="priceNetto|desc"></button>
+                            </div>
+                        </div>
+                        <div class="plots-list__sorting__item">
+                            <span>Powierzchnia</span>
+                            <div class="plots-list__sorting__item__direction">
+                                <button class="asc" data-plot-list-sort="area|asc"></button>
+                                <button class="desc" data-plot-list-sort="area|desc"></button>
+                            </div>
+                        </div>
+                        <div class="plots-list__sorting__item">
+                            <span>Typ działki</span>
+                            <div class="plots-list__sorting__item__direction">
+                                <button class="asc" data-plot-list-sort="plot_type|asc"></button>
+                                <button class="desc" data-plot-list-sort="plot_type|desc"></button>
+                            </div>
                         </div>
                     </div>
-                    <div class="plot-list__sorting__item">
-                        <span>Powierzchnia</span>
-                        <div class="plot-list__sorting__item__direction">
-                            <button class="asc" data-plot-list-sort="area|asc"></button>
-                            <button class="desc" data-plot-list-sort="area|desc"></button>
-                        </div>
-                    </div>
-                    <div class="plot-list__sorting__item">
-                        <span>Typ działki</span>
-                        <div class="plot-list__sorting__item__direction">
-                            <button class="asc" data-plot-list-sort="plot_type|asc"></button>
-                            <button class="desc" data-plot-list-sort="plot_type|desc"></button>
-                        </div>
+                    <div class="plots-list__sorting__hideEmpty">
+                        <label> 
+                            <input type="checkbox">
+                            Ukryj sprzedane działki
+                        </label>
                     </div>
                 </div>
 
@@ -176,18 +215,15 @@ $PlotsFront->getScriptsAndStyles('Osada Jaworek');
                         <div class="plot-status__number" data-plot-info-param="sector|plotNr"></div>
                         <div class="plot-status__status">
                             <div data-plot-info-show-if="status=wolna">
-                                <img class="status-ico"
-                                     src="https://osadajaworek.pl/1/wp-content/themes/starter/assets/img/prices/status-wolna.png">
+                                <img class="status-ico" src="https://osadajaworek.pl/1/wp-content/themes/starter/assets/img/prices/status-wolna.png">
                                 <p>Wolna</p>
                             </div>
                             <div data-plot-info-show-if="status=sprzedana">
-                                <img class="status-ico"
-                                     src="https://osadajaworek.pl/1/wp-content/themes/starter/assets/img/prices/status-wolna.png">
+                                <img class="status-ico" src="https://osadajaworek.pl/1/wp-content/themes/starter/assets/img/prices/status-wolna.png">
                                 <p>Sprzedana</p>
                             </div>
                             <div data-plot-info-show-if="status=zarezerwowana">
-                                <img class="status-ico"
-                                     src="https://osadajaworek.pl/1/wp-content/themes/starter/assets/img/prices/status-wolna.png">
+                                <img class="status-ico" src="https://osadajaworek.pl/1/wp-content/themes/starter/assets/img/prices/status-wolna.png">
                                 <p>Zarezerwowana</p>
                             </div>
                         </div>
@@ -206,14 +242,14 @@ $PlotsFront->getScriptsAndStyles('Osada Jaworek');
                         </div>
                     </div>
                     <div class="plot-link"></div>
-                    <div class="plot-quality">
+                    <!-- <div class="plot-quality">
                         <img class="quality-ico quality-ico__one"
                              src="https://osadadziwnowek.pl/1/wp-content/themes/osada/assets/img/ico_dz1.png">
                         <img class="quality-ico quality-ico__two"
                              src="https://osadadziwnowek.pl/1/wp-content/themes/osada/assets/img/ico_dz2.png">
                         <img class="quality-ico quality-ico__three"
                              src="https://osadadziwnowek.pl/1/wp-content/themes/osada/assets/img/ico_dz3.png">
-                    </div>
+                    </div> -->
                 </div>
 
                 <div data-plot-list-baner-template>
@@ -235,5 +271,5 @@ $PlotsFront->getScriptsAndStyles('Osada Jaworek');
 </div>
 
 <?php
-get_template_part('investitions/osada-jaworek/footer');
+get_template_part('investitions/ostoja-kladno/footer');
 ?>
