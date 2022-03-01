@@ -82,7 +82,7 @@ class PlotsFront
                     // w sumie tu trzeba zrobić tak że jak nie ma rabatu żeby tam się wogóle element nie pokazywał choć chyba można to tuaj ogarnąc na jednej zmiennje?( lista działek)
                     
                     // Cena przed rabatem 
-                    $plotData['priceBeforeDiscount'] = $plotData['price']
+                    $plotData['priceBeforeDiscount'] = $plotData['price'];
                     // Cena po rabacie 
                     $plotData['priceAfterDiscount'] = $plotData['priceAfterDiscount'] . ' zł';
                 
