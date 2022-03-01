@@ -37,7 +37,7 @@ class FunktionalPlots
             )
         );
 
-        $this->registerInvestitionPagesCpt('osada-jaworek', 'Osada Jaworek');
+        // $this->registerInvestitionPagesCpt('osada-jaworek', 'Osada Jaworek');
         $this->registerInvestitionPagesCpt('ostoja-kladno', 'Ostoja Kładno');
     }
 
