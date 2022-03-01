@@ -5770,6 +5770,73 @@ a:hover {
   }
 }
 
+.plots-list {
+  margin-top: 120px;
+}
+.plots-list__header__img {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+.plots-list__header .text-main {
+  margin-top: 30px;
+}
+.plots-list__sorting {
+  margin-top: 100px;
+  margin-bottom: 100px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.plots-list__sorting__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 50px;
+}
+.plots-list__sorting__header {
+  position: relative;
+  top: 6px;
+}
+.plots-list__sorting span {
+  font-size: 14px;
+}
+.plots-list__sorting__item {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.plots-list__sorting__item__direction {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 10px;
+  margin-left: 15px;
+}
+.plots-list__sorting__item__direction button {
+  width: 15px;
+  height: 10px;
+  background-color: red;
+  border: none;
+  cursor: pointer;
+}
+
 .invest-kladno {
   overflow-x: hidden;
 }

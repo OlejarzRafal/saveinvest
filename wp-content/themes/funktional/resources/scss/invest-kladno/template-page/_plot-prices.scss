@@ -1,0 +1,47 @@
+.plots-list {
+    margin-top: 120px;
+    &__header {
+        &__img {
+            display: flex;
+            justify-content: flex-end;
+        }
+        .text-main {
+            margin-top: 30px;
+        }
+    }
+    &__sorting {
+        margin-top: 100px;
+        margin-bottom: 100px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        &__list {
+            display: flex;
+            gap: 50px;
+        }
+        &__header {
+            position: relative;
+            top: 6px;
+        }
+        span {
+            font-size: 14px;
+        }
+        &__item {
+            align-items: center;
+            display: flex;
+            &__direction {
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+                margin-left: 15px;
+                button {
+                    width: 15px;
+                    height: 10px;
+                    background-color: red;
+                    border: none;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+}

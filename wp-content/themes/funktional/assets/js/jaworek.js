@@ -14,6 +14,7 @@
 /*!****************************************!*\
   !*** ./resources/js/invest-jaworek.js ***!
   \****************************************/
+<<<<<<< HEAD
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _scss_invest_jaworek_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../scss/invest-jaworek.scss */ \"./resources/scss/invest-jaworek.scss\");\n// HERE ARE IMPORTS FOR JAWOREK\n\n\n//# sourceURL=webpack://webpack-starter/./resources/js/invest-jaworek.js?");
@@ -27,6 +28,12 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _scs
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extract-plugin\n\n\n//# sourceURL=webpack://webpack-starter/./resources/scss/invest-jaworek.scss?");
+=======
+/*! no exports provided */
+/***/ (function(module, exports) {
+
+eval("throw new Error(\"Module build failed (from ./node_modules/babel-loader/lib/index.js):\\nError: ENOENT: no such file or directory, open 'C:\\\\Program Files\\\\Ampps\\\\www\\\\saveinvest\\\\wp-content\\\\themes\\\\funktional\\\\resources\\\\js\\\\invest-jaworek.js'\");\n\n//# sourceURL=webpack:///./resources/js/invest-jaworek.js?");
+>>>>>>> fc31fbce45e39788ea8eb116356f0ab00d74535e
 
 /***/ })
 
