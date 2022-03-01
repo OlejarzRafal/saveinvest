@@ -9,14 +9,14 @@ class FunktionalPlotsService {
     }
 
     getPlots(filters, sort) {
-        return $.post(`${window.FunktionalGlobals.homeUrl}wp-json/funktional-plots/v1/plots`, { filters, sort });
+        return $.post(`${window.FunktionalGlobals.homeUrl}wp-json/funktional-plots/v1/plots`, {filters, sort});
     }
 
     updatePlot(data) {
         return $.ajax({
             url: `${window.FunktionalGlobals.homeUrl}wp-json/funktional-plots/v1/update`,
             method: 'PUT',
-            data: { data }
+            data: {data}
         });
     }
 
@@ -24,7 +24,15 @@ class FunktionalPlotsService {
         return $.ajax({
             url: `${window.FunktionalGlobals.homeUrl}wp-json/funktional-plots/v1/update-multiple`,
             method: 'PUT',
-            data: { data }
+            data: {data}
+        });
+    }
+
+    removePlot(plotId) {
+        return $.ajax({
+            url: `${window.FunktionalGlobals.homeUrl}wp-json/funktional-plots/v1/remove-plot`,
+            method: 'DELETE',
+            data: { plotId }
         });
     }
 }
@@ -36,7 +44,8 @@ class FunktionalPlots {
         this.plotsTableBody = $('.funktional-plots__table tbody');
         this.filtersForm = $('.funktional-plots__filters');
         this.rangeSliders = {};
-        this.timeout = setTimeout(() => {});
+        this.timeout = setTimeout(() => {
+        });
 
         this.initFilters(true);
         this.initEvents();
@@ -75,7 +84,7 @@ class FunktionalPlots {
     getSortData() {
         const sortData = this.plotsTableHead.find('.sorting-buttons button.active').attr('data-sort').split('-');
 
-        return { sortBy: sortData[0], sort: sortData[1] };
+        return {sortBy: sortData[0], sort: sortData[1]};
     }
 
     getFilters() {
@@ -97,7 +106,7 @@ class FunktionalPlots {
         });
 
         return [
-            ...Object.keys(filters).map(filterName => ({ name: filterName, value: filters[filterName] })),
+            ...Object.keys(filters).map(filterName => ({name: filterName, value: filters[filterName]})),
             ...Object.keys(this.rangeSliders).map((name) => ({name, value: this.rangeSliders[name].value}))
         ];
     }
@@ -217,7 +226,8 @@ class FunktionalPlots {
                             <td class="column-primary">
                                 <a class="button action" 
                                     href="${window.FunktionalGlobals.homeUrl}wp-admin/post.php?action=edit&post=${params.postId}"
-                                    target="_blank">Edytuj działkę</a>
+                                    target="_blank">Edytuj</a>
+                                <a class="button deletion" data-delete-plot href="#">Usuń</a>
                             </td>
                         </tr>` : '';
     };
@@ -238,6 +248,23 @@ class FunktionalPlots {
                 }
             }).catch(this.displayError.bind(this));
         });
+
+        this.plotsTableBody.find('[data-delete-plot]').on('click', (event) => {
+            event.preventDefault();
+
+            if (confirm('Na pewno chcesz usunąć wybraną działkę?')) {
+                this.service.removePlot(this.getPlotEditData($(event.currentTarget).parent().parent()).plotId).then((response) => {
+                    if (response) {
+                        this.rebuildPlotsTable();
+                        toastr.success('Działka została poprawnie usunięta');
+                    } else {
+                        toastr.error('Wystąpił problem podczas usuwania działki');
+                    }
+                }).catch(() => {
+                    toastr.error('Wystąpił problem podczas usuwania działki');
+                });
+            }
+        });
     }
 
     saveAllPlotsData() {
@@ -254,7 +281,7 @@ class FunktionalPlots {
     getPlotEditData(plotRow) {
         const plotId = plotRow.find('input[name="postId"]').val();
         const inputs = plotRow.find('input:not([name="postId"])');
-        const editData = { plotId, fields: {} };
+        const editData = {plotId, fields: {}};
 
         inputs.toArray().forEach(input => {
             editData.fields[$(input).attr('name').replace(`${plotId}-`, '')] = $(input).val();

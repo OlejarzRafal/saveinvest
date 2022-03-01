@@ -81,6 +81,28 @@ class PlotDataElement {
         // TODO set href to plotcotact form or change it to click action
         element.find('[data-plot-info-image-send-message]').attr('href', '');
     }
+
+    static prepareParamClassesForPlot(plotData, element) {
+        const paramClassElements = element.find('[data-plot-class-param]');
+
+        if (!paramClassElements || !paramClassElements.length) {
+            return;
+        }
+
+        paramClassElements.toArray().forEach(classElements => {
+            const param = $(classElements).attr('data-plot-class-param');
+
+            const getPlotDataParam = (plotParamData) => {
+                if (!plotParamData) {
+                    return '';
+                }
+
+                return typeof plotParamData === 'object' ? plotParamData.value : plotParamData;
+            }
+
+            $(paramClassElements).addClass(param + '--' + getPlotDataParam(plotData[param]));
+        });
+    }
 }
 
 class FunktionalPlotsMap {
@@ -95,6 +117,16 @@ class FunktionalPlotsMap {
 
         this.initSectorsEvents();
         this.setPlotsStatus();
+
+        const url = new URL(window.location.href);
+
+        if (url.searchParams.get('sector')) {
+            const sectorElFormUrl = this.sectorsSelection.find(`[data-plots-sector-selector="${url.searchParams.get('sector')}"]`);
+
+            if (sectorElFormUrl) {
+                this.handleSelectSector({currentTarget: sectorElFormUrl});
+            }
+        }
     }
 
     initSectorsEvents() {
@@ -172,6 +204,9 @@ class FunktionalPlotsMap {
 
     handleSelectSector(event) {
         const sector = $(event.currentTarget).attr('data-plots-sector-selector');
+        const url = new URL(window.location.href);
+
+        url.searchParams.set('sector', sector);
 
         if (sector && typeof sector === 'string') {
             this.sector = $(`[data-plots-sector="${sector}"]`);
@@ -179,6 +214,7 @@ class FunktionalPlotsMap {
             if (this.sector.length) {
                 this.sectorsSelection.hide();
                 this.sector.show();
+                window.history.replaceState({}, '', url);
                 this.plots = this.sector.find('[data-plots-plot]');
                 this.initPlotsEvent();
             } else {
@@ -193,6 +229,11 @@ class FunktionalPlotsMap {
         if (event) {
             event.preventDefault();
         }
+
+        const url = new URL(window.location.href);
+
+        url.searchParams.delete('sector');
+        window.history.replaceState({}, '', url);
 
         this.sector.hide();
         this.sector = null;
@@ -245,6 +286,7 @@ class FunktionalPlotsMap {
     prepareInfoModalForPlot(plotData) {
         PlotDataElement.prepareConditionalElementsForPlot(plotData, this.plotInfoModal)
         PlotDataElement.prepareParamElementsForPlot(plotData, this.plotInfoModal);
+        PlotDataElement.prepareParamClassesForPlot(plotData, this.plotInfoModal);
 
         this.plotInfoModal.find('[data-plots-info-on-selected]')[this.plotSelected ? 'show' : 'hide']();
 
@@ -367,6 +409,7 @@ class FunktionalPlotsList {
             plotElement.addClass('plots-list__item');
             PlotDataElement.prepareConditionalElementsForPlot(plot, plotElement)
             PlotDataElement.prepareParamElementsForPlot(plot, plotElement);
+            PlotDataElement.prepareParamClassesForPlot(plot, plotElement);
 
             this.plotsContainer.append(plotElement);
 
