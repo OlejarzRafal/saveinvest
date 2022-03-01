@@ -6,6 +6,7 @@ class PlotsAdmin
     {
         add_action('init', array($this, 'redirectToValidPlotsPage'));
         add_action('rest_api_init', array($this, 'addAdminPlotsApiRoute'));
+        add_action('admin_head', array($this, 'addBackToPlotsLink'));
     }
 
     public function redirectToValidPlotsPage () {
@@ -39,6 +40,11 @@ class PlotsAdmin
         register_rest_route('funktional-plots/v1', '/update-multiple', array(
             'methods' => 'PUT',
             'callback' => array($this, 'updatePlots'),
+        ));
+
+        register_rest_route('funktional-plots/v1', '/remove-plot', array(
+            'methods' => 'DELETE',
+            'callback' => array($this, 'removePlot'),
         ));
     }
 
@@ -162,6 +168,18 @@ class PlotsAdmin
         echo json_encode(array('status' => 'OK'));
     }
 
+    public function addBackToPlotsLink() {
+        echo '<script>
+                (function($) {
+                  $(document).ready(function () {
+                      if ($(".acf-postbox .postbox-header > h2").length && $(".acf-postbox .postbox-header > h2").text() === "Działka") {
+                         jQuery("h1.wp-heading-inline + .page-title-action").after("<a href=\\"' . admin_url('/admin.php?page=plots') . '\\" class=\\"page-title-action\\">Powrót do listy działek</a>")
+                      }
+                  })
+                })(jQuery);
+        </script>';
+    }
+
     private function getPlotsObjectFromPosts($plotsPosts)
     {
         require(__DIR__ . '/../model/plots-acf-fields.php');
@@ -205,6 +223,16 @@ class PlotsAdmin
         }
 
         return $meta_query;
+    }
+
+    public function removePlot($data)
+    {
+        if (!wp_delete_post((int) $data['plotId'])) {
+            echo false;
+        } else {
+            echo true;
+        }
+        exit();
     }
 }
 
