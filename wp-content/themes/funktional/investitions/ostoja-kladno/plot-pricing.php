@@ -8,7 +8,7 @@
 get_template_part('investitions/ostoja-kladno/header');
 global $PlotsFront;
 
-$PlotsFront->getScriptsAndStyles('Osada Jaworek');
+$PlotsFront->getScriptsAndStyles('Ostoja Kładno');
 ?>
 
 
@@ -159,7 +159,6 @@ $PlotsFront->getScriptsAndStyles('Osada Jaworek');
                                 <img src="<?php bloginfo('template_url'); ?>/assets/img/prices-qaulity-logo/image2big.svg') ?>" alt="gwarancja najwyższej jakości">
                                 <!-- <img src="<?php bloginfo('template_url'); ?>/assets/img/prices-qaulity-logo/image3.svg') ?>" alt="700 zadowolonych klientów"> -->
                                 <!-- <img src="<?php bloginfo('template_url'); ?>/assets/img/prices-qaulity-logo/image2small.svg') ?>" alt="gwarancja najwyższej jakości"> -->
-
                             </div>
                         </div>
                     </div>
@@ -202,69 +201,109 @@ $PlotsFront->getScriptsAndStyles('Osada Jaworek');
                         </div>
                     </div>
                     <div class="plots-list__sorting__hideEmpty">
-                        <label> 
-                            <input type="checkbox">
+                        <label class="sold-wrap">
+                            <input type="checkbox" class="input-sold" name="sold">
+                            <span class="checkmark"></span>
                             Ukryj sprzedane działki
                         </label>
                     </div>
                 </div>
 
                 <div data-plot-list-plot-template>
-                    <div class="plot-status">
-                        <div class="plot-status__header">Działka</div>
-                        <div class="plot-status__number" data-plot-info-param="sector|plotNr"></div>
-                        <div class="plot-status__status">
-                            <div data-plot-info-show-if="status=wolna">
-                                <img class="status-ico" src="https://osadajaworek.pl/1/wp-content/themes/starter/assets/img/prices/status-wolna.png">
-                                <p>Wolna</p>
-                            </div>
-                            <div data-plot-info-show-if="status=sprzedana">
-                                <img class="status-ico" src="https://osadajaworek.pl/1/wp-content/themes/starter/assets/img/prices/status-wolna.png">
-                                <p>Sprzedana</p>
-                            </div>
-                            <div data-plot-info-show-if="status=zarezerwowana">
-                                <img class="status-ico" src="https://osadajaworek.pl/1/wp-content/themes/starter/assets/img/prices/status-wolna.png">
-                                <p>Zarezerwowana</p>
+                    <div class="plot-item ">
+                        <div class="plot-status">
+                            <div class="plot-status__header">Działka</div>
+                            <div class="plot-status__number" data-plot-info-param="sector|plotNr"></div>
+                            <div class="plot-status__status">
+                                <div data-plot-info-show-if="status=wolna">
+                                    <img class="status-ico" src="<?= get_theme_file_uri('/investitions/ostoja-kladno/assets/check.png') ?>">
+                                    <span>wolna</span>
+                                </div>
+                                <div data-plot-info-show-if="status=sprzedana">
+                                    <img class="status-ico" src="<?= get_theme_file_uri('/investitions/ostoja-kladno/assets/x-circle.png') ?>">
+                                    <span>sprzedana</span>
+                                </div>
+                                <div data-plot-info-show-if="status=zarezerwowana">
+                                    <img class="status-ico" src="<?= get_theme_file_uri('/investitions/ostoja-kladno/assets/lock.png') ?>">
+                                    <span>zarezerwowana</sp>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="plot-img">
-                        <img src="" alt="" data-plot-info-image>
-                    </div>
-                    <div class="plot-info">
-                        <div class="plot-info__text">
-                            <div class="plot-text__type">Typ działki:</div>
-                            <div class="plot-text__surface">Powierzchnia:</div>
+                        <div class="plot-img">
+                            <img class="status-ico" src="<?= get_theme_file_uri('/investitions/ostoja-kladno/assets/plot-demo.png') ?>">
+                            <!-- <img src="" alt="" data-plot-info-image> -->
                         </div>
-                        <div class="plot-info__desc">
-                            <div class="typ-dzialki" data-plot-info-param="plot_type"></div>
-                            <div class="powierzchnia"><span data-plot-info-param="area"></span>m<sup>2</sup></div>
+                        <div class="plot-info ">
+                            <div class="plot-info__text">
+                                <div class="plot-text__type">Typ działki:</div>
+                                <div class="plot-text__surface">Powierzchnia:</div>
+                                <div class="plot-text__price" data-plot-info-show-if="status=wolna">Cena netto:</div>
+                                <div class="plot-text__priceMonth" data-plot-info-show-if="status=wolna">Lub miesięcznie:</div>
+                            </div>
+                            <div class="plot-info__desc ">
+                                <div class="plot-desc__type" data-plot-info-param="plot_type"></div>
+                                <div class="plot-desc__sufrace"><span data-plot-info-param="area"></span>m<sup>2</sup></div>
+                                <div class="plot-desc__price" data-plot-info-show-if="status=wolna">
+                                    <p>po:<span data-plot-info-param="priceAfterDiscount"></span></p>
+                                    <p>przed:<span data-plot-info-param="priceBeforeDiscount"></span></p>
+                                </div>
+                                <div class="plot-desc__rate" data-plot-info-show-if="status=wolna">
+                                    <p data-plot-info-show-if="!rate">brak możliwości zakupu na raty</p>
+                                    <p data-plot-info-show-if="rate"><span data-plot-info-param="rate"></span></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="plot-contact" data-plots-info-on-selected>
+                            <a href="#" class="plot-contact__btn plot-contact__btn--gold" target="_blank" data-plot-info-image-send-message>
+                                WIADOMOŚĆ
+                            </a>
+                            <a href="#" class="plot-contact__btn" target="_blank" data-plot-info-image-pdf-card>
+                                POBIERZ KARTĘ
+                            </a>
+                        </div>
+                        <div class="plot-quality">
+                            <img src="<?php bloginfo('template_url'); ?>/assets/img/prices-qaulity-logo/image1.svg') ?>" alt="17 lat doświadczenia">
+                            <!-- <img src="<?php bloginfo('template_url'); ?>/assets/img/prices-qaulity-logo/image3.svg') ?>" alt="700 zadowolonych klientów"> -->
+                            <!-- <img src="<?php bloginfo('template_url'); ?>/assets/img/prices-qaulity-logo/image2small.svg') ?>" alt="gwarancja najwyższej jakości"> -->
                         </div>
                     </div>
-                    <div class="plot-link"></div>
-                    <!-- <div class="plot-quality">
-                        <img class="quality-ico quality-ico__one"
-                             src="https://osadadziwnowek.pl/1/wp-content/themes/osada/assets/img/ico_dz1.png">
-                        <img class="quality-ico quality-ico__two"
-                             src="https://osadadziwnowek.pl/1/wp-content/themes/osada/assets/img/ico_dz2.png">
-                        <img class="quality-ico quality-ico__three"
-                             src="https://osadadziwnowek.pl/1/wp-content/themes/osada/assets/img/ico_dz3.png">
-                    </div> -->
                 </div>
 
                 <div data-plot-list-baner-template>
-                    <br>
-                    =================================================================================================================
-                    <br>
-                    TODO BANER TODO
-                    <br>
-                    =================================================================================================================
-                    <br>
+
+                    <div class="plot-baner">
+                        <img class="status-ico" src="<?= get_theme_file_uri('/investitions/ostoja-kladno/assets/baner.png') ?>">
+
+                        <div class="plot-baner__content">
+                            <h4>Kup działkę na raty</h4>
+                            <a href="" class="btn btn__line">DOWIEDZ SIĘ WIĘCEJ </a>
+                        </div>
+                    </div>
+
+
                 </div>
 
-                <div data-plot-list-container></div>
+                <div class="plots-all" data-plot-list-container></div>
+
 
                 <div data-plot-list-pagination></div>
+
+
+                <div class="plots-bottom-info">
+                    <div class="row">
+                        <div class="col-md-10 offset-md-1 col-12">
+                            <div class="plots-bottom-info__desc text-main">
+                                Do ceny netto należy doliczyć 23% podatku VAT. Przedsiębiorca otrzymuje zwrot podatku VAT w ciągu 30 lub 60 dni od wystąpienia o zwrot do urzędu skarbowego. Nakłady inwestycyjne związane z budową basenu i części rekreacyjnej oraz utwardzeniem drogi wewnętrznej zostaną podzielone na wszystkich właścicieli działek.
+                            </div>
+                            <div class="plots-bottom-info__logos">
+                                <img src="<?php bloginfo('template_url'); ?>/assets/img/prices-qaulity-logo/image3.svg') ?>" alt="700 zadowolonych klientów">
+                                <img src="<?php bloginfo('template_url'); ?>/assets/img/prices-qaulity-logo/image2small.svg') ?>" alt="gwarancja najwyższej jakości">
+                                <img src="<?php bloginfo('template_url'); ?>/assets/img/prices-qaulity-logo/image1.svg') ?>" alt="17 lat doświadczenia">
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
             </section>
         </div>
     </div>
