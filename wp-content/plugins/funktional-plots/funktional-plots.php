@@ -37,7 +37,7 @@ class FunktionalPlots
             )
         );
 
-        $this->registerInvestitionPagesCpt('osada-jaworek', 'Osada Jaworek');
+        // $this->registerInvestitionPagesCpt('osada-jaworek', 'Osada Jaworek');
         $this->registerInvestitionPagesCpt('ostoja-kladno', 'Ostoja Kładno');
     }
 
@@ -92,7 +92,8 @@ class FunktionalPlots
         echo '<script>
                 window.FunktionalGlobals = {
                     homeUrl: "'. home_url('/') .'",
-                    adminUrl: "'. admin_url('/') .'"
+                    adminUrl: "'. admin_url('/') .'",
+                    postDeleteNonceUrl: "'. wp_nonce_url(admin_url('/post.php?post=postIdReplace&action=trash&_wpnonce=9d6899c866')) .'",
                 };
             </script>';
     }

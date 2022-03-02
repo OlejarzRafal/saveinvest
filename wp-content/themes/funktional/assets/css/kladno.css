@@ -6228,7 +6228,6 @@ a:hover {
 }
 .plots-list__sorting {
   margin-top: 100px;
-  margin-bottom: 100px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -6277,6 +6276,304 @@ a:hover {
   background-color: red;
   border: none;
   cursor: pointer;
+}
+.plots-list__sorting__hideEmpty {
+  /* Hide the browser's default checkbox */
+  /* Create a custom checkbox */
+  /* On mouse-over, add a grey background color */
+  /* When the checkbox is checked, add a blue background */
+  /* Create the checkmark/indicator (hidden when not checked) */
+  /* Show the checkmark when checked */
+  /* Style the checkmark/indicator */
+}
+.plots-list__sorting__hideEmpty .sold-wrap {
+  display: block;
+  position: relative;
+  cursor: pointer;
+  font-size: 14px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  padding-left: 25px;
+}
+.plots-list__sorting__hideEmpty .sold-wrap input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+.plots-list__sorting__hideEmpty .checkmark {
+  position: absolute;
+  top: 1px;
+  left: 0;
+  height: 15px;
+  width: 15px;
+  border: 1px solid #b68b1d;
+}
+.plots-list__sorting__hideEmpty .sold-wrap:hover input ~ .checkmark {
+  background-color: #f3f3f3;
+}
+.plots-list__sorting__hideEmpty .sold-wrap input:checked ~ .checkmark {
+  background-color: #f3f3f3;
+}
+.plots-list__sorting__hideEmpty .checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+.plots-list__sorting__hideEmpty .sold-wrap input:checked ~ .checkmark:after {
+  display: block;
+}
+.plots-list__sorting__hideEmpty .sold-wrap .checkmark:after {
+  left: 6px;
+  top: -4px;
+  width: 6px;
+  height: 12px;
+  border: solid #b68b1d;
+  border-width: 0px 2px 2px 0;
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+@media screen and (max-width: 768px) {
+  .plots-list__sorting__hideEmpty {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    margin: 20px 0;
+  }
+}
+.plots-list .plots-all {
+  margin-top: 50px;
+  gap: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.plots-list .plot-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border: 1px solid #b68b1d;
+  padding: 25px 40px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 200px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.plots-list .plot-item .plot-status {
+  padding-right: 20px;
+  width: 200px;
+  width: 13%;
+}
+.plots-list .plot-item .plot-status__header {
+  font-size: 16px;
+}
+.plots-list .plot-item .plot-status__number {
+  font-family: "Brygada 1918", serif;
+  font-weight: normal;
+  font-size: 56px;
+  line-height: 66px;
+}
+.plots-list .plot-item .plot-status__status {
+  margin-top: 10px;
+}
+.plots-list .plot-item .plot-status__status div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.plots-list .plot-item .plot-status__status div span {
+  margin-left: 10px;
+  font-size: 16px;
+}
+.plots-list .plot-item .plot-img {
+  padding: 10px 0;
+  margin: 0 10px;
+  width: 200px;
+  width: 14%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.plots-list .plot-item .plot-img img {
+  max-width: 100%;
+  max-height: 100%;
+}
+.plots-list .plot-item .plot-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0 10px;
+  font-size: 14px;
+  width: 520px;
+  width: 35%;
+}
+.plots-list .plot-item .plot-info p {
+  font-size: 14px;
+  line-height: normal;
+}
+.plots-list .plot-item .plot-info__text {
+  width: 160px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 8px;
+}
+.plots-list .plot-item .plot-info__text div {
+  padding: 5px 0;
+}
+.plots-list .plot-item .plot-info__text .plot-text__priceMonth {
+  font-weight: 600;
+}
+.plots-list .plot-item .plot-info__desc {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 8px;
+}
+.plots-list .plot-item .plot-info__desc div {
+  padding: 5px 0;
+}
+.plots-list .plot-item .plot-info__desc .plot-desc__sufrace {
+  position: relative;
+}
+.plots-list .plot-item .plot-info__desc .plot-desc__sufrace sup {
+  position: absolute;
+  top: -3px;
+}
+.plots-list .plot-item .plot-info__desc .plot-desc__rate p {
+  font-weight: 600;
+}
+.plots-list .plot-item .plot-contact {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 8px;
+  width: 400px;
+  width: 27%;
+}
+.plots-list .plot-item .plot-contact__btn {
+  width: 260px;
+  height: 44px;
+  border: 1px solid #b68b1d;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-size: 18px;
+  letter-spacing: 0.085em;
+  color: #b68b1d;
+  background-color: white;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+  font-weight: bold;
+}
+.plots-list .plot-item .plot-contact__btn:hover {
+  color: white;
+  background-color: #b68b1d;
+}
+.plots-list .plot-item .plot-contact__btn--gold {
+  color: white;
+  background-color: #b68b1d;
+}
+.plots-list .plot-item .plot-contact__btn--gold:hover {
+  background-color: white;
+  color: #b68b1d;
+}
+.plots-list .plot-item .plot-quality {
+  width: auto;
+}
+.plots-list .plot-baner {
+  height: 200px;
+  position: relative;
+}
+.plots-list .plot-baner img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.plots-list .plot-baner__content {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+.plots-list .plot-baner__content h4 {
+  font-weight: 600;
+  font-size: 32px;
+  color: white;
+  font-family: "Brygada 1918", serif;
+}
+.plots-list .plot-baner__content .bnt {
+  margin-top: 30px;
+}
+.plots-list .plots-nav {
+  margin-top: 50px;
+}
+.plots-list .plots-bottom-info {
+  text-align: center;
+  margin-top: 100px;
+}
+.plots-list .plots-bottom-info__logos {
+  margin-top: 60px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  gap: 70px;
 }
 
 .invest-kladno {
