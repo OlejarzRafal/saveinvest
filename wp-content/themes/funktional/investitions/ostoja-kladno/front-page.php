@@ -9,12 +9,149 @@ get_template_part('investitions/ostoja-kladno/header');
 ?>
 
 <div class="ik-frontpage">
+
+    <section class="front-slider swiper">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <div class="front-slider-photo">
+                    <img src="<?php bloginfo('template_url'); ?>/assets/img/invest-kladno/home-page/photo1-slider.jpg') ?>" alt="home-video">
+                </div>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xl-12">
+                            <div class="front-slider-logo">
+                                <img src="<?php bloginfo('template_url'); ?>/assets/img/invest-kladno/home-page/home-header-slider-photo-logo.png') ?>" alt="home-video">
+                            </div>
+                        </div>
+                        <div class="col-xl-12">
+                            <div class="front-slider-content">
+                                <div class="front-slider-content__text">
+                                    <h5 class="f-h5">Odkryj miejsce, które będzie<br> Twoją ostoją. Zamieszkaj nad<br> morzem i spełnij swoje marzenie!</h5>
+                                </div>
+                                <div class="front-slider-pagination">
+                                    <div class="swiper-pagination"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="front-slider-photo">
+                    <img src="<?php bloginfo('template_url'); ?>/assets/img/invest-kladno/home-page/photo2-slider.jpg') ?>" alt="home-video">
+                </div>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xl-12">
+                            <div class="front-slider-logo">
+                                <img src="<?php bloginfo('template_url'); ?>/assets/img/invest-kladno/home-page/home-header-slider-photo-logo.png') ?>" alt="home-video">
+                            </div>
+                        </div>
+                        <div class="col-xl-12">
+                            <div class="front-slider-content">
+                                <div class="front-slider-content__text">
+                                    <h5 class="f-h5">Gdzieś pomiędzy lasem, a<br> morzem, tam gdzie natura tylko<br> czeka na Twoje zaproszenie.</h5>
+                                </div>
+                                <div class="front-slider-pagination">
+                                    <div class="swiper-pagination"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="swiper-slide">
+                <div class="front-slider-photo">
+                    <img src="<?php bloginfo('template_url'); ?>/assets/img/invest-kladno/home-page/photo3-slider.jpg') ?>" alt="home-video">
+                </div>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xl-12">
+                            <div class="front-slider-logo">
+                                <img src="<?php bloginfo('template_url'); ?>/assets/img/invest-kladno/home-page/home-header-slider-photo-logo.png') ?>" alt="home-video">
+                            </div>
+                        </div>
+                        <div class="col-xl-12">
+                            <div class="front-slider-content">
+                                <div class="front-slider-content__text">
+                                    <h5 class="f-h5">Wypoczywaj i jednocześnie zarabiaj na<br> rekreacji. Grunt to inwestycja, która gwarantuje<br> zysk, nie tylko finansowy, ale i duchowy.</h5>
+                                </div>
+                                <div class="front-slider-pagination">
+                                    <div class="swiper-pagination"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="swiper-slide">
+                <div class="front-slider-photo">
+                    <img src="<?php bloginfo('template_url'); ?>/assets/img/invest-kladno/home-page/photo4-slider.jpg') ?>" alt="home-video">
+                </div>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xl-12">
+                            <div class="front-slider-logo">
+                                <img src="<?php bloginfo('template_url'); ?>/assets/img/invest-kladno/home-page/home-header-slider-photo-logo.png') ?>" alt="home-video">
+                            </div>
+                        </div>
+                        <div class="col-xl-12">
+                            <div class="front-slider-content">
+                                <div class="front-slider-content__text">
+                                    <h5 class="f-h5">Twoja własna działka rekreacyjna,<br> gdzie wypoczywasz z rodziną lub<br> prowadzisz biznes.
+                                    </h5>
+                                </div>
+                                <div class="front-slider-pagination">
+                                    <div class="swiper-pagination"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="swiper-slide">
+                <div class="front-slider-photo">
+                    <img src="<?php bloginfo('template_url'); ?>/assets/img/invest-kladno/home-page/photo5-slider.jpg') ?>" alt="home-video">
+                </div>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xl-12">
+                            <div class="front-slider-logo">
+                                <img src="<?php bloginfo('template_url'); ?>/assets/img/invest-kladno/home-page/home-header-slider-photo-logo.png') ?>" alt="home-video">
+                            </div>
+                        </div>
+                        <div class="col-xl-12">
+                            <div class="front-slider-content">
+                                <div class="front-slider-content__text">
+                                    <h5 class="f-h5">Turystyczny skrawek raju, gdzie po<br> dniu pełnym lokalnych atrakcji możesz<br> wyciszyć się w gronie najbliższych.
+                                    </h5>
+                                </div>
+                                <div class="front-slider-pagination">
+                                    <div class="swiper-pagination"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="front-slider-content-swiper">
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+            </div>
+            <!-- <div class="front-slider-pagination">
+                <div class="swiper-pagination"></div>
+            </div> -->
+        </div>
+    </section>
     <section class="around-video">
         <div class="container">
             <div class="row">
                 <div class="col-xxl-7">
                     <div class="around-video__movie">
-                        <a href="https://www.youtube.com/watch?v=afZwpwTql94">
+                        <a href="https://www.youtube.com/watch?v=_AusFKE_xpo&feature=youtu.be">
                             <img src="<?php bloginfo('template_url'); ?>/assets/img/invest-kladno/home-page/home-movie.jpg') ?>" alt="home-video">
                         </a>
                     </div>

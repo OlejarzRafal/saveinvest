@@ -675,7 +675,7 @@
             }
         }
     }
-
+    ///////////////////////////////////////////////
     .contact-number {
         position: relative;
         margin-top: -100px;
@@ -779,7 +779,154 @@
             }
         }
     }
+    //////////////////////////////////////////////////////////
+    .testimonial-kladno {
+        position: relative;
+        width: 100%;
+        height: auto;
+        background-color: $grant;
+        padding-top: 130px;
+        padding-bottom: 220px;
+        &__title {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            .f-h5--white {
+                width: 45%;
+                text-align: center;
+            }
+        }
+        &__container {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            .swiper {
+                overflow: visible;
+                height: auto;
+            }
+            .box {
+                position: relative;
+                margin-top: 70px;
+                padding: 0 0 50px 50px;
+                border-left: 1px solid $gold;
+                border-bottom: 1px solid $gold;
+                width: 50%;
+                display: flex;
+                justify-content: center;
+                .swiper-wrapper {
+                    .testimonial-kladno-box {
+                        &__text {
+                            position: relative;
+                            margin-top: -8px;
+                        }
+                        &__name {
+                            position: absolute;
+                            left: -50px;
+                            bottom: -150px;
+                        }
+                    }
+                }
 
+                .triangle {
+                    position: absolute;
+                    bottom: -100px;
+                    border-right: 50px solid transparent;
+                    border-bottom: 50px solid transparent;
+                    border-top: 50px solid #b68b1d;
+                    left: -1px;
+                    z-index: 9;
+
+                    &:before {
+                        position: absolute;
+                        content: "";
+                        top: -50px;
+                        border-right: 47px solid transparent;
+                        border-bottom: 47px solid transparent;
+                        border-top: 47px solid #0b345a;
+                        right: -47px;
+                        left: 1px;
+                    }
+                }
+            }
+        }
+
+        .swiper-contenet-testimonial {
+            display: inline-flex;
+            justify-content: space-between;
+            align-items: center;
+            position: absolute;
+            width: 100%;
+            z-index: 999999999999;
+            top: 45%;
+            @media (max-width: 1200px) {
+                bottom: 20px;
+                width: 100%;
+            }
+            .swiper-button-prev {
+                position: relative;
+                margin: 0px;
+                width: 24px;
+                height: 24px;
+                padding: 36px;
+                border: 2px solid transparent;
+                background-image: url("../img/invest-kladno/localization/chevron-left-icon.png");
+                background-repeat: no-repeat;
+                background-position: center;
+                transition: all 0.2s;
+                &:hover {
+                    border: 2px solid $gold;
+                }
+                &:after {
+                    display: none;
+                }
+            }
+            .swiper-button-next {
+                position: relative;
+                margin: 0px;
+                width: 24px;
+                height: 24px;
+                padding: 36px;
+                border: 2px solid transparent;
+                background-image: url("../img/invest-kladno/localization/chevron-right-icon.png");
+                background-repeat: no-repeat;
+                background-position: center;
+                transition: all 0.2s;
+                &:hover {
+                    border: 2px solid $gold;
+                }
+                &:after {
+                    display: none;
+                }
+            }
+        }
+        .swiper-contenet-pagination {
+            .swiper-pagination {
+                position: relative;
+                left: auto;
+                top: 140px;
+                bottom: auto;
+                right: auto;
+                transform: none;
+                width: auto;
+                .swiper-pagination-bullet {
+                    background-color: $grey-slider;
+                    width: 37px;
+                    height: 3px;
+                    border-radius: 0;
+                    opacity: 1;
+                }
+
+                .swiper-pagination-bullet-active {
+                    background-color: $gold;
+                    width: 37px;
+                    height: 3px;
+                    border-radius: 0;
+                    opacity: 1;
+                }
+            }
+        }
+    }
+    /////////////////////////////////////////////////////////////
     .location-klando {
         margin-top: 130px;
         .row {

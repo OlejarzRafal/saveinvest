@@ -16,17 +16,37 @@
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _scss_invest_kladno_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../scss/invest-kladno.scss */ \"./resources/scss/invest-kladno.scss\");\n/* harmony import */ var _invest_kladno_file_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./invest-kladno/file.js */ \"./resources/js/invest-kladno/file.js\");\n/* harmony import */ var _invest_kladno_file_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_invest_kladno_file_js__WEBPACK_IMPORTED_MODULE_1__);\n // ALL PAGE\n\n //counter on Scroll // Contact //\n\nvar counted = 0;\n$(window).scroll(function () {\n  var oTop = $(\"#counter\").offset().top - window.innerHeight;\n\n  if (counted == 0 && $(window).scrollTop() > oTop) {\n    $(\".f-special\").each(function () {\n      var $this = $(this),\n          countTo = $this.attr(\"data-count\");\n      $({\n        countNum: $this.text()\n      }).animate({\n        countNum: countTo\n      }, {\n        duration: 2000,\n        easing: \"swing\",\n        step: function step() {\n          $this.text(Math.floor(this.countNum));\n        },\n        complete: function complete() {\n          $this.text(this.countNum); //alert('finished');\n        }\n      });\n    });\n    counted = 1;\n  }\n});\n\n//# sourceURL=webpack://webpack-starter/./resources/js/invest-kladno.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _scss_invest_kladno_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../scss/invest-kladno.scss */ \"./resources/scss/invest-kladno.scss\");\n/* harmony import */ var _js_invest_kladno_sliders_localizations__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../js/invest-kladno/sliders-localizations */ \"./resources/js/invest-kladno/sliders-localizations.js\");\n/* harmony import */ var _js_invest_kladno_sliders_localizations__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_js_invest_kladno_sliders_localizations__WEBPACK_IMPORTED_MODULE_1__);\n/* harmony import */ var _js_invest_kladno_sliders_contact__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../js/invest-kladno/sliders-contact */ \"./resources/js/invest-kladno/sliders-contact.js\");\n/* harmony import */ var _js_invest_kladno_sliders_contact__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_js_invest_kladno_sliders_contact__WEBPACK_IMPORTED_MODULE_2__);\n/* harmony import */ var _js_invest_kladno_sliders_front_page__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../js/invest-kladno/sliders-front-page */ \"./resources/js/invest-kladno/sliders-front-page.js\");\n/* harmony import */ var _js_invest_kladno_sliders_front_page__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_js_invest_kladno_sliders_front_page__WEBPACK_IMPORTED_MODULE_3__);\n // INVEST KLADNO\n\n\n\n //counter on Scroll // Contact //\n\nvar counted = 0;\n$(window).scroll(function () {\n  var oTop = $(\"#counter\").offset().top - window.innerHeight;\n\n  if (counted == 0 && $(window).scrollTop() > oTop) {\n    $(\".f-special\").each(function () {\n      var $this = $(this),\n          countTo = $this.attr(\"data-count\");\n      $({\n        countNum: $this.text()\n      }).animate({\n        countNum: countTo\n      }, {\n        duration: 2000,\n        easing: \"swing\",\n        step: function step() {\n          $this.text(Math.floor(this.countNum));\n        },\n        complete: function complete() {\n          $this.text(this.countNum); //alert('finished');\n        }\n      });\n    });\n    counted = 1;\n  }\n});\n\n//# sourceURL=webpack://webpack-starter/./resources/js/invest-kladno.js?");
 
 /***/ }),
 
-/***/ "./resources/js/invest-kladno/file.js":
-/*!********************************************!*\
-  !*** ./resources/js/invest-kladno/file.js ***!
-  \********************************************/
+/***/ "./resources/js/invest-kladno/sliders-contact.js":
+/*!*******************************************************!*\
+  !*** ./resources/js/invest-kladno/sliders-contact.js ***!
+  \*******************************************************/
 /***/ (function() {
 
-eval("console.log('test');\n\n//# sourceURL=webpack://webpack-starter/./resources/js/invest-kladno/file.js?");
+eval("$(document).ready(function () {\n  var Contact = new Swiper(\".testimonial-kladno__container .box\", {\n    effect: \"fade\",\n    fadeEffect: {\n      crossFade: true\n    },\n    // slidesPerView: 1,\n    spaceBetween: 100,\n    speed: 500,\n    // If we need pagination\n    pagination: {\n      el: \".swiper-contenet-pagination .swiper-pagination\",\n      clickable: true\n    },\n    navigation: {\n      nextEl: \".testimonial-kladno .swiper-contenet-testimonial .swiper-button-next\",\n      prevEl: \".testimonial-kladno .swiper-contenet-testimonial .swiper-button-prev\"\n    }\n  });\n  /* MATCH HEIGHT */\n  // $(\" .awards__content\").matchHeight();\n});\n\n//# sourceURL=webpack://webpack-starter/./resources/js/invest-kladno/sliders-contact.js?");
+
+/***/ }),
+
+/***/ "./resources/js/invest-kladno/sliders-front-page.js":
+/*!**********************************************************!*\
+  !*** ./resources/js/invest-kladno/sliders-front-page.js ***!
+  \**********************************************************/
+/***/ (function() {
+
+eval("$(document).ready(function () {\n  var Contact = new Swiper(\".front-slider\", {\n    effect: \"fade\",\n    fadeEffect: {\n      crossFade: true\n    },\n    // slidesPerView: 1,\n    spaceBetween: 100,\n    speed: 500,\n    // If we need pagination\n    pagination: {\n      el: \".front-slider-pagination .swiper-pagination\",\n      clickable: true\n    },\n    navigation: {\n      nextEl: \".front-slider-content-swiper .swiper-button-next\",\n      prevEl: \".front-slider-content-swiper .swiper-button-prev\"\n    }\n  });\n  /* MATCH HEIGHT */\n  // $(\" .awards__content\").matchHeight();\n});\n\n//# sourceURL=webpack://webpack-starter/./resources/js/invest-kladno/sliders-front-page.js?");
+
+/***/ }),
+
+/***/ "./resources/js/invest-kladno/sliders-localizations.js":
+/*!*************************************************************!*\
+  !*** ./resources/js/invest-kladno/sliders-localizations.js ***!
+  \*************************************************************/
+/***/ (function() {
+
+eval("$(document).ready(function () {\n  var Localisation = new Swiper(\".icon-localization__content\", {\n    slidesPerView: 1,\n    // spaceBetween: 15,\n    speed: 500,\n    // If we need pagination\n    // pagination: {\n    //     el: \".swiper-pagination\",\n    //     clickable: true,\n    // },\n    breakpoints: {\n      900: {\n        slidesPerView: 2 // slidesPerGroup: 4,\n        // spaceBetween: 20,\n        // speed: 1200,\n\n      },\n      // when window width is >= 320px\n      1100: {\n        slidesPerView: 3 // slidesPerGroup: 4,\n        // spaceBetween: 20,\n        // speed: 1200,\n\n      },\n      // when window width is >= 480px\n      1400: {\n        slidesPerView: 4 // slidesPerGroup: 6,\n        // spaceBetween: 30,\n        // speed: 1500,\n\n      }\n    },\n    navigation: {\n      nextEl: \".icon-localization .swiper-contenet-nav .swiper-button-next\",\n      prevEl: \".icon-localization .swiper-contenet-nav .swiper-button-prev\"\n    }\n  });\n  /* MATCH HEIGHT */\n  // $(\" .awards__content\").matchHeight();\n});\n\n//# sourceURL=webpack://webpack-starter/./resources/js/invest-kladno/sliders-localizations.js?");
 
 /***/ }),
 

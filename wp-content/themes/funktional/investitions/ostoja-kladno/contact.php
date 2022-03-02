@@ -193,7 +193,7 @@ get_template_part('investitions/ostoja-kladno/header');
             <div class="row">
                 <div class="col-xl-6">
                     <div class="about-company-contact__logo">
-                        <img src="<?php bloginfo('template_url'); ?>/assets/img/invest-kladno/contact/contact-logo.png"" alt=" logo saveinvest" />
+                        <img src="<?php bloginfo('template_url'); ?>/assets/img/invest-kladno/contact/contact-logo.png" alt=" logo saveinvest" />
                     </div>
                 </div>
                 <div class="col-xl-5">
@@ -299,6 +299,66 @@ get_template_part('investitions/ostoja-kladno/header');
                                 </p>
                             </div>
                         </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="testimonial-kladno">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-12">
+                    <div class="testimonial-kladno__title">
+                        <h5 class="f-h5 f-h5--white">Sprawdź opinie naszych
+                            zadowolonych klientów</h5>
+                    </div>
+                </div>
+                <div class="col-xl-12">
+                    <div class="testimonial-kladno__container">
+                        <div class="box swiper">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <div class="testimonial-kladno-box">
+                                        <div class="testimonial-kladno-box__text">
+                                            <p class="text-main text-main--white">Jestem zadowolony z obsługi, jaką oferuje firma Saveinvest. Specjaliści bardzo sprawnie, szybko terminowo zgromadzili wymagane dokumenty i uzyskali dla mojej działki warunki zabudowy. Nie martwiłem się w jaki sposób zdobyć dokumenty oraz dopełnić wszelkich formalności, ponieważ pracownicy Saveinvest wszystkim się zajęli. Kompetencja, rzetelność i doświadczenie – te trzy słowa najlepiej oddają jakość usług świadczonych przez firmę!</p>
+                                        </div>
+                                        <div class="testimonial-kladno-box__name">
+                                            <p class="text-main text-main--fw700 text-main--white">Sebastian, Kijowice</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="testimonial-kladno-box">
+                                        <div class="testimonial-kladno-box__text">
+                                            <p class="text-main text-main--white">test firma działki firmę!</p>
+                                        </div>
+                                        <div class="testimonial-kladno-box__name">
+                                            <p class="text-main text-main--fw700 text-main--white">Test , Test</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="testimonial-kladno-box">
+                                        <div class="testimonial-kladno-box__text">
+                                            <p class="text-main text-main--white">3333 33333 test firma działki firmę! Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quidem ipsa excepturi autem in quia voluptates delectus temporibus hic nesciunt earum iusto quasi ullam minima officia impedit praesentium, non odio doloremque?</p>
+                                        </div>
+                                        <div class="testimonial-kladno-box__name">
+                                            <p class="text-main text-main--fw700 text-main--white">Test33 , Test</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="triangle"></div>
+                        </div>
+
+                    </div>
+                    <div class="swiper-contenet-testimonial">
+                        <div class="swiper-button-prev"></div>
+
+                        <div class="swiper-button-next"></div>
+                    </div>
+                    <div class="swiper-contenet-pagination">
+                        <div class="swiper-pagination"></div>
                     </div>
                 </div>
             </div>

@@ -1,4 +1,14 @@
 .ik-lokalizations {
+    .scroll-bottom {
+        position: absolute;
+        width: 100%;
+        margin: 50px 0 65px;
+        display: flex;
+        top: 90%;
+        justify-content: center;
+        align-items: center;
+        z-index: 99;
+    }
     .hero1-location {
         position: relative;
         height: 2000px;
@@ -10,9 +20,10 @@
         align-items: flex-end;
         background-repeat: no-repeat;
         z-index: 1;
+
         &__box {
             padding-top: 310px;
-            padding-bottom: 170px;
+            padding-bottom: 270px;
             display: flex;
             flex-direction: column;
             justify-content: flex-start;
@@ -23,6 +34,7 @@
                 display: flex;
                 flex-direction: column;
                 margin-top: 60px;
+
                 .row-table {
                     display: flex;
                     width: 100%;
@@ -68,10 +80,16 @@
         &__map {
             padding-top: 260px;
         }
-        @media (max-width: $xl) {
+    }
+    @media (max-width: $xl) {
+        .scroll-bottom {
+            top: 62%;
+        }
+        .hero1-location {
             background-size: 1300px auto;
             background-position: right top;
             align-items: flex-start;
+
             &__box {
                 padding-top: 75%;
                 padding-bottom: 50px;
@@ -92,10 +110,17 @@
                 }
             }
         }
-        @media (max-width: $lg) {
+    }
+    @media (max-width: $lg) {
+        .scroll-bottom {
+            top: 59vw;
+        }
+        .hero1-location {
             margin-top: 80px;
             background-size: 1000px auto;
             background-position: right top;
+            height: 1950px;
+
             &__box {
                 padding-top: 85%;
                 padding-left: 15px;
@@ -109,7 +134,10 @@
                 }
             }
         }
-        @media (max-width: $md) {
+    }
+    @media (max-width: $md) {
+        .hero1-location {
+            height: 1680px;
             &__box {
                 padding-top: 100%;
                 padding-bottom: 30px;
@@ -142,7 +170,9 @@
                 }
             }
         }
-        @media (max-width: $sm) {
+    }
+    @media (max-width: $sm) {
+        .hero1-location {
             background-size: 750px auto;
             &__box {
                 padding-top: 85%;
@@ -155,8 +185,11 @@
                 }
             }
         }
-        @media (max-width: 450px) {
+    }
+    @media (max-width: 450px) {
+        .hero1-location {
             background-size: 600px auto;
+
             &__map {
                 &::before {
                     content: "";
@@ -165,7 +198,9 @@
                 }
             }
         }
-        @media (max-width: 414px) {
+    }
+    @media (max-width: 414px) {
+        .hero1-location {
             &__map {
                 &::before {
                     content: "";
@@ -174,7 +209,9 @@
                 }
             }
         }
-        @media (max-width: 373px) {
+    }
+    @media (max-width: 373px) {
+        .hero1-location {
             &__map {
                 &::before {
                     content: "";
@@ -183,7 +220,9 @@
                 }
             }
         }
-        @media (max-width: 347px) {
+    }
+    @media (max-width: 347px) {
+        .hero1-location {
             &__map {
                 &::before {
                     content: "";
@@ -192,9 +231,146 @@
                 }
             }
         }
+
+        .map-location {
+            margin-top: 70px;
+            margin-bottom: -110px;
+        }
     }
-    .map-location {
-        margin-top: 70px;
-        margin-bottom: -110px;
+    .icon-localization {
+        position: relative;
+        margin-top: -80px;
+        z-index: 999;
+        margin-bottom: 100px;
+        .row {
+            position: relative;
+            &::before {
+                content: "";
+                position: absolute;
+                top: 0px;
+                left: -65px;
+                width: 105vw;
+                height: 100%;
+                border-top: 1px solid $gold;
+                border-left: 1px solid $gold;
+                border-bottom: 1px solid $gold;
+            }
+        }
+        &__content {
+            display: flex;
+            width: 90%;
+            padding: 260px 0 125px 0;
+            .swiper-wrapper {
+                .swiper-slide {
+                    display: flex;
+                    width: 100%;
+                    justify-content: space-around;
+                    .content-box {
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        justify-content: center;
+                        width: 300px;
+                        p {
+                            text-align: center;
+                        }
+                    }
+                }
+            }
+        }
+        .swiper-contenet-nav {
+            display: inline-flex;
+            justify-content: space-between;
+            align-items: center;
+            position: absolute;
+            width: 100%;
+            // bottom: 65px;
+            z-index: 999999999999;
+            top: 66%;
+            // transform: translateY(-50%);
+            @media (max-width: 1200px) {
+                bottom: 20px;
+                width: 100%;
+            }
+            .swiper-button-prev {
+                position: relative;
+                margin-left: 20px;
+                width: 24px;
+                height: 24px;
+                background-image: url("../img/invest-kladno/localization/chevron-left-icon.png");
+                background-repeat: no-repeat;
+                &:after {
+                    display: none;
+                }
+            }
+            .swiper-button-next {
+                position: relative;
+                margin-right: 20px;
+                width: 24px;
+                height: 24px;
+                background-image: url("../img/invest-kladno/localization/chevron-right-icon.png");
+                background-repeat: no-repeat;
+                &:after {
+                    display: none;
+                }
+            }
+        }
+    }
+    @media (max-width: $xl) {
+        .icon-localization {
+            margin-top: 250px;
+            .row {
+                padding: 0 15px;
+                &::before {
+                    content: "";
+                    position: absolute;
+                    top: 0px;
+                    left: 15px;
+                    width: calc(100% - 30px);
+                    height: 100%;
+                    border: 1px solid $gold;
+                }
+            }
+            &__content {
+                padding: 160px 0 125px 0;
+            }
+            .swiper-contenet-nav {
+                .swiper-button-prev,
+                .swiper-button-next {
+                    top: -70%;
+                }
+                .swiper-button-next {
+                    margin-right: 35px;
+                }
+            }
+        }
+    }
+    @media (max-width: $lg) {
+        .icon-localization {
+            margin-top: 50px;
+            .row {
+                padding: 0 15px;
+                &::before {
+                    content: "";
+                    position: absolute;
+                    top: 0px;
+                    left: 15px;
+                    width: calc(100% - 30px);
+                    height: 100%;
+                    border: 1px solid $gold;
+                }
+            }
+            &__content {
+                padding: 60px 0 60px 0;
+            }
+            .swiper-contenet-nav {
+                .swiper-button-prev {
+                    margin-left: 0px;
+                }
+                .swiper-button-next {
+                    margin-right: 20px;
+                }
+            }
+        }
     }
 }

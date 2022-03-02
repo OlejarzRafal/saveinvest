@@ -18,10 +18,4 @@ import "./saveinvest/slider-infophoto-mobile";
 import "../js/blog/blog-slider";
 import "../js/blog/sticky-sidebar";
 
-console.log('test');
-
-// INVEST KLADNO
-// import "../js/invest-kladno/sliders";
-
-
-
+console.log("test");

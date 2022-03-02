@@ -1,7 +1,9 @@
 import "../scss/invest-kladno.scss";
 
-// ALL PAGE
-import "./invest-kladno/file.js";
+// INVEST KLADNO
+import "../js/invest-kladno/sliders-localizations";
+import "../js/invest-kladno/sliders-contact";
+import "../js/invest-kladno/sliders-front-page";
 
 //counter on Scroll // Contact //
 var counted = 0;

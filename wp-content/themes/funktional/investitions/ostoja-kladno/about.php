@@ -40,7 +40,6 @@ get_template_part('investitions/ostoja-kladno/header');
 
     <section class="scroll-bottom">
         <img src="<?php bloginfo('template_url'); ?>/assets/img/invest-kladno/about/chevrons-down.png" alt="ikona" />
-
     </section>
 
     <section class="icon-ostoja">

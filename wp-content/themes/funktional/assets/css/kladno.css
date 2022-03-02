@@ -25,7 +25,7 @@ h4 {
 
 h5 {
   font-size: 40px;
-  line-height: 41px;
+  line-height: 46px;
 }
 @media (max-width: 767px) {
   h5 {
@@ -3225,6 +3225,111 @@ a:hover {
   }
 }
 
+.ik-frontpage .front-slider {
+  margin-top: 40px;
+  height: 884px;
+  width: 100%;
+}
+.ik-frontpage .front-slider .swiper-slide {
+  padding: 75px 0 75px;
+}
+.ik-frontpage .front-slider .swiper-slide .front-slider-photo {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  height: 100%;
+}
+.ik-frontpage .front-slider .swiper-slide .front-slider-logo {
+  margin-left: -80px;
+}
+.ik-frontpage .front-slider .swiper-slide .front-slider-content {
+  margin-top: 200px;
+  padding: 40px 50px 100px 50px;
+  background: rgba(255, 255, 255, 0.9);
+  border: 1px solid #b68b1d;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  position: relative;
+}
+.ik-frontpage .front-slider .swiper-slide .front-slider-content .front-slider-pagination {
+  position: relative;
+  left: auto;
+  right: 0;
+  top: auto;
+  bottom: 0;
+}
+.ik-frontpage .front-slider .swiper-slide .front-slider-content .front-slider-pagination .swiper-pagination {
+  position: relative;
+  left: auto;
+  top: 140px;
+  bottom: auto;
+  right: auto;
+  -webkit-transform: none;
+          transform: none;
+  width: auto;
+}
+.ik-frontpage .front-slider .swiper-slide .front-slider-content .front-slider-pagination .swiper-pagination .swiper-pagination-bullet {
+  background-color: #b9c4cf;
+  width: 37px;
+  height: 3px;
+  border-radius: 0;
+  opacity: 1;
+}
+.ik-frontpage .front-slider .swiper-slide .front-slider-content .front-slider-pagination .swiper-pagination .swiper-pagination-bullet-active {
+  background-color: #b68b1d;
+  width: 37px;
+  height: 3px;
+  border-radius: 0;
+  opacity: 1;
+}
+.ik-frontpage .front-slider .front-slider-content-swiper {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: absolute;
+  width: 5%;
+  z-index: 999999999999;
+  top: 83%;
+  left: 11%;
+}
+@media (max-width: 1200px) {
+  .ik-frontpage .front-slider .front-slider-content-swiper {
+    bottom: 20px;
+    width: 100%;
+  }
+}
+.ik-frontpage .front-slider .front-slider-content-swiper .swiper-button-prev {
+  position: relative;
+  margin: 0px;
+  width: 24px;
+  height: 24px;
+  background-image: url("../img/invest-kladno/localization/chevron-left-icon.png");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.ik-frontpage .front-slider .front-slider-content-swiper .swiper-button-prev:after {
+  display: none;
+}
+.ik-frontpage .front-slider .front-slider-content-swiper .swiper-button-next {
+  position: relative;
+  margin: 0px;
+  width: 24px;
+  height: 24px;
+  right: 30px;
+  background-image: url("../img/invest-kladno/localization/chevron-right-icon.png");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.ik-frontpage .front-slider .front-slider-content-swiper .swiper-button-next:after {
+  display: none;
+}
 .ik-frontpage .around-video {
   padding: 180px 0 0;
   width: 100%;
@@ -3254,6 +3359,7 @@ a:hover {
   overflow: hidden;
 }
 .ik-frontpage .around-video__movie a img {
+  display: block;
   height: 100%;
   width: 100%;
   -webkit-transition: all 0.2s;
@@ -3701,6 +3807,7 @@ a:hover {
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
+  width: 100%;
 }
 .ik-frontpage .choice__location, .ik-frontpage .choice__price, .ik-frontpage .choice__financing {
   position: relative;
@@ -4392,6 +4499,22 @@ a:hover {
   }
 }
 
+.ik-lokalizations .scroll-bottom {
+  position: absolute;
+  width: 100%;
+  margin: 50px 0 65px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  top: 90%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  z-index: 99;
+}
 .ik-lokalizations .hero1-location {
   position: relative;
   height: 2000px;
@@ -4410,7 +4533,7 @@ a:hover {
 }
 .ik-lokalizations .hero1-location__box {
   padding-top: 310px;
-  padding-bottom: 170px;
+  padding-bottom: 270px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -4481,6 +4604,9 @@ a:hover {
   padding-top: 260px;
 }
 @media (max-width: 1199px) {
+  .ik-lokalizations .scroll-bottom {
+    top: 62%;
+  }
   .ik-lokalizations .hero1-location {
     background-size: 1300px auto;
     background-position: right top;
@@ -4509,10 +4635,14 @@ a:hover {
   }
 }
 @media (max-width: 991px) {
+  .ik-lokalizations .scroll-bottom {
+    top: 59vw;
+  }
   .ik-lokalizations .hero1-location {
     margin-top: 80px;
     background-size: 1000px auto;
     background-position: right top;
+    height: 1950px;
   }
   .ik-lokalizations .hero1-location__box {
     padding-top: 85%;
@@ -4526,6 +4656,9 @@ a:hover {
   }
 }
 @media (max-width: 767px) {
+  .ik-lokalizations .hero1-location {
+    height: 1680px;
+  }
   .ik-lokalizations .hero1-location__box {
     padding-top: 100%;
     padding-bottom: 30px;
@@ -4599,10 +4732,160 @@ a:hover {
     position: absolute;
     height: 204vw;
   }
+  .ik-lokalizations .map-location {
+    margin-top: 70px;
+    margin-bottom: -110px;
+  }
 }
-.ik-lokalizations .map-location {
-  margin-top: 70px;
-  margin-bottom: -110px;
+.ik-lokalizations .icon-localization {
+  position: relative;
+  margin-top: -80px;
+  z-index: 999;
+  margin-bottom: 100px;
+}
+.ik-lokalizations .icon-localization .row {
+  position: relative;
+}
+.ik-lokalizations .icon-localization .row::before {
+  content: "";
+  position: absolute;
+  top: 0px;
+  left: -65px;
+  width: 105vw;
+  height: 100%;
+  border-top: 1px solid #b68b1d;
+  border-left: 1px solid #b68b1d;
+  border-bottom: 1px solid #b68b1d;
+}
+.ik-lokalizations .icon-localization__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 90%;
+  padding: 260px 0 125px 0;
+}
+.ik-lokalizations .icon-localization__content .swiper-wrapper .swiper-slide {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+.ik-lokalizations .icon-localization__content .swiper-wrapper .swiper-slide .content-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 300px;
+}
+.ik-lokalizations .icon-localization__content .swiper-wrapper .swiper-slide .content-box p {
+  text-align: center;
+}
+.ik-lokalizations .icon-localization .swiper-contenet-nav {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: absolute;
+  width: 100%;
+  z-index: 999999999999;
+  top: 66%;
+}
+@media (max-width: 1200px) {
+  .ik-lokalizations .icon-localization .swiper-contenet-nav {
+    bottom: 20px;
+    width: 100%;
+  }
+}
+.ik-lokalizations .icon-localization .swiper-contenet-nav .swiper-button-prev {
+  position: relative;
+  margin-left: 20px;
+  width: 24px;
+  height: 24px;
+  background-image: url("../img/invest-kladno/localization/chevron-left-icon.png");
+  background-repeat: no-repeat;
+}
+.ik-lokalizations .icon-localization .swiper-contenet-nav .swiper-button-prev:after {
+  display: none;
+}
+.ik-lokalizations .icon-localization .swiper-contenet-nav .swiper-button-next {
+  position: relative;
+  margin-right: 20px;
+  width: 24px;
+  height: 24px;
+  background-image: url("../img/invest-kladno/localization/chevron-right-icon.png");
+  background-repeat: no-repeat;
+}
+.ik-lokalizations .icon-localization .swiper-contenet-nav .swiper-button-next:after {
+  display: none;
+}
+@media (max-width: 1199px) {
+  .ik-lokalizations .icon-localization {
+    margin-top: 250px;
+  }
+  .ik-lokalizations .icon-localization .row {
+    padding: 0 15px;
+  }
+  .ik-lokalizations .icon-localization .row::before {
+    content: "";
+    position: absolute;
+    top: 0px;
+    left: 15px;
+    width: calc(100% - 30px);
+    height: 100%;
+    border: 1px solid #b68b1d;
+  }
+  .ik-lokalizations .icon-localization__content {
+    padding: 160px 0 125px 0;
+  }
+  .ik-lokalizations .icon-localization .swiper-contenet-nav .swiper-button-prev,
+.ik-lokalizations .icon-localization .swiper-contenet-nav .swiper-button-next {
+    top: -70%;
+  }
+  .ik-lokalizations .icon-localization .swiper-contenet-nav .swiper-button-next {
+    margin-right: 35px;
+  }
+}
+@media (max-width: 991px) {
+  .ik-lokalizations .icon-localization {
+    margin-top: 50px;
+  }
+  .ik-lokalizations .icon-localization .row {
+    padding: 0 15px;
+  }
+  .ik-lokalizations .icon-localization .row::before {
+    content: "";
+    position: absolute;
+    top: 0px;
+    left: 15px;
+    width: calc(100% - 30px);
+    height: 100%;
+    border: 1px solid #b68b1d;
+  }
+  .ik-lokalizations .icon-localization__content {
+    padding: 60px 0 60px 0;
+  }
+  .ik-lokalizations .icon-localization .swiper-contenet-nav .swiper-button-prev {
+    margin-left: 0px;
+  }
+  .ik-lokalizations .icon-localization .swiper-contenet-nav .swiper-button-next {
+    margin-right: 20px;
+  }
 }
 
 .gallery-kladno {
@@ -5634,6 +5917,165 @@ a:hover {
   .ik-contanct .contact-number__box .box-row .box-row__info:last-child {
     width: 100%;
   }
+}
+.ik-contanct .testimonial-kladno {
+  position: relative;
+  width: 100%;
+  height: auto;
+  background-color: #0b345a;
+  padding-top: 130px;
+  padding-bottom: 220px;
+}
+.ik-contanct .testimonial-kladno__title {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.ik-contanct .testimonial-kladno__title .f-h5--white {
+  width: 45%;
+  text-align: center;
+}
+.ik-contanct .testimonial-kladno__container {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.ik-contanct .testimonial-kladno__container .swiper {
+  overflow: visible;
+  height: auto;
+}
+.ik-contanct .testimonial-kladno__container .box {
+  position: relative;
+  margin-top: 70px;
+  padding: 0 0 50px 50px;
+  border-left: 1px solid #b68b1d;
+  border-bottom: 1px solid #b68b1d;
+  width: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.ik-contanct .testimonial-kladno__container .box .swiper-wrapper .testimonial-kladno-box__text {
+  position: relative;
+  margin-top: -8px;
+}
+.ik-contanct .testimonial-kladno__container .box .swiper-wrapper .testimonial-kladno-box__name {
+  position: absolute;
+  left: -50px;
+  bottom: -150px;
+}
+.ik-contanct .testimonial-kladno__container .box .triangle {
+  position: absolute;
+  bottom: -100px;
+  border-right: 50px solid transparent;
+  border-bottom: 50px solid transparent;
+  border-top: 50px solid #b68b1d;
+  left: -1px;
+  z-index: 9;
+}
+.ik-contanct .testimonial-kladno__container .box .triangle:before {
+  position: absolute;
+  content: "";
+  top: -50px;
+  border-right: 47px solid transparent;
+  border-bottom: 47px solid transparent;
+  border-top: 47px solid #0b345a;
+  right: -47px;
+  left: 1px;
+}
+.ik-contanct .testimonial-kladno .swiper-contenet-testimonial {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: absolute;
+  width: 100%;
+  z-index: 999999999999;
+  top: 45%;
+}
+@media (max-width: 1200px) {
+  .ik-contanct .testimonial-kladno .swiper-contenet-testimonial {
+    bottom: 20px;
+    width: 100%;
+  }
+}
+.ik-contanct .testimonial-kladno .swiper-contenet-testimonial .swiper-button-prev {
+  position: relative;
+  margin: 0px;
+  width: 24px;
+  height: 24px;
+  padding: 36px;
+  border: 2px solid transparent;
+  background-image: url("../img/invest-kladno/localization/chevron-left-icon.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+}
+.ik-contanct .testimonial-kladno .swiper-contenet-testimonial .swiper-button-prev:hover {
+  border: 2px solid #b68b1d;
+}
+.ik-contanct .testimonial-kladno .swiper-contenet-testimonial .swiper-button-prev:after {
+  display: none;
+}
+.ik-contanct .testimonial-kladno .swiper-contenet-testimonial .swiper-button-next {
+  position: relative;
+  margin: 0px;
+  width: 24px;
+  height: 24px;
+  padding: 36px;
+  border: 2px solid transparent;
+  background-image: url("../img/invest-kladno/localization/chevron-right-icon.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+}
+.ik-contanct .testimonial-kladno .swiper-contenet-testimonial .swiper-button-next:hover {
+  border: 2px solid #b68b1d;
+}
+.ik-contanct .testimonial-kladno .swiper-contenet-testimonial .swiper-button-next:after {
+  display: none;
+}
+.ik-contanct .testimonial-kladno .swiper-contenet-pagination .swiper-pagination {
+  position: relative;
+  left: auto;
+  top: 140px;
+  bottom: auto;
+  right: auto;
+  -webkit-transform: none;
+          transform: none;
+  width: auto;
+}
+.ik-contanct .testimonial-kladno .swiper-contenet-pagination .swiper-pagination .swiper-pagination-bullet {
+  background-color: #b9c4cf;
+  width: 37px;
+  height: 3px;
+  border-radius: 0;
+  opacity: 1;
+}
+.ik-contanct .testimonial-kladno .swiper-contenet-pagination .swiper-pagination .swiper-pagination-bullet-active {
+  background-color: #b68b1d;
+  width: 37px;
+  height: 3px;
+  border-radius: 0;
+  opacity: 1;
 }
 .ik-contanct .location-klando {
   margin-top: 130px;
