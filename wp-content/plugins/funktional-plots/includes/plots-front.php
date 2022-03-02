@@ -59,20 +59,19 @@ class PlotsFront
                 // TODO do something special for some investitions!
                 break;
             default:
-                $plotData['area'] = (int)$plotData['area'];
-                $plotData['price'] = (int)$plotData['priceNetto'];
-                $plotData['discount'] = (int)$plotData['discount'];
-                $plotData['type']  = (int)$plotData['plot_type'];
+                $plotData['area'] = (float)$plotData['area'];
+                $plotData['price'] = (float)$plotData['priceNetto'];
+                $plotData['discount'] = (float)$plotData['discount'];
+                // TODO check this (this probably object with value and label)
+                $plotData['type'] = (int)$plotData['plot_type'];
 
                 // RABAT 
                 if ($plotData['discount'] > 0) {
                     $plotData['priceAfterDiscount'] = ($plotData['priceNetto'] - (($plotData['priceNetto'] * $plotData['discount']) / 100));
                     $plotData['differenceCount'] = ($plotData['price'] - $plotData['priceAfterDiscount']);
                     $plotData['difference'] = round($plotData['differenceCount']);
-                }
-                else{
+                } else {
                     $plotData['difference'] = "";
-
                 }
 
                 // BUDOWLANA
@@ -80,20 +79,17 @@ class PlotsFront
                 if ($plotData['type'] === 'budowlana') {
 
                     // w sumie tu trzeba zrobić tak że jak nie ma rabatu żeby tam się wogóle element nie pokazywał choć chyba można to tuaj ogarnąc na jednej zmiennje?( lista działek)
-                    
+
                     // Cena przed rabatem 
                     $plotData['priceBeforeDiscount'] = $plotData['price'];
                     // Cena po rabacie 
                     $plotData['priceAfterDiscount'] = $plotData['priceAfterDiscount'] . ' zł';
-                
-                    // Rata przed rabatem
 
+                    // Rata przed rabatem
 
                     // RATA po rabacie
 
                 }
-
-
 
                 // $plotData['priceBrutto'] = $plotData['priceNetto'] * 1.23;
                 // $plotData['priceRate'] = $plotData['priceBrutto'] / 24;
