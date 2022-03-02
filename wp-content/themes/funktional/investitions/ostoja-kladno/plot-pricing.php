@@ -58,7 +58,7 @@ $PlotsFront->getScriptsAndStyles('Ostoja Kładno');
                         <p class="plotModal-left__rate" data-plot-info-show-if="status=wolna">lub miesięcznie:</p>
                     </div>
                     <div class="plotModal-right">
-                        <p class="plotModal-right__type" data-plot-info-param="plot_type">Budowlana</p>
+                        <p class="plotModal-right__type" data-plot-info-param="plot_type"></p>
                         <p class="plotModal-right__surface"><span data-plot-info-param="area"></span>m<sup>2</sup></p>
                         <div class="plotModal-right__price" data-plot-info-show-if="status=wolna">
                             <p><span data-plot-info-param="priceBrutto"></span> zł</p>
@@ -202,7 +202,7 @@ $PlotsFront->getScriptsAndStyles('Ostoja Kładno');
                     </div>
                     <div class="plots-list__sorting__hideEmpty">
                         <label class="sold-wrap">
-                            <input type="checkbox" class="input-sold" name="sold">
+                            <input type="checkbox" class="input-sold" name="sold" data-plot-list-hide-sold>
                             <span class="checkmark"></span>
                             Ukryj sprzedane działki
                         </label>

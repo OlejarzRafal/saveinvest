@@ -1,5 +1,5 @@
-<link rel="stylesheet" href="<?= home_url('/wp-content/plugins/funktional-plots/dist/admin/css/admin.css') ?>">
-<script src="<?= home_url('/wp-content/plugins/funktional-plots/dist/admin/js/admin.js') ?>"></script>
+<link rel="stylesheet" href="<?= home_url('/wp-content/plugins/funktional-plots/dist/admin/css/admin.css') ?>?1.0.0">
+<script src="<?= home_url('/wp-content/plugins/funktional-plots/dist/admin/js/admin.js') ?>?1.0.0"></script>
 
 <main class="funktional-plots">
     <div id="wpbody" role="main">
