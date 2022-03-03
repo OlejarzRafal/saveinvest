@@ -1,0 +1,56 @@
+.btn {
+    display: flex;
+    cursor: pointer;
+    position: relative;
+    font-size: 18px;
+    line-height: 22px;
+    margin-top: 45px;
+    letter-spacing: 0.085em;
+    font-weight: bold;
+    padding-left: 65px;
+    color: $gold;
+    display: inline-block;
+    &__line {
+        &:before {
+            transition: all 0.2s;
+            content: "";
+            position: absolute;
+            width: 38px;
+            height: 1px;
+            left: 0;
+            top: 11px;
+            background-color: $gold;
+        }
+    }
+    &__line-yellow {
+        &:before {
+            transition: all 0.2s;
+            content: "";
+            position: absolute;
+            width: 38px;
+            height: 1px;
+            left: 0;
+            top: 11px;
+            background-color: $yellow;
+        }
+    }
+    &--yellow {
+        color: $yellow;
+    }
+    &:hover {
+        &.btn__line,
+        &.btn__line-yellow {
+            &:before {
+                transform: translateX(15px);
+            }
+        }
+    }
+    @media (max-width: $sm) {
+        font-size: 16px;
+        &__line {
+            &:before {
+                top: 10px;
+            }
+        }
+    }
+}

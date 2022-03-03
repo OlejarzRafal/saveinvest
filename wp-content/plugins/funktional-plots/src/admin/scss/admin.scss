@@ -1,3 +1,6 @@
+@import "../../../node_modules/toastr/build/toastr.min.css";
+@import "../../../node_modules/select2/dist/css/select2.min.css";
+
 .funktional-plots {
   &__filters {
     margin: 50px -10px;
@@ -54,6 +57,58 @@
 
     .page-title-action {
       top: unset;
+    }
+
+    .sorting-buttons {
+      display: inline-flex;
+      flex-direction: column;
+      margin: 0 0 0 5px;
+      vertical-align: middle;
+
+      button {
+        margin: 0;
+        width: 15px;
+        height: 15px;
+        padding: 0;
+        position: relative;
+        cursor: pointer;
+        background: transparent;
+        border: none;
+        opacity: 0.4;
+        transition: opacity 0.1s;
+
+        &:hover {
+          opacity: 0.6;
+        }
+
+        &.active {
+          opacity: 1;
+        }
+
+        &:after {
+          content: "";
+          display: block;
+          position: relative;
+          width: 8px;
+          height: 8px;
+          border-right: 2px solid #2271b1;
+          border-top: 2px solid #2271b1;
+        }
+
+        &.sorting-buttons_desc:after {
+          transform: rotate(-45deg);
+        }
+
+        &.sorting-buttons_asc:after {
+          transform: rotate(135deg);
+        }
+      }
+    }
+
+    a.button.deletion {
+      color: #b32d2e !important;
+      border-color: #b32d2e !important;
+      margin-left: 5px;
     }
   }
 }

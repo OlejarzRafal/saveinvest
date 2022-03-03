@@ -1,29 +1,38 @@
 import $ from 'jquery';
 import toastr from 'toastr';
 import DoubleSlider from 'double-slider';
+import 'select2';
 
 class FunktionalPlotsService {
     getFiltersValues() {
-        return $.post('/wp-json/funktional-plots/v1/filters');
+        return $.post(`${window.FunktionalGlobals.homeUrl}wp-json/funktional-plots/v1/filters`);
     }
 
-    getPlots(filters) {
-        return $.post('/wp-json/funktional-plots/v1/plots', {filters});
+    getPlots(filters, sort) {
+        return $.post(`${window.FunktionalGlobals.homeUrl}wp-json/funktional-plots/v1/plots`, {filters, sort});
     }
 
     updatePlot(data) {
         return $.ajax({
-            url: '/wp-json/funktional-plots/v1/update',
+            url: `${window.FunktionalGlobals.homeUrl}wp-json/funktional-plots/v1/update`,
             method: 'PUT',
-            data: { data }
+            data: {data}
         });
     }
 
     updatePlots(data) {
         return $.ajax({
-            url: '/wp-json/funktional-plots/v1/update-multiple',
+            url: `${window.FunktionalGlobals.homeUrl}wp-json/funktional-plots/v1/update-multiple`,
             method: 'PUT',
-            data: { data }
+            data: {data}
+        });
+    }
+
+    removePlot(plotId) {
+        return $.ajax({
+            url: `${window.FunktionalGlobals.homeUrl}wp-json/funktional-plots/v1/remove-plot`,
+            method: 'DELETE',
+            data: { plotId }
         });
     }
 }
@@ -35,7 +44,8 @@ class FunktionalPlots {
         this.plotsTableBody = $('.funktional-plots__table tbody');
         this.filtersForm = $('.funktional-plots__filters');
         this.rangeSliders = {};
-        this.timeout = setTimeout(() => {});
+        this.timeout = setTimeout(() => {
+        });
 
         this.initFilters(true);
         this.initEvents();
@@ -61,11 +71,42 @@ class FunktionalPlots {
             event.preventDefault();
             this.saveAllPlotsData();
         });
+
+        this.plotsTableHead.find('.sorting-buttons button').on('click', (event) => {
+            event.preventDefault();
+
+            this.plotsTableHead.find('.sorting-buttons button').removeClass('active');
+            $(event.target).addClass('active');
+            this.rebuildPlotsTable();
+        });
+    }
+
+    getSortData() {
+        const sortData = this.plotsTableHead.find('.sorting-buttons button.active').attr('data-sort').split('-');
+
+        return {sortBy: sortData[0], sort: sortData[1]};
     }
 
     getFilters() {
+        const filters = {};
+
+        this.filtersForm.serializeArray().forEach((filter) => {
+            if (!filters[filter.name]) {
+                filters[filter.name] = filter.value;
+            } else {
+                if (Array.isArray(filters[filter.name])) {
+                    filters[filter.name].push(filter.value);
+                } else {
+                    filters[filter.name] = [
+                        filters[filter.name],
+                        filter.value
+                    ]
+                }
+            }
+        });
+
         return [
-            ...this.filtersForm.serializeArray(),
+            ...Object.keys(filters).map(filterName => ({name: filterName, value: filters[filterName]})),
             ...Object.keys(this.rangeSliders).map((name) => ({name, value: this.rangeSliders[name].value}))
         ];
     }
@@ -136,6 +177,13 @@ class FunktionalPlots {
                     if (addEmptyOption) {
                         filterEl.append(`<option value="empty">Brak</option>`);
                     }
+
+                    filterEl.select2({
+                        placeholder: 'Wszystkie',
+                        multiple: true
+                    });
+
+                    filterEl.val(null).trigger('change');
                 }
             }
         });
@@ -147,7 +195,7 @@ class FunktionalPlots {
         this.timeout = setTimeout(() => {
             this.plotsTableBody.html('');
 
-            this.service.getPlots(this.getFilters()).then((plotsData) => {
+            this.service.getPlots(this.getFilters(), this.getSortData()).then((plotsData) => {
                 this.appendPlotsToTable(plotsData);
             }).catch(this.displayError.bind(this));
         }, 300);
@@ -177,8 +225,9 @@ class FunktionalPlots {
                             <td class="column-primary"><button data-save-plot class="button action">Zapisz</button></td>
                             <td class="column-primary">
                                 <a class="button action" 
-                                    href="/wp-admin/post.php?action=edit&post=${params.postId}"
-                                    target="_blank">Edytuj działkę</a>
+                                    href="${window.FunktionalGlobals.homeUrl}wp-admin/post.php?action=edit&post=${params.postId}"
+                                    target="_blank">Edytuj</a>
+                                <a class="button deletion" data-delete-plot href="#">Usuń</a>
                             </td>
                         </tr>` : '';
     };
@@ -199,6 +248,23 @@ class FunktionalPlots {
                 }
             }).catch(this.displayError.bind(this));
         });
+
+        this.plotsTableBody.find('[data-delete-plot]').on('click', (event) => {
+            event.preventDefault();
+
+            if (confirm('Na pewno chcesz usunąć wybraną działkę?')) {
+                this.service.removePlot(this.getPlotEditData($(event.currentTarget).parent().parent()).plotId).then((response) => {
+                    if (response) {
+                        this.rebuildPlotsTable();
+                        toastr.success('Działka została poprawnie usunięta');
+                    } else {
+                        toastr.error('Wystąpił problem podczas usuwania działki');
+                    }
+                }).catch(() => {
+                    toastr.error('Wystąpił problem podczas usuwania działki');
+                });
+            }
+        });
     }
 
     saveAllPlotsData() {
@@ -215,7 +281,7 @@ class FunktionalPlots {
     getPlotEditData(plotRow) {
         const plotId = plotRow.find('input[name="postId"]').val();
         const inputs = plotRow.find('input:not([name="postId"])');
-        const editData = { plotId, fields: {} };
+        const editData = {plotId, fields: {}};
 
         inputs.toArray().forEach(input => {
             editData.fields[$(input).attr('name').replace(`${plotId}-`, '')] = $(input).val();

@@ -18,6 +18,8 @@ class FunktionalPlots
         $this->addAcfFields();
         add_action('admin_menu', array($this, 'addInwestitionsMenuItem'));
         add_action('init', array($this, 'registerInwestitionsCpt'));
+        add_action('wp_head', array($this, 'setFunktionalJsGlobals'));
+        add_action('admin_head', array($this, 'setFunktionalJsGlobals'));
     }
 
     public function registerInwestitionsCpt()
@@ -30,12 +32,13 @@ class FunktionalPlots
                 ),
                 'show_in_menu' => false,
                 'public' => true,
-                'has_archive' => true
+                'has_archive' => true,
+                'supports' => array('custom-fields', 'page-attributes')
             )
         );
 
-        $this->registerInvestitionPagesCpt('osada-jaworek', 'Osada Jaworek');
-        $this->registerInvestitionPagesCpt('enklawa-dziwnowek', 'Enklawa Dziwnówek');
+        // $this->registerInvestitionPagesCpt('osada-jaworek', 'Osada Jaworek');
+        $this->registerInvestitionPagesCpt('ostoja-kladno', 'Ostoja Kładno');
     }
 
     public function addInwestitionsMenuItem()
@@ -85,6 +88,16 @@ class FunktionalPlots
         return $post_templates[$post_type];
     }
 
+    public function setFunktionalJsGlobals() {
+        echo '<script>
+                window.FunktionalGlobals = {
+                    homeUrl: "'. home_url('/') .'",
+                    adminUrl: "'. admin_url('/') .'",
+                    postDeleteNonceUrl: "'. wp_nonce_url(admin_url('/post.php?post=postIdReplace&action=trash&_wpnonce=9d6899c866')) .'",
+                };
+            </script>';
+    }
+
     private function addAcfFields()
     {
         if (!function_exists('acf_add_local_field_group')) {
@@ -107,7 +120,7 @@ class FunktionalPlots
                 'has_archive' => true,
                 'show_in_menu' => 'investitions',
                 'capability_type' => 'page',
-                'supports' => array('title', 'custom-fields', 'page-attributes'),
+                'supports' => array('custom-fields', 'page-attributes','title'),
                 'rewrite' => array('slug' => 'oferta/' . $postType)
             )
         );

@@ -1,0 +1,156 @@
+/*FONT*/
+@import url("https://fonts.googleapis.com/css2?family=Brygada+1918:ital,wght@0,400;0,600;1,400&family=Montserrat:ital,wght@0,200;0,400;0,500;0,600;0,700;1,400&display=swap");
+$brygada: "Brygada 1918", serif;
+$montserrat: "Montserrat", sans-serif;
+
+/*   Resolution  */
+$xxxl: 1679px;
+$xxl: 1399px;
+$xl: 1199px;
+$lg: 991px;
+$md: 767px;
+$sm: 575px;
+
+/*styl-fonts*/
+h2 {
+    font-size: 56px;
+    line-height: 65, 5px;
+    @media (max-width: $md) {
+        font-size: 42px;
+    }
+}
+h3 {
+    font-size: 44px;
+    line-height: 51px;
+}
+h4 {
+    font-size: 42px;
+    line-height: 49px;
+}
+h5 {
+    font-size: 40px;
+    line-height: 46px;
+    @media (max-width: $md) {
+        font-size: 30px;
+    }
+}
+h6 {
+    font-size: 32px;
+    line-height: 38, 5px;
+    @media (max-width: $md) {
+        font-size: 25px;
+    }
+}
+
+.f-special {
+    font-size: 82px;
+    line-height: 96px;
+}
+
+.f-h2,
+.f-h3,
+.f-h4,
+.f-h5,
+.f-h6,
+.f-special {
+    font-family: $brygada;
+    font-style: normal;
+    color: $grant;
+    font-weight: 400;
+    &--white {
+        color: $white;
+    }
+    &--red {
+        color: $red;
+    }
+    &--green {
+        color: $green;
+    }
+    &--orange {
+        color: $orange;
+    }
+    &--yellow {
+        color: $yellow;
+    }
+    &--fw600 {
+        font-weight: 600;
+    }
+    &--italic {
+        font-style: italic;
+    }
+    @media (max-width: $xxl) {
+        line-height: normal;
+    }
+}
+
+.text-main,
+p {
+    font-family: $montserrat;
+    font-style: normal;
+    color: $grant;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 33px;
+    @media (max-width: $lg) {
+        font-size: 14px;
+    }
+    &--white {
+        color: $white;
+    }
+    &--grey {
+        color: $grey-text;
+    }
+    &--gold {
+        color: $gold;
+    }
+    &--yellow {
+        color: $yellow;
+    }
+    &--granat-dark {
+        color: $granat-dark;
+    }
+    &--blue {
+        color: $blue;
+    }
+    &--fw500 {
+        font-weight: 500;
+    }
+    &--fw600 {
+        font-weight: 600;
+    }
+    &--fw700 {
+        font-weight: 700;
+    }
+    &--italic {
+        font-style: italic;
+    }
+    &--f11 {
+        font-size: 11px;
+        line-height: 16px;
+    }
+    &--f12 {
+        font-size: 12px;
+        line-height: 19px;
+    }
+    &--f14 {
+        font-size: 14px;
+        line-height: 25px;
+    }
+    &--f18 {
+        font-size: 18px;
+        line-height: 22px;
+    }
+    &--f20 {
+        font-size: 20px;
+        line-height: 31px;
+    }
+    &--ls4 {
+        letter-spacing: 0.04em;
+    }
+    &--ls8 {
+        letter-spacing: 0.085em;
+    }
+    @media (max-width: $xxl) {
+        line-height: 23px;
+    }
+}

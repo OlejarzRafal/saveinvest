@@ -6,6 +6,7 @@ class PlotsAdmin
     {
         add_action('init', array($this, 'redirectToValidPlotsPage'));
         add_action('rest_api_init', array($this, 'addAdminPlotsApiRoute'));
+        add_action('admin_head', array($this, 'addBackToPlotsLink'));
     }
 
     public function redirectToValidPlotsPage () {
@@ -19,6 +20,8 @@ class PlotsAdmin
 
     public function addAdminPlotsApiRoute()
     {
+        // TODO add security to this endpoints
+
         register_rest_route('funktional-plots/v1', '/filters', array(
             'methods' => 'POST',
             'callback' => array($this, 'getFiltersValues'),
@@ -37,6 +40,11 @@ class PlotsAdmin
         register_rest_route('funktional-plots/v1', '/update-multiple', array(
             'methods' => 'PUT',
             'callback' => array($this, 'updatePlots'),
+        ));
+
+        register_rest_route('funktional-plots/v1', '/remove-plot', array(
+            'methods' => 'DELETE',
+            'callback' => array($this, 'removePlot'),
         ));
     }
 
@@ -118,7 +126,10 @@ class PlotsAdmin
             'post_type' => 'plots',
             'posts_per_page' => -1,
             'post_status' => 'publish',
-            'meta_query' => $meta_query
+            'meta_query' => $meta_query,
+            'orderby' => in_array($data['sort']['sortBy'], array('plotNr', 'discount', 'priceNetto', 'area')) ? 'meta_value_num' : 'meta_value',
+            'meta_key' => $data['sort']['sortBy'],
+            'order' => strtoupper($data['sort']['sort'])
         ));
 
         echo json_encode($this->getPlotsObjectFromPosts($plotsPosts));
@@ -157,6 +168,18 @@ class PlotsAdmin
         echo json_encode(array('status' => 'OK'));
     }
 
+    public function addBackToPlotsLink() {
+        echo '<script>
+                (function($) {
+                  $(document).ready(function () {
+                      if ($(".acf-postbox .postbox-header > h2").length && $(".acf-postbox .postbox-header > h2").text() === "Działka") {
+                         jQuery("h1.wp-heading-inline + .page-title-action").after("<a href=\\"' . admin_url('/admin.php?page=plots') . '\\" class=\\"page-title-action\\">Powrót do listy działek</a>")
+                      }
+                  })
+                })(jQuery);
+        </script>';
+    }
+
     private function getPlotsObjectFromPosts($plotsPosts)
     {
         require(__DIR__ . '/../model/plots-acf-fields.php');
@@ -183,7 +206,7 @@ class PlotsAdmin
                 continue;
             }
 
-            if (is_array($filter['value'])) {
+            if (is_array($filter['value']) && isset($filter['value']['min']) && isset($filter['value']['max'])) {
                 $meta_query[] = array(
                     'key' => $filter['name'],
                     'value' => array((int)$filter['value']['min'], (int)$filter['value']['max']),
@@ -193,13 +216,23 @@ class PlotsAdmin
             } else if (!empty($filter['value'])) {
                 $meta_query[] = array(
                     'key' => $filter['name'],
-                    'value' => array($filter['value'] === 'empty' ? '' : $filter['value']),
+                    'value' => is_array($filter['value']) ? $filter['value'] : array($filter['value'] === 'empty' ? '' : $filter['value']),
                     'compare' => 'IN'
                 );
             }
         }
 
         return $meta_query;
+    }
+
+    public function removePlot($data)
+    {
+        if (!wp_delete_post((int) $data['plotId'])) {
+            echo false;
+        } else {
+            echo true;
+        }
+        exit();
     }
 }
 

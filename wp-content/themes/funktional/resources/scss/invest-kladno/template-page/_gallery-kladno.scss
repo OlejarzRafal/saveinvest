@@ -1,0 +1,215 @@
+.ik-gallery {
+    margin-top: 100px;
+    @media (max-width: $xl) {
+        margin-top: 60px;
+    }
+
+    .gallery-kladno {
+        padding-top: 30px;
+        margin-bottom: 110px;
+        display: flex;
+        justify-content: center;
+        &__title {
+            display: flex;
+            justify-content: center;
+            width: 100%;
+            h5 {
+                width: 65%;
+                text-align: center;
+            }
+        }
+        .gallery-nav {
+            margin-top: 90px;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            gap: 90px;
+            &__list {
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+                position: relative;
+                background-color: $white;
+                cursor: pointer;
+                .button {
+                    z-index: 99;
+                    &::after,
+                    &::before {
+                        content: "";
+                        position: absolute;
+                        top: 50%;
+                        transform: translateY(-50%);
+                        height: 2px;
+                        width: 20px;
+                        background-color: $gold;
+                        z-index: -1;
+                        transition: 0.2s;
+                    }
+                    &:hover::after {
+                        left: -30px;
+                    }
+                    &:hover::before {
+                        right: -30px;
+                    }
+                    &::after {
+                        left: 0;
+                    }
+                    &::before {
+                        right: 0;
+                    }
+                    P {
+                        background-color: $white;
+                    }
+                }
+                .active {
+                    z-index: 999;
+                    &::after,
+                    &::before {
+                        content: "";
+                        position: absolute;
+                        top: 50%;
+                        transform: translateY(-50%);
+                        height: 2px;
+                        width: 20px;
+                        background-color: $gold;
+                        z-index: -1;
+                    }
+                    &::after {
+                        left: -30px;
+                    }
+                    &::before {
+                        right: -30px;
+                    }
+                }
+            }
+        }
+        &__all {
+            margin-top: 70px;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            gap: 20px;
+            .gallery-item {
+                position: relative;
+                height: 250px;
+                cursor: pointer;
+                a {
+                    position: relative;
+                    display: block;
+                    width: 100%;
+                    height: 250px;
+                    &:after {
+                        content: "";
+                        position: absolute;
+                        top: 8px;
+                        left: 8px;
+                        width: 100%;
+                        height: 100%;
+                        border: 1px solid $gold;
+                        z-index: 999;
+                        transition: 0.2s;
+                        opacity: 0;
+                    }
+                    &:before {
+                        content: "";
+                        position: absolute;
+                        width: 100%;
+                        height: 100%;
+                        left: 0;
+                        top: 0;
+                        background-color: rgba(182, 139, 29, 0.4);
+                        opacity: 0;
+                        transition: 0.2s;
+                    }
+                    &:hover {
+                        &:after,
+                        &:before {
+                            opacity: 1;
+                        }
+                    }
+                    img {
+                        width: 100%;
+                        height: 100%;
+                        -o-object-fit: cover;
+                        object-fit: cover;
+                    }
+                }
+            }
+            .gallery-item-video {
+                position: relative;
+                height: 250px;
+                &:after {
+                    content: "";
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    width: 66px;
+                    height: 66px;
+                    background: url(../img/invest-kladno/home-page/icon-play-movie.png);
+                    background-repeat: no-repeat;
+                    background-size: 66px 66px;
+                    transition: 0.2s;
+                    opacity: 1;
+                }
+                a {
+                    position: relative;
+                    width: 100%;
+                    height: 100%;
+                    &:before {
+                        content: "";
+                        position: absolute;
+                        width: 100%;
+                        height: 100%;
+                        left: 0;
+                        top: 0;
+                        background: rgba(1, 22, 27, 0.8);
+                        opacity: 0.6;
+                        transition: 0.2s;
+                    }
+                    &:hover {
+                        &:before {
+                            background-color: rgba(117, 89, 17, 0.5);
+                            opacity: 1;
+                        }
+                    }
+                }
+
+                &:hover {
+                    &:after {
+                        background: url(../img/invest-kladno/home-page/icon-play-movie-active.png);
+                        background-size: 66px 66px;
+                    }
+                }
+            }
+        }
+        @media (max-width: $xxl) {
+            &__all {
+                grid-template-columns: 1fr 1fr 1fr;
+            }
+        }
+        @media (max-width: $lg) {
+            &__all {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+        @media (max-width: $md) {
+            .gallery-nav {
+                display: flex;
+                flex-direction: column;
+                margin-top: 30px;
+                gap: 20px;
+            }
+
+            &__all {
+                grid-template-columns: 1fr;
+                margin-top: 50px;
+                .gallery-item {
+                    margin: 0 auto;
+                }
+            }
+        }
+    }
+}
