@@ -11,84 +11,91 @@ global $PlotsFront;
 $PlotsFront->getScriptsAndStyles('Ostoja Kładno');
 ?>
 
-
-
 <section class="plots-map" data-plots-map>
 
     <div data-plots-info class="plotModal">
-        <div class="plotModal-arrows" data-plots-info-on-selected>
-            <div data-plots-info-prev class="plotModal-arrows__prev"></div>
-            <div data-plots-info-next class="plotModal-arrows__next"></div>
-        </div>
-        <div data-plots-info-on-selected data-plots-info-close class="plotModal-close">
-            <img src="<?php bloginfo('template_url'); ?>/assets/img/invest-kladno/ico/close.png');?>" alt="close">
-        </div>
-        <div class="plot-difference" data-plot-info-show-if="discount">
+        <div class="plotModal__item" data-plot-class-param="status">
+            <!-- ARROWS -->
+            <div class="plotModal-arrows" data-plots-info-on-selected>
+                <div data-plots-info-prev class="plotModal-arrows__prev"></div>
+                <div data-plots-info-next class="plotModal-arrows__next"></div>
+            </div>
+            <!-- CLOSE -->
+            <div data-plots-info-on-selected data-plots-info-close class="plotModal-close">
+                <img src="<?php bloginfo('template_url'); ?>/assets/img/invest-kladno/ico/close.png');?>" alt="close">
+            </div>
+            <!-- DIFFERENCE -->
+            <div class="plotModal-difference" data-plot-info-show-if="discount">
                 <p>TANIEJ O <span data-plot-info-param="difference"></span> zł</p>
-        </div>
-        <div class="plotModal-content">
+            </div>
+            <!-- CONTENT -->
+            <div class="plotModal-content">
+                <figure class="plotModal-content__img">
+                    <img data-plot-info-image src="">
+                </figure>
+                <div class="plotModal-content__desc">
 
-        
-            <figure class="plotModal-img">
-                <img data-plot-info-image src="">
-            </figure>
-            <div class="plotModal-info">
-                <div class="row">
-                    <div class="plotModal-top">
-                        <div class="plotModal-top__nr">
-                            <p data-plot-info-param="sector|plotNr">=</p>
-                        </div>
-                        <div class="plotModal-top__status">
+                    <div class="plotModal-status">
+                        <div class="plotModal-status__number" data-plot-info-param="sector|plotNr"></div>
+                        <div class="plotModal-status__status">
                             <div data-plot-info-show-if="status=wolna">
-                                <img class="status-ico" src="https://osadajaworek.pl/1/wp-content/themes/starter/assets/img/prices/status-wolna.png">
-                                <p>Wolna</p>
+                                <img class="status-ico" src="<?= get_theme_file_uri('/investitions/ostoja-kladno/assets/check.png') ?>">
+                                <span>wolna</span>
                             </div>
                             <div data-plot-info-show-if="status=sprzedana">
-                                <img class="status-ico" src="https://osadajaworek.pl/1/wp-content/themes/starter/assets/img/prices/status-wolna.png">
-                                <p>Sprzedana</p>
+                                <img class="status-ico" src="<?= get_theme_file_uri('/investitions/ostoja-kladno/assets/x-circle.png') ?>">
+                                <span>sprzedana</span>
                             </div>
                             <div data-plot-info-show-if="status=zarezerwowana">
-                                <img class="status-ico" src="https://osadajaworek.pl/1/wp-content/themes/starter/assets/img/prices/status-wolna.png">
-                                <p>Zarezerwowana</p>
+                                <img class="status-ico" src="<?= get_theme_file_uri('/investitions/ostoja-kladno/assets/lock.png') ?>">
+                                <span>zarezerwowana</sp>
                             </div>
                         </div>
                     </div>
+
+                    <div class="plotModal-info">
+                        <div class="plotModal-info__text">
+                            <div class="plot-text__type">Typ działki:</div>
+                            <div class="plot-text__surface">Powierzchnia:</div>
+                            <div class="plot-text__price" data-plot-info-show-if="status=wolna">Cena netto:</div>
+                            <div class="plot-text__priceMonth" data-plot-info-show-if="status=wolna">Lub miesięcznie:</div>
+                        </div>
+                        <div class="plotModal-info__desc ">
+                            <div class="plot-desc__type" data-plot-info-param="plot_type"></div>
+                            <div class="plot-desc__sufrace"><span data-plot-info-param="area"></span> m<sup>2</sup></div>
+                            <div class="plot-desc__price" data-plot-info-show-if="status=wolna">
+                                <!-- if discount -->
+                                <p class="plot-desc__price__afterDiscount" data-plot-info-show-if="discount"><span data-plot-info-param="priceAfterDiscount"></span> zł</p>
+                                <p class="plot-desc__price__beforeDiscount" data-plot-info-show-if="discount"><span data-plot-info-param="priceBeforeDiscount"></span> zł</p>
+                                <!-- if not discount -->
+                                <p class="" data-plot-info-show-if="!discount"><span data-plot-info-param="priceBeforeDiscount"></span> zł</p>
+                            </div>
+                            <div class="plot-desc__rate" data-plot-info-show-if="status=wolna">
+                                <!-- <p data-plot-info-show-if="!rateAfterSalesCount">brak możliwości zakupu na raty</p> -->
+                                <!-- if discount -->
+                                <p class="plot-desc__rate__afterDiscount" data-plot-info-show-if="discount"><span data-plot-info-param="rateAfterDiscount"></span> zł</p>
+                                <p class="plot-desc__rate__beforeDiscount" data-plot-info-show-if="discount"><span data-plot-info-param="rateBeforeDiscount"></span> zł</p>
+                                <!-- if not discount -->
+                                <p class="" data-plot-info-show-if="!discount"><span data-plot-info-param="rateBeforeDiscount"></span> zł</p>
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
-                <div class="row">
-                    <div class="plotModal-left">
-                        <p class="plotModal-left__type">Typ działki:</p>
-                        <p class="plotModal-left__surface">Powierzchnia:</p>
-                        <p class="plotModal-left__price" data-plot-info-show-if="status=wolna">Cena brutto:</p>
-                        <p class="plotModal-left__rate" data-plot-info-show-if="status=wolna">lub miesięcznie:</p>
-                    </div>
-                    <div class="plotModal-right">
-                        <p class="plotModal-right__type" data-plot-info-param="plot_type"></p>
-                        <p class="plotModal-right__surface"><span data-plot-info-param="area"></span>m<sup>2</sup></p>
-                        <div class="plotModal-right__price" data-plot-info-show-if="status=wolna">
-                            <p><span data-plot-info-param="priceBrutto"></span> zł</p>
-                        </div>
-                        <div class="plotModal-right__rate" data-plot-info-show-if="status=wolna">
-                            <p data-plot-info-show-if="!rate">brak możliwości zakupu na raty</p>
-                            <p data-plot-info-show-if="rate"><span data-plot-info-param="rate"></span></p>
-                        </div>
-                    </div>
+            </div>
+            <!-- BUTTONS -->
+            <div class="plotModal-btn">
+                <div class="plotModal-btn__clickplot">KLIKNIJ DZIAŁKĘ</div>
+                <div class="plotModal-btn__buttons" data-plots-info-on-selected>
+                    <a href="#" class="plotModal-btn__buttons__btn plotModal-btn__buttons__btn--gold" target="_blank" data-plot-info-image-send-message>
+                        <?php echo file_get_contents(get_template_directory_uri() . '/assets/img/invest-kladno/mail.svg'); ?><span>WIADOMOŚĆ</span>
+                    </a>
+                    <a href="#" class="plotModal-btn__buttons__btn" target="_blank" data-plot-info-image-pdf-card>
+                        <?php echo file_get_contents(get_template_directory_uri() . '/assets/img/invest-kladno/download.svg'); ?><span>POBIERZ KARTĘ</span>
+                    </a>
                 </div>
             </div>
         </div>
-        
-        <!-- <div class="plotModal-btn">
-            
-                <div class="plotModal-bottom__empty">KLIKNIJ DZIAŁKĘ</div>
-                <div class="plotModal-buttons" data-plots-info-on-selected>
-                    <a href="https://osadajaworek.pl/1/PlotsFiles/D/karty/D-3.pdf" class="btn-pdf" target="_blank" data-plot-info-image-pdf-card>
-                        Pobierz kartę
-                    </a>
-                    <a href="#" class="btn-message" target="_blank" data-plot-info-image-send-message>
-                        Wiadomość
-                    </a>
-                </div>
-        
-        </div> -->
     </div>
 
     <div data-plots-sectors>
@@ -270,7 +277,7 @@ $PlotsFront->getScriptsAndStyles('Ostoja Kładno');
                             <a href="#" class="plot-contact__btn plot-contact__btn--gold" target="_blank" data-plot-info-image-send-message>
                                 <?php echo file_get_contents(get_template_directory_uri() . '/assets/img/invest-kladno/mail.svg'); ?><span>WIADOMOŚĆ</span>
                             </a>
-                            <a href="#" class="plot-contact__btn" target="_blank" data-plot-info-image-pdf-card>
+                            <a href="" class="plot-contact__btn" target="_blank" data-plot-info-image-pdf-card>
                                 <?php echo file_get_contents(get_template_directory_uri() . '/assets/img/invest-kladno/download.svg'); ?><span>POBIERZ KARTĘ</span>
                             </a>
                         </div>

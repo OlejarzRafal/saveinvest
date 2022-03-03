@@ -41,11 +41,13 @@ class PlotDataElement {
 
     static prepareParamElementsForPlot(plotData, element) {
         const paramElements = element.find('[data-plot-info-param]');
-
+        var url = window.location.origin + '/saveinvest/';
+        console.log('URL ' + url);
+        
         if (!paramElements || !paramElements.length) {
             return;
         }
-
+        
         paramElements.toArray().forEach(paramElement => {
             const param = $(paramElement).attr('data-plot-info-param');
             const conditionAbove = $(paramElement).closest('[data-plot-info-show-if]');
@@ -74,7 +76,7 @@ class PlotDataElement {
 
         // TODO set src to plot preview
         element.find('[data-plot-info-image]').attr('src', '');
-
+        
         // TODO set href to plot pdf card
         element.find('[data-plot-info-image-pdf-card]').attr('href', '');
 

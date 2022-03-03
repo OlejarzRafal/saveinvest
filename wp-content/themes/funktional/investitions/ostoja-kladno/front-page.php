@@ -200,7 +200,7 @@ get_template_part('investitions/ostoja-kladno/header');
                                 przyrodą, każdego dnia!
                             </p>
                         </div>
-                        <!-- <a href="#" class="btn btn__line">O OSTOJI</a> -->
+                        <!-- <a href="#" class="btn btn__line">O OSTOI</a> -->
                     </div>
                 </div>
             </div>
@@ -352,7 +352,7 @@ get_template_part('investitions/ostoja-kladno/header');
                                 zaletach Pomorza Zachodniego.
                             </p>
                         </div>
-                        <a href="#" class="btn btn__line">O OSTOJI</a>
+                        <a href="#" class="btn btn__line">O OSTOI</a>
                     </div>
                 </div>
             </div>
