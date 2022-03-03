@@ -83,23 +83,12 @@ $PlotsFront->getScriptsAndStyles('Ostoja Kładno');
 
                 </div>
             </div>
-<<<<<<< HEAD
-        </div>
-
-        <!-- <div class="plotModal-btn">
-            
-                <div class="plotModal-bottom__empty">KLIKNIJ DZIAŁKĘ</div>
-                <div class="plotModal-buttons" data-plots-info-on-selected>
-                    <a href="https://osadajaworek.pl/1/PlotsFiles/D/karty/D-3.pdf" class="btn-pdf" target="_blank" data-plot-info-image-pdf-card>
-                        Pobierz kartę
-=======
             <!-- BUTTONS -->
             <div class="plotModal-btn">
                 <div class="plotModal-btn__clickplot">KLIKNIJ DZIAŁKĘ</div>
                 <div class="plotModal-btn__buttons" data-plots-info-on-selected>
                     <a href="#" class="plotModal-btn__buttons__btn plotModal-btn__buttons__btn--gold" target="_blank" data-plot-info-image-send-message>
                         <?php echo file_get_contents(get_template_directory_uri() . '/assets/img/invest-kladno/mail.svg'); ?><span>WIADOMOŚĆ</span>
->>>>>>> 184a40270470ccd2d0df093e0653a7ab68a6d813
                     </a>
                     <a href="#" class="plotModal-btn__buttons__btn" target="_blank" data-plot-info-image-pdf-card>
                         <?php echo file_get_contents(get_template_directory_uri() . '/assets/img/invest-kladno/download.svg'); ?><span>POBIERZ KARTĘ</span>
