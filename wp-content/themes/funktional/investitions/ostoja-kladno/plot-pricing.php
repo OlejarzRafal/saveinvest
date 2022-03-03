@@ -58,7 +58,7 @@ $PlotsFront->getScriptsAndStyles('Ostoja Kładno');
                         <p class="plotModal-left__rate" data-plot-info-show-if="status=wolna">lub miesięcznie:</p>
                     </div>
                     <div class="plotModal-right">
-                        <p class="plotModal-right__type" data-plot-info-param="plot_type">Budowlana</p>
+                        <p class="plotModal-right__type" data-plot-info-param="plot_type"></p>
                         <p class="plotModal-right__surface"><span data-plot-info-param="area"></span>m<sup>2</sup></p>
                         <div class="plotModal-right__price" data-plot-info-show-if="status=wolna">
                             <p><span data-plot-info-param="priceBrutto"></span> zł</p>
@@ -202,7 +202,7 @@ $PlotsFront->getScriptsAndStyles('Ostoja Kładno');
                     </div>
                     <div class="plots-list__sorting__hideEmpty">
                         <label class="sold-wrap">
-                            <input type="checkbox" class="input-sold" name="sold">
+                            <input type="checkbox" class="input-sold" name="sold" data-plot-list-hide-sold>
                             <span class="checkmark"></span>
                             Ukryj sprzedane działki
                         </label>
@@ -210,7 +210,7 @@ $PlotsFront->getScriptsAndStyles('Ostoja Kładno');
                 </div>
 
                 <div data-plot-list-plot-template>
-                    <div class="plot-item ">
+                    <div class="plot-item" data-plot-class-param="status">
                         <div class="plot-status">
                             <div class="plot-status__header">Działka</div>
                             <div class="plot-status__number" data-plot-info-param="sector|plotNr"></div>
@@ -242,29 +242,40 @@ $PlotsFront->getScriptsAndStyles('Ostoja Kładno');
                             </div>
                             <div class="plot-info__desc ">
                                 <div class="plot-desc__type" data-plot-info-param="plot_type"></div>
-                                <div class="plot-desc__sufrace"><span data-plot-info-param="area"></span>m<sup>2</sup></div>
+                                <div class="plot-desc__sufrace"><span data-plot-info-param="area"></span> m<sup>2</sup></div>
                                 <div class="plot-desc__price" data-plot-info-show-if="status=wolna">
-                                    <p>po:<span data-plot-info-param="priceAfterDiscount"></span></p>
-                                    <p>przed:<span data-plot-info-param="priceBeforeDiscount"></span></p>
+                                    <!-- if discount -->
+                                    <p class="plot-desc__price__afterDiscount" data-plot-info-show-if="discount"> po:<span data-plot-info-param="priceAfterDiscount"></span> zł</p>
+                                    <p class="plot-desc__price__beforeDiscount" data-plot-info-show-if="discount">przed:<span data-plot-info-param="priceBeforeDiscount"></span> zł</p>
+                                    <!-- if not discount -->
+                                    <p class="" data-plot-info-show-if="!discount">przed:<span data-plot-info-param="priceBeforeDiscount"></span> zł</p>
                                 </div>
                                 <div class="plot-desc__rate" data-plot-info-show-if="status=wolna">
-                                    <p data-plot-info-show-if="!rate">brak możliwości zakupu na raty</p>
-                                    <p data-plot-info-show-if="rate"><span data-plot-info-param="rate"></span></p>
+                                    <!-- <p data-plot-info-show-if="!rateAfterSalesCount">brak możliwości zakupu na raty</p> -->
+                                    <!-- if discount -->
+                                    <p class="plot-desc__rate__afterDiscount" data-plot-info-show-if="discount">po:<span data-plot-info-param="rateAfterDiscount"></span> zł</p>
+                                    <p class="plot-desc__rate__beforeDiscount" data-plot-info-show-if="discount">przed:<span data-plot-info-param="rateBeforeDiscount"></span> zł</p>
+                                    <!-- if not discount -->
+                                    <p class="" data-plot-info-show-if="!discount">przed:<span data-plot-info-param="rateBeforeDiscount"></span> zł</p>
                                 </div>
+                                <p class="plotModal-right__type" data-plot-info-param="type">HERE</p>
                             </div>
                         </div>
                         <div class="plot-contact" data-plots-info-on-selected>
                             <a href="#" class="plot-contact__btn plot-contact__btn--gold" target="_blank" data-plot-info-image-send-message>
-                                WIADOMOŚĆ
+                                <?php echo file_get_contents(get_template_directory_uri() . '/assets/img/invest-kladno/mail.svg'); ?><span>WIADOMOŚĆ</span>
                             </a>
                             <a href="#" class="plot-contact__btn" target="_blank" data-plot-info-image-pdf-card>
-                                POBIERZ KARTĘ
+                                <?php echo file_get_contents(get_template_directory_uri() . '/assets/img/invest-kladno/download.svg'); ?><span>POBIERZ KARTĘ</span>
                             </a>
                         </div>
                         <div class="plot-quality">
                             <img src="<?php bloginfo('template_url'); ?>/assets/img/prices-qaulity-logo/image1.svg') ?>" alt="17 lat doświadczenia">
-                            <!-- <img src="<?php bloginfo('template_url'); ?>/assets/img/prices-qaulity-logo/image3.svg') ?>" alt="700 zadowolonych klientów"> -->
-                            <!-- <img src="<?php bloginfo('template_url'); ?>/assets/img/prices-qaulity-logo/image2small.svg') ?>" alt="gwarancja najwyższej jakości"> -->
+                            <img src="<?php bloginfo('template_url'); ?>/assets/img/prices-qaulity-logo/image3.svg') ?>" alt="700 zadowolonych klientów">
+                            <img src="<?php bloginfo('template_url'); ?>/assets/img/prices-qaulity-logo/image2small.svg') ?>" alt="gwarancja najwyższej jakości">
+                        </div>
+                        <div class="plot-difference" data-plot-info-show-if="discount">
+                            <p>TANIEJ O <span data-plot-info-param="difference"></span> zł</p>
                         </div>
                     </div>
                 </div>
@@ -276,7 +287,7 @@ $PlotsFront->getScriptsAndStyles('Ostoja Kładno');
 
                         <div class="plot-baner__content">
                             <h4>Kup działkę na raty</h4>
-                            <a href="" class="btn btn__line">DOWIEDZ SIĘ WIĘCEJ </a>
+                            <a href="<?php the_permalink(369); ?>" class="btn btn__line">DOWIEDZ SIĘ WIĘCEJ </a>
                         </div>
                     </div>
 
@@ -285,8 +296,10 @@ $PlotsFront->getScriptsAndStyles('Ostoja Kładno');
 
                 <div class="plots-all" data-plot-list-container></div>
 
+                <div class="plots-nav">
+                    <div data-plot-list-pagination></div>
+                </div>
 
-                <div data-plot-list-pagination></div>
 
 
                 <div class="plots-bottom-info">
