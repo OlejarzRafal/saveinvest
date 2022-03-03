@@ -8,8 +8,15 @@ import "../js/invest-kladno/sliders-front-page";
 //counter on Scroll // Contact //
 var counted = 0;
 $(window).scroll(function () {
-    var oTop = $("#counter").offset().top - window.innerHeight;
-    if (counted == 0 && $(window).scrollTop() > oTop) {
+    const counter = $("#counter");
+
+    if (!counter) {
+        return;
+    }
+
+    const scrollTop = counter.offset().top - window.innerHeight;
+
+    if (counted === 0 && $(window).scrollTop() > scrollTop) {
         $(".f-special").each(function () {
             var $this = $(this),
                 countTo = $this.attr("data-count");

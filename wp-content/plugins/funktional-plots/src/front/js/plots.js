@@ -117,16 +117,8 @@ class FunktionalPlotsMap {
 
         this.initSectorsEvents();
         this.setPlotsStatus();
-
-        const url = new URL(window.location.href);
-
-        if (url.searchParams.get('sector')) {
-            const sectorElFormUrl = this.sectorsSelection.find(`[data-plots-sector-selector="${url.searchParams.get('sector')}"]`);
-
-            if (sectorElFormUrl) {
-                this.handleSelectSector({currentTarget: sectorElFormUrl});
-            }
-        }
+        this.handleUrlSection(false);
+        this.initUrlChangeEvents();
     }
 
     initSectorsEvents() {
@@ -214,7 +206,7 @@ class FunktionalPlotsMap {
             if (this.sector.length) {
                 this.sectorsSelection.hide();
                 this.sector.show();
-                window.history.replaceState({}, '', url);
+                window.history.pushState({}, '', url);
                 this.plots = this.sector.find('[data-plots-plot]');
                 this.initPlotsEvent();
             } else {
@@ -233,7 +225,7 @@ class FunktionalPlotsMap {
         const url = new URL(window.location.href);
 
         url.searchParams.delete('sector');
-        window.history.replaceState({}, '', url);
+        window.history.pushState({}, '', url);
 
         this.sector.hide();
         this.sector = null;
@@ -296,6 +288,27 @@ class FunktionalPlotsMap {
         this.plotInfoModal.find('[data-plots-info-prev]')[prevPlot ? 'show' : 'hide']();
         this.plotInfoModal.find('[data-plots-info-next]')[nextPlot ? 'show' : 'hide']();
     }
+
+    initUrlChangeEvents() {
+        window.addEventListener('locationchange', this.handleUrlSection.bind(this));
+        window.addEventListener('hashchange', this.handleUrlSection.bind(this));
+        window.addEventListener('replacestate', this.handleUrlSection.bind(this));
+        window.addEventListener('popstate', this.handleUrlSection.bind(this));
+    }
+
+    handleUrlSection(backToMainMap = true) {
+        const url = new URL(window.location.href);
+
+        if (url.searchParams.get('sector')) {
+            const sectorElFormUrl = this.sectorsSelection.find(`[data-plots-sector-selector="${url.searchParams.get('sector')}"]`);
+
+            if (sectorElFormUrl) {
+                this.handleSelectSector({currentTarget: sectorElFormUrl});
+            }
+        } else if (backToMainMap) {
+            this.handleBackToMainMap();
+        }
+    }
 }
 
 class FunktionalPlotsList {
@@ -330,6 +343,12 @@ class FunktionalPlotsList {
             }
 
             $(filter).on('change', this.handleFilterChange.bind(this));
+        });
+
+        this.mainList.find('[data-plot-list-hide-sold]').on('change', (event) => {
+            this.hideSold = $(event.currentTarget).is(':checked');
+            console.log('this.hideSold', this.hideSold);
+            this.reloadList();
         });
     }
 
@@ -430,16 +449,18 @@ class FunktionalPlotsList {
         this.pagination.html('');
         const currentItemsCount = this.activePage * this.perPage;
 
+        this.pagination.append('<div class="plot-list-pagination"></div>');
+
         if (this.activePage) {
-            this.pagination.append('<button class="plots-nav__prev" data-plot-list-pagination-prev>Poprzednia</button>');
+            this.pagination.find('.plot-list-pagination').append('<div class="plot-list-pagination__page"><button data-plot-list-pagination-prev><<</button></div>');
         }
 
         for (let i = this.perPage; i <= allCount; i += this.perPage) {
-            this.pagination.append(`<button ${((i / this.perPage) - 1) === this.activePage ? 'class="plots-nav__number plots-nav__number--active" ' : 'class="plots-nav__number" '}data-plot-list-pagination-page="${(i / this.perPage) - 1}">${i / this.perPage}</button>`);
+            this.pagination.find('.plot-list-pagination').append(`<div class="plot-list-pagination__page"><button ${((i / this.perPage) - 1) === this.activePage ? 'class="active" ' : ''}data-plot-list-pagination-page="${(i / this.perPage) - 1}">STRONA ${i / this.perPage}</button></div>`);
         }
 
         if (currentItemsCount + this.perPage < allCount) {
-            this.pagination.append('<button class="plots-nav__next" data-plot-list-pagination-next>Następna</button>');
+            this.pagination.find('.plot-list-pagination').append('<div class="plot-list-pagination__page"><button data-plot-list-pagination-next>>></button></div>');
         }
 
         if (this.pagination.find('button').length) {
@@ -496,9 +517,8 @@ class FunktionalPlotsList {
                 }
             }
 
-            return this.Sold ? filterResult && plot.status.value !== 'sprzedana' : filterResult;
-
-        }) : true).sort((plotA, plotB) => {
+            return filterResult;
+        }) : true).filter(plot => this.hideSold ? plot.status.value !== 'sprzedana' : true).sort((plotA, plotB) => {
             const valueA = Number.isNaN(parseFloat(plotA[this.sortBy])) ? plotA[this.sortBy] : parseFloat(plotA[this.sortBy]);
             const valueB = Number.isNaN(parseFloat(plotB[this.sortBy])) ? plotB[this.sortBy] : parseFloat(plotB[this.sortBy]);
 
