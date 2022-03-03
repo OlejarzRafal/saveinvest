@@ -88,15 +88,12 @@ class PlotsFront
                 $plotData['rateBeforeDiscount'] =  round((($plotData['price'] - 12000) * 1.35 + 3690) / 84);
 
                 // BUDOWLANA
-                if ($plotData['type'] === 'Budowlana') {
-
+                if ($plotData['type.label'] === 1) {
                     // Rata przed rabatem
                     // RATA po rabacie
                 }
-
                 break;
         }
-
         return $plotData;
     }
 }

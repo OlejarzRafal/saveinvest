@@ -258,6 +258,7 @@ $PlotsFront->getScriptsAndStyles('Ostoja Kładno');
                                     <!-- if not discount -->
                                     <p class="" data-plot-info-show-if="!discount">przed:<span data-plot-info-param="rateBeforeDiscount"></span> zł</p>
                                 </div>
+                                <p class="plotModal-right__type" data-plot-info-param="type">HERE</p>
                             </div>
                         </div>
                         <div class="plot-contact" data-plots-info-on-selected>
