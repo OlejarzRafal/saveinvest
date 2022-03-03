@@ -1,6 +1,10 @@
 .ik-contanct {
-    margin-top: 140px;
+    margin-top: 100px;
+    @media (max-width: $xl) {
+        margin-top: 60px;
+    }
     .contact-kladno {
+        padding-top: 30px;
         position: relative;
         width: 100%;
         height: auto;
@@ -284,6 +288,11 @@
                         font-size: 14px;
                     }
                 }
+            }
+        }
+        @media (max-width: $md) {
+            &__form {
+                padding-top: 30px;
             }
         }
         &__sales-box {

@@ -26,7 +26,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _scs
   \**************************************************/
 /***/ (function() {
 
-eval("$(document).ready(function () {\n  $(\".kladno-nav-container__burger\").click(function () {\n    $(this).toggleClass(\"open\"); // $(\".kladno-nav-container__box\").slideToggle();\n    // $(\".kladno-nav-container\").toggleClass(\"active\");\n\n    $(\".kladno-nav-container__box\").slideToggle();\n    $(\".kladno-nav\").toggleClass(\"active\");\n  });\n});\n\n//# sourceURL=webpack://webpack-starter/./resources/js/invest-kladno/nav-burger.js?");
+eval("$(document).ready(function () {\n  $(\".kladno-nav-container__burger\").click(function () {\n    $(this).toggleClass(\"open\"); // $(\".kladno-nav-container__box\").slideToggle();\n    // $(\".kladno-nav-container\").toggleClass(\"active\");\n    // $(\".kladno-nav-container__box\").slideToggle();\n\n    $(\".kladno-nav\").toggleClass(\"active\");\n  });\n});\n\n//# sourceURL=webpack://webpack-starter/./resources/js/invest-kladno/nav-burger.js?");
 
 /***/ }),
 

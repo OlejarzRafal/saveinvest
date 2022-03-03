@@ -92,27 +92,27 @@ get_template_part('investitions/ostoja-kladno/header');
                         </div>
                         <div class="person-sales">
                             <div class="person-sales__photo">
-                                <img src="<?php bloginfo('template_url'); ?>/assets/img/invest-kladno/contact/contact-photo2.jpg" alt="zdjęcie osoby z działu sprzedaży" />
+                                <img src="<?php bloginfo('template_url'); ?>/assets/img/invest-kladno/contact/contact-photo4.jpg" alt="zdjęcie osoby z działu sprzedaży" />
 
                             </div>
                             <div class="person-info">
                                 <div class="person-info__name">
                                     <h6 class="f-h6 f-h6-fw600">
-                                        Aleksander Setlak
+                                        Bartosz Antos
                                     </h6>
                                 </div>
                                 <div class="person-info__position">
                                     <p class="text-main text-main--grey">
-                                        Specjalista ds. Nieruchomości
+                                        Dyrektor ds. Nieruchomości
                                     </p>
                                 </div>
                                 <div class="person-info__email">
                                     <img src="<?php bloginfo('template_url'); ?>/assets/img/invest-kladno/contact/icon-email.png" alt=" ikona email" />
-                                    <a class="text-main text-main--fw500" href="mailto:a.setlak@saveinvest.pl">a.setlak@saveinvest.pl</a>
+                                    <a class="text-main text-main--fw500" href="mailto:b.antos@saveinvest.pl">b.antos@saveinvest.pl</a>
                                 </div>
                                 <div class="person-info__phone">
                                     <img src="<?php bloginfo('template_url'); ?>/assets/img/invest-kladno/contact/icon-phone.png" alt="ikona telefonu" />
-                                    <a class="text-main text-main--fw500" href="tel:+48795048639">+48 795 048 639</a>
+                                    <a class="text-main text-main--fw500" href="tel:+48500210600">+48 500 210 600</a>
                                 </div>
                             </div>
                         </div>
@@ -131,13 +131,13 @@ get_template_part('investitions/ostoja-kladno/header');
                 <div class="offset-xxl-1 col-xxl-5">
                     <div class="person-service">
                         <div class="person-service__photo">
-                            <img src="<?php bloginfo('template_url'); ?>/assets/img/invest-kladno/contact/contact-photo2.jpg" alt="zdjęcie osoby z działu sprzedaży" />
+                            <img src="<?php bloginfo('template_url'); ?>/assets/img/invest-kladno/contact/contact-photo5.jpg" alt="zdjęcie osoby z działu sprzedaży" />
 
                         </div>
                         <div class="person-info">
                             <div class="person-info__name">
                                 <h6 class="f-h6 f-h6-fw600">
-                                    Aleksander Setlak
+                                    Patryk Wajda
                                 </h6>
                             </div>
                             <div class="person-info__position">
@@ -147,11 +147,11 @@ get_template_part('investitions/ostoja-kladno/header');
                             </div>
                             <div class="person-info__email">
                                 <img src="<?php bloginfo('template_url'); ?>/assets/img/invest-kladno/contact/icon-email.png" alt=" ikona email" />
-                                <a class="text-main text-main--fw500" href="mailto:a.setlak@saveinvest.pl">a.setlak@saveinvest.pl</a>
+                                <a class="text-main text-main--fw500" href="mailto:p.wajda@saveinvest.pl">p.wajda@saveinvest.pl</a>
                             </div>
                             <div class="person-info__phone">
                                 <img src="<?php bloginfo('template_url'); ?>/assets/img/invest-kladno/contact/icon-phone.png" alt="ikona telefonu" />
-                                <a class="text-main text-main--fw500" href="tel:+48795048639">+48 795 048 639</a>
+                                <a class="text-main text-main--fw500" href="tel:+48570444266">+48 570 444 266</a>
                             </div>
                         </div>
                     </div>
@@ -159,13 +159,13 @@ get_template_part('investitions/ostoja-kladno/header');
                 <div class="col-xxl-5">
                     <div class="person-service">
                         <div class="person-service__photo">
-                            <img src="<?php bloginfo('template_url'); ?>/assets/img/invest-kladno/contact/contact-photo2.jpg" alt="zdjęcie osoby z działu sprzedaży" />
+                            <img src="<?php bloginfo('template_url'); ?>/assets/img/invest-kladno/contact/contact-photo6.jpg" alt="zdjęcie osoby z działu sprzedaży" />
 
                         </div>
                         <div class="person-info">
                             <div class="person-info__name">
                                 <h6 class="f-h6 f-h6-fw600">
-                                    Aleksander Setlak
+                                    Przemysław Zając
                                 </h6>
                             </div>
                             <div class="person-info__position">
@@ -175,11 +175,11 @@ get_template_part('investitions/ostoja-kladno/header');
                             </div>
                             <div class="person-info__email">
                                 <img src="<?php bloginfo('template_url'); ?>/assets/img/invest-kladno/contact/icon-email.png" alt=" ikona email" />
-                                <a class="text-main text-main--fw500" href="mailto:a.setlak@saveinvest.pl">a.setlak@saveinvest.pl</a>
+                                <a class="text-main text-main--fw500" href="mailto:projekty@saveinvest.pl">projekty@saveinvest.pl</a>
                             </div>
                             <div class="person-info__phone">
                                 <img src="<?php bloginfo('template_url'); ?>/assets/img/invest-kladno/contact/icon-phone.png" alt="ikona telefonu" />
-                                <a class="text-main text-main--fw500" href="tel:+48795048639">+48 795 048 639</a>
+                                <a class="text-main text-main--fw500" href="tel:+48570342222">+48 570 342 222</a>
                             </div>
                         </div>
                     </div>

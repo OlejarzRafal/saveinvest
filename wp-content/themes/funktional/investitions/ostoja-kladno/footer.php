@@ -140,4 +140,4 @@ wp_footer();
     </section>
 </footer>
 
-</div>  <!-- end invest-kladno in homepage -->
+</body>

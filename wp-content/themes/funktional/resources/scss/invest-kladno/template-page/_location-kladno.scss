@@ -1,5 +1,8 @@
 .ik-lokalizations {
     margin-top: 100px;
+    @media (max-width: $xl) {
+        margin-top: 60px;
+    }
     .scroll-bottom {
         position: absolute;
         width: 100%;
@@ -117,7 +120,6 @@
             top: 59vw;
         }
         .hero1-location {
-            margin-top: 80px;
             background-size: 1000px auto;
             background-position: right top;
             height: 1950px;

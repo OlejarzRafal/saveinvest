@@ -1,5 +1,11 @@
 .ik-frontpage {
     margin-top: 100px;
+    @media (max-width: $xl) {
+        margin-top: 60px;
+    }
+    @media (max-width: $lg) {
+        margin-top: 0px;
+    }
     .front-slider {
         height: 884px;
         width: 100%;

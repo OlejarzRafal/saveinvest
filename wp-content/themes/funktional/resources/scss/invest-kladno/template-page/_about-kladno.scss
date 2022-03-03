@@ -1,5 +1,8 @@
 .ik-about {
     margin-top: 100px;
+    @media (max-width: $xl) {
+        margin-top: 60px;
+    }
     .hero1-about {
         position: relative;
         height: 785px;
