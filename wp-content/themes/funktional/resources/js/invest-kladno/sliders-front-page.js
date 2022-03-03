@@ -1,11 +1,14 @@
 $(document).ready(function () {
     const Contact = new Swiper(".front-slider", {
+        autoplay: {
+            delay: 5000,
+        },
         effect: "fade",
         fadeEffect: {
             crossFade: true,
         },
         // slidesPerView: 1,
-        spaceBetween: 100,
+        // spaceBetween: 100,
         speed: 500,
         // If we need pagination
         pagination: {

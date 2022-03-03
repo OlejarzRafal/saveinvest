@@ -1,9 +1,9 @@
 .ik-contanct {
+    margin-top: 140px;
     .contact-kladno {
         position: relative;
         width: 100%;
         height: auto;
-        margin-top: 100px;
         background-image: url("../img/invest-kladno/contact/background-contanct.png");
         background-position: center;
         background-repeat: no-repeat;
@@ -25,7 +25,10 @@
             }
         }
         .form-main {
-            margin-top: 85px;
+            margin-top: 80px;
+            @media (max-width: $xl) {
+                margin-top: 30px;
+            }
             p {
                 margin: 0;
             }
@@ -64,7 +67,6 @@
                     }
                     &:focus {
                         border: 2px solid $gold;
-                        // font-weight: bold;
                     }
                     &.wpcf7-not-valid {
                         border: 2px solid #c8220b;
@@ -137,7 +139,6 @@
                     position: relative;
                     cursor: pointer;
                     margin: 2px 16px 0 0;
-                    // width: 8px;
                     &:hover {
                         &::before {
                             border: 2px solid $gold;
@@ -236,6 +237,7 @@
                     opacity: 1;
                 }
             }
+
             @media screen and (max-width: 768px) {
                 &__p {
                     font-size: 12px;
@@ -243,10 +245,6 @@
                     line-height: normal;
                 }
                 form {
-                    width: calc(100% - 48px);
-                    left: 24px;
-                    transform: translateX(0);
-                    padding: 15px;
                     .wpcf7-list-item-label {
                         font-size: 12px;
                         line-height: normal;
@@ -297,6 +295,7 @@
                 padding: 0 0 0 30px;
                 border: 1px solid $gold;
                 background-color: $white;
+
                 &__photo {
                     margin-top: -30px;
                     height: 235px;
@@ -523,14 +522,14 @@
             &__form,
             &__sales-box {
                 .sales-title {
-                    margin-top: 50px;
+                    margin-top: 40px;
                 }
                 .text-form,
                 .sales-text {
                     margin-top: 10px;
                 }
                 .person-sales {
-                    margin-top: 50px;
+                    margin-top: 40px;
                     width: fit-content;
                     .person-info {
                         min-width: 350px;
@@ -634,6 +633,7 @@
             }
         }
         @media (max-width: $xl) {
+            margin-top: 50px;
             &__content {
                 .title-content {
                     margin-top: 30px;
@@ -645,6 +645,7 @@
         }
         @media (max-width: $md) {
             padding: 50px 0;
+            margin-top: 0px;
             .row {
                 padding: 30px 15px;
                 &::before {
@@ -856,12 +857,8 @@
             align-items: center;
             position: absolute;
             width: 100%;
-            z-index: 999999999999;
+            z-index: 99;
             top: 45%;
-            @media (max-width: 1200px) {
-                bottom: 20px;
-                width: 100%;
-            }
             .swiper-button-prev {
                 position: relative;
                 margin: 0px;
@@ -922,6 +919,82 @@
                     height: 3px;
                     border-radius: 0;
                     opacity: 1;
+                }
+            }
+        }
+        @media (max-width: $xl) {
+            &__title {
+                .f-h5--white {
+                    width: 70%;
+                }
+            }
+            &__container {
+                .box {
+                    width: 70%;
+                    .swiper-wrapper {
+                        .testimonial-kladno-box {
+                            &__text {
+                                margin-top: -5px;
+                            }
+                            &__name {
+                                left: 0px;
+                                bottom: -120px;
+                            }
+                        }
+                    }
+                }
+                .swiper-contenet-testimonial {
+                    .swiper-button-prev,
+                    .swiper-button-next {
+                        margin: 0px;
+                        padding: 20px;
+                        &:hover {
+                            border: 1px solid $gold;
+                        }
+                    }
+                }
+            }
+            @media (max-width: $md) {
+                padding-top: 60px;
+                padding-bottom: 170px;
+                &__title {
+                    .f-h5--white {
+                        width: 100%;
+                        font-size: 26px;
+                    }
+                }
+                &__container {
+                    .box {
+                        width: 100%;
+                        margin-top: 40px;
+                        padding: 0px 0 30px 20px;
+                        .triangle {
+                            bottom: -50px;
+                            border-right: 25px solid transparent;
+                            border-bottom: 25px solid transparent;
+                            border-top: 25px solid #b68b1d;
+                        }
+                    }
+                }
+                .swiper-contenet-testimonial {
+                    top: auto;
+                    bottom: -110px;
+                    width: 92%;
+                    .swiper-button-prev,
+                    .swiper-button-next {
+                        padding: 10px;
+                    }
+                    .swiper-button-prev {
+                        left: 0;
+                    }
+                    .swiper-button-next {
+                        right: 0;
+                    }
+                }
+                .swiper-contenet-pagination {
+                    .swiper-pagination {
+                        top: 105px;
+                    }
                 }
             }
         }
