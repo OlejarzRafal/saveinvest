@@ -19,10 +19,6 @@ function add_theme_assets()
     //  STYLES
     /////////////////
     // invest KLADNO
-
-    // KURKA ZESŁANIE NA UKRAINE ZA TAKIE COŚ!!! :D
-    //     if( get_queried_object_id() == 356 || get_queried_object_id() == 357 || get_queried_object_id() == 366 || get_queried_object_id() == 367 || get_queried_object_id() == 369) {
-
     if (get_post_type(get_queried_object_id()) === 'ostoja-kladno') {
         wp_enqueue_style('kladnocss', get_template_directory_uri() . '/assets/css/kladno.css', false, 1, 'all');
     } else {
