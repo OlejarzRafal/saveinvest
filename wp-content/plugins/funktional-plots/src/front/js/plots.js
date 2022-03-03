@@ -449,18 +449,20 @@ class FunktionalPlotsList {
         this.pagination.html('');
         const currentItemsCount = this.activePage * this.perPage;
 
-        this.pagination.append('<div class="plot-list-pagination"></div>');
+        this.pagination.append('<div class="plots-nav"></div>');
 
         if (this.activePage) {
-            this.pagination.find('.plot-list-pagination').append('<div class="plot-list-pagination__page"><button data-plot-list-pagination-prev><<</button></div>');
+            this.pagination.find('.plots-nav').append('<button class="plots-nav__prev" data-plot-list-pagination-prev>POPRZEDNIA</button></div><div class="plots-nav__number-wrap">');
         }
+        this.pagination.find('.plots-nav').append(`<div class="plots-nav__wrap"><span class="plots-nav__wrap__name">Strona</span></div>`);
 
         for (let i = this.perPage; i <= allCount; i += this.perPage) {
-            this.pagination.find('.plot-list-pagination').append(`<div class="plot-list-pagination__page"><button ${((i / this.perPage) - 1) === this.activePage ? 'class="active" ' : ''}data-plot-list-pagination-page="${(i / this.perPage) - 1}">STRONA ${i / this.perPage}</button></div>`);
+            this.pagination.find('.plots-nav__wrap').append(`<button ${((i / this.perPage) - 1) === this.activePage ? 'class="plots-nav__number plots-nav__number--active" ' : 'class="plots-nav__number" '}data-plot-list-pagination-page="${(i / this.perPage) - 1}"> ${i / this.perPage}</button>`);
         }
 
+
         if (currentItemsCount + this.perPage < allCount) {
-            this.pagination.find('.plot-list-pagination').append('<div class="plot-list-pagination__page"><button data-plot-list-pagination-next>>></button></div>');
+            this.pagination.find('.plots-nav').append('</div><button class="plots-nav__next" data-plot-list-pagination-next>NASTĘPNA</button>');
         }
 
         if (this.pagination.find('button').length) {

@@ -10,7 +10,8 @@
     <link rel='shortcut icon' href='<?php echo get_template_directory_uri(); ?>/assets/img/favicon.svg' type='image/x-icon' />
     <?php wp_head(); ?>
 </head>
-<div class="invest-kladno">
+<body <?php body_class(); ?>>
+
     <?php global $post; ?>
 
     <nav class="kladno-nav <?php if ($post->ID == 356) : ?> kladno-nav__home <?php endif; ?>">
