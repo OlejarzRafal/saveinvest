@@ -4,6 +4,7 @@ import "../scss/invest-kladno.scss";
 import "../js/invest-kladno/sliders-localizations";
 import "../js/invest-kladno/sliders-contact";
 import "../js/invest-kladno/sliders-front-page";
+import "../js/invest-kladno/nav-burger";
 
 //counter on Scroll // Contact //
 var counted = 0;

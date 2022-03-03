@@ -31,6 +31,11 @@ get_template_part('investitions/ostoja-kladno/header');
                                 <div class="front-slider-pagination">
                                     <div class="swiper-pagination"></div>
                                 </div>
+                                <div class="front-slider-content-swiper">
+                                    <div class="swiper-button-prev"></div>
+                                    <div class="swiper-button-next"></div>
+
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -54,6 +59,11 @@ get_template_part('investitions/ostoja-kladno/header');
                                 </div>
                                 <div class="front-slider-pagination">
                                     <div class="swiper-pagination"></div>
+                                </div>
+                                <div class="front-slider-content-swiper">
+                                    <div class="swiper-button-prev"></div>
+                                    <div class="swiper-button-next"></div>
+
                                 </div>
                             </div>
                         </div>
@@ -79,6 +89,11 @@ get_template_part('investitions/ostoja-kladno/header');
                                 </div>
                                 <div class="front-slider-pagination">
                                     <div class="swiper-pagination"></div>
+                                </div>
+                                <div class="front-slider-content-swiper">
+                                    <div class="swiper-button-prev"></div>
+                                    <div class="swiper-button-next"></div>
+
                                 </div>
                             </div>
                         </div>
@@ -106,6 +121,11 @@ get_template_part('investitions/ostoja-kladno/header');
                                 <div class="front-slider-pagination">
                                     <div class="swiper-pagination"></div>
                                 </div>
+                                <div class="front-slider-content-swiper">
+                                    <div class="swiper-button-prev"></div>
+                                    <div class="swiper-button-next"></div>
+
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -132,20 +152,23 @@ get_template_part('investitions/ostoja-kladno/header');
                                 <div class="front-slider-pagination">
                                     <div class="swiper-pagination"></div>
                                 </div>
+                                <div class="front-slider-content-swiper">
+                                    <div class="swiper-button-prev"></div>
+                                    <div class="swiper-button-next"></div>
+
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="front-slider-content-swiper">
-                <div class="swiper-button-prev"></div>
-                <div class="swiper-button-next"></div>
-            </div>
-            <!-- <div class="front-slider-pagination">
-                <div class="swiper-pagination"></div>
-            </div> -->
         </div>
     </section>
+
+    <section class="scroll-bottom">
+        <img src="<?php bloginfo('template_url'); ?>/assets/img/invest-kladno/about/chevrons-down.png" alt="ikona" />
+    </section>
+
     <section class="around-video">
         <div class="container">
             <div class="row">
@@ -419,11 +442,69 @@ get_template_part('investitions/ostoja-kladno/header');
             </div>
         </a>
     </section>
-    <section class="opinions">
-        <div class="opinions__title">
-            <h2 class="f-h2 f-h2--white f-h2--fw600">Opinie klientów</h2>
+
+    <section class="testimonial-kladno">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-12">
+                    <div class="testimonial-kladno__title">
+                        <h5 class="f-h5 f-h5--white">Opinie klientów</h5>
+                    </div>
+                </div>
+                <div class="col-xl-12">
+                    <div class="testimonial-kladno__container">
+                        <div class="box swiper">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <div class="testimonial-kladno-box">
+                                        <div class="testimonial-kladno-box__text">
+                                            <p class="text-main text-main--white">Jestem zadowolony z obsługi, jaką oferuje firma Saveinvest. Specjaliści bardzo sprawnie, szybko terminowo zgromadzili wymagane dokumenty i uzyskali dla mojej działki warunki zabudowy. Nie martwiłem się w jaki sposób zdobyć dokumenty oraz dopełnić wszelkich formalności, ponieważ pracownicy Saveinvest wszystkim się zajęli. Kompetencja, rzetelność i doświadczenie – te trzy słowa najlepiej oddają jakość usług świadczonych przez firmę!</p>
+                                        </div>
+                                        <div class="testimonial-kladno-box__name">
+                                            <p class="text-main text-main--fw700 text-main--white">Sebastian, Kijowice</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="testimonial-kladno-box">
+                                        <div class="testimonial-kladno-box__text">
+                                            <p class="text-main text-main--white">test firma działki firmę!</p>
+                                        </div>
+                                        <div class="testimonial-kladno-box__name">
+                                            <p class="text-main text-main--fw700 text-main--white">Test , Test</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="testimonial-kladno-box">
+                                        <div class="testimonial-kladno-box__text">
+                                            <p class="text-main text-main--white">3333 33333 test firma działki firmę! Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quidem ipsa excepturi autem in quia voluptates delectus temporibus hic nesciunt earum iusto quasi ullam minima officia impedit praesentium, non odio doloremque?</p>
+                                        </div>
+                                        <div class="testimonial-kladno-box__name">
+                                            <p class="text-main text-main--fw700 text-main--white">Test33 , Test</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="triangle"></div>
+                        </div>
+
+                    </div>
+                    <div class="swiper-contenet-testimonial">
+                        <div class="swiper-button-prev"></div>
+
+                        <div class="swiper-button-next"></div>
+                    </div>
+                    <div class="swiper-contenet-pagination">
+                        <div class="swiper-pagination"></div>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
+
+
+
     <section class="about-company">
         <div class="container">
             <div class="row">

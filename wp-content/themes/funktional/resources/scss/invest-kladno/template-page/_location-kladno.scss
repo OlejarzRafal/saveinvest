@@ -1,4 +1,5 @@
 .ik-lokalizations {
+    margin-top: 100px;
     .scroll-bottom {
         position: absolute;
         width: 100%;
@@ -174,6 +175,7 @@
     @media (max-width: $sm) {
         .hero1-location {
             background-size: 750px auto;
+            height: 1620px;
             &__box {
                 padding-top: 85%;
             }
@@ -186,8 +188,23 @@
             }
         }
     }
+    @media (max-width: 520px) {
+        .hero1-location {
+            height: 1550px;
+            background-size: 600px auto;
+
+            &__map {
+                &::before {
+                    content: "";
+                    position: absolute;
+                    height: 181vw;
+                }
+            }
+        }
+    }
     @media (max-width: 450px) {
         .hero1-location {
+            height: 1460px;
             background-size: 600px auto;
 
             &__map {
@@ -201,6 +218,7 @@
     }
     @media (max-width: 414px) {
         .hero1-location {
+            height: 1410px;
             &__map {
                 &::before {
                     content: "";
@@ -212,6 +230,7 @@
     }
     @media (max-width: 373px) {
         .hero1-location {
+            height: 1305px;
             &__map {
                 &::before {
                     content: "";
@@ -222,6 +241,7 @@
         }
     }
     @media (max-width: 347px) {
+        height: 1290px;
         .hero1-location {
             &__map {
                 &::before {
@@ -240,7 +260,7 @@
     .icon-localization {
         position: relative;
         margin-top: -80px;
-        z-index: 999;
+        z-index: 1;
         margin-bottom: 100px;
         .row {
             position: relative;
@@ -285,7 +305,7 @@
             position: absolute;
             width: 100%;
             // bottom: 65px;
-            z-index: 999999999999;
+            z-index: 1;
             top: 66%;
             // transform: translateY(-50%);
             @media (max-width: 1200px) {

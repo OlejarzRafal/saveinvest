@@ -16,6 +16,7 @@ footer {
             align-items: center;
         }
         @media (max-width: $sm) {
+            margin-top: 60px;
             height: 300px;
             padding: 0 30px;
             &__content {
