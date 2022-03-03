@@ -62,8 +62,7 @@ class PlotsFront
                 $plotData['area'] = (float)$plotData['area'];
                 $plotData['price'] = (float)$plotData['priceNetto'];
                 $plotData['discount'] = (float)$plotData['discount'];
-                // TODO check this (this probably object with value and label)
-                $plotData['type'] = (int)$plotData['plot_type'];
+                $plotData['type'] = $plotData['plot_type'];
 
                 // RABAT 
                 if ($plotData['discount'] > 0) {
@@ -88,10 +87,10 @@ class PlotsFront
                 $plotData['rateBeforeDiscount'] =  round((($plotData['price'] - 12000) * 1.35 + 3690) / 84);
 
                 // BUDOWLANA
-                if ($plotData['type.label'] === 1) {
-                    // Rata przed rabatem
-                    // RATA po rabacie
-                }
+                // if ($plotData['type']['label'] === 'Budowlana') {
+                //     $plotData['priceAfterDiscount'] = 100000000000000000;
+                // }
+
                 break;
         }
         return $plotData;

@@ -14,17 +14,21 @@ $PlotsFront->getScriptsAndStyles('Ostoja Kładno');
 
 
 <section class="plots-map" data-plots-map>
+
     <div data-plots-info class="plotModal">
         <div class="plotModal-arrows" data-plots-info-on-selected>
-            <button data-plots-info-prev class="plotModal-arrows__prev"></button>
-            <button data-plots-info-next class="plotModal-arrows__next"></button>
+            <div data-plots-info-prev class="plotModal-arrows__prev"></div>
+            <div data-plots-info-next class="plotModal-arrows__next"></div>
         </div>
-        <button data-plots-info-on-selected data-plots-info-close class="plotModal-close"></button>
+        <div data-plots-info-on-selected data-plots-info-close class="plotModal-close">
+            <img src="<?php bloginfo('template_url'); ?>/assets/img/invest-kladno/ico/close.png');?>" alt="close">
+        </div>
+        <div class="plot-difference" data-plot-info-show-if="discount">
+                <p>TANIEJ O <span data-plot-info-param="difference"></span> zł</p>
+        </div>
+        <div class="plotModal-content">
 
-        <div class="plotModal-discount d-none" data-plot-info-show-if="discount">
-            <div>TANIEJ O <span data-plot-info-param="discount"></span> ZŁ</div>
-        </div>
-        <div class="row">
+        
             <figure class="plotModal-img">
                 <img data-plot-info-image src="">
             </figure>
@@ -71,8 +75,9 @@ $PlotsFront->getScriptsAndStyles('Ostoja Kładno');
                 </div>
             </div>
         </div>
-        <div class="row">
-            <div class="plotModal-bottom">
+        
+        <!-- <div class="plotModal-btn">
+            
                 <div class="plotModal-bottom__empty">KLIKNIJ DZIAŁKĘ</div>
                 <div class="plotModal-buttons" data-plots-info-on-selected>
                     <a href="https://osadajaworek.pl/1/PlotsFiles/D/karty/D-3.pdf" class="btn-pdf" target="_blank" data-plot-info-image-pdf-card>
@@ -82,8 +87,8 @@ $PlotsFront->getScriptsAndStyles('Ostoja Kładno');
                         Wiadomość
                     </a>
                 </div>
-            </div>
-        </div>
+        
+        </div> -->
     </div>
 
     <div data-plots-sectors>
@@ -245,20 +250,20 @@ $PlotsFront->getScriptsAndStyles('Ostoja Kładno');
                                 <div class="plot-desc__sufrace"><span data-plot-info-param="area"></span> m<sup>2</sup></div>
                                 <div class="plot-desc__price" data-plot-info-show-if="status=wolna">
                                     <!-- if discount -->
-                                    <p class="plot-desc__price__afterDiscount" data-plot-info-show-if="discount"> po:<span data-plot-info-param="priceAfterDiscount"></span> zł</p>
-                                    <p class="plot-desc__price__beforeDiscount" data-plot-info-show-if="discount">przed:<span data-plot-info-param="priceBeforeDiscount"></span> zł</p>
+                                    <p class="plot-desc__price__afterDiscount" data-plot-info-show-if="discount"><span data-plot-info-param="priceAfterDiscount"></span> zł</p>
+                                    <p class="plot-desc__price__beforeDiscount" data-plot-info-show-if="discount"><span data-plot-info-param="priceBeforeDiscount"></span> zł</p>
                                     <!-- if not discount -->
-                                    <p class="" data-plot-info-show-if="!discount">przed:<span data-plot-info-param="priceBeforeDiscount"></span> zł</p>
+                                    <p class="" data-plot-info-show-if="!discount"><span data-plot-info-param="priceBeforeDiscount"></span> zł</p>
                                 </div>
                                 <div class="plot-desc__rate" data-plot-info-show-if="status=wolna">
                                     <!-- <p data-plot-info-show-if="!rateAfterSalesCount">brak możliwości zakupu na raty</p> -->
                                     <!-- if discount -->
-                                    <p class="plot-desc__rate__afterDiscount" data-plot-info-show-if="discount">po:<span data-plot-info-param="rateAfterDiscount"></span> zł</p>
-                                    <p class="plot-desc__rate__beforeDiscount" data-plot-info-show-if="discount">przed:<span data-plot-info-param="rateBeforeDiscount"></span> zł</p>
+                                    <p class="plot-desc__rate__afterDiscount" data-plot-info-show-if="discount"><span data-plot-info-param="rateAfterDiscount"></span> zł</p>
+                                    <p class="plot-desc__rate__beforeDiscount" data-plot-info-show-if="discount"><span data-plot-info-param="rateBeforeDiscount"></span> zł</p>
                                     <!-- if not discount -->
-                                    <p class="" data-plot-info-show-if="!discount">przed:<span data-plot-info-param="rateBeforeDiscount"></span> zł</p>
+                                    <p class="" data-plot-info-show-if="!discount"><span data-plot-info-param="rateBeforeDiscount"></span> zł</p>
                                 </div>
-                                <p class="plotModal-right__type" data-plot-info-param="type">HERE</p>
+
                             </div>
                         </div>
                         <div class="plot-contact" data-plots-info-on-selected>
@@ -281,7 +286,6 @@ $PlotsFront->getScriptsAndStyles('Ostoja Kładno');
                 </div>
 
                 <div data-plot-list-baner-template>
-
                     <div class="plot-baner">
                         <img class="status-ico" src="<?= get_theme_file_uri('/investitions/ostoja-kladno/assets/baner.png') ?>">
 
@@ -290,16 +294,14 @@ $PlotsFront->getScriptsAndStyles('Ostoja Kładno');
                             <a href="<?php the_permalink(369); ?>" class="btn btn__line">DOWIEDZ SIĘ WIĘCEJ </a>
                         </div>
                     </div>
-
-
                 </div>
+
 
                 <div class="plots-all" data-plot-list-container></div>
 
-                <div class="plots-nav">
-                    <div data-plot-list-pagination></div>
-                </div>
 
+                <!-- Paginacja -->
+                <div data-plot-list-pagination></div>
 
 
                 <div class="plots-bottom-info">

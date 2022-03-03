@@ -1,0 +1,47 @@
+
+.plotModal{
+    border: 1px solid $gold;
+    position: relative;
+    padding:30px;
+    width: 780px;
+    .plotModal-close{
+        position: absolute;
+        top:20px;
+        right: 18px;
+    }
+    .plotModal-arrows{
+        &__prev,&__next{
+            position: absolute;
+            top:50%;
+            width: 20px;
+            height: 20px;
+            background-color:red;
+        }
+        &__prev{
+            left:18px;
+        }
+        &__next{
+            right:18px;
+        }
+    }
+    .plot-difference {
+        background: #0b345a;
+        position: absolute;
+        right: -1px;
+        top: -22px;
+        height: 44px;
+        width: 230px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        p {
+            font-weight: 500;
+            font-size: 16px;
+            color: white;
+            span {
+                font-weight: bold;
+                font-size: 20px;
+            }
+        }
+    }
+}
