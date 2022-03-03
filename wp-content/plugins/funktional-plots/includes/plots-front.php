@@ -60,44 +60,39 @@ class PlotsFront
                 break;
             default:
                 $plotData['area'] = (int)$plotData['area'];
-                $plotData['price'] = (int)$plotData['priceNetto'];
+                $plotData['price'] = ((int)$plotData['priceNetto'] * (int)$plotData['area']);
                 $plotData['discount'] = (int)$plotData['discount'];
-                $plotData['type']  = (int)$plotData['plot_type'];
+                $plotData['type']  = $plotData['plot_type'];
 
                 // RABAT 
                 if ($plotData['discount'] > 0) {
-                    $plotData['priceAfterDiscount'] = ($plotData['priceNetto'] - (($plotData['priceNetto'] * $plotData['discount']) / 100));
-                    $plotData['differenceCount'] = ($plotData['price'] - $plotData['priceAfterDiscount']);
+                    // Cena 
+                    $plotData['priceAfterDiscountCount'] = ($plotData['price'] - (($plotData['price'] * $plotData['discount']) / 100));
+                    // Różnica
+                    $plotData['differenceCount'] = ($plotData['price'] - $plotData['priceAfterDiscountCount']);
                     $plotData['difference'] = round($plotData['differenceCount']);
-                }
-                else{
+                } else {
+                    // Różnica
                     $plotData['difference'] = "";
-
                 }
+
+                // Cena po rabacie 
+                $plotData['priceAfterDiscount'] = round($plotData['priceAfterDiscountCount']);
+                // Cena przed rabatem 
+                $plotData['priceBeforeDiscount'] = round($plotData['price']);
+
+                // RATA po rabacie
+                $plotData['rateAfterDiscount'] =  round((($plotData['priceAfterDiscount'] - 12000) * 1.35 + 3690) / 84);
+                // Rata przed rabatem
+                $plotData['rateBeforeDiscount'] =  round((($plotData['price'] - 12000) * 1.35 + 3690) / 84);
 
                 // BUDOWLANA
-                // nie działa ten if
-                if ($plotData['type'] === 'budowlana') {
+                if ($plotData['type'] === 'Budowlana') {
 
-                    // w sumie tu trzeba zrobić tak że jak nie ma rabatu żeby tam się wogóle element nie pokazywał choć chyba można to tuaj ogarnąc na jednej zmiennje?( lista działek)
-                    
-                    // Cena przed rabatem 
-                    $plotData['priceBeforeDiscount'] = $plotData['price'];
-                    // Cena po rabacie 
-                    $plotData['priceAfterDiscount'] = $plotData['priceAfterDiscount'] . ' zł';
-                
                     // Rata przed rabatem
-
-
                     // RATA po rabacie
-
                 }
 
-
-
-                // $plotData['priceBrutto'] = $plotData['priceNetto'] * 1.23;
-                // $plotData['priceRate'] = $plotData['priceBrutto'] / 24;
-                // $plotData['priceByM2'] = $plotData['priceBrutto'] / $plotData['area'];
                 break;
         }
 

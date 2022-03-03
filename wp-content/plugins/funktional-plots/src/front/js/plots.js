@@ -305,7 +305,7 @@ class FunktionalPlotsList {
         this.sort = 'asc';
         this.sortBy = 'plotNr';
         this.activePage = 0;
-        this.perPage = 2;
+        this.perPage = 1;
         this.bannerAfterPlots = 1;
         this.hideSold = false;
         this.plotTemplate = this.mainList.find('[data-plot-list-plot-template]').clone();
@@ -431,15 +431,15 @@ class FunktionalPlotsList {
         const currentItemsCount = this.activePage * this.perPage;
 
         if (this.activePage) {
-            this.pagination.append('<button data-plot-list-pagination-prev><<</button>');
+            this.pagination.append('<button class="plots-nav__prev" data-plot-list-pagination-prev>Poprzednia</button>');
         }
 
         for (let i = this.perPage; i <= allCount; i += this.perPage) {
-            this.pagination.append(`<button ${((i / this.perPage) - 1) === this.activePage ? 'class="active" ' : ''}data-plot-list-pagination-page="${(i / this.perPage) - 1}">${i / this.perPage}</button>`);
+            this.pagination.append(`<button ${((i / this.perPage) - 1) === this.activePage ? 'class="plots-nav__number plots-nav__number--active" ' : 'class="plots-nav__number" '}data-plot-list-pagination-page="${(i / this.perPage) - 1}">${i / this.perPage}</button>`);
         }
 
         if (currentItemsCount + this.perPage < allCount) {
-            this.pagination.append('<button data-plot-list-pagination-next>>></button>');
+            this.pagination.append('<button class="plots-nav__next" data-plot-list-pagination-next>Następna</button>');
         }
 
         if (this.pagination.find('button').length) {
@@ -496,7 +496,7 @@ class FunktionalPlotsList {
                 }
             }
 
-            return this.hideSold ? filterResult && plot.status.value !== 'sprzedana' : filterResult;
+            return this.Sold ? filterResult && plot.status.value !== 'sprzedana' : filterResult;
 
         }) : true).sort((plotA, plotB) => {
             const valueA = Number.isNaN(parseFloat(plotA[this.sortBy])) ? plotA[this.sortBy] : parseFloat(plotA[this.sortBy]);
