@@ -24,11 +24,11 @@ $PlotsFront->getScriptsAndStyles('Ostoja Kładno');
             <img src="<?php bloginfo('template_url'); ?>/assets/img/invest-kladno/ico/close.png');?>" alt="close">
         </div>
         <div class="plot-difference" data-plot-info-show-if="discount">
-                <p>TANIEJ O <span data-plot-info-param="difference"></span> zł</p>
+            <p>TANIEJ O <span data-plot-info-param="difference"></span> zł</p>
         </div>
         <div class="plotModal-content">
 
-        
+
             <figure class="plotModal-img">
                 <img data-plot-info-image src="">
             </figure>
@@ -75,7 +75,7 @@ $PlotsFront->getScriptsAndStyles('Ostoja Kładno');
                 </div>
             </div>
         </div>
-        
+
         <!-- <div class="plotModal-btn">
             
                 <div class="plotModal-bottom__empty">KLIKNIJ DZIAŁKĘ</div>
@@ -150,7 +150,7 @@ $PlotsFront->getScriptsAndStyles('Ostoja Kładno');
 
                 <div class="plots-list__header">
                     <div class="row">
-                        <div class="col-10">
+                        <div class="col-xl-10 col-lg-12">
                             <div class="plots-list__header__desc">
                                 <h2 class="f-h2">Lista działek</h2>
                                 <div class="text-main">
@@ -158,7 +158,7 @@ $PlotsFront->getScriptsAndStyles('Ostoja Kładno');
                                 </div>
                             </div>
                         </div>
-                        <div class="col-2">
+                        <div class="col-xl-2 col-lg-0">
                             <div class="plots-list__header__img">
                                 <!-- <img src="<?php bloginfo('template_url'); ?>/assets/img/prices-qaulity-logo/image1.svg') ?>" alt="17 lat doświadczenia"> -->
                                 <img src="<?php bloginfo('template_url'); ?>/assets/img/prices-qaulity-logo/image2big.svg') ?>" alt="gwarancja najwyższej jakości">

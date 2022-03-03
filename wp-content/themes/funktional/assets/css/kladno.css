@@ -6761,9 +6761,19 @@ a:hover {
 .plots-map {
   margin-top: 100px;
 }
+@media (max-width: 1199px) {
+  .plots-map {
+    margin-top: 60px;
+  }
+}
 
 .plots-list {
   margin-top: 120px;
+}
+@media (max-width: 991px) {
+  .plots-list {
+    margin-top: 60px;
+  }
 }
 .plots-list__header__img {
   display: -webkit-box;
@@ -6772,6 +6782,11 @@ a:hover {
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
+}
+@media (max-width: 1199px) {
+  .plots-list__header__img {
+    display: none;
+  }
 }
 .plots-list__header .text-main {
   margin-top: 30px;
@@ -6895,12 +6910,42 @@ a:hover {
   -webkit-transform: rotate(45deg);
   transform: rotate(45deg);
 }
-@media screen and (max-width: 768px) {
+@media (max-width: 1199px) {
+  .plots-list__sorting {
+    margin-top: 70px;
+  }
+}
+@media (max-width: 991px) {
+  .plots-list__sorting {
+    padding-top: 50px;
+    margin-top: 0px;
+    width: auto;
+    overflow-y: scroll;
+    padding-bottom: 30px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+  .plots-list__sorting__list {
+    min-width: 560px;
+    gap: 40px;
+    position: relative;
+    height: 70px;
+  }
+  .plots-list__sorting__list div:first-child {
+    position: absolute;
+    top: -25px;
+    left: 0;
+  }
   .plots-list__sorting__hideEmpty {
-    -webkit-box-pack: start;
-        -ms-flex-pack: start;
-            justify-content: flex-start;
-    margin: 20px 0;
+    min-width: 200px;
   }
 }
 .plots-list .plots-all {
@@ -6979,7 +7024,6 @@ a:hover {
 .plots-list .plot-item .plot-img {
   padding: 10px 0;
   margin: 0 10px;
-  width: 200px;
   width: 14%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -7094,7 +7138,6 @@ a:hover {
       -ms-flex-direction: column;
           flex-direction: column;
   gap: 8px;
-  width: 400px;
   width: 27%;
 }
 .plots-list .plot-item .plot-contact__btn {
@@ -7172,6 +7215,131 @@ a:hover {
   font-weight: bold;
   font-size: 20px;
 }
+@media (max-width: 1199px) {
+  .plots-list .plot-item {
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    gap: 25px;
+  }
+  .plots-list .plot-item .plot-img {
+    width: 30%;
+  }
+  .plots-list .plot-item .plot-contact {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    gap: 8px;
+    width: 100%;
+  }
+  .plots-list .plot-item .plot-quality {
+    display: none;
+  }
+}
+@media (max-width: 991px) {
+  .plots-list .plot-item {
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    gap: 25px;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .plots-list .plot-item .plot-status {
+    -ms-flex-preferred-size: 25%;
+        flex-basis: 25%;
+  }
+  .plots-list .plot-item .plot-img {
+    width: 30%;
+    -ms-flex-preferred-size: 30%;
+        flex-basis: 30%;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+  }
+  .plots-list .plot-item .plot-info {
+    -ms-flex-preferred-size: 52%;
+        flex-basis: 52%;
+  }
+  .plots-list .plot-item .plot-contact {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    gap: 8px;
+    width: 100%;
+  }
+}
+@media (max-width: 767px) {
+  .plots-list .plot-item {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 100%;
+    padding: 40px 20px 25px 20px;
+  }
+  .plots-list .plot-item .plot-status {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 100%;
+  }
+  .plots-list .plot-item .plot-img {
+    width: 100%;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .plots-list .plot-item .plot-info {
+    width: 100%;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
+  .plots-list .plot-item .plot-contact {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    width: 100%;
+    margin-left: -20px;
+  }
+  .plots-list .plot-item .plot-contact a {
+    width: auto;
+  }
+  .plots-list .plot-item .plot-contact a span {
+    font-size: 15px;
+  }
+  .plots-list .plot-item .plot-difference P {
+    font-size: 14px;
+  }
+  .plots-list .plot-item .plot-difference P span {
+    font-size: 15px;
+  }
+}
 .plots-list .plot-baner {
   height: 200px;
   position: relative;
@@ -7220,6 +7388,7 @@ a:hover {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  position: relative;
 }
 .plots-list .plots-nav__wrap {
   display: -webkit-box;
@@ -7265,6 +7434,25 @@ a:hover {
   background-repeat: no-repeat !important;
   background-position: center right !important;
 }
+@media (max-width: 767px) {
+  .plots-list .plots-nav__prev {
+    font-size: 12px;
+    top: -25px;
+    left: 15px;
+  }
+  .plots-list .plots-nav__next {
+    font-size: 12px;
+    top: -25px;
+    right: 15px;
+  }
+  .plots-list .plots-nav__wrap__name {
+    font-size: 14px;
+  }
+  .plots-list .plots-nav__number {
+    font-size: 14px;
+    line-height: 18px;
+  }
+}
 .plots-list .plots-bottom-info {
   text-align: center;
   margin-top: 100px;
@@ -7280,7 +7468,17 @@ a:hover {
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
-  gap: 70px;
+  gap: 30px 70px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+@media (max-width: 767px) {
+  .plots-list .plots-bottom-info {
+    margin-top: 50px;
+  }
+  .plots-list .plots-bottom-info__logos {
+    margin-top: 40px;
+  }
 }
 
 .plotModal {

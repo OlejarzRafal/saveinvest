@@ -266,8 +266,8 @@ get_template_part('investitions/ostoja-kladno/header');
                         <div class="box-row">
                             <div class="box-row__info">
                                 <div class="numbers-info">
-                                    <h4 class="f-special f-special--yellow">
-                                        1400
+                                    <h4 class="f-special f-special--yellow" data-count="1400">
+                                        0
                                     </h4>
                                 </div>
                                 <p class="text-main text-main--white">
