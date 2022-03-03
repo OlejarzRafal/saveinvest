@@ -6758,6 +6758,10 @@ a:hover {
   }
 }
 
+.plots-map {
+  margin-top: 100px;
+}
+
 .plots-list {
   margin-top: 120px;
 }
@@ -7036,7 +7040,7 @@ a:hover {
 }
 .plots-list .plot-item .plot-info__desc .plot-desc__sufrace sup {
   position: absolute;
-  top: -3px;
+  top: 0;
 }
 .plots-list .plot-item .plot-info__desc .plot-desc__price {
   display: -webkit-box;
@@ -7210,15 +7214,21 @@ a:hover {
 }
 .plots-list .plots-nav {
   margin-top: 50px;
-}
-.plots-list .plots-nav div[data-plot-list-pagination] {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  position: relative;
+}
+.plots-list .plots-nav__wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.plots-list .plots-nav__wrap__name {
+  color: #0b345a;
+  font-size: 16px;
 }
 .plots-list .plots-nav button {
   border: none;
@@ -7241,7 +7251,7 @@ a:hover {
 }
 .plots-list .plots-nav__prev {
   position: absolute;
-  left: 0;
+  left: 15px;
   padding-left: 30px;
   background: url(../img/invest-kladno/ico/left.png) !important;
   background-repeat: no-repeat !important;
@@ -7249,7 +7259,7 @@ a:hover {
 }
 .plots-list .plots-nav__next {
   position: absolute;
-  right: 0;
+  right: 15px;
   padding-right: 30px;
   background: url(../img/invest-kladno/ico/next.png) !important;
   background-repeat: no-repeat !important;
@@ -7271,6 +7281,57 @@ a:hover {
       -ms-flex-align: start;
           align-items: flex-start;
   gap: 70px;
+}
+
+.plotModal {
+  border: 1px solid #b68b1d;
+  position: relative;
+  padding: 30px;
+  width: 780px;
+}
+.plotModal .plotModal-close {
+  position: absolute;
+  top: 20px;
+  right: 18px;
+}
+.plotModal .plotModal-arrows__prev, .plotModal .plotModal-arrows__next {
+  position: absolute;
+  top: 50%;
+  width: 20px;
+  height: 20px;
+  background-color: red;
+}
+.plotModal .plotModal-arrows__prev {
+  left: 18px;
+}
+.plotModal .plotModal-arrows__next {
+  right: 18px;
+}
+.plotModal .plot-difference {
+  background: #0b345a;
+  position: absolute;
+  right: -1px;
+  top: -22px;
+  height: 44px;
+  width: 230px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.plotModal .plot-difference p {
+  font-weight: 500;
+  font-size: 16px;
+  color: white;
+}
+.plotModal .plot-difference p span {
+  font-weight: bold;
+  font-size: 20px;
 }
 
 .kladno-nav {

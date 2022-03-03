@@ -35,7 +35,7 @@
     }
 </style>
 
-<body <?php body_class(); ?>>
+<body <?php body_class(); ?>> 
     <?php if (is_front_page()) : ?>
         <!-- Preload -->
         <!-- <div class="fullpage-loader">
