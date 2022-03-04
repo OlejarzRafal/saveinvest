@@ -1,4 +1,4 @@
-import $, { data } from 'jquery';
+import $ from 'jquery';
 import 'select2';
 
 class PlotDataElement {
@@ -74,11 +74,9 @@ class PlotDataElement {
         });
 
         const investName = plotData.investition.label.toLowerCase().replace(' ', '-');
-        // console.log(investName);
-        // TODO set src to plot preview
+
         element.find('[data-plot-info-image]').attr('src', '' +url+ 'Plots/' +investName+'/'+plotData.sector.value + '/obrysy/' +plotData.sector.value + '-' + plotData.plotNr + '.png');
-        
-        // TODO set href to plot pdf card
+
         element.find('[data-plot-info-image-pdf-card]').attr('href', '' +url+ 'Plots/' +investName+'/'+plotData.sector.value + '/karty/' +plotData.sector.value + '-' + plotData.plotNr + '.pdf');
 
         // TODO set href to plotcotact form or change it to click action
@@ -92,8 +90,8 @@ class PlotDataElement {
             return;
         }
 
-        paramClassElements.toArray().forEach(classElements => {
-            const param = $(classElements).attr('data-plot-class-param');
+        paramClassElements.toArray().forEach(classElement => {
+            const param = $(classElement).attr('data-plot-class-param');
 
             const getPlotDataParam = (plotParamData) => {
                 if (!plotParamData) {
@@ -103,7 +101,13 @@ class PlotDataElement {
                 return typeof plotParamData === 'object' ? plotParamData.value : plotParamData;
             }
 
-            $(paramClassElements).addClass(param + '--' + getPlotDataParam(plotData[param]));
+            classElement.classList.forEach(elClass => {
+                if (elClass.includes('param--')) {
+                    $(classElement).removeClass(elClass);
+                }
+            })
+
+            $(classElement).addClass('param--' + param + '--' + getPlotDataParam(plotData[param]));
         });
     }
 }
@@ -130,6 +134,7 @@ class FunktionalPlotsMap {
         } else {
             this.sector = this.mainMap.find('[data-plots-sector]');
             this.sector.show();
+            this.plots = this.sector.find('[data-plots-plot]');
             this.initPlotsEvent();
         }
 
@@ -201,9 +206,9 @@ class FunktionalPlotsMap {
         const sector = $(event.currentTarget).attr('data-plots-sector-selector');
         const url = new URL(window.location.href);
 
-        url.searchParams.set('sector', sector);
-
         if (sector && typeof sector === 'string') {
+            url.searchParams.set('sector', sector);
+
             this.sector = $(`[data-plots-sector="${sector}"]`);
 
             if (this.sector.length) {
@@ -246,6 +251,7 @@ class FunktionalPlotsMap {
 
         if (selectPlot) {
             this.plotSelected = plotData;
+            this.plotInfoModal.addClass('stay-visible');
         }
 
         this.prepareInfoModalForPlot(plotData);
@@ -271,6 +277,7 @@ class FunktionalPlotsMap {
     hidePlotInfo(withSelected) {
         if (withSelected) {
             this.plotSelected = null;
+            this.plotInfoModal.removeClass('stay-visible');
         } else if (this.plotSelected) {
             return;
         }
@@ -350,7 +357,6 @@ class FunktionalPlotsList {
 
         this.mainList.find('[data-plot-list-hide-sold]').on('change', (event) => {
             this.hideSold = $(event.currentTarget).is(':checked');
-            console.log('this.hideSold', this.hideSold);
             this.reloadList();
         });
     }
