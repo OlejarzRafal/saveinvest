@@ -24,13 +24,13 @@
 define('DB_NAME', 'saveinvestnew');
 
 /** MySQL database username */
-define('DB_USER', 'saveinvest2');
+define('DB_USER', 'root');
 
 /** MySQL database password */
-define('DB_PASSWORD', 'saveinvest2');
+define('DB_PASSWORD', 'mysql');
 
 /** MySQL hostname */
-define('DB_HOST', '192.168.1.162');
+define('DB_HOST', 'localhost');
 
 /** Database charset to use in creating database tables. */
 define('DB_CHARSET', 'utf8mb4');
