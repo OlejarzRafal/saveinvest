@@ -1,4 +1,4 @@
-import $ from 'jquery';
+import $, { data } from 'jquery';
 import 'select2';
 
 class PlotDataElement {
@@ -42,7 +42,6 @@ class PlotDataElement {
     static prepareParamElementsForPlot(plotData, element) {
         const paramElements = element.find('[data-plot-info-param]');
         var url = window.location.origin + '/saveinvest/';
-        console.log('URL ' + url);
         
         if (!paramElements || !paramElements.length) {
             return;
@@ -74,14 +73,16 @@ class PlotDataElement {
             }
         });
 
+        const investName = plotData.investition.label.toLowerCase().replace(' ', '-');
+        // console.log(investName);
         // TODO set src to plot preview
-        element.find('[data-plot-info-image]').attr('src', '');
+        element.find('[data-plot-info-image]').attr('src', '' +url+ 'Plots/' +investName+'/'+plotData.sector.value + '/obrysy/' +plotData.sector.value + '-' + plotData.plotNr + '.png');
         
         // TODO set href to plot pdf card
-        element.find('[data-plot-info-image-pdf-card]').attr('href', '');
+        element.find('[data-plot-info-image-pdf-card]').attr('href', '' +url+ 'Plots/' +investName+'/'+plotData.sector.value + '/karty/' +plotData.sector.value + '-' + plotData.plotNr + '.pdf');
 
         // TODO set href to plotcotact form or change it to click action
-        element.find('[data-plot-info-image-send-message]').attr('href', '');
+        // element.find('[data-plot-info-image-send-message]').attr('href', '');
     }
 
     static prepareParamClassesForPlot(plotData, element) {

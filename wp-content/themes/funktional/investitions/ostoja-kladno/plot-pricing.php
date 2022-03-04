@@ -12,7 +12,7 @@ $PlotsFront->getScriptsAndStyles('Ostoja Kładno');
 ?>
 
 <section class="plots-map" data-plots-map>
-
+    <!-- MODAL -->
     <div data-plots-info class="plotModal">
         <div class="plotModal__item" data-plot-class-param="status">
             <!-- ARROWS -->
@@ -97,13 +97,21 @@ $PlotsFront->getScriptsAndStyles('Ostoja Kładno');
             </div>
         </div>
     </div>
+    <!-- END MODAL -->
 
+    
     <div data-plots-sectors>
-        <img class="plots-map__img" src="<?= get_theme_file_uri('/investitions/ostoja-kladno/assets/main-map.png') ?>">
-        <?= file_get_contents(get_theme_file_path('/investitions/ostoja-kladno/assets/main-map-sectors.svg')) ?>
+        <!-- Bez sektorów -->
+        <img class="plots-map__img" src="<?= get_theme_file_uri('/investitions/ostoja-kladno/assets/sectorA.jpg') ?>">
+        <?= file_get_contents(get_theme_file_path('/investitions/ostoja-kladno/assets/sector-a-plots.svg')) ?>
+
+        <!-- Dla sektorów -->
+        <!-- <img class="plots-map__img" src="<?= get_theme_file_uri('/investitions/ostoja-kladno/assets/main-map.png') ?>"> -->
+        <!-- <?= file_get_contents(get_theme_file_path('/investitions/ostoja-kladno/assets/main-map-sectors.svg')) ?> -->
     </div>
 
-    <div data-plots-sector="A">
+     <!-- Dla sektorów -->
+    <!-- <div data-plots-sector="A">
         <div class="plots-map__back-btn">
             <div class="container">
                 <div class="row">
@@ -114,7 +122,7 @@ $PlotsFront->getScriptsAndStyles('Ostoja Kładno');
 
         <img class="plots-map__img" src="<?= get_theme_file_uri('/investitions/ostoja-kladno/assets/sectorA.jpg') ?>">
         <?= file_get_contents(get_theme_file_path('/investitions/ostoja-kladno/assets/sector-a-plots.svg')) ?>
-    </div>
+    </div> -->
 </section>
 
 <!-- ****************************** -->
@@ -167,10 +175,7 @@ $PlotsFront->getScriptsAndStyles('Ostoja Kładno');
                         </div>
                         <div class="col-xl-2 col-lg-0">
                             <div class="plots-list__header__img">
-                                <!-- <img src="<?php bloginfo('template_url'); ?>/assets/img/prices-qaulity-logo/image1.svg') ?>" alt="17 lat doświadczenia"> -->
                                 <img src="<?php bloginfo('template_url'); ?>/assets/img/prices-qaulity-logo/image2big.svg') ?>" alt="gwarancja najwyższej jakości">
-                                <!-- <img src="<?php bloginfo('template_url'); ?>/assets/img/prices-qaulity-logo/image3.svg') ?>" alt="700 zadowolonych klientów"> -->
-                                <!-- <img src="<?php bloginfo('template_url'); ?>/assets/img/prices-qaulity-logo/image2small.svg') ?>" alt="gwarancja najwyższej jakości"> -->
                             </div>
                         </div>
                     </div>
@@ -242,8 +247,7 @@ $PlotsFront->getScriptsAndStyles('Ostoja Kładno');
                             </div>
                         </div>
                         <div class="plot-img">
-                            <img class="status-ico" src="<?= get_theme_file_uri('/investitions/ostoja-kladno/assets/plot-demo.png') ?>">
-                            <!-- <img src="" alt="" data-plot-info-image> -->
+                            <img  src="" alt="" data-plot-info-image>
                         </div>
                         <div class="plot-info ">
                             <div class="plot-info__text">

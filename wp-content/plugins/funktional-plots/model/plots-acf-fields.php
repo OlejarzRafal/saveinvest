@@ -62,7 +62,7 @@ $plotsAcfArray = array(
             ),
             'choices' => array(
                 '' => '',
-                'A' => 'A',
+                // 'A' => 'A',
                 // 'B' => 'B',
                 // 'C' => 'C',
                 // 'D' => 'D',
