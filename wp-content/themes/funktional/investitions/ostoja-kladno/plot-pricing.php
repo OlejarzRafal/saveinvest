@@ -99,30 +99,11 @@ $PlotsFront->getScriptsAndStyles('Ostoja Kładno');
     </div>
     <!-- END MODAL -->
 
-    
-    <div data-plots-sectors>
-        <!-- Bez sektorów -->
-        <img class="plots-map__img" src="<?= get_theme_file_uri('/investitions/ostoja-kladno/assets/sectorA.jpg') ?>">
-        <?= file_get_contents(get_theme_file_path('/investitions/ostoja-kladno/assets/sector-a-plots.svg')) ?>
-
-        <!-- Dla sektorów -->
-        <!-- <img class="plots-map__img" src="<?= get_theme_file_uri('/investitions/ostoja-kladno/assets/main-map.png') ?>"> -->
-        <!-- <?= file_get_contents(get_theme_file_path('/investitions/ostoja-kladno/assets/main-map-sectors.svg')) ?> -->
-    </div>
-
      <!-- Dla sektorów -->
-    <!-- <div data-plots-sector="A">
-        <div class="plots-map__back-btn">
-            <div class="container">
-                <div class="row">
-                    <button data-plots-back-to-sectors>WRÓĆ DO MAPY SEKTORÓW</button>
-                </div>
-            </div>
-        </div>
-
+     <div data-plots-sector>
         <img class="plots-map__img" src="<?= get_theme_file_uri('/investitions/ostoja-kladno/assets/sectorA.jpg') ?>">
         <?= file_get_contents(get_theme_file_path('/investitions/ostoja-kladno/assets/sector-a-plots.svg')) ?>
-    </div> -->
+    </div>
 </section>
 
 <!-- ****************************** -->
