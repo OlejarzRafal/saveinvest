@@ -9,7 +9,8 @@ class PlotsAdmin
         add_action('admin_head', array($this, 'addBackToPlotsLink'));
     }
 
-    public function redirectToValidPlotsPage () {
+    public function redirectToValidPlotsPage()
+    {
         global $pagenow;
 
         if ($pagenow === 'edit.php' && isset($_GET) && isset($_GET['post_type']) && $_GET['post_type'] === 'plots') {
@@ -168,7 +169,8 @@ class PlotsAdmin
         echo json_encode(array('status' => 'OK'));
     }
 
-    public function addBackToPlotsLink() {
+    public function addBackToPlotsLink()
+    {
         echo '<script>
                 (function($) {
                   $(document).ready(function () {
@@ -227,7 +229,7 @@ class PlotsAdmin
 
     public function removePlot($data)
     {
-        if (!wp_delete_post((int) $data['plotId'])) {
+        if (!wp_delete_post((int)$data['plotId'])) {
             echo false;
         } else {
             echo true;
@@ -237,4 +239,5 @@ class PlotsAdmin
 }
 
 $plotsAdmin = new PlotsAdmin();
+
 ?>

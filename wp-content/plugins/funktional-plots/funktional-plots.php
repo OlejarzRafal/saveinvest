@@ -38,7 +38,7 @@ class FunktionalPlots
         );
 
         // $this->registerInvestitionPagesCpt('osada-jaworek', 'Osada Jaworek');
-        $this->registerInvestitionPagesCpt('ostoja-kladno', 'Ostoja Kładno');
+        $this->registerInvestitionPagesCpt('ostoja-kladno', 'Ostoja Kładno', 'ostojakladno');
     }
 
     public function addInwestitionsMenuItem()
@@ -88,12 +88,13 @@ class FunktionalPlots
         return $post_templates[$post_type];
     }
 
-    public function setFunktionalJsGlobals() {
+    public function setFunktionalJsGlobals()
+    {
         echo '<script>
                 window.FunktionalGlobals = {
-                    homeUrl: "'. home_url('/') .'",
-                    adminUrl: "'. admin_url('/') .'",
-                    postDeleteNonceUrl: "'. wp_nonce_url(admin_url('/post.php?post=postIdReplace&action=trash&_wpnonce=9d6899c866')) .'",
+                    homeUrl: "' . home_url('/') . '",
+                    adminUrl: "' . admin_url('/') . '",
+                    postDeleteNonceUrl: "' . wp_nonce_url(admin_url('/post.php?post=postIdReplace&action=trash&_wpnonce=9d6899c866')) . '",
                 };
             </script>';
     }
@@ -108,7 +109,7 @@ class FunktionalPlots
         acf_add_local_field_group($plotsAcfArray);
     }
 
-    private function registerInvestitionPagesCpt($postType, $name)
+    private function registerInvestitionPagesCpt($postType, $name, $urlRewrite = false)
     {
         register_post_type($postType,
             array(
@@ -120,8 +121,8 @@ class FunktionalPlots
                 'has_archive' => true,
                 'show_in_menu' => 'investitions',
                 'capability_type' => 'page',
-                'supports' => array('custom-fields', 'page-attributes','title'),
-                'rewrite' => array('slug' => 'oferta/' . $postType)
+                'supports' => array('custom-fields', 'page-attributes', 'title'),
+                'rewrite' => array('slug' => 'oferta/' . $urlRewrite ? $urlRewrite : $postType)
             )
         );
 
