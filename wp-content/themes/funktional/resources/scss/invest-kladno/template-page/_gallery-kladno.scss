@@ -18,7 +18,7 @@
                 text-align: center;
             }
         }
-        .gallery-nav {
+        .category {
             margin-top: 90px;
             display: flex;
             flex-direction: row;
@@ -26,7 +26,7 @@
             align-items: center;
             width: 100%;
             gap: 90px;
-            &__list {
+            &__item {
                 display: flex;
                 flex-direction: row;
                 justify-content: center;
@@ -34,50 +34,31 @@
                 position: relative;
                 background-color: $white;
                 cursor: pointer;
-                .button {
-                    z-index: 99;
-                    &::after,
-                    &::before {
-                        content: "";
-                        position: absolute;
-                        top: 50%;
-                        transform: translateY(-50%);
-                        height: 2px;
-                        width: 20px;
-                        background-color: $gold;
-                        z-index: -1;
-                        transition: 0.2s;
-                    }
-                    &:hover::after {
-                        left: -30px;
-                    }
-                    &:hover::before {
-                        right: -30px;
-                    }
-                    &::after {
-                        left: 0;
-                    }
-                    &::before {
-                        right: 0;
-                    }
-                    P {
-                        background-color: $white;
-                    }
-                }
-                .active {
+                span{
+                    display: block;
+                    position: relative;
                     z-index: 999;
-                    &::after,
-                    &::before {
-                        content: "";
-                        position: absolute;
-                        top: 50%;
-                        transform: translateY(-50%);
-                        height: 2px;
-                        width: 20px;
-                        background-color: $gold;
-                        z-index: -1;
-                    }
-                    &::after {
+                    background-color: white;
+                }
+                &::after,
+                &::before {
+                    content: "";
+                    position: absolute;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    height: 2px;
+                    width: 20px;
+                    background-color: $gold;
+                    transition: 0.2s;
+                }
+                &::after {
+                    left: 0;
+                }
+                &::before {
+                    right: 0;
+                }
+                &.active,&:hover {
+                    &:after{
                         left: -30px;
                     }
                     &::before {
@@ -86,15 +67,19 @@
                 }
             }
         }
-        &__all {
+        .gallery {
             margin-top: 70px;
             display: grid;
             grid-template-columns: 1fr 1fr 1fr 1fr;
             gap: 20px;
-            .gallery-item {
+            &__item {
                 position: relative;
                 height: 250px;
                 cursor: pointer;
+                display: none;
+                &.show {
+                    display: block;
+                }
                 a {
                     position: relative;
                     display: block;
@@ -136,74 +121,78 @@
                         object-fit: cover;
                     }
                 }
-            }
-            .gallery-item-video {
-                position: relative;
-                height: 250px;
-                &:after {
-                    content: "";
-                    position: absolute;
-                    top: 50%;
-                    left: 50%;
-                    transform: translate(-50%, -50%);
-                    width: 66px;
-                    height: 66px;
-                    background: url(../img/invest-kladno/home-page/icon-play-movie.png);
-                    background-repeat: no-repeat;
-                    background-size: 66px 66px;
-                    transition: 0.2s;
-                    opacity: 1;
-                }
-                a {
+                &--video{
                     position: relative;
-                    width: 100%;
-                    height: 100%;
-                    &:before {
+                    height: 250px;
+                    &:after {
                         content: "";
                         position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-50%, -50%);
+                        width: 66px;
+                        height: 66px;
+                        background: url(../img/invest-kladno/home-page/icon-play-movie.png);
+                        background-repeat: no-repeat;
+                        background-size: 66px 66px;
+                        transition: 0.2s;
+                        opacity: 1;
+                    }
+                    a {
+                        position: relative;
                         width: 100%;
                         height: 100%;
-                        left: 0;
-                        top: 0;
-                        background: rgba(1, 22, 27, 0.8);
-                        opacity: 0.6;
-                        transition: 0.2s;
-                    }
-                    &:hover {
                         &:before {
-                            background-color: rgba(117, 89, 17, 0.5);
-                            opacity: 1;
+                            content: "";
+                            position: absolute;
+                            width: 100%;
+                            height: 100%;
+                            left: 0;
+                            top: 0;
+                            background: rgba(1, 22, 27, 0.8);
+                            opacity: 0.6;
+                            transition: 0.2s;
+                        }
+                        &:hover {
+                            &:before {
+                                background-color: rgba(117, 89, 17, 0.5);
+                                opacity: 1;
+                            }
+                        }
+                    }
+    
+                    &:hover {
+                        &:after {
+                            background: url(../img/invest-kladno/home-page/icon-play-movie-active.png);
+                            background-size: 66px 66px;
                         }
                     }
                 }
-
-                &:hover {
-                    &:after {
-                        background: url(../img/invest-kladno/home-page/icon-play-movie-active.png);
-                        background-size: 66px 66px;
-                    }
+                .yt-video-link {
+                    background-position: center;
+                    background-size: inherit;
                 }
             }
         }
         @media (max-width: $xxl) {
-            &__all {
+           .gallery{
                 grid-template-columns: 1fr 1fr 1fr;
             }
         }
         @media (max-width: $lg) {
-            &__all {
+            .gallery {
                 grid-template-columns: 1fr 1fr;
             }
         }
         @media (max-width: $md) {
-            .gallery-nav {
+            .category {
                 display: flex;
                 flex-direction: column;
                 margin-top: 30px;
                 gap: 20px;
             }
 
-            &__all {
+            .gallery {
                 grid-template-columns: 1fr;
                 margin-top: 50px;
                 .gallery-item {
