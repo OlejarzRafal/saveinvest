@@ -60,7 +60,7 @@ class PlotsFront
                 break;
             default:
                 $plotData['area'] = (float)$plotData['area'];
-                $plotData['price'] = (float)$plotData['priceNetto'];
+                $plotData['price'] = (float)$plotData['priceNetto'] * (float)$plotData['area'];
                 $plotData['discount'] = (float)$plotData['discount'];
                 $plotData['type'] = $plotData['plot_type'];
 
