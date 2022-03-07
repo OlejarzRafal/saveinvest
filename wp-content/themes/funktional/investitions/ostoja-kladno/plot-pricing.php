@@ -101,8 +101,18 @@ $PlotsFront->getScriptsAndStyles('Ostoja Kładno');
 
     <!-- Dla sektorów -->
     <div data-plots-sector>
-        <img class="plots-map__img" src="<?= get_theme_file_uri('/investitions/ostoja-kladno/assets/sectors/kladno-all-desktop.jpg') ?>">
-        <?= file_get_contents(get_theme_file_path('/investitions/ostoja-kladno/assets/sectors/kladno-all-desktop.svg')) ?>
+        <div class="plots-map__desktop">
+            <img class="plots-map__img" src="<?= get_theme_file_uri('/investitions/ostoja-kladno/assets/sectors/kladno-all-desktop.jpg') ?>">
+            <?= file_get_contents(get_theme_file_path('/investitions/ostoja-kladno/assets/sectors/kladno-all-desktop.svg')) ?>
+        </div>
+        <div class="plots-map__mobile">
+            <img class="plots-map__img" src="<?= get_theme_file_uri('/investitions/ostoja-kladno/assets/sectors/kladno-all-mobile.png') ?>">
+            <?= file_get_contents(get_theme_file_path('/investitions/ostoja-kladno/assets/sectors/kladno-all-mobile.svg')) ?>
+            <div class="plots-map__mobile__info">
+                Przesuń mapę w bok, <br>
+                aby zobaczyć więcej działek
+            </div>
+        </div>
     </div>
 </section>
 
@@ -234,7 +244,7 @@ $PlotsFront->getScriptsAndStyles('Ostoja Kładno');
                             <div class="plot-info__text">
                                 <div class="plot-text__type">Typ działki:</div>
                                 <div class="plot-text__surface">Powierzchnia:</div>
-                                <div class="plot-text__price" data-plot-info-show-if="status=wolna" >Cena netto:</div>
+                                <div class="plot-text__price" data-plot-info-show-if="status=wolna">Cena netto:</div>
                                 <div class="plot-text__priceMonth" data-plot-info-show-if="status=wolna">Lub miesięcznie:</div>
                             </div>
                             <div class="plot-info__desc ">

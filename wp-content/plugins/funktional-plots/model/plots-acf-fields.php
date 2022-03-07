@@ -126,9 +126,9 @@ $plotsAcfArray = array(
                 'id' => '',
             ),
             'choices' => array(
-                'budowlana' => 'Budowlana',
-                'rolna-rekreacyjna' => 'Rolna / Rekreacyjna',
-                'rolna' => 'Rolna',
+                // 'budowlana' => 'Budowlana',
+                // 'rolna-rekreacyjna' => 'Rolna / Rekreacyjna',
+                // 'rolna' => 'Rolna',
                 'rekreacyjna' => 'Rekreacyjna'
             ),
             'return_format' => 'array',

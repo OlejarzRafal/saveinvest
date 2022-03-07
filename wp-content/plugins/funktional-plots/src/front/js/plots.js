@@ -41,7 +41,7 @@ class PlotDataElement {
 
     static prepareParamElementsForPlot(plotData, element) {
         const paramElements = element.find('[data-plot-info-param]');
-        var url = window.location.origin + '/saveinvest/';
+        
         
         if (!paramElements || !paramElements.length) {
             return;
@@ -73,6 +73,7 @@ class PlotDataElement {
             }
         });
 
+        var url = window.location.origin + '/saveinvest/';
         const investName = plotData.investition.label.toLowerCase().replace(' ', '-');
 
         element.find('[data-plot-info-image]').attr('src', '' +url+ 'Plots/' +investName+'/'+plotData.sector.value + '/obrysy/' +plotData.sector.value + '-' + plotData.plotNr + '.png');
@@ -80,7 +81,17 @@ class PlotDataElement {
         element.find('[data-plot-info-image-pdf-card]').attr('href', '' +url+ 'Plots/' +investName+'/'+plotData.sector.value + '/karty/' +plotData.sector.value + '-' + plotData.plotNr + '.pdf');
 
         // TODO set href to plotcotact form or change it to click action
-        // element.find('[data-plot-info-image-send-message]').attr('href', '');
+
+        element.find('[data-plot-info-image-send-message]').click((e) => {
+            e.preventDefault();
+            $('.form-plots .form-plots-number').val(plotData.plotNr);
+            $('.form-plots-text-number').html("Działka " + "<span>" + plotData.plotNr + "</span>");
+            $('.form-plots').show();
+        })
+        $('.form-plots-close').click((e) => {
+            $('.form-plots').hide();
+        });
+
     }
 
     static prepareParamClassesForPlot(plotData, element) {
@@ -180,7 +191,9 @@ class FunktionalPlotsMap {
 
     setPlotsStatus() {
         window.FunktionalPlots.forEach((plot) => {
+            
             let plotEl;
+            plotEl = $(this.sector).find(`[data-plots-plot="${plot.plotNr}"]`);
 
             if (plot.sector && plot.sector.value) {
                 const sectorEl = $(`[data-plots-sector="${plot.sector.value}"]`);
@@ -191,7 +204,7 @@ class FunktionalPlotsMap {
                     console.warn('sector element for plot not found! Plot data: ', plot);
                 }
             } else if (this.sector) {
-                plotEl = $(this.sector).find(`[data-plots-plot="${plot.plotNr}"]`)
+                plotEl = $(this.sector).find(`[data-plots-plot="${plot.plotNr}"]`);
             }
 
             if (plotEl && plotEl.length) {
@@ -328,8 +341,8 @@ class FunktionalPlotsList {
         this.sort = 'asc';
         this.sortBy = 'plotNr';
         this.activePage = 0;
-        this.perPage = 1;
-        this.bannerAfterPlots = 1;
+        this.perPage = 14;
+        this.bannerAfterPlots = 5;
         this.hideSold = false;
         this.plotTemplate = this.mainList.find('[data-plot-list-plot-template]').clone();
         this.banerTemplate = this.mainList.find('[data-plot-list-baner-template]').clone();

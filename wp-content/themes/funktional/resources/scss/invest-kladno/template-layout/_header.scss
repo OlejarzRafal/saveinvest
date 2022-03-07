@@ -67,6 +67,14 @@
                         background-color: $white;
                         z-index: 999;
                     }
+                    &--active{
+                        &:after{
+                            left: -30px;
+                        }
+                        &:before{
+                            right: -30px;
+                        }
+                    }
                 }
                 .active {
                     z-index: 999;

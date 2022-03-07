@@ -19,5 +19,49 @@
             width: 1920px;
             right: 0;
         }
+        &__desktop {
+            @media (max-width: 767px) {
+                display: none;
+            }
+        }
+        &__mobile {
+            display: flex;
+            width: 768px;
+            &__info {
+                position: absolute;
+                left: 15px;
+                top: 90px;
+                padding: 10px 50px 10px 20px;
+                background-color: #fff;
+                color: #0b345a;
+                font-weight: 600;
+                display: flex;
+                align-items: center;
+                background: rgba(255, 255, 255, 0.89) url(../img/invest-kladno/ico/arrow-right-grant.png);
+                background-position: 95%;
+                background-repeat: no-repeat;
+                img{
+                    margin-left: 20px;    
+                }
+            }
+            @media (min-width: 768px) {
+                display: none;
+            }
+        }
+
+        @media (max-width: 767px) {
+            [data-plots-sector] {
+                height: 945px;
+                overflow-x: scroll;
+            }
+            &__img {
+                position: relative !important;
+            }
+            &__svg {
+                width: 768px !important;
+                height: 945px;
+                right: auto;
+            }
+        }
     }
 }
