@@ -73,7 +73,7 @@
                     <div class="kladno-nav-container__burger">
                         <span></span>
                         <span></span>
-                        <span></span>
+                        <!-- <span></span> -->
                         <span></span>
                     </div>
                 </div>

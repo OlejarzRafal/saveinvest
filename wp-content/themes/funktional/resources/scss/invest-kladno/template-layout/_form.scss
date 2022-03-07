@@ -67,14 +67,14 @@
                 background: $white url("../img/arrow-right-btn.svg")
                     no-repeat 15px 7px;
             }
-            &:not(:disabled):hover {
-                background-color: white;
-                cursor: pointer;
-                color: $gold;
-                background: white
-                    url("../img/contact/arrow-navy-right.svg") no-repeat
-                    20px 6px;
-            }
+            // &:not(:disabled):hover {
+            //     background-color: white;
+            //     cursor: pointer;
+            //     color: $gold;
+            //     background: white
+            //         url("../img/contact/arrow-navy-right.svg") no-repeat
+            //         20px 6px;
+            // }
         }
         input[type="email"] {
             margin-bottom: 14px;
@@ -163,10 +163,10 @@
             color: #122039;
         }
         .wpcf7-not-valid {
-            border: 2px solid #c8220b;
+            border: 2px solid $red;
         }
         .wpcf7-not-valid-tip {
-            color: #c8220b;
+            color: $red;
             animation: alert linear 0.3s;
             font-size: 11px;
             font-size: 11px;
@@ -174,7 +174,7 @@
             width: 100%;
             display: flex;
             z-index: 9999;
-            top: 41px;
+            top: 35px;
         }
         .wpcf7-response-output {
             text-align: center;
@@ -184,11 +184,11 @@
         }
         .wpcf7-mail-sent-ng,
         .wpcf7-aborted {
-            border: 2px solid #c8220b;
+            border: 2px solid $red;
         }
         .wpcf7-validation-errors,
         .wpcf7-acceptance-missing {
-            border: 2px solid #c8220b;
+            border: 2px solid $red;
         }
         ::-webkit-input-placeholder {
             /* WebKit browsers */

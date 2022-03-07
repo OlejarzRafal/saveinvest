@@ -207,121 +207,125 @@ get_template_part('investitions/ostoja-kladno/header');
         </div>
     </section>
 
-    <section class="information-ostoja">
-        <div class="container">
-            <div class="row">
-                <div class="offset-xl-1 col-xl-10">
-                    <div class="information-ostoja__content">
-                        <div class="content-info">
-                            <div class="content-info__test">
-                                <p class="text-main text-main--white text-main--italic">
-                                    Ostoja Kładno to bliskość morza w
-                                    otoczeniu urokliwych, zielonych terenów.
-                                    Czerpiemy z bogactwa natury, by
-                                    zaoferować naszym Klientom tylko to, co
-                                    najlepsze. Ogrodzone działki dają
-                                    gwarancję bezpieczeństwa, a uzbrojenie
-                                    terenu ogranicza formalności do minimum.
-                                    Spokój okolicy sprawia, że to idealne
-                                    miejsce na relaks, a sąsiedztwo
-                                    turystycznych atrakcji nie pozwala się
-                                    nudzić.
-                                </p>
-                            </div>
-                            <div class="content-info__name">
-                                <h6 class="f-h6 f-h6--white f-h6--fw600">
-                                    Robert Tomaszewski
-                                </h6>
-                            </div>
-                            <div class="content-info__position">
-                                <h6 class="f-h6 f-h6--white">
-                                    PREZES SAVEINVEST
-                                </h6>
-                            </div>
-                        </div>
-                        <div class="content-photo">
-                            <img src="<?php bloginfo('template_url'); ?>/assets/img/invest-kladno/home-page/home-person.jpg" alt="zdjęcie" />
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+    <div class="kladno-background">
 
-    <section class="we-offer-ostoja">
-        <div class="container">
-            <div class="row">
-                <div class="col-xl-12">
-                    <div class="we-offer-ostoja__title">
-                        <h5 class="f-h5 f-h5--white">
-                            W połączeniu z naturą dajemy Ci to, co najlepsze
-                        </h5>
-                    </div>
-                </div>
-                <div class="offset-xl-1 col-xl-10">
-                    <div class="we-offer-ostoja__content">
-                        <div class="content-boxs">
-                            <div class="content-box">
-                                <img src="<?php bloginfo('template_url'); ?>/assets/img/invest-kladno/home-page/icon-1-big-view.png" alt="okona morza" />
-                                <p class="text-main text-main--f20 text-main--white">
-                                    30 min spacerem<br />
-                                    do morza
-                                </p>
+        <section class="information-ostoja">
+            <div class="container">
+                <div class="row">
+                    <div class="offset-xl-1 col-xl-10">
+                        <div class="information-ostoja__content">
+                            <div class="content-info">
+                                <div class="content-info__test">
+                                    <p class="text-main text-main--white text-main--italic">
+                                        Ostoja Kładno to bliskość morza w
+                                        otoczeniu urokliwych, zielonych terenów.
+                                        Czerpiemy z bogactwa natury, by
+                                        zaoferować naszym Klientom tylko to, co
+                                        najlepsze. Ogrodzone działki dają
+                                        gwarancję bezpieczeństwa, a uzbrojenie
+                                        terenu ogranicza formalności do minimum.
+                                        Spokój okolicy sprawia, że to idealne
+                                        miejsce na relaks, a sąsiedztwo
+                                        turystycznych atrakcji nie pozwala się
+                                        nudzić.
+                                    </p>
+                                </div>
+                                <div class="content-info__name">
+                                    <h6 class="f-h6 f-h6--white f-h6--fw600">
+                                        Robert Tomaszewski
+                                    </h6>
+                                </div>
+                                <div class="content-info__position">
+                                    <h6 class="f-h6 f-h6--white">
+                                        PREZES SAVEINVEST
+                                    </h6>
+                                </div>
                             </div>
-                            <div class="content-box">
-                                <img src="<?php bloginfo('template_url'); ?>/assets/img/invest-kladno/home-page/icon-2-big-view.png" alt="okona morza" />
-                                <p class="text-main text-main--f20 text-main--white">
-                                    Działki ze zgłoszeniem pod domek
-                                    rekreacyjny
-                                </p>
-                            </div>
-                            <div class="content-box">
-                                <img src="<?php bloginfo('template_url'); ?>/assets/img/invest-kladno/home-page/icon-3-big-view.png" alt="okona morza" />
-                                <p class="text-main text-main--f20 text-main--white">
-                                    Ponad 200<br />
-                                    zasadzonych drzew
-                                </p>
-                            </div>
-                            <div class="content-box">
-                                <img src="<?php bloginfo('template_url'); ?>/assets/img/invest-kladno/home-page/icon-4-big-view.png" alt="okona morza" />
-                                <p class="text-main text-main--f20 text-main--white">
-                                    Utwardzona droga wewnętrzna
-                                </p>
-                            </div>
-                        </div>
-                        <div class="content-boxs">
-                            <div class="content-box">
-                                <img src="<?php bloginfo('template_url'); ?>/assets/img/invest-kladno/home-page/icon-5-big-view.png" alt="okona morza" />
-                                <p class="text-main text-main--f20 text-main--white">
-                                    Ogrodzony teren<br />
-                                    z wjazdem
-                                </p>
-                            </div>
-                            <div class="content-box">
-                                <img src="<?php bloginfo('template_url'); ?>/assets/img/invest-kladno/home-page/icon-6-big-view.png" alt="okona morza" />
-                                <p class="text-main text-main--f20 text-main--white">
-                                    Działki uzbroimy<br />
-                                    w prąd i wodę
-                                </p>
-                            </div>
-                            <div class="content-box">
-                                <img src="<?php bloginfo('template_url'); ?>/assets/img/invest-kladno/home-page/icon-7-big-view.png" alt="okona morza" />
-                                <p class="text-main text-main--f20 text-main--white">
-                                    Projekt domku rekreacyjnego gratis
-                                </p>
-                            </div>
-                            <div class="content-box">
-                                <img src="<?php bloginfo('template_url'); ?>/assets/img/invest-kladno/home-page/icon-8-big-view.png" alt="okona morza" />
-                                <p class="text-main text-main--f20 text-main--white">
-                                    20 minut do Kołobrzegu oraz Mielna
-                                </p>
+                            <div class="content-photo">
+                                <img src="<?php bloginfo('template_url'); ?>/assets/img/invest-kladno/home-page/home-person.jpg" alt="zdjęcie" />
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
+
+        <section class="we-offer-ostoja">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-12">
+                        <div class="we-offer-ostoja__title">
+                            <h5 class="f-h5 f-h5--white">
+                                W połączeniu z naturą dajemy Ci to, co najlepsze
+                            </h5>
+                        </div>
+                    </div>
+                    <div class="offset-xl-1 col-xl-10">
+                        <div class="we-offer-ostoja__content">
+                            <div class="content-boxs">
+                                <div class="content-box">
+                                    <img src="<?php bloginfo('template_url'); ?>/assets/img/invest-kladno/home-page/icon-1-big-view.png" alt="okona morza" />
+                                    <p class="text-main text-main--f20 text-main--white">
+                                        30 min spacerem<br />
+                                        do morza
+                                    </p>
+                                </div>
+                                <div class="content-box">
+                                    <img src="<?php bloginfo('template_url'); ?>/assets/img/invest-kladno/home-page/icon-2-big-view.png" alt="okona morza" />
+                                    <p class="text-main text-main--f20 text-main--white">
+                                        Działki ze zgłoszeniem pod domek
+                                        rekreacyjny
+                                    </p>
+                                </div>
+                                <div class="content-box">
+                                    <img src="<?php bloginfo('template_url'); ?>/assets/img/invest-kladno/home-page/icon-3-big-view.png" alt="okona morza" />
+                                    <p class="text-main text-main--f20 text-main--white">
+                                        Ponad 200<br />
+                                        zasadzonych drzew
+                                    </p>
+                                </div>
+                                <div class="content-box">
+                                    <img src="<?php bloginfo('template_url'); ?>/assets/img/invest-kladno/home-page/icon-4-big-view.png" alt="okona morza" />
+                                    <p class="text-main text-main--f20 text-main--white">
+                                        Utwardzona droga wewnętrzna
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="content-boxs">
+                                <div class="content-box">
+                                    <img src="<?php bloginfo('template_url'); ?>/assets/img/invest-kladno/home-page/icon-5-big-view.png" alt="okona morza" />
+                                    <p class="text-main text-main--f20 text-main--white">
+                                        Ogrodzony teren<br />
+                                        z wjazdem
+                                    </p>
+                                </div>
+                                <div class="content-box">
+                                    <img src="<?php bloginfo('template_url'); ?>/assets/img/invest-kladno/home-page/icon-6-big-view.png" alt="okona morza" />
+                                    <p class="text-main text-main--f20 text-main--white">
+                                        Działki uzbroimy<br />
+                                        w prąd i wodę
+                                    </p>
+                                </div>
+                                <div class="content-box">
+                                    <img src="<?php bloginfo('template_url'); ?>/assets/img/invest-kladno/home-page/icon-7-big-view.png" alt="okona morza" />
+                                    <p class="text-main text-main--f20 text-main--white">
+                                        Projekt domku rekreacyjnego gratis
+                                    </p>
+                                </div>
+                                <div class="content-box">
+                                    <img src="<?php bloginfo('template_url'); ?>/assets/img/invest-kladno/home-page/icon-8-big-view.png" alt="okona morza" />
+                                    <p class="text-main text-main--f20 text-main--white">
+                                        20 minut do Kołobrzegu oraz Mielna
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </div>
 
     <section class="about-ostoja-home">
         <div class="container">
@@ -458,30 +462,66 @@ get_template_part('investitions/ostoja-kladno/header');
                                 <div class="swiper-slide">
                                     <div class="testimonial-kladno-box">
                                         <div class="testimonial-kladno-box__text">
-                                            <p class="text-main text-main--white">Jestem zadowolony z obsługi, jaką oferuje firma Saveinvest. Specjaliści bardzo sprawnie, szybko terminowo zgromadzili wymagane dokumenty i uzyskali dla mojej działki warunki zabudowy. Nie martwiłem się w jaki sposób zdobyć dokumenty oraz dopełnić wszelkich formalności, ponieważ pracownicy Saveinvest wszystkim się zajęli. Kompetencja, rzetelność i doświadczenie – te trzy słowa najlepiej oddają jakość usług świadczonych przez firmę!</p>
+                                            <p class="text-main text-main--white">" Gdy zdecydowałem się na sprzedaż, ekipa Saveinvest w ciągu 4 miesięcy znalazła nowego nabywcę i odsprzedała moją działkę ze sporym zyskiem :)"<br>
+                                        " Sprawa została poprowadzona wzorowo od początku do końca. Saveinvest znalazło klienta i podpisało umowę na podstawie mojego pełnomocnictwa - było to dla mnie ogromnym ułatwieniem bo mieszkam za granicą i nie musiałem specjalnie przylatywać do Polski."<br>
+                                        "Jestem bardzo zadowolony ze współpracy z firmą i serdecznie ją rekomenduję. Z wielką przyjemnością podpisuję się pod ich hasłem “Grunt to zysk”! ""
+                                    </p>
                                         </div>
                                         <div class="testimonial-kladno-box__name">
-                                            <p class="text-main text-main--fw700 text-main--white">Sebastian, Kijowice</p>
+                                            <p class="text-main text-main--fw700 text-main--white">Elwis Lewczuk</p>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="swiper-slide">
                                     <div class="testimonial-kladno-box">
                                         <div class="testimonial-kladno-box__text">
-                                            <p class="text-main text-main--white">test firma działki firmę!</p>
+                                            <p class="text-main text-main--white">" Od firmy Saveinvest sp. z o.o. z Krakowa zakupiłem działkę w Jaworku, blisko gór. Otrzymałem świetna ofertę cenową, a w pakiecie również ułatwienia w postaci zajęcia się formalnościami przez firmę — idealna opcja dla wszystkich, którzy nie mają wiedzy lub czasu!"<br>
+                                        " Saveinvest przekształca samodzielnie moją działkę na budowlaną, a całym procesem zajmują się jej specjaliści. Dlatego też polecam kontakt z nimi — w przyjazny i fachowy sposób przeprowadzają klienta aż do podpisania aktu notarialnego."<br>
+                                        " Polecam i zachęcam do wyboru firmy Saveinvest! "
+                                        </p>
                                         </div>
                                         <div class="testimonial-kladno-box__name">
-                                            <p class="text-main text-main--fw700 text-main--white">Test , Test</p>
+                                            <p class="text-main text-main--fw700 text-main--white">Andrzej Biela</p>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="swiper-slide">
                                     <div class="testimonial-kladno-box">
                                         <div class="testimonial-kladno-box__text">
-                                            <p class="text-main text-main--white">3333 33333 test firma działki firmę! Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quidem ipsa excepturi autem in quia voluptates delectus temporibus hic nesciunt earum iusto quasi ullam minima officia impedit praesentium, non odio doloremque?</p>
+                                            <p class="text-main text-main--white">" Saveinvest zajął się wydzieleniem działki oraz przekształceniem na działkę budowlaną. Zleciłam im odsprzedaż działki i nowego nabywcę znaleźli w ciągu 3 miesięcy. Działka została sprzedana ze sporym zyskiem dzięki temu, że została przekształcona na budowlaną i firma zajęła się doprowadzeniem infrastruktury. Dla mnie inwestycja była bezobsługowa. "</p>
                                         </div>
                                         <div class="testimonial-kladno-box__name">
-                                            <p class="text-main text-main--fw700 text-main--white">Test33 , Test</p>
+                                            <p class="text-main text-main--fw700 text-main--white">Elwira Redlarska</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="testimonial-kladno-box">
+                                        <div class="testimonial-kladno-box__text">
+                                            <p class="text-main text-main--white">" W dzisiejszych, pełnych oszustw czasach, oferta firmy Saveinvest wydaje się zbyt piękna by była prawdziwa. Ja sprawdziłem i mogę z całą pewnością polecić. Biznes bez ściemy. "</p>
+                                        </div>
+                                        <div class="testimonial-kladno-box__name">
+                                            <p class="text-main text-main--fw700 text-main--white">Radosław Wronski</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="testimonial-kladno-box">
+                                        <div class="testimonial-kladno-box__text">
+                                            <p class="text-main text-main--white">" Profesjonaliści, którzy nie tylko doradzą, ale także zajmą się każdym szczegółem, dbają o stały kontakt z klientem i dobre relacje! "</p>
+                                        </div>
+                                        <div class="testimonial-kladno-box__name">
+                                            <p class="text-main text-main--fw700 text-main--white">Agnieszka Herezy</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="testimonial-kladno-box">
+                                        <div class="testimonial-kladno-box__text">
+                                            <p class="text-main text-main--white">" Mogę z przyjemnością potwierdzić wszystkie pozytywne referencje i opinie o firmie Saveinvest sp. z o.o. z Krakowa. Jako nowy nabywca działki z oferty tej firmy mogę tylko napisać, że zachęcam wszystkich szukających działek do kontaktu z jej specjalistami. Miły, profesjonalny i fachowy kontakt, bardzo dobra oferta i brak formalności — wszystkie leżą po stronie Saveinvest.  "</p>
+                                        </div>
+                                        <div class="testimonial-kladno-box__name">
+                                            <p class="text-main text-main--fw700 text-main--white">Robert Dziki</p>
                                         </div>
                                     </div>
                                 </div>
