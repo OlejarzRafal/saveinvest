@@ -5,17 +5,17 @@
     width: 780px;
     z-index: 99999999 !important;
     &__item {
-        &.status--wolna {
+        &.param--status--wolna {
             .plotModal-status {
                 color: #397d03;
             }
         }
-        &.status--zarezerwowana {
+        &.param--status--zarezerwowana {
             .plotModal-status {
                 color: #df9401;
             }
         }
-        &.status--sprzedana {
+        &.param--status--sprzedana {
             .plotModal-status {
                 color: #b41818;
             }
@@ -82,7 +82,7 @@
         display: flex;
         &__img {
             width: 200px;
-            border: 1px solid red;
+            // border: 1px solid red;
             display: flex;
             align-items: center;
             justify-content: center;

@@ -1,12 +1,7 @@
-.plots-map {
-    margin-top: 100px;
-    @media (max-width: $xl) {
-        margin-top: 60px;
-    }
-}
+
 .plots-list {
     margin-top: 120px;
-    @media (max-width: $lg){
+    @media (max-width: $lg) {
         margin-top: 60px;
     }
     &__header {
@@ -149,14 +144,13 @@
                 gap: 40px;
                 position: relative;
                 height: 70px;
-                div{
-                    &:first-child{
+                div {
+                    &:first-child {
                         position: absolute;
-                        top:-25px;
-                        left:0;
+                        top: -25px;
+                        left: 0;
                     }
                 }
-
             }
 
             &__hideEmpty {
@@ -208,17 +202,17 @@
         height: 200px;
         justify-content: space-between;
         position: relative;
-        &.status--wolna {
+        &.param--status--wolna {
             .plot-status {
                 color: #397d03;
             }
         }
-        &.status--zarezerwowana {
+        &.param--status--zarezerwowana {
             .plot-status {
                 color: #df9401;
             }
         }
-        &.status--sprzedana {
+        &.param--status--sprzedana {
             .plot-status {
                 color: #b41818;
             }
@@ -478,11 +472,11 @@
                 }
                 &__desc {
                     gap: 5px;
-                    .plot-desc{
-                        &__rate{
-                            &__beforeDiscount{
-                                &:before{
-                                    top:7px;
+                    .plot-desc {
+                        &__rate {
+                            &__beforeDiscount {
+                                &:before {
+                                    top: 7px;
                                 }
                             }
                         }
@@ -635,3 +629,6 @@
         }
     }
 }
+
+
+

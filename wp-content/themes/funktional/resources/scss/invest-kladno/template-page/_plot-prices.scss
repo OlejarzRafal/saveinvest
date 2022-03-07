@@ -1,0 +1,23 @@
+.ostoja-kladno-template-plot-pricing {
+    .plots-map {
+        margin-top: 100px;
+        @media (max-width: $xl) {
+            margin-top: 60px;
+        }
+        [data-plots-sector] {
+            height: 1043px;
+            position: relative;
+        }
+        &__img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: right;
+        }
+        &__svg {
+            position: absolute !important;
+            width: 1920px;
+            right: 0;
+        }
+    }
+}
