@@ -1,117 +1,130 @@
 @import "../../../node_modules/select2/dist/css/select2.min.css";
 
 [data-plots-map] {
-  position: relative;
-
-  [data-plots-sectors] {
-    display: block;
-  }
-
-  [data-plots-sector] {
-    display: none;
     position: relative;
-    z-index: 1;
-  }
 
-  [data-plots-info] {
-    display: none;
-    position: absolute;
-    left: 100px;
-    top: 100px;
-    z-index: 3;
-    background: #ffffff;
-    pointer-events: none;
-
-    &.stay-visible {
-      pointer-events: all;
+    [data-plots-sectors] {
+        display: block;
     }
-  }
 
-  [data-plots-sector] > img, [data-plots-sectors] > img {
-    position: absolute;
-    left: 0;
-    top: 0;
-  }
+    [data-plots-sector] {
+        display: none;
+        position: relative;
+        z-index: 1;
+        margin: 0 auto;
+        max-width: 1920px;
+    }
 
-  [data-plots-sector] > svg, [data-plots-sectors] > svg {
-    position: relative;
-    z-index: 1;
+    [data-plots-info] {
+        display: none;
+        position: absolute;
+        left: 100px;
+        top: 100px;
+        z-index: 3;
+        background: #ffffff;
+        pointer-events: none;
 
-    .plot-status {
-      &--sprzedana {
-        path {
-          fill: #941a07;
-          opacity: 0.7;
-
-          &:hover {
-            opacity: 0.9;
-          }
+        &.stay-visible {
+            pointer-events: all;
         }
-      }
+    }
 
-      &--zarezerwowana {
-        path {
-          fill: #d88211;
-          opacity: 0.7;
+    [data-plots-sector] .plots-map__img,
+    [data-plots-sectors] .plots-map__img {
+        position: absolute;
+        left: 0;
+        top: 0;
+    }
 
-          &:hover {
-            opacity: 0.9;
-          }
+    [data-plots-sector] .plots-map__svg,
+    [data-plots-sectors] .plots-map__svg {
+        position: relative;
+        z-index: 1;
+        max-width: 1920px;
+        .plot-status {
+            &--sprzedana {
+                path {
+                    fill: #b41818;
+                    opacity: 0.8;
+
+                    &:hover {
+                        opacity: 1;
+                    }
+                }
+            }
+            &--wolna {
+                path {
+                    fill: #397d03;
+                    opacity: 0.8;
+                    &:hover {
+                        opacity: 1;
+                    }
+                }
+            }
+
+            &--zarezerwowana {
+                path {
+                    fill: #df9401;
+                    opacity: 0.8;
+
+                    &:hover {
+                        opacity: 1;
+                    }
+                }
+            }
         }
-      }
+
+        path {
+            fill: #2b2b2b;
+            opacity: 0.8;
+            cursor: pointer;
+            transition: 0.1s;
+
+            &:hover {
+                opacity: 0.7;
+            }
+        }
+
+        text {
+            pointer-events: none;
+            fill: #ffffff;
+        }
     }
 
-    path {
-      fill: #00753c;
-      opacity: 0.4;
-      cursor: pointer;
-      transition: 0.1s;
-
-      &:hover {
-        opacity: 0.7;
-      }
+    .plots-map__back-btn {
+        position: absolute;
+        z-index: 2;
     }
-
-    text {
-      pointer-events: none;
-      fill: #ffffff;
-    }
-  }
-
-  .plots-map__back-btn {
-    position: absolute;
-    z-index: 2;
-  }
 }
 
 [data-plot-list] {
-  .select2 {
-    min-width: 100px;
-  }
-
-  .plot-list__sorting {
-    display: flex;
-    margin: 0 -20px;
-
-    &__item {
-      display: flex;
-      margin: 0 20px;
-      align-items: center;
-
-      &__direction {
-        display: flex;
-        flex-direction: column;
-        margin-left: 5px;
-
-        button {
-          margin: 3px 0;
-        }
-      }
+    .select2 {
+        min-width: 100px;
     }
-  }
 
-  [data-plot-list-plot-template],
-  [data-plot-list-baner-template] {
-    display: none !important;
-  }
+    .plot-list__sorting {
+        display: flex;
+        margin: 0 -20px;
+
+        &__item {
+            display: flex;
+            margin: 0 20px;
+            align-items: center;
+
+            &__direction {
+                display: flex;
+                flex-direction: column;
+                margin-left: 5px;
+
+                button {
+                    margin: 3px 0;
+                }
+            }
+        }
+    }
+
+    [data-plot-list-plot-template],
+    [data-plot-list-baner-template] {
+        display: none !important;
+    }
 }

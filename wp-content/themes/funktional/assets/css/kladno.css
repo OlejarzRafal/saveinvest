@@ -7638,6 +7638,57 @@ a:hover {
   width: 1920px;
   right: 0;
 }
+@media (max-width: 767px) {
+  .ostoja-kladno-template-plot-pricing .plots-map__desktop {
+    display: none;
+  }
+}
+.ostoja-kladno-template-plot-pricing .plots-map__mobile {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 768px;
+}
+.ostoja-kladno-template-plot-pricing .plots-map__mobile__info {
+  position: absolute;
+  left: 15px;
+  top: 90px;
+  padding: 10px 50px 10px 20px;
+  background-color: #fff;
+  color: #0b345a;
+  font-weight: 600;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: rgba(255, 255, 255, 0.89) url(../img/invest-kladno/ico/arrow-right-grant.png);
+  background-position: 95%;
+  background-repeat: no-repeat;
+}
+.ostoja-kladno-template-plot-pricing .plots-map__mobile__info img {
+  margin-left: 20px;
+}
+@media (min-width: 768px) {
+  .ostoja-kladno-template-plot-pricing .plots-map__mobile {
+    display: none;
+  }
+}
+@media (max-width: 767px) {
+  .ostoja-kladno-template-plot-pricing .plots-map [data-plots-sector] {
+    height: 945px;
+    overflow-x: scroll;
+  }
+  .ostoja-kladno-template-plot-pricing .plots-map__img {
+    position: relative !important;
+  }
+  .ostoja-kladno-template-plot-pricing .plots-map__svg {
+    width: 768px !important;
+    height: 945px;
+    right: auto;
+  }
+}
 
 .kladno-nav {
   height: 100px;
@@ -7750,6 +7801,12 @@ a:hover {
 .kladno-nav .kladno-nav-container__box ul .btn-nav a {
   background-color: #ffffff;
   z-index: 999;
+}
+.kladno-nav .kladno-nav-container__box ul .btn-nav--active:after {
+  left: -30px;
+}
+.kladno-nav .kladno-nav-container__box ul .btn-nav--active:before {
+  right: -30px;
 }
 .kladno-nav .kladno-nav-container__box ul .active {
   z-index: 999;

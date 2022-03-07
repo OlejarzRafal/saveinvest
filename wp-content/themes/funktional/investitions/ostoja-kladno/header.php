@@ -26,46 +26,34 @@
                     </div>
                     <div class="kladno-nav-container__box">
                         <ul>
-                            <li class="btn-nav">
-                                <a href="#">
-                                    <p class="text-main text-main--fw500 text-main--f18">
-                                        O OSTOI
-                                    </p>
+                            <li class="btn-nav <?php if (strpos($_SERVER['REQUEST_URI'], "/oferta/ostoja-kladno/o-ostoi") !== false) {; ?> btn-nav--active  <?php }; ?>">
+                                <a href="<?php echo get_home_url(); ?>/oferta/ostoja-kladno/o-ostoi" class="text-main text-main--fw500 text-main--f18">
+                                    O OSTOI
                                 </a>
                             </li>
-                            <li class="btn-nav">
-                                <a href="#">
-                                    <p class="text-main text-main--fw500 text-main--f18">
-                                        LOKALIZACJA
-                                    </p>
+                            <li class="btn-nav <?php if (strpos($_SERVER['REQUEST_URI'], "/oferta/ostoja-kladno/lokalizacja") !== false) {; ?> btn-nav--active  <?php }; ?>">
+                                <a href="<?php echo get_home_url(); ?>/oferta/ostoja-kladno/lokalizacja" class="text-main text-main--fw500 text-main--f18">
+                                    LOKALIZACJA
                                 </a>
                             </li>
-                            <li class="btn-nav">
-                                <a href="#">
-                                    <p class="text-main text-main--fw500 text-main--f18">
-                                        CENY DZIAŁEK
-                                    </p>
+                            <li class="btn-nav <?php if (strpos($_SERVER['REQUEST_URI'], "/oferta/ostoja-kladno/ceny-dzialek") !== false) {; ?> btn-nav--active  <?php }; ?>">
+                                <a href="<?php echo get_home_url(); ?>/oferta/ostoja-kladno/ceny-dzialek" class="text-main text-main--fw500 text-main--f18">
+                                    CENY DZIAŁEK
                                 </a>
                             </li>
-                            <li class="btn-nav">
-                                <a href="#">
-                                    <p class="text-main text-main--fw500 text-main--f18">
-                                        FINANSOWANIE
-                                    </p>
+                            <li class="btn-nav <?php if (strpos($_SERVER['REQUEST_URI'], "/oferta/ostoja-kladno/finansowanie") !== false) {; ?> btn-nav--active  <?php }; ?>">
+                                <a href="<?php echo get_home_url(); ?>/oferta/ostoja-kladno/finansowanie" class="text-main text-main--fw500 text-main--f18">
+                                    FINANSOWANIE
                                 </a>
                             </li>
-                            <li class="btn-nav">
-                                <a href="#">
-                                    <p class="text-main text-main--fw500 text-main--f18">
-                                        GALERIA
-                                    </p>
+                            <li class="btn-nav <?php if (strpos($_SERVER['REQUEST_URI'], "/oferta/ostoja-kladno/galeria") !== false) {; ?> btn-nav--active  <?php }; ?>">
+                                <a href="<?php echo get_home_url(); ?>/oferta/ostoja-kladno/galeria" class="text-main text-main--fw500 text-main--f18">
+                                    GALERIA
                                 </a>
                             </li>
-                            <li class="btn-nav">
-                                <a href="#">
-                                    <p class="text-main text-main--fw500 text-main--f18">
-                                        KONTAKT
-                                    </p>
+                            <li class="btn-nav <?php if (strpos($_SERVER['REQUEST_URI'], "/oferta/ostoja-kladno/kontakt") !== false) {; ?> btn-nav--active  <?php }; ?>">
+                                <a href="<?php echo get_home_url(); ?>/oferta/ostoja-kladno/kontakt" class="text-main text-main--fw500 text-main--f18">
+                                    KONTAKT
                                 </a>
                             </li>
                         </ul>
