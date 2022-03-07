@@ -17,5 +17,3 @@ import "./saveinvest/slider-infophoto-mobile";
 // BLOG
 import "../js/blog/blog-slider";
 import "../js/blog/sticky-sidebar";
-
-console.log("test");

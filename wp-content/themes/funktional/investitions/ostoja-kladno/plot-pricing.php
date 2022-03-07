@@ -99,10 +99,10 @@ $PlotsFront->getScriptsAndStyles('Ostoja Kładno');
     </div>
     <!-- END MODAL -->
 
-     <!-- Dla sektorów -->
-     <div data-plots-sector>
-        <img class="plots-map__img" src="<?= get_theme_file_uri('/investitions/ostoja-kladno/assets/sectorA.jpg') ?>">
-        <?= file_get_contents(get_theme_file_path('/investitions/ostoja-kladno/assets/sector-a-plots.svg')) ?>
+    <!-- Dla sektorów -->
+    <div data-plots-sector>
+        <img class="plots-map__img" src="<?= get_theme_file_uri('/investitions/ostoja-kladno/assets/sectors/kladno-all-desktop.jpg') ?>">
+        <?= file_get_contents(get_theme_file_path('/investitions/ostoja-kladno/assets/sectors/kladno-all-desktop.svg')) ?>
     </div>
 </section>
 
@@ -228,13 +228,13 @@ $PlotsFront->getScriptsAndStyles('Ostoja Kładno');
                             </div>
                         </div>
                         <div class="plot-img">
-                            <img  src="" alt="" data-plot-info-image>
+                            <img src="" alt="" data-plot-info-image>
                         </div>
                         <div class="plot-info ">
                             <div class="plot-info__text">
                                 <div class="plot-text__type">Typ działki:</div>
                                 <div class="plot-text__surface">Powierzchnia:</div>
-                                <div class="plot-text__price" data-plot-info-show-if="status=wolna">Cena netto:</div>
+                                <div class="plot-text__price" data-plot-info-show-if="status=wolna" >Cena netto:</div>
                                 <div class="plot-text__priceMonth" data-plot-info-show-if="status=wolna">Lub miesięcznie:</div>
                             </div>
                             <div class="plot-info__desc ">
@@ -314,6 +314,10 @@ $PlotsFront->getScriptsAndStyles('Ostoja Kładno');
             </section>
         </div>
     </div>
+</div>
+
+<div class="form-plots form-main">
+    <?php echo do_shortcode('[contact-form-7 id="380" title="Formularz działki Kładno"]'); ?>
 </div>
 
 <?php
