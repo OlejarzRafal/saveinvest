@@ -28,7 +28,6 @@
     }
 
     @media(max-width:767px) {
-
         .news-post__content {
             margin-left: 0;
         }
