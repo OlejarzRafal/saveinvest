@@ -61,10 +61,10 @@
             padding-right: 10px;
             transition: all 0.2s;
             cursor: pointer;
-            background: $white url("../img/arrow-right-btn.svg")
+            background:  url("../img/arrow-right-btn.svg")
                 no-repeat 0px 7px;
             &:hover {
-                background: $white url("../img/arrow-right-btn.svg")
+                background:  url("../img/arrow-right-btn.svg")
                     no-repeat 15px 7px;
             }
             // &:not(:disabled):hover {

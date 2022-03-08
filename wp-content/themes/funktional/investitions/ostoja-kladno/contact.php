@@ -19,7 +19,7 @@ get_template_part('investitions/ostoja-kladno/header');
                         <div class="text-form">
                             <p class="text-main">
                                 Wypełnij formularz lub zadzwoń pod numer
-                            </p>
+                            </p>&nbsp
                             <a class="text-main" class="text-main text-main--fw500" href="tel:+48888800800">+48 888 800 800.</a>
                         </div>
                         <div class="form-main">
