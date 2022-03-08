@@ -11,131 +11,72 @@
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    .logo-wrap {
-        position: relative;
-        img {
-            width: 130px;
-        }
-    }
-    .wave {
-        svg {
-            position: relative;
-            left: 0px;
-            width: 300px;
-            animation: wave 6s linear infinite;
-        }
-        &--1 {
-            width: 82px;
-            overflow: hidden;
-            position: absolute;
-            left: 67px;
-            top: 50px;
-            z-index: 99999;
-            height: 40px;
-            &:before {
-                position: absolute;
-                content: "";
-                left: 52px;
-                top: -1px;
-                background-color: white;
-                width: 5px;
-                height: 20px;
-                z-index: 99999;
-            }
-        }
-        &--2 {
-            width: 88px;
-            overflow: hidden;
-            position: absolute;
-            left: 67px;
-            top: 70px;
-            z-index: 99999;
-            height: 40px;
-            &:before {
-                position: absolute;
-                content: "";
-                left: 63px;
-                top: -1px;
-                background-color: white;
-                width: 5px;
-                height: 20px;
-                z-index: 99999;
-            }
-            &:after {
-                position: absolute;
-                content: "";
-                left: 0px;
-                top: -1px;
-                background-color: white;
-                width: 8px;
-                height: 20px;
-                z-index: 99999;
-            }
-        }
-    }
-    .desc-wrap {
-
-        text-align: center;
-        font-size: 32px;
-        line-height: 42px;
-        margin-top: 40px;
-        width: 100%;
-    }
-    @media (max-width: 768px) {
-        .desc-wrap {
-            font-size: 18px;
-            line-height: 28px;
-            margin-top: 20px;
-        }
-        .logo-wrap {
-            width: 90px;
-        }
-        .wave {
-            svg {
-                width: 210px;
-            }
-            &--1 {
-                width: 57px;
-                left: 50px;
-                top: 40px;
-                height: 30px;
-                &:before {
-                    left: 40px;
-                    top: 3px;
-                    width: 3px;
-                    height: 11px;
-                }
-            }
-            &--2 {
-                width: 60px;
-                left: 50px;
-                top: 50px;
-                height: 30px;
-                &:before {
-                    left: 33px;
-                    top: 3px;
-                    width: 3px;
-                    height: 10px;
-                }
-                &:after {
-                    left: 0px;
-                    top: 3px;
-                    width: 6px;
-                    height: 10px;
-                }
-            }
-        }
-    }
+    // .wave {
+    //     svg {
+    //         position: relative;
+    //         left: 0px;
+    //         width: 300px;
+    //         animation: wave 6s linear infinite;
+    //     }
+    //     &--1 {
+    //         width: 82px;
+    //         overflow: hidden;
+    //         position: absolute;
+    //         left: 67px;
+    //         top: 50px;
+    //         z-index: 99999;
+    //         height: 40px;
+    //         &:before {
+    //             position: absolute;
+    //             content: "";
+    //             left: 52px;
+    //             top: -1px;
+    //             background-color: white;
+    //             width: 5px;
+    //             height: 20px;
+    //             z-index: 99999;
+    //         }
+    //     }
+    //     &--2 {
+    //         width: 88px;
+    //         overflow: hidden;
+    //         position: absolute;
+    //         left: 67px;
+    //         top: 70px;
+    //         z-index: 99999;
+    //         height: 40px;
+    //         &:before {
+    //             position: absolute;
+    //             content: "";
+    //             left: 63px;
+    //             top: -1px;
+    //             background-color: white;
+    //             width: 5px;
+    //             height: 20px;
+    //             z-index: 99999;
+    //         }
+    //         &:after {
+    //             position: absolute;
+    //             content: "";
+    //             left: 0px;
+    //             top: -1px;
+    //             background-color: white;
+    //             width: 8px;
+    //             height: 20px;
+    //             z-index: 99999;
+    //         }
+    //     }
+    // }
 }
 
-@keyframes wave {
-    0% {
-        left: -150px;
-    }
-    100% {
-        left: 0;
-    }
-}
+// @keyframes wave {
+//     0% {
+//         left: -150px;
+//     }
+//     100% {
+//         left: 0;
+//     }
+// }
 
 // @keyframes fadein {
 //     from {
