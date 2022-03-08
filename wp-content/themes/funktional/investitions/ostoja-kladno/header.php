@@ -41,11 +41,11 @@
                                     CENY DZIAŁEK
                                 </a>
                             </li>
-                            <li class="btn-nav <?php if (strpos($_SERVER['REQUEST_URI'], "/oferta/ostoja-kladno/finansowanie") !== false) {; ?> btn-nav--active  <?php }; ?>">
+                            <!-- <li class="btn-nav <?php if (strpos($_SERVER['REQUEST_URI'], "/oferta/ostoja-kladno/finansowanie") !== false) {; ?> btn-nav--active  <?php }; ?>">
                                 <a href="<?php echo get_home_url(); ?>/oferta/ostoja-kladno/finansowanie" class="text-main text-main--fw500 text-main--f18">
                                     FINANSOWANIE
                                 </a>
-                            </li>
+                            </li> -->
                             <li class="btn-nav <?php if (strpos($_SERVER['REQUEST_URI'], "/oferta/ostoja-kladno/galeria") !== false) {; ?> btn-nav--active  <?php }; ?>">
                                 <a href="<?php echo get_home_url(); ?>/oferta/ostoja-kladno/galeria" class="text-main text-main--fw500 text-main--f18">
                                     GALERIA
