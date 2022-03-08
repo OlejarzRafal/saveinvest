@@ -122,7 +122,7 @@ class FunktionalPlots
                 'show_in_menu' => 'investitions',
                 'capability_type' => 'page',
                 'supports' => array('custom-fields', 'page-attributes', 'title'),
-                'rewrite' => array('slug' => 'oferta/' . $urlRewrite ? $urlRewrite : $postType)
+                'rewrite' => array('slug' => ('dzialki/' . ($urlRewrite ? $urlRewrite : $postType)))
             )
         );
 
