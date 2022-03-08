@@ -6,6 +6,7 @@ function add_theme_assets()
     /////////////////
     // styles
     wp_enqueue_style('swipercss', get_template_directory_uri() . '/assets/vendors/swiper.min.css', false, 1, 'all');
+    wp_enqueue_style('fancyboxcss', get_template_directory_uri() . '/assets/vendors/jquery.fancybox.min.css', false, 1, 'all');
     // scripts
     wp_deregister_script('jquery');
     wp_enqueue_script('jquery', get_stylesheet_directory_uri() . '/assets/vendors/jquery351.js', array(), null, true);

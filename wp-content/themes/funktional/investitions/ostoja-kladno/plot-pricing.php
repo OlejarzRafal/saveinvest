@@ -24,6 +24,11 @@ $PlotsFront->getScriptsAndStyles('Ostoja Kładno');
             <div data-plots-info-on-selected data-plots-info-close class="plotModal-close">
                 <img src="<?php bloginfo('template_url'); ?>/assets/img/invest-kladno/ico/close.png');?>" alt="close">
             </div>
+            <!-- TODO TO DELETE -->
+           <div data-plot-info-show-if="status!=wolna">DO USUNIECIA TEST (NIE WOLNA)</div>
+           <div data-plot-info-show-if="status!=sprzedana">DO USUNIECIA TEST (NIE SPRZEDANA)</div>
+           <div data-plot-info-show-if="status=sprzedana">DO USUNIECIA TEST (SPRZEDANA)</div>
+           <div data-plot-info-show-if="status=wolna">DO USUNIECIA TEST (WOLNA)</div>
             <!-- DIFFERENCE -->
             <div class="plotModal-difference" data-plot-info-show-if="discount">
                 <p>TANIEJ O <span data-plot-info-param="difference"></span> zł</p>
