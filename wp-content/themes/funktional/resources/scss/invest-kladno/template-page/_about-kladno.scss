@@ -229,6 +229,7 @@
                 border-left: 1px solid $gold;
                 border-bottom: 1px solid $gold;
                 z-index: 999;
+                pointer-events: none;
             }
         }
         &__border {

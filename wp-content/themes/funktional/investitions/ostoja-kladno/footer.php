@@ -7,7 +7,7 @@ wp_footer();
             <h2 class="f-h2 f-h2--white f-h2--fw600">
                 Bezpieczna lokata kapitału
             </h2>
-            <a href="#" class="btn btn__line">SPRAWDŹ CENY DZIAŁEK</a>
+            <a href="<?php the_permalink(369);?>" class="btn btn__line">SPRAWDŹ CENY DZIAŁEK</a>
         </div>
     </section>
     <section class="footer">
@@ -15,7 +15,7 @@ wp_footer();
             <div class="row">
                 <div class="col-xl-12">
                     <div class="footer__logo">
-                        <a href="#">
+                        <a href="<?php the_permalink(356); ?>">
                             <img src="<?php bloginfo('template_url'); ?>/assets/img/invest-kladno/home-page/home-footer-logo.png" alt="logo saveinvest" />
                         </a>
                     </div>

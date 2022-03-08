@@ -3380,7 +3380,8 @@ a:hover {
         border-top: 1px solid #b68b1d;
         border-left: 1px solid #b68b1d;
         border-bottom: 1px solid #b68b1d;
-        z-index: 999; }
+        z-index: 999;
+        pointer-events: none; }
     .ik-about .location-ostoja__border {
       border-top: 1px solid #b68b1d;
       border-left: 1px solid #b68b1d;
@@ -5199,104 +5200,6 @@ a:hover {
   align-items: center;
   justify-content: center;
   flex-direction: column; }
-  .kladno-loader .logo-wrap {
-    position: relative; }
-    .kladno-loader .logo-wrap img {
-      width: 130px; }
-  .kladno-loader .wave svg {
-    position: relative;
-    left: 0px;
-    width: 300px;
-    animation: wave 6s linear infinite; }
-  .kladno-loader .wave--1 {
-    width: 82px;
-    overflow: hidden;
-    position: absolute;
-    left: 67px;
-    top: 50px;
-    z-index: 99999;
-    height: 40px; }
-    .kladno-loader .wave--1:before {
-      position: absolute;
-      content: "";
-      left: 52px;
-      top: -1px;
-      background-color: white;
-      width: 5px;
-      height: 20px;
-      z-index: 99999; }
-  .kladno-loader .wave--2 {
-    width: 88px;
-    overflow: hidden;
-    position: absolute;
-    left: 67px;
-    top: 70px;
-    z-index: 99999;
-    height: 40px; }
-    .kladno-loader .wave--2:before {
-      position: absolute;
-      content: "";
-      left: 63px;
-      top: -1px;
-      background-color: white;
-      width: 5px;
-      height: 20px;
-      z-index: 99999; }
-    .kladno-loader .wave--2:after {
-      position: absolute;
-      content: "";
-      left: 0px;
-      top: -1px;
-      background-color: white;
-      width: 8px;
-      height: 20px;
-      z-index: 99999; }
-  .kladno-loader .desc-wrap {
-    text-align: center;
-    font-size: 32px;
-    line-height: 42px;
-    margin-top: 40px;
-    width: 100%; }
-  @media (max-width: 768px) {
-    .kladno-loader .desc-wrap {
-      font-size: 18px;
-      line-height: 28px;
-      margin-top: 20px; }
-    .kladno-loader .logo-wrap {
-      width: 90px; }
-    .kladno-loader .wave svg {
-      width: 210px; }
-    .kladno-loader .wave--1 {
-      width: 57px;
-      left: 50px;
-      top: 40px;
-      height: 30px; }
-      .kladno-loader .wave--1:before {
-        left: 40px;
-        top: 3px;
-        width: 3px;
-        height: 11px; }
-    .kladno-loader .wave--2 {
-      width: 60px;
-      left: 50px;
-      top: 50px;
-      height: 30px; }
-      .kladno-loader .wave--2:before {
-        left: 33px;
-        top: 3px;
-        width: 3px;
-        height: 10px; }
-      .kladno-loader .wave--2:after {
-        left: 0px;
-        top: 3px;
-        width: 6px;
-        height: 10px; } }
-
-@keyframes wave {
-  0% {
-    left: -150px; }
-  100% {
-    left: 0; } }
 
 .kladno-nav {
   height: 100px;
