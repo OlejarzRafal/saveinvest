@@ -35,14 +35,14 @@
     }
 </style>
 
-<body <?php body_class(); ?>> 
+<body <?php body_class(); ?>>
     <?php if (is_front_page()) : ?>
         <!-- Preload -->
-        <!-- <div class="fullpage-loader">
+        <div class="fullpage-loader">
             <div class="fullpage-loader__logo">
                 <img src="<?php bloginfo('template_url'); ?>/assets/img/logo-layer1.svg" alt="saveinvest">
             </div>
-        </div> -->
+        </div>
         <!-- end preload -->
     <?php endif; ?>
 

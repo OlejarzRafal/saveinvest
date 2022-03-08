@@ -14,17 +14,38 @@ class PlotDataElement {
             let condition = $(element).attr('data-plot-info-show-if');
 
             if (condition.includes('=')) {
-                condition = condition.split('=');
+                let negation = false;
+
+                if (condition.includes('!=')) {
+                    negation = true;
+                    condition = condition.split('!=');
+                } else {
+                    condition = condition.split('=');
+                }
 
                 if (plotData[condition[0]]) {
                     const plotConditionData = plotData[condition[0]];
 
                     if (typeof plotConditionData === 'object') {
-                        if (plotConditionData.value === condition[1]) {
-                            $(element).show();
+                        if (negation) {
+                            if (plotConditionData.value !== condition[1]) {
+                                $(element).show();
+                            }
+                        } else {
+                            if (plotConditionData.value === condition[1]) {
+                                $(element).show();
+                            }
                         }
-                    } else if (plotConditionData === condition[1]) {
-                        $(element).show();
+                    } else {
+                        if (negation) {
+                            if (plotConditionData !== condition[1]) {
+                                $(element).show();
+                            }
+                        } else {
+                            if (plotConditionData === condition[1]) {
+                                $(element).show();
+                            }
+                        }
                     }
                 }
             } else if (condition[0] === '!') {
@@ -36,7 +57,7 @@ class PlotDataElement {
             } else if (plotData[condition]) {
                 $(element).show();
             }
-        })
+        });
     }
 
     static prepareParamElementsForPlot(plotData, element) {
@@ -73,12 +94,12 @@ class PlotDataElement {
             }
         });
 
-        var url = window.location.origin + '/saveinvest/';
+        var url = window.location.origin;
         const investName = plotData.investition.label.toLowerCase().replace(' ', '-');
 
-        element.find('[data-plot-info-image]').attr('src', '' +url+ 'Plots/' +investName+'/'+plotData.sector.value + '/obrysy/' +plotData.sector.value + '-' + plotData.plotNr + '.png');
+        element.find('[data-plot-info-image]').attr('src', '' +url+ '/Plots/' +investName+'/obrysy/' + plotData.plotNr + '.png');
 
-        element.find('[data-plot-info-image-pdf-card]').attr('href', '' +url+ 'Plots/' +investName+'/'+plotData.sector.value + '/karty/' +plotData.sector.value + '-' + plotData.plotNr + '.pdf');
+element.find('[data-plot-info-image-pdf-card]').attr('href', '' +url+ '/Plots/' +investName+ '/karty/' + plotData.plotNr + '.pdf');
 
         // TODO set href to plotcotact form or change it to click action
 
@@ -191,11 +212,9 @@ class FunktionalPlotsMap {
 
     setPlotsStatus() {
         window.FunktionalPlots.forEach((plot) => {
-            
             let plotEl;
-            plotEl = $(this.sector).find(`[data-plots-plot="${plot.plotNr}"]`);
 
-            if (plot.sector && plot.sector.value) {
+            if (plot.sector && plot.sector.value && this.sector && this.sector.length && this.sector.attr('data-plots-sector')) {
                 const sectorEl = $(`[data-plots-sector="${plot.sector.value}"]`);
 
                 if (sectorEl && sectorEl.length) {
@@ -454,7 +473,7 @@ class FunktionalPlotsList {
 
             this.plotsContainer.append(plotElement);
 
-            if (index % this.bannerAfterPlots === 0) {
+            if ((index + 1) % this.bannerAfterPlots === 0) {
                 const banerElement = this.banerTemplate.clone();
 
                 banerElement.removeAttr('data-plot-list-baner-template');

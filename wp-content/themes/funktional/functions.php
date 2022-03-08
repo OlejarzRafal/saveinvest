@@ -39,3 +39,4 @@ function my_acf_op_init()
   ));
 }
 add_theme_support( 'post-thumbnails' );
+add_theme_support( 'title-tag' );

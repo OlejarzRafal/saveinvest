@@ -1,0 +1,1 @@
+<?php require_once(__DIR__ . '/investitions/ostoja-kladno/front-page.php'); ?>

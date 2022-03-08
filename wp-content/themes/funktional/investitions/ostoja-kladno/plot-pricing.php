@@ -22,7 +22,7 @@ $PlotsFront->getScriptsAndStyles('Ostoja Kładno');
             </div>
             <!-- CLOSE -->
             <div data-plots-info-on-selected data-plots-info-close class="plotModal-close">
-                <img src="<?php bloginfo('template_url'); ?>/assets/img/invest-kladno/ico/close.png');?>" alt="close">
+                <img src="<?php bloginfo('template_url'); ?>/assets/img/invest-kladno/ico/close.png" alt="close">
             </div>
             <!-- DIFFERENCE -->
             <div class="plotModal-difference" data-plot-info-show-if="discount">
@@ -57,20 +57,20 @@ $PlotsFront->getScriptsAndStyles('Ostoja Kładno');
                         <div class="plotModal-info__text">
                             <div class="plot-text__type">Typ działki:</div>
                             <div class="plot-text__surface">Powierzchnia:</div>
-                            <div class="plot-text__price" data-plot-info-show-if="status=wolna">Cena netto:</div>
-                            <div class="plot-text__priceMonth" data-plot-info-show-if="status=wolna">Lub miesięcznie:</div>
+                            <div class="plot-text__price" data-plot-info-show-if="status!=sprzedana">Cena netto:</div>
+                            <div class="plot-text__priceMonth" data-plot-info-show-if="status!=sprzedana">Lub miesięcznie:</div>
                         </div>
                         <div class="plotModal-info__desc ">
                             <div class="plot-desc__type" data-plot-info-param="plot_type"></div>
                             <div class="plot-desc__sufrace"><span data-plot-info-param="area"></span> m<sup>2</sup></div>
-                            <div class="plot-desc__price" data-plot-info-show-if="status=wolna">
+                            <div class="plot-desc__price" data-plot-info-show-if="status!=sprzedana">
                                 <!-- if discount -->
                                 <p class="plot-desc__price__afterDiscount" data-plot-info-show-if="discount"><span data-plot-info-param="priceAfterDiscount"></span> zł</p>
                                 <p class="plot-desc__price__beforeDiscount" data-plot-info-show-if="discount"><span data-plot-info-param="priceBeforeDiscount"></span> zł</p>
                                 <!-- if not discount -->
                                 <p class="" data-plot-info-show-if="!discount"><span data-plot-info-param="priceBeforeDiscount"></span> zł</p>
                             </div>
-                            <div class="plot-desc__rate" data-plot-info-show-if="status=wolna">
+                            <div class="plot-desc__rate" data-plot-info-show-if="status!=sprzedana">
                                 <!-- <p data-plot-info-show-if="!rateAfterSalesCount">brak możliwości zakupu na raty</p> -->
                                 <!-- if discount -->
                                 <p class="plot-desc__rate__afterDiscount" data-plot-info-show-if="discount"><span data-plot-info-param="rateAfterDiscount"></span> zł</p>
@@ -166,7 +166,7 @@ $PlotsFront->getScriptsAndStyles('Ostoja Kładno');
                         </div>
                         <div class="col-xl-2 col-lg-0">
                             <div class="plots-list__header__img">
-                                <img src="<?php bloginfo('template_url'); ?>/assets/img/prices-qaulity-logo/image2big.svg') ?>" alt="gwarancja najwyższej jakości">
+                                <img src="<?php bloginfo('template_url'); ?>/assets/img/prices-qaulity-logo/image2big.svg" alt="gwarancja najwyższej jakości">
                             </div>
                         </div>
                     </div>
@@ -244,20 +244,20 @@ $PlotsFront->getScriptsAndStyles('Ostoja Kładno');
                             <div class="plot-info__text">
                                 <div class="plot-text__type">Typ działki:</div>
                                 <div class="plot-text__surface">Powierzchnia:</div>
-                                <div class="plot-text__price" data-plot-info-show-if="status=wolna">Cena netto:</div>
-                                <div class="plot-text__priceMonth" data-plot-info-show-if="status=wolna">Lub miesięcznie:</div>
+                                <div class="plot-text__price" data-plot-info-show-if="status!=sprzedana">Cena netto:</div>
+                                <div class="plot-text__priceMonth" data-plot-info-show-if="status!=sprzedana">Lub miesięcznie:</div>
                             </div>
                             <div class="plot-info__desc ">
                                 <div class="plot-desc__type" data-plot-info-param="plot_type"></div>
                                 <div class="plot-desc__sufrace"><span data-plot-info-param="area"></span> m<sup>2</sup></div>
-                                <div class="plot-desc__price" data-plot-info-show-if="status=wolna">
+                                <div class="plot-desc__price" data-plot-info-show-if="status!=sprzedana">
                                     <!-- if discount -->
                                     <p class="plot-desc__price__afterDiscount" data-plot-info-show-if="discount"><span data-plot-info-param="priceAfterDiscount"></span> zł</p>
                                     <p class="plot-desc__price__beforeDiscount" data-plot-info-show-if="discount"><span data-plot-info-param="priceBeforeDiscount"></span> zł</p>
                                     <!-- if not discount -->
                                     <p class="" data-plot-info-show-if="!discount"><span data-plot-info-param="priceBeforeDiscount"></span> zł</p>
                                 </div>
-                                <div class="plot-desc__rate" data-plot-info-show-if="status=wolna">
+                                <div class="plot-desc__rate" data-plot-info-show-if="status!=sprzedana">
                                     <!-- <p data-plot-info-show-if="!rateAfterSalesCount">brak możliwości zakupu na raty</p> -->
                                     <!-- if discount -->
                                     <p class="plot-desc__rate__afterDiscount" data-plot-info-show-if="discount"><span data-plot-info-param="rateAfterDiscount"></span> zł</p>
@@ -269,17 +269,17 @@ $PlotsFront->getScriptsAndStyles('Ostoja Kładno');
                             </div>
                         </div>
                         <div class="plot-contact" data-plots-info-on-selected>
-                            <a href="#" class="plot-contact__btn plot-contact__btn--gold" target="_blank" data-plot-info-image-send-message>
+                            <a href="#" class="plot-contact__btn plot-contact__btn--gold" target="_blank" data-plot-info-image-send-message  data-plot-info-show-if="status!=sprzedana">
                                 <?php echo file_get_contents(get_template_directory_uri() . '/assets/img/invest-kladno/mail.svg'); ?><span>WIADOMOŚĆ</span>
                             </a>
-                            <a href="" class="plot-contact__btn" target="_blank" data-plot-info-image-pdf-card>
+                            <a href="" class="plot-contact__btn" target="_blank" data-plot-info-image-pdf-card  data-plot-info-show-if="status!=sprzedana">
                                 <?php echo file_get_contents(get_template_directory_uri() . '/assets/img/invest-kladno/download.svg'); ?><span>POBIERZ KARTĘ</span>
                             </a>
                         </div>
                         <div class="plot-quality">
-                            <img src="<?php bloginfo('template_url'); ?>/assets/img/prices-qaulity-logo/image1.svg') ?>" alt="17 lat doświadczenia">
-                            <img src="<?php bloginfo('template_url'); ?>/assets/img/prices-qaulity-logo/image3.svg') ?>" alt="700 zadowolonych klientów">
-                            <img src="<?php bloginfo('template_url'); ?>/assets/img/prices-qaulity-logo/image2small.svg') ?>" alt="gwarancja najwyższej jakości">
+                            <img src="<?php bloginfo('template_url'); ?>/assets/img/prices-qaulity-logo/image1.svg" alt="17 lat doświadczenia">
+                            <img src="<?php bloginfo('template_url'); ?>/assets/img/prices-qaulity-logo/image3.svg" alt="700 zadowolonych klientów">
+                            <img src="<?php bloginfo('template_url'); ?>/assets/img/prices-qaulity-logo/image2small.svg" alt="gwarancja najwyższej jakości">
                         </div>
                         <div class="plot-difference" data-plot-info-show-if="discount">
                             <p>TANIEJ O <span data-plot-info-param="difference"></span> zł</p>
@@ -313,9 +313,9 @@ $PlotsFront->getScriptsAndStyles('Ostoja Kładno');
                                 Do ceny netto należy doliczyć 23% podatku VAT. Przedsiębiorca otrzymuje zwrot podatku VAT w ciągu 30 lub 60 dni od wystąpienia o zwrot do urzędu skarbowego. Nakłady inwestycyjne związane z budową basenu i części rekreacyjnej oraz utwardzeniem drogi wewnętrznej zostaną podzielone na wszystkich właścicieli działek.
                             </div>
                             <div class="plots-bottom-info__logos">
-                                <img src="<?php bloginfo('template_url'); ?>/assets/img/prices-qaulity-logo/image3.svg') ?>" alt="700 zadowolonych klientów">
-                                <img src="<?php bloginfo('template_url'); ?>/assets/img/prices-qaulity-logo/image2small.svg') ?>" alt="gwarancja najwyższej jakości">
-                                <img src="<?php bloginfo('template_url'); ?>/assets/img/prices-qaulity-logo/image1.svg') ?>" alt="17 lat doświadczenia">
+                                <img src="<?php bloginfo('template_url'); ?>/assets/img/prices-qaulity-logo/image3.svg" alt="700 zadowolonych klientów">
+                                <img src="<?php bloginfo('template_url'); ?>/assets/img/prices-qaulity-logo/image2small.svg" alt="gwarancja najwyższej jakości">
+                                <img src="<?php bloginfo('template_url'); ?>/assets/img/prices-qaulity-logo/image1.svg" alt="17 lat doświadczenia">
                             </div>
                         </div>
                     </div>

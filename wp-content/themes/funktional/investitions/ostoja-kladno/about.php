@@ -150,7 +150,7 @@ get_template_part('investitions/ostoja-kladno/header');
                                 bezpieczna przystań, w której Ty lub Twoi goście
                                 błogo spędzą czas i zregenerują siły.
                             </p>
-                            <a href="#" class="btn btn__line-yellow btn--yellow">FINANSOWANIE</a>
+                            <!-- <a href="#" class="btn btn__line-yellow btn--yellow">FINANSOWANIE</a> -->
                         </div>
                     </div>
                 </div>
@@ -181,7 +181,7 @@ get_template_part('investitions/ostoja-kladno/header');
                                 ekspresową S3.
                             </p>
                         </div>
-                        <a href="#" class="btn btn__line">LOKALIZACJA</a>
+                        <a href="<?php the_permalink(616);?>" class="btn btn__line">LOKALIZACJA</a>
                     </div>
                 </div>
                 <div class="offset-xl-1 col-xl-6">
