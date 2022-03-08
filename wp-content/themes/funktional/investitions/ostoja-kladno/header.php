@@ -12,7 +12,33 @@
 </head>
 
 <body <?php body_class(); ?>>
-
+    <!-- Preload -->
+    <div class="kladno-loader">
+        <div class="logo-wrap">
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/logo-loader.svg" alt="logo">
+            <div class="wave-wrap">
+                <div class="wave wave--1">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="356.807" height="16.281" viewBox="0 0 356.807 16.281">
+                        <g id="_2" data-name="2" transform="translate(-799.299 789.138)">
+                            <path id="Path_9217" data-name="Path 9217" d="M799.3-786.638c14.866,0,14.866,11.281,29.733,11.281s14.867-11.281,29.733-11.281,14.868,11.281,29.735,11.281,14.868-11.281,29.735-11.281" fill="none" stroke="#233264" stroke-miterlimit="10" stroke-width="5" />
+                            <path id="Path_9219" data-name="Path 9219" d="M799.3-786.638c14.866,0,14.866,11.281,29.733,11.281s14.867-11.281,29.733-11.281,14.868,11.281,29.735,11.281,14.868-11.281,29.735-11.281" transform="translate(118.936)" fill="none" stroke="#233264" stroke-miterlimit="10" stroke-width="5" />
+                            <path id="Path_9220" data-name="Path 9220" d="M799.3-786.638c14.866,0,14.866,11.281,29.733,11.281s14.867-11.281,29.733-11.281,14.868,11.281,29.735,11.281,14.868-11.281,29.735-11.281" transform="translate(237.871)" fill="none" stroke="#233264" stroke-miterlimit="10" stroke-width="5" />
+                        </g>
+                    </svg>
+                </div>
+                <div class="wave wave--2 ">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="356.807" height="16.281" viewBox="0 0 356.807 16.281">
+                        <g id="_2" data-name="2" transform="translate(-799.299 789.138)">
+                            <path id="Path_9217" data-name="Path 9217" d="M799.3-786.638c14.866,0,14.866,11.281,29.733,11.281s14.867-11.281,29.733-11.281,14.868,11.281,29.735,11.281,14.868-11.281,29.735-11.281" fill="none" stroke="#233264" stroke-miterlimit="10" stroke-width="5" />
+                            <path id="Path_9219" data-name="Path 9219" d="M799.3-786.638c14.866,0,14.866,11.281,29.733,11.281s14.867-11.281,29.733-11.281,14.868,11.281,29.735,11.281,14.868-11.281,29.735-11.281" transform="translate(118.936)" fill="none" stroke="#233264" stroke-miterlimit="10" stroke-width="5" />
+                            <path id="Path_9220" data-name="Path 9220" d="M799.3-786.638c14.866,0,14.866,11.281,29.733,11.281s14.867-11.281,29.733-11.281,14.868,11.281,29.735,11.281,14.868-11.281,29.735-11.281" transform="translate(237.871)" fill="none" stroke="#233264" stroke-miterlimit="10" stroke-width="5" />
+                        </g>
+                    </svg>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- end preload -->
     <?php global $post; ?>
 
     <nav class="kladno-nav <?php if ($post->ID == 356) : ?> kladno-nav__home <?php endif; ?>">
@@ -41,11 +67,11 @@
                                     CENY DZIAŁEK
                                 </a>
                             </li>
-                            <li class="btn-nav <?php if (strpos($_SERVER['REQUEST_URI'], "/oferta/ostoja-kladno/finansowanie") !== false) {; ?> btn-nav--active  <?php }; ?>">
+                            <!-- <li class="btn-nav <?php if (strpos($_SERVER['REQUEST_URI'], "/oferta/ostoja-kladno/finansowanie") !== false) {; ?> btn-nav--active  <?php }; ?>">
                                 <a href="<?php echo get_home_url(); ?>/oferta/ostoja-kladno/finansowanie" class="text-main text-main--fw500 text-main--f18">
                                     FINANSOWANIE
                                 </a>
-                            </li>
+                            </li> -->
                             <li class="btn-nav <?php if (strpos($_SERVER['REQUEST_URI'], "/oferta/ostoja-kladno/galeria") !== false) {; ?> btn-nav--active  <?php }; ?>">
                                 <a href="<?php echo get_home_url(); ?>/oferta/ostoja-kladno/galeria" class="text-main text-main--fw500 text-main--f18">
                                     GALERIA
