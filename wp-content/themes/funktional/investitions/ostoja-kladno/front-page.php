@@ -14,13 +14,13 @@ get_template_part('investitions/ostoja-kladno/header');
         <div class="swiper-wrapper">
             <div class="swiper-slide">
                 <div class="front-slider-photo">
-                    <img src="<?php bloginfo('template_url'); ?>/assets/img/invest-kladno/home-page/photo1-slider.jpg') ?>" alt="home-video">
+                    <img src="<?php bloginfo('template_url'); ?>/assets/img/invest-kladno/home-page/photo1-slider.jpg" alt="home-video">
                 </div>
                 <div class="container">
                     <div class="row">
                         <div class="col-xl-12">
                             <div class="front-slider-logo">
-                                <img src="<?php bloginfo('template_url'); ?>/assets/img/invest-kladno/home-page/home-header-slider-photo-logo.png') ?>" alt="home-video">
+                                <img src="<?php bloginfo('template_url'); ?>/assets/img/invest-kladno/home-page/home-header-slider-photo-logo.png " alt="home-video">
                             </div>
                         </div>
                         <div class="col-xl-12">
@@ -43,13 +43,13 @@ get_template_part('investitions/ostoja-kladno/header');
             </div>
             <div class="swiper-slide">
                 <div class="front-slider-photo">
-                    <img src="<?php bloginfo('template_url'); ?>/assets/img/invest-kladno/home-page/photo2-slider.jpg') ?>" alt="home-video">
+                    <img src="<?php bloginfo('template_url'); ?>/assets/img/invest-kladno/home-page/photo2-slider.jpg" alt="home-video">
                 </div>
                 <div class="container">
                     <div class="row">
                         <div class="col-xl-12">
                             <div class="front-slider-logo">
-                                <img src="<?php bloginfo('template_url'); ?>/assets/img/invest-kladno/home-page/home-header-slider-photo-logo.png') ?>" alt="home-video">
+                                <img src="<?php bloginfo('template_url'); ?>/assets/img/invest-kladno/home-page/home-header-slider-photo-logo.png" alt="home-video">
                             </div>
                         </div>
                         <div class="col-xl-12">
@@ -73,13 +73,13 @@ get_template_part('investitions/ostoja-kladno/header');
             </div>
             <div class="swiper-slide">
                 <div class="front-slider-photo">
-                    <img src="<?php bloginfo('template_url'); ?>/assets/img/invest-kladno/home-page/photo3-slider.jpg') ?>" alt="home-video">
+                    <img src="<?php bloginfo('template_url'); ?>/assets/img/invest-kladno/home-page/photo3-slider.jpg" alt="home-video">
                 </div>
                 <div class="container">
                     <div class="row">
                         <div class="col-xl-12">
                             <div class="front-slider-logo">
-                                <img src="<?php bloginfo('template_url'); ?>/assets/img/invest-kladno/home-page/home-header-slider-photo-logo.png') ?>" alt="home-video">
+                                <img src="<?php bloginfo('template_url'); ?>/assets/img/invest-kladno/home-page/home-header-slider-photo-logo.png" alt="home-video">
                             </div>
                         </div>
                         <div class="col-xl-12">
@@ -103,13 +103,13 @@ get_template_part('investitions/ostoja-kladno/header');
             </div>
             <div class="swiper-slide">
                 <div class="front-slider-photo">
-                    <img src="<?php bloginfo('template_url'); ?>/assets/img/invest-kladno/home-page/photo4-slider.jpg') ?>" alt="home-video">
+                    <img src="<?php bloginfo('template_url'); ?>/assets/img/invest-kladno/home-page/photo4-slider.jpg" alt="home-video">
                 </div>
                 <div class="container">
                     <div class="row">
                         <div class="col-xl-12">
                             <div class="front-slider-logo">
-                                <img src="<?php bloginfo('template_url'); ?>/assets/img/invest-kladno/home-page/home-header-slider-photo-logo.png') ?>" alt="home-video">
+                                <img src="<?php bloginfo('template_url'); ?>/assets/img/invest-kladno/home-page/home-header-slider-photo-logo.png" alt="home-video">
                             </div>
                         </div>
                         <div class="col-xl-12">
@@ -134,13 +134,13 @@ get_template_part('investitions/ostoja-kladno/header');
             </div>
             <div class="swiper-slide">
                 <div class="front-slider-photo">
-                    <img src="<?php bloginfo('template_url'); ?>/assets/img/invest-kladno/home-page/photo5-slider.jpg') ?>" alt="home-video">
+                    <img src="<?php bloginfo('template_url'); ?>/assets/img/invest-kladno/home-page/photo5-slider.jpg" alt="home-video">
                 </div>
                 <div class="container">
                     <div class="row">
                         <div class="col-xl-12">
                             <div class="front-slider-logo">
-                                <img src="<?php bloginfo('template_url'); ?>/assets/img/invest-kladno/home-page/home-header-slider-photo-logo.png') ?>" alt="home-video">
+                                <img src="<?php bloginfo('template_url'); ?>/assets/img/invest-kladno/home-page/home-header-slider-photo-logo.png " alt="home-video">
                             </div>
                         </div>
                         <div class="col-xl-12">
@@ -174,8 +174,8 @@ get_template_part('investitions/ostoja-kladno/header');
             <div class="row">
                 <div class="col-xxl-7">
                     <div class="around-video__movie">
-                        <a href="https://www.youtube.com/watch?v=_AusFKE_xpo&feature=youtu.be">
-                            <img src="<?php bloginfo('template_url'); ?>/assets/img/invest-kladno/home-page/home-movie.jpg') ?>" alt="home-video">
+                        <a data-fancybox="gallery" href="https://www.youtube.com/watch?v=_AusFKE_xpo&feature=youtu.be">
+                            <img src="<?php bloginfo('template_url'); ?>/assets/img/invest-kladno/home-page/home-movie.jpg" alt="home-video">
                         </a>
                     </div>
                 </div>
@@ -356,7 +356,7 @@ get_template_part('investitions/ostoja-kladno/header');
                                 zaletach Pomorza Zachodniego.
                             </p>
                         </div>
-                        <a href="#" class="btn btn__line">O OSTOI</a>
+                        <a href="<?php the_permalink(615); ?>" class="btn btn__line">O OSTOI</a>
                     </div>
                 </div>
             </div>
@@ -389,7 +389,7 @@ get_template_part('investitions/ostoja-kladno/header');
                                 bezpiecznej przyszłości.
                             </p>
                         </div>
-                        <a href="#" class="btn btn__line">SPRAWDŹ CENY DZIAŁEK</a>
+                        <a href="<?php the_permalink(617); ?>" class="btn btn__line">SPRAWDŹ CENY DZIAŁEK</a>
                     </div>
                 </div>
                 <div class="offset-xl-1 col-xl-6">
@@ -401,7 +401,7 @@ get_template_part('investitions/ostoja-kladno/header');
         </div>
     </section>
     <section class="choice">
-        <a class="choice__location" href="#">
+        <a class="choice__location" href="<?php the_permalink(616);?>">
             <div class="choice-photo">
                 <img src="<?php bloginfo('template_url'); ?>/assets/img/invest-kladno/home-page/home-location.jpg" alt="" />
             </div>
@@ -417,7 +417,7 @@ get_template_part('investitions/ostoja-kladno/header');
                 </p>
             </div>
         </a>
-        <a class="choice__price" href="#">
+        <a class="choice__price" href="<?php the_permalink(617);?>">
             <div class="choice-photo">
                 <img src="<?php bloginfo('template_url'); ?>/assets/img/invest-kladno/home-page/home-price-of-plots.jpg" alt="" />
             </div>
@@ -463,9 +463,9 @@ get_template_part('investitions/ostoja-kladno/header');
                                     <div class="testimonial-kladno-box">
                                         <div class="testimonial-kladno-box__text">
                                             <p class="text-main text-main--white">" Gdy zdecydowałem się na sprzedaż, ekipa Saveinvest w ciągu 4 miesięcy znalazła nowego nabywcę i odsprzedała moją działkę ze sporym zyskiem :)"<br>
-                                        " Sprawa została poprowadzona wzorowo od początku do końca. Saveinvest znalazło klienta i podpisało umowę na podstawie mojego pełnomocnictwa - było to dla mnie ogromnym ułatwieniem bo mieszkam za granicą i nie musiałem specjalnie przylatywać do Polski."<br>
-                                        "Jestem bardzo zadowolony ze współpracy z firmą i serdecznie ją rekomenduję. Z wielką przyjemnością podpisuję się pod ich hasłem “Grunt to zysk”! ""
-                                    </p>
+                                                " Sprawa została poprowadzona wzorowo od początku do końca. Saveinvest znalazło klienta i podpisało umowę na podstawie mojego pełnomocnictwa - było to dla mnie ogromnym ułatwieniem bo mieszkam za granicą i nie musiałem specjalnie przylatywać do Polski."<br>
+                                                "Jestem bardzo zadowolony ze współpracy z firmą i serdecznie ją rekomenduję. Z wielką przyjemnością podpisuję się pod ich hasłem “Grunt to zysk”! ""
+                                            </p>
                                         </div>
                                         <div class="testimonial-kladno-box__name">
                                             <p class="text-main text-main--fw700 text-main--white">Elwis Lewczuk</p>
@@ -476,9 +476,9 @@ get_template_part('investitions/ostoja-kladno/header');
                                     <div class="testimonial-kladno-box">
                                         <div class="testimonial-kladno-box__text">
                                             <p class="text-main text-main--white">" Od firmy Saveinvest sp. z o.o. z Krakowa zakupiłem działkę w Jaworku, blisko gór. Otrzymałem świetna ofertę cenową, a w pakiecie również ułatwienia w postaci zajęcia się formalnościami przez firmę — idealna opcja dla wszystkich, którzy nie mają wiedzy lub czasu!"<br>
-                                        " Saveinvest przekształca samodzielnie moją działkę na budowlaną, a całym procesem zajmują się jej specjaliści. Dlatego też polecam kontakt z nimi — w przyjazny i fachowy sposób przeprowadzają klienta aż do podpisania aktu notarialnego."<br>
-                                        " Polecam i zachęcam do wyboru firmy Saveinvest! "
-                                        </p>
+                                                " Saveinvest przekształca samodzielnie moją działkę na budowlaną, a całym procesem zajmują się jej specjaliści. Dlatego też polecam kontakt z nimi — w przyjazny i fachowy sposób przeprowadzają klienta aż do podpisania aktu notarialnego."<br>
+                                                " Polecam i zachęcam do wyboru firmy Saveinvest! "
+                                            </p>
                                         </div>
                                         <div class="testimonial-kladno-box__name">
                                             <p class="text-main text-main--fw700 text-main--white">Andrzej Biela</p>
@@ -518,7 +518,7 @@ get_template_part('investitions/ostoja-kladno/header');
                                 <div class="swiper-slide">
                                     <div class="testimonial-kladno-box">
                                         <div class="testimonial-kladno-box__text">
-                                            <p class="text-main text-main--white">" Mogę z przyjemnością potwierdzić wszystkie pozytywne referencje i opinie o firmie Saveinvest sp. z o.o. z Krakowa. Jako nowy nabywca działki z oferty tej firmy mogę tylko napisać, że zachęcam wszystkich szukających działek do kontaktu z jej specjalistami. Miły, profesjonalny i fachowy kontakt, bardzo dobra oferta i brak formalności — wszystkie leżą po stronie Saveinvest.  "</p>
+                                            <p class="text-main text-main--white">" Mogę z przyjemnością potwierdzić wszystkie pozytywne referencje i opinie o firmie Saveinvest sp. z o.o. z Krakowa. Jako nowy nabywca działki z oferty tej firmy mogę tylko napisać, że zachęcam wszystkich szukających działek do kontaktu z jej specjalistami. Miły, profesjonalny i fachowy kontakt, bardzo dobra oferta i brak formalności — wszystkie leżą po stronie Saveinvest. "</p>
                                         </div>
                                         <div class="testimonial-kladno-box__name">
                                             <p class="text-main text-main--fw700 text-main--white">Robert Dziki</p>

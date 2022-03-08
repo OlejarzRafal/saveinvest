@@ -21,7 +21,7 @@
 
 // ** MySQL settings - You can get this info from your web host ** //
 /** The name of the database for WordPress */
-define('DB_NAME', 'saveinvestnew');
+define('DB_NAME', 'saveinvestlive');
 
 /** MySQL database username */
 define('DB_USER', 'saveinvest2');
