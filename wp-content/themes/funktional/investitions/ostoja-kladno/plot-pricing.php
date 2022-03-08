@@ -269,10 +269,10 @@ $PlotsFront->getScriptsAndStyles('Ostoja Kładno');
                             </div>
                         </div>
                         <div class="plot-contact" data-plots-info-on-selected>
-                            <a href="#" class="plot-contact__btn plot-contact__btn--gold" target="_blank" data-plot-info-image-send-message>
+                            <a href="#" class="plot-contact__btn plot-contact__btn--gold" target="_blank" data-plot-info-image-send-message  data-plot-info-show-if="status=wolna">
                                 <?php echo file_get_contents(get_template_directory_uri() . '/assets/img/invest-kladno/mail.svg'); ?><span>WIADOMOŚĆ</span>
                             </a>
-                            <a href="" class="plot-contact__btn" target="_blank" data-plot-info-image-pdf-card>
+                            <a href="" class="plot-contact__btn" target="_blank" data-plot-info-image-pdf-card  data-plot-info-show-if="status=wolna">
                                 <?php echo file_get_contents(get_template_directory_uri() . '/assets/img/invest-kladno/download.svg'); ?><span>POBIERZ KARTĘ</span>
                             </a>
                         </div>
