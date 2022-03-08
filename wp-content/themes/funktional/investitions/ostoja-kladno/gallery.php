@@ -67,7 +67,7 @@ get_template_part('investitions/ostoja-kladno/header');
 
                             ?>
                                 <div class="gallery__item gallery__item--video  video order-1 yt-video" data-sort="value">
-                                    <a class="yt-video-link" data-fancybox="gallery" style="" href="<?= $ytLinkUrl ?>"></a>
+                                <a class="yt-video-link" data-fancybox="gallery" style="background-image:url(https://i.ytimg.com/vi/<?= $query['v'] ?>/hqdefault.jpg)" href="<?= $ytLinkUrl ?>"></a>
                                 </div>
 
                             <?php endwhile; ?>

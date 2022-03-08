@@ -7,7 +7,7 @@ wp_footer();
             <h2 class="f-h2 f-h2--white f-h2--fw600">
                 Bezpieczna lokata kapitału
             </h2>
-            <a href="<?php the_permalink(369);?>" class="btn btn__line">SPRAWDŹ CENY DZIAŁEK</a>
+            <a href="<?php the_permalink(617); ?>" class="btn btn__line">SPRAWDŹ CENY DZIAŁEK</a>
         </div>
     </section>
     <section class="footer">
@@ -15,7 +15,7 @@ wp_footer();
             <div class="row">
                 <div class="col-xl-12">
                     <div class="footer__logo">
-                        <a href="<?php the_permalink(356); ?>">
+                        <a href="<?php the_permalink(614); ?>">
                             <img src="<?php bloginfo('template_url'); ?>/assets/img/invest-kladno/home-page/home-footer-logo.png" alt="logo saveinvest" />
                         </a>
                     </div>
@@ -91,21 +91,18 @@ wp_footer();
                             </p>
                         </div>
                         <div class="footer-box__info footer-box__map">
-                            <a class="text-main text-main--f12 text-main--fw600 text-main--white text-main--ls4" href="#">
-                                LOKALIZACJA
+                            <a class="text-main text-main--f12 text-main--fw600 text-main--white text-main--ls4" href="<?php the_permalink(617); ?>">CENY DZIAŁEK
                             </a>
-                            <a class="text-main text-main--f12 text-main--fw600 text-main--white text-main--ls4" href="#">CENY DZIAŁEK
+                            <a class="text-main text-main--f12 text-main--fw600 text-main--white text-main--ls4" href="<?php the_permalink(614); ?>">STRONA GŁÓWNA
                             </a>
-                            <a class="text-main text-main--f12 text-main--fw600 text-main--white text-main--ls4" href="#">STRONA GŁÓWNA
+                            <a class="text-main text-main--f12 text-main--fw600 text-main--white text-main--ls4" href="<?php the_permalink(619); ?>">GALERIA
                             </a>
-                            <a class="text-main text-main--f12 text-main--fw600 text-main--white text-main--ls4" href="#">PROMOCJA
+                            <a class="text-main text-main--f12 text-main--fw600 text-main--white text-main--ls4" href="<?php the_permalink(616); ?>">LOKALIZACJA
                             </a>
-                            <a class="text-main text-main--f12 text-main--fw600 text-main--white text-main--ls4" href="#">GALERIA
+                            <a class="text-main text-main--f12 text-main--fw600 text-main--white text-main--ls4" href="<?php the_permalink(618); ?>">KONTAKT
                             </a>
-                            <a class="text-main text-main--f12 text-main--fw600 text-main--white text-main--ls4" href="#">KONTAKT
-                            </a>
-                            <a class="text-main text-main--f12 text-main--fw600 text-main--white text-main--ls4" href="#">POLITYKA PRYWATNOŚCI
-                            </a>
+                            <!-- <a class="text-main text-main--f12 text-main--fw600 text-main--white text-main--ls4" href="<?php the_permalink(); ?>">POLITYKA PRYWATNOŚCI
+                            </a> -->
                         </div>
                     </div>
                 </div>
