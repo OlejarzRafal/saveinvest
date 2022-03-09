@@ -567,6 +567,14 @@
                         &__text {
                             position: relative;
                             margin-top: -8px;
+                            p::first-letter {
+                                font-family: $brygada;
+                                font-size: 64px;
+                                float: left;
+                                padding: 15px 10px 0 0;
+                                font-weight: 400;
+                              }
+   
                         }
                         &__name {
                             position: absolute;

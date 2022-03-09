@@ -4275,6 +4275,13 @@ a:hover {
   position: relative;
   margin-top: -8px;
 }
+.ik-frontpage .testimonial-kladno__container .box .swiper-wrapper .testimonial-kladno-box__text p::first-letter {
+  font-family: "Brygada 1918", serif;
+  font-size: 64px;
+  float: left;
+  padding: 15px 10px 0 0;
+  font-weight: 400;
+}
 .ik-frontpage .testimonial-kladno__container .box .swiper-wrapper .testimonial-kladno-box__name {
   position: absolute;
   left: -50px;
@@ -4855,6 +4862,7 @@ a:hover {
   margin-top: 30px;
 }
 .ik-about .about-background .financing-ostoja__content .btn {
+  display: none;
   margin-top: 50px;
 }
 @media (max-width: 1199px) {
@@ -6203,6 +6211,13 @@ a:hover {
 .ik-contanct .testimonial-kladno__container .box .swiper-wrapper .testimonial-kladno-box__text {
   position: relative;
   margin-top: -8px;
+}
+.ik-contanct .testimonial-kladno__container .box .swiper-wrapper .testimonial-kladno-box__text p::first-letter {
+  font-family: "Brygada 1918", serif;
+  font-size: 64px;
+  float: left;
+  padding: 15px 10px 0 0;
+  font-weight: 400;
 }
 .ik-contanct .testimonial-kladno__container .box .swiper-wrapper .testimonial-kladno-box__name {
   position: absolute;

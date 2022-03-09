@@ -14,13 +14,19 @@ get_template_part('investitions/ostoja-kladno/header');
                 <div class="offset-xxl-1 col-xxl-4">
                     <div class="contact-kladno__form">
                         <div class="title-form">
-                            <h5 class="f-h5">Skontaktuj się z nami</h5>
+                            <h5 class="f-h5"><?php the_field('title_sec1_contact_kladno'); ?></h5>
                         </div>
                         <div class="text-form">
-                            <p class="text-main">
-                                Wypełnij formularz lub zadzwoń pod numer
-                            </p>&nbsp
-                            <a class="text-main" class="text-main text-main--fw500" href="tel:+48888800800">+48 888 800 800.</a>
+                            <?php if ($text_sec1_contact_kladno = get_field('text_sec1_contact_kladno')) : ?>
+                                <p class="text-main">
+                                    <?php echo $text_sec1_contact_kladno; ?>
+                                </p>&nbsp
+                            <?php endif; ?>
+                            <?php if ($tel_sec1_contact_kladno = get_field('tel_sec1_contact_kladno')) : ?>
+
+
+                                <a class="text-main" class="text-main text-main--fw500" href="tel:<?php echo $tel_sec1_contact_kladno; ?>"><?php echo $tel_sec1_contact_kladno; ?>.</a>
+                            <?php endif; ?>
                         </div>
                         <div class="form-main">
                             <?php echo do_shortcode('[contact-form-7 id="370" title="Formularz kontaktowy Kładno"]'); ?>
@@ -29,160 +35,167 @@ get_template_part('investitions/ostoja-kladno/header');
                 </div>
                 <div class="offset-xxl-1 col-xxl-5">
                     <div class="contact-kladno__sales-box">
-                        <div class="sales-title">
-                            <h5 class="f-h5">Dział sprzedaży</h5>
-                        </div>
+                        <?php if ($title_sec2_contact_kladno = get_field('title_sec2_contact_kladno')) : ?>
+                            <div class="sales-title">
+                                <h5 class="f-h5"> <?php echo $title_sec2_contact_kladno; ?></h5>
+                            </div>
+                        <?php endif; ?>
                         <div class="sales-text">
                             <p class="text-main">
-                                Odpowiemy na Twoje pytania
+                                <?php the_field('text_sec2_contact_kladno'); ?>
                             </p>
                         </div>
-                        <div class="person-sales">
-                            <div class="person-sales__photo">
-                                <img src="<?php bloginfo('template_url'); ?>/assets/img/invest-kladno/contact/contact-photo2.jpg" alt="zdjęcie osoby z działu sprzedaży" />
+                        <?php if (have_rows('box_sales_sec2_contact_kladno')) : ?>
+                            <?php while (have_rows('box_sales_sec2_contact_kladno')) :
+                                the_row(); ?>
+                                <div class="person-sales">
+                                    <?php
+                                    $photo_box_sales_sec2_contact_kladno = get_sub_field('photo_box_sales_sec2_contact_kladno');
+                                    if ($photo_box_sales_sec2_contact_kladno) : ?>
+                                        <div class="person-sales__photo">
+                                            <img src="<?php echo esc_url($photo_box_sales_sec2_contact_kladno['url']); ?>" alt="<?php echo esc_attr($photo_box_sales_sec2_contact_kladno['alt']); ?>" />
+                                        </div>
+                                    <?php endif; ?>
+                                    <div class="person-info">
+                                        <?php if ($name_box_sales_sec2_contact_kladno = get_sub_field('name_box_sales_sec2_contact_kladno')) : ?>
+                                            <div class="person-info__name">
+                                                <h6 class="f-h6 f-h6-fw600">
+                                                    <?php echo $name_box_sales_sec2_contact_kladno; ?>
+                                                </h6>
+                                            </div>
+                                        <?php endif; ?>
+                                        <?php if ($positions_box_sales_sec2_contact_kladno = get_sub_field('positions_box_sales_sec2_contact_kladno')) : ?>
+                                            <div class="person-info__position">
+                                                <p class="text-main text-main--grey">
+                                                    <?php echo $positions_box_sales_sec2_contact_kladno; ?>
+                                                </p>
+                                            </div>
+                                        <?php endif; ?>
+                                        <?php if ($mail_box_sales_sec2_contact_kladno = get_sub_field('mail_box_sales_sec2_contact_kladno')) : ?>
+                                            <div class="person-info__email">
+                                                <img src="<?php bloginfo('template_url'); ?>/assets/img/invest-kladno/contact/icon-email.png" alt=" ikona email" />
+                                                <a class="text-main text-main--fw500" href="mailto:<?php echo $mail_box_sales_sec2_contact_kladno; ?>"><?php echo $mail_box_sales_sec2_contact_kladno; ?></a>
+                                            </div>
+                                        <?php endif; ?>
+                                        <?php if ($tel_box_sales_sec2_contact_kladno = get_sub_field('tel_box_sales_sec2_contact_kladno')) : ?>
+                                            <div class="person-info__phone">
+                                                <img src="<?php bloginfo('template_url'); ?>/assets/img/invest-kladno/contact/icon-phone.png" alt="ikona telefonu" />
+                                                <a class="text-main text-main--fw500" href="tel:<?php echo $tel_box_sales_sec2_contact_kladno; ?>"><?php echo $tel_box_sales_sec2_contact_kladno; ?></a>
+                                            </div>
+                                        <?php endif; ?>
+                                    </div>
 
-                            </div>
-                            <div class="person-info">
-                                <div class="person-info__name">
-                                    <h6 class="f-h6 f-h6-fw600">
-                                        Aleksander Setlak
-                                    </h6>
                                 </div>
-                                <div class="person-info__position">
-                                    <p class="text-main text-main--grey">
-                                        Specjalista ds. Nieruchomości
-                                    </p>
-                                </div>
-                                <div class="person-info__email">
-                                    <img src="<?php bloginfo('template_url'); ?>/assets/img/invest-kladno/contact/icon-email.png" alt=" ikona email" />
-                                    <a class="text-main text-main--fw500" href="mailto:a.setlak@saveinvest.pl">a.setlak@saveinvest.pl</a>
-                                </div>
-                                <div class="person-info__phone">
-                                    <img src="<?php bloginfo('template_url'); ?>/assets/img/invest-kladno/contact/icon-phone.png" alt="ikona telefonu" />
-                                    <a class="text-main text-main--fw500" href="tel:+48795048639">+48 795 048 639</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="person-sales">
-                            <div class="person-sales__photo">
-                                <img src="<?php bloginfo('template_url'); ?>/assets/img/invest-kladno/contact/contact-photo3.jpg" alt="zdjęcie osoby z działu sprzedaży" />
-
-                            </div>
-                            <div class="person-info">
-                                <div class="person-info__name">
-                                    <h6 class="f-h6 f-h6-fw600">
-                                        Kamil Markowicz
-                                    </h6>
-                                </div>
-                                <div class="person-info__position">
-                                    <p class="text-main text-main--grey">
-                                        Specjalista ds. Nieruchomości
-                                    </p>
-                                </div>
-                                <div class="person-info__email">
-
-                                    <img src="<?php bloginfo('template_url'); ?>/assets/img/invest-kladno/contact/icon-email.png" alt=" ikona email" />
-                                    <a class="text-main text-main--fw500" href="mailto:k.markowicz@saveinvest.pl">k.markowicz@saveinvest.pl</a>
-                                </div>
-                                <div class="person-info__phone">
-                                    <img src="<?php bloginfo('template_url'); ?>/assets/img/invest-kladno/contact/icon-phone.png" alt="ikona telefonu" />
-                                    <a class="text-main text-main--fw500" href="tel:+48533652414">+48 533 652 414</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="person-sales">
-                            <div class="person-sales__photo">
-                                <img src="<?php bloginfo('template_url'); ?>/assets/img/invest-kladno/contact/contact-photo4.jpg" alt="zdjęcie osoby z działu sprzedaży" />
-
-                            </div>
-                            <div class="person-info">
-                                <div class="person-info__name">
-                                    <h6 class="f-h6 f-h6-fw600">
-                                        Bartosz Antos
-                                    </h6>
-                                </div>
-                                <div class="person-info__position">
-                                    <p class="text-main text-main--grey">
-                                        Dyrektor ds. Nieruchomości
-                                    </p>
-                                </div>
-                                <div class="person-info__email">
-                                    <img src="<?php bloginfo('template_url'); ?>/assets/img/invest-kladno/contact/icon-email.png" alt=" ikona email" />
-                                    <a class="text-main text-main--fw500" href="mailto:b.antos@saveinvest.pl">b.antos@saveinvest.pl</a>
-                                </div>
-                                <div class="person-info__phone">
-                                    <img src="<?php bloginfo('template_url'); ?>/assets/img/invest-kladno/contact/icon-phone.png" alt="ikona telefonu" />
-                                    <a class="text-main text-main--fw500" href="tel:+48500210600">+48 500 210 600</a>
-                                </div>
-                            </div>
-                        </div>
+                            <?php endwhile; ?>
+                        <?php endif; ?>
                     </div>
                 </div>
                 <div class="offset-xxl-1 col-xxl-11">
                     <div class="contact-kladno__service">
-                        <div class="service-title">
-                            <h5 class="f-h5">Obsługa inwestycji</h5>
-                        </div>
-                        <div class="service-text">
-                            <p class="text-main">Do Twojej dyspozycji</p>
-                        </div>
+                        <?php if ($title_sec3_contact_kladno = get_field('title_sec3_contact_kladno')) : ?>
+                            <div class="service-title">
+                                <h5 class="f-h5"><?php echo $title_sec3_contact_kladno; ?></h5>
+                            </div>
+                        <?php endif; ?>
+                        <?php if ($text_sec3_contact_kladno = get_field('text_sec3_contact_kladno')) : ?>
+                            <div class="service-text">
+                                <p class="text-main"><?php echo $text_sec3_contact_kladno; ?></p>
+                            </div>
+                        <?php endif; ?>
+
                     </div>
                 </div>
-                <div class="offset-xxl-1 col-xxl-5">
-                    <div class="person-service">
-                        <div class="person-service__photo">
-                            <img src="<?php bloginfo('template_url'); ?>/assets/img/invest-kladno/contact/contact-photo5.jpg" alt="zdjęcie osoby z działu sprzedaży" />
 
-                        </div>
-                        <div class="person-info">
-                            <div class="person-info__name">
-                                <h6 class="f-h6 f-h6-fw600">
-                                    Patryk Wajda
-                                </h6>
+                <div class="offset-xxl-1 col-xxl-5">
+                    <?php if (have_rows('box1_service_sec3_contact_kladno')) : ?>
+                        <?php while (have_rows('box1_service_sec3_contact_kladno')) :
+                            the_row(); ?>
+                            <div class="person-service">
+                                <?php
+                                $photo_box1_service_sec3_contact_kladno = get_sub_field('photo_box1_service_sec3_contact_kladno');
+                                if ($photo_box1_service_sec3_contact_kladno) : ?>
+                                    <div class="person-service__photo">
+                                        <img src="<?php echo esc_url($photo_box1_service_sec3_contact_kladno['url']); ?>" alt="<?php echo esc_attr($photo_box1_service_sec3_contact_kladno['alt']); ?>" />
+                                    </div>
+                                <?php endif; ?>
+
+                                <div class="person-info">
+                                    <?php if ($name_box1_service_sec3_contact_kladno = get_sub_field('name_box1_service_sec3_contact_kladno')) : ?>
+                                        <div class="person-info__name">
+                                            <h6 class="f-h6 f-h6-fw600">
+                                                <?php echo $name_box1_service_sec3_contact_kladno; ?>
+                                            </h6>
+                                        </div>
+                                    <?php endif; ?>
+                                    <?php if ($positions_box1_service_sec3_contact_kladno = get_sub_field('positions_box1_service_sec3_contact_kladno')) : ?>
+                                        <div class="person-info__position">
+                                            <p class="text-main text-main--grey">
+                                                <?php echo $positions_box1_service_sec3_contact_kladno; ?>
+                                            </p>
+                                        </div>
+                                    <?php endif; ?>
+                                    <?php if ($mail_box1_service_sec3_contact_kladno = get_sub_field('mail_box1_service_sec3_contact_kladno')) : ?>
+                                        <div class="person-info__email">
+                                            <img src="<?php bloginfo('template_url'); ?>/assets/img/invest-kladno/contact/icon-email.png" alt=" ikona email" />
+                                            <a class="text-main text-main--fw500" href="<?php echo $mail_box1_service_sec3_contact_kladno; ?>"><?php echo $mail_box1_service_sec3_contact_kladno; ?></a>
+                                        </div>
+                                    <?php endif; ?>
+                                    <?php if ($tel_box1_service_sec3_contact_kladno = get_sub_field('tel_box1_service_sec3_contact_kladno')) : ?>
+                                        <div class="person-info__phone">
+                                            <img src="<?php bloginfo('template_url'); ?>/assets/img/invest-kladno/contact/icon-phone.png" alt="ikona telefonu" />
+                                            <a class="text-main text-main--fw500" href="tel:<?php echo $tel_box1_service_sec3_contact_kladno; ?>"><?php echo $tel_box1_service_sec3_contact_kladno; ?></a>
+                                        </div>
+                                    <?php endif; ?>
+                                </div>
                             </div>
-                            <div class="person-info__position">
-                                <p class="text-main text-main--grey">
-                                    Specjalista ds. Nieruchomości
-                                </p>
-                            </div>
-                            <div class="person-info__email">
-                                <img src="<?php bloginfo('template_url'); ?>/assets/img/invest-kladno/contact/icon-email.png" alt=" ikona email" />
-                                <a class="text-main text-main--fw500" href="mailto:p.wajda@saveinvest.pl">p.wajda@saveinvest.pl</a>
-                            </div>
-                            <div class="person-info__phone">
-                                <img src="<?php bloginfo('template_url'); ?>/assets/img/invest-kladno/contact/icon-phone.png" alt="ikona telefonu" />
-                                <a class="text-main text-main--fw500" href="tel:+48570444266">+48 570 444 266</a>
-                            </div>
-                        </div>
-                    </div>
+                        <?php endwhile; ?>
+                    <?php endif; ?>
                 </div>
                 <div class="col-xxl-5">
-                    <div class="person-service">
-                        <div class="person-service__photo">
-                            <img src="<?php bloginfo('template_url'); ?>/assets/img/invest-kladno/contact/contact-photo6.jpg" alt="zdjęcie osoby z działu sprzedaży" />
+                    <?php if (have_rows('box2_service_sec3_contact_kladno')) : ?>
+                        <?php while (have_rows('box2_service_sec3_contact_kladno')) :
+                            the_row(); ?>
+                            <div class="person-service">
+                                <?php
+                                $photo_box2_service_sec3_contact_kladno = get_sub_field('photo_box2_service_sec3_contact_kladno');
+                                if ($photo_box2_service_sec3_contact_kladno) : ?>
+                                    <div class="person-service__photo">
+                                        <img src="<?php echo esc_url($photo_box2_service_sec3_contact_kladno['url']); ?>" alt="<?php echo esc_attr($photo_box2_service_sec3_contact_kladno['alt']); ?>" />
+                                    </div>
+                                <?php endif; ?>
+                                <div class="person-info">
+                                    <?php if ($name_box2_service_sec3_contact_kladno = get_sub_field('name_box2_service_sec3_contact_kladno')) : ?>
+                                        <div class="person-info__name">
+                                            <h6 class="f-h6 f-h6-fw600">
+                                                <?php echo $name_box2_service_sec3_contact_kladno; ?>
+                                            </h6>
+                                        </div>
+                                    <?php endif; ?>
+                                    <?php if ($positions_box2_service_sec3_contact_kladno = get_sub_field('positions_box2_service_sec3_contact_kladno')) : ?>
+                                        <div class="person-info__position">
+                                            <p class="text-main text-main--grey">
+                                                <?php echo $positions_box2_service_sec3_contact_kladno; ?>
+                                            </p>
+                                        </div>
+                                    <?php endif; ?>
+                                    <?php if ($mail_box2_service_sec3_contact_kladno = get_sub_field('mail_box2_service_sec3_contact_kladno')) : ?>
+                                        <?php echo $mail_box2_service_sec3_contact_kladno; ?>
+                                        <div class="person-info__email">
+                                            <img src="<?php bloginfo('template_url'); ?>/assets/img/invest-kladno/contact/icon-email.png" alt=" ikona email" />
+                                            <a class="text-main text-main--fw500" href="<?php echo $mail_box2_service_sec3_contact_kladno; ?>"><?php echo $mail_box2_service_sec3_contact_kladno; ?></a>
+                                        </div>
+                                    <?php endif; ?>
+                                    <?php if ($tel_box2_service_sec3_contact_kladno = get_sub_field('tel_box2_service_sec3_contact_kladno')) : ?>
+                                        <div class="person-info__phone">
+                                            <img src="<?php bloginfo('template_url'); ?>/assets/img/invest-kladno/contact/icon-phone.png" alt="ikona telefonu" />
+                                            <a class="text-main text-main--fw500" href="tel:<?php echo $tel_box2_service_sec3_contact_kladno; ?>"><?php echo $tel_box2_service_sec3_contact_kladno; ?></a>
+                                        </div>
+                                    <?php endif; ?>
+                                </div>
+                            </div>
+                        <?php endwhile; ?>
+                    <?php endif; ?>
 
-                        </div>
-                        <div class="person-info">
-                            <div class="person-info__name">
-                                <h6 class="f-h6 f-h6-fw600">
-                                    Przemysław Zając
-                                </h6>
-                            </div>
-                            <div class="person-info__position">
-                                <p class="text-main text-main--grey">
-                                    Specjalista ds. Nieruchomości
-                                </p>
-                            </div>
-                            <div class="person-info__email">
-                                <img src="<?php bloginfo('template_url'); ?>/assets/img/invest-kladno/contact/icon-email.png" alt=" ikona email" />
-                                <a class="text-main text-main--fw500" href="mailto:projekty@saveinvest.pl">projekty@saveinvest.pl</a>
-                            </div>
-                            <div class="person-info__phone">
-                                <img src="<?php bloginfo('template_url'); ?>/assets/img/invest-kladno/contact/icon-phone.png" alt="ikona telefonu" />
-                                <a class="text-main text-main--fw500" href="tel:+48570342222">+48 570 342 222</a>
-                            </div>
-                        </div>
-                    </div>
                 </div>
             </div>
         </div>
@@ -198,27 +211,19 @@ get_template_part('investitions/ostoja-kladno/header');
                 </div>
                 <div class="col-xl-5">
                     <div class="about-company-contact__content">
-                        <div class="title-content">
-                            <h5 class="f-h5">Saveinvest</h5>
-                        </div>
-                        <div class="text-content">
-                            <p class="text-main">
-                                Saveinvest od wielu lat działa na rynku
-                                inwestycji gruntowych. Nabywamy duże areały
-                                ziemi w najlepszych lokalizacjach i
-                                oferujemy naszym Klientom mniejsze działki,
-                                jako lokatę kapitału lub w celach
-                                budowlanych – pod zabudowę mieszkalną,
-                                deweloperską czy rekreacyjną.Naszą misją
-                                jest zabezpieczanie przyszłości finansowej
-                                Klientów i spełnianie ich marzeń o
-                                posiadaniu nieruchomości w wyjątkowej
-                                lokalizacji. Bezpieczeństwo inwestycji
-                                gwarantowane jest na każdym jej etapie, o
-                                czym przekonało się już kilkuset naszych
-                                zadowolonych Klientów.Zostań jednym z nich!
-                            </p>
-                        </div>
+
+                        <?php if ($title_sec4_contact_kladno = get_field('title_sec4_contact_kladno')) : ?>
+                            <div class="title-content">
+                                <h5 class="f-h5"><?php echo $title_sec4_contact_kladno; ?></h5>
+                            </div>
+                        <?php endif; ?>
+                        <?php if ($text_sec4_contact_kladno = get_field('text_sec4_contact_kladno')) : ?>
+                            <div class="text-content">
+                                <p class="text-main">
+                                    <?php echo $text_sec4_contact_kladno; ?>
+                                </p>
+                            </div>
+                        <?php endif; ?>
                     </div>
                 </div>
             </div>
@@ -233,70 +238,111 @@ get_template_part('investitions/ostoja-kladno/header');
                         <div class="box-row" id="counter">
                             <div class="box-row__info">
                                 <div class="numbers-info">
-                                    <h4 class="f-special f-special--yellow count percent" data-count="100">
-                                        0
-                                    </h4>
-                                    <h4 class="f-h4 f-h4--yellow">%</h4>
+                                    <?php if ($number_data1_sec5_contact_kladno = get_field('number_data1_sec5_contact_kladno')) : ?>
+                                        <h4 class="f-special f-special--yellow count percent" data-count="<?php echo $number_data1_sec5_contact_kladno; ?>">
+                                            0
+                                        </h4>
+                                    <?php endif; ?>
+                                    <?php if ($value_data1_sec5_contact_kladno = get_field('value_data1_sec5_contact_kladno')) : ?>
+                                        <h4 class="f-h4 f-h4--yellow"><?php echo $value_data1_sec5_contact_kladno; ?></h4>
+                                    <?php endif; ?>
                                 </div>
-                                <p class="text-main text-main--white">
-                                    sprawdzonych gruntów
-                                </p>
+                                <?php if ($text_data1_sec5_contact_kladno = get_field('text_data1_sec5_contact_kladno')) : ?>
+                                    <p class="text-main text-main--white">
+                                        <?php echo $text_data1_sec5_contact_kladno; ?>
+                                    </p>
+                                <?php endif; ?>
                             </div>
                             <div class="box-row__info">
                                 <div class="numbers-info">
-                                    <h4 class="f-special f-special--yellow" data-count="200">
-                                        0
-                                    </h4>
+                                    <?php if ($number_data2_sec5_contact_kladno = get_field('number_data2_sec5_contact_kladno')) : ?>
+                                        <h4 class="f-special f-special--yellow" data-count="<?php echo $number_data2_sec5_contact_kladno; ?>">
+                                            0
+                                        </h4>
+                                    <?php endif; ?>
+                                    <?php if ($value_data2_sec5_contact_kladno = get_field('value_data2_sec5_contact_kladno')) : ?>
+                                        <h4 class="f-h4 f-h4--yellow"> <?php echo $value_data2_sec5_contact_kladno; ?></h4>
+                                    <?php endif; ?>
                                 </div>
-                                <p class="text-main text-main--white">
-                                    sprawdzonych partnerów
-                                </p>
+                                <?php if ($text_data2_sec5_contact_kladno = get_field('text_data2_sec5_contact_kladno')) : ?>
+                                    <p class="text-main text-main--white">
+                                        <?php echo $text_data2_sec5_contact_kladno; ?>
+                                    </p>
+                                <?php endif; ?>
                             </div>
                             <div class="box-row__info">
                                 <div class="numbers-info">
-                                    <h4 class="f-special f-special--yellow" data-count="700">
-                                        0
-                                    </h4>
+                                    <?php if ($number_data3_sec5_contact_kladno = get_field('number_data3_sec5_contact_kladno')) : ?>
+                                        <h4 class="f-special f-special--yellow" data-count="<?php echo $number_data3_sec5_contact_kladno; ?>">
+                                            0
+                                        </h4>
+                                    <?php endif; ?>
+                                    <?php if ($value_data3_sec5_contact_kladno = get_field('value_data3_sec5_contact_kladno')) : ?>
+                                        <h4 class="f-h4 f-h4--yellow">
+                                            <?php echo $value_data3_sec5_contact_kladno; ?>
+                                        </h4>
+                                    <?php endif; ?>
                                 </div>
-                                <p class="text-main text-main--white">
-                                    zadowolonych klientów
-                                </p>
+                                <?php if ($text_data3_sec5_contact_kladno = get_field('text_data3_sec5_contact_kladno')) : ?>
+                                    <p class="text-main text-main--white">
+                                        <?php echo $text_data3_sec5_contact_kladno; ?>
+                                    </p>
+                                <?php endif; ?>
                             </div>
                         </div>
                         <div class="box-row">
                             <div class="box-row__info">
                                 <div class="numbers-info">
-                                    <h4 class="f-special f-special--yellow" data-count="1400">
-                                        0
-                                    </h4>
+                                    <?php if ($number_data4_sec5_contact_kladno = get_field('number_data4_sec5_contact_kladno')) : ?>
+                                        <h4 class="f-special f-special--yellow" data-count="<?php echo $number_data4_sec5_contact_kladno; ?>">
+                                            0
+                                        </h4>
+                                    <?php endif; ?>
+                                    <?php if ($value_data4_sec5_contact_kladno = get_field('value_data4_sec5_contact_kladno')) : ?>
+                                        <h4 class="f-h4 f-h4--yellow">
+                                            <?php echo $value_data4_sec5_contact_kladno; ?>
+                                        </h4>
+                                    <?php endif; ?>
                                 </div>
-                                <p class="text-main text-main--white">
-                                    eksperckich publikacji
-                                </p>
+                                <?php if ($text_data4_sec5_contact_kladno = get_field('text_data4_sec5_contact_kladno')) : ?>
+                                    <p class="text-main text-main--white">
+                                        <?php echo $text_data4_sec5_contact_kladno; ?>
+                                    </p>
+                                <?php endif; ?>
                             </div>
                             <div class="box-row__info">
                                 <div class="numbers-info">
-                                    <h4 class="f-special f-special--yellow" data-count="700000">
-                                        0
-                                    </h4>
-                                    <h4 class="f-h4 f-h4--yellow">
-                                        m<sup>2</sup>
-                                    </h4>
+                                    <?php if ($number_data5_sec5_contact_kladno = get_field('number_data5_sec5_contact_kladno')) : ?>
+                                        <h4 class="f-special f-special--yellow" data-count="<?php echo $number_data5_sec5_contact_kladno; ?>">
+                                            0
+                                        </h4>
+                                    <?php endif; ?>
+                                    <?php if ($value_data5_sec5_contact_kladno = get_field('value_data5_sec5_contact_kladno')) : ?>
+                                        <h4 class="f-h4 f-h4--yellow"><?php echo $value_data5_sec5_contact_kladno; ?></h4>
+                                    <?php endif; ?>
                                 </div>
-                                <p class="text-main text-main--white">
-                                    działek
-                                </p>
+                                <?php if ($text_data5_sec5_contact_kladno = get_field('text_data5_sec5_contact_kladno')) : ?>
+                                    <p class="text-main text-main--white">
+                                        <?php echo $text_data5_sec5_contact_kladno; ?>
+                                    </p>
+                                <?php endif; ?>
                             </div>
                             <div class="box-row__info">
                                 <div class="numbers-info">
-                                    <h4 class="f-special f-special--yellow" data-count="100">
-                                        0
-                                    </h4>
-                                    <h4 class="f-h4 f-h4--yellow">mln</h4>
+                                    <?php if ($number_data5_sec5_contact_kladno = get_field('number_data6_sec5_contact_kladno')) : ?>
+                                        <h4 class="f-special f-special--yellow" data-count="<?php echo $number_data5_sec5_contact_kladno; ?>">
+                                            0
+                                        </h4>
+                                    <?php endif; ?>
+                                    <?php if ($value_data5_sec5_contact_kladno = get_field('value_data6_sec5_contact_kladno')) : ?>
+                                        <h4 class="f-h4 f-h4--yellow"><?php echo $value_data5_sec5_contact_kladno; ?></h4>
+                                    <?php endif; ?>
                                 </div>
-                                <p class="text-main text-main--white">
-                                    kapitału w gruntach
-                                </p>
+                                <?php if ($text_data5_sec5_contact_kladno = get_field('text_data6_sec5_contact_kladno')) : ?>
+                                    <p class="text-main text-main--white">
+                                        <?php echo $text_data5_sec5_contact_kladno; ?>
+                                    </p>
+                                <?php endif; ?>
                             </div>
                         </div>
                     </div>
@@ -308,81 +354,38 @@ get_template_part('investitions/ostoja-kladno/header');
         <div class="container">
             <div class="row">
                 <div class="col-xl-12">
-                    <div class="testimonial-kladno__title">
-                        <h5 class="f-h5 f-h5--white">Sprawdź opinie naszych
-                            zadowolonych klientów</h5>
-                    </div>
+                    <?php if ($title_testimonial_sec6_contact_kladno = get_field('title_testimonial_sec6_contact_kladno')) : ?>
+                        <div class="testimonial-kladno__title">
+                            <h5 class="f-h5 f-h5--white"><?php echo $title_testimonial_sec6_contact_kladno; ?></h5>
+                        </div>
+                    <?php endif; ?>
                 </div>
                 <div class="col-xl-12">
                     <div class="testimonial-kladno__container">
                         <div class="box swiper">
                             <div class="swiper-wrapper">
-                            <div class="swiper-slide">
-                                    <div class="testimonial-kladno-box">
-                                        <div class="testimonial-kladno-box__text">
-                                            <p class="text-main text-main--white">" Gdy zdecydowałem się na sprzedaż, ekipa Saveinvest w ciągu 4 miesięcy znalazła nowego nabywcę i odsprzedała moją działkę ze sporym zyskiem :)"<br>
-                                        " Sprawa została poprowadzona wzorowo od początku do końca. Saveinvest znalazło klienta i podpisało umowę na podstawie mojego pełnomocnictwa - było to dla mnie ogromnym ułatwieniem bo mieszkam za granicą i nie musiałem specjalnie przylatywać do Polski."<br>
-                                        "Jestem bardzo zadowolony ze współpracy z firmą i serdecznie ją rekomenduję. Z wielką przyjemnością podpisuję się pod ich hasłem “Grunt to zysk”! ""
-                                    </p>
+                                <?php if (have_rows('testimonial_sec6_contact_kladno')) : ?>
+                                    <?php while (have_rows('testimonial_sec6_contact_kladno')) :
+                                        the_row(); ?>
+                                        <div class="swiper-slide">
+                                            <div class="testimonial-kladno-box">
+                                                <?php if ($text_testimonial_sec6_contact_kladno = get_sub_field('text_testimonial_sec6_contact_kladno')) : ?>
+                                                    <div class="testimonial-kladno-box__text">
+                                                        <p class="text-main text-main--white"><?php echo $text_testimonial_sec6_contact_kladno; ?>
+                                                        </p>
+                                                    </div>
+                                                <?php endif; ?>
+                                                <?php if ($name_testimonial_sec6_contact_kladno = get_sub_field('name_testimonial_sec6_contact_kladno')) : ?>
+                                                    <div class="testimonial-kladno-box__name">
+                                                        <p class="text-main text-main--fw700 text-main--white"><?php echo $name_testimonial_sec6_contact_kladno; ?></p>
+                                                    </div>
+                                                <?php endif; ?>
+                                            </div>
                                         </div>
-                                        <div class="testimonial-kladno-box__name">
-                                            <p class="text-main text-main--fw700 text-main--white">Elwis Lewczuk</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="swiper-slide">
-                                    <div class="testimonial-kladno-box">
-                                        <div class="testimonial-kladno-box__text">
-                                            <p class="text-main text-main--white">" Od firmy Saveinvest sp. z o.o. z Krakowa zakupiłem działkę w Jaworku, blisko gór. Otrzymałem świetna ofertę cenową, a w pakiecie również ułatwienia w postaci zajęcia się formalnościami przez firmę — idealna opcja dla wszystkich, którzy nie mają wiedzy lub czasu!"<br>
-                                        " Saveinvest przekształca samodzielnie moją działkę na budowlaną, a całym procesem zajmują się jej specjaliści. Dlatego też polecam kontakt z nimi — w przyjazny i fachowy sposób przeprowadzają klienta aż do podpisania aktu notarialnego."<br>
-                                        " Polecam i zachęcam do wyboru firmy Saveinvest! "
-                                        </p>
-                                        </div>
-                                        <div class="testimonial-kladno-box__name">
-                                            <p class="text-main text-main--fw700 text-main--white">Andrzej Biela</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="swiper-slide">
-                                    <div class="testimonial-kladno-box">
-                                        <div class="testimonial-kladno-box__text">
-                                            <p class="text-main text-main--white">" Saveinvest zajął się wydzieleniem działki oraz przekształceniem na działkę budowlaną. Zleciłam im odsprzedaż działki i nowego nabywcę znaleźli w ciągu 3 miesięcy. Działka została sprzedana ze sporym zyskiem dzięki temu, że została przekształcona na budowlaną i firma zajęła się doprowadzeniem infrastruktury. Dla mnie inwestycja była bezobsługowa. "</p>
-                                        </div>
-                                        <div class="testimonial-kladno-box__name">
-                                            <p class="text-main text-main--fw700 text-main--white">Elwira Redlarska</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="swiper-slide">
-                                    <div class="testimonial-kladno-box">
-                                        <div class="testimonial-kladno-box__text">
-                                            <p class="text-main text-main--white">" W dzisiejszych, pełnych oszustw czasach, oferta firmy Saveinvest wydaje się zbyt piękna by była prawdziwa. Ja sprawdziłem i mogę z całą pewnością polecić. Biznes bez ściemy. "</p>
-                                        </div>
-                                        <div class="testimonial-kladno-box__name">
-                                            <p class="text-main text-main--fw700 text-main--white">Radosław Wronski</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="swiper-slide">
-                                    <div class="testimonial-kladno-box">
-                                        <div class="testimonial-kladno-box__text">
-                                            <p class="text-main text-main--white">" Profesjonaliści, którzy nie tylko doradzą, ale także zajmą się każdym szczegółem, dbają o stały kontakt z klientem i dobre relacje! "</p>
-                                        </div>
-                                        <div class="testimonial-kladno-box__name">
-                                            <p class="text-main text-main--fw700 text-main--white">Agnieszka Herezy</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="swiper-slide">
-                                    <div class="testimonial-kladno-box">
-                                        <div class="testimonial-kladno-box__text">
-                                            <p class="text-main text-main--white">" Mogę z przyjemnością potwierdzić wszystkie pozytywne referencje i opinie o firmie Saveinvest sp. z o.o. z Krakowa. Jako nowy nabywca działki z oferty tej firmy mogę tylko napisać, że zachęcam wszystkich szukających działek do kontaktu z jej specjalistami. Miły, profesjonalny i fachowy kontakt, bardzo dobra oferta i brak formalności — wszystkie leżą po stronie Saveinvest.  "</p>
-                                        </div>
-                                        <div class="testimonial-kladno-box__name">
-                                            <p class="text-main text-main--fw700 text-main--white">Robert Dziki</p>
-                                        </div>
-                                    </div>
-                                </div>
+                                    <?php endwhile; ?>
+                                <?php endif; ?>
+
+                                
                             </div>
                             <div class="triangle"></div>
                         </div>
@@ -416,40 +419,47 @@ get_template_part('investitions/ostoja-kladno/header');
                         </div>
                         <div class="locat-info">
                             <div class="locat-info__data-firm">
-                                <p class="text-main text-main--fw600 text-main--f14">
-                                    Saveinvest Sp. z o.o.
-                                </p>
-                                <p class="text-main text-main--f14">
-                                    ul. Dunin Wąsowicza 8/9<br />
-                                    30-112 Kraków <br />
-                                    <a class="text-main text-main--f14" href="tel:+48888800800">
-                                        tel.: +48 888 800 800</a>
-                                </p>
-                                <p class="text-main text-main--f14">
-                                    Sąd rejonowy dla Krakowa-Śródmieścia w
-                                    Krakowie, <br />
-                                    XI Wydział Gospodarczy Krajowego
-                                    Rejestru Sądowego.
-                                </p>
-                                <p class="text-main text-main--f14">
-                                    NIP: 677-239-36-00<br />
-                                    REGON: 362746472<br />
-                                    KRS: 0000580800
-                                </p>
+                                <?php if ($name_firm_sec7_contact_kladno = get_field('name_firm_sec7_contact_kladno')) : ?>
+                                    <p class="text-main text-main--fw600 text-main--f14">
+                                        <?php echo $name_firm_sec7_contact_kladno; ?>
+                                    </p>
+                                <?php endif; ?>
+                                <?php if ($adres_firm_sec7_contact_kladno = get_field('adres_firm_sec7_contact_kladno')) : ?>
+                                    <p class="text-main text-main--f14">
+                                        <?php echo $adres_firm_sec7_contact_kladno; ?><br>
+                                        <?php if ($tel_firm_sec7_contact_kladno = get_field('tel_firm_sec7_contact_kladno')) : ?>
+                                            <a class="text-main text-main--f14" href="tel:	<?php echo $tel_firm_sec7_contact_kladno; ?>">
+                                                tel.: <?php echo $tel_firm_sec7_contact_kladno; ?></a>
+                                        <?php endif; ?>
+                                    </p>
+                                <?php endif; ?>
+                                <?php if ($data_firm_sec7_contact_kladno = get_field('data_firm_sec7_contact_kladno')) : ?>
+                                    <p class="text-main text-main--f14">
+                                        <?php echo $data_firm_sec7_contact_kladno; ?>
+                                    </p>
+                                <?php endif; ?>
+                                <?php if ($nip_data_firm_sec7_contact_kladno = get_field('nip_data_firm_sec7_contact_kladno')) : ?>
+                                    <p class="text-main text-main--f14">
+                                        <?php echo $nip_data_firm_sec7_contact_kladno; ?>
+                                    </p>
+                                <?php endif; ?>
                             </div>
                             <div class="locat-info__data-person">
-                                <p class="text-main text-main--fw600 text-main--f14">
-                                    Bartosz Antos
-                                </p>
-                                <p class="text-main text-main--f14">
-                                    ul. Dunin Wąsowicza 8/9<br />
-                                    30-112 Kraków <br />
-                                    NIP: 513-010-25-23
-                                </p>
-                                <p class="text-main text-main--f14">
-                                    Konto bankowe Alior Bank: <br />
-                                    92 2490 0005 0000 4500 5139 3978
-                                </p>
+                                <?php if ($name_person_sec7_contact_kladno = get_field('name_person_sec7_contact_kladno')) : ?>
+                                    <p class="text-main text-main--fw600 text-main--f14">
+                                        <?php echo $name_person_sec7_contact_kladno; ?>
+                                    </p>
+                                <?php endif; ?>
+                                <?php if ($adres_person_sec7_contact_kladno = get_field('adres_person_sec7_contact_kladno')) : ?>
+                                    <p class="text-main text-main--f14">
+                                        <?php echo $adres_person_sec7_contact_kladno; ?>
+                                    </p>
+                                <?php endif; ?>
+                                <?php if ($banc_sec7_contact_kladno = get_field('banc_sec7_contact_kladno')) : ?>
+                                    <p class="text-main text-main--f14">
+                                        <?php echo $banc_sec7_contact_kladno; ?>
+                                    </p>
+                                <?php endif; ?>
                             </div>
                         </div>
                     </div>
@@ -458,6 +468,9 @@ get_template_part('investitions/ostoja-kladno/header');
         </div>
     </section>
 </div>
+
+
+
 <?php
 get_template_part('investitions/ostoja-kladno/footer');
 ?>

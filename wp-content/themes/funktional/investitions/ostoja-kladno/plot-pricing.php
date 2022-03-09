@@ -158,10 +158,13 @@ $PlotsFront->getScriptsAndStyles('Ostoja Kładno');
                     <div class="row">
                         <div class="col-xl-10 col-lg-12">
                             <div class="plots-list__header__desc">
-                                <h2 class="f-h2">Lista działek</h2>
-                                <div class="text-main">
-                                    Do ceny netto należy doliczyć 23% podatku VAT. Przedsiębiorca otrzymuje zwrot podatku VAT w ciągu 30 lub 60 dni od wystąpienia o zwrot do urzędu skarbowego. Nakłady inwestycyjne związane z budową basenu i części rekreacyjnej oraz utwardzeniem drogi wewnętrznej zostaną podzielone na wszystkich właścicieli działek.
-                                </div>
+                                <?php if ($title_price_plot_kladno = get_field('title_price_plot_kladno')) : ?>
+                                    <h2 class="f-h2"><?php echo $title_price_plot_kladno; ?></h2>
+                                <?php endif; ?>
+                                <?php if ($text_price_plot_kladno = get_field('text_price_plot_kladno')) : ?>
+                                    <div class="text-main">
+                                        <?php echo $text_price_plot_kladno; ?></div>
+                                <?php endif; ?>
                             </div>
                         </div>
                         <div class="col-xl-2 col-lg-0">
@@ -269,10 +272,10 @@ $PlotsFront->getScriptsAndStyles('Ostoja Kładno');
                             </div>
                         </div>
                         <div class="plot-contact" data-plots-info-on-selected>
-                            <a href="#" class="plot-contact__btn plot-contact__btn--gold" target="_blank" data-plot-info-image-send-message  data-plot-info-show-if="status!=sprzedana">
+                            <a href="#" class="plot-contact__btn plot-contact__btn--gold" target="_blank" data-plot-info-image-send-message data-plot-info-show-if="status!=sprzedana">
                                 <?php echo file_get_contents(get_template_directory_uri() . '/assets/img/invest-kladno/mail.svg'); ?><span>WIADOMOŚĆ</span>
                             </a>
-                            <a href="" class="plot-contact__btn" target="_blank" data-plot-info-image-pdf-card  data-plot-info-show-if="status!=sprzedana">
+                            <a href="" class="plot-contact__btn" target="_blank" data-plot-info-image-pdf-card data-plot-info-show-if="status!=sprzedana">
                                 <?php echo file_get_contents(get_template_directory_uri() . '/assets/img/invest-kladno/download.svg'); ?><span>POBIERZ KARTĘ</span>
                             </a>
                         </div>
