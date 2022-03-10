@@ -8,17 +8,17 @@
 get_template_part('investitions/ostoja-kladno/header');
 ?>
 <div class="ik-gallery">
-    <section class="gallery-kladno">
+    <section class="gallery-kladno ">
         <div class="container">
             <div class="row">
                 <div class="col-xl-12">
                     <div class="gallery-kladno__title">
-                        <h5 class="f-h5">
+                        <h5 class="f-h5 el-fadein-kladno">
                             Czerp z natury, otaczającej Ostoję Kładno,
                             wybierz się nad morze lub spaceruj pośród drzew
                         </h5>
                     </div>
-                    <ul class="category">
+                    <ul class="category el-fadein-kladno">
                         <li class="category__item active" data-filter="all"> <span>WSZYSTKIE</span></li>
                         <li class="category__item" data-filter="picture"> <span>ZDJĘCIA I WIZUALIZACJE</span></li>
                         <li class="category__item" data-filter="video"> <span>FILMY</span></li>

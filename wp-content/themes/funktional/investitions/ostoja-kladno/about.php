@@ -15,8 +15,8 @@ get_template_part('investitions/ostoja-kladno/header');
             <div class="row">
                 <div class="col-xl-5">
                     <div class="hero1-about__box">
-                        <h2 class="f-h2">Ostoja Kładno</h2>
-                        <p class="text-main">
+                        <h2 class="f-h2 el-fadein-kladno">Ostoja Kładno</h2>
+                        <p class="text-main el-fadein-kladno">
                             Cisza, spokój, zieleń – poznaj wyjątkowe osiedle
                             działek, na którym posadzimy aż 200 drzew! Tu od
                             morza i piaszczystej plaży dzieli Cię tylko 2500
@@ -38,18 +38,19 @@ get_template_part('investitions/ostoja-kladno/header');
         </div>
     </section>
 
-    <section class="scroll-bottom">
+    <section class="scroll-bottom el-fadein-kladno">
         <img src="<?php bloginfo('template_url'); ?>/assets/img/invest-kladno/about/chevrons-down.png" alt="ikona" />
     </section>
     <div class="about-background">
+
         <img class="about-background-photo" src="<?php bloginfo('template_url'); ?>/assets/img/invest-kladno/about/background.png" alt="ikona" />
         <section class="icon-ostoja">
             <div class="container">
                 <div class="row">
                     <div class="col-xl-12">
                         <div class="icon-ostoja__content">
-                            <div class="content-boxs">
-                                <div class="content-box">
+                            <div class="content-boxs el-fadein-kladno">
+                                <div class="content-box ">
                                     <img src="<?php bloginfo('template_url'); ?>/assets/img/invest-kladno/about/about-icon1.png" alt="ikona" />
                                     <h6 class="f-h6 f-h6--fw600">
                                         2500 m do morza
@@ -87,7 +88,7 @@ get_template_part('investitions/ostoja-kladno/header');
                                     </p>
                                 </div>
                             </div>
-                            <div class="content-boxs">
+                            <div class="content-boxs el-fadein-kladno">
                                 <div class="content-box">
                                     <img src="<?php bloginfo('template_url'); ?>/assets/img/invest-kladno/about/about-icon5.png" alt="ikona" />
                                     <h6 class="f-h6 f-h6--fw600">
@@ -138,10 +139,10 @@ get_template_part('investitions/ostoja-kladno/header');
                 <div class="row">
                     <div class="offset-xl-3 col-xl-6">
                         <div class="financing-ostoja__content">
-                            <h2 class="f-h2 f-h2--white">
+                            <h2 class="f-h2 f-h2--white el-fadein-kladno">
                                 Spełniaj marzenia<br />i generuj zyski
                             </h2>
-                            <p class="text-main text-main--white">
+                            <p class="text-main text-main--white el-fadein-kladno">
                                 Szukasz idealnego miejsca dla siebie i swojej
                                 rodziny, a może chcesz zrealizować plany o
                                 własnym biznesie? Ostoja Kładno spełnia marzenia
@@ -162,10 +163,10 @@ get_template_part('investitions/ostoja-kladno/header');
             <div class="row">
                 <div class="col-xl-5">
                     <div class="location-ostoja__content">
-                        <div class="content-title">
+                        <div class="content-title el-fadein-kladno">
                             <h2 class="f-h2">U styku morza i lasu</h2>
                         </div>
-                        <div class="contnet-text">
+                        <div class="contnet-text el-fadein-kladno">
                             <p class="text-main">
                                 Kładno to sielska, kameralna miejscowość
                                 położona między dwoma nadmorskimi kurortami
@@ -181,11 +182,11 @@ get_template_part('investitions/ostoja-kladno/header');
                                 ekspresową S3.
                             </p>
                         </div>
-                        <a href="<?php the_permalink(616);?>" class="btn btn__line">LOKALIZACJA</a>
+                        <a href="<?php the_permalink(616); ?>" class="btn btn__line el-fadein-kladno">LOKALIZACJA</a>
                     </div>
                 </div>
                 <div class="offset-xl-1 col-xl-6">
-                    <div class="location-ostoja__photo">
+                    <div class="location-ostoja__photo reveal-kladno">
                         <img src="<?php bloginfo('template_url'); ?>/assets/img/invest-kladno/about/about-sea-beatch.jpg" alt="zdjęcie plaży" />
                     </div>
                 </div>

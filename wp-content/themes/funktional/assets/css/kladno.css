@@ -2555,25 +2555,96 @@ a:hover {
             width: 55px;
             height: 55px; } }
   .ik-frontpage .kladno-background {
-    min-height: 2500px;
+    min-height: 2401px;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    padding: 160px 0;
-    background: url(../img/invest-kladno/home-page/background-view.jpg);
-    background-size: cover;
-    background-position: center;
-    margin-top: 100px; }
-    @media (max-width: 991px) {
+    padding: 150px 0;
+    position: relative; }
+    .ik-frontpage .kladno-background__bg {
+      background: url(../img/invest-kladno/animation/1.png);
+      background-size: cover;
+      position: absolute;
+      top: 335px;
+      left: 0;
+      height: 1249px;
+      width: 100%;
+      z-index: 1; }
+      @media (max-width: 1200px) {
+        .ik-frontpage .kladno-background__bg {
+          display: none; } }
+    .ik-frontpage .kladno-background:before {
+      z-index: 2;
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 840px;
+      background: linear-gradient(179.38deg, rgba(14, 129, 194, 0.86) 0.53%, #0086d1 14.19%, rgba(104, 186, 245, 0.99) 68.42%, rgba(208, 235, 255, 0) 88.71%, rgba(255, 255, 255, 0) 98.58%); }
+    .ik-frontpage .kladno-background:after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 935px;
+      z-index: 9999;
+      background: linear-gradient(180deg, rgba(174, 255, 236, 0) 0%, rgba(47, 239, 228, 0) 5.05%, rgba(21, 179, 169, 0.21) 11.74%, rgba(0, 142, 151, 0.74) 23.2%, #008a9d 37.2%, #0c6fa7 96%); }
+    @media (max-width: 1199px) {
       .ik-frontpage .kladno-background {
-        padding: 50px 15px;
-        margin-top: 50px;
-        min-height: 1700px; } }
-    @media (max-width: 767px) {
-      .ik-frontpage .kladno-background {
-        min-height: 1450px; } }
+        min-height: auto;
+        background: url(../img/invest-kladno/home-page/background-view.jpg);
+        background-size: cover;
+        background-position: center;
+        padding: 50px 15px; }
+        .ik-frontpage .kladno-background:before {
+          height: 500px; }
+        .ik-frontpage .kladno-background:after {
+          height: 750px; } }
+    .ik-frontpage .kladno-background .wave {
+      position: absolute;
+      width: 100%;
+      background-repeat: no-repeat;
+      background-size: contain;
+      left: 0;
+      z-index: 100; }
+      .ik-frontpage .kladno-background .wave--2 {
+        top: 780px;
+        height: 809px;
+        z-index: 99;
+        background-position: bottom;
+        background: url(../img/invest-kladno/animation/2.png); }
+      .ik-frontpage .kladno-background .wave--3 {
+        height: 769px;
+        top: 940px;
+        z-index: 99;
+        background-position: bottom;
+        background: url(../img/invest-kladno/animation/3.png); }
+      .ik-frontpage .kladno-background .wave--4 {
+        height: 545px;
+        top: 1530px;
+        z-index: 999;
+        background-position: bottom;
+        background: url(../img/invest-kladno/animation/4.png); }
+      .ik-frontpage .kladno-background .wave--5 {
+        top: 1600px;
+        height: 550px;
+        background-size: cover !important;
+        z-index: 9999;
+        background-position: bottom;
+        background: url(../img/invest-kladno/animation/5.png); }
+      @media (max-width: 1199px) {
+        .ik-frontpage .kladno-background .wave--2 {
+          display: none; }
+        .ik-frontpage .kladno-background .wave--3 {
+          display: none; }
+        .ik-frontpage .kladno-background .wave--4 {
+          top: 946px; }
+        .ik-frontpage .kladno-background .wave--5 {
+          display: none; } }
     .ik-frontpage .kladno-background .information-ostoja {
-      margin-top: 100px; }
+      position: relative;
+      z-index: 3; }
       .ik-frontpage .kladno-background .information-ostoja__content {
         display: flex;
         justify-content: space-between;
@@ -2623,7 +2694,9 @@ a:hover {
             .ik-frontpage .kladno-background .information-ostoja__content .content-info__test {
               margin-top: 30px; } }
     .ik-frontpage .kladno-background .we-offer-ostoja {
-      margin-top: 100px; }
+      position: relative;
+      z-index: 999999;
+      margin-top: 1166px; }
       .ik-frontpage .kladno-background .we-offer-ostoja__title {
         display: flex;
         justify-content: center; }
@@ -2645,6 +2718,9 @@ a:hover {
             .ik-frontpage .kladno-background .we-offer-ostoja__content .content-boxs .content-box p {
               margin-top: 10px;
               text-align: center; }
+      @media (max-width: 1199px) {
+        .ik-frontpage .kladno-background .we-offer-ostoja {
+          margin-top: 550px; } }
       @media (max-width: 1399px) {
         .ik-frontpage .kladno-background .we-offer-ostoja .content-box p {
           font-size: 17px; } }
@@ -3204,7 +3280,11 @@ a:hover {
       .ik-frontpage .about-company__graphics .company-awards img {
         max-height: 20vw; } }
 
+.reveal-kladno {
+  overflow: hidden; }
+
 .ik-about {
+  position: relative;
   margin-top: 100px; }
   @media (max-width: 1199px) {
     .ik-about {
@@ -3218,7 +3298,8 @@ a:hover {
     background-position: right;
     display: flex;
     flex-direction: column;
-    justify-content: flex-end; }
+    justify-content: flex-end;
+    z-index: 999; }
     .ik-about .hero1-about__box {
       margin-bottom: 50px;
       padding: 55px 70px 60px 55px;
@@ -3250,7 +3331,8 @@ a:hover {
     height: 2038px;
     display: flex;
     flex-direction: column;
-    justify-content: space-between; }
+    justify-content: space-between;
+    z-index: 2; }
     .ik-about .about-background .about-background-photo {
       position: absolute;
       top: 0;
@@ -3259,7 +3341,9 @@ a:hover {
       width: 100%;
       object-fit: cover; }
     .ik-about .about-background .icon-ostoja {
-      margin: 45px 0 100px; }
+      margin: 45px 0 100px;
+      z-index: 2;
+      position: relative; }
       .ik-about .about-background .icon-ostoja .row {
         position: relative; }
         .ik-about .about-background .icon-ostoja .row::before {
@@ -5139,6 +5223,9 @@ a:hover {
 
 .ostoja-kladno-template-plot-pricing .plots-map {
   margin-top: 100px; }
+  @media (max-width: 1199px) {
+    .ostoja-kladno-template-plot-pricing .plots-map {
+      magin-top: 80px; } }
   .ostoja-kladno-template-plot-pricing .plots-map [data-plots-sector] {
     height: 1043px;
     position: relative; }
@@ -5238,7 +5325,7 @@ a:hover {
   width: 100%;
   background-color: #ffffff;
   position: fixed;
-  z-index: 9999; }
+  z-index: 999999; }
   @media (max-width: 1199px) {
     .kladno-nav {
       height: 80px; } }

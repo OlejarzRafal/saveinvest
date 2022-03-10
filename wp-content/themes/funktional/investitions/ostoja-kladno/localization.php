@@ -17,8 +17,8 @@ get_template_part('investitions/ostoja-kladno/header');
             <div class="row">
                 <div class="col-xl-5">
                     <div class="hero1-location__box">
-                        <h2 class="f-h2 f-h2--white">Bliżej niż myślisz</h2>
-                        <div class="box-text">
+                        <h2 class="f-h2 f-h2--white el-fadein-kladno">Bliżej niż myślisz</h2>
+                        <div class="box-text el-fadein-kladno">
                             <p class="text-main text-main--white">
                                 Z daleka od miejskiej codzienności, blisko
                                 atrakcji turystycznych i natury. Ostoja
@@ -31,7 +31,7 @@ get_template_part('investitions/ostoja-kladno/header');
                             </p>
                         </div>
                         <div class="table-location">
-                            <div class="row-table">
+                            <div class="row-table el-fadein-kladno">
                                 <div class="row-table__title">
                                     <p class="text-main text-main--white text-main--fw700"></p>
                                 </div>
@@ -46,7 +46,7 @@ get_template_part('investitions/ostoja-kladno/header');
                                     </p>
                                 </div>
                             </div>
-                            <div class="row-table">
+                            <div class="row-table el-fadein-kladno">
                                 <div class="row-table__title">
                                     <p class="text-main text-main--white text-main--fw700">
                                         Plaża
@@ -63,7 +63,7 @@ get_template_part('investitions/ostoja-kladno/header');
                                     </p>
                                 </div>
                             </div>
-                            <div class="row-table">
+                            <div class="row-table el-fadein-kladno">
                                 <div class="row-table__title">
                                     <p class="text-main text-main--white text-main--fw700">
                                         Latarnia morska Gąski
@@ -81,7 +81,7 @@ get_template_part('investitions/ostoja-kladno/header');
                                 </div>
                             </div>
 
-                            <div class="row-table">
+                            <div class="row-table el-fadein-kladno">
                                 <div class="row-table__title">
                                     <p class="text-main text-main--white text-main--fw700">
                                         Autostrada S6
@@ -98,7 +98,7 @@ get_template_part('investitions/ostoja-kladno/header');
                                     </p>
                                 </div>
                             </div>
-                            <div class="row-table">
+                            <div class="row-table el-fadein-kladno">
                                 <div class="row-table__title">
                                     <p class="text-main text-main--white text-main--fw700">
                                         Ustronie Morskie Promenada
@@ -115,7 +115,7 @@ get_template_part('investitions/ostoja-kladno/header');
                                     </p>
                                 </div>
                             </div>
-                            <div class="row-table">
+                            <div class="row-table el-fadein-kladno">
                                 <div class="row-table__title">
                                     <p class="text-main text-main--white text-main--fw700">
                                         Kołobrzeg
@@ -132,7 +132,7 @@ get_template_part('investitions/ostoja-kladno/header');
                                     </p>
                                 </div>
                             </div>
-                            <div class="row-table">
+                            <div class="row-table el-fadein-kladno">
                                 <div class="row-table__title">
                                     <p class="text-main text-main--white text-main--fw700">
                                         Mielno
@@ -153,7 +153,7 @@ get_template_part('investitions/ostoja-kladno/header');
                     </div>
                 </div>
                 <div class="col-xl-7">
-                    <div class="hero1-location__map">
+                    <div class="hero1-location__map reveal-kladno">
                         <img src="<?php bloginfo('template_url'); ?>/assets/img/invest-kladno/localization/location-map.png" alt="mapa" />
                     </div>
                 </div>

@@ -26,12 +26,12 @@ if ($(window).width() > 767) {
     });
   });
 
-  const boxes = gsap.utils.toArray(".el-fadein");
 
+  const boxes = gsap.utils.toArray(".el-fadein");
   boxes.forEach((box, i) => {
     const anim = gsap.fromTo(
       box,
-      { autoAlpha: 0, y: 50 },
+      { autoAlpha: 0, y: 70 },
       { duration: 1, autoAlpha: 1, y: 0 }
     );
     ScrollTrigger.create({

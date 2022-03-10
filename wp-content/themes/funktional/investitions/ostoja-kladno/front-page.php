@@ -26,7 +26,7 @@ get_template_part('investitions/ostoja-kladno/header');
                         <div class="col-xl-12">
                             <div class="front-slider-content">
                                 <div class="front-slider-content__text">
-                                    <h5 class="f-h5">Odkryj miejsce, które będzie<br> Twoją ostoją. Zamieszkaj nad<br> morzem i spełnij swoje marzenie!</h5>
+                                    <h5 class="f-h5 ">Odkryj miejsce, które będzie<br> Twoją ostoją. Zamieszkaj nad<br> morzem i spełnij swoje marzenie!</h5>
                                 </div>
                                 <div class="front-slider-pagination">
                                     <div class="swiper-pagination"></div>
@@ -174,7 +174,7 @@ get_template_part('investitions/ostoja-kladno/header');
             <div class="row">
                 <div class="col-xxl-7">
                     <div class="around-video__movie">
-                        <a data-fancybox="gallery" href="https://www.youtube.com/watch?v=_AusFKE_xpo&feature=youtu.be">
+                        <a class="reveal-kladno" data-fancybox="gallery" href="https://www.youtube.com/watch?v=_AusFKE_xpo&feature=youtu.be">
                             <img src="<?php bloginfo('template_url'); ?>/assets/img/invest-kladno/home-page/home-movie.jpg" alt="home-video">
                         </a>
                     </div>
@@ -182,9 +182,9 @@ get_template_part('investitions/ostoja-kladno/header');
                 <div class="offset-xxl-1 col-xxl-4">
                     <div class="around-video__content">
                         <div class="content-title">
-                            <h2 class="f-h2">Poznaj okolicę</h2>
+                            <h2 class="f-h2 el-fadein-kladno" >Poznaj okolicę</h2>
                         </div>
-                        <div class="contnet-text">
+                        <div class="contnet-text el-fadein-kladno">
                             <p class="text-main">
                                 Delikatna morska bryza, malownicza plaża,
                                 spokojna okolica – przekonaj się, że
@@ -208,14 +208,23 @@ get_template_part('investitions/ostoja-kladno/header');
     </section>
 
     <div class="kladno-background">
-
+        <div class="kladno-background__bg"></div>
+        <!-- animation -->
+        <!-- forest -->
+        <!-- <div id="wave-home-3" class="wave wave--1"></div> -->
+        <div id="wave-home-2" class="wave wave--2"></div>
+        <!-- wave -->
+        <div id="wave-home-3" class="wave wave--3"></div>
+        <div id="wave-home-4" class="wave wave--4"></div>
+        <div id="wave-home-5"  class="wave wave--5"></div>
+        
         <section class="information-ostoja">
             <div class="container">
                 <div class="row">
                     <div class="offset-xl-1 col-xl-10">
                         <div class="information-ostoja__content">
                             <div class="content-info">
-                                <div class="content-info__test">
+                                <div class="content-info__test el-fadein-kladno">
                                     <p class="text-main text-main--white text-main--italic">
                                         Ostoja Kładno to bliskość morza w
                                         otoczeniu urokliwych, zielonych terenów.
@@ -230,18 +239,18 @@ get_template_part('investitions/ostoja-kladno/header');
                                         nudzić.
                                     </p>
                                 </div>
-                                <div class="content-info__name">
+                                <div class="content-info__name el-fadein-kladno">
                                     <h6 class="f-h6 f-h6--white f-h6--fw600">
                                         Robert Tomaszewski
                                     </h6>
                                 </div>
-                                <div class="content-info__position">
+                                <div class="content-info__position el-fadein-kladno">
                                     <h6 class="f-h6 f-h6--white">
                                         PREZES SAVEINVEST
                                     </h6>
                                 </div>
                             </div>
-                            <div class="content-photo">
+                            <div class="content-photo el-fadein-kladno">
                                 <img src="<?php bloginfo('template_url'); ?>/assets/img/invest-kladno/home-page/home-person.jpg" alt="zdjęcie" />
                             </div>
                         </div>
@@ -255,14 +264,14 @@ get_template_part('investitions/ostoja-kladno/header');
                 <div class="row">
                     <div class="col-xl-12">
                         <div class="we-offer-ostoja__title">
-                            <h5 class="f-h5 f-h5--white">
+                            <h5 class="f-h5 f-h5--white el-fadein-kladno">
                                 W połączeniu z naturą dajemy Ci to, co najlepsze
                             </h5>
                         </div>
                     </div>
                     <div class="offset-xl-1 col-xl-10">
                         <div class="we-offer-ostoja__content">
-                            <div class="content-boxs">
+                            <div class="content-boxs el-fadein-kladno">
                                 <div class="content-box">
                                     <img src="<?php bloginfo('template_url'); ?>/assets/img/invest-kladno/home-page/icon-1-big-view.png" alt="okona morza" />
                                     <p class="text-main text-main--f20 text-main--white">
@@ -291,7 +300,7 @@ get_template_part('investitions/ostoja-kladno/header');
                                     </p>
                                 </div>
                             </div>
-                            <div class="content-boxs">
+                            <div class="content-boxs el-fadein-kladno">
                                 <div class="content-box">
                                     <img src="<?php bloginfo('template_url'); ?>/assets/img/invest-kladno/home-page/icon-5-big-view.png" alt="okona morza" />
                                     <p class="text-main text-main--f20 text-main--white">
@@ -331,19 +340,19 @@ get_template_part('investitions/ostoja-kladno/header');
         <div class="container">
             <div class="row">
                 <div class="col-xl-6">
-                    <div class="about-ostoja-home__photo">
+                    <div class="about-ostoja-home__photo reveal-kladno">
                         <img src="<?php bloginfo('template_url'); ?>/assets/img/invest-kladno/home-page/home-sea-beach.jpg" alt="" />
                     </div>
                 </div>
                 <div class="offset-xl-1 col-xl-5">
                     <div class="about-ostoja-home__content">
-                        <div class="content-title">
+                        <div class="content-title el-fadein-kladno">
                             <h2 class="f-h2">
                                 Oaza spokoju,<br />
                                 ostoja duszy…
                             </h2>
                         </div>
-                        <div class="contnet-text">
+                        <div class="contnet-text el-fadein-kladno">
                             <p class="text-main">
                                 Ostoja Kładno to miejsce, w którym odzyskasz
                                 spokój ducha i odetchniesz od miejskiego
@@ -356,7 +365,7 @@ get_template_part('investitions/ostoja-kladno/header');
                                 zaletach Pomorza Zachodniego.
                             </p>
                         </div>
-                        <a href="<?php the_permalink(615); ?>" class="btn btn__line">O OSTOI</a>
+                        <a href="<?php the_permalink(615); ?>" class="btn btn__line el-fadein-kladno">O OSTOI</a>
                     </div>
                 </div>
             </div>
@@ -367,12 +376,12 @@ get_template_part('investitions/ostoja-kladno/header');
             <div class="row">
                 <div class="col-xl-5">
                     <div class="recreational-area__content">
-                        <div class="content-title">
+                        <div class="content-title el-fadein-kladno">
                             <h2 class="f-h2">
                                 Działki ze zgłoszeniem pod domki rekreacyjne
                             </h2>
                         </div>
-                        <div class="contnet-text">
+                        <div class="contnet-text el-fadein-kladno">
                             <p class="text-main">
                                 Nowoczesna okolica o sielskim klimacie?
                                 Ostoja Kładno to osiedle działek
@@ -389,11 +398,11 @@ get_template_part('investitions/ostoja-kladno/header');
                                 bezpiecznej przyszłości.
                             </p>
                         </div>
-                        <a href="<?php the_permalink(617); ?>" class="btn btn__line">SPRAWDŹ CENY DZIAŁEK</a>
+                        <a href="<?php the_permalink(617); ?>" class="btn btn__line el-fadein-kladno">SPRAWDŹ CENY DZIAŁEK</a>
                     </div>
                 </div>
                 <div class="offset-xl-1 col-xl-6">
-                    <div class="recreational-area__photo">
+                    <div class="recreational-area__photo reveal-kladno">
                         <img src="<?php bloginfo('template_url'); ?>/assets/img/invest-kladno/home-page/home-house.jpg" alt="" />
                     </div>
                 </div>
@@ -401,7 +410,7 @@ get_template_part('investitions/ostoja-kladno/header');
         </div>
     </section>
     <section class="choice">
-        <a class="choice__location" href="<?php the_permalink(616);?>">
+        <a class="choice__location" href="<?php the_permalink(616); ?>">
             <div class="choice-photo">
                 <img src="<?php bloginfo('template_url'); ?>/assets/img/invest-kladno/home-page/home-location.jpg" alt="" />
             </div>
@@ -417,7 +426,7 @@ get_template_part('investitions/ostoja-kladno/header');
                 </p>
             </div>
         </a>
-        <a class="choice__price" href="<?php the_permalink(617);?>">
+        <a class="choice__price" href="<?php the_permalink(617); ?>">
             <div class="choice-photo">
                 <img src="<?php bloginfo('template_url'); ?>/assets/img/invest-kladno/home-page/home-price-of-plots.jpg" alt="" />
             </div>
