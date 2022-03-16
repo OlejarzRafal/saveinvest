@@ -9,7 +9,6 @@ get_template_part('investitions/ostoja-kladno/header');
 ?>
 
 <div class="ik-about">
-
     <section class="hero1-about">
         <div class="container">
             <div class="row">

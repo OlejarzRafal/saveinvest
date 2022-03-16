@@ -423,60 +423,6 @@ get_template_part('investitions/ostoja-kladno/header');
                                         </div>
                                     <?php endwhile; ?>
                                 <?php endif; ?>
-
-                                <!-- <div class="swiper-slide">
-                                    <div class="testimonial-kladno-box">
-                                        <div class="testimonial-kladno-box__text">
-                                            <p class="text-main text-main--white">" Od firmy Saveinvest sp. z o.o. z Krakowa zakupiłem działkę w Jaworku, blisko gór. Otrzymałem świetna ofertę cenową, a w pakiecie również ułatwienia w postaci zajęcia się formalnościami przez firmę — idealna opcja dla wszystkich, którzy nie mają wiedzy lub czasu!"<br>
-                                                " Saveinvest przekształca samodzielnie moją działkę na budowlaną, a całym procesem zajmują się jej specjaliści. Dlatego też polecam kontakt z nimi — w przyjazny i fachowy sposób przeprowadzają klienta aż do podpisania aktu notarialnego."<br>
-                                                " Polecam i zachęcam do wyboru firmy Saveinvest! "
-                                            </p>
-                                        </div>
-                                        <div class="testimonial-kladno-box__name">
-                                            <p class="text-main text-main--fw700 text-main--white">Andrzej Biela</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="swiper-slide">
-                                    <div class="testimonial-kladno-box">
-                                        <div class="testimonial-kladno-box__text">
-                                            <p class="text-main text-main--white">" Saveinvest zajął się wydzieleniem działki oraz przekształceniem na działkę budowlaną. Zleciłam im odsprzedaż działki i nowego nabywcę znaleźli w ciągu 3 miesięcy. Działka została sprzedana ze sporym zyskiem dzięki temu, że została przekształcona na budowlaną i firma zajęła się doprowadzeniem infrastruktury. Dla mnie inwestycja była bezobsługowa. "</p>
-                                        </div>
-                                        <div class="testimonial-kladno-box__name">
-                                            <p class="text-main text-main--fw700 text-main--white">Elwira Redlarska</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="swiper-slide">
-                                    <div class="testimonial-kladno-box">
-                                        <div class="testimonial-kladno-box__text">
-                                            <p class="text-main text-main--white">" W dzisiejszych, pełnych oszustw czasach, oferta firmy Saveinvest wydaje się zbyt piękna by była prawdziwa. Ja sprawdziłem i mogę z całą pewnością polecić. Biznes bez ściemy. "</p>
-                                        </div>
-                                        <div class="testimonial-kladno-box__name">
-                                            <p class="text-main text-main--fw700 text-main--white">Radosław Wronski</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="swiper-slide">
-                                    <div class="testimonial-kladno-box">
-                                        <div class="testimonial-kladno-box__text">
-                                            <p class="text-main text-main--white">" Profesjonaliści, którzy nie tylko doradzą, ale także zajmą się każdym szczegółem, dbają o stały kontakt z klientem i dobre relacje! "</p>
-                                        </div>
-                                        <div class="testimonial-kladno-box__name">
-                                            <p class="text-main text-main--fw700 text-main--white">Agnieszka Herezy</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="swiper-slide">
-                                    <div class="testimonial-kladno-box">
-                                        <div class="testimonial-kladno-box__text">
-                                            <p class="text-main text-main--white">" Mogę z przyjemnością potwierdzić wszystkie pozytywne referencje i opinie o firmie Saveinvest sp. z o.o. z Krakowa. Jako nowy nabywca działki z oferty tej firmy mogę tylko napisać, że zachęcam wszystkich szukających działek do kontaktu z jej specjalistami. Miły, profesjonalny i fachowy kontakt, bardzo dobra oferta i brak formalności — wszystkie leżą po stronie Saveinvest. "</p>
-                                        </div>
-                                        <div class="testimonial-kladno-box__name">
-                                            <p class="text-main text-main--fw700 text-main--white">Robert Dziki</p>
-                                        </div>
-                                    </div>
-                                </div> -->
                             </div>
                             <div class="triangle"></div>
                         </div>
