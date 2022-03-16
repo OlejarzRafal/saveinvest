@@ -37,6 +37,15 @@ function my_acf_op_init()
     'redirect'    => false
 
   ));
+   // Register options page.
+   $option_page = acf_add_options_page(array(
+    'page_title'   => 'Stopka Kladno',
+    'menu_title'  => 'Stopka Kladno',
+    'menu_slug'   => 'stopka-kladno',
+    'capability'  => 'edit_posts',
+    'redirect'    => false
+
+  ));
 }
 add_theme_support( 'post-thumbnails' );
 add_theme_support( 'title-tag' );

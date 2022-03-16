@@ -350,6 +350,7 @@ get_template_part('investitions/ostoja-kladno/header');
             </div>
         </div>
     </section>
+
     <section class="testimonial-kladno">
         <div class="container">
             <div class="row">
@@ -384,12 +385,9 @@ get_template_part('investitions/ostoja-kladno/header');
                                         </div>
                                     <?php endwhile; ?>
                                 <?php endif; ?>
-
-                                
                             </div>
                             <div class="triangle"></div>
                         </div>
-
                     </div>
                     <div class="swiper-contenet-testimonial">
                         <div class="swiper-button-prev"></div>
@@ -468,8 +466,6 @@ get_template_part('investitions/ostoja-kladno/header');
         </div>
     </section>
 </div>
-
-
 
 <?php
 get_template_part('investitions/ostoja-kladno/footer');

@@ -255,11 +255,11 @@ get_template_part('investitions/ostoja-kladno/header');
         </div>
     </section>
 
-
     <section class="map-location">
         <img src="<?php bloginfo('template_url'); ?>/assets/img/invest-kladno/localization/map-sea.jpg" alt="mapa Polski część nad morska" />
     </section>
 </div>
+
 <?php
 get_template_part('investitions/ostoja-kladno/footer');
 ?>

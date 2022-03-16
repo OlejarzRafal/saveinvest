@@ -12,15 +12,10 @@ get_template_part('investitions/ostoja-kladno/header');
 
     <section class="front-slider swiper">
         <div class="swiper-wrapper">
-
             <?php if (have_rows('slider_hp_kladno')) : ?>
                 <?php while (have_rows('slider_hp_kladno')) :
                     the_row(); ?>
-
-
-
                     <div class="swiper-slide">
-
                         <?php
                         $photo_slider_hp_kladno = get_sub_field('photo_slider_hp_kladno');
                         if ($photo_slider_hp_kladno) : ?>
@@ -28,9 +23,6 @@ get_template_part('investitions/ostoja-kladno/header');
                                 <img src="<?php echo esc_url($photo_slider_hp_kladno['url']); ?>" alt="<?php echo esc_attr($photo_slider_hp_kladno['alt']); ?>" />
                             </div>
                         <?php endif; ?>
-
-
-
                         <div class="container">
                             <div class="row">
                                 <div class="col-xl-12">
@@ -59,13 +51,9 @@ get_template_part('investitions/ostoja-kladno/header');
                                 </div>
                             </div>
                         </div>
-
-
                     </div>
-
                 <?php endwhile; ?>
             <?php endif; ?>
-
         </div>
     </section>
 
@@ -128,7 +116,6 @@ get_template_part('investitions/ostoja-kladno/header');
                                         </p>
                                     </div>
                                 <?php endif; ?>
-
                                 <?php if ($name_sec2_hp_kladno = get_field('name_sec2_hp_kladno')) : ?>
                                     <div class="content-info__name">
                                         <h6 class="f-h6 f-h6--white f-h6--fw600">
@@ -136,7 +123,6 @@ get_template_part('investitions/ostoja-kladno/header');
                                         </h6>
                                     </div>
                                 <?php endif; ?>
-
                                 <?php if ($positon_sec2_hp_kladno = get_field('positon_sec2_hp_kladno')) : ?>
                                     <div class="content-info__position">
                                         <h6 class="f-h6 f-h6--white">
@@ -145,7 +131,6 @@ get_template_part('investitions/ostoja-kladno/header');
                                     </div>
                                 <?php endif; ?>
                             </div>
-
                             <?php
                             $photo_person_sec2_hp_kladno = get_field('photo_person_sec2_hp_kladno');
                             if ($photo_person_sec2_hp_kladno) : ?>
@@ -153,7 +138,6 @@ get_template_part('investitions/ostoja-kladno/header');
                                     <img src="<?php echo esc_url($photo_person_sec2_hp_kladno['url']); ?>" alt="<?php echo esc_attr($photo_person_sec2_hp_kladno['alt']); ?>" />
                                 </div>
                             <?php endif; ?>
-
                         </div>
                     </div>
                 </div>

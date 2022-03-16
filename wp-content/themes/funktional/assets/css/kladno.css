@@ -5148,6 +5148,22 @@ a:hover {
   .ik-lokalizations .hero1-location__box .table-location .row-table__distance {
     min-width: 100px;
   }
+  .ik-lokalizations .hero1-location__box .table-location::-webkit-scrollbar-track {
+    border-radius: 10px;
+    position: absolute;
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    background-color: #003b5c;
+  }
+  .ik-lokalizations .hero1-location__box .table-location::-webkit-scrollbar {
+    width: 10px;
+    background-color: #003b5c;
+    height: 5px;
+  }
+  .ik-lokalizations .hero1-location__box .table-location::-webkit-scrollbar-thumb {
+    background-color: #1c71a1;
+    border: 1px solid #0a2534;
+    border-radius: 10px;
+  }
   .ik-lokalizations .hero1-location__map::before {
     content: "";
     position: absolute;

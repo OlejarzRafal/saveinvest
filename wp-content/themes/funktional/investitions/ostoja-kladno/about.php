@@ -172,6 +172,7 @@ get_template_part('investitions/ostoja-kladno/header');
             </div>
         </section>
     </div>
+    
     <section class="location-ostoja">
         <div class="container">
             <div class="row">
