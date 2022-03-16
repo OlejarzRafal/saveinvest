@@ -9,7 +9,6 @@ get_template_part('investitions/ostoja-kladno/header');
 ?>
 
 <div class="ik-about">
-
     <section class="hero1-about">
         <div class="container">
             <div class="row">
@@ -183,6 +182,18 @@ get_template_part('investitions/ostoja-kladno/header');
                             </p>
                         </div>
                         <a href="<?php the_permalink(616); ?>" class="btn btn__line el-fadein-kladno">LOKALIZACJA</a>
+                    </div>
+                </div>
+                <div class="offset-xl-1 col-xl-6">
+                    <div class="location-ostoja__photo reveal-kladno">
+                    </div>
+                </div>
+                <div class="offset-xl-1 col-xl-6">
+                    <div class="location-ostoja__photo reveal-kladno">
+                    </div>
+                </div>
+                <div class="offset-xl-1 col-xl-6">
+                    <div class="location-ostoja__photo reveal-kladno">
                     </div>
                 </div>
                 <div class="offset-xl-1 col-xl-6">
