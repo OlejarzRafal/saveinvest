@@ -15,23 +15,14 @@ get_template_part('investitions/ostoja-kladno/header');
             <div class="row">
                 <div class="col-xl-5">
                     <div class="hero1-about__box">
-                        <h2 class="f-h2 el-fadein-kladno">Ostoja Kładno</h2>
-                        <p class="text-main el-fadein-kladno">
-                            Cisza, spokój, zieleń – poznaj wyjątkowe osiedle
-                            działek, na którym posadzimy aż 200 drzew! Tu od
-                            morza i piaszczystej plaży dzieli Cię tylko 2500
-                            m, dlatego każdego dnia możesz cieszyć się
-                            nadmorskim klimatem i delikatną bryzą. Asfaltowa
-                            droga gminna zapewnia wygodny dojazd, a
-                            ogrodzenie i wjazd gwarantują bezpieczeństwo
-                            Tobie, Twojej rodzinie i odwiedzającym Cię
-                            gościom.<br /><br />
-                            Możesz delektować się malowniczym pejzażem albo
-                            odkrywać uroki sąsiadujących z Ostoją
-                            lokalizacji. Gwarantujemy, że zakochasz się w
-                            krajobrazie Koszalińskiego Pasa Nadmorskiego i…
-                            zostaniesz tu na dłużej!
-                        </p>
+                        <?php if ($title_sec1_about_kladno = get_field('title_sec1_about_kladno')) : ?>
+                            <h2 class="f-h2"><?php echo $title_sec1_about_kladno; ?></h2>
+                        <?php endif; ?>
+                        <?php if ($text_sec1_about_kladno = get_field('text_sec1_about_kladno')) : ?>
+                            <p class="text-main">
+                                <?php echo $text_sec1_about_kladno; ?>
+                            </p>
+                        <?php endif; ?>
                     </div>
                 </div>
             </div>
@@ -41,6 +32,7 @@ get_template_part('investitions/ostoja-kladno/header');
     <section class="scroll-bottom el-fadein-kladno">
         <img src="<?php bloginfo('template_url'); ?>/assets/img/invest-kladno/about/chevrons-down.png" alt="ikona" />
     </section>
+
     <div class="about-background">
 
         <img class="about-background-photo" src="<?php bloginfo('template_url'); ?>/assets/img/invest-kladno/about/background.png" alt="ikona" />
@@ -52,80 +44,105 @@ get_template_part('investitions/ostoja-kladno/header');
                             <div class="content-boxs el-fadein-kladno">
                                 <div class="content-box ">
                                     <img src="<?php bloginfo('template_url'); ?>/assets/img/invest-kladno/about/about-icon1.png" alt="ikona" />
-                                    <h6 class="f-h6 f-h6--fw600">
-                                        2500 m do morza
-                                    </h6>
-                                    <p class="text-main text-main--f20">
-                                        do Bałtyku i piaszczystej plaży dzieli
-                                        Cię spacer lub kilka<br />
-                                        minut jazdy rowerem
-                                    </p>
+                                    <?php if ($bolt_text1_sec2_about_kladno = get_field('bolt_text1_sec2_about_kladno')) : ?>
+                                        <h6 class="f-h6 f-h6--fw600">
+                                            <?php echo $bolt_text1_sec2_about_kladno; ?>
+                                        </h6>
+                                    <?php endif; ?>
+                                    <?php if ($text1_sec2_about_kladno = get_field('text1_sec2_about_kladno')) : ?>
+                                        <p class="text-main text-main--f20">
+                                            <?php echo $text1_sec2_about_kladno; ?>
+                                        </p>
+                                    <?php endif; ?>
                                 </div>
                                 <div class="content-box">
                                     <img src="<?php bloginfo('template_url'); ?>/assets/img/invest-kladno/about/about-icon2.png" alt="ikona" />
-                                    <h6 class="f-h6 f-h6--fw600">60 działek</h6>
-                                    <p class="text-main text-main--f20">
-                                        działki rekreacyjne ze zgłoszeniami pod
-                                        domki rekreacyjne
-                                    </p>
+                                    <?php if ($bolt_text2_sec2_about_kladno = get_field('bolt_text2_sec2_about_kladno')) : ?>
+                                        <h6 class="f-h6 f-h6--fw600"><?php echo $bolt_text2_sec2_about_kladno; ?></h6>
+                                    <?php endif; ?>
+                                    <?php if ($text2_sec2_about_kladno = get_field('text2_sec2_about_kladno')) : ?>
+                                        <p class="text-main text-main--f20">
+                                            <?php echo $text2_sec2_about_kladno; ?>
+                                        </p>
+                                    <?php endif; ?>
                                 </div>
                                 <div class="content-box">
                                     <img src="<?php bloginfo('template_url'); ?>/assets/img/invest-kladno/about/about-icon3.png" alt="ikona" />
-                                    <h6 class="f-h6 f-h6--fw600">500 drzew</h6>
-                                    <p class="text-main text-main--f20">
-                                        na terenie osiedla otoczy Cię zieleń i
-                                        natura
-                                    </p>
+                                    <?php if ($bolt_text3_sec2_about_kladno = get_field('bolt_text3_sec2_about_kladno')) : ?>
+                                        <h6 class="f-h6 f-h6--fw600"><?php echo $bolt_text3_sec2_about_kladno; ?></h6>
+                                    <?php endif; ?>
+                                    <?php if ($text3_sec2_about_kladno = get_field('text3_sec2_about_kladno')) : ?>
+                                        <p class="text-main text-main--f20">
+                                            <?php echo $text3_sec2_about_kladno; ?>
+                                        </p>
+                                    <?php endif; ?>
                                 </div>
                                 <div class="content-box">
                                     <img src="<?php bloginfo('template_url'); ?>/assets/img/invest-kladno/about/about-icon4.png" alt="ikona" />
-                                    <h6 class="f-h6 f-h6--fw600">
-                                        Utwardzona droga i wjazd
-                                    </h6>
-                                    <p class="text-main text-main--f20">
-                                        zapewniamy dogodny dojazd<br />
-                                        do działki
-                                    </p>
+                                    <?php if ($bolt_text4_sec2_about_kladno = get_field('bolt_text4_sec2_about_kladno')) : ?>
+                                        <h6 class="f-h6 f-h6--fw600">
+                                            <?php echo $bolt_text4_sec2_about_kladno; ?>
+                                        </h6>
+                                    <?php endif; ?>
+                                    <?php if ($text4_sec2_about_kladno = get_field('text4_sec2_about_kladno')) : ?>
+                                        <p class="text-main text-main--f20">
+                                            <?php echo $text4_sec2_about_kladno; ?>
+                                        </p>
+                                    <?php endif; ?>
                                 </div>
                             </div>
                             <div class="content-boxs el-fadein-kladno">
                                 <div class="content-box">
                                     <img src="<?php bloginfo('template_url'); ?>/assets/img/invest-kladno/about/about-icon5.png" alt="ikona" />
-                                    <h6 class="f-h6 f-h6--fw600">
-                                        Ogrodzenie zewnętrzne
-                                    </h6>
-                                    <p class="text-main text-main--f20">
-                                        to gwarancja bezpieczeństwa<br />
-                                        i spokoju
-                                    </p>
+                                    <?php if ($bolt_text5_sec2_about_kladno = get_field('bolt_text5_sec2_about_kladno')) : ?>
+                                        <h6 class="f-h6 f-h6--fw600">
+                                            <?php echo $bolt_text5_sec2_about_kladno; ?>
+                                        </h6>
+                                    <?php endif; ?>
+                                    <?php if ($text5_sec2_about_kladno = get_field('text5_sec2_about_kladno')) : ?>
+                                        <p class="text-main text-main--f20">
+                                            <?php echo $text5_sec2_about_kladno; ?>
+                                        </p>
+                                    <?php endif; ?>
                                 </div>
                                 <div class="content-box">
                                     <img src="<?php bloginfo('template_url'); ?>/assets/img/invest-kladno/about/about-icon6.png" alt="ikona" />
-                                    <h6 class="f-h6 f-h6--fw600">
-                                        Prąd w drodze
-                                    </h6>
-                                    <p class="text-main text-main--f20">
-                                        możliwość szybkiego przyłączenia
-                                    </p>
+                                    <?php if ($bolt_text6_sec2_about_kladno = get_field('bolt_text6_sec2_about_kladno')) : ?>
+                                        <h6 class="f-h6 f-h6--fw600">
+                                            <?php echo $bolt_text6_sec2_about_kladno; ?>
+                                        </h6>
+                                    <?php endif; ?>
+                                    <?php if ($text6_sec2_about_kladno = get_field('text6_sec2_about_kladno')) : ?>
+                                        <p class="text-main text-main--f20">
+                                            <?php echo $text6_sec2_about_kladno; ?>
+                                        </p>
+                                    <?php endif; ?>
                                 </div>
                                 <div class="content-box">
                                     <img src="<?php bloginfo('template_url'); ?>/assets/img/invest-kladno/about/about-icon7.png" alt="ikona" />
-                                    <h6 class="f-h6 f-h6--fw600">
-                                        Doprowadzimy<br />przyłącze wody
-                                    </h6>
-                                    <p class="text-main text-main--f20">
-                                        nie musisz martwić się formalnościami
-                                    </p>
+                                    <?php if ($bolt_text7_sec2_about_kladno = get_field('bolt_text7_sec2_about_kladno')) : ?>
+                                        <h6 class="f-h6 f-h6--fw600">
+                                            <?php echo $bolt_text7_sec2_about_kladno; ?>
+                                        </h6>
+                                    <?php endif; ?>
+                                    <?php if ($text7_sec2_about_kladno = get_field('text7_sec2_about_kladno')) : ?>
+                                        <p class="text-main text-main--f20">
+                                            <?php echo $text7_sec2_about_kladno; ?>
+                                        </p>
+                                    <?php endif; ?>
                                 </div>
                                 <div class="content-box">
                                     <img src="<?php bloginfo('template_url'); ?>/assets/img/invest-kladno/about/about-icon8.png" alt="ikona" />
-                                    <h6 class="f-h6 f-h6--fw600">
-                                        Atrakcje turystyczne
-                                    </h6>
-                                    <p class="text-main text-main--f20">
-                                        20 minut jazdy samochodem<br />
-                                        do Kołobrzegu oraz Mielna
-                                    </p>
+                                    <?php if ($bolt_text8_sec2_about_kladno = get_field('bolt_text8_sec2_about_kladno')) : ?>
+                                        <h6 class="f-h6 f-h6--fw600">
+                                            <?php echo $bolt_text8_sec2_about_kladno; ?>
+                                        </h6>
+                                    <?php endif; ?>
+                                    <?php if ($text8_sec2_about_kladno = get_field('text8_sec2_about_kladno')) : ?>
+                                        <p class="text-main text-main--f20">
+                                            <?php echo $text8_sec2_about_kladno; ?>
+                                        </p>
+                                    <?php endif; ?>
                                 </div>
                             </div>
                         </div>
@@ -139,56 +156,54 @@ get_template_part('investitions/ostoja-kladno/header');
                 <div class="row">
                     <div class="offset-xl-3 col-xl-6">
                         <div class="financing-ostoja__content">
-                            <h2 class="f-h2 f-h2--white el-fadein-kladno">
-                                Spełniaj marzenia<br />i generuj zyski
-                            </h2>
-                            <p class="text-main text-main--white el-fadein-kladno">
-                                Szukasz idealnego miejsca dla siebie i swojej
-                                rodziny, a może chcesz zrealizować plany o
-                                własnym biznesie? Ostoja Kładno spełnia marzenia
-                                o bezpiecznej przyszłości. Zielona oaza spokoju
-                                usytuowana w sąsiedztwie morza i lasu to
-                                bezpieczna przystań, w której Ty lub Twoi goście
-                                błogo spędzą czas i zregenerują siły.
-                            </p>
-                            <!-- <a href="#" class="btn btn__line-yellow btn--yellow">FINANSOWANIE</a> -->
+                            <?php if ($title_sec3_about_kladno = get_field('title_sec3_about_kladno')) : ?>
+                                <h2 class="f-h2 f-h2--white">
+                                    <?php echo $title_sec3_about_kladno; ?>
+                                </h2>
+                            <?php endif; ?>
+                            <?php if ($text_sec3_about_kladno = get_field('text_sec3_about_kladno')) : ?>
+                                <p class="text-main text-main--white">
+                                    <?php echo $text_sec3_about_kladno; ?>
+                                </p>
+                            <?php endif; ?>
+                            <a href="#" class="btn btn__line-yellow btn--yellow">FINANSOWANIE</a>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
     </div>
+    
     <section class="location-ostoja">
         <div class="container">
             <div class="row">
                 <div class="col-xl-5">
                     <div class="location-ostoja__content">
-                        <div class="content-title el-fadein-kladno">
-                            <h2 class="f-h2">U styku morza i lasu</h2>
-                        </div>
-                        <div class="contnet-text el-fadein-kladno">
-                            <p class="text-main">
-                                Kładno to sielska, kameralna miejscowość
-                                położona między dwoma nadmorskimi kurortami
-                                – Kołobrzegiem i Mielnem. Przywita Cię żywą
-                                zielenią, czystym powietrzem i bogatą
-                                roślinnością. Tutaj odpoczniesz od zgiełku
-                                miasta, ale też szybko i bez problemu
-                                dostaniesz się do nadmorskich atrakcji –
-                                plaży w Pleśnej, pobliskiego Ustronia
-                                Morskiego lub Gąsek, znanych z zabytkowej
-                                latarni morskiej. Do znakomicie
-                                skomunikowanego Kładna dostaniesz się drogą
-                                ekspresową S3.
-                            </p>
-                        </div>
-                        <a href="<?php the_permalink(616); ?>" class="btn btn__line el-fadein-kladno">LOKALIZACJA</a>
+                        <?php if ($title_sec4_about_kladno = get_field('title_sec4_about_kladno')) : ?>
+                            <div class="content-title">
+                                <h2 class="f-h2"><?php echo $title_sec4_about_kladno; ?></h2>
+                            </div>
+                        <?php endif; ?>
+                        <?php if ($text_sec4_about_kladno = get_field('text_sec4_about_kladno')) : ?>
+                            <div class="contnet-text">
+                                <p class="text-main">
+                                    <?php echo $text_sec4_about_kladno; ?>
+                                </p>
+                            </div>
+                        <?php endif; ?>
+                        <?php if ($btn_text_sec4_about_kladno = get_field('btn_text_sec4_about_kladno')) : ?>
+                            <a href="<?php the_permalink(616); ?>" class="btn btn__line"> <?php echo  $btn_text_sec4_about_kladno; ?></a>
+                        <?php endif; ?>
                     </div>
                 </div>
                 <div class="offset-xl-1 col-xl-6">
-                    <div class="location-ostoja__photo reveal-kladno">
-                        <img src="<?php bloginfo('template_url'); ?>/assets/img/invest-kladno/about/about-sea-beatch.jpg" alt="zdjęcie plaży" />
-                    </div>
+                    <?php
+                    $photo_sec4_about_kladno = get_field('photo_sec4_about_kladno');
+                    if ($photo_sec4_about_kladno) : ?>
+                        <div class="location-ostoja__photo">
+                            <img src="<?php echo esc_url($photo_sec4_about_kladno['url']); ?>" alt="<?php echo esc_attr($photo_sec4_about_kladno['alt']); ?>" />
+                        </div>
+                    <?php endif; ?>
                 </div>
             </div>
         </div>

@@ -13,7 +13,8 @@ class PlotsFront
     {
         $plotsPosts = get_posts(array(
             'post_type' => 'plots',
-            'posts_per_page' => -1,
+            'posts_per_page' => 28,
+            'orderby'   => 'meta_value',
             'post_status' => 'publish',
             'meta_query' => array(
                 array(

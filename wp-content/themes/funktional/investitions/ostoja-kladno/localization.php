@@ -17,19 +17,16 @@ get_template_part('investitions/ostoja-kladno/header');
             <div class="row">
                 <div class="col-xl-5">
                     <div class="hero1-location__box">
-                        <h2 class="f-h2 f-h2--white el-fadein-kladno">Bliżej niż myślisz</h2>
-                        <div class="box-text el-fadein-kladno">
-                            <p class="text-main text-main--white">
-                                Z daleka od miejskiej codzienności, blisko
-                                atrakcji turystycznych i natury. Ostoja
-                                Kładno to doskonały punkt wypadowy, z
-                                którego w 20 minut dojedziesz do Mielna i
-                                Kołobrzegu. Droga do pobliskich Gąsek,
-                                Ustronia Morskiego i znanych piaszczystych
-                                plaż w Pleśnej to zaledwie kilka minut
-                                spacerem.
-                            </p>
-                        </div>
+                        <?php if ($title_sec1_localization_kladno = get_field('title_sec1_localization_kladno')) : ?>
+                            <h2 class="f-h2 f-h2--white"> <?php echo $title_sec1_localization_kladno; ?></h2>
+                        <?php endif; ?>
+                        <?php if ($text_sec1_localization_kladno = get_field('text_sec1_localization_kladno')) : ?>
+                            <div class="box-text">
+                                <p class="text-main text-main--white">
+                                    <?php echo $text_sec1_localization_kladno; ?>
+                                </p>
+                            </div>
+                        <?php endif; ?>
                         <div class="table-location">
                             <div class="row-table el-fadein-kladno">
                                 <div class="row-table__title">
@@ -170,67 +167,81 @@ get_template_part('investitions/ostoja-kladno/header');
                             <div class="swiper-slide">
                                 <div class="content-box ">
                                     <img src="<?php bloginfo('template_url'); ?>/assets/img/invest-kladno/about/about-icon1.png" alt="ikona" />
-                                    <p class="text-main text-main--f20">
-                                        30 min spacerem<br> do morza
-                                    </p>
+                                    <?php if ($text_icon1_sec2_localization_kladno = get_field('text_icon1_sec2_localization_kladno')) : ?>
+                                        <p class="text-main text-main--f20">
+                                            <?php echo $text_icon1_sec2_localization_kladno; ?>
+                                        </p>
+                                    <?php endif; ?>
                                 </div>
                             </div>
                             <div class="swiper-slide">
                                 <div class="content-box">
                                     <img src="<?php bloginfo('template_url'); ?>/assets/img/invest-kladno/about/about-icon2.png" alt="ikona" />
-                                    <p class="text-main text-main--f20">
-                                        Działki ze zgłoszeniem pod domek rekreacyjny
-                                    </p>
+                                    <?php if ($text_icon2_sec2_localization_kladno = get_field('text_icon2_sec2_localization_kladno')) : ?>
+                                        <p class="text-main text-main--f20">
+                                            <?php echo $text_icon2_sec2_localization_kladno; ?>
+                                        </p>
+                                    <?php endif; ?>
                                 </div>
                             </div>
                             <div class="swiper-slide">
                                 <div class="content-box">
                                     <img src="<?php bloginfo('template_url'); ?>/assets/img/invest-kladno/about/about-icon3.png" alt="ikona" />
-                                    <p class="text-main text-main--f20">
-                                        Ponad 200 <br>zasadzonych drzew
-                                    </p>
+                                    <?php if ($text_icon3_sec2_localization_kladno = get_field('text_icon3_sec2_localization_kladno')) : ?>
+                                        <p class="text-main text-main--f20">
+                                            <?php echo $text_icon3_sec2_localization_kladno; ?>
+                                        </p>
+                                    <?php endif; ?>
                                 </div>
                             </div>
                             <div class="swiper-slide">
                                 <div class="content-box">
                                     <img src="<?php bloginfo('template_url'); ?>/assets/img/invest-kladno/about/about-icon4.png" alt="ikona" />
-                                    <p class="text-main text-main--f20">
-                                        Wygodny dojazd utwardzoną<br> drogą wewnętrzną
-                                    </p>
+                                    <?php if ($text_icon4_sec2_localization_kladno = get_field('text_icon4_sec2_localization_kladno')) : ?>
+                                        <p class="text-main text-main--f20">
+                                            <?php echo $text_icon4_sec2_localization_kladno; ?>
+                                        </p>
+                                    <?php endif; ?>
                                 </div>
                             </div>
                             <div class="swiper-slide">
                                 <div class="content-box">
                                     <img src="<?php bloginfo('template_url'); ?>/assets/img/invest-kladno/about/about-icon5.png" alt="ikona" />
-                                    <p class="text-main text-main--f20">
-                                        Gwarancja bezpieczeństwa i spokoju
-                                    </p>
+                                    <?php if ($text_icon5_sec2_localization_kladno = get_field('text_icon5_sec2_localization_kladno')) : ?>
+                                        <p class="text-main text-main--f20">
+                                            <?php echo $text_icon5_sec2_localization_kladno; ?>
+                                        </p>
+                                    <?php endif; ?>
                                 </div>
                             </div>
                             <div class="swiper-slide">
                                 <div class="content-box">
                                     <img src="<?php bloginfo('template_url'); ?>/assets/img/invest-kladno/about/about-icon6.png" alt="ikona" />
-                                    <p class="text-main text-main--f20">
-                                        Możliwość szybkiego przyłączenia prądu
-                                    </p>
+                                    <?php if ($text_icon6_sec2_localization_kladno = get_field('text_icon6_sec2_localization_kladno')) : ?>
+                                        <p class="text-main text-main--f20">
+                                            <?php echo $text_icon6_sec2_localization_kladno; ?>
+                                        </p>
+                                    <?php endif; ?>
                                 </div>
                             </div>
                             <div class="swiper-slide">
                                 <div class="content-box">
                                     <img src="<?php bloginfo('template_url'); ?>/assets/img/invest-kladno/about/about-icon7.png" alt="ikona" />
-
-                                    <p class="text-main text-main--f20">
-                                        Doprowadzimy przyłącze wody
-                                    </p>
+                                    <?php if ($text_icon7_sec2_localization_kladno = get_field('text_icon7_sec2_localization_kladno')) : ?>
+                                        <p class="text-main text-main--f20">
+                                            <?php echo $text_icon7_sec2_localization_kladno; ?>
+                                        </p>
+                                    <?php endif; ?>
                                 </div>
                             </div>
                             <div class="swiper-slide">
                                 <div class="content-box">
                                     <img src="<?php bloginfo('template_url'); ?>/assets/img/invest-kladno/about/about-icon8.png" alt="ikona" />
-                                    <p class="text-main text-main--f20">
-                                        20 minut jazdy samochodem<br />
-                                        do Kołobrzegu oraz Mielna
-                                    </p>
+                                    <?php if ($text_icon8_sec2_localization_kladno = get_field('text_icon8_sec2_localization_kladno')) : ?>
+                                        <p class="text-main text-main--f20">
+                                            <?php echo $text_icon8_sec2_localization_kladno; ?>
+                                        </p>
+                                    <?php endif; ?>
                                 </div>
                             </div>
                         </div>
@@ -244,11 +255,11 @@ get_template_part('investitions/ostoja-kladno/header');
         </div>
     </section>
 
-
     <section class="map-location">
         <img src="<?php bloginfo('template_url'); ?>/assets/img/invest-kladno/localization/map-sea.jpg" alt="mapa Polski część nad morska" />
     </section>
 </div>
+
 <?php
 get_template_part('investitions/ostoja-kladno/footer');
 ?>

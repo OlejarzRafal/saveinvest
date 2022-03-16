@@ -12,13 +12,14 @@ get_template_part('investitions/ostoja-kladno/header');
         <div class="container">
             <div class="row">
                 <div class="col-xl-12">
-                    <div class="gallery-kladno__title">
-                        <h5 class="f-h5 el-fadein-kladno">
-                            Czerp z natury, otaczającej Ostoję Kładno,
-                            wybierz się nad morze lub spaceruj pośród drzew
-                        </h5>
-                    </div>
-                    <ul class="category el-fadein-kladno">
+                    <?php if ($title_galleria_kladno = get_field('title_galleria_kladno')) : ?>
+                        <div class="gallery-kladno__title">
+                            <h5 class="f-h5">
+                                <?php echo $title_galleria_kladno; ?>
+                            </h5>
+                        </div>
+                    <?php endif; ?>
+                    <ul class="category">
                         <li class="category__item active" data-filter="all"> <span>WSZYSTKIE</span></li>
                         <li class="category__item" data-filter="picture"> <span>ZDJĘCIA I WIZUALIZACJE</span></li>
                         <li class="category__item" data-filter="video"> <span>FILMY</span></li>
@@ -67,7 +68,7 @@ get_template_part('investitions/ostoja-kladno/header');
 
                             ?>
                                 <div class="gallery__item gallery__item--video  video order-1 yt-video" data-sort="value">
-                                <a class="yt-video-link" data-fancybox="gallery" style="background-image:url(https://i.ytimg.com/vi/<?= $query['v'] ?>/hqdefault.jpg)" href="<?= $ytLinkUrl ?>"></a>
+                                    <a class="yt-video-link" data-fancybox="gallery" style="background-image:url(https://i.ytimg.com/vi/<?= $query['v'] ?>/hqdefault.jpg)" href="<?= $ytLinkUrl ?>"></a>
                                 </div>
 
                             <?php endwhile; ?>
