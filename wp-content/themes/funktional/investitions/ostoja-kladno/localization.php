@@ -263,3 +263,4 @@ get_template_part('investitions/ostoja-kladno/header');
 <?php
 get_template_part('investitions/ostoja-kladno/footer');
 ?>
+

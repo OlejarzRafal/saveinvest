@@ -4,6 +4,7 @@ import "../scss/style.scss";
 import "./all-page/scrollToDiv.js";
 import "./all-page/matchheight";
 import "./all-page/scrollGsap";
+import "./all-page/form-showhide";
 
 // SAVEINVEST
 import "./saveinvest/slider-opinion";
