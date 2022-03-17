@@ -179,7 +179,7 @@ get_template_part('investitions/ostoja-kladno/header');
                                         </div>
                                     <?php endif; ?>
                                     <?php if ($mail_box2_service_sec3_contact_kladno = get_sub_field('mail_box2_service_sec3_contact_kladno')) : ?>
-                                        <?php echo $mail_box2_service_sec3_contact_kladno; ?>
+                                        
                                         <div class="person-info__email">
                                             <img src="<?php bloginfo('template_url'); ?>/assets/img/invest-kladno/contact/icon-email.png" alt=" ikona email" />
                                             <a class="text-main text-main--fw500" href="<?php echo $mail_box2_service_sec3_contact_kladno; ?>"><?php echo $mail_box2_service_sec3_contact_kladno; ?></a>
@@ -424,7 +424,7 @@ get_template_part('investitions/ostoja-kladno/header');
                                 <?php endif; ?>
                                 <?php if ($adres_firm_sec7_contact_kladno = get_field('adres_firm_sec7_contact_kladno')) : ?>
                                     <p class="text-main text-main--f14">
-                                        <?php echo $adres_firm_sec7_contact_kladno; ?><br>
+                                        <?php echo $adres_firm_sec7_contact_kladno; ?>
                                         <?php if ($tel_firm_sec7_contact_kladno = get_field('tel_firm_sec7_contact_kladno')) : ?>
                                             <a class="text-main text-main--f14" href="tel:	<?php echo $tel_firm_sec7_contact_kladno; ?>">
                                                 tel.: <?php echo $tel_firm_sec7_contact_kladno; ?></a>

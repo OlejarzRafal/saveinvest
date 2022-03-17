@@ -37,8 +37,8 @@ class FunktionalPlots
             )
         );
 
-        // $this->registerInvestitionPagesCpt('osada-jaworek', 'Osada Jaworek');
         $this->registerInvestitionPagesCpt('ostoja-kladno', 'Ostoja Kładno', 'ostojakladno');
+        $this->registerInvestitionPagesCpt('enklawa-karwia', 'Enklawa Karwia', 'enklawakarwia');
     }
 
     public function addInwestitionsMenuItem()

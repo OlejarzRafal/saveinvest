@@ -67,7 +67,7 @@ get_template_part('investitions/ostoja-kladno/header');
                 <div class="col-xxl-7">
                     <div class="around-video__movie">
                         <?php if ($move_sec1_hp_kladno = get_field('move_sec1_hp_kladno')) : ?>
-                            <a data-fancybox="gallery" href="<?php echo $move_sec1_hp_kladno; ?>">
+                            <a class="reveal-kladno" data-fancybox="gallery" href="<?php echo $move_sec1_hp_kladno; ?>">
                                 <?php
                                 $photo_move_sec1_hp_kladno = get_field('photo_move_sec1_hp_kladno');
                                 if ($photo_move_sec1_hp_kladno) : ?>
@@ -82,12 +82,12 @@ get_template_part('investitions/ostoja-kladno/header');
 
                         <?php if ($title_sec1_hp_kladno = get_field('title_sec1_hp_kladno')) : ?>
                             <div class="content-title">
-                                <h2 class="f-h2"><?php echo ($title_sec1_hp_kladno); ?></h2>
+                                <h2 class="f-h2 el-fadein-kladno"><?php echo ($title_sec1_hp_kladno); ?></h2>
                             </div>
                         <?php endif; ?>
 
                         <?php if ($text_sec1_hp_kladno = get_field('text_sec1_hp_kladno')) : ?>
-                            <div class="contnet-text">
+                            <div class="contnet-text el-fadein-kladno">
                                 <p class="text-main">
                                     <?php echo $text_sec1_hp_kladno; ?>
                                 </p>
@@ -119,21 +119,21 @@ get_template_part('investitions/ostoja-kladno/header');
                         <div class="information-ostoja__content">
                             <div class="content-info">
                                 <?php if ($text_sec2_hp_kladno = get_field('text_sec2_hp_kladno')) : ?>
-                                    <div class="content-info__test">
+                                    <div class="content-info__test el-fadein-kladno">
                                         <p class="text-main text-main--white text-main--italic">
                                             <?php echo $text_sec2_hp_kladno; ?>
                                         </p>
                                     </div>
                                 <?php endif; ?>
                                 <?php if ($name_sec2_hp_kladno = get_field('name_sec2_hp_kladno')) : ?>
-                                    <div class="content-info__name">
+                                    <div class="content-info__name el-fadein-kladno">
                                         <h6 class="f-h6 f-h6--white f-h6--fw600">
                                             <?php echo ($name_sec2_hp_kladno); ?>
                                         </h6>
                                     </div>
                                 <?php endif; ?>
                                 <?php if ($positon_sec2_hp_kladno = get_field('positon_sec2_hp_kladno')) : ?>
-                                    <div class="content-info__position">
+                                    <div class="content-info__position el-fadein-kladno">
                                         <h6 class="f-h6 f-h6--white">
                                             <?php echo ($positon_sec2_hp_kladno); ?>
                                         </h6>
@@ -143,7 +143,7 @@ get_template_part('investitions/ostoja-kladno/header');
                             <?php
                             $photo_person_sec2_hp_kladno = get_field('photo_person_sec2_hp_kladno');
                             if ($photo_person_sec2_hp_kladno) : ?>
-                                <div class="content-photo">
+                                <div class="content-photo el-fadein-kladno">
                                     <img src="<?php echo esc_url($photo_person_sec2_hp_kladno['url']); ?>" alt="<?php echo esc_attr($photo_person_sec2_hp_kladno['alt']); ?>" />
                                 </div>
                             <?php endif; ?>
@@ -158,7 +158,7 @@ get_template_part('investitions/ostoja-kladno/header');
                 <div class="row">
                     <div class="col-xl-12">
                         <?php if ($title_icon_sec2_hp_kladno = get_field('title_icon_sec2_hp_kladno')) : ?>
-                            <div class="we-offer-ostoja__title">
+                            <div class="we-offer-ostoja__title el-fadein-kladno">
                                 <h5 class="f-h5 f-h5--white">
                                     <?php echo $title_icon_sec2_hp_kladno; ?>
                                 </h5>
@@ -250,7 +250,7 @@ get_template_part('investitions/ostoja-kladno/header');
                     <?php
                     $photo_sec3_hp_kladno = get_field('photo_sec3_hp_kladno');
                     if ($photo_sec3_hp_kladno) : ?>
-                        <div class="about-ostoja-home__photo">
+                        <div class="about-ostoja-home__photo reveal-kladno">
                             <img src="<?php echo esc_url($photo_sec3_hp_kladno['url']); ?>" alt="<?php echo esc_attr($photo_sec3_hp_kladno['alt']); ?>" />
                         </div>
                     <?php endif; ?>
@@ -258,21 +258,21 @@ get_template_part('investitions/ostoja-kladno/header');
                 <div class="offset-xl-1 col-xl-5">
                     <div class="about-ostoja-home__content">
                         <?php if ($title_sec3_hp_kladno = get_field('title_sec3_hp_kladno')) : ?>
-                            <div class="content-title">
+                            <div class="content-title el-fadein-kladno">
                                 <h2 class="f-h2">
                                     <?php echo $title_sec3_hp_kladno; ?>
                                 </h2>
                             </div>
                         <?php endif; ?>
                         <?php if ($text_sec3_hp_kladno = get_field('text_sec3_hp_kladno')) : ?>
-                            <div class="contnet-text">
+                            <div class="contnet-text el-fadein-kladno">
                                 <p class="text-main">
                                     <?php echo $text_sec3_hp_kladno; ?>
                                 </p>
                             </div>
                         <?php endif; ?>
                         <?php if ($btn_text_sec3_hp_kladno = get_field('btn_text_sec3_hp_kladno')) : ?>
-                            <a href="<?php the_permalink(615); ?>" class="btn btn__line"><?php echo $btn_text_sec3_hp_kladno; ?></a>
+                            <a href="<?php the_permalink(615); ?>" class="btn btn__line el-fadein-kladno"><?php echo $btn_text_sec3_hp_kladno; ?></a>
                         <?php endif; ?>
                     </div>
                 </div>
@@ -308,7 +308,7 @@ get_template_part('investitions/ostoja-kladno/header');
                     <?php
                     $photo_sec4_hp_kladno = get_field('photo_sec4_hp_kladno');
                     if ($photo_sec4_hp_kladno) : ?>
-                        <div class="recreational-area__photo">
+                        <div class="recreational-area__photo reveal-kladno">
                             <img src="<?php echo esc_url($photo_sec4_hp_kladno['url']); ?>" alt="<?php echo esc_attr($photo_sec4_hp_kladno['alt']); ?>" />
                         </div>
                     <?php endif; ?>

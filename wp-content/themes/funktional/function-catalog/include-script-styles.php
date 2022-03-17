@@ -24,7 +24,7 @@ function add_theme_assets()
         wp_enqueue_style('kladnocss', get_template_directory_uri() . '/assets/css/kladno.css', false, 1, 'all');
     } else {
         // to na pewno w else?
-        wp_enqueue_style('style', get_template_directory_uri() . '/assets/css/style.css', false, 1, 'all');
+        wp_enqueue_style('style', get_template_directory_uri() . '/assets/css/main.css', false, 1, 'all');
     }
 
 

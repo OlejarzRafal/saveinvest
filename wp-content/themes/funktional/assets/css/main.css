@@ -2608,7 +2608,7 @@ body:not(.home) .footer {
   border: 1px solid #B79D63;
   border-radius: 50%;
   position: fixed;
-  bottom: 30px;
+  bottom: 90px;
   right: 30px;
   z-index: 9999;
   display: flex;
@@ -3878,6 +3878,38 @@ form {
     transform: translateX(200%) skew(-30deg); } }
 
 /* END LOADER CSS */
+.form-showhide__p {
+  font-size: 11px;
+  line-height: normal; }
+
+.form-showhide .rodo {
+  margin-top: 0 !important; }
+
+.form-showhide__btn {
+  font-weight: 700;
+  text-decoration: underline;
+  cursor: pointer; }
+
+.form-showhide__information {
+  margin-top: 10px !important;
+  display: none; }
+  .form-showhide__information--active {
+    margin-top: 10px;
+    display: block; }
+
+.form-showhide .wpcf7-acceptance label {
+  margin-top: 15px !important;
+  margin-bottom: 0 !important; }
+
+.form-showhide__obligatory {
+  color: red; }
+  .form-showhide__obligatory--info {
+    margin-top: 15px !important; }
+
+.form-showhide .wpcf7-list-item-label {
+  position: relative;
+  top: 3px; }
+
 .page-blog .news-main__header {
   margin-top: 60px; }
 
