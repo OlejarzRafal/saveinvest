@@ -46,6 +46,15 @@ function my_acf_op_init()
     'redirect'    => false
 
   ));
+     // Register options page.
+    //  $option_page = acf_add_options_page(array(
+    //   'page_title'   => 'Stopka Karwia',
+    //   'menu_title'  => 'Stopka Karwia',
+    //   'menu_slug'   => 'stopka-karwia',
+    //   'capability'  => 'edit_posts',
+    //   'redirect'    => false
+  
+    // ));
 }
 add_theme_support( 'post-thumbnails' );
 add_theme_support( 'title-tag' );

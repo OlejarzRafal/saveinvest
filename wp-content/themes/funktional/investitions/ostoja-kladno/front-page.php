@@ -464,7 +464,7 @@ get_template_part('investitions/ostoja-kladno/header');
                 <div class="col-xl-6">
                     <div class="about-company__graphics">
                         <div class="company-logo">
-                            <img src="<?php bloginfo('template_url'); ?>/assets/img/invest-kladno/home-page/home-about-company-logo.png" alt="logo saveinvest" />
+                            <img src="<?php bloginfo('template_url'); ?>/assets/img/invest-kladno/home-page/home-enklawa-company-logo.png" alt="logo saveinvest" />
                         </div>
                         <div class="company-awards">
                             <img src="<?php bloginfo('template_url'); ?>/assets/img/invest-kladno/home-page/home-about-company-700.png" alt="ikona 700 zadowolonych klientów" />
