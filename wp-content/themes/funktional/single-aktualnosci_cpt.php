@@ -120,7 +120,7 @@ get_header();
                                 'posts_per_page' => 8,
                                 'orderby' => 'date',
                                 'order' => 'DESC',
-                                'post__not_in' => array(305, $postid),
+                                'post__not_in' => array(454, $postid),
 
                             );
                             $loop = new WP_Query($aktualnosciFiltrations_args);

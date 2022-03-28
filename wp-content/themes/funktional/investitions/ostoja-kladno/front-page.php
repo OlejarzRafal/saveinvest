@@ -64,10 +64,10 @@ get_template_part('investitions/ostoja-kladno/header');
     <section class="around-video">
         <div class="container">
             <div class="row">
-                <div class="col-xxl-7">
+                <div class="col-xl-7">
                     <div class="around-video__movie">
                         <?php if ($move_sec1_hp_kladno = get_field('move_sec1_hp_kladno')) : ?>
-                            <a class="reveal-kladno" data-fancybox="gallery" href="<?php echo $move_sec1_hp_kladno; ?>">
+                            <a  data-fancybox="gallery" href="<?php echo $move_sec1_hp_kladno; ?>">
                                 <?php
                                 $photo_move_sec1_hp_kladno = get_field('photo_move_sec1_hp_kladno');
                                 if ($photo_move_sec1_hp_kladno) : ?>
@@ -77,7 +77,7 @@ get_template_part('investitions/ostoja-kladno/header');
                         <?php endif; ?>
                     </div>
                 </div>
-                <div class="offset-xxl-1 col-xxl-4">
+                <div class="offset-xl-1 col-xl-4">
                     <div class="around-video__content">
 
                         <?php if ($title_sec1_hp_kladno = get_field('title_sec1_hp_kladno')) : ?>

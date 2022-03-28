@@ -10,7 +10,7 @@
                         'posts_per_page' => 8,
                         'orderby' => 'date',
                         'order' => 'DESC',
-                        'post__not_in' => array(305),
+                        'post__not_in' => array(454),
 
                     );
                     $loop = new WP_Query($aktualnosciFiltrations_args);
