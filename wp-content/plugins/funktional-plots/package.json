@@ -5,6 +5,7 @@
   "keywords": [],
   "scripts": {
     "start": "gulp",
+    "watch": "gulp watch",
     "build": "gulp build"
   },
   "bin": {
