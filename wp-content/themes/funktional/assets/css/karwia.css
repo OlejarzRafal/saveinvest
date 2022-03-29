@@ -5610,28 +5610,22 @@ a:hover {
   left: 14%;
 }
 @media (max-width: 1199px) {
-  .ek-localization .scroll-bottom {
-    top: 62%;
+  .ek-localization .sec1-info-map {
+    margin-top: -475px;
   }
-  .ek-localization .hero1-location {
-    background-size: 1300px auto;
-    background-position: right top;
-    -webkit-box-align: start;
-        -ms-flex-align: start;
-            align-items: flex-start;
-  }
-  .ek-localization .hero1-location__box {
-    padding-top: 75%;
+  .ek-localization .sec1-info-map__box {
+    padding-top: 40%;
     padding-bottom: 50px;
   }
-  .ek-localization .hero1-location__box .f-h3 {
-    width: 180%;
+  .ek-localization .sec1-info-map__box .f-h3 {
+    width: 100%;
   }
-  .ek-localization .hero1-location__map {
+  .ek-localization .sec1-info-map__map {
     padding-top: 0px;
-    padding-bottom: 50px;
+    padding-bottom: 130px;
     position: relative;
     width: 100%;
+    left: 0px;
   }
 }
 @media (max-width: 991px) {

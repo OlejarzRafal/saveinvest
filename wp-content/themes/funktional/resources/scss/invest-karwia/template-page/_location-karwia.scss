@@ -149,26 +149,21 @@
         }
     }
     @media (max-width: $xl) {
-        .scroll-bottom {
-            top: 62%;
-        }
-        .hero1-location {
-            background-size: 1300px auto;
-            background-position: right top;
-            align-items: flex-start;
-
+        .sec1-info-map {
+            margin-top: -475px;
             &__box {
-                padding-top: 75%;
+                padding-top: 40%;
                 padding-bottom: 50px;
                 .f-h3 {
-                    width: 180%;
+                    width: 100%;
                 }
             }
             &__map {
                 padding-top: 0px;
-                padding-bottom: 50px;
+                padding-bottom: 130px;
                 position: relative;
                 width: 100%;
+                left: 0px;
                 // &::before {
                 //     content: "";
                 //     position: absolute;
