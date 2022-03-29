@@ -37,3 +37,7 @@ a:hover {
 :focus {
     outline: 0 !important;
 }
+
+.fancybox-container{
+    z-index: 99999999;
+}

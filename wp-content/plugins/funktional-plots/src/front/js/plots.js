@@ -94,12 +94,12 @@ class PlotDataElement {
             }
         });
 
-        var url = window.location.origin;
         const investName = plotData.investition.label.toLowerCase().replace(' ', '-');
+        const sectorUrlPath = plotData.sector && plotData.sector.value ? plotData.sector.value + '/' : '';
+        const investitionAssetsUrl = `${window.FunktionalGlobals.homeUrl}/Plots/${investName}/${sectorUrlPath}`
 
-        element.find('[data-plot-info-image]').attr('src', '' +url+ '/Plots/' +investName+'/obrysy/' + plotData.plotNr + '.png');
-
-element.find('[data-plot-info-image-pdf-card]').attr('href', '' +url+ '/Plots/' +investName+ '/karty/' + plotData.plotNr + '.pdf');
+        element.find('[data-plot-info-image]').attr('src', `${investitionAssetsUrl}obrysy/${sectorUrlPath.replace('/', '-')}${plotData.plotNr}.png`);
+        element.find('[data-plot-info-image-pdf-card]').attr('href', `${investitionAssetsUrl}karty/${sectorUrlPath.replace('/', '-')}${plotData.plotNr}.pdf`);
 
         // TODO set href to plotcotact form or change it to click action
 

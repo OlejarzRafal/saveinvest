@@ -4,7 +4,7 @@ ScrollTrigger.matchMedia({
     "(min-width: 1200px) and (max-width: 1920px) ": function () {
         gsap.to("#wave-home-2", {
             x: 0,
-            y: 50,
+            y: 20,
             scrollTrigger: {
                 trigger: "#wave-home-2",
                 start: "top 90%",
@@ -15,7 +15,7 @@ ScrollTrigger.matchMedia({
         });
         gsap.to("#wave-home-3", {
             x: 0,
-            y: -130,
+            y: -50,
             scrollTrigger: {
                 trigger: "#wave-home-3",
                 start: "top 80%",
@@ -26,24 +26,24 @@ ScrollTrigger.matchMedia({
         });
         gsap.to("#wave-home-4", {
                 x: 0,
-                y: -390,
+                y: -280,
                 scrollTrigger: {
                     trigger: "#wave-home-4",
                     start: "top 110%",
-                    end: "top 60%",
-                    scrub: 3,
+                    end: "top 30%",
+                    scrub: 4,
                     markers: false,
                     id: "scrub",
                 },
             }),
             gsap.to("#wave-home-5", {
                 x: 0,
-                y: -220,
+                y: -180,
                 scrollTrigger: {
                     trigger: "#wave-home-5",
-                    start: "top 100%",
-                    end: "top 50%",
-                    scrub: 3,
+                    start: "top 90%",
+                    end: "top 40%",
+                    scrub:2,
                     markers: false,
                     id: "scrub",
                 },
@@ -81,8 +81,8 @@ if ($(window).width() > 1200) {
         tl.set(container, {
             autoAlpha: 1
         });
-        tl.from(image, 1.5, {
-            scale: 1.3,
+        tl.from(image, 1.1, {
+            scale: 1.1,
             delay: -1.5,
             ease: Power2.out
         });

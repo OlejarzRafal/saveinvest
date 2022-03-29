@@ -119,7 +119,7 @@ get_header();  ?>
                                     'posts_per_page' => 8,
                                     'orderby' => 'date',
                                     'order' => 'DESC',
-                                    'post__not_in' => array(250, $postid),
+                                    'post__not_in' => array(454),
                                 );
                                 $loop = new WP_Query($questionFiltrations_args);
                                 while ($loop->have_posts()) : $loop->the_post(); ?>
