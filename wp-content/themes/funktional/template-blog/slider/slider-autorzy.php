@@ -1,4 +1,12 @@
-<?php $users = get_users();
+<?php
+$dont_include = array(1, 2, 6, 7);  // IDs not to include
+$args = array(
+    'exclude'      => $dont_include,
+    'orderby'      => 'login',
+    'order'        => 'DESC',
+    'fields'       => 'all',
+);
+$users = get_users($args);
 foreach ($users as $user) {
     $user_id =  $user->ID;
     $user_name =  $user->display_name;

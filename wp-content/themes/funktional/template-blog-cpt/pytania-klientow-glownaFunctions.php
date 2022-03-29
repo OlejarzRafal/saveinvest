@@ -38,6 +38,7 @@ function funktional_ajax_filtration_pytania(){
             'orderby' => 'date', 
             'order' => 'DESC',
             'paged' => $_GET['page'],
+            'post__not_in' => array(468),
             'tax_query' =>  array(
                 $questionTaxQuery,
             ),           

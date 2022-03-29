@@ -10,7 +10,7 @@
                         'posts_per_page' => 8,
                         'orderby' => 'date',
                         'order' => 'DESC',
-                        'post__not_in' => array(250),
+                        'post__not_in' => array(468),
 
                     );
                     $loop = new WP_Query($questionFiltrations_args);
