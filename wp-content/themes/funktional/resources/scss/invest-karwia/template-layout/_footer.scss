@@ -1,0 +1,181 @@
+footer {
+    .footer-top {
+        position: relative;
+        display: flex;
+        margin-top: 100px;
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+        height: 580px;
+        background: url("../img/invest-kladno/home-page/home-footer-view.jpg");
+        background-size: cover;
+        background-position: center;
+        padding: 0 15px;
+        &::after {
+            content: "";
+            position: absolute;
+            bottom: -77px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: url("../img/invest-karwia/home-page/Element-Circle-footer.svg");
+            background-size: contain;
+            width: 160px;
+            height: 160px;
+        }
+
+        &__content {
+            margin-top: 105px;
+            width: fit-content;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            height: 100%;
+            .btn {
+                margin-top: 50px;
+            }
+
+            &__box-photo {
+                margin-top: 90px;
+                margin-bottom: 30px;
+                display: flex;
+                width: 100%;
+                justify-content: center;
+                align-items: flex-end;
+                height: 139px;
+                overflow: hidden;
+                gap: 2px;
+                img {
+                    position: relative;
+                    max-height: 141px;
+                }
+            }
+        }
+        @media (max-width: $lg) {
+            margin-top: 50px;
+            height: auto;
+            &__content {
+                margin-top: 30px;
+                .btn {
+                    margin-top: 20px;
+                }
+                &__box-photo {
+                    margin-top: 40px;
+                    margin-bottom: 50px;
+                }
+            }
+            &::after {
+                content: "";
+                position: absolute;
+                bottom: -42px;
+                width: 85px;
+                height: 85px;
+                
+            }
+
+        }
+        @media (max-width: $md) {
+            &__content {
+                &__box-photo {
+                    max-height:20vw;
+                    img {
+                        max-height:20.2vw
+                    }
+                }
+               
+            }
+        }
+    }
+    .footer {
+        background-color: $granat-background;
+        width: 100%;
+        height: auto;
+        padding: 80px 0 55px;
+        margin-top: 120px;
+        .footer-box {
+            margin: 40px 0 0;
+            &__title {
+                height: 25px;
+            }
+            &__info {
+                margin: 10px 0 0;
+                display: flex;
+                flex-direction: column;
+                p {
+                    margin: 0;
+                }
+            }
+            &__map,
+            &__office {
+                a {
+                    transition: 0.2s;
+                    width: fit-content;
+                    &:hover {
+                        color: $Sand-Light-Very;
+                        opacity: 1;
+                    }
+                }
+            }
+            &__map {
+                a {
+                    margin-bottom: 10px;
+                }
+            }
+        }
+        &__text-bottom {
+            border-top: 1px solid #22374b;
+            padding-top: 25px;
+            margin: 30px 0 0;
+            display: flex;
+            justify-content: flex-start;
+        }
+        &__text-created {
+            margin: 40px 0 0;
+            display: flex;
+            justify-content: center;
+            .dot-footer {
+                display: inline-block;
+                width: 8px;
+                height: 8px;
+                margin: auto 25px;
+                border-radius: 50%;
+                background-color: $Sand-Light;
+            }
+            a {
+                position: relative;
+                top: 2px;
+                margin-right: 5px;
+            }
+        }
+        @media (max-width: 1399px) {
+            .footer-box {
+                &__title,
+                &__info,
+                a {
+                    p {
+                        font-size: 13px;
+                    }
+                    font-size: 13px;
+                }
+            }
+            .footer-box {
+                &__map {
+                    a {
+                        font-size: 10px;
+                    }
+                }
+            }
+        }
+        @media (max-width: $lg) {
+            margin-top: 60px;
+
+        }
+        @media (max-width: 767px) {
+           
+            padding: 30px 0 30px;
+            &__text-created {
+                margin: 30px 0 0;
+            }
+        }
+    }
+}

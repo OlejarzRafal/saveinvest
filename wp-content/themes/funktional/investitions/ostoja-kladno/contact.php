@@ -239,7 +239,7 @@ get_template_part('investitions/ostoja-kladno/header');
                             <div class="box-row__info">
                                 <div class="numbers-info">
                                     <?php if ($number_data1_sec5_contact_kladno = get_field('number_data1_sec5_contact_kladno')) : ?>
-                                        <h4 class="f-special f-special--yellow count percent" data-count="<?php echo $number_data1_sec5_contact_kladno; ?>">
+                                        <h4 class="f-special f-special--yellow" data-count="<?php echo $number_data1_sec5_contact_kladno; ?>">
                                             0
                                         </h4>
                                     <?php endif; ?>

@@ -25,7 +25,7 @@ eval("$(\".form-showhide__btn\").click(function (e) {\n  e.preventDefault();\n  
   \**********************************************/
 /***/ (function() {
 
-eval("$(document).ready(function () {\n  $('.front-page .sec5 .plots-wrap .plots .plot__content').matchHeight();\n  $('.page-blog .slider-expert .slider-expert-loop__item').matchHeight();\n  $('.page-blog .slider-authors-loop__position').matchHeight();\n  $('.page-blog .slider-aktualnosci-loop__excerpt').matchHeight();\n  $('.page-blog .slider-pytania-loop__excerpt').matchHeight();\n  $('.page-blog .slider-expert-loop__excerpt').matchHeight();\n  $('.page-blog .slider-aktualnosci-loop__content').matchHeight();\n  $('.page-blog .slider-pytania-loop__content').matchHeight();\n  $('.page-blog .slider-expert-loop__content').matchHeight();\n});\n\n//# sourceURL=webpack://webpack/./resources/js/all-page/matchheight.js?");
+eval("$(document).ready(function () {\n  $(\".front-page .sec5 .plots-wrap .plots .plot__content\").matchHeight();\n  $(\".page-blog .slider-expert .slider-expert-loop__item\").matchHeight();\n  $(\".page-blog .slider-authors-loop__position\").matchHeight();\n  $(\".page-blog .slider-aktualnosci-loop__excerpt\").matchHeight();\n  $(\".page-blog .slider-pytania-loop__excerpt\").matchHeight();\n  $(\".page-blog .slider-expert-loop__excerpt\").matchHeight();\n  $(\".page-blog .slider-aktualnosci-loop__content\").matchHeight();\n  $(\".page-blog .slider-pytania-loop__content\").matchHeight();\n  $(\".page-blog .slider-expert-loop__content\").matchHeight(); //Karwia HP SEC 3\n\n  $(\".sec3-prestige__box1 .sec3-prestige__box2\").matchHeight();\n});\n\n//# sourceURL=webpack://webpack/./resources/js/all-page/matchheight.js?");
 
 /***/ }),
 

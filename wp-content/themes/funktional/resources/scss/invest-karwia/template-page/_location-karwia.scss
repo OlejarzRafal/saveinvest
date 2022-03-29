@@ -1,0 +1,482 @@
+.ek-localization {
+    .header {
+        position: relative;
+        height: 1280px;
+        width: 100%;
+        background: #004870
+            url("../img/invest-karwia/localization/background-header-localization.jpg");
+        background-size: cover;
+        background-position: center top;
+        display: flex;
+        align-items: flex-end;
+        background-repeat: no-repeat;
+        &::after {
+            content: "";
+            position: absolute;
+            bottom: 145px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: url("../img/invest-karwia/localization/scroller-down.svg");
+            background-size: cover;
+            width: 24px;
+            height: 24px;
+            z-index: 1;
+        }
+    }
+    .scroll-bottom {
+        position: absolute;
+        width: 100%;
+        margin: 50px 0 65px;
+        display: flex;
+        top: 90%;
+        justify-content: center;
+        align-items: center;
+        z-index: 99;
+    }
+    .sec1-info-map {
+        position: relative;
+        height: auto;
+        width: 100%;
+        // background: url("../img/invest-karwia/localization/background-localization.png");
+        background: linear-gradient(
+            177.26deg,
+            rgba(85, 209, 187, 0) 6.87%,
+            rgba(0, 166, 189, 0.65) 13.04%,
+            #088fad 20.36%,
+            #005483 51.26%,
+            #00476f 104.5%
+        );
+        background-size: cover;
+        background-position: center top;
+        display: flex;
+        align-items: flex-end;
+        background-repeat: no-repeat;
+        margin-top: -355px;
+        &::before {
+            content: "";
+            position: absolute;
+            bottom: -59px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: url("../img/invest-karwia/home-page/rhombus-hp-s2.svg");
+            background-size: contain;
+            width: 160px;
+            height: 160px;
+        }
+        &__box {
+            padding-top: 280px;
+            padding-bottom: 130px;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            .f-h3 {
+                width: 180%;
+            }
+            .box-text {
+                margin-top: 30px;
+            }
+            &__table-location {
+                display: flex;
+                flex-direction: column;
+                margin-top: 10px;
+
+                .row-table {
+                    display: flex;
+                    width: 100%;
+                    border-top: 1px solid #b68b1d;
+                    &__title {
+                        flex-basis: 61%;
+                        padding-left: 3px;
+                        margin: auto;
+                        p {
+                            padding-right: 6vw !important;
+                            padding-left: 15px !important;
+                        }
+                    }
+                    &__time {
+                        flex-basis: 21%;
+                        margin: auto;
+                    }
+                    &__distance {
+                        flex-basis: 18%;
+                        margin: auto;
+                    }
+
+                    &:first-child {
+                        border-top: 0px solid #b68b1d;
+                    }
+                    &:nth-child(2) {
+                        position: relative;
+                        .row-table__time {
+                            p {
+                                position: relative;
+                                &::after {
+                                    content: "";
+                                    position: absolute;
+                                    top: 18px;
+                                    left: 70px;
+                                    background: url("../img/invest-karwia/localization/time-icon.png");
+                                    height: 17px;
+                                    width: 11px;
+                                }
+                            }
+                        }
+                    }
+                    p {
+                        padding: 12px 0;
+                        text-align: start;
+                        line-height: 22px;
+                    }
+                }
+            }
+        }
+        &__map {
+            display: flex;
+            justify-content: flex-end;
+            flex-direction: column;
+            width: 110%;
+            height: 100%;
+            padding-bottom: 150px;
+            position: relative;
+            left: -45px;
+            .logo-karwia {
+                position: relative;
+                width: 23%;
+                height: auto;
+                top: 6%;
+                left: 14%;
+            }
+        }
+    }
+    @media (max-width: $xl) {
+        .scroll-bottom {
+            top: 62%;
+        }
+        .hero1-location {
+            background-size: 1300px auto;
+            background-position: right top;
+            align-items: flex-start;
+
+            &__box {
+                padding-top: 75%;
+                padding-bottom: 50px;
+                .f-h3 {
+                    width: 180%;
+                }
+            }
+            &__map {
+                padding-top: 0px;
+                padding-bottom: 50px;
+                position: relative;
+                width: 100%;
+                // &::before {
+                //     content: "";
+                //     position: absolute;
+                //     bottom: 0px;
+                //     left: -20vw;
+                //     width: 130vw;
+                //     height: 97%;
+                //     background: #003b5c;
+                //     z-index: -1;
+                // }
+            }
+        }
+    }
+    @media (max-width: $lg) {
+        .scroll-bottom {
+            top: 59vw;
+        }
+        .hero1-location {
+            background-size: 1000px auto;
+            background-position: right top;
+            height: 1950px;
+
+            &__box {
+                padding-top: 85%;
+                padding-left: 15px;
+                padding-right: 15px;
+            }
+            &__map {
+                &::before {
+                    content: "";
+                    position: absolute;
+                    height: 128%;
+                }
+            }
+        }
+    }
+    @media (max-width: $md) {
+        .hero1-location {
+            height: 1680px;
+            &__box {
+                padding-top: 100%;
+                padding-bottom: 30px;
+                h2 {
+                    font-size: 35px;
+                }
+                .table-location {
+                    overflow-x: scroll;
+                    padding-bottom: 10px;
+                    margin-top: 30px;
+                    .row-table {
+                        min-width: 550px;
+                        &__title {
+                            min-width: 300px;
+                        }
+                        &__time {
+                            min-width: 150px;
+                        }
+                        &__distance {
+                            min-width: 100px;
+                        }
+                    }
+                    &::-webkit-scrollbar-track {
+                        border-radius: 10px;
+                        position: absolute;
+                        -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+                        background-color: #003b5c;
+                    }
+                    &::-webkit-scrollbar {
+                        width: 10px;
+                        background-color: #003b5c;
+                        height: 5px;
+                    }
+
+                    &::-webkit-scrollbar-thumb {
+                        background-color: #1c71a1;
+                        border: 1px solid #0a2534;
+                        border-radius: 10px;
+                    }
+                }
+            }
+            &__map {
+                &::before {
+                    content: "";
+                    position: absolute;
+                    height: 115%;
+                }
+            }
+        }
+    }
+    @media (max-width: $sm) {
+        .hero1-location {
+            background-size: 750px auto;
+            height: 1620px;
+            &__box {
+                padding-top: 85%;
+            }
+            &__map {
+                &::before {
+                    content: "";
+                    position: absolute;
+                    height: 152%;
+                }
+            }
+        }
+    }
+    @media (max-width: 520px) {
+        .hero1-location {
+            height: 1550px;
+            background-size: 600px auto;
+
+            &__map {
+                &::before {
+                    content: "";
+                    position: absolute;
+                    height: 181vw;
+                }
+            }
+        }
+    }
+    @media (max-width: 450px) {
+        .hero1-location {
+            height: 1460px;
+            background-size: 600px auto;
+
+            &__map {
+                &::before {
+                    content: "";
+                    position: absolute;
+                    height: 181vw;
+                }
+            }
+        }
+    }
+    @media (max-width: 414px) {
+        .hero1-location {
+            height: 1410px;
+            &__map {
+                &::before {
+                    content: "";
+                    position: absolute;
+                    height: 186vw;
+                }
+            }
+        }
+    }
+    @media (max-width: 373px) {
+        .hero1-location {
+            height: 1305px;
+            &__map {
+                &::before {
+                    content: "";
+                    position: absolute;
+                    height: 193vw;
+                }
+            }
+        }
+    }
+    @media (max-width: 347px) {
+        height: 1290px;
+        .hero1-location {
+            &__map {
+                &::before {
+                    content: "";
+                    position: absolute;
+                    height: 204vw;
+                }
+            }
+        }
+
+        .map-location {
+            margin-top: 70px;
+            margin-bottom: -110px;
+        }
+    }
+    // .icon-localization {
+    //     position: relative;
+    //     margin-top: -80px;
+    //     z-index: 1;
+    //     margin-bottom: 100px;
+    //     .row {
+    //         position: relative;
+    //         &::before {
+    //             content: "";
+    //             position: absolute;
+    //             top: 0px;
+    //             left: -65px;
+    //             width: 105vw;
+    //             height: 100%;
+    //             border-top: 1px solid $Sand-Medium;
+    //             border-left: 1px solid $Sand-Medium;
+    //             border-bottom: 1px solid $Sand-Medium;
+    //         }
+    //     }
+    //     &__content {
+    //         display: flex;
+    //         width: 90%;
+    //         padding: 260px 0 125px 0;
+    //         .swiper-wrapper {
+    //             .swiper-slide {
+    //                 display: flex;
+    //                 width: 100%;
+    //                 justify-content: space-around;
+    //                 .content-box {
+    //                     display: flex;
+    //                     flex-direction: column;
+    //                     align-items: center;
+    //                     justify-content: center;
+    //                     width: 300px;
+    //                     p {
+    //                         text-align: center;
+    //                     }
+    //                 }
+    //             }
+    //         }
+    //     }
+    //     .swiper-contenet-nav {
+    //         display: inline-flex;
+    //         justify-content: space-between;
+    //         align-items: center;
+    //         position: absolute;
+    //         width: 100%;
+    //         // bottom: 65px;
+    //         z-index: 1;
+    //         top: 66%;
+    //         // transform: translateY(-50%);
+    //         @media (max-width: 1200px) {
+    //             bottom: 20px;
+    //             width: 100%;
+    //         }
+    //         .swiper-button-prev {
+    //             position: relative;
+    //             margin-left: 20px;
+    //             width: 24px;
+    //             height: 24px;
+    //             background-image: url("../img/invest-kladno/localization/chevron-left-icon.png");
+    //             background-repeat: no-repeat;
+    //             &:after {
+    //                 display: none;
+    //             }
+    //         }
+    //         .swiper-button-next {
+    //             position: relative;
+    //             margin-right: 20px;
+    //             width: 24px;
+    //             height: 24px;
+    //             background-image: url("../img/invest-kladno/localization/chevron-right-icon.png");
+    //             background-repeat: no-repeat;
+    //             &:after {
+    //                 display: none;
+    //             }
+    //         }
+    //     }
+    // }
+    // @media (max-width: $xl) {
+    //     .icon-localization {
+    //         margin-top: 250px;
+    //         .row {
+    //             padding: 0 15px;
+    //             &::before {
+    //                 content: "";
+    //                 position: absolute;
+    //                 top: 0px;
+    //                 left: 15px;
+    //                 width: calc(100% - 30px);
+    //                 height: 100%;
+    //                 border: 1px solid $Sand-Medium;
+    //             }
+    //         }
+    //         &__content {
+    //             padding: 160px 0 125px 0;
+    //         }
+    //         .swiper-contenet-nav {
+    //             .swiper-button-prev,
+    //             .swiper-button-next {
+    //                 top: -70%;
+    //             }
+    //             .swiper-button-next {
+    //                 margin-right: 35px;
+    //             }
+    //         }
+    //     }
+    // }
+    // @media (max-width: $lg) {
+    //     .icon-localization {
+    //         margin-top: 50px;
+    //         .row {
+    //             padding: 0 15px;
+    //             &::before {
+    //                 content: "";
+    //                 position: absolute;
+    //                 top: 0px;
+    //                 left: 15px;
+    //                 width: calc(100% - 30px);
+    //                 height: 100%;
+    //                 border: 1px solid $Sand-Medium;
+    //             }
+    //         }
+    //         &__content {
+    //             padding: 60px 0 60px 0;
+    //         }
+    //         .swiper-contenet-nav {
+    //             .swiper-button-prev {
+    //                 margin-left: 0px;
+    //             }
+    //             .swiper-button-next {
+    //                 margin-right: 20px;
+    //             }
+    //         }
+    //     }
+    // }
+}

@@ -1,0 +1,921 @@
+.ek-contact {
+    .sec1-contact-karwia {
+        padding-top: 560px;
+        position: relative;
+        width: 100%;
+        height: auto;
+        background-image: url("../img/invest-karwia/contact/background-contact-form1.png");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-position-y: top;
+        z-index: 1;
+        &__form,
+        &__sales-box {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            .text-form,
+            .sales-text {
+                margin-top: 30px;
+                display: flex;
+                flex-wrap: wrap;
+                a:hover {
+                    color: $Sand-Medium;
+                }
+            }
+        }
+
+        @media (max-width: $md) {
+            &__form {
+                padding-top: 30px;
+            }
+        }
+        &__sales-box {
+            .person-sales {
+                margin-top: 80px;
+                display: flex;
+                width: 100%;
+                height: auto;
+                padding: 0 0 0 30px;
+                border: 1px solid $Sand-Medium;
+                background-color: $White;
+
+                &__photo {
+                    margin-top: -30px;
+                    height: 235px;
+                    width: 205px;
+                    margin-bottom: 20px;
+                    img {
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                        object-position: center;
+                    }
+                }
+                .person-info {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: flex-start;
+                    padding: 45px 20px 40px 35px;
+                    &__email {
+                        margin-top: 12px;
+                        display: flex;
+                        justify-content: flex-start;
+                        align-items: center;
+                        gap: 18px;
+                        margin-bottom: 3px;
+                        img {
+                            width: fit-content;
+                            height: fit-content;
+                        }
+                        a {
+                            position: relative;
+                            // &::after {
+                            //     content: "";
+                            //     position: absolute;
+                            //     top: 50%;
+                            //     transform: translateY(-50%);
+                            //     right: -40px;
+                            //     background: url("/invest-kladno/kladno-photo/contact/icon-hover.png");
+                            //     height: 24px;
+                            //     width: 24px;
+                            //     transition: all 0.2s;
+                            //     visibility: hidden;
+                            //     opacity: 0;
+                            // }
+                            // &:hover::after {
+                            //     visibility: visible;
+                            //     opacity: 1;
+                            // }
+                            &:hover {
+                                color: $Sand-Medium;
+                            }
+                        }
+                    }
+                    &__phone {
+                        display: flex;
+                        justify-content: flex-start;
+                        align-items: center;
+                        gap: 18px;
+                        img {
+                            width: fit-content;
+                            height: fit-content;
+                        }
+                        a {
+                            position: relative;
+                            // &::after {
+                            //     content: "";
+                            //     position: absolute;
+                            //     top: 50%;
+                            //     transform: translateY(-50%);
+                            //     right: -40px;
+                            //     background: url("/invest-kladno/kladno-photo/contact/icon-hover.png");
+                            //     height: 24px;
+                            //     width: 24px;
+                            //     transition: all 0.2s;
+                            //     visibility: hidden;
+                            //     opacity: 0;
+                            // }
+                            // &:hover::after {
+                            //     visibility: visible;
+                            //     opacity: 1;
+                            // }
+                            &:hover {
+                                color: $Sand-Medium;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        &__service {
+            margin-top: 65px;
+            .service-text {
+                margin-top: 10px;
+            }
+        }
+
+        .person-service {
+            margin-top: 80px;
+            display: flex;
+            width: 100%;
+            height: auto;
+            padding: 0 0 0 30px;
+            border: 1px solid $Sand-Medium;
+            background-color: $White;
+            &__photo {
+                margin-top: -30px;
+                height: 235px;
+                width: 205px;
+                margin-bottom: 20px;
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: none;
+                    object-position: center;
+                }
+            }
+            .person-info {
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-start;
+                padding: 45px 20px 40px 35px;
+                &__email {
+                    margin-top: 20px;
+                    display: flex;
+                    justify-content: flex-start;
+                    align-items: center;
+                    gap: 18px;
+                    margin-bottom: 3px;
+                    img {
+                        width: fit-content;
+                        height: fit-content;
+                    }
+                    a {
+                        position: relative;
+                        // &::after {
+                        //     content: "";
+                        //     position: absolute;
+                        //     top: 50%;
+                        //     transform: translateY(-50%);
+                        //     right: -40px;
+                        //     background: url("/invest-kladno/kladno-photo/contact/icon-hover.png");
+                        //     height: 24px;
+                        //     width: 24px;
+                        //     transition: all 0.2s;
+                        //     visibility: hidden;
+                        //     opacity: 0;
+                        // }
+                        // &:hover::after {
+                        //     visibility: visible;
+                        //     opacity: 1;
+                        // }
+                        &:hover {
+                            color: $Sand-Medium;
+                        }
+                    }
+                }
+                &__phone {
+                    display: flex;
+                    justify-content: flex-start;
+                    align-items: center;
+                    gap: 18px;
+                    img {
+                        width: fit-content;
+                        height: fit-content;
+                    }
+                    a {
+                        position: relative;
+                        // &::after {
+                        //     content: "";
+                        //     position: absolute;
+                        //     top: 50%;
+                        //     transform: translateY(-50%);
+                        //     right: -40px;
+                        //     background: url("/invest-kladno/kladno-photo/contact/icon-hover.png");
+                        //     height: 24px;
+                        //     width: 24px;
+                        //     transition: all 0.2s;
+                        //     visibility: hidden;
+                        //     opacity: 0;
+                        // }
+                        // &:hover::after {
+                        //     visibility: visible;
+                        //     opacity: 1;
+                        // }
+                        &:hover {
+                            color: $Sand-Medium;
+                        }
+                    }
+                }
+            }
+        }
+        @media (max-width: $xxxl) {
+            &__sales-box {
+                .person-sales {
+                    padding: 0 0 0 20px;
+                    .person-info {
+                        padding: 25px 20px 20px 20px;
+                        &__email {
+                            margin-bottom: 10px;
+                        }
+                        &__email,
+                        &__phone {
+                            gap: 5px;
+                            a {
+                                position: relative;
+                                &::after {
+                                    right: -30px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .person-service {
+                padding: 0 0 0 20px;
+                .person-info {
+                    padding: 25px 20px 20px 20px;
+                    &__email {
+                        margin-bottom: 10px;
+                    }
+                }
+            }
+        }
+        @media (max-width: $xxl) {
+            &__form,
+            &__sales-box {
+                .sales-title {
+                    margin-top: 40px;
+                }
+                .text-form,
+                .sales-text {
+                    margin-top: 10px;
+                }
+                .person-sales {
+                    margin-top: 40px;
+                    width: fit-content;
+                    .person-info {
+                        min-width: 350px;
+                    }
+                }
+            }
+            .person-service {
+                margin-top: 50px;
+                width: fit-content;
+                .person-info {
+                    min-width: 350px;
+                }
+            }
+            &__service {
+                margin-top: 50px;
+            }
+        }
+        @media (max-width: $md) {
+            padding: 28% 0 0;
+            background-size: contain;
+            &__sales-box {
+                .person-sales {
+                    flex-direction: column;
+                    width: 100%;
+                    .person-info {
+                        min-width: auto;
+                        padding: 0px 20px 20px 0px;
+                        &__email,
+                        &__phone {
+                            gap: 5px;
+                            a {
+                                position: relative;
+                                font-size: 14px;
+                                &::after {
+                                    right: -30px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            .person-service {
+                flex-direction: column;
+                width: 100%;
+                .person-info {
+                    min-width: auto;
+                    padding: 0px 20px 20px 0px;
+                    &__email,
+                    &__phone {
+                        gap: 5px;
+                        a {
+                            position: relative;
+                            font-size: 14px;
+                            &::after {
+                                right: -30px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .sec2-about-company {
+        padding-top: 650px;
+        position: relative;
+        width: 100%;
+        height: auto;
+        background: $Sand-Tint
+            url("../img/invest-karwia/contact/background-contact-about.png");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-position-y: top;
+        margin-top: -120px;
+        &::after {
+            content: "";
+            position: absolute;
+            bottom: -39px;
+            left: 29%;
+            transform: translateX(-50%);
+            background: url("../img/invest-karwia/home-page/rhombus-hp-s2.svg");
+            background-size: cover;
+            width: 160px;
+            height: 160px;
+            z-index: 1;
+        }
+        &__content {
+            margin-bottom: 80px;
+            &__top-left,
+            &__top-right {
+                height: 170px;
+            }
+            &__top-left {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                align-items: flex-start;
+            }
+            &__top-right {
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+                gap: 20px 50px;
+            }
+            &__bottom-left,
+            &__bottom-right {
+                margin-top: 35px;
+                height: auto;
+            }
+
+            &__bottom-left,
+            &__top-left {
+                margin-left: 75px;
+            }
+            &__bottom-right,
+            &__top-right {
+                margin-left: 50px;
+                margin-right: 60px;
+            }
+        }
+        @media (max-width: $xxl) {
+            &__content {
+                margin-bottom: 120px;
+                &__bottom-left,
+                &__top-left {
+                    margin-left: 0;
+                }
+                &__bottom-right,
+                &__top-right {
+                    margin-left: 0;
+                    margin-right: 0;
+                }
+            }
+        }
+        @media (max-width: $xl) {
+            padding-top: 540px;
+            margin-top: -220px;
+            &::after {
+                content: "";
+                display: none;
+            }
+            &__content {
+                margin-bottom: 20px;
+                &__top-left,
+                &__top-right {
+                    height: auto;
+                }
+                &__top-left {
+                    .f-h3 {
+                        margin-top: 15px;
+                    }
+                }
+                &__top-right {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    flex-wrap: wrap;
+                    margin-top: 15px;
+                    gap: 20px 50px;
+                    img {
+                        height: 100px;
+                        width: auto;
+                    }
+                }
+                &__bottom-right {
+                    margin-bottom: 30px;
+                }
+            }
+        }
+    }
+
+    .sec3-contact-number {
+        position: relative;
+        margin-top: 0px;
+        width: 100%;
+        height: auto;
+        background: $Sand-Tint
+            url("../img/invest-karwia/contact/background-contact-numbers.png");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-position-y: bottom;
+        padding-top: 80px;
+
+        &__box {
+            width: 100%;
+            margin-bottom: 170px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 80px;
+            margin-bottom: 600px;
+            .box-row {
+                display: flex;
+                justify-content: space-between;
+                width: 85%;
+                &__info {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    .numbers-info {
+                        display: flex;
+                        justify-content: center;
+                        align-items: flex-end;
+                        gap: 10px;
+
+                        .f-h4 {
+                            font-size: 40px;
+                            line-height: 80px;
+                        }
+                    }
+                }
+                .box-row__info:last-child {
+                    width: 223px;
+                }
+            }
+        }
+
+        @media (max-width: $xl) {
+            &__box {
+                .box-row {
+                    &__info {
+                        .numbers-info {
+                            .f-h1 {
+                                font-size: 60px;
+                            }
+
+                            .f-h4 {
+                                font-size: 35px;
+                                line-height: 55px;
+                            }
+                        }
+                    }
+                    .box-row__info:last-child {
+                        width: 223px;
+                    }
+                }
+            }
+        }
+        @media (max-width: $lg) {
+            padding-top: 10px;
+            &__box {
+                margin-bottom: 450px;
+                gap: 0;
+                .box-row {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    &__info {
+                        width: 100%;
+                        margin-top: 30px;
+                        .numbers-info {
+                            .f-special {
+                                font-size: 45px;
+                            }
+                            .f-h4 {
+                                font-size: 25px;
+                                line-height: 40px;
+                            }
+                        }
+                    }
+                    .box-row__info:last-child {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+        // @media (max-width: $md) {
+        //     padding-top: 100px;
+        //     &__box {
+        //         gap: 0;
+        //         .box-row {
+        //             display: flex;
+        //             flex-direction: column;
+        //             align-items: center;
+        //             &__info {
+        //                 width: 100%;
+        //                 margin-top: 30px;
+        //             }
+        //             .box-row__info:last-child {
+        //                 width: 100%;
+        //             }
+        //         }
+        //     }
+        // }
+    }
+
+    .sec4-testimonial {
+        margin-top: 120px;
+        position: relative;
+        width: 100%;
+        min-height: 540px;
+        background: linear-gradient(to left, $Blue-Tint 70%, transparent 70%);
+        &__content {
+            display: flex;
+            min-height: 430px;
+            margin: 55px 0 55px 45px;
+            border: 1px solid $Sand-Light;
+            position: relative;
+            &::after {
+                content: "";
+                position: absolute;
+                top: -76px;
+                left: 29px;
+                transform: translateX(-50%);
+                background: $White
+                    url("../img/invest-karwia/home-page/icon1.svg");
+                background-size: contain;
+                width: 120px;
+                height: 88px;
+                border: 35px solid $White;
+            }
+            &__box {
+                margin-left: 45px;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                min-height: 430px;
+                position: relative;
+                top: -35px;
+            }
+            &__entry {
+                left: 3vw;
+                width: 42vw;
+                .swiper-slide {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    min-height: 430px;
+                    .testimonial-text {
+                        margin-top: 20px;
+                        margin-right: 20px;
+                    }
+                    .testimonial-name {
+                        margin-top: 45px;
+                        margin-bottom: 20px;
+                        margin-right: 20px;
+                    }
+                }
+            }
+            &__nav {
+                position: absolute;
+                width: auto;
+                height: 100%;
+                .swiper-pagination {
+                    position: relative;
+                    height: 20px;
+                    width: auto;
+                    left: 0;
+                    bottom: 60px;
+                    display: flex;
+                    align-items: flex-end;
+                    gap: 18px;
+                    height: 100%;
+                    padding: 0 35px 0 15px;
+                    margin-left: 50px;
+                    .swiper-pagination-bullet {
+                        background-color: $Sand-Light;
+                        width: 8px;
+                        height: 8px;
+                        transform: rotate(45deg) translateY(-2px);
+                        border-radius: 0;
+                        opacity: 1;
+                        margin: 0;
+                        box-shadow: 0px 0px 0px 2px #ffffff;
+                    }
+                    .swiper-pagination-bullet-active {
+                        background-color: $Blue-Dark;
+                        width: 11px;
+                        height: 11px;
+                        transform: rotate(45deg);
+                        border-radius: 0;
+                        opacity: 1;
+                        margin: 0;
+                        box-shadow: 0px 0px 0px 2px #ffffff;
+                    }
+                    &::before {
+                        content: "";
+                        position: absolute;
+                        bottom: 5px;
+                        left: 0;
+                        width: 100%;
+                        height: 1px;
+                        background-color: $Sand-Light;
+                    }
+                }
+                .swiper-button-next {
+                    position: relative;
+                    top: -94px;
+                    left: 270px;
+                    margin: 0px;
+                    width: 60px;
+                    height: 60px;
+                    background: #d6b29200
+                        url("../img/invest-karwia/home-page/arrow-next-testimonial.svg");
+                    background-repeat: no-repeat;
+                    background-position: center;
+                    transition: all 0.2s;
+                    &:hover {
+                        border: 1px solid $Blue-Dark;
+                        background: #d6b2922c
+                            url("../img/invest-karwia/home-page/arrow-next-testimonial.svg");
+                        width: 60px;
+                        height: 60px;
+                        background-position: center;
+                    }
+                    &:after {
+                        display: none;
+                    }
+                }
+            }
+        }
+        @media (max-width: $xxxl) {
+            background: linear-gradient(
+                to left,
+                $Blue-Tint 61%,
+                transparent 61%
+            );
+        }
+        @media (max-width: $xl) {
+            &__content {
+                &__box {
+                    .f-testimonial:first-child {
+                        font-size: 60px;
+                        line-height: 70px;
+                    }
+                    .f-testimonial:last-child {
+                        font-size: 80px;
+                        line-height: 110px;
+                    }
+                }
+            }
+        }
+        @media (max-width: $lg) {
+            margin-top: 50px;
+            position: relative;
+            width: 100%;
+            min-height: auto;
+            background: linear-gradient(
+                to bottom,
+                transparent 160px,
+                $Blue-Tint 160px
+            );
+            &__content {
+                display: flex;
+                flex-direction: column;
+                min-height: auto;
+                margin: 0 0 15px 0;
+                &::after {
+                    content: "";
+                    position: absolute;
+                    top: -39px;
+                    left: 24px;
+                    transform: translateX(-50%);
+                    background: $White
+                        url("../img/invest-karwia/home-page/icon1.svg");
+                    background-size: cover;
+                    width: 54px;
+                    height: 40px;
+                    border: 15px solid #ffffff;
+                }
+                &__box {
+                    margin-left: 15px;
+                    min-height: auto;
+                    top: 0;
+                    margin-top: 30px;
+                    .f-testimonial:first-child {
+                        font-size: 50px;
+                        line-height: 60px;
+                    }
+                    .f-testimonial:last-child {
+                        font-size: 60px;
+                        line-height: 64px;
+                    }
+                }
+                &__entry {
+                    left: 0;
+                    margin: 0 15px;
+                    width: 100%;
+                    .swiper-slide {
+                        min-height: auto;
+                        .testimonial-text {
+                            margin-right: 25px;
+                        }
+                        .testimonial-name {
+                            margin-top: 30px;
+                            margin-right: 25px;
+                            margin-bottom: 100px;
+                        }
+                    }
+                }
+                &__nav {
+                    position: absolute;
+                    width: auto;
+                    height: 100%;
+                    .swiper-pagination {
+                        bottom: 45px;
+                        margin-left: 15px;
+                        .swiper-pagination-bullet {
+                            background-color: $Sand-Light;
+                            width: 8px;
+                            height: 8px;
+                            transform: rotate(45deg) translateY(-2px);
+                            border-radius: 0;
+                            opacity: 1;
+                            margin: 0;
+                            box-shadow: 0px 0px 0px 2px $Blue-Tint;
+                        }
+                        .swiper-pagination-bullet-active {
+                            background-color: $Blue-Dark;
+                            width: 11px;
+                            height: 11px;
+                            transform: rotate(45deg);
+                            border-radius: 0;
+                            opacity: 1;
+                            margin: 0;
+                            box-shadow: 0px 0px 0px 2px $Blue-Tint;
+                        }
+                    }
+                    .swiper-button-next {
+                        position: relative;
+                        top: -80px;
+                        left: 245px;
+                        margin: 0px;
+                        width: 60px;
+                        height: 60px;
+                        background: #d6b29200
+                            url("../img/invest-karwia/home-page/arrow-next-testimonial.svg");
+                        background-repeat: no-repeat;
+                        background-position: center;
+                        transition: all 0.2s;
+                        &:hover {
+                            border: 1px solid $Blue-Dark;
+                            background: #d6b2922c
+                                url("../img/invest-karwia/home-page/arrow-next-testimonial.svg");
+                            width: 60px;
+                            height: 60px;
+                            background-position: center;
+                        }
+                        &:after {
+                            display: none;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .sec5-location-karwia {
+        margin-top: 200px;
+        &__map {
+            position: relative;
+            margin-top: -80px;
+            height: 545px;
+        }
+        &__content {
+            display: flex;
+            flex-direction: column;
+            height: 545px;
+            .locat-logo {
+                width: fit-content;
+            }
+            .locat-info {
+                margin-top: 40px;
+                display: flex;
+                justify-content: flex-start;
+                gap: 20px;
+                &__data-firm,
+                &__data-person {
+                    p:nth-child(even) {
+                        line-height: 30px;
+                    }
+                    p:nth-child(3),
+                    p:nth-child(4) {
+                        margin-top: 25px;
+                    }
+                    p:nth-child(3) {
+                        line-height: 20px;
+                    }
+                    a {
+                        position: relative;
+                        &:hover {
+                            color: red;
+                        }
+                    }
+                }
+                &__data-firm {
+                    width: 38%;
+                }
+                &__data-person {
+                    width: 55%;
+                }
+            }
+        }
+        @media (max-width: $xxl) {
+            &__content {
+                .locat-info {
+                    &__data-firm {
+                        width: 49%;
+                    }
+                    &__data-person {
+                        width: 51%;
+                    }
+                }
+            }
+        }
+        @media (max-width: $xl) {
+            &__content {
+                height: auto;
+                margin-top: 50px;
+                .locat-info {
+                    &__data-firm {
+                        width: 49%;
+                    }
+                    &__data-person {
+                        width: 51%;
+                    }
+                }
+            }
+        }
+        @media (max-width: $md) {
+            margin-top: 50px;
+            padding: 0;
+            &__map {
+                position: relative;
+                margin-top: 0px;
+                width: 100%;
+                height: 300px;
+            }
+            &__content {
+                margin-top: 30px;
+                .locat-info {
+                    margin-top: 30px;
+                    display: flex;
+                    flex-direction: column;
+                    gap: 30px;
+                    &__data-firm,
+                    &__data-person {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+}

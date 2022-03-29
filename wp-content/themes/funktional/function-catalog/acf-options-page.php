@@ -5,7 +5,7 @@ function my_acf_op_init()
 {
 
 
-    // Ustawienia globalne
+    // Footer tabs
     acf_add_options_page(array(
         'page_title'     => 'Stopki',
         'menu_title'    => 'Stopki',

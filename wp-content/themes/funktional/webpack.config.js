@@ -9,6 +9,7 @@ module.exports = {
     entry: {
         main: "./resources/js/index.js",
         kladno: "./resources/js/invest-kladno.js",
+        karwia: "./resources/js/invest-karwia.js",
     },
     output: {
         path: path.resolve(__dirname, "./assets/js"),
