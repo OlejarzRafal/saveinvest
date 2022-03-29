@@ -72,14 +72,15 @@ get_header();  ?>
                                     Wszyscy
                                 </li>
                                 <?php
-                                $dont_include = array(1,2,5,6,7,4,8);  // IDs not to include
+                                $dont_include = array(1,2,6,7);  // IDs not to include
                                 $args = array(
                                     'exclude'      => $dont_include,
                                     'orderby'      => 'login',
-                                    'order'        => 'ASC',
+                                    'order'        => 'DESC',
                                     'fields'       => 'all',
                                 );
                                 $expert = get_users($args);
+                                // $expert = get_users();
                                 foreach ($expert as $expert) : ?>
                                     <?php
                                     $expert_id =  $expert->ID;

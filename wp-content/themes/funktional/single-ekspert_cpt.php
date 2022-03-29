@@ -137,7 +137,7 @@ get_header();  ?>
                                 'post_type' => 'ekspert_cpt',
                                 'posts_per_page' => 8,
                                 'orderby' => 'date',
-                                'post__not_in' => array(241, $postid),
+                                'post__not_in' => array(461),
                                 'order' => 'DESC',
                             );
                             $loop = new WP_Query($ekspertRadzi_Filtrations_args);
