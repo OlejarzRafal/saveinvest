@@ -120,10 +120,9 @@
                     position: relative;
                     max-height: 750px;
                     max-width: 650px;
-                    &::after {
-                        content: "";
+                    .bottom-item-2 {
                         position: absolute;
-                        top: -59px;
+                        top: -77px;
                         right: -80px;
                         background: url("../img/invest-karwia/home-page/rhombus-hp-s2.svg");
                         background-size: contain;
@@ -240,7 +239,7 @@
                     display: flex;
                     justify-content: center;
                     .photo-box1 {
-                        &::after {
+                        .bottom-item-2 {
                             content: "";
                             display: none;
                         }
@@ -336,11 +335,25 @@
         }
     }
     .sec3-two-text {
+        &__box1 {
+            &__photo {
+                .photo-box1 {
+                    .bottom-item-3 {
+                        position: absolute;
+                        top: -77px;
+                        right: -80px;
+                        background: url("../img/invest-karwia/home-page/rhombus-hp-s2.svg");
+                        background-size: contain;
+                        width: 160px;
+                        height: 160px;
+                    }
+                }
+            }
+        }
         &__box2 {
             &__photo {
                 .photo-box2 {
-                    &::after {
-                        content: "";
+                    .rotate-item-4 {
                         position: absolute;
                         top: 43%;
                         left: -80px;
@@ -348,6 +361,26 @@
                         background-size: contain;
                         width: 160px;
                         height: 160px;
+                    }
+                }
+            }
+        }
+        @media (max-width: $xl) {
+            &__box1 {
+                &__photo {
+                    .photo-box1 {
+                        .bottom-item-3 {
+                            display: none;
+                        }
+                    }
+                }
+            }
+            &__box2 {
+                &__photo {
+                    .photo-box2 {
+                        .rotate-item-4 {
+                            display: none;
+                        }
                     }
                 }
             }
@@ -366,8 +399,7 @@
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-        &::after {
-            content: "";
+        .rotate-item-3 {
             position: absolute;
             top: -83px;
             left: 50%;
@@ -490,8 +522,7 @@
             min-height: 650px;
             margin-top: 80px;
             padding: 70px 15px 50px 15px;
-            &::after {
-                content: "";
+            .rotate-item-3 {
                 position: absolute;
                 top: -50px;
                 left: 50%;

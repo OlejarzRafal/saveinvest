@@ -9,9 +9,10 @@ get_template_part('investitions/enklawa-karwia/header');
 ?>
 <div class="ek-frontpage">
     
-    <scetion class="header">
+    <section class="header">
         <img src=" <?php echo get_template_directory_uri(); ?>/assets/img/invest-karwia/home-page/photo-header.jpg" alt="ikona" />
-    </scetion>
+        <div class="rotate-item-1"></div>
+    </section>
 
     <section class="sec1-video">
         <div class="container">
@@ -33,14 +34,14 @@ get_template_part('investitions/enklawa-karwia/header');
                     <div class="sec1-video__content">
                         <?php if ($title_sec1_hp_karwia = get_field('title_sec1_hp_karwia')) : ?>
                             <div class="sec1-video__content__title">
-                                <h3 class="f-h3 el-fadein-karwia">
+                                <h3 class="f-h3 ek-fadein-karwia">
                                     <?php echo ($title_sec1_hp_karwia); ?>
                                 </h3>
                             </div>
                         <?php endif; ?>
                         <?php if ($text_sec1_hp_karwia = get_field('text_sec1_hp_karwia')) : ?>
-                            <div class="sec1-video__content__text el-fadein-karwia">
-                                <p class="text-main">
+                            <div class="sec1-video__content__text ">
+                                <p class="text-main ek-fadein-karwia">
                                     <?php echo $text_sec1_hp_karwia; ?>
                                 </p>
                             </div>
@@ -62,23 +63,23 @@ get_template_part('investitions/enklawa-karwia/header');
                             </div>
                             <div class="content-info">
                                 <?php if ($text_sec2_hp_karwia = get_field('text_sec2_hp_karwia')) : ?>
-                                    <div class="content-info__test el-fadein-karwia">
-                                        <p class="f-special">
+                                    <div class="content-info__test ">
+                                        <p class="f-special ek-fadein-karwia">
                                             <?php echo $text_sec2_hp_karwia; ?>
                                         </p>
                                     </div>
                                 <?php endif; ?>
                                 <?php if ($name_sec2_hp_karwia = get_field('name_sec2_hp_karwia')) : ?>
-                                    <div class="content-info__name el-fadein-karwia">
-                                        <h5 class="f-h5 f-h5--white">
+                                    <div class="content-info__name ">
+                                        <h5 class="f-h5 f-h5--white ek-fadein-karwia">
                                             <?php echo ($name_sec2_hp_karwia); ?>
                                         </h5>
                                     </div>
                                 <?php endif; ?>
 
                                 <?php if ($positon_sec2_hp_karwia = get_field('positon_sec2_hp_karwia')) : ?>
-                                    <div class="content-info__position el-fadein-karwia">
-                                        <h6 class="f-h6 f-h6--white f-h6--f20 f-h6--white f-h6--ls2">
+                                    <div class="content-info__position ">
+                                        <h6 class="f-h6 f-h6--white f-h6--f20 f-h6--white f-h6--ls2 ek-fadein-karwia">
                                             <?php echo ($positon_sec2_hp_karwia); ?>
                                         </h6>
                                     </div>
@@ -87,7 +88,7 @@ get_template_part('investitions/enklawa-karwia/header');
                             <?php
                             $photo_person_sec2_hp_karwia = get_field('photo_person_sec2_hp_karwia');
                             if ($photo_person_sec2_hp_karwia) : ?>
-                                <div class="content-photo el-fadein-karwia">
+                                <div class="content-photo ">
                                     <img src="<?php echo esc_url($photo_person_sec2_hp_karwia['url']); ?>" alt="<?php echo esc_attr($photo_person_sec2_hp_karwia['alt']); ?>" />
                                 </div>
                             <?php endif; ?>
@@ -101,8 +102,8 @@ get_template_part('investitions/enklawa-karwia/header');
                 <div class="row">
                     <div class="col-xl-12">
                         <?php if ($title_icon_sec2_hp_karwia = get_field('title_icon_sec2_hp_karwia')) : ?>
-                            <div class="sec2-info__bottom__title el-fadein-karwia">
-                                <h5 class="f-h5 f-h5--sand-dark">
+                            <div class="sec2-info__bottom__title ">
+                                <h5 class="f-h5 f-h5--sand-dark ek-fadein-karwia">
                                     <?php echo $title_icon_sec2_hp_karwia; ?>
                                 </h5>
                             </div>
@@ -113,7 +114,7 @@ get_template_part('investitions/enklawa-karwia/header');
                             <?php if (have_rows('row_icon_sec2_hp_karwia')) : ?>
                                 <?php while (have_rows('row_icon_sec2_hp_karwia')) :
                                     the_row(); ?>
-                                    <div class="content-boxs el-fadein-karwia">
+                                    <div class="content-boxs ">
                                         <?php if (have_rows('box_row_icon_sec2_hp_karwia')) : ?>
                                             <?php while (have_rows('box_row_icon_sec2_hp_karwia')) :
                                                 the_row(); ?>
@@ -124,7 +125,7 @@ get_template_part('investitions/enklawa-karwia/header');
                                                         <img src="<?php echo esc_url($icon_box_row_icon_sec2_hp_karwia['url']); ?>" alt="<?php echo esc_attr($icon_box_row_icon_sec2_hp_karwia['alt']); ?>" />
                                                     <?php endif; ?>
                                                     <?php if ($text_box_row_icon_sec2_hp_karwia = get_sub_field('text_box_row_icon_sec2_hp_karwia')) : ?>
-                                                        <p class="text-main text-main--f20 text-main--sand-dark">
+                                                        <p class="text-main text-main--f20 text-main--sand-dark ek-fadein-karwia">
                                                             <?php echo $text_box_row_icon_sec2_hp_karwia; ?>
                                                         </p>
                                                     <?php endif; ?>
@@ -143,6 +144,7 @@ get_template_part('investitions/enklawa-karwia/header');
 
     <section class="sec3-prestige">
         <div class="container">
+            <div class="rotate-item-5"></div>
             <div class="row">
                 <div class="col-xl-6">
                     <div class="sec3-prestige__box1">
@@ -152,18 +154,19 @@ get_template_part('investitions/enklawa-karwia/header');
                             <div class="sec3-prestige__box1__photo">
                                 <div class="photo-box1">
                                     <img src="<?php echo esc_url($left_photo_sec3_hp_karwia['url']); ?>" alt="<?php echo esc_attr($left_photo_sec3_hp_karwia['alt']); ?>" />
+                                    <div class="bottom-item-1"></div>
                                 </div>
                             </div>
                         <?php endif; ?>
                         <div class="sec3-prestige__box1__content">
                             <?php if ($left_title_sec3_hp_karwia = get_field('left_title_sec3_hp_karwia')) : ?>
                                 <div class="content-title">
-                                    <h3 class="f-h3"><?php echo $left_title_sec3_hp_karwia; ?></h3>
+                                    <h3 class="f-h3 ek-fadein-karwia"><?php echo $left_title_sec3_hp_karwia; ?></h3>
                                 </div>
                             <?php endif; ?>
                             <?php if ($left_text_sec3_hp_karwia = get_field('left_text_sec3_hp_karwia')) : ?>
                                 <div class="content-text">
-                                    <p class="text-main">
+                                    <p class="text-main ek-fadein-karwia">
                                         <?php echo $left_text_sec3_hp_karwia; ?>
                                     </p>
                                 </div>
@@ -188,18 +191,19 @@ get_template_part('investitions/enklawa-karwia/header');
                             <div class="sec3-prestige__box2__photo">
                                 <div class="photo-box2">
                                     <img src="<?php echo esc_url($right_photo_sec3_hp_karwia_kopia['url']); ?>" alt="<?php echo esc_attr($right_photo_sec3_hp_karwia_kopia['alt']); ?>" />
+                                    <div class="rotate-item-2"></div>
                                 </div>
                             </div>
                         <?php endif; ?>
                         <div class="sec3-prestige__box2__content">
                             <?php if ($right_title_sec3_hp_karwia = get_field('right_title_sec3_hp_karwia')) : ?>
                                 <div class="content-title">
-                                    <h3 class="f-h3"><?php echo $right_title_sec3_hp_karwia; ?></h3>
+                                    <h3 class="f-h3 ek-fadein-karwia"><?php echo $right_title_sec3_hp_karwia; ?></h3>
                                 </div>
                             <?php endif; ?>
                             <?php if ($right_text_sec3_hp_karwia = get_field('right_text_sec3_hp_karwia')) : ?>
                                 <div class="content-text">
-                                    <p class="text-main">
+                                    <p class="text-main ek-fadein-karwia">
                                         <?php echo $right_text_sec3_hp_karwia; ?>
                                     </p>
                                 </div>
@@ -214,6 +218,7 @@ get_template_part('investitions/enklawa-karwia/header');
                                 <a class="btn" href="<?php echo esc_url($link_url); ?>" target="<?php echo esc_attr($link_target); ?>"><?php echo esc_html($link_title); ?></a>
                             <?php endif; ?>
                         </div>
+                       
                     </div>
                 </div>
             </div>
@@ -253,7 +258,7 @@ get_template_part('investitions/enklawa-karwia/header');
         <div class="container">
             <div class="row">
                 <div class="col-xl-12">
-                    <div class="sec5-testimonial__content">
+                    <div class="sec5-testimonial__content ek-left-karwia">
                         <div class="sec5-testimonial__content__box">
                             <div class="f-testimonial">Opinie</div>
                             <div class="f-testimonial f-testimonial--f112">klientów</div>
@@ -298,25 +303,25 @@ get_template_part('investitions/enklawa-karwia/header');
                     <div class="sec6-about-saveinwest__content">
                         <div class="sec6-about-saveinwest__content__top-left">
                             <img src="<?php bloginfo('template_url'); ?>/assets/img/invest-karwia/home-page/home-karwia-company-logo.png" alt="logo saveinvest" />
-                            <h3 class="f-h3">O firmie</h3>
+                            <h3 class="f-h3 ek-fadein-karwia">O firmie</h3>
                         </div>
                         <?php if ($text_left_sec6_hp_karwia = get_field('text_left_sec6_hp_karwia')) : ?>
                             <div class="sec6-about-saveinwest__content__bottom">
-                                <p class="text-main text-main--f20"><?php echo $text_left_sec6_hp_karwia; ?></p>
+                                <p class="text-main text-main--f20 ek-fadein-karwia"><?php echo $text_left_sec6_hp_karwia; ?></p>
                             </div>
                         <?php endif; ?>
                     </div>
                 </div>
                 <div class="col-xl-6">
                     <div class="sec6-about-saveinwest__content">
-                        <div class="sec6-about-saveinwest__content__top-right">
+                        <div class="sec6-about-saveinwest__content__top-right ek-fadein-karwia">
                             <img src="<?php bloginfo('template_url'); ?>/assets/img/invest-karwia/home-page/1000-about-karwia.svg" alt="logo 1000 zadowolonych klientów" />
                             <img src="<?php bloginfo('template_url'); ?>/assets/img/invest-karwia/home-page/20-about-karwia.svg" alt="logo 20 lat doświadczenia" />
                             <img src="<?php bloginfo('template_url'); ?>/assets/img/invest-karwia/home-page/100-about-karwia.svg" alt="100% sprawdzonych gtuntów" />
                         </div>
                         <?php if ($text_right_sec6_hp_karwia = get_field('text_right_sec6_hp_karwia')) : ?>
                             <div class="sec6-about-saveinwest__content__bottom">
-                                <p class="text-main"><?php echo $text_right_sec6_hp_karwia; ?>
+                                <p class="text-main ek-fadein-karwia"><?php echo $text_right_sec6_hp_karwia; ?>
                             </div>
                         <?php endif; ?>
                     </div>

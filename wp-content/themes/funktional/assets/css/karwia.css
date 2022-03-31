@@ -1,6 +1,5 @@
 @import url(https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;1,600&family=Inter:wght@300;400;500;600;700&family=Raleway:ital,wght@1,200;1,300&display=swap);
 /*COLORS*/
-/*Gradient*/
 h1 {
   font-size: 82px;
   line-height: 108px;
@@ -256,7 +255,7 @@ p--ls2 {
 }
 .text-main--ls3,
 p--ls3 {
-  letter-spacing: 0.03em;
+  letter-spacing: 0.3em;
 }
 .text-main--ls4,
 p--ls4 {
@@ -3346,8 +3345,7 @@ a:hover {
   height: auto;
   width: 100%;
 }
-.ek-frontpage .header::after {
-  content: "";
+.ek-frontpage .header .rotate-item-1 {
   position: absolute;
   bottom: -70px;
   left: 50%;
@@ -3366,6 +3364,20 @@ a:hover {
   width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+}
+@media (max-width: 1199px) {
+  .ek-frontpage .header .rotate-item {
+    bottom: -55px;
+    width: 120px;
+    height: 120px;
+  }
+}
+@media (max-width: 767px) {
+  .ek-frontpage .header .rotate-item {
+    bottom: -35px;
+    width: 80px;
+    height: 80px;
+  }
 }
 .ek-frontpage .sec1-video {
   margin-top: 120px;
@@ -3449,6 +3461,7 @@ a:hover {
 }
 @media (max-width: 1199px) {
   .ek-frontpage .sec1-video {
+    margin-top: 80px;
     min-height: auto;
     background: -webkit-gradient(linear, right top, left top, color-stop(100%, #F7F1EB), color-stop(0%, transparent));
     background: linear-gradient(to left, #F7F1EB 100%, transparent 0%);
@@ -3462,6 +3475,9 @@ a:hover {
   }
 }
 @media (max-width: 767px) {
+  .ek-frontpage .sec1-video {
+    margin-top: 40px;
+  }
   .ek-frontpage .sec1-video__movie a::before {
     content: "";
     position: absolute;
@@ -3789,8 +3805,7 @@ a:hover {
   margin-top: 105px;
   position: relative;
 }
-.ek-frontpage .sec3-prestige::after {
-  content: "";
+.ek-frontpage .sec3-prestige .rotate-item-5 {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -3844,8 +3859,7 @@ a:hover {
   max-height: 750px;
   max-width: 650px;
 }
-.ek-frontpage .sec3-prestige__box1__photo .photo-box1::after {
-  content: "";
+.ek-frontpage .sec3-prestige__box1__photo .photo-box1 .bottom-item-1 {
   position: absolute;
   top: -59px;
   right: -80px;
@@ -3960,8 +3974,7 @@ a:hover {
   max-height: 750px;
   max-width: 650px;
 }
-.ek-frontpage .sec3-prestige__box2__photo .photo-box2::after {
-  content: "";
+.ek-frontpage .sec3-prestige__box2__photo .photo-box2 .rotate-item-2 {
   position: absolute;
   top: 56%;
   left: -80px;
@@ -4864,11 +4877,10 @@ a:hover {
   max-height: 750px;
   max-width: 650px;
 }
-.ek-about .sec1-two-text__box1__photo .photo-box1::after,
-.ek-about .sec3-two-text__box1__photo .photo-box1::after {
-  content: "";
+.ek-about .sec1-two-text__box1__photo .photo-box1 .bottom-item-2,
+.ek-about .sec3-two-text__box1__photo .photo-box1 .bottom-item-2 {
   position: absolute;
-  top: -59px;
+  top: -77px;
   right: -80px;
   background: url("../img/invest-karwia/home-page/rhombus-hp-s2.svg");
   background-size: contain;
@@ -5030,8 +5042,8 @@ a:hover {
         -ms-flex-pack: center;
             justify-content: center;
   }
-  .ek-about .sec1-two-text__box1__photo .photo-box1::after,
-.ek-about .sec3-two-text__box1__photo .photo-box1::after {
+  .ek-about .sec1-two-text__box1__photo .photo-box1 .bottom-item-2,
+.ek-about .sec3-two-text__box1__photo .photo-box1 .bottom-item-2 {
     content: "";
     display: none;
   }
@@ -5157,8 +5169,16 @@ a:hover {
     margin: 20px auto 10px;
   }
 }
-.ek-about .sec3-two-text__box2__photo .photo-box2::after {
-  content: "";
+.ek-about .sec3-two-text__box1__photo .photo-box1 .bottom-item-3 {
+  position: absolute;
+  top: -77px;
+  right: -80px;
+  background: url("../img/invest-karwia/home-page/rhombus-hp-s2.svg");
+  background-size: contain;
+  width: 160px;
+  height: 160px;
+}
+.ek-about .sec3-two-text__box2__photo .photo-box2 .rotate-item-4 {
   position: absolute;
   top: 43%;
   left: -80px;
@@ -5166,6 +5186,14 @@ a:hover {
   background-size: contain;
   width: 160px;
   height: 160px;
+}
+@media (max-width: 1199px) {
+  .ek-about .sec3-two-text__box1__photo .photo-box1 .bottom-item-3 {
+    display: none;
+  }
+  .ek-about .sec3-two-text__box2__photo .photo-box2 .rotate-item-4 {
+    display: none;
+  }
 }
 .ek-about .sec2-comfort {
   margin-top: 130px;
@@ -5187,8 +5215,7 @@ a:hover {
       -ms-flex-pack: justify;
           justify-content: space-between;
 }
-.ek-about .sec2-comfort::after {
-  content: "";
+.ek-about .sec2-comfort .rotate-item-3 {
   position: absolute;
   top: -83px;
   left: 50%;
@@ -5337,8 +5364,7 @@ a:hover {
     margin-top: 80px;
     padding: 70px 15px 50px 15px;
   }
-  .ek-about .sec2-comfort::after {
-    content: "";
+  .ek-about .sec2-comfort .rotate-item-3 {
     position: absolute;
     top: -50px;
     left: 50%;
@@ -5461,21 +5487,15 @@ a:hover {
   height: 24px;
   z-index: 1;
 }
-.ek-localization .scroll-bottom {
-  position: absolute;
-  width: 100%;
-  margin: 50px 0 65px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  top: 90%;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  z-index: 99;
+@media (max-width: 991px) {
+  .ek-localization .header {
+    height: 665px;
+  }
+}
+@media (max-width: 767px) {
+  .ek-localization .header {
+    height: 520px;
+  }
 }
 .ek-localization .sec1-info-map {
   position: relative;
@@ -5629,143 +5649,206 @@ a:hover {
   }
 }
 @media (max-width: 991px) {
-  .ek-localization .scroll-bottom {
-    top: 59vw;
+  .ek-localization .sec1-info-map {
+    margin-top: -375px;
   }
-  .ek-localization .hero1-location {
-    background-size: 1000px auto;
-    background-position: right top;
-    height: 1950px;
-  }
-  .ek-localization .hero1-location__box {
-    padding-top: 85%;
-    padding-left: 15px;
-    padding-right: 15px;
-  }
-  .ek-localization .hero1-location__map::before {
+  .ek-localization .sec1-info-map::before {
     content: "";
     position: absolute;
-    height: 128%;
+    bottom: -45px;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+    background: url("../img/invest-karwia/home-page/rhombus-hp-s2.svg");
+    background-size: cover;
+    width: 120px;
+    height: 120px;
   }
 }
 @media (max-width: 767px) {
-  .ek-localization .hero1-location {
-    height: 1680px;
+  .ek-localization .sec1-info-map {
+    margin-top: -340px;
   }
-  .ek-localization .hero1-location__box {
-    padding-top: 100%;
-    padding-bottom: 30px;
+  .ek-localization .sec1-info-map__box {
+    padding-top: 250px;
+    padding-bottom: 25px;
   }
-  .ek-localization .hero1-location__box h2 {
-    font-size: 35px;
+  .ek-localization .sec1-info-map__box .f-h3 {
+    font-size: 32px;
+    line-height: 42px;
   }
-  .ek-localization .hero1-location__box .table-location {
-    overflow-x: scroll;
-    padding-bottom: 10px;
-    margin-top: 30px;
+  .ek-localization .sec1-info-map__box .box-text {
+    margin-top: 20px;
   }
-  .ek-localization .hero1-location__box .table-location .row-table {
-    min-width: 550px;
+  .ek-localization .sec1-info-map__box__table-location .row-table:nth-child(2) .row-table__time p {
+    position: relative;
   }
-  .ek-localization .hero1-location__box .table-location .row-table__title {
-    min-width: 300px;
-  }
-  .ek-localization .hero1-location__box .table-location .row-table__time {
-    min-width: 150px;
-  }
-  .ek-localization .hero1-location__box .table-location .row-table__distance {
-    min-width: 100px;
-  }
-  .ek-localization .hero1-location__box .table-location::-webkit-scrollbar-track {
-    border-radius: 10px;
+  .ek-localization .sec1-info-map__box__table-location .row-table:nth-child(2) .row-table__time p::after {
+    content: "";
     position: absolute;
-    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
-    background-color: #003b5c;
-  }
-  .ek-localization .hero1-location__box .table-location::-webkit-scrollbar {
+    top: 18px;
+    left: 45px;
+    background: url("../img/invest-karwia/localization/time-icon.png");
+    height: 16px;
     width: 10px;
-    background-color: #003b5c;
-    height: 5px;
   }
-  .ek-localization .hero1-location__box .table-location::-webkit-scrollbar-thumb {
-    background-color: #1c71a1;
-    border: 1px solid #0a2534;
-    border-radius: 10px;
-  }
-  .ek-localization .hero1-location__map::before {
-    content: "";
-    position: absolute;
-    height: 115%;
+  .ek-localization .sec1-info-map__box__table-location .row-table p {
+    font-size: 12px;
   }
 }
-@media (max-width: 575px) {
-  .ek-localization .hero1-location {
-    background-size: 750px auto;
-    height: 1620px;
+.ek-localization .sec2-icons {
+  margin-top: 130px;
+}
+.ek-localization .sec2-icons .row-background {
+  position: relative;
+  left: 15px;
+  width: 100%;
+  height: auto;
+  background-color: #F7F1EB;
+  padding: 90px 0;
+}
+.ek-localization .sec2-icons__content {
+  width: 90%;
+  margin: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-top: 50px;
+  gap: 75px;
+}
+.ek-localization .sec2-icons__content .content-boxs {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+.ek-localization .sec2-icons__content .content-boxs .content-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -ms-flex-preferred-size: 17%;
+      flex-basis: 17%;
+  position: relative;
+}
+.ek-localization .sec2-icons__content .content-boxs .content-box img {
+  width: 120px;
+  height: auto;
+}
+.ek-localization .sec2-icons__content .content-boxs .content-box .text-main {
+  text-align: center;
+}
+.ek-localization .sec2-icons__content .content-boxs:nth-child(1) .content-box::after {
+  content: "";
+  position: absolute;
+  bottom: -47%;
+  right: -40%;
+  background: url("../img/invest-karwia/home-page/icon-plus-ph-sec2.svg");
+  background-size: contain;
+  width: 80px;
+  height: 80px;
+}
+.ek-localization .sec2-icons__content .content-boxs:nth-child(1) .content-box:last-child::after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+@media (max-width: 1399px) {
+  .ek-localization .sec2-icons .row-background {
+    padding: 30px 0 50px;
   }
-  .ek-localization .hero1-location__box {
-    padding-top: 85%;
-  }
-  .ek-localization .hero1-location__map::before {
-    content: "";
-    position: absolute;
-    height: 152%;
+  .ek-localization .sec2-icons__content {
+    width: 100%;
   }
 }
-@media (max-width: 520px) {
-  .ek-localization .hero1-location {
-    height: 1550px;
-    background-size: 600px auto;
+@media (max-width: 991px) {
+  .ek-localization .sec2-icons {
+    margin-top: 80px;
   }
-  .ek-localization .hero1-location__map::before {
+  .ek-localization .sec2-icons__content {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin-top: 40px;
+    gap: 50px;
+    overflow-x: scroll;
+    max-width: 100%;
+    padding-bottom: 20px;
+  }
+  .ek-localization .sec2-icons__content .content-boxs {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
+  .ek-localization .sec2-icons__content .content-boxs .content-box {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    min-width: 190px;
+  }
+  .ek-localization .sec2-icons__content .content-boxs .content-box img {
+    width: 100px;
+    height: auto;
+  }
+  .ek-localization .sec2-icons__content .content-boxs:nth-child(1) .content-box::after {
     content: "";
     position: absolute;
-    height: 181vw;
+    bottom: -39%;
+    right: -13%;
+    width: 50px;
+    height: 50px;
+  }
+  .ek-localization .sec2-icons__content::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+            box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    border-radius: 4px;
+  }
+  .ek-localization .sec2-icons__content::-webkit-scrollbar {
+    height: 4px;
+  }
+  .ek-localization .sec2-icons__content::-webkit-scrollbar-thumb {
+    border-radius: 4px;
+    background-color: #443401;
   }
 }
-@media (max-width: 450px) {
-  .ek-localization .hero1-location {
-    height: 1460px;
-    background-size: 600px auto;
-  }
-  .ek-localization .hero1-location__map::before {
-    content: "";
-    position: absolute;
-    height: 181vw;
-  }
+.ek-localization .sec3-map {
+  margin-top: 85px;
+  position: relative;
 }
-@media (max-width: 414px) {
-  .ek-localization .hero1-location {
-    height: 1410px;
-  }
-  .ek-localization .hero1-location__map::before {
-    content: "";
-    position: absolute;
-    height: 186vw;
-  }
-}
-@media (max-width: 373px) {
-  .ek-localization .hero1-location {
-    height: 1305px;
-  }
-  .ek-localization .hero1-location__map::before {
-    content: "";
-    position: absolute;
-    height: 193vw;
-  }
-}
-@media (max-width: 347px) {
-  .ek-localization {
-    height: 1290px;
-  }
-  .ek-localization .hero1-location__map::before {
-    content: "";
-    position: absolute;
-    height: 204vw;
-  }
-  .ek-localization .map-location {
-    margin-top: 70px;
-    margin-bottom: -110px;
+@media (max-width: 991px) {
+  .ek-localization .sec3-map {
+    margin-top: 45px;
   }
 }
 
@@ -6377,8 +6460,7 @@ a:hover {
   background-position-y: top;
   margin-top: -120px;
 }
-.ek-contact .sec2-about-company::after {
-  content: "";
+.ek-contact .sec2-about-company .ek-right-karwia {
   position: absolute;
   bottom: -39px;
   left: 29%;
@@ -6498,6 +6580,17 @@ a:hover {
   background-position-y: bottom;
   padding-top: 80px;
 }
+.ek-contact .sec3-contact-number .left-rotate-item-1 {
+  position: absolute;
+  bottom: -77px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  background: url("../img/invest-karwia/home-page/Element-Circle-footer.svg");
+  background-size: contain;
+  width: 160px;
+  height: 160px;
+}
 .ek-contact .sec3-contact-number__box {
   width: 100%;
   margin-bottom: 170px;
@@ -6569,6 +6662,13 @@ a:hover {
 @media (max-width: 991px) {
   .ek-contact .sec3-contact-number {
     padding-top: 10px;
+  }
+  .ek-contact .sec3-contact-number::after {
+    content: "";
+    position: absolute;
+    bottom: -42px;
+    width: 85px;
+    height: 85px;
   }
   .ek-contact .sec3-contact-number__box {
     margin-bottom: 450px;
@@ -6769,7 +6869,7 @@ a:hover {
 }
 @media (max-width: 991px) {
   .ek-contact .sec4-testimonial {
-    margin-top: 50px;
+    margin-top: 60px;
     position: relative;
     width: 100%;
     min-height: auto;
@@ -7011,8 +7111,7 @@ footer .footer-top {
   background-position: center;
   padding: 0 15px;
 }
-footer .footer-top::after {
-  content: "";
+footer .footer-top .rotete-item-footer {
   position: absolute;
   bottom: -77px;
   left: 50%;
@@ -7470,4 +7569,415 @@ footer .footer .footer-box a p {
     opacity: 1;
     font-size: 14px;
   }
+}
+
+.karwia-nav {
+  height: 300px;
+  width: 100%;
+  background: -webkit-gradient(linear, left top, left bottom, from(#1951a4), to(rgba(25, 81, 164, 0)));
+  background: linear-gradient(180deg, #1951a4 0%, rgba(25, 81, 164, 0) 100%);
+  opacity: 1;
+  position: fixed;
+  z-index: 9999;
+}
+.karwia-nav--sticky {
+  background: linear-gradient(to bottom, #ffffff 125px, rgba(172, 171, 171, 0.418) 125px, transparent 130px);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.karwia-nav__container__mobile {
+  display: none;
+}
+.karwia-nav__container__mobile.active {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  left: 0px;
+  top: 0px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.karwia-nav__container__mobile.active ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 20px;
+}
+.karwia-nav__container__mobile.active ul li {
+  text-align: center;
+}
+.karwia-nav__container__mobile.active ul .logo-karwia {
+  width: 100%;
+  left: 0;
+  top: 0;
+  margin-right: 0vw;
+  margin-left: 0vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  position: relative;
+  background: url(../img/invest-karwia/home-page/logo-header-sticky.svg);
+  background-repeat: no-repeat;
+  background-size: 155px 75px;
+  background-position: center;
+  width: 100%;
+  height: 125px;
+  opacity: 1;
+}
+.karwia-nav__container__mobile.active ul .logo-karwia::after {
+  content: "";
+  display: none;
+}
+.karwia-nav__container__box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: auto;
+  width: 100%;
+}
+.karwia-nav__container__box.none {
+  display: none;
+}
+.karwia-nav__container__box ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  width: 100%;
+  position: relative;
+}
+.karwia-nav__container__box ul .btn-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 3vw;
+}
+.karwia-nav__container__box ul .btn-box .btn-nav {
+  margin-top: 53px;
+}
+.karwia-nav__container__box ul .btn-box .btn-nav--visibility {
+  visibility: hidden;
+}
+.karwia-nav__container__box ul .btn-box .btn-nav--sticky .text-main {
+  color: #0B345A;
+}
+.karwia-nav__container__box ul .btn-box .btn-nav .text-main:hover {
+  color: #E0C6AF;
+}
+.karwia-nav__container__box ul .btn-box .btn-nav--active .text-main {
+  color: #E0C6AF;
+  position: relative;
+}
+.karwia-nav__container__box ul .btn-box .btn-nav--active .text-main::before {
+  content: "";
+  position: absolute;
+  bottom: -13px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  width: 50px;
+  height: 3px;
+  background-color: #E0C6AF;
+}
+.karwia-nav__container__box ul .logo-karwia {
+  margin-right: 6vw;
+  margin-left: 6vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  position: relative;
+  background: #12406a url(../img/invest-karwia/home-page/logo-header.svg);
+  background-repeat: no-repeat;
+  background-size: 150px 180px;
+  background-position: center;
+  width: 215px;
+  height: 230px;
+  opacity: 1;
+  -webkit-transform: translateY(0px);
+          transform: translateY(0px);
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+  cursor: pointer;
+  z-index: 1;
+}
+.karwia-nav__container__box ul .logo-karwia a {
+  position: absolute;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+}
+.karwia-nav__container__box ul .logo-karwia::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: calc(100% + 20px);
+  height: calc(100% + 20px);
+  background: #022545;
+  opacity: 0.15;
+  z-index: -1;
+}
+.karwia-nav__container__box ul .logo-karwia--sticky {
+  margin-right: 6vw;
+  margin-left: 6vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  position: relative;
+  background: #12406a url(../img/invest-karwia/home-page/logo-header.svg);
+  background-repeat: no-repeat;
+  background-size: 150px 180px;
+  background-position: center;
+  width: 215px;
+  height: 230px;
+  opacity: 1;
+  -webkit-transform: translateY(-240px);
+          transform: translateY(-240px);
+}
+.karwia-nav__container__box ul .logo-karwia--sticky::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: calc(100% + 20px);
+  height: calc(100% + 20px);
+  background: #022545;
+  opacity: 0.15;
+  z-index: -1;
+}
+.karwia-nav__container__box ul .logo-karwia-sticky {
+  position: absolute;
+  top: 0px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  background: url(../img/invest-karwia/home-page/logo-header-sticky.svg);
+  background-repeat: no-repeat;
+  background-size: 150px 62px;
+  background-position: center;
+  width: 215px;
+  height: 125px;
+  opacity: 0;
+  -webkit-transition: all 0.6s ease;
+  transition: all 0.6s ease;
+}
+.karwia-nav__container__box ul .logo-karwia-sticky a {
+  position: absolute;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+}
+.karwia-nav__container__box ul .logo-karwia-sticky--sticky {
+  opacity: 1;
+}
+.karwia-nav__container__burger {
+  display: none;
+}
+@media (max-width: 1199px) {
+  .karwia-nav__container__burger {
+    display: block;
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    top: 32px;
+    left: auto;
+    right: 15px;
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+    -webkit-transition-duration: 0.3s;
+            transition-duration: 0.3s;
+    z-index: 999;
+    cursor: pointer;
+  }
+  .karwia-nav__container__burger span {
+    display: block;
+    position: absolute;
+    height: 2px;
+    width: 100%;
+    background: #443401;
+    border-radius: 0px;
+    opacity: 1;
+    left: 0;
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+    -webkit-transition: 0.25s ease-in-out;
+    transition: 0.25s ease-in-out;
+  }
+  .karwia-nav__container__burger span:nth-child(1) {
+    top: 0px;
+  }
+  .karwia-nav__container__burger span:nth-child(2),
+.karwia-nav__container__burger span:nth-child(3) {
+    top: 10px;
+  }
+  .karwia-nav__container__burger span:nth-child(4) {
+    top: 20px;
+  }
+  .karwia-nav__container__burger.open span:nth-child(1) {
+    top: 10px;
+    width: 0%;
+    left: 50%;
+  }
+  .karwia-nav__container__burger.open span:nth-child(2) {
+    visibility: visible;
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
+  .karwia-nav__container__burger.open span:nth-child(3) {
+    -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+  }
+  .karwia-nav__container__burger.open span:nth-child(4) {
+    top: 9px;
+    width: 0%;
+    left: 50%;
+  }
+}
+@media (max-width: 1679px) {
+  .karwia-nav__container__box ul .btn-box {
+    gap: 2vw;
+  }
+  .karwia-nav__container__box ul .logo-karwia {
+    margin-right: 3vw;
+    margin-left: 3vw;
+  }
+}
+@media (max-width: 1399px) {
+  .karwia-nav__container__box ul .btn-box .btn-nav .text-main {
+    font-size: 14px;
+  }
+  .karwia-nav__container__box ul .btn-box .btn-nav--sticky .text-main {
+    font-size: 14px;
+  }
+  .karwia-nav__container__box ul .logo-karwia {
+    margin-right: 2.5vw;
+    margin-left: 2.5vw;
+    background-size: 100px 120px;
+    width: 150px;
+    height: 170px;
+  }
+  .karwia-nav__container__box ul .logo-karwia-sticky {
+    position: absolute;
+    top: 0px;
+    background-size: 110px 45px;
+    width: 150px;
+    height: 125px;
+    opacity: 0;
+  }
+  .karwia-nav__container__box ul .logo-karwia-sticky--sticky {
+    opacity: 1;
+  }
+}
+@media (max-width: 1199px) {
+  .karwia-nav {
+    height: 100px;
+  }
+  .karwia-nav--sticky {
+    height: 80px;
+    background: #ffffff;
+    -webkit-box-shadow: 0px 10px 10px -10px rgba(172, 171, 171, 0.418);
+            box-shadow: 0px 10px 10px -10px rgba(172, 171, 171, 0.418);
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+  .karwia-nav__container__box ul .btn-box {
+    display: none;
+  }
+  .karwia-nav__container__box ul .logo-karwia {
+    position: absolute;
+    width: 100%;
+    margin-right: 0vw;
+    margin-left: 0vw;
+    left: 15px;
+    top: 0;
+    background-size: 50px 57px;
+    width: 70px;
+    height: 65px;
+    opacity: 1;
+  }
+  .karwia-nav__container__box ul .logo-karwia::after {
+    content: "";
+    position: absolute;
+    width: calc(100% + 10px);
+    height: calc(100% + 10px);
+  }
+  .karwia-nav__container__box ul .logo-karwia-sticky {
+    position: absolute;
+    top: 8px;
+    left: 50px;
+    background-size: 100px 50px;
+    width: 100px;
+    height: 65px;
+    opacity: 0;
+  }
+  .karwia-nav__container__box ul .logo-karwia-sticky--sticky {
+    opacity: 1;
+  }
+}
+.karwia-nav.active {
+  background: #ffffff;
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  z-index: 99999;
 }

@@ -11,8 +11,7 @@ footer {
         background-size: cover;
         background-position: center;
         padding: 0 15px;
-        &::after {
-            content: "";
+        .rotete-item-footer {
             position: absolute;
             bottom: -77px;
             left: 50%;

@@ -32,8 +32,8 @@ wp_footer();
                     <?php endwhile; ?>
                 <?php endif; ?>
             </div>
-
         </div>
+        <div class="rotete-item-footer"></div>
     </section>
     <section class="footer">
         <div class="container">

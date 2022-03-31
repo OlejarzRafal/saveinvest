@@ -349,8 +349,7 @@
         background-repeat: no-repeat;
         background-position-y: top;
         margin-top: -120px;
-        &::after {
-            content: "";
+        .ek-right-karwia {
             position: absolute;
             bottom: -39px;
             left: 29%;
@@ -457,7 +456,16 @@
         background-repeat: no-repeat;
         background-position-y: bottom;
         padding-top: 80px;
-
+       .left-rotate-item-1 {
+            position: absolute;
+            bottom: -77px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: url("../img/invest-karwia/home-page/Element-Circle-footer.svg");
+            background-size: contain;
+            width: 160px;
+            height: 160px;
+        }
         &__box {
             width: 100%;
             margin-bottom: 170px;
@@ -515,6 +523,13 @@
         }
         @media (max-width: $lg) {
             padding-top: 10px;
+            &::after {
+                content: "";
+                position: absolute;
+                bottom: -42px;
+                width: 85px;
+                height: 85px;
+            }
             &__box {
                 margin-bottom: 450px;
                 gap: 0;
@@ -541,24 +556,6 @@
                 }
             }
         }
-        // @media (max-width: $md) {
-        //     padding-top: 100px;
-        //     &__box {
-        //         gap: 0;
-        //         .box-row {
-        //             display: flex;
-        //             flex-direction: column;
-        //             align-items: center;
-        //             &__info {
-        //                 width: 100%;
-        //                 margin-top: 30px;
-        //             }
-        //             .box-row__info:last-child {
-        //                 width: 100%;
-        //             }
-        //         }
-        //     }
-        // }
     }
 
     .sec4-testimonial {
@@ -708,7 +705,7 @@
             }
         }
         @media (max-width: $lg) {
-            margin-top: 50px;
+            margin-top: 60px;
             position: relative;
             width: 100%;
             min-height: auto;
