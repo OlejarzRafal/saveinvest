@@ -49,30 +49,6 @@ ScrollTrigger.matchMedia({
                 markers: false,
             },
         });
-        gsap.to(".rotate-item-6", {
-            rotation: 90,
-            duration: 1,
-            ease: "none",
-            scrollTrigger: {
-                trigger: ".rotate-item-6",
-                start: "top 70%",
-                end: "top 50%",
-                scrub: 1,
-                markers: false,
-            },
-        });
-        gsap.to(".rotate-item-7", {
-            rotation: 90,
-            duration: 1,
-            ease: "none",
-            scrollTrigger: {
-                trigger: ".rotate-item-7",
-                start: "top 65%",
-                end: "top 50%",
-                scrub: 1,
-                markers: false,
-            },
-        });
         gsap.to(".rotate-item-footer", {
             rotation: 180,
             duration: 1,

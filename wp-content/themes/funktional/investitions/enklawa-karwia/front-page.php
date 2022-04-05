@@ -8,9 +8,10 @@
 get_template_part('investitions/enklawa-karwia/header');
 ?>
 <div class="ek-frontpage">
-    
     <section class="header">
-        <img src=" <?php echo get_template_directory_uri(); ?>/assets/img/invest-karwia/home-page/photo-header.jpg" alt="ikona" />
+        <video autoplay="" playsinline="" muted="" loop="" id="myVideo" class="video-home-page video-home-page--desktop">
+            <source src="https://saveinvest.pl/wp-content/themes/funktional/assets/video/saveinvest-new-optimize.mp4" type="video/mp4">
+        </video>
         <div class="rotate-item-1"></div>
     </section>
 
@@ -55,7 +56,7 @@ get_template_part('investitions/enklawa-karwia/header');
     <section class="sec2-info">
         <div class="sec2-info__top">
             <div class="container">
-            <div class="bottom-item-move"></div>
+                <div class="bottom-item-move"></div>
                 <div class="row">
                     <div class="offset-xxl-1 col-xxl-11 col-xl-12">
                         <div class="sec2-info__top__content">
@@ -145,7 +146,6 @@ get_template_part('investitions/enklawa-karwia/header');
 
     <section class="sec3-prestige">
         <div class="container">
-            <!-- <div class="rotate-item-5"></div> -->
             <div class="row">
                 <div class="col-xl-6">
                     <div class="sec3-prestige__box1">
@@ -219,7 +219,7 @@ get_template_part('investitions/enklawa-karwia/header');
                                 <a class="btn" href="<?php echo esc_url($link_url); ?>" target="<?php echo esc_attr($link_target); ?>"><?php echo esc_html($link_title); ?></a>
                             <?php endif; ?>
                         </div>
-                       
+
                     </div>
                 </div>
             </div>
@@ -300,7 +300,7 @@ get_template_part('investitions/enklawa-karwia/header');
     <section class="sec6-about-saveinwest">
         <div class="container">
             <div class="row row-background">
-            <div class="bottom-item-move-2"></div>
+                <div class="bottom-item-move-2"></div>
                 <div class="col-xl-6">
                     <div class="sec6-about-saveinwest__content">
                         <div class="sec6-about-saveinwest__content__top-left">

@@ -17,7 +17,7 @@ get_template_part('investitions/enklawa-karwia/header');
         <div class="bottom-item-4"></div>
             <div class="row">
                 <div class="col-xl-5">
-                    <div class="sec1-info-map__box ek-right-karwia">
+                    <div class="sec1-info-map__box">
                         <?php if ($title_sec1_localization_karwia = get_field('title_sec1_localization_karwia')) : ?>
                             <h3 class="f-h3 f-h3--white"> <?php echo $title_sec1_localization_karwia; ?></h3>
                         <?php endif; ?>
@@ -76,7 +76,7 @@ get_template_part('investitions/enklawa-karwia/header');
                     </div>
                 </div>
                 <div class="offset-xl-1 col-xl-6">
-                    <div class="sec1-info-map__map ek-left-karwia">
+                    <div class="sec1-info-map__map">
                         <img class="logo-karwia" src=" <?php echo get_template_directory_uri(); ?>/assets/img/invest-karwia/localization/logo-top-map.svg" alt="mapa Polski" />
                         <img src=" <?php echo get_template_directory_uri(); ?>/assets/img/invest-karwia/localization/mapa-polski.png" alt="mapa Polski" />
                     </div>

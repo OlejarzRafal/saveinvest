@@ -27,10 +27,8 @@ get_template_part('investitions/enklawa-karwia/header');
         </div>
     </section>
 
-
     <section class="sec1-two-text">
         <div class="container">
-        <!-- <div class="rotate-item-6"></div> -->
             <div class="row">
                 <div class="col-xl-6">
                     <div class="sec1-two-text__box1">
@@ -153,7 +151,6 @@ get_template_part('investitions/enklawa-karwia/header');
 
     <section class="sec3-two-text">
         <div class="container">
-        <!-- <div class="rotate-item-7"></div> -->
             <div class="row">
                 <div class="col-xl-6">
                     <div class="sec3-two-text__box1">

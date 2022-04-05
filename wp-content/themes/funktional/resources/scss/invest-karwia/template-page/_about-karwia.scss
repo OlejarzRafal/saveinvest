@@ -87,17 +87,6 @@
     .sec3-two-text {
         margin-top: 105px;
         position: relative;
-        .rotate-item-6 {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            background: url("../img/invest-karwia/home-page/icon-EK-sec3.svg");
-            background-size: contain;
-            width: 88px;
-            height: 162px;
-            z-index: 1;
-        }
         &__box1,
         &__box2 {
             display: flex;
@@ -244,10 +233,6 @@
         }
         @media (max-width: $xl) {
             margin-top: 80px;
-            .rotate-item-6,
-            .rotate-item-7{
-                display: none;
-            }
             &::after {
                 content: "";
                 display: none;
@@ -359,17 +344,6 @@
     }
 
     .sec3-two-text {
-        .rotate-item-7 {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            background: url("../img/invest-karwia/home-page/icon-EK-sec3.svg");
-            background-size: contain;
-            width: 88px;
-            height: 162px;
-            z-index: 1;
-        }
         &__box1 {
             &__photo {
                 .photo-box1 {

@@ -15,12 +15,13 @@
             width: 160px;
             height: 160px;
         }
-        img {
+        .video-home-page {
             position: relative;
-            top: 0px;
-            left: 0px;
-            height: 100%;
             width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            pointer-events: none;
             object-fit: cover;
         }
         @media (max-width: $xl) {
@@ -410,16 +411,6 @@
     .sec3-prestige {
         margin-top: 105px;
         position: relative;
-        // .rotate-item-5 {
-        //     position: absolute;
-        //     top: 50%;
-        //     left: 50%;
-        //     transform: translate(-50%, -50%);
-        //     background: url("../img/invest-karwia/home-page/icon-EK-sec3.svg");
-        //     background-size: contain;
-        //     width: 88px;
-        //     height: 162px;
-        // }
         &__box1,
         &__box2 {
             display: flex;
@@ -578,14 +569,10 @@
         }
         @media (max-width: $xl) {
             margin-top: 80px;
-            // .rotate-item-5 {
-            //     display: none;
-            // }
             &::after {
                 content: "";
                 display: none;
             }
-
             &__box1 {
                 .bottom-item-1 {
                     display: none;
