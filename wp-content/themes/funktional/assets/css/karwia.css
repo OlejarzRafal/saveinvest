@@ -2893,7 +2893,15 @@ a:hover {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    overflow: hidden;
     cursor: pointer; }
+    .ek-frontpage .sec4-links__box .video-hover {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 170%;
+      height: 170%; }
     .ek-frontpage .sec4-links__box::before {
       content: "";
       position: absolute;
@@ -2923,7 +2931,7 @@ a:hover {
       background: #916137;
       opacity: 1; }
   .ek-frontpage .sec4-links__box:nth-child(1) {
-    background: url("../img/invest-karwia/home-page/link-localisation-hp-karwia.jpg");
+    background-image: url("../img/invest-karwia/home-page/link-localisation-hp-karwia.jpg");
     background-size: cover; }
     .ek-frontpage .sec4-links__box:nth-child(1)::after {
       content: "";
