@@ -4178,6 +4178,9 @@ a:hover {
       -ms-flex-pack: justify;
           justify-content: space-between;
 }
+.ek-frontpage .sec4-links .video-financing {
+  pointer-events: none;
+}
 .ek-frontpage .sec4-links .video {
   -ms-flex-preferred-size: 33.13%;
       flex-basis: 33.13%;
@@ -4249,7 +4252,7 @@ a:hover {
   background: #916137;
   opacity: 1;
 }
-.ek-frontpage .sec4-links .video__box:first-child::after {
+.ek-frontpage .sec4-links .video .video-first-box::after {
   content: "";
   position: absolute;
   top: 50px;
@@ -4261,7 +4264,7 @@ a:hover {
   width: 8vw;
   height: 8vw;
 }
-.ek-frontpage .sec4-links .video__box:nth-child(2)::after {
+.ek-frontpage .sec4-links .video .video-second-box::after {
   content: "";
   position: absolute;
   top: 50px;
@@ -4273,7 +4276,7 @@ a:hover {
   width: 8vw;
   height: 8vw;
 }
-.ek-frontpage .sec4-links .video__box:last-child::after {
+.ek-frontpage .sec4-links .video .video-last-box::after {
   content: "";
   position: absolute;
   top: 50px;
@@ -4304,9 +4307,9 @@ a:hover {
 .ek-frontpage .sec4-links .video__box .btn {
     top: 4vw;
   }
-  .ek-frontpage .sec4-links .video__box:nth-child(1)::after,
-.ek-frontpage .sec4-links .video__box:nth-child(2)::after,
-.ek-frontpage .sec4-links .video__box:nth-child(3)::after {
+  .ek-frontpage .sec4-links .video .video-first-box::after,
+.ek-frontpage .sec4-links .video .video-second-box::after,
+.ek-frontpage .sec4-links .video .video-last-box::after {
     content: "";
     position: absolute;
     top: 25px;
@@ -4332,20 +4335,20 @@ a:hover {
         flex-basis: 100%;
     min-height: 50vw;
   }
-  .ek-frontpage .sec4-links .video__box:nth-child(1)::after,
-.ek-frontpage .sec4-links .video__box:nth-child(2)::after,
-.ek-frontpage .sec4-links .video__box:nth-child(3)::after {
+  .ek-frontpage .sec4-links .video .video-first-box::after,
+.ek-frontpage .sec4-links .video .video-second-box::after,
+.ek-frontpage .sec4-links .video .video-last-box::after {
     content: "";
     position: absolute;
     top: 50px;
-    width: 10vw;
-    height: 10vw;
+    width: 12vw;
+    height: 12vw;
   }
 }
 @media (max-width: 767px) {
-  .ek-frontpage .sec4-links .video__box:nth-child(1)::after,
-.ek-frontpage .sec4-links .video__box:nth-child(2)::after,
-.ek-frontpage .sec4-links .video__box:nth-child(3)::after {
+  .ek-frontpage .sec4-links .video .video-first-box::after,
+.ek-frontpage .sec4-links .video .video-second-box::after,
+.ek-frontpage .sec4-links .video .video-last-box::after {
     content: "";
     position: absolute;
     top: 25px;
@@ -4372,13 +4375,14 @@ a:hover {
     line-height: 8px;
     padding: 12px 16px;
   }
-  .ek-frontpage .sec4-links .video__box:nth-child(1)::after,
-.ek-frontpage .sec4-links .video__box:nth-child(2)::after,
-.ek-frontpage .sec4-links .video__box:nth-child(3)::after {
+  .ek-frontpage .sec4-links .video .video-first-box::after,
+.ek-frontpage .sec4-links .video .video-second-box::after,
+.ek-frontpage .sec4-links .video .video-last-box::after {
     content: "";
+    top: 20px;
     position: absolute;
-    width: 12vw;
-    height: 12vw;
+    width: 15vw;
+    height: 15vw;
   }
 }
 .ek-frontpage .sec5-testimonial {
@@ -4883,7 +4887,7 @@ a:hover {
 }
 .ek-about .header__content {
   position: relative;
-  top: 72px;
+  top: 80px;
   margin: 0px;
   padding: 40px 70px 60px 60px;
   background: #E5EBF0;
@@ -7985,8 +7989,32 @@ footer .footer .footer-box a p {
 .karwia-nav__container__box ul .btn-box .btn-nav--sticky .text-main {
   color: #0B345A;
 }
+.karwia-nav__container__box ul .btn-box .btn-nav .text-main {
+  position: relative;
+}
 .karwia-nav__container__box ul .btn-box .btn-nav .text-main:hover {
   color: #E0C6AF;
+}
+.karwia-nav__container__box ul .btn-box .btn-nav .text-main::before {
+  content: "";
+  position: absolute;
+  bottom: -13px;
+  left: 0;
+  margin-left: 25%;
+  width: 0px;
+  height: 3px;
+  background-color: #E0C6AF;
+  -webkit-transition: all cubic-bezier(0.38, 0.76, 0.56, 0.31) 0.6s;
+  transition: all cubic-bezier(0.38, 0.76, 0.56, 0.31) 0.6s;
+}
+.karwia-nav__container__box ul .btn-box .btn-nav .text-main:hover::before {
+  content: "";
+  position: absolute;
+  bottom: -13px;
+  left: 0;
+  width: 50%;
+  height: 3px;
+  background-color: #E0C6AF;
 }
 .karwia-nav__container__box ul .btn-box .btn-nav--active .text-main {
   color: #E0C6AF;
@@ -7996,10 +8024,8 @@ footer .footer .footer-box a p {
   content: "";
   position: absolute;
   bottom: -13px;
-  left: 50%;
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
-  width: 50px;
+  left: 0;
+  width: 50%;
   height: 3px;
   background-color: #E0C6AF;
 }
@@ -8262,4 +8288,99 @@ footer .footer .footer-box a p {
   width: 100%;
   position: fixed;
   z-index: 99999;
+}
+
+.karwia-loader {
+  display: none;
+  width: 100%;
+  height: 100%;
+  background: white;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 9999999999;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.karwia-loader .logo-wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.karwia-loader .logo-wrap .wave {
+  position: relative;
+  overflow: hidden;
+}
+.karwia-loader .logo-wrap .wave svg {
+  position: relative;
+  left: 0px;
+  width: 314px;
+}
+.karwia-loader .logo-wrap .wave--1 {
+  width: 120px;
+  position: relative;
+}
+.karwia-loader .logo-wrap .wave--1 svg {
+  -webkit-animation: wave 1s linear infinite;
+          animation: wave 1s linear infinite;
+}
+.karwia-loader .logo-wrap .wave--2 {
+  width: 150px;
+  margin-top: 5px;
+}
+.karwia-loader .logo-wrap .wave--2 svg {
+  -webkit-animation: wave2 5s linear infinite;
+          animation: wave2 5s linear infinite;
+}
+
+@-webkit-keyframes wave {
+  0% {
+    left: -120px;
+  }
+  100% {
+    left: -60px;
+  }
+}
+
+@keyframes wave {
+  0% {
+    left: -120px;
+  }
+  100% {
+    left: -60px;
+  }
+}
+@-webkit-keyframes wave2 {
+  0% {
+    left: -150px;
+  }
+  100% {
+    left: 5px;
+  }
+}
+@keyframes wave2 {
+  0% {
+    left: -150px;
+  }
+  100% {
+    left: 5px;
+  }
 }

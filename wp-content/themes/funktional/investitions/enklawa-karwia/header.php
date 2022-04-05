@@ -2,6 +2,7 @@
 <html <?php language_attributes(); ?>>
 
 <head>
+    <!-- <title>Ostoja Karwia</title> -->
     <meta charset="<?php bloginfo('charset'); ?>">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -12,7 +13,12 @@
 </head>
 
 <body <?php body_class(); ?>>
-
+    <!-- Preload -->
+    <div class="karwia-loader">
+        <?php require_once(__DIR__ . '/preloader.php'); ?>
+    </div>
+    <!-- end preload -->
+    <?php global $post; ?>
 
     <nav class="karwia-nav <?php if ($post->ID == 614) : ?> kladno-nav__home <?php endif; ?>">
         <div class="container">
