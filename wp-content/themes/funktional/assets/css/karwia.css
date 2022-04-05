@@ -6074,6 +6074,12 @@ a:hover {
 .ek-localization .sec3-map {
   margin-top: 85px;
   position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 @media (max-width: 991px) {
   .ek-localization .sec3-map {
@@ -7824,7 +7830,8 @@ footer .footer .footer-box a p {
 .karwia-nav--sticky {
   height: 125px;
   background-color: #ffffff;
-  border-bottom: 3px solid rgba(104, 104, 104, 0.12);
+  -webkit-box-shadow: 0px 10px 10px -10px rgba(172, 171, 171, 0.418);
+          box-shadow: 0px 10px 10px -10px rgba(172, 171, 171, 0.418);
   -webkit-transition: background-color 0.5s;
   transition: background-color 0.5s;
 }
@@ -7857,8 +7864,23 @@ footer .footer .footer-box a p {
           flex-direction: column;
   gap: 20px;
 }
-.karwia-nav__container__mobile.active ul li {
+.karwia-nav__container__mobile.active ul .btn-nav {
   text-align: center;
+}
+.karwia-nav__container__mobile.active ul .btn-nav--active .text-main {
+  color: #E0C6AF;
+  position: relative;
+}
+.karwia-nav__container__mobile.active ul .btn-nav--active .text-main::before {
+  content: "";
+  position: absolute;
+  bottom: -13px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  width: 50px;
+  height: 3px;
+  background-color: #E0C6AF;
 }
 .karwia-nav__container__mobile.active ul .logo-karwia {
   width: 100%;
