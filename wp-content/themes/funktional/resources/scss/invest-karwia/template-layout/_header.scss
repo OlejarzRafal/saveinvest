@@ -13,7 +13,7 @@
         height: 125px;
         background-color: $White;
         border-bottom: 3px solid rgb(104 104 104 / 12%);
-        transition: height 0s, background-color 0.3s;
+        transition: background-color .5s;
     }
     &__container {
         &__mobile {

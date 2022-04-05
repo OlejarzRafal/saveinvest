@@ -145,7 +145,7 @@ get_template_part('investitions/enklawa-karwia/header');
 
     <section class="sec3-prestige">
         <div class="container">
-            <div class="rotate-item-5"></div>
+            <!-- <div class="rotate-item-5"></div> -->
             <div class="row">
                 <div class="col-xl-6">
                     <div class="sec3-prestige__box1">
@@ -300,6 +300,7 @@ get_template_part('investitions/enklawa-karwia/header');
     <section class="sec6-about-saveinwest">
         <div class="container">
             <div class="row row-background">
+            <div class="bottom-item-move-2"></div>
                 <div class="col-xl-6">
                     <div class="sec6-about-saveinwest__content">
                         <div class="sec6-about-saveinwest__content__top-left">

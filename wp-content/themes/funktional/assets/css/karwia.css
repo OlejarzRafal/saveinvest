@@ -3388,7 +3388,7 @@ a:hover {
   background: linear-gradient(to left, #F7F1EB 70%, transparent 70%);
 }
 .ek-frontpage .sec1-video__movie {
-  min-height: 540px;
+  min-height: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -3491,7 +3491,7 @@ a:hover {
 }
 .ek-frontpage .sec2-info {
   margin-top: 130px;
-  padding: 150px 15px 90px 15px;
+  padding: 150px 15px 60px 15px;
   min-height: 1465px;
   position: relative;
   background: url(../img/invest-karwia/home-page/sec2-background.jpg);
@@ -3536,34 +3536,6 @@ a:hover {
   z-index: 1;
   -webkit-animation: rhombus-fp 4s infinite ease-in-out;
           animation: rhombus-fp 4s infinite ease-in-out;
-}
-@-webkit-keyframes rhombus-fp {
-  0% {
-    -webkit-transform: translate(-50%, 0%) rotate(45deg);
-            transform: translate(-50%, 0%) rotate(45deg);
-  }
-  50% {
-    -webkit-transform: translate(-50%, -38%) rotate(45deg);
-            transform: translate(-50%, -38%) rotate(45deg);
-  }
-  100% {
-    -webkit-transform: translate(-50%, 0%) rotate(45deg);
-            transform: translate(-50%, 0%) rotate(45deg);
-  }
-}
-@keyframes rhombus-fp {
-  0% {
-    -webkit-transform: translate(-50%, 0%) rotate(45deg);
-            transform: translate(-50%, 0%) rotate(45deg);
-  }
-  50% {
-    -webkit-transform: translate(-50%, -38%) rotate(45deg);
-            transform: translate(-50%, -38%) rotate(45deg);
-  }
-  100% {
-    -webkit-transform: translate(-50%, 0%) rotate(45deg);
-            transform: translate(-50%, 0%) rotate(45deg);
-  }
 }
 .ek-frontpage .sec2-info__top {
   width: 100%;
@@ -3747,34 +3719,6 @@ a:hover {
     -webkit-animation: rhombus-fp 4s infinite ease-in-out;
             animation: rhombus-fp 4s infinite ease-in-out;
   }
-  @-webkit-keyframes rhombus-fp {
-    0% {
-      -webkit-transform: translate(-50%, 0%) rotate(45deg);
-              transform: translate(-50%, 0%) rotate(45deg);
-    }
-    50% {
-      -webkit-transform: translate(-50%, -38%) rotate(45deg);
-              transform: translate(-50%, -38%) rotate(45deg);
-    }
-    100% {
-      -webkit-transform: translate(-50%, 0%) rotate(45deg);
-              transform: translate(-50%, 0%) rotate(45deg);
-    }
-  }
-  @keyframes rhombus-fp {
-    0% {
-      -webkit-transform: translate(-50%, 0%) rotate(45deg);
-              transform: translate(-50%, 0%) rotate(45deg);
-    }
-    50% {
-      -webkit-transform: translate(-50%, -38%) rotate(45deg);
-              transform: translate(-50%, -38%) rotate(45deg);
-    }
-    100% {
-      -webkit-transform: translate(-50%, 0%) rotate(45deg);
-              transform: translate(-50%, 0%) rotate(45deg);
-    }
-  }
   .ek-frontpage .sec2-info__top {
     width: 100%;
     height: auto;
@@ -3898,17 +3842,6 @@ a:hover {
   margin-top: 105px;
   position: relative;
 }
-.ek-frontpage .sec3-prestige .rotate-item-5 {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-  background: url("../img/invest-karwia/home-page/icon-EK-sec3.svg");
-  background-size: contain;
-  width: 88px;
-  height: 162px;
-}
 .ek-frontpage .sec3-prestige__box1, .ek-frontpage .sec3-prestige__box2 {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -3957,26 +3890,29 @@ a:hover {
   position: absolute;
   top: -41px;
   right: -42px;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
   border: 1px solid #6892b8;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  -webkit-transform: rotate(45deg);
-          transform: rotate(45deg);
   width: 85px;
   height: 85px;
 }
 .ek-frontpage .sec3-prestige__box1__photo .photo-box1 .bottom-item-1 {
   position: absolute;
-  top: 32px;
+  top: 34px;
+  bottom: auto;
   right: -28px;
+  -webkit-transform: translateY(0%) rotate(45deg);
+          transform: translateY(0%) rotate(45deg);
   border: 3px solid #d6b292;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  -webkit-transform: rotate(45deg);
-          transform: rotate(45deg);
   width: 58px;
   height: 58px;
   z-index: 1;
+  -webkit-animation: rhombus-fp-s3 4.5s infinite ease-in-out;
+          animation: rhombus-fp-s3 4.5s infinite ease-in-out;
 }
 .ek-frontpage .sec3-prestige__box1__photo .photo-box1::before {
   content: "";
@@ -4022,7 +3958,7 @@ a:hover {
 }
 .ek-frontpage .sec3-prestige__box1__content .content-text .text-main {
   margin-left: 10%;
-  margin-right: 8%;
+  margin-right: 9%;
 }
 .ek-frontpage .sec3-prestige__box1__content .btn {
   position: relative;
@@ -4112,9 +4048,6 @@ a:hover {
 @media (max-width: 1199px) {
   .ek-frontpage .sec3-prestige {
     margin-top: 80px;
-  }
-  .ek-frontpage .sec3-prestige .rotate-item-5 {
-    display: none;
   }
   .ek-frontpage .sec3-prestige::after {
     content: "";
@@ -4730,19 +4663,35 @@ a:hover {
   width: 100%;
   height: auto;
   background-color: #F7F1EB;
-  padding: 60px 80px 95px 80px;
+  padding: 60px 80px 130px 80px;
 }
 .ek-frontpage .sec6-about-saveinwest .row-background::after {
   content: "";
   position: absolute;
+  bottom: 17px;
+  left: 25%;
+  -webkit-transform: translateX(-50%) rotate(45deg);
+          transform: translateX(-50%) rotate(45deg);
+  border: 1px solid #6892b8;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  width: 85px;
+  height: 85px;
+}
+.ek-frontpage .sec6-about-saveinwest .row-background .bottom-item-move-2 {
+  position: absolute;
   bottom: -39px;
   left: 25%;
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
-  background: url("../img/invest-karwia/home-page/rhombus-hp-s2.svg");
-  background-size: cover;
-  width: 160px;
-  height: 160px;
+  -webkit-transform: translate(-50%, 0%) rotate(45deg);
+          transform: translate(-50%, 0%) rotate(45deg);
+  border: 3px solid #d6b292;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  width: 58px;
+  height: 58px;
+  z-index: 1;
+  -webkit-animation: rhombus-fp 4s infinite ease-in-out;
+          animation: rhombus-fp 4s infinite ease-in-out;
 }
 .ek-frontpage .sec6-about-saveinwest__content__top-left, .ek-frontpage .sec6-about-saveinwest__content__top-right {
   height: 170px;
@@ -4789,14 +4738,23 @@ a:hover {
   .ek-frontpage .sec6-about-saveinwest .row-background::after {
     content: "";
     position: absolute;
-    bottom: -39px;
+    bottom: 12px;
     left: 50%;
-    -webkit-transform: translateX(-50%);
-            transform: translateX(-50%);
-    background: url("../img/invest-karwia/home-page/rhombus-hp-s2.svg");
-    background-size: cover;
-    width: 120px;
-    height: 120px;
+    -webkit-transform: translateX(-50%) rotate(45deg);
+            transform: translateX(-50%) rotate(45deg);
+    width: 60px;
+    height: 60px;
+  }
+  .ek-frontpage .sec6-about-saveinwest .row-background .bottom-item-move-2 {
+    position: absolute;
+    bottom: -30px;
+    left: 50%;
+    -webkit-transform: translate(-50%, 0%) rotate(45deg);
+            transform: translate(-50%, 0%) rotate(45deg);
+    width: 40px;
+    height: 40px;
+    -webkit-animation: rhombus-fp 4s infinite ease-in-out;
+            animation: rhombus-fp 4s infinite ease-in-out;
   }
   .ek-frontpage .sec6-about-saveinwest__content__top-left, .ek-frontpage .sec6-about-saveinwest__content__top-right {
     height: auto;
@@ -4833,6 +4791,62 @@ a:hover {
     padding: 50px 0px 100px 0px;
   }
 }
+@-webkit-keyframes rhombus-fp {
+  0% {
+    -webkit-transform: translate(-50%, 0%) rotate(45deg);
+            transform: translate(-50%, 0%) rotate(45deg);
+  }
+  50% {
+    -webkit-transform: translate(-50%, -38%) rotate(45deg);
+            transform: translate(-50%, -38%) rotate(45deg);
+  }
+  100% {
+    -webkit-transform: translate(-50%, 0%) rotate(45deg);
+            transform: translate(-50%, 0%) rotate(45deg);
+  }
+}
+@keyframes rhombus-fp {
+  0% {
+    -webkit-transform: translate(-50%, 0%) rotate(45deg);
+            transform: translate(-50%, 0%) rotate(45deg);
+  }
+  50% {
+    -webkit-transform: translate(-50%, -38%) rotate(45deg);
+            transform: translate(-50%, -38%) rotate(45deg);
+  }
+  100% {
+    -webkit-transform: translate(-50%, 0%) rotate(45deg);
+            transform: translate(-50%, 0%) rotate(45deg);
+  }
+}
+@-webkit-keyframes rhombus-fp-s3 {
+  0% {
+    -webkit-transform: translateY(0%) rotate(45deg);
+            transform: translateY(0%) rotate(45deg);
+  }
+  50% {
+    -webkit-transform: translateY(-39%) rotate(45deg);
+            transform: translateY(-39%) rotate(45deg);
+  }
+  100% {
+    -webkit-transform: translateY(0%) rotate(45deg);
+            transform: translateY(0%) rotate(45deg);
+  }
+}
+@keyframes rhombus-fp-s3 {
+  0% {
+    -webkit-transform: translateY(0%) rotate(45deg);
+            transform: translateY(0%) rotate(45deg);
+  }
+  50% {
+    -webkit-transform: translateY(-39%) rotate(45deg);
+            transform: translateY(-39%) rotate(45deg);
+  }
+  100% {
+    -webkit-transform: translateY(0%) rotate(45deg);
+            transform: translateY(0%) rotate(45deg);
+  }
+}
 
 .ek-about .header {
   position: relative;
@@ -4853,11 +4867,11 @@ a:hover {
       -ms-flex-pack: end;
           justify-content: flex-end;
   z-index: 999;
-  margin-bottom: 300px;
+  margin-bottom: 270px;
 }
 .ek-about .header__content {
   position: relative;
-  top: 90px;
+  top: 72px;
   margin: 0px;
   padding: 40px 70px 60px 60px;
   background: #E5EBF0;
@@ -5016,16 +5030,18 @@ a:hover {
 .ek-about .sec1-two-text__box1__photo .photo-box1 .bottom-item-2,
 .ek-about .sec3-two-text__box1__photo .photo-box1 .bottom-item-2 {
   position: absolute;
-  top: 32px;
+  top: 34px;
   right: -28px;
   border: 3px solid #d6b292;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  -webkit-transform: rotate(45deg);
-          transform: rotate(45deg);
+  -webkit-transform: translateY(0%) rotate(45deg);
+          transform: translateY(0%) rotate(45deg);
   width: 58px;
   height: 58px;
   z-index: 1;
+  -webkit-animation: rhombus-fp-s3 4.5s infinite ease-in-out;
+          animation: rhombus-fp-s3 4.5s infinite ease-in-out;
 }
 .ek-about .sec1-two-text__box1__photo .photo-box1::before,
 .ek-about .sec3-two-text__box1__photo .photo-box1::before {
@@ -5078,7 +5094,7 @@ a:hover {
 .ek-about .sec1-two-text__box1__content .content-text .text-main,
 .ek-about .sec3-two-text__box1__content .content-text .text-main {
   margin-left: 10%;
-  margin-right: 9%;
+  margin-right: 8%;
 }
 .ek-about .sec1-two-text__box1__content .btn,
 .ek-about .sec3-two-text__box1__content .btn {
@@ -5334,16 +5350,18 @@ a:hover {
 }
 .ek-about .sec3-two-text__box1__photo .photo-box1 .bottom-item-3 {
   position: absolute;
-  top: 32px;
+  top: 34px;
   right: -28px;
   border: 3px solid #d6b292;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  -webkit-transform: rotate(45deg);
-          transform: rotate(45deg);
+  -webkit-transform: translateY(0%) rotate(45deg);
+          transform: translateY(0%) rotate(45deg);
   width: 58px;
   height: 58px;
   z-index: 1;
+  -webkit-animation: rhombus-fp-s3 4.5s infinite ease-in-out;
+          animation: rhombus-fp-s3 4.5s infinite ease-in-out;
 }
 .ek-about .sec3-two-text__box2__photo .photo-box2 .rotate-item-4 {
   position: absolute;
@@ -7837,8 +7855,8 @@ footer .footer .footer-box a p {
   height: 125px;
   background-color: #ffffff;
   border-bottom: 3px solid rgba(104, 104, 104, 0.12);
-  -webkit-transition: height 0s, background-color 0.3s;
-  transition: height 0s, background-color 0.3s;
+  -webkit-transition: background-color 0.5s;
+  transition: background-color 0.5s;
 }
 .karwia-nav__container__mobile {
   display: none;

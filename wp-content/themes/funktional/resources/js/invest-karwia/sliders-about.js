@@ -1,8 +1,8 @@
 $(document).ready(function () {
     const about = new Swiper(".sec2-comfort__slider", {
-       loop: true,
+        // loop: true,
         // autoplay: {
-        //     delay: 5000,
+        // delay: 5000,
         // },
 
         speed: 500,

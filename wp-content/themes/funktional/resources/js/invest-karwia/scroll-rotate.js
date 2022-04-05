@@ -49,18 +49,6 @@ ScrollTrigger.matchMedia({
                 markers: false,
             },
         });
-        gsap.to(".rotate-item-5", {
-            rotation: 90,
-            duration: 1,
-            ease: "none",
-            scrollTrigger: {
-                trigger: ".rotate-item-5",
-                start: "top 75%",
-                end: "top 50%",
-                scrub: 1,
-                markers: false,
-            },
-        });
         gsap.to(".rotate-item-6", {
             rotation: 90,
             duration: 1,
@@ -97,48 +85,21 @@ ScrollTrigger.matchMedia({
                 markers: false,
             },
         });
-        gsap.to(".bottom-item-1", {
-            // rotation: 180,
-            x: 0,
-            y: -19,
-            duration: 1,
-            ease: "none",
-            scrollTrigger: {
-                trigger: ".bottom-item-1",
-                start: "top 60%",
-                end: "top 25%",
-                scrub: 1,
-                markers: false,
-            },
-        });
-        gsap.to(".bottom-item-2", {
-            // rotation: 180,
-            x: 0,
-            y: -19,
-            duration: 1,
-            ease: "none",
-            scrollTrigger: {
-                trigger: ".bottom-item-2",
-                start: "top 60%",
-                end: "top 25%",
-                scrub: 1,
-                markers: false,
-            },
-        });
-        gsap.to(".bottom-item-3", {
-            // rotation: 180,
-            x: 0,
-            y: -19,
-            duration: 5,
-            ease: "none",
-            scrollTrigger: {
-                trigger: ".bottom-item-3",
-                start: "top 60%",
-                end: "top 25%",
-                scrub: 1,
-                markers: false,
-            },
-        });
+        // gsap.to(".bottom-item-1", {
+        //     rotation: 180,
+        //     x: 0,
+        //     y: -19,
+        //     duration: 1,
+        //     ease: "none",
+        //     scrollTrigger: {
+        //         trigger: ".bottom-item-1",
+        //         start: "top 60%",
+        //         end: "top 25%",
+        //         scrub: 1,
+        //         markers: false,
+        //     },
+        // });
+       
         gsap.to(".left-rotate-item-1", {
             rotation: 225,
             x: 380,
