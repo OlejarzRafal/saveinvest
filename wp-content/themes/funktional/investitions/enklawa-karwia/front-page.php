@@ -232,6 +232,9 @@ get_template_part('investitions/enklawa-karwia/header');
                 the_row(); ?>
                 <?php if ($link_box_sec4_hp_karwia = get_sub_field('link_box_sec4_hp_karwia')) : ?>
                     <a href="<?php echo $link_box_sec4_hp_karwia; ?>" class="sec4-links__box">
+                        <video autoplay="" playsinline="" muted="" loop="" id="myVideo" class="video-hover">
+                            <source src="https://saveinvest.pl/wp-content/themes/funktional/assets/video/saveinvest-new-optimize.mp4" type="video/mp4">
+                        </video>
                         <?php if ($title_box_sec4_hp_karwia = get_sub_field('title_box_sec4_hp_karwia')) : ?>
                             <div class="sec4-links__box__title">
                                 <h2 class="f-h2 f-h2--white ">
@@ -249,6 +252,7 @@ get_template_part('investitions/enklawa-karwia/header');
                         <?php if ($text_btn_box_sec4_hp_karwia = get_sub_field('text_btn_box_sec4_hp_karwia')) : ?>
                             <div class="btn"><?php echo $text_btn_box_sec4_hp_karwia; ?></div>
                         <?php endif; ?>
+
                     </a>
                 <?php endif; ?>
             <?php endwhile; ?>
