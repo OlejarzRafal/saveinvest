@@ -1,9 +1,9 @@
-var cip = $(".video-hover").hover( hoverVideo, hideVideo );
+var movieHover = $(".video").hover( hoverVideo, hideVideo );
 
 function hoverVideo(e) {  
-    $('video-hover', this).get(0).play(); 
+    $('video', this).get(0).play(); 
 }
 
 function hideVideo(e) {
-    $('video-hover', this).get(0).pause(); 
+    $('video', this).get(0).pause(); 
 }
