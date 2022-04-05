@@ -8,7 +8,7 @@
 get_template_part('investitions/enklawa-karwia/header');
 ?>
 <div class="ek-contact">
-    <!-- już gotowe -->
+
     <section class="sec1-contact-karwia">
         <div class="container">
             <div class="row">
@@ -24,8 +24,6 @@ get_template_part('investitions/enklawa-karwia/header');
                                 </p>&nbsp
                             <?php endif; ?>
                             <?php if ($tel_sec1_contact_karwia = get_field('tel_sec1_contact_karwia')) : ?>
-
-
                                 <a class="text-main" class="text-main text-main--fw500" href="tel:<?php echo $tel_sec1_contact_karwia; ?>"><?php echo $tel_sec1_contact_karwia; ?>.</a>
                             <?php endif; ?>
                         </div>
@@ -49,7 +47,7 @@ get_template_part('investitions/enklawa-karwia/header');
                         <?php if (have_rows('box_sales_sec2_contact_karwia')) : ?>
                             <?php while (have_rows('box_sales_sec2_contact_karwia')) :
                                 the_row(); ?>
-                                <div class="person-sales">
+                                <div class="person-sales ek-fadein-karwia">
                                     <?php
                                     $photo_box_sales_sec2_contact_karwia = get_sub_field('photo_box_sales_sec2_contact_karwia');
                                     if ($photo_box_sales_sec2_contact_karwia) : ?>
@@ -111,7 +109,7 @@ get_template_part('investitions/enklawa-karwia/header');
                     <?php if (have_rows('box1_service_sec3_contact_karwia')) : ?>
                         <?php while (have_rows('box1_service_sec3_contact_karwia')) :
                             the_row(); ?>
-                            <div class="person-service">
+                            <div class="person-service ek-fadein-karwia">
                                 <?php
                                 $photo_box1_service_sec3_contact_karwia = get_sub_field('photo_box1_service_sec3_contact_karwia');
                                 if ($photo_box1_service_sec3_contact_karwia) : ?>
@@ -156,7 +154,7 @@ get_template_part('investitions/enklawa-karwia/header');
                     <?php if (have_rows('box2_service_sec3_contact_karwia')) : ?>
                         <?php while (have_rows('box2_service_sec3_contact_karwia')) :
                             the_row(); ?>
-                            <div class="person-service">
+                            <div class="person-service ek-fadein-karwia">
                                 <?php
                                 $photo_box2_service_sec3_contact_karwia = get_sub_field('photo_box2_service_sec3_contact_karwia');
                                 if ($photo_box2_service_sec3_contact_karwia) : ?>
@@ -202,33 +200,33 @@ get_template_part('investitions/enklawa-karwia/header');
         </div>
     </section>
 
-    <!-- już gotowe -->
     <section class="sec2-about-company">
+    <div class="ek-right-karwia"></div>
         <div class="container">
             <div class="row">
                 <div class="col-xl-6">
                     <div class="sec2-about-company__content">
                         <div class="sec2-about-company__content__top-left">
                             <img src="<?php bloginfo('template_url'); ?>/assets/img/invest-karwia/home-page/home-karwia-company-logo.png" alt="logo saveinvest" />
-                            <h3 class="f-h3">O firmie</h3>
+                            <h3 class="f-h3 ek-fadein-karwia">O firmie</h3>
                         </div>
                         <?php if ($text_left_sec2_contact_karwia = get_field('text_left_sec2_contact_karwia')) : ?>
                             <div class="sec2-about-company__content__bottom-left">
-                                <p class="text-main text-main--f20"><?php echo $text_left_sec2_contact_karwia; ?></p>
+                                <p class="text-main text-main--f20 ek-fadein-karwia"><?php echo $text_left_sec2_contact_karwia; ?></p>
                             </div>
                         <?php endif; ?>
                     </div>
                 </div>
                 <div class="col-xl-6">
                     <div class="sec2-about-company__content">
-                        <div class="sec2-about-company__content__top-right">
+                        <div class="sec2-about-company__content__top-right ek-fadein-karwia">
                             <img src="<?php bloginfo('template_url'); ?>/assets/img/invest-karwia/home-page/1000-about-karwia.svg" alt="logo 1000 zadowolonych klientów" />
                             <img src="<?php bloginfo('template_url'); ?>/assets/img/invest-karwia/home-page/20-about-karwia.svg" alt="logo 20 lat doświadczenia" />
                             <img src="<?php bloginfo('template_url'); ?>/assets/img/invest-karwia/home-page/100-about-karwia.svg" alt="100% sprawdzonych gtuntów" />
                         </div>
                         <?php if ($text_right_sec2_contact_karwia = get_field('text_right_sec2_contact_karwia')) : ?>
                             <div class="sec2-about-company__content__bottom-right">
-                                <p class="text-main"><?php echo $text_right_sec2_contact_karwia; ?>
+                                <p class="text-main ek-fadein-karwia"><?php echo $text_right_sec2_contact_karwia; ?>
                             </div>
                         <?php endif; ?>
                     </div>
@@ -237,36 +235,8 @@ get_template_part('investitions/enklawa-karwia/header');
         </div>
     </section>
 
-    <!-- <section class="about-company-contact">
-        <div class="container">
-            <div class="row">
-                <div class="col-xl-6">
-                    <div class="about-company-contact__logo">
-                        <img src="<?php bloginfo('template_url'); ?>/assets/img/invest-kladno/contact/contact-logo.png" alt=" logo saveinvest" />
-                    </div>
-                </div>
-                <div class="col-xl-5">
-                    <div class="about-company-contact__content">
-
-                        <?php if ($title_sec4_contact_kladno = get_field('title_sec4_contact_kladno')) : ?>
-                            <div class="title-content">
-                                <h5 class="f-h5"><?php echo $title_sec4_contact_kladno; ?></h5>
-                            </div>
-                        <?php endif; ?>
-                        <?php if ($text_sec4_contact_kladno = get_field('text_sec4_contact_kladno')) : ?>
-                            <div class="text-content">
-                                <p class="text-main">
-                                    <?php echo $text_sec4_contact_kladno; ?>
-                                </p>
-                            </div>
-                        <?php endif; ?>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section> -->
-
     <section class="sec3-contact-number">
+    <div class="left-rotate-item-1"></div> 
         <div class="container">
             <div class="row">
                 <div class="offset-xl-1 col-xl-10">
@@ -387,13 +357,11 @@ get_template_part('investitions/enklawa-karwia/header');
         </div>
     </section>
 
-
-    <!-- już gotowe -->
     <section class="sec4-testimonial">
         <div class="container">
             <div class="row">
                 <div class="col-xl-12">
-                    <div class="sec4-testimonial__content">
+                    <div class="sec4-testimonial__content ek-left-karwia">
                         <div class="sec4-testimonial__content__box">
                             <div class="f-testimonial">Opinie</div>
                             <div class="f-testimonial f-testimonial--f112">klientów</div>
@@ -431,8 +399,6 @@ get_template_part('investitions/enklawa-karwia/header');
         </div>
     </section>
 
-
-    <!-- już gotowe -->
     <section class="sec5-location-karwia">
         <div class="container">
             <div class="row">
@@ -454,21 +420,21 @@ get_template_part('investitions/enklawa-karwia/header');
                                     </p>
                                 <?php endif; ?>
                                 <?php if ($adres_firm_sec5_contact_karwia = get_field('adres_firm_sec5_contact_karwia')) : ?>
-                                    <p class="text-main text-main--f14">
+                                    <p class="text-main text-main--fw400 text-main--f14">
                                         <?php echo $adres_firm_sec5_contact_karwia; ?>
                                         <?php if ($tel_firm_sec5_contact_karwia = get_field('tel_firm_sec5_contact_karwia')) : ?>
-                                            <a class="text-main text-main--f14" href="tel:	<?php echo $tel_firm_sec5_contact_karwia; ?>">
-                                                tel.: <?php echo $tel_firm_sec5_contact_karwia; ?></a>
+                                            <a class="text-main text-main--fw400 text-main--f14" href="tel:	<?php echo $tel_firm_sec5_contact_karwia; ?>">
+                                            <br>tel.: <?php echo $tel_firm_sec5_contact_karwia; ?></a>
                                         <?php endif; ?>
                                     </p>
                                 <?php endif; ?>
                                 <?php if ($data_firm_sec5_contact_karwia = get_field('data_firm_sec5_contact_karwia')) : ?>
-                                    <p class="text-main text-main--f14">
+                                    <p class="text-main text-main--fw400 text-main--f14">
                                         <?php echo $data_firm_sec5_contact_karwia; ?>
                                     </p>
                                 <?php endif; ?>
                                 <?php if ($nip_data_firm_sec5_contact_karwia = get_field('nip_data_firm_sec5_contact_karwia')) : ?>
-                                    <p class="text-main text-main--f14">
+                                    <p class="text-main text-main--fw400 text-main--f14">
                                         <?php echo $nip_data_firm_sec5_contact_karwia; ?>
                                     </p>
                                 <?php endif; ?>
@@ -480,12 +446,12 @@ get_template_part('investitions/enklawa-karwia/header');
                                     </p>
                                 <?php endif; ?>
                                 <?php if ($adres_person_sec5_contact_karwia = get_field('adres_person_sec5_contact_karwia')) : ?>
-                                    <p class="text-main text-main--f14">
+                                    <p class="text-main text-main--fw400 text-main--f14">
                                         <?php echo $adres_person_sec5_contact_karwia; ?>
                                     </p>
                                 <?php endif; ?>
                                 <?php if ($bank_sec5_contact_karwia = get_field('bank_sec5_contact_karwia')) : ?>
-                                    <p class="text-main text-main--f14">
+                                    <p class="text-main text-main--fw400 text-main--f14">
                                         <?php echo $bank_sec5_contact_karwia; ?>
                                     </p>
                                 <?php endif; ?>

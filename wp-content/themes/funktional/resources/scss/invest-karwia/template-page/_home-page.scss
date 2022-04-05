@@ -5,10 +5,9 @@
         left: 0px;
         height: auto;
         width: 100%;
-        &::after {
-            content: "";
+        .rotate-item-1 {
             position: absolute;
-            bottom: -70px;
+            bottom: -74px;
             left: 50%;
             transform: translateX(-50%);
             background: url("../img/invest-karwia/home-page/square-hp-s4.svg");
@@ -16,15 +15,31 @@
             width: 160px;
             height: 160px;
         }
-        img {
+        .video-home-page {
             position: relative;
-            top: 0px;
-            left: 0px;
-            height: 100%;
             width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            pointer-events: none;
             object-fit: cover;
         }
+        @media (max-width: $xl) {
+            .rotate-item-1 {
+                bottom: -55px;
+                width: 120px;
+                height: 120px;
+            }
+        }
+        @media (max-width: $md) {
+            .rotate-item-1 {
+                bottom: -35px;
+                width: 80px;
+                height: 80px;
+            }
+        }
     }
+
     .sec1-video {
         margin-top: 120px;
         position: relative;
@@ -32,7 +47,7 @@
         min-height: 540px;
         background: linear-gradient(to left, $Sand-Tint 70%, transparent 70%);
         &__movie {
-            min-height: 540px;
+            min-height: 100%;
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -89,6 +104,7 @@
             }
         }
         @media (max-width: $xl) {
+            margin-top: 80px;
             min-height: auto;
             background: linear-gradient(
                 to left,
@@ -104,6 +120,7 @@
             }
         }
         @media (max-width: $md) {
+            margin-top: 40px;
             &__movie {
                 a {
                     &::before {
@@ -120,10 +137,10 @@
             }
         }
     }
+
     .sec2-info {
-        // height: 1465px;
         margin-top: 130px;
-        padding: 150px 15px 90px 15px;
+        padding: 150px 15px 60px 15px;
         min-height: 1465px;
         position: relative;
         background: url(../img/invest-karwia/home-page/sec2-background.jpg);
@@ -136,19 +153,30 @@
         &::after {
             content: "";
             position: absolute;
-            top: -60px;
+            top: -42px;
             left: 50%;
-            transform: translateX(-50%);
-            background: url("../img/invest-karwia/home-page/rhombus-hp-s2.svg");
-            background-size: contain;
-            width: 160px;
-            height: 160px;
+            transform: translateX(-50%) rotate(45deg);
+            border: 1px solid #6892b8;
+            box-sizing: border-box;
+            width: 85px;
+            height: 85px;
+        }
+        .bottom-item-move {
+            position: absolute;
+            top: 34px;
+            left: 50%;
+            transform: translate(-50%, 0%) rotate(45deg);
+            border: 3px solid #d6b292;
+            box-sizing: border-box;
+            width: 58px;
+            height: 58px;
+            z-index: 1;
+            animation: rhombus-fp 4s infinite ease-in-out;
         }
         &__top {
             width: 100%;
             height: auto;
             &__content {
-                // margin-top: 150px;
                 display: flex;
                 justify-content: flex-start;
                 .content-icon {
@@ -167,7 +195,6 @@
                     margin-top: 20px;
                     justify-content: flex-start;
                     align-items: flex-end;
-                    // width: 920px;
                     width: 64%;
                     &__test {
                         display: flex;
@@ -176,7 +203,6 @@
 
                         .f-special {
                             text-align: start;
-                            // width: 735px;
                             width: 78%;
                         }
                     }
@@ -263,9 +289,25 @@
             &::after {
                 content: "";
                 position: absolute;
-                top: -30px;
-                width: 80px;
-                height: 80px;
+                top: -29px;
+                left: 50%;
+                transform: translateX(-50%) rotate(45deg);
+                border: 1px solid #6892b8;
+                box-sizing: border-box;
+                width: 60px;
+                height: 60px;
+            }
+            .bottom-item-move {
+                position: absolute;
+                top: 25px;
+                left: 50%;
+                transform: translate(-50%, 0%) rotate(45deg);
+                border: 3px solid #d6b292;
+                box-sizing: border-box;
+                width: 40px;
+                height: 40px;
+                z-index: 1;
+                animation: rhombus-fp 4s infinite ease-in-out;
             }
             &__top {
                 width: 100%;
@@ -365,20 +407,10 @@
             }
         }
     }
+
     .sec3-prestige {
         margin-top: 105px;
         position: relative;
-        &::after {
-            content: "";
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            background: url("../img/invest-karwia/home-page/icon-EK-sec3.svg");
-            background-size: contain;
-            width: 88px;
-            height: 162px;
-        }
         &__box1,
         &__box2 {
             display: flex;
@@ -405,12 +437,26 @@
                     &::after {
                         content: "";
                         position: absolute;
-                        top: -59px;
-                        right: -80px;
-                        background: url("../img/invest-karwia/home-page/rhombus-hp-s2.svg");
-                        background-size: contain;
-                        width: 160px;
-                        height: 160px;
+                        top: -41px;
+                        right: -42px;
+                        transform: rotate(45deg);
+                        border: 1px solid #6892b8;
+                        box-sizing: border-box;
+                        width: 85px;
+                        height: 85px;
+                    }
+                    .bottom-item-1 {
+                        position: absolute;
+                        top: 34px;
+                        bottom: auto;
+                        right: -28px;
+                        transform: translateY(0%) rotate(45deg);
+                        border: 3px solid #d6b292;
+                        box-sizing: border-box;
+                        width: 58px;
+                        height: 58px;
+                        z-index: 1;
+                        animation: rhombus-fp-s3 4.5s infinite ease-in-out;
                     }
                     &::before {
                         content: "";
@@ -447,7 +493,7 @@
                     margin-top: 20px;
                     .text-main {
                         margin-left: 10%;
-                        margin-right: 8%;
+                        margin-right: 9%;
                     }
                 }
                 .btn {
@@ -494,8 +540,7 @@
                     position: relative;
                     max-height: 750px;
                     max-width: 650px;
-                    &::after {
-                        content: "";
+                    .rotate-item-2 {
                         position: absolute;
                         top: 56%;
                         left: -80px;
@@ -528,8 +573,10 @@
                 content: "";
                 display: none;
             }
-
             &__box1 {
+                .bottom-item-1 {
+                    display: none;
+                }
                 &__photo {
                     position: relative;
                     display: flex;
@@ -593,15 +640,14 @@
                     }
                 }
                 &__photo {
-                    margin-top: 50px;
+                    margin-top: 30px;
                     display: flex;
                     justify-content: center;
                     .photo-box2 {
                         position: relative;
                         max-height: 750px;
                         max-width: 650px;
-                        &::after {
-                            content: "";
+                        .rotate-item-2 {
                             display: none;
                         }
                         &::before {
@@ -630,6 +676,7 @@
             }
         }
     }
+
     .sec4-links {
         margin-top: 120px;
         width: 100%;
@@ -767,6 +814,7 @@
             }
         }
         @media (max-width: $lg) {
+            margin-top: 40px;
             display: flex;
             flex-direction: column;
             justify-content: space-between;
@@ -836,6 +884,7 @@
             }
         }
     }
+
     .sec5-testimonial {
         margin-top: 120px;
         position: relative;
@@ -1096,6 +1145,7 @@
             }
         }
     }
+
     .sec6-about-saveinwest {
         margin-top: 140px;
         .row-background {
@@ -1104,17 +1154,29 @@
             width: 100%;
             height: auto;
             background-color: $Sand-Tint;
-            padding: 60px 80px 95px 80px;
+            padding: 60px 80px 130px 80px;
             &::after {
                 content: "";
                 position: absolute;
+                bottom: 17px;
+                left: 25%;
+                transform: translateX(-50%) rotate(45deg);
+                border: 1px solid #6892b8;
+                box-sizing: border-box;
+                width: 85px;
+                height: 85px;
+            }
+            .bottom-item-move-2 {
+                position: absolute;
                 bottom: -39px;
                 left: 25%;
-                transform: translateX(-50%);
-                background: url("../img/invest-karwia/home-page/rhombus-hp-s2.svg");
-                background-size: cover;
-                width: 160px;
-                height: 160px;
+                transform: translate(-50%, 0%) rotate(45deg);
+                border: 3px solid #d6b292;
+                box-sizing: border-box;
+                width: 58px;
+                height: 58px;
+                z-index: 1;
+                animation: rhombus-fp 4s infinite ease-in-out;
             }
         }
         &__content {
@@ -1147,13 +1209,20 @@
                 &::after {
                     content: "";
                     position: absolute;
-                    bottom: -39px;
+                    bottom: 12px;
                     left: 50%;
-                    transform: translateX(-50%);
-                    background: url("../img/invest-karwia/home-page/rhombus-hp-s2.svg");
-                    background-size: cover;
-                    width: 120px;
-                    height: 120px;
+                    transform: translateX(-50%) rotate(45deg);
+                    width: 60px;
+                    height: 60px;
+                }
+                .bottom-item-move-2 {
+                    position: absolute;
+                    bottom: -30px;
+                    left: 50%;
+                    transform: translate(-50%, 0%) rotate(45deg);
+                    width: 40px;
+                    height: 40px;
+                    animation: rhombus-fp 4s infinite ease-in-out;
                 }
             }
             &__content {
@@ -1183,6 +1252,34 @@
                     height: auto;
                 }
             }
+        }
+        @media (max-width: $lg) {
+            .row-background {
+                padding: 50px 0px 100px 0px;
+            }
+        }
+    }
+    
+    @keyframes rhombus-fp {
+        0% {
+            transform: translate(-50%, 0%) rotate(45deg);
+        }
+        50% {
+            transform: translate(-50%, -38%) rotate(45deg);
+        }
+        100% {
+            transform: translate(-50%, 0%) rotate(45deg);
+        }
+    }
+    @keyframes rhombus-fp-s3 {
+        0% {
+            transform: translateY(0%) rotate(45deg);
+        }
+        50% {
+            transform: translateY(-39%) rotate(45deg);
+        }
+        100% {
+            transform: translateY(0%) rotate(45deg);
         }
     }
 }

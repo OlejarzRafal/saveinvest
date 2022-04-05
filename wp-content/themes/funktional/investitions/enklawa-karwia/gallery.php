@@ -14,12 +14,12 @@ get_template_part('investitions/enklawa-karwia/header');
                 <div class="col-xl-12">
                     <?php if ($title_galleria_karwia = get_field('title_galleria_karwia')) : ?>
                         <div class="ek-gallery-karwia__title">
-                            <h5 class="f-h5">
+                            <h5 class="f-h5 ek-fadein-karwia">
                                 <?php echo $title_galleria_karwia; ?>
                             </h5>
                         </div>
                     <?php endif; ?>
-                    <ul class="category">
+                    <ul class="category ek-fadein-karwia">
                         <li class="category__item active" data-filter="all"> <span>WSZYSTKIE</span></li>
                         <li class="category__item" data-filter="picture"> <span>ZDJĘCIA I WIZUALIZACJE</span></li>
                         <li class="category__item" data-filter="video"> <span>FILMY</span></li>
