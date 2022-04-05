@@ -23,6 +23,9 @@
         color: #c8220b;
     }
     form {
+        .form-showhide{
+            margin-top: 10px;
+        }
         input[type="text"],
         input[type="email"] {
             -webkit-appearance: none;
@@ -75,8 +78,6 @@
         }
         input[type="email"] {
             margin-bottom: 14px;
-        }
-        .wpcf7-submit {
         }
         .wpcf7-acceptance {
             label {
