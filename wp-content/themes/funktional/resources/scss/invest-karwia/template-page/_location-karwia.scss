@@ -15,12 +15,24 @@
             position: absolute;
             bottom: 145px;
             left: 50%;
-            transform: translateX(-50%);
+            transform: translate(-50%, 0);
             background: url("../img/invest-karwia/localization/scroller-down.svg");
             background-size: cover;
             width: 24px;
             height: 24px;
             z-index: 1;
+            animation: scroller 2.5s infinite ease-in-out;
+        }
+        @keyframes scroller{
+            0% {
+                transform: translate(-50%, 0%);
+            }
+            50% {
+                transform: translate(-50%, 180%);
+            }
+            100% {
+                transform: translate(-50%, 0%);
+            }
         }
         @media (max-width: $lg) {
             height: 665px;
@@ -48,16 +60,39 @@
         align-items: flex-end;
         background-repeat: no-repeat;
         margin-top: -355px;
-        &::before {
+        &::after {
             content: "";
             position: absolute;
-            bottom: -59px;
+            bottom: 0px;
             left: 50%;
-            transform: translateX(-50%);
-            background: url("../img/invest-karwia/home-page/rhombus-hp-s2.svg");
-            background-size: contain;
-            width: 160px;
-            height: 160px;
+            transform: translateX(-50%) rotate(45deg);
+            border: 1px solid #6892b8;
+            box-sizing: border-box;
+            width: 85px;
+            height: 85px;
+        }
+        .bottom-item-4 {
+            position: absolute;
+            bottom: -50px;
+            left: 50%;
+            transform: translate(-50%, 0%) rotate(45deg);
+            border: 3px solid #d6b292;
+            box-sizing: border-box;
+            width: 58px;
+            height: 58px;
+            z-index: 1;
+            animation: rhombus 4s infinite ease-in-out;
+        }
+        @keyframes rhombus{
+            0% {
+                transform: translate(-50%, 0%) rotate(45deg);
+            }
+            50% {
+                transform: translate(-50%, -38%) rotate(45deg);
+            }
+            100% {
+                transform: translate(-50%, 0%) rotate(45deg);
+            }
         }
         &__box {
             padding-top: 280px;
@@ -96,7 +131,6 @@
                         flex-basis: 18%;
                         margin: auto;
                     }
-
                     &:first-child {
                         border-top: 0px solid #b68b1d;
                     }
@@ -161,16 +195,39 @@
         }
         @media (max-width: $lg) {
             margin-top: -375px;
-            &::before {
+            &::after {
                 content: "";
                 position: absolute;
-                bottom: -45px;
+                bottom: 0px;
                 left: 50%;
-                transform: translateX(-50%);
-                background: url("../img/invest-karwia/home-page/rhombus-hp-s2.svg");
-                background-size: cover;
-                width: 120px;
-                height: 120px;
+                transform: translateX(-50%) rotate(45deg);
+                border: 1px solid #6892b8;
+                box-sizing: border-box;
+                width: 60px;
+                height: 60px;
+            }
+            .bottom-item-4 {
+                position: absolute;
+                bottom: -33px;
+                left: 50%;
+                transform: translate(-50%, 0%) rotate(45deg);
+                border: 3px solid #d6b292;
+                box-sizing: border-box;
+                width: 40px;
+                height: 40px;
+                z-index: 1;
+                animation: rhombus 4s infinite ease-in-out;
+            }
+            @keyframes rhombus{
+                0% {
+                    transform: translate(-50%, 0%) rotate(45deg);
+                }
+                50% {
+                    transform: translate(-50%, -35%) rotate(45deg);
+                }
+                100% {
+                    transform: translate(-50%, 0%) rotate(45deg);
+                }
             }
         }
         @media (max-width: $md) {
@@ -205,6 +262,7 @@
                         }
                         p {
                             font-size: 12px;
+                            padding-left: 0 !important;
                         }
                     }
                 }
@@ -320,14 +378,17 @@
                 box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
                 border-radius: 4px;
             }
-
             &__content::-webkit-scrollbar {
                 height: 4px;
             }
-
             &__content::-webkit-scrollbar-thumb {
                 border-radius: 4px;
                 background-color: $Sand-Dark;
+            }
+        }
+        @media (max-width: $md) {
+            .row-background {
+                padding: 5px 0 30px;
             }
         }
     }
@@ -339,4 +400,5 @@
             margin-top: 45px;
         }
     }
+   
 }

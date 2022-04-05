@@ -61,6 +61,30 @@ ScrollTrigger.matchMedia({
                 markers: false,
             },
         });
+        gsap.to(".rotate-item-6", {
+            rotation: 90,
+            duration: 1,
+            ease: "none",
+            scrollTrigger: {
+                trigger: ".rotate-item-6",
+                start: "top 70%",
+                end: "top 50%",
+                scrub: 1,
+                markers: false,
+            },
+        });
+        gsap.to(".rotate-item-7", {
+            rotation: 90,
+            duration: 1,
+            ease: "none",
+            scrollTrigger: {
+                trigger: ".rotate-item-7",
+                start: "top 65%",
+                end: "top 50%",
+                scrub: 1,
+                markers: false,
+            },
+        });
         gsap.to(".rotate-item-footer", {
             rotation: 180,
             duration: 1,
@@ -76,7 +100,7 @@ ScrollTrigger.matchMedia({
         gsap.to(".bottom-item-1", {
             // rotation: 180,
             x: 0,
-            y: 300,
+            y: -19,
             duration: 1,
             ease: "none",
             scrollTrigger: {
@@ -90,7 +114,7 @@ ScrollTrigger.matchMedia({
         gsap.to(".bottom-item-2", {
             // rotation: 180,
             x: 0,
-            y: 300,
+            y: -19,
             duration: 1,
             ease: "none",
             scrollTrigger: {
@@ -104,7 +128,7 @@ ScrollTrigger.matchMedia({
         gsap.to(".bottom-item-3", {
             // rotation: 180,
             x: 0,
-            y: 300,
+            y: -19,
             duration: 5,
             ease: "none",
             scrollTrigger: {

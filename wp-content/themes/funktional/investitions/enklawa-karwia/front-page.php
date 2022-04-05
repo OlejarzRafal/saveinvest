@@ -55,6 +55,7 @@ get_template_part('investitions/enklawa-karwia/header');
     <section class="sec2-info">
         <div class="sec2-info__top">
             <div class="container">
+            <div class="bottom-item-move"></div>
                 <div class="row">
                     <div class="offset-xxl-1 col-xxl-11 col-xl-12">
                         <div class="sec2-info__top__content">

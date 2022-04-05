@@ -24,7 +24,7 @@
                                 <div class="btn-box">
                                     <li class="btn-nav <?php if (strpos($_SERVER['REQUEST_URI'], "/dzialki/enklawakarwia/o-inwestycji/") !== false) {; ?> btn-nav--active  <?php }; ?>">
                                         <a href="<?php echo get_home_url(); ?>/dzialki/enklawakarwia/o-inwestycji/" class="text-main text-main--fw500 text-main--f15 text-main--ls3 text-main--white">
-                                            O ENKLAWIE
+                                            O OSADZIE
                                         </a>
                                     </li>
                                     <li class="btn-nav <?php if (strpos($_SERVER['REQUEST_URI'], "/dzialki/enklawakarwia/lokalizacja/") !== false) {; ?> btn-nav--active  <?php }; ?>">

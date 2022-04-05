@@ -7,7 +7,7 @@
         width: 100%;
         .rotate-item-1 {
             position: absolute;
-            bottom: -70px;
+            bottom: -74px;
             left: 50%;
             transform: translateX(-50%);
             background: url("../img/invest-karwia/home-page/square-hp-s4.svg");
@@ -24,14 +24,14 @@
             object-fit: cover;
         }
         @media (max-width: $xl) {
-            .rotate-item {
+            .rotate-item-1 {
                 bottom: -55px;
                 width: 120px;
                 height: 120px;
             }
         }
         @media (max-width: $md) {
-            .rotate-item {
+            .rotate-item-1 {
                 bottom: -35px;
                 width: 80px;
                 height: 80px;
@@ -152,19 +152,41 @@
         &::after {
             content: "";
             position: absolute;
-            top: -60px;
+            top: -42px;
             left: 50%;
-            transform: translateX(-50%);
-            background: url("../img/invest-karwia/home-page/rhombus-hp-s2.svg");
-            background-size: contain;
-            width: 160px;
-            height: 160px;
+            transform: translateX(-50%) rotate(45deg);
+            border: 1px solid #6892b8;
+            box-sizing: border-box;
+            width: 85px;
+            height: 85px;
+        }
+        .bottom-item-move {
+            position: absolute;
+            top: 34px;
+            left: 50%;
+            transform: translate(-50%, 0%) rotate(45deg);
+            border: 3px solid #d6b292;
+            box-sizing: border-box;
+            width: 58px;
+            height: 58px;
+            z-index: 1;
+            animation: rhombus-fp 4s infinite ease-in-out;
+        }
+        @keyframes rhombus-fp {
+            0% {
+                transform: translate(-50%, 0%) rotate(45deg);
+            }
+            50% {
+                transform: translate(-50%, -38%) rotate(45deg);
+            }
+            100% {
+                transform: translate(-50%, 0%) rotate(45deg);
+            }
         }
         &__top {
             width: 100%;
             height: auto;
             &__content {
-                // margin-top: 150px;
                 display: flex;
                 justify-content: flex-start;
                 .content-icon {
@@ -183,7 +205,6 @@
                     margin-top: 20px;
                     justify-content: flex-start;
                     align-items: flex-end;
-                    // width: 920px;
                     width: 64%;
                     &__test {
                         display: flex;
@@ -192,7 +213,6 @@
 
                         .f-special {
                             text-align: start;
-                            // width: 735px;
                             width: 78%;
                         }
                     }
@@ -279,9 +299,36 @@
             &::after {
                 content: "";
                 position: absolute;
-                top: -30px;
-                width: 80px;
-                height: 80px;
+                top: -29px;
+                left: 50%;
+                transform: translateX(-50%) rotate(45deg);
+                border: 1px solid #6892b8;
+                box-sizing: border-box;
+                width: 60px;
+                height: 60px;
+            }
+            .bottom-item-move {
+                position: absolute;
+                top: 25px;
+                left: 50%;
+                transform: translate(-50%, 0%) rotate(45deg);
+                border: 3px solid #d6b292;
+                box-sizing: border-box;
+                width: 40px;
+                height: 40px;
+                z-index: 1;
+                animation: rhombus-fp 4s infinite ease-in-out;
+            }
+            @keyframes rhombus-fp {
+                0% {
+                    transform: translate(-50%, 0%) rotate(45deg);
+                }
+                50% {
+                    transform: translate(-50%, -38%) rotate(45deg);
+                }
+                100% {
+                    transform: translate(-50%, 0%) rotate(45deg);
+                }
             }
             &__top {
                 width: 100%;
@@ -418,14 +465,27 @@
                     position: relative;
                     max-height: 750px;
                     max-width: 650px;
+                    &::after {
+                        content: "";
+                        position: absolute;
+                        top: -41px;
+                        right: -42px;
+                        border: 1px solid #6892b8;
+                        box-sizing: border-box;
+                        transform: rotate(45deg);
+                        width: 85px;
+                        height: 85px;
+                    }
                     .bottom-item-1 {
                         position: absolute;
-                        top: -59px;
-                        right: -80px;
-                        background: url("../img/invest-karwia/home-page/rhombus-hp-s2.svg");
-                        background-size: contain;
-                        width: 160px;
-                        height: 160px;
+                        top: 32px;
+                        right: -28px;
+                        border: 3px solid #d6b292;
+                        box-sizing: border-box;
+                        transform: rotate(45deg);
+                        width: 58px;
+                        height: 58px;
+                        z-index: 1;
                     }
                     &::before {
                         content: "";
@@ -538,12 +598,18 @@
         }
         @media (max-width: $xl) {
             margin-top: 80px;
+            .rotate-item-5 {
+                display: none;
+            }
             &::after {
                 content: "";
                 display: none;
             }
 
             &__box1 {
+                .bottom-item-1 {
+                    display: none;
+                }
                 &__photo {
                     position: relative;
                     display: flex;
@@ -607,15 +673,14 @@
                     }
                 }
                 &__photo {
-                    margin-top: 50px;
+                    margin-top: 30px;
                     display: flex;
                     justify-content: center;
                     .photo-box2 {
                         position: relative;
                         max-height: 750px;
                         max-width: 650px;
-                        &::after {
-                            content: "";
+                        .rotate-item-2 {
                             display: none;
                         }
                         &::before {
@@ -644,6 +709,7 @@
             }
         }
     }
+
     .sec4-links {
         margin-top: 120px;
         width: 100%;
@@ -781,6 +847,7 @@
             }
         }
         @media (max-width: $lg) {
+            margin-top: 40px;
             display: flex;
             flex-direction: column;
             justify-content: space-between;
@@ -850,6 +917,7 @@
             }
         }
     }
+
     .sec5-testimonial {
         margin-top: 120px;
         position: relative;
@@ -1110,6 +1178,7 @@
             }
         }
     }
+
     .sec6-about-saveinwest {
         margin-top: 140px;
         .row-background {
@@ -1196,6 +1265,11 @@
                     margin-top: 20px;
                     height: auto;
                 }
+            }
+        }
+        @media (max-width: $lg) {
+            .row-background {
+                padding: 50px 0px 100px 0px;
             }
         }
     }

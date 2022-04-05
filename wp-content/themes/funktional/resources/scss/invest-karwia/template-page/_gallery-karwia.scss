@@ -40,6 +40,7 @@
                 padding: 16px 20px;
                 border: 1px solid #d6b29200;
                 cursor: pointer;
+                transition: all 0.3s;
                 span {
                     display: block;
                     position: relative;
@@ -49,6 +50,7 @@
                     font-size: 18px;
                     color: $Blue-Medium;
                     font-weight: 500;
+                    transition: all 0.3s;
                 }
                 &::after {
                     left: 0;
@@ -202,6 +204,7 @@
             }
         }
         @media (max-width: $lg) {
+            top: -180px;
             .gallery {
                 grid-template-columns: 1fr 1fr;
             }

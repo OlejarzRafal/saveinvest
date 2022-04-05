@@ -1,13 +1,19 @@
 .karwia-nav {
     height: 300px;
     width: 100%;
-    background: linear-gradient(180deg, #1951a4 0%, rgba(25, 81, 164, 0) 100%);
+    background-color: linear-gradient(
+        180deg,
+        #1951a4 0%,
+        rgba(25, 81, 164, 0) 100%
+    );
     opacity: 1;
     position: fixed;
     z-index: 9999;
     &--sticky {
-        background: linear-gradient(to bottom, $White 125px, rgba(172, 171, 171, 0.418) 125px,transparent 130px);
-        display: flex;
+        height: 125px;
+        background-color: $White;
+        border-bottom: 3px solid rgb(104 104 104 / 12%);
+        transition: height 0s, background-color 0.3s;
     }
     &__container {
         &__mobile {
@@ -44,6 +50,10 @@
                         width: 100%;
                         height: 125px;
                         opacity: 1;
+                        a {
+                            width: 100%;
+                            height: auto;
+                        }
                         &::after {
                             content: "";
                             display: none;
@@ -69,7 +79,6 @@
                 align-items: flex-start;
                 width: 100%;
                 position: relative;
-
                 .btn-box {
                     display: flex;
                     flex-direction: row;
@@ -187,7 +196,7 @@
                     width: 215px;
                     height: 125px;
                     opacity: 0;
-                    transition: all 0.6s ease;
+                    transition: all 0.4s ease;
                     a {
                         position: absolute;
                         left: 0;
@@ -199,6 +208,9 @@
                         opacity: 1;
                     }
                 }
+            }
+            .nav-sticky--sticky {
+                height: 125px;
             }
         }
         &__burger {
@@ -322,7 +334,6 @@
             height: 80px;
             background: $White;
             box-shadow: 0px 10px 10px -10px rgba(172, 171, 171, 0.418);
-
             align-items: flex-start;
         }
         &__container {

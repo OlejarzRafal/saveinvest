@@ -14,6 +14,7 @@ get_template_part('investitions/enklawa-karwia/header');
 
     <section class="sec1-info-map">
         <div class="container">
+        <div class="bottom-item-4"></div>
             <div class="row">
                 <div class="col-xl-5">
                     <div class="sec1-info-map__box ek-right-karwia">
@@ -122,6 +123,7 @@ get_template_part('investitions/enklawa-karwia/header');
     <section class="sec3-map">
         <img src=" <?php echo get_template_directory_uri(); ?>/assets/img/invest-karwia/localization/backgound-map.png" alt="ikona" />
     </section>
+
 </div>
 
 <?php

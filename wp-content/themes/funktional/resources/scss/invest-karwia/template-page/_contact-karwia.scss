@@ -1,4 +1,5 @@
 .ek-contact {
+    
     .sec1-contact-karwia {
         padding-top: 560px;
         position: relative;
@@ -24,7 +25,6 @@
                 }
             }
         }
-
         @media (max-width: $md) {
             &__form {
                 padding-top: 30px;
@@ -70,23 +70,6 @@
                         }
                         a {
                             position: relative;
-                            // &::after {
-                            //     content: "";
-                            //     position: absolute;
-                            //     top: 50%;
-                            //     transform: translateY(-50%);
-                            //     right: -40px;
-                            //     background: url("/invest-kladno/kladno-photo/contact/icon-hover.png");
-                            //     height: 24px;
-                            //     width: 24px;
-                            //     transition: all 0.2s;
-                            //     visibility: hidden;
-                            //     opacity: 0;
-                            // }
-                            // &:hover::after {
-                            //     visibility: visible;
-                            //     opacity: 1;
-                            // }
                             &:hover {
                                 color: $Sand-Medium;
                             }
@@ -103,23 +86,6 @@
                         }
                         a {
                             position: relative;
-                            // &::after {
-                            //     content: "";
-                            //     position: absolute;
-                            //     top: 50%;
-                            //     transform: translateY(-50%);
-                            //     right: -40px;
-                            //     background: url("/invest-kladno/kladno-photo/contact/icon-hover.png");
-                            //     height: 24px;
-                            //     width: 24px;
-                            //     transition: all 0.2s;
-                            //     visibility: hidden;
-                            //     opacity: 0;
-                            // }
-                            // &:hover::after {
-                            //     visibility: visible;
-                            //     opacity: 1;
-                            // }
                             &:hover {
                                 color: $Sand-Medium;
                             }
@@ -134,7 +100,6 @@
                 margin-top: 10px;
             }
         }
-
         .person-service {
             margin-top: 80px;
             display: flex;
@@ -173,23 +138,6 @@
                     }
                     a {
                         position: relative;
-                        // &::after {
-                        //     content: "";
-                        //     position: absolute;
-                        //     top: 50%;
-                        //     transform: translateY(-50%);
-                        //     right: -40px;
-                        //     background: url("/invest-kladno/kladno-photo/contact/icon-hover.png");
-                        //     height: 24px;
-                        //     width: 24px;
-                        //     transition: all 0.2s;
-                        //     visibility: hidden;
-                        //     opacity: 0;
-                        // }
-                        // &:hover::after {
-                        //     visibility: visible;
-                        //     opacity: 1;
-                        // }
                         &:hover {
                             color: $Sand-Medium;
                         }
@@ -206,23 +154,6 @@
                     }
                     a {
                         position: relative;
-                        // &::after {
-                        //     content: "";
-                        //     position: absolute;
-                        //     top: 50%;
-                        //     transform: translateY(-50%);
-                        //     right: -40px;
-                        //     background: url("/invest-kladno/kladno-photo/contact/icon-hover.png");
-                        //     height: 24px;
-                        //     width: 24px;
-                        //     transition: all 0.2s;
-                        //     visibility: hidden;
-                        //     opacity: 0;
-                        // }
-                        // &:hover::after {
-                        //     visibility: visible;
-                        //     opacity: 1;
-                        // }
                         &:hover {
                             color: $Sand-Medium;
                         }
@@ -315,7 +246,6 @@
                     }
                 }
             }
-
             .person-service {
                 flex-direction: column;
                 width: 100%;
@@ -383,7 +313,6 @@
                 margin-top: 35px;
                 height: auto;
             }
-
             &__bottom-left,
             &__top-left {
                 margin-left: 75px;
@@ -411,8 +340,7 @@
         @media (max-width: $xl) {
             padding-top: 540px;
             margin-top: -220px;
-            &::after {
-                content: "";
+            .ek-right-karwia {
                 display: none;
             }
             &__content {
@@ -499,7 +427,6 @@
                 }
             }
         }
-
         @media (max-width: $xl) {
             &__box {
                 .box-row {
@@ -508,7 +435,6 @@
                             .f-h1 {
                                 font-size: 60px;
                             }
-
                             .f-h4 {
                                 font-size: 35px;
                                 line-height: 55px;
@@ -523,8 +449,7 @@
         }
         @media (max-width: $lg) {
             padding-top: 10px;
-            &::after {
-                content: "";
+            .left-rotate-item-1  {
                 position: absolute;
                 bottom: -42px;
                 width: 85px;

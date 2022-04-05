@@ -21,7 +21,6 @@ footer {
             width: 160px;
             height: 160px;
         }
-
         &__content {
             margin-top: 105px;
             width: fit-content;
@@ -33,7 +32,6 @@ footer {
             .btn {
                 margin-top: 50px;
             }
-
             &__box-photo {
                 margin-top: 90px;
                 margin-bottom: 30px;
@@ -63,25 +61,29 @@ footer {
                     margin-bottom: 50px;
                 }
             }
-            &::after {
+            .rotete-item-footer {
                 content: "";
                 position: absolute;
                 bottom: -42px;
                 width: 85px;
                 height: 85px;
-                
             }
-
         }
         @media (max-width: $md) {
             &__content {
                 &__box-photo {
-                    max-height:20vw;
+                    max-height: 20vw;
                     img {
-                        max-height:20.2vw
+                        max-height: 20.2vw;
                     }
                 }
-               
+            }
+        }
+        @media (max-width: $sm) {
+            &__content {
+                .f-h2 {
+                    font-size: 32px;
+                }
             }
         }
     }
@@ -167,10 +169,8 @@ footer {
         }
         @media (max-width: $lg) {
             margin-top: 60px;
-
         }
         @media (max-width: 767px) {
-           
             padding: 30px 0 30px;
             &__text-created {
                 margin: 30px 0 0;
