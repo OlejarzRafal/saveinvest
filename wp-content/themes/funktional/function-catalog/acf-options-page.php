@@ -32,8 +32,8 @@ function my_acf_op_init()
     ));
     // Register options page.
     $option_page = acf_add_options_page(array(
-        'page_title'   => 'Enklawa Karwia',
-        'menu_title'  => 'Enklawa Karwia',
+        'page_title'   => 'Osada Karwia',
+        'menu_title'  => 'Osada Karwia',
         'menu_slug'   => 'stopka-karwia',
         'capability'  => 'edit_posts',
         'parent_slug'    => 'footer-all',

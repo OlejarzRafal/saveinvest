@@ -2,13 +2,13 @@
 
 /**
  * Template Name: Ceny działek
- * Template Post Type: enklawa-karwia
+ * Template Post Type: osada-karwia
  */
 
-get_template_part('investitions/enklawa-karwia/header');
+get_template_part('investitions/osada-karwia/header');
 global $PlotsFront;
 
-$PlotsFront->getScriptsAndStyles('Enklawa Karwia');
+$PlotsFront->getScriptsAndStyles('Osada Karwia');
 ?>
 
 <section class="plots-map" data-plots-map>
@@ -39,15 +39,15 @@ $PlotsFront->getScriptsAndStyles('Enklawa Karwia');
                         <div class="plotModal-status__number" data-plot-info-param="sector|plotNr"></div>
                         <div class="plotModal-status__status">
                             <div data-plot-info-show-if="status=wolna">
-                                <img class="status-ico" src="<?= get_theme_file_uri('/investitions/enklawa-karwia/assets/check.png') ?>">
+                                <img class="status-ico" src="<?= get_theme_file_uri('/investitions/osada-karwia/assets/check.png') ?>">
                                 <span>wolna</span>
                             </div>
                             <div data-plot-info-show-if="status=sprzedana">
-                                <img class="status-ico" src="<?= get_theme_file_uri('/investitions/enklawa-karwia/assets/x-circle.png') ?>">
+                                <img class="status-ico" src="<?= get_theme_file_uri('/investitions/osada-karwia/assets/x-circle.png') ?>">
                                 <span>sprzedana</span>
                             </div>
                             <div data-plot-info-show-if="status=zarezerwowana">
-                                <img class="status-ico" src="<?= get_theme_file_uri('/investitions/enklawa-karwia/assets/lock.png') ?>">
+                                <img class="status-ico" src="<?= get_theme_file_uri('/investitions/osada-karwia/assets/lock.png') ?>">
                                 <span>zarezerwowana</sp>
                             </div>
                         </div>
@@ -102,12 +102,12 @@ $PlotsFront->getScriptsAndStyles('Enklawa Karwia');
     <!-- Dla sektorów -->
     <div data-plots-sector>
         <div class="plots-map__desktop">
-            <img class="plots-map__img" src="<?= get_theme_file_uri('/investitions/enklawa-karwia/assets/sectors/kladno-all-desktop.jpg') ?>">
-            <?= file_get_contents(get_theme_file_path('/investitions/enklawa-karwia/assets/sectors/kladno-all-desktop.svg')) ?>
+            <img class="plots-map__img" src="<?= get_theme_file_uri('/investitions/osada-karwia/assets/sectors/kladno-all-desktop.jpg') ?>">
+            <?= file_get_contents(get_theme_file_path('/investitions/osada-karwia/assets/sectors/kladno-all-desktop.svg')) ?>
         </div>
         <div class="plots-map__mobile">
-            <img class="plots-map__img" src="<?= get_theme_file_uri('/investitions/enklawa-karwia/assets/sectors/kladno-all-mobile.png') ?>">
-            <?= file_get_contents(get_theme_file_path('/investitions/enklawa-karwia/assets/sectors/kladno-all-mobile.svg')) ?>
+            <img class="plots-map__img" src="<?= get_theme_file_uri('/investitions/osada-karwia/assets/sectors/kladno-all-mobile.png') ?>">
+            <?= file_get_contents(get_theme_file_path('/investitions/osada-karwia/assets/sectors/kladno-all-mobile.svg')) ?>
             <div class="plots-map__mobile__info">
                 Przesuń mapę w bok, <br>
                 aby zobaczyć więcej działek
@@ -227,15 +227,15 @@ $PlotsFront->getScriptsAndStyles('Enklawa Karwia');
                             <div class="plot-status__number" data-plot-info-param="sector|plotNr"></div>
                             <div class="plot-status__status">
                                 <div data-plot-info-show-if="status=wolna">
-                                    <img class="status-ico" src="<?= get_theme_file_uri('/investitions/enklawa-karwia/assets/check.png') ?>">
+                                    <img class="status-ico" src="<?= get_theme_file_uri('/investitions/osada-karwia/assets/check.png') ?>">
                                     <span>wolna</span>
                                 </div>
                                 <div data-plot-info-show-if="status=sprzedana">
-                                    <img class="status-ico" src="<?= get_theme_file_uri('/investitions/enklawa-karwia/assets/x-circle.png') ?>">
+                                    <img class="status-ico" src="<?= get_theme_file_uri('/investitions/osada-karwia/assets/x-circle.png') ?>">
                                     <span>sprzedana</span>
                                 </div>
                                 <div data-plot-info-show-if="status=zarezerwowana">
-                                    <img class="status-ico" src="<?= get_theme_file_uri('/investitions/enklawa-karwia/assets/lock.png') ?>">
+                                    <img class="status-ico" src="<?= get_theme_file_uri('/investitions/osada-karwia/assets/lock.png') ?>">
                                     <span>zarezerwowana</sp>
                                 </div>
                             </div>
@@ -292,7 +292,7 @@ $PlotsFront->getScriptsAndStyles('Enklawa Karwia');
 
                 <div data-plot-list-baner-template>
                     <div class="plot-baner">
-                        <img class="status-ico" src="<?= get_theme_file_uri('/investitions/enklawa-karwia/assets/baner.png') ?>">
+                        <img class="status-ico" src="<?= get_theme_file_uri('/investitions/osada-karwia/assets/baner.png') ?>">
 
                         <div class="plot-baner__content">
                             <h4>Kup działkę na raty</h4>
@@ -334,5 +334,5 @@ $PlotsFront->getScriptsAndStyles('Enklawa Karwia');
 </div>
 
 <?php
-get_template_part('investitions/enklawa-karwia/footer');
+get_template_part('investitions/osada-karwia/footer');
 ?>

@@ -23,7 +23,7 @@ function add_theme_assets()
     if (get_post_type(get_queried_object_id()) === 'ostoja-kladno') {
         wp_enqueue_style('kladnocss', get_template_directory_uri() . '/assets/css/kladno.css', false, 1, 'all');
     }
-    else if (get_post_type(get_queried_object_id()) === 'enklawa-karwia') {
+    else if (get_post_type(get_queried_object_id()) === 'osada-karwia') {
         wp_enqueue_style('karwiacss', get_template_directory_uri() . '/assets/css/karwia.css', false, 1, 'all');
     }else {
         // to na pewno w else?
@@ -37,7 +37,7 @@ function add_theme_assets()
     if (get_post_type(get_queried_object_id()) === 'ostoja-kladno') {
         wp_enqueue_script('kladnojs', get_stylesheet_directory_uri() . '/assets/js/kladno.js', array(), null, true);
     }
-    else if (get_post_type(get_queried_object_id()) === 'enklawa-karwia') {
+    else if (get_post_type(get_queried_object_id()) === 'osada-karwia') {
         wp_enqueue_script('karwiajs', get_stylesheet_directory_uri() . '/assets/js/karwia.js', array(), null, true);
     }
 
