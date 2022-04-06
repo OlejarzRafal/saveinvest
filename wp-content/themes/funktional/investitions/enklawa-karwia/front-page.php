@@ -230,31 +230,32 @@ get_template_part('investitions/enklawa-karwia/header');
         <?php if (have_rows('box_sec4_hp_karwia')) : ?>
             <?php while (have_rows('box_sec4_hp_karwia')) :
                 the_row(); ?>
-                <?php if ($link_box_sec4_hp_karwia = get_sub_field('link_box_sec4_hp_karwia')) : ?>
-                    <a href="<?php echo $link_box_sec4_hp_karwia; ?>" class="sec4-links__box">
-                        <video autoplay="" playsinline="" muted="" loop="" id="myVideo" class="video-hover">
-                            <source src="https://saveinvest.pl/wp-content/themes/funktional/assets/video/saveinvest-new-optimize.mp4" type="video/mp4">
-                        </video>
-                        <?php if ($title_box_sec4_hp_karwia = get_sub_field('title_box_sec4_hp_karwia')) : ?>
-                            <div class="sec4-links__box__title">
-                                <h2 class="f-h2 f-h2--white ">
-                                    <?php echo  $title_box_sec4_hp_karwia; ?>
-                                </h2>
-                            </div>
-                        <?php endif; ?>
-                        <?php if ($text_box_sec4_hp_karwia = get_sub_field('text_box_sec4_hp_karwia')) : ?>
-                            <div class="sec4-links__box__text">
-                                <p class="text-main text-main--white text-main--fw600">
-                                    <?php echo $text_box_sec4_hp_karwia; ?>
-                                </p>
-                            </div>
-                        <?php endif; ?>
-                        <?php if ($text_btn_box_sec4_hp_karwia = get_sub_field('text_btn_box_sec4_hp_karwia')) : ?>
-                            <div class="btn"><?php echo $text_btn_box_sec4_hp_karwia; ?></div>
-                        <?php endif; ?>
-
-                    </a>
-                <?php endif; ?>
+                <div class="video">
+                    <?php if ($link_box_sec4_hp_karwia = get_sub_field('link_box_sec4_hp_karwia')) : ?>
+                        <a href="<?php echo $link_box_sec4_hp_karwia; ?>" class="video__box">
+                            <video playsinline="" muted="" loop="" preload="true" id="myVideo" class="video__box__hover">
+                                <source src="https://saveinvest.pl/wp-content/themes/funktional/assets/video/saveinvest-new-optimize.mp4" type="video/mp4">
+                            </video>
+                            <?php if ($title_box_sec4_hp_karwia = get_sub_field('title_box_sec4_hp_karwia')) : ?>
+                                <div class="video__box__title">
+                                    <h2 class="f-h2 f-h2--white ">
+                                        <?php echo  $title_box_sec4_hp_karwia; ?>
+                                    </h2>
+                                </div>
+                            <?php endif; ?>
+                            <?php if ($text_box_sec4_hp_karwia = get_sub_field('text_box_sec4_hp_karwia')) : ?>
+                                <div class="video__box__text">
+                                    <p class="text-main text-main--white text-main--fw500">
+                                        <?php echo $text_box_sec4_hp_karwia; ?>
+                                    </p>
+                                </div>
+                            <?php endif; ?>
+                            <?php if ($text_btn_box_sec4_hp_karwia = get_sub_field('text_btn_box_sec4_hp_karwia')) : ?>
+                                <div class="btn"><?php echo $text_btn_box_sec4_hp_karwia; ?></div>
+                            <?php endif; ?>
+                        </a>
+                    <?php endif; ?>
+                </div>
             <?php endwhile; ?>
         <?php endif; ?>
     </section>

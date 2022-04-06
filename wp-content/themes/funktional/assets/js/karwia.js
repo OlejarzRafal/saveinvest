@@ -105,7 +105,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _scs
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-eval("var cip = $(\".video-hover\").hover(hoverVideo, hideVideo);\n\nfunction hoverVideo(e) {\n  $('video-hover', this).get(0).play();\n}\n\nfunction hideVideo(e) {\n  $('video-hover', this).get(0).pause();\n}\n\n//# sourceURL=webpack:///./resources/js/invest-karwia/hover-play.js?");
+eval("var movieHover = $(\".video\").hover(hoverVideo, hideVideo);\n\nfunction hoverVideo(e) {\n  $('video', this).get(0).play();\n}\n\nfunction hideVideo(e) {\n  $('video', this).get(0).pause();\n}\n\n//# sourceURL=webpack:///./resources/js/invest-karwia/hover-play.js?");
 
 /***/ }),
 
