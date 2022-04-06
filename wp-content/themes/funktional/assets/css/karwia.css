@@ -9300,36 +9300,34 @@ footer .footer .footer-box a p {
 .karwia-nav__container__box ul .btn-box .btn-nav .text-main::before {
   content: "";
   position: absolute;
-  bottom: -13px;
-  left: 0;
-  margin-left: 25%;
-  width: 0px;
+  width: 50%;
+  -webkit-transform: scaleX(0);
+          transform: scaleX(0);
   height: 3px;
-  background-color: #E0C6AF;
-  -webkit-transition: all cubic-bezier(0.38, 0.76, 0.56, 0.31) 0.6s;
-  transition: all cubic-bezier(0.38, 0.76, 0.56, 0.31) 0.6s;
+  bottom: -13px;
+  left: 24% !important;
+  color: #E0C6AF;
+  background: currentcolor;
+  -webkit-transform-origin: right;
+          transform-origin: right;
+  -webkit-transition: -webkit-transform 0.25s ease-out;
+  transition: -webkit-transform 0.25s ease-out;
+  transition: transform 0.25s ease-out;
+  transition: transform 0.25s ease-out, -webkit-transform 0.25s ease-out;
 }
 .karwia-nav__container__box ul .btn-box .btn-nav .text-main:hover::before {
-  content: "";
-  position: absolute;
-  bottom: -13px;
-  left: 0;
-  width: 50%;
-  height: 3px;
-  background-color: #E0C6AF;
+  -webkit-transform: scaleX(1);
+          transform: scaleX(1);
+  -webkit-transform-origin: left;
+          transform-origin: left;
 }
 .karwia-nav__container__box ul .btn-box .btn-nav--active .text-main {
   color: #E0C6AF;
   position: relative;
 }
 .karwia-nav__container__box ul .btn-box .btn-nav--active .text-main::before {
-  content: "";
-  position: absolute;
-  bottom: -13px;
-  left: 0;
-  width: 50%;
-  height: 3px;
-  background-color: #E0C6AF;
+  -webkit-transform: scaleX(1);
+          transform: scaleX(1);
 }
 .karwia-nav__container__box ul .logo-karwia {
   margin-right: 6vw;
@@ -9377,38 +9375,8 @@ footer .footer .footer-box a p {
   z-index: -1;
 }
 .karwia-nav__container__box ul .logo-karwia--sticky {
-  margin-right: 6vw;
-  margin-left: 6vw;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  position: relative;
-  background: #12406a url(../img/invest-karwia/home-page/logo-header.svg);
-  background-repeat: no-repeat;
-  background-size: 150px 180px;
-  background-position: center;
-  width: 215px;
-  height: 230px;
-  opacity: 1;
   -webkit-transform: translateY(-240px);
           transform: translateY(-240px);
-}
-.karwia-nav__container__box ul .logo-karwia--sticky::after {
-  content: "";
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-  width: calc(100% + 20px);
-  height: calc(100% + 20px);
-  background: #022545;
-  opacity: 0.15;
-  z-index: -1;
 }
 .karwia-nav__container__box ul .logo-karwia-sticky {
   position: absolute;

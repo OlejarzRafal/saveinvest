@@ -1,11 +1,7 @@
 .karwia-nav {
     height: 300px;
     width: 100%;
-    background: linear-gradient(
-        180deg,
-        #1951a4 0%,
-        rgba(25, 81, 164, 0) 100%
-    );
+    background: linear-gradient(180deg, #1951a4 0%, rgba(25, 81, 164, 0) 100%);
     opacity: 1;
     position: fixed;
     z-index: 9999;
@@ -117,7 +113,7 @@
                                 right: -20px;
                                 top: 50%;
                                 transform: translateY(-50%);
-                                transition: all .6s;
+                                transition: all 0.6s;
                                 pointer-events: none;
                             }
                             &:hover.btn-nav--visibility::before {
@@ -125,7 +121,6 @@
                                 position: absolute;
                                 transform: translateY(-80%);
                             }
-
                         }
                         &--sticky {
                             .text-main {
@@ -142,27 +137,22 @@
                                 position: absolute;
                                 transform: translateY(-150%);
                             }
-
                             &::before {
                                 content: "";
                                 position: absolute;
-                                bottom: -13px;
-                                left: 0;
-                                margin-left: 25%;
-                                width: 0px;
+                                width: 50%;
+                                transform: scaleX(0);
                                 height: 3px;
-                                background-color: $Sand-Light-Very;
-                                transition: all
-                                    cubic-bezier(0.38, 0.76, 0.56, 0.31) 0.6s;
+                                bottom: -13px;
+                                left: 24% !important;
+                                color: $Sand-Light-Very;
+                                background: currentcolor;
+                                transform-origin: right;
+                                transition: transform 0.25s ease-out;
                             }
                             &:hover::before {
-                                content: "";
-                                position: absolute;
-                                bottom: -13px;
-                                left: 0;
-                                width: 50%;
-                                height: 3px;
-                                background-color: $Sand-Light-Very;
+                                transform: scaleX(1);
+                                transform-origin: left;
                             }
                         }
                         &--active {
@@ -170,13 +160,7 @@
                                 color: $Sand-Light-Very;
                                 position: relative;
                                 &::before {
-                                    content: "";
-                                    position: absolute;
-                                    bottom: -13px;
-                                    left: 0;
-                                    width: 50%;
-                                    height: 3px;
-                                    background-color: $Sand-Light-Very;
+                                    transform: scaleX(1);
                                 }
                             }
                         }
@@ -220,32 +204,7 @@
                         z-index: -1;
                     }
                     &--sticky {
-                        margin-right: 6vw;
-                        margin-left: 6vw;
-                        display: flex;
-                        flex-direction: row;
-                        position: relative;
-                        background: #12406a
-                            url(../img/invest-karwia/home-page/logo-header.svg);
-                        background-repeat: no-repeat;
-                        background-size: 150px 180px;
-                        background-position: center;
-                        width: 215px;
-                        height: 230px;
-                        opacity: 1;
                         transform: translateY(-240px);
-                        &::after {
-                            content: "";
-                            position: absolute;
-                            top: 50%;
-                            left: 50%;
-                            transform: translate(-50%, -50%);
-                            width: calc(100% + 20px);
-                            height: calc(100% + 20px);
-                            background: #022545;
-                            opacity: 0.15;
-                            z-index: -1;
-                        }
                     }
                 }
                 .logo-karwia-sticky {
