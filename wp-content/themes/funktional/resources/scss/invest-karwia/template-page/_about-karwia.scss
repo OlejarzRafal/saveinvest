@@ -14,7 +14,7 @@
         margin-bottom: 270px;
         &__content {
             position: relative;
-            top: 80px;
+            top: 40px;
             margin: 0px;
             padding: 40px 70px 60px 60px;
             background: $Blue-Tint;
@@ -47,7 +47,7 @@
         @media (max-width: $xl) {
             margin-bottom: 350px;
             &__content {
-                top: 290px;
+                top: 265px;
                 &::before {
                     content: "";
                     position: absolute;
@@ -65,7 +65,7 @@
             margin-bottom: 390px;
             &__content {
                 padding: 35px 15px 35px 15px;
-                top: 375px;
+                top: 350px;
                 &::before {
                     content: "";
                     display: none;

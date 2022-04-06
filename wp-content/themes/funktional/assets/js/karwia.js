@@ -36,7 +36,7 @@ eval("var movieHover = $(\".video\").hover(hoverVideo, hideVideo);\n\nfunction h
   \**********************************************/
 /***/ (function() {
 
-eval("$(window).on(\"load\", function () {\n  setTimeout(function () {\n    $(\".karwia-loader\").fadeOut();\n  }, 200);\n});\n\n//# sourceURL=webpack://webpack/./resources/js/invest-karwia/loader.js?");
+eval("$(window).on(\"load\", function () {\n  setTimeout(function () {\n    $(\".karwia-loader\").fadeOut();\n  }, 500);\n});\n\n//# sourceURL=webpack://webpack/./resources/js/invest-karwia/loader.js?");
 
 /***/ }),
 

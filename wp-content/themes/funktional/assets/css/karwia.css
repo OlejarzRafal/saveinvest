@@ -4221,22 +4221,24 @@ a:hover {
   position: absolute;
   top: 0;
   left: 0;
-  background: #0b345a;
-  opacity: 0.7;
+  background: #141b22;
+  opacity: 0.2;
   width: 100%;
   height: 100%;
   -webkit-transition: all 0.2s;
   transition: all 0.2s;
+  z-index: 1;
 }
 .ek-frontpage .sec4-links .video__box:hover::before {
   content: "";
   position: absolute;
-  background: #001931;
+  opacity: 0.5;
 }
 .ek-frontpage .sec4-links .video__box__title, .ek-frontpage .sec4-links .video__box__text,
 .ek-frontpage .sec4-links .video__box .btn {
   position: relative;
   top: 5vw;
+  z-index: 2;
 }
 .ek-frontpage .sec4-links .video__box__text p {
   margin-top: 10px;
@@ -4263,6 +4265,7 @@ a:hover {
   background-size: cover;
   width: 8vw;
   height: 8vw;
+  z-index: 2;
 }
 .ek-frontpage .sec4-links .video .video-second-box::after {
   content: "";
@@ -4275,6 +4278,7 @@ a:hover {
   background-size: cover;
   width: 8vw;
   height: 8vw;
+  z-index: 2;
 }
 .ek-frontpage .sec4-links .video .video-last-box::after {
   content: "";
@@ -4287,6 +4291,7 @@ a:hover {
   background-size: cover;
   width: 8vw;
   height: 8vw;
+  z-index: 2;
 }
 @media (max-width: 1679px) {
   .ek-frontpage .sec4-links .video__box__title .f-h2 {
@@ -4887,7 +4892,7 @@ a:hover {
 }
 .ek-about .header__content {
   position: relative;
-  top: 80px;
+  top: 40px;
   margin: 0px;
   padding: 40px 70px 60px 60px;
   background: #E5EBF0;
@@ -4923,7 +4928,7 @@ a:hover {
     margin-bottom: 350px;
   }
   .ek-about .header__content {
-    top: 290px;
+    top: 265px;
   }
   .ek-about .header__content::before {
     content: "";
@@ -4944,7 +4949,7 @@ a:hover {
   }
   .ek-about .header__content {
     padding: 35px 15px 35px 15px;
-    top: 375px;
+    top: 350px;
   }
   .ek-about .header__content::before {
     content: "";
@@ -6206,7 +6211,7 @@ a:hover {
 }
 .ek-gallery .ek-gallery-karwia .gallery__item {
   position: relative;
-  max-height: 335px;
+  height: 18vw;
   cursor: pointer;
   display: none;
 }
@@ -6263,16 +6268,18 @@ a:hover {
 }
 .ek-gallery .ek-gallery-karwia .gallery__item--video {
   position: relative;
-  height: 250px;
+  height: 18vw;
+  width: 100%;
 }
 .ek-gallery .ek-gallery-karwia .gallery__item--video::before {
   content: "";
   position: absolute;
-  width: 148px;
-  height: 148px;
+  width: 42%;
+  height: 42%;
   background: url(../img/invest-karwia/home-page/photo-move-play.svg);
   background-repeat: no-repeat;
-  background-size: cover;
+  background-position: center;
+  background-size: contain;
   -webkit-transition: all 0.2s;
   transition: all 0.2s;
   left: 50%;
@@ -6294,22 +6301,22 @@ a:hover {
   height: 100%;
   left: 0;
   top: 0;
-  background: rgba(1, 22, 27, 0.8);
-  opacity: 0.6;
+  background: #01161b;
+  opacity: 0;
   -webkit-transition: 0.2s;
   transition: 0.2s;
 }
-.ek-gallery .ek-gallery-karwia .gallery__item--video a:hover:before {
-  background-color: rgba(117, 89, 17, 0.5);
-  opacity: 1;
+.ek-gallery .ek-gallery-karwia .gallery__item--video a:after {
+  content: "";
+  display: none;
 }
-.ek-gallery .ek-gallery-karwia .gallery__item--video:hover:after {
-  background: url(../img/invest-kladno/home-page/icon-play-movie-active.png);
-  background-size: 66px 66px;
+.ek-gallery .ek-gallery-karwia .gallery__item--video a:hover:before {
+  opacity: 0.6;
 }
 .ek-gallery .ek-gallery-karwia .gallery__item .yt-video-link {
   background-position: center;
-  background-size: inherit;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 @media (max-width: 1679px) {
   .ek-gallery .ek-gallery-karwia__title h5 {
@@ -6333,6 +6340,14 @@ a:hover {
   }
   .ek-gallery .ek-gallery-karwia .gallery {
     grid-template-columns: 1fr 1fr;
+  }
+  .ek-gallery .ek-gallery-karwia .gallery__item {
+    position: relative;
+    height: 24vw;
+  }
+  .ek-gallery .ek-gallery-karwia .gallery__item--video {
+    position: relative;
+    height: 24vw;
   }
 }
 @media (max-width: 767px) {
@@ -6362,6 +6377,24 @@ a:hover {
   }
   .ek-gallery .ek-gallery-karwia .gallery .gallery-item {
     margin: 0 auto;
+  }
+  .ek-gallery .ek-gallery-karwia .gallery__item {
+    position: relative;
+    height: 50vw;
+  }
+  .ek-gallery .ek-gallery-karwia .gallery__item--video {
+    position: relative;
+    height: 50vw;
+  }
+}
+@media (max-width: 575px) {
+  .ek-gallery .ek-gallery-karwia .gallery__item {
+    position: relative;
+    height: 60vw;
+  }
+  .ek-gallery .ek-gallery-karwia .gallery__item--video {
+    position: relative;
+    height: 60vw;
   }
 }
 
@@ -9076,14 +9109,15 @@ footer .footer .footer-box a p {
 .karwia-nav {
   height: 300px;
   width: 100%;
-  background-color: linear-gradient(180deg, #1951a4 0%, rgba(25, 81, 164, 0) 100%);
+  background: -webkit-gradient(linear, left top, left bottom, from(#1951a4), to(rgba(25, 81, 164, 0)));
+  background: linear-gradient(180deg, #1951a4 0%, rgba(25, 81, 164, 0) 100%);
   opacity: 1;
   position: fixed;
   z-index: 9999;
 }
 .karwia-nav--sticky {
   height: 125px;
-  background-color: #ffffff;
+  background: #ffffff;
   -webkit-box-shadow: 0px 10px 10px -10px rgba(172, 171, 171, 0.418);
           box-shadow: 0px 10px 10px -10px rgba(172, 171, 171, 0.418);
   -webkit-transition: background-color 0.5s;
@@ -9224,6 +9258,29 @@ footer .footer .footer-box a p {
 }
 .karwia-nav__container__box ul .btn-box .btn-nav--visibility {
   visibility: hidden;
+  position: relative;
+}
+.karwia-nav__container__box ul .btn-box .btn-nav--visibility::before {
+  content: "";
+  position: absolute;
+  width: 23px;
+  height: 23px;
+  background: url(../img/invest-karwia/header/financing-arow.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  right: -20px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  -webkit-transition: all 0.6s;
+  transition: all 0.6s;
+  pointer-events: none;
+}
+.karwia-nav__container__box ul .btn-box .btn-nav--visibility:hover.btn-nav--visibility::before {
+  content: "";
+  position: absolute;
+  -webkit-transform: translateY(-80%);
+          transform: translateY(-80%);
 }
 .karwia-nav__container__box ul .btn-box .btn-nav--sticky .text-main {
   color: #0B345A;
@@ -9233,6 +9290,12 @@ footer .footer .footer-box a p {
 }
 .karwia-nav__container__box ul .btn-box .btn-nav .text-main:hover {
   color: #E0C6AF;
+}
+.karwia-nav__container__box ul .btn-box .btn-nav .text-main:hover .btn-nav--visibility::before {
+  content: "";
+  position: absolute;
+  -webkit-transform: translateY(-150%);
+          transform: translateY(-150%);
 }
 .karwia-nav__container__box ul .btn-box .btn-nav .text-main::before {
   content: "";
@@ -9351,8 +9414,8 @@ footer .footer .footer-box a p {
   position: absolute;
   top: 0px;
   left: 50%;
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
+  -webkit-transform: translateX(-59%);
+          transform: translateX(-59%);
   background: url(../img/invest-karwia/home-page/logo-header-sticky.svg);
   background-repeat: no-repeat;
   background-size: 150px 62px;

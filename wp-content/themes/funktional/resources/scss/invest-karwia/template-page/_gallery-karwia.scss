@@ -74,7 +74,8 @@
             gap: 20px;
             &__item {
                 position: relative;
-                max-height: 335px;
+                // max-height: 335px;
+                height: 18vw;
                 cursor: pointer;
                 display: none;
                 &.show {
@@ -129,15 +130,17 @@
                 }
                 &--video {
                     position: relative;
-                    height: 250px;
+                    height: 18vw;
+                    width: 100%;
                     &::before {
                         content: "";
                         position: absolute;
-                        width: 148px;
-                        height: 148px;
+                        width: 42%;
+                        height: 42%;
                         background: url(../img/invest-karwia/home-page/photo-move-play.svg);
                         background-repeat: no-repeat;
-                        background-size: cover;
+                        background-position: center;
+                        background-size: contain;
                         transition: all 0.2s;
                         left: 50%;
                         top: 50%;
@@ -156,28 +159,25 @@
                             height: 100%;
                             left: 0;
                             top: 0;
-                            background: rgba(1, 22, 27, 0.8);
-                            opacity: 0.6;
+                            background: #01161b;
+                            opacity: 0;
                             transition: 0.2s;
+                        }
+                        &:after {
+                            content: "";
+                            display: none;
                         }
                         &:hover {
                             &:before {
-                                background-color: rgba(117, 89, 17, 0.5);
-                                opacity: 1;
+                                opacity: 0.6;
                             }
-                        }
-                    }
-
-                    &:hover {
-                        &:after {
-                            background: url(../img/invest-kladno/home-page/icon-play-movie-active.png);
-                            background-size: 66px 66px;
                         }
                     }
                 }
                 .yt-video-link {
                     background-position: center;
-                    background-size: inherit;
+                    background-size: cover;
+                    background-repeat: no-repeat;
                 }
             }
         }
@@ -207,6 +207,14 @@
             top: -180px;
             .gallery {
                 grid-template-columns: 1fr 1fr;
+                &__item {
+                    position: relative;
+                    height: 24vw;
+                    &--video {
+                        position: relative;
+                        height: 24vw;
+                    }
+                }
             }
         }
         @media (max-width: $md) {
@@ -223,12 +231,31 @@
                 margin-top: 30px;
                 gap: 20px;
             }
-
             .gallery {
                 grid-template-columns: 1fr;
                 margin-top: 50px;
                 .gallery-item {
-                    margin: 0 auto;
+                    margin: 0 auto;  
+                }
+                &__item {
+                    position: relative;
+                    height: 50vw;
+                    &--video {
+                        position: relative;
+                        height: 50vw;
+                    }
+                }
+            }
+        }
+        @media (max-width: $sm) {
+            .gallery {
+                &__item {
+                    position: relative;
+                    height: 60vw;
+                    &--video {
+                        position: relative;
+                        height: 60vw;
+                    }
                 }
             }
         }

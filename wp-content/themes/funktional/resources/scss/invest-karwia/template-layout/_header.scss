@@ -1,7 +1,7 @@
 .karwia-nav {
     height: 300px;
     width: 100%;
-    background-color: linear-gradient(
+    background: linear-gradient(
         180deg,
         #1951a4 0%,
         rgba(25, 81, 164, 0) 100%
@@ -11,9 +11,9 @@
     z-index: 9999;
     &--sticky {
         height: 125px;
-        background-color: $White;
+        background: $White;
         box-shadow: 0px 10px 10px -10px rgba(172, 171, 171, 0.418);
-        transition: background-color .5s;
+        transition: background-color 0.5s;
     }
     &__container {
         &__mobile {
@@ -31,7 +31,7 @@
                     display: flex;
                     flex-direction: column;
                     gap: 20px;
-                    .btn-nav{
+                    .btn-nav {
                         text-align: center;
                         &--active {
                             .text-main {
@@ -105,6 +105,27 @@
                         margin-top: 53px;
                         &--visibility {
                             visibility: hidden;
+                            position: relative;
+                            &::before {
+                                content: "";
+                                position: absolute;
+                                width: 23px;
+                                height: 23px;
+                                background: url(../img/invest-karwia/header/financing-arow.svg);
+                                background-repeat: no-repeat;
+                                background-size: cover;
+                                right: -20px;
+                                top: 50%;
+                                transform: translateY(-50%);
+                                transition: all .6s;
+                                pointer-events: none;
+                            }
+                            &:hover.btn-nav--visibility::before {
+                                content: "";
+                                position: absolute;
+                                transform: translateY(-80%);
+                            }
+
                         }
                         &--sticky {
                             .text-main {
@@ -116,7 +137,13 @@
                             &:hover {
                                 color: $Sand-Light-Very;
                             }
-                            &::before{
+                            &:hover .btn-nav--visibility::before {
+                                content: "";
+                                position: absolute;
+                                transform: translateY(-150%);
+                            }
+
+                            &::before {
                                 content: "";
                                 position: absolute;
                                 bottom: -13px;
@@ -125,10 +152,10 @@
                                 width: 0px;
                                 height: 3px;
                                 background-color: $Sand-Light-Very;
-                                transition: all cubic-bezier(.38,.76,.56,.31) .6s;
-                 
+                                transition: all
+                                    cubic-bezier(0.38, 0.76, 0.56, 0.31) 0.6s;
                             }
-                            &:hover::before{
+                            &:hover::before {
                                 content: "";
                                 position: absolute;
                                 bottom: -13px;
@@ -225,7 +252,7 @@
                     position: absolute;
                     top: 0px;
                     left: 50%;
-                    transform: translateX(-50%);
+                    transform: translateX(-59%);
                     background: url(../img/invest-karwia/home-page/logo-header-sticky.svg);
                     background-repeat: no-repeat;
                     background-size: 150px 62px;
