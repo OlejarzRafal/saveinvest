@@ -2,10 +2,10 @@
 
 /**
  * Template Name: Strona główna
- * Template Post Type: enklawa-karwia
+ * Template Post Type: osada-karwia
  */
 
-get_template_part('investitions/enklawa-karwia/header');
+get_template_part('investitions/osada-karwia/header');
 ?>
 <div class="ek-frontpage">
     <section class="header">
@@ -403,5 +403,5 @@ get_template_part('investitions/enklawa-karwia/header');
 </div>
 
 <?php
-get_template_part('investitions/enklawa-karwia/footer');
+get_template_part('investitions/osada-karwia/footer');
 ?>

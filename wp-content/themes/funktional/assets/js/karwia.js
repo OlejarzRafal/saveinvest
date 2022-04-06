@@ -36,7 +36,7 @@ eval("var movieHover = $(\".video\").hover(hoverVideo, hideVideo);\n\nfunction h
   \**********************************************/
 /***/ (function() {
 
-eval("// $(window).on(\"load\", function () {\n//     setTimeout(function () {\n//         $(\".karwia-loader\").fadeOut();\n//     }, 200);\n// });\n\n//# sourceURL=webpack://webpack/./resources/js/invest-karwia/loader.js?");
+eval("$(window).on(\"load\", function () {\n  setTimeout(function () {\n    $(\".karwia-loader\").fadeOut();\n  }, 200);\n});\n\n//# sourceURL=webpack://webpack/./resources/js/invest-karwia/loader.js?");
 
 /***/ }),
 
@@ -66,7 +66,7 @@ eval("$(document).ready(function () {\n  var stickyNav = function stickyNav() {\
   \******************************************************/
 /***/ (function() {
 
-eval("//counter on Scroll // Contact //\nvar counted = 0;\n\nif ($(\".enklawa-karwia-template-contact\").length) {\n  $(window).scroll(function () {\n    var counter = $(\"#counter\");\n\n    if (!counter) {\n      return;\n    }\n\n    var scrollTop = counter.offset().top - window.innerHeight;\n\n    if (counted === 0 && $(window).scrollTop() > scrollTop) {\n      $(\".count\").each(function () {\n        var $this = $(this),\n            countTo = $this.attr(\"data-count\");\n        $({\n          countNum: $this.text()\n        }).animate({\n          countNum: countTo\n        }, {\n          duration: 2000,\n          easing: \"swing\",\n          step: function step() {\n            $this.text(Math.floor(this.countNum));\n          },\n          complete: function complete() {\n            $this.text(this.countNum); //alert('finished');\n          }\n        });\n      });\n      counted = 1;\n    }\n  });\n}\n\n//# sourceURL=webpack://webpack/./resources/js/invest-karwia/scroll-contact.js?");
+eval("//counter on Scroll // Contact //\nvar counted = 0;\n\nif ($(\".osada-karwia-template-contact\").length) {\n  $(window).scroll(function () {\n    var counter = $(\"#counter\");\n\n    if (!counter) {\n      return;\n    }\n\n    var scrollTop = counter.offset().top - window.innerHeight;\n\n    if (counted === 0 && $(window).scrollTop() > scrollTop) {\n      $(\".count\").each(function () {\n        var $this = $(this),\n            countTo = $this.attr(\"data-count\");\n        $({\n          countNum: $this.text()\n        }).animate({\n          countNum: countTo\n        }, {\n          duration: 2000,\n          easing: \"swing\",\n          step: function step() {\n            $this.text(Math.floor(this.countNum));\n          },\n          complete: function complete() {\n            $this.text(this.countNum); //alert('finished');\n          }\n        });\n      });\n      counted = 1;\n    }\n  });\n}\n\n//# sourceURL=webpack://webpack/./resources/js/invest-karwia/scroll-contact.js?");
 
 /***/ }),
 

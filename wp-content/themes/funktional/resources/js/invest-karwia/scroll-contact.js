@@ -1,6 +1,6 @@
 //counter on Scroll // Contact //
 var counted = 0;
-if ($(".enklawa-karwia-template-contact").length) {
+if ($(".osada-karwia-template-contact").length) {
     $(window).scroll(function () {
         const counter = $("#counter");
 
