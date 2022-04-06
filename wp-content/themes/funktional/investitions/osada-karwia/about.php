@@ -1,11 +1,11 @@
 <?php
 
 /**
- * Template Name: O enkalwie karwia
- * Template Post Type: enklawa-karwia
+ * Template Name: O osadzie karwia
+ * Template Post Type: osada-karwia
  */
 
-get_template_part('investitions/enklawa-karwia/header');
+get_template_part('investitions/osada-karwia/header');
 ?>
 
 <div class="ek-about">
@@ -235,5 +235,5 @@ get_template_part('investitions/enklawa-karwia/header');
 
 
 <?php
-get_template_part('investitions/enklawa-karwia/footer');
+get_template_part('investitions/osada-karwia/footer');
 ?>

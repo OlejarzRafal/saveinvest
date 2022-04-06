@@ -93,7 +93,7 @@
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-eval("$(document).ready(function () {// $('body').bind('cut copy paste', function (e) {\n  //    e.preventDefault();\n  // });\n  // document.addEventListener('contextmenu', event => event.preventDefault());\n});\n\n//# sourceURL=webpack:///./resources/js/all-page/disabled-copy-text.js?");
+eval("$(document).ready(function () {\n  $('body').bind('cut copy paste', function (e) {\n    e.preventDefault();\n  });\n  document.addEventListener('contextmenu', function (event) {\n    return event.preventDefault();\n  });\n});\n\n//# sourceURL=webpack:///./resources/js/all-page/disabled-copy-text.js?");
 
 /***/ }),
 

@@ -23,7 +23,7 @@ $plotsAcfArray = array(
                 // 'Enklawa Jarosławiec' => 'Enklawa Jarosławiec',
                 // 'Osada Jaworek' => 'Osada Jaworek',
                 'Ostoja Kładno' => 'Ostoja Kładno',
-                'Enklawa Karwia' => 'Enklawa Karwia',
+                'Osada Karwia' => 'Osada Karwia',
             ),
             'return_format' => 'array',
             'default_value' => false,
