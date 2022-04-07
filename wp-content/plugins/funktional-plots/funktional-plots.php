@@ -39,7 +39,7 @@ class FunktionalPlots
         );
 
         $this->registerInvestitionPagesCpt('ostoja-kladno', 'Ostoja Kładno', 'ostojakladno');
-        $this->registerInvestitionPagesCpt('enklawa-karwia', 'Enklawa Karwia', 'enklawakarwia');
+        $this->registerInvestitionPagesCpt('osada-karwia', 'Osada Karwia', 'osadakarwia');
     }
 
     public function addInwestitionsMenuItem()

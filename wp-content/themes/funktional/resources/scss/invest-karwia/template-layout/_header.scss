@@ -112,8 +112,30 @@
                             }
                         }
                         .text-main {
+                            position: relative;
                             &:hover {
                                 color: $Sand-Light-Very;
+                            }
+                            &::before{
+                                content: "";
+                                position: absolute;
+                                bottom: -13px;
+                                left: 0;
+                                margin-left: 25%;
+                                width: 0px;
+                                height: 3px;
+                                background-color: $Sand-Light-Very;
+                                transition: all cubic-bezier(.38,.76,.56,.31) .6s;
+                 
+                            }
+                            &:hover::before{
+                                content: "";
+                                position: absolute;
+                                bottom: -13px;
+                                left: 0;
+                                width: 50%;
+                                height: 3px;
+                                background-color: $Sand-Light-Very;
                             }
                         }
                         &--active {
@@ -124,9 +146,8 @@
                                     content: "";
                                     position: absolute;
                                     bottom: -13px;
-                                    left: 50%;
-                                    transform: translateX(-50%);
-                                    width: 50px;
+                                    left: 0;
+                                    width: 50%;
                                     height: 3px;
                                     background-color: $Sand-Light-Very;
                                 }

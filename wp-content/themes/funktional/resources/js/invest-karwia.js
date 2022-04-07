@@ -9,6 +9,7 @@ import "../js/invest-karwia/nav-burger";
 import "../js/invest-karwia/nav-scroll";
 import "../js/invest-karwia/scroll-rotate";
 import "../js/invest-karwia/hover-play";
+import "../js/invest-karwia/loader.js";
 
 
 

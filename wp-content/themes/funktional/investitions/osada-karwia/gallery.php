@@ -2,10 +2,10 @@
 
 /**
  * Template Name: Galeria
- * Template Post Type: enklawa-karwia
+ * Template Post Type: osada-karwia
  */
 
-get_template_part('investitions/enklawa-karwia/header');
+get_template_part('investitions/osada-karwia/header');
 ?>
 <div class="ek-gallery">
     <section class="ek-gallery-karwia">
@@ -139,5 +139,5 @@ get_template_part('investitions/enklawa-karwia/header');
     }
 </script>
 <?php
-get_template_part('investitions/enklawa-karwia/footer');
+get_template_part('investitions/osada-karwia/footer');
 ?>
