@@ -207,7 +207,7 @@ get_template_part('investitions/osada-karwia/header');
                 <div class="col-xl-6">
                     <div class="sec2-about-company__content">
                         <div class="sec2-about-company__content__top-left">
-                            <img src="<?php bloginfo('template_url'); ?>/assets/img/invest-karwia/home-page/home-karwia-company-logo.png" alt="logo saveinvest" />
+                            <img class="ek-fadein-karwia" src="<?php bloginfo('template_url'); ?>/assets/img/invest-karwia/home-page/home-karwia-company-logo.png" alt="logo saveinvest" />
                             <h3 class="f-h3 ek-fadein-karwia">O firmie</h3>
                         </div>
                         <?php if ($text_left_sec2_contact_karwia = get_field('text_left_sec2_contact_karwia')) : ?>

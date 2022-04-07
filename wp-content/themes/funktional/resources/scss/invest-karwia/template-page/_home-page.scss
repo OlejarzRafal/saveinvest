@@ -9,18 +9,18 @@
             position: absolute;
             bottom: -74px;
             left: 50%;
+            width: 160px;
+            height: 160px;
             transform: translateX(-50%);
             background: url("../img/invest-karwia/home-page/square-hp-s4.svg");
             background-size: cover;
-            width: 160px;
-            height: 160px;
         }
         .video-home-page {
             position: relative;
-            width: 100%;
-            height: 100%;
             top: 0;
             left: 0;
+            width: 100%;
+            height: 100%;
             pointer-events: none;
             object-fit: cover;
         }
@@ -41,8 +41,8 @@
     }
 
     .sec1-video {
-        margin-top: 120px;
         position: relative;
+        margin-top: 120px;
         width: 100%;
         min-height: 540px;
         background: linear-gradient(to left, $Sand-Tint 70%, transparent 70%);
@@ -61,27 +61,27 @@
                 &::before {
                     content: "";
                     position: absolute;
+                    left: 50%;
+                    top: 50%;
+                    transform: translate(-50%, -50%);
                     width: 148px;
                     height: 148px;
                     background: url(../img/invest-karwia/home-page/photo-move-play.svg);
                     background-repeat: no-repeat;
                     background-size: cover;
                     transition: all 0.2s;
-                    left: 50%;
-                    top: 50%;
-                    transform: translate(-50%, -50%);
-                    z-index: 9;
                     pointer-events: none;
+                    z-index: 9;
                 }
                 &::after {
                     content: "";
                     position: absolute;
+                    left: 0;
+                    top: 0;
                     width: 100%;
                     height: 100%;
                     background: #01161b;
                     opacity: 0;
-                    left: 0;
-                    top: 0;
                     transition: all 0.2s;
                     pointer-events: none;
                 }
@@ -124,8 +124,6 @@
             &__movie {
                 a {
                     &::before {
-                        content: "";
-                        position: absolute;
                         width: 20vw;
                         height: 20vw;
                         background-size: 20vw 20vw;
@@ -139,10 +137,10 @@
     }
 
     .sec2-info {
+        position: relative;
         margin-top: 130px;
         padding: 150px 15px 60px 15px;
         min-height: 1465px;
-        position: relative;
         background: url(../img/invest-karwia/home-page/sec2-background.jpg);
         background-repeat: no-repeat;
         background-size: cover;
@@ -156,22 +154,22 @@
             top: -42px;
             left: 50%;
             transform: translateX(-50%) rotate(45deg);
-            border: 1px solid #6892b8;
-            box-sizing: border-box;
             width: 85px;
             height: 85px;
+            border: 1px solid #6892b8;
+            box-sizing: border-box;
         }
         .bottom-item-move {
             position: absolute;
             top: 34px;
             left: 50%;
             transform: translate(-50%, 0%) rotate(45deg);
-            border: 3px solid #d6b292;
-            box-sizing: border-box;
             width: 58px;
             height: 58px;
-            z-index: 1;
+            border: 3px solid #d6b292;
+            box-sizing: border-box;
             animation: rhombus-fp 4s infinite ease-in-out;
+            z-index: 1;
         }
         &__top {
             width: 100%;
@@ -189,28 +187,27 @@
                     }
                 }
                 .content-info {
-                    display: flex;
-                    flex-direction: column;
                     margin-left: 30px;
                     margin-top: 20px;
+                    width: 64%;
+                    display: flex;
+                    flex-direction: column;
                     justify-content: flex-start;
                     align-items: flex-end;
-                    width: 64%;
                     &__test {
-                        display: flex;
                         width: 100%;
+                        display: flex;
                         justify-content: flex-start;
-
                         .f-special {
-                            text-align: start;
                             width: 78%;
+                            text-align: start;
                         }
                     }
                     &__name,
                     &__position {
-                        text-align: start;
-                        width: 330px;
                         margin-right: 140px;
+                        width: 330px;
+                        text-align: start;
                     }
                     &__name {
                         margin-top: 40px;
@@ -236,20 +233,20 @@
                 justify-content: center;
             }
             &__content {
+                margin-top: 50px;
                 display: flex;
                 flex-direction: column;
-                margin-top: 50px;
                 gap: 75px;
                 .content-boxs {
                     display: flex;
                     justify-content: space-around;
                     .content-box {
+                        position: relative;
                         display: flex;
                         flex-direction: column;
                         align-items: center;
                         justify-content: flex-start;
                         flex-basis: 17%;
-                        position: relative;
                         img {
                             width: 120px;
                             height: auto;
@@ -266,10 +263,10 @@
                             position: absolute;
                             bottom: -47%;
                             right: -21%;
-                            background: url("../img/invest-karwia/home-page/icon-plus-ph-sec2.svg");
-                            background-size: contain;
                             width: 80px;
                             height: 80px;
+                            background: url("../img/invest-karwia/home-page/icon-plus-ph-sec2.svg");
+                            background-size: contain;
                         }
                     }
                     .content-box:last-child {
@@ -287,27 +284,14 @@
             padding: 50px 0 40px 0px;
             min-height: 1200px;
             &::after {
-                content: "";
-                position: absolute;
                 top: -29px;
-                left: 50%;
-                transform: translateX(-50%) rotate(45deg);
-                border: 1px solid #6892b8;
-                box-sizing: border-box;
                 width: 60px;
                 height: 60px;
             }
             .bottom-item-move {
-                position: absolute;
                 top: 25px;
-                left: 50%;
-                transform: translate(-50%, 0%) rotate(45deg);
-                border: 3px solid #d6b292;
-                box-sizing: border-box;
                 width: 40px;
                 height: 40px;
-                z-index: 1;
-                animation: rhombus-fp 4s infinite ease-in-out;
             }
             &__top {
                 width: 100%;
@@ -356,22 +340,22 @@
             &__bottom {
                 margin-top: 40px;
                 &__content {
+                    padding-bottom: 20px;
+                    margin-top: 40px;
+                    max-width: 100%;
                     display: flex;
                     flex-direction: column;
-                    margin-top: 40px;
                     gap: 50px;
                     overflow-x: scroll;
-                    max-width: 100%;
-                    padding-bottom: 20px;
                     .content-boxs {
                         display: flex;
                         justify-content: flex-start;
                         .content-box {
+                            min-width: 190px;
                             display: flex;
                             flex-direction: column;
                             align-items: center;
                             justify-content: flex-start;
-                            min-width: 190px;
                             img {
                                 width: 100px;
                                 height: auto;
@@ -381,8 +365,6 @@
                     .content-boxs:nth-child(1) {
                         .content-box {
                             &::after {
-                                content: "";
-                                position: absolute;
                                 bottom: -39%;
                                 right: -13%;
                                 width: 50px;
@@ -409,20 +391,20 @@
     }
 
     .sec3-prestige {
-        margin-top: 105px;
         position: relative;
+        margin-top: 105px;
         &__box1,
         &__box2 {
+            height: 100%;
             display: flex;
             flex-direction: column;
             justify-content: space-between;
-            height: 100%;
             &__content {
+                width: 100%;
                 display: flex;
                 flex-direction: column;
                 justify-content: flex-start;
                 align-items: center;
-                width: 100%;
             }
         }
         &__box1 {
@@ -440,10 +422,10 @@
                         top: -41px;
                         right: -42px;
                         transform: rotate(45deg);
-                        border: 1px solid #6892b8;
-                        box-sizing: border-box;
                         width: 85px;
                         height: 85px;
+                        border: 1px solid #6892b8;
+                        box-sizing: border-box;
                     }
                     .bottom-item-1 {
                         position: absolute;
@@ -451,12 +433,12 @@
                         bottom: auto;
                         right: -28px;
                         transform: translateY(0%) rotate(45deg);
-                        border: 3px solid #d6b292;
-                        box-sizing: border-box;
                         width: 58px;
                         height: 58px;
-                        z-index: 1;
+                        border: 3px solid #d6b292;
+                        box-sizing: border-box;
                         animation: rhombus-fp-s3 4.5s infinite ease-in-out;
+                        z-index: 1;
                     }
                     &::before {
                         content: "";
@@ -464,10 +446,10 @@
                         bottom: -40px;
                         right: 50%;
                         transform: translateX(-50%);
-                        background: url("../img/invest-karwia/home-page/line-pion-ph-karwia.svg");
-                        background-size: contain;
                         width: 4px;
                         height: 80px;
+                        background: url("../img/invest-karwia/home-page/line-pion-ph-karwia.svg");
+                        background-size: contain;
                     }
                     img {
                         height: 100%;
@@ -487,10 +469,10 @@
                     }
                 }
                 .content-text {
+                    margin-top: 20px;
+                    width: 100%;
                     display: flex;
                     justify-content: flex-start;
-                    width: 100%;
-                    margin-top: 20px;
                     .text-main {
                         margin-left: 10%;
                         margin-right: 9%;
@@ -508,19 +490,19 @@
             &__content {
                 width: 100%;
                 .content-title {
+                    width: 100%;
                     display: flex;
                     justify-content: flex-start;
-                    width: 100%;
                     .f-h3 {
                         margin-left: 8%;
                         margin-right: 7%;
                     }
                 }
                 .content-text {
+                    margin-top: 40px;
+                    width: 100%;
                     display: flex;
                     justify-content: flex-start;
-                    width: 100%;
-                    margin-top: 40px;
                     .text-main {
                         margin-left: 8%;
                         margin-right: 8%;
@@ -544,10 +526,10 @@
                         position: absolute;
                         top: 56%;
                         left: -80px;
-                        background: url("../img/invest-karwia/home-page/Element-Circle-footer.svg");
-                        background-size: contain;
                         width: 160px;
                         height: 160px;
+                        background: url("../img/invest-karwia/home-page/Element-Circle-footer.svg");
+                        background-size: contain;
                     }
                     &::before {
                         content: "";
@@ -555,10 +537,10 @@
                         top: -40px;
                         right: 50%;
                         transform: translateX(-50%);
-                        background: url("../img/invest-karwia/home-page/line-pion-ph-karwia.svg");
-                        background-size: contain;
                         width: 4px;
                         height: 80px;
+                        background: url("../img/invest-karwia/home-page/line-pion-ph-karwia.svg");
+                        background-size: contain;
                     }
                     img {
                         height: 100%;
@@ -570,7 +552,6 @@
         @media (max-width: $xl) {
             margin-top: 80px;
             &::after {
-                content: "";
                 display: none;
             }
             &__box1 {
@@ -583,11 +564,9 @@
                     justify-content: center;
                     .photo-box1 {
                         &::after {
-                            content: "";
                             display: none;
                         }
                         &::before {
-                            content: "";
                             display: none;
                         }
                     }
@@ -651,7 +630,6 @@
                             display: none;
                         }
                         &::before {
-                            content: "";
                             display: none;
                         }
                         img {
@@ -689,9 +667,9 @@
             flex-basis: 33.13%;
             height: 30vw;
             &__box {
+                position: relative;
                 flex-basis: 33.13%;
                 height: 30vw;
-                position: relative;
                 display: flex;
                 flex-direction: column;
                 align-items: center;
@@ -711,10 +689,10 @@
                     position: absolute;
                     top: 0;
                     left: 0;
-                    background:  #141b22;
-                    opacity: 0.2;
                     width: 100%;
                     height: 100%;
+                    background: #141b22;
+                    opacity: 0.2;
                     transition: all 0.2s;
                     z-index: 1;
                 }
@@ -746,20 +724,9 @@
                     opacity: 1;
                 }
             }
-            .video-first-box {
-                &::after {
-                    content: "";
-                    position: absolute;
-                    top: 50px;
-                    left: 50%;
-                    transform: translateX(-50%);
-                    background: url("../img/invest-karwia/home-page/rhombus-hp-s2.svg");
-                    background-size: cover;
-                    width: 8vw;
-                    height: 8vw;
-                    z-index: 2;
-                }
-            }
+
+            .video-last-box,
+            .video-first-box,
             .video-second-box {
                 &::after {
                     content: "";
@@ -767,25 +734,28 @@
                     top: 50px;
                     left: 50%;
                     transform: translateX(-50%);
-                    background: url("../img/invest-karwia/home-page/square-hp-s4.svg");
-                    background-size: cover;
                     width: 8vw;
                     height: 8vw;
                     z-index: 2;
                 }
             }
+            .video-first-box {
+                &::after {
+                    background: url("../img/invest-karwia/home-page/rhombus-hp-s2.svg");
+                    background-size: cover;
+                    
+                }
+            }
+            .video-second-box {
+                &::after {
+                    background: url("../img/invest-karwia/home-page/square-hp-s4.svg");
+                    background-size: cover;
+                }
+            }
             .video-last-box {
                 &::after {
-                    content: "";
-                    position: absolute;
-                    top: 50px;
-                    left: 50%;
-                    transform: translateX(-50%);
                     background: url("../img/invest-karwia/home-page/Element-Circle-footer.svg");
                     background-size: cover;
-                    width: 8vw;
-                    height: 8vw;
-                    z-index: 2;
                 }
             }
         }
@@ -824,8 +794,6 @@
                 .video-second-box,
                 .video-last-box {
                     &::after {
-                        content: "";
-                        position: absolute;
                         top: 25px;
                     }
                 }
@@ -846,8 +814,6 @@
                 .video-second-box,
                 .video-last-box {
                     &::after {
-                        content: "";
-                        position: absolute;
                         top: 50px;
                         width: 12vw;
                         height: 12vw;
@@ -861,8 +827,6 @@
                 .video-second-box,
                 .video-last-box {
                     &::after {
-                        content: "";
-                        position: absolute;
                         top: 25px;
                     }
                 }
@@ -876,7 +840,7 @@
                     &__text,
                     .btn {
                         position: relative;
-                        top: 7vw;
+                        top: 8vw;
                     }
                     &__title {
                         .f-h2 {
@@ -890,18 +854,17 @@
                     }
                     .btn {
                         margin-top: 3vw;
+                        padding: 12px 16px;
                         font-size: 12px;
                         line-height: 8px;
-                        padding: 12px 16px;
+
                     }
                 }
                 .video-first-box,
                 .video-second-box,
                 .video-last-box {
                     &::after {
-                        content: "";
                         top: 20px;
-                        position: absolute;
                         width: 15vw;
                         height: 15vw;
                     }
@@ -911,47 +874,47 @@
     }
 
     .sec5-testimonial {
-        margin-top: 120px;
         position: relative;
+        margin-top: 120px;
         width: 100%;
         min-height: 540px;
         background: linear-gradient(to left, $Blue-Tint 70%, transparent 70%);
         &__content {
-            display: flex;
-            min-height: 430px;
-            margin: 55px 0 55px 45px;
-            border: 1px solid $Sand-Light;
             position: relative;
+            margin: 55px 0 55px 45px;
+            min-height: 430px;
+            display: flex;
+            border: 1px solid $Sand-Light;
             &::after {
                 content: "";
                 position: absolute;
                 top: -76px;
                 left: 29px;
                 transform: translateX(-50%);
+                width: 120px;
+                height: 88px;
                 background: $White
                     url("../img/invest-karwia/home-page/icon1.svg");
                 background-size: contain;
-                width: 120px;
-                height: 88px;
                 border: 35px solid $White;
             }
             &__box {
+                position: relative;
                 margin-left: 45px;
+                top: -35px;
+                min-height: 430px;
                 display: flex;
                 flex-direction: column;
-                justify-content: center;
-                min-height: 430px;
-                position: relative;
-                top: -35px;
+                justify-content: center;    
             }
             &__entry {
                 left: 3vw;
                 width: 42vw;
                 .swiper-slide {
+                    min-height: 430px;
                     display: flex;
                     flex-direction: column;
                     justify-content: center;
-                    min-height: 430px;
                     .testimonial-text {
                         margin-top: 20px;
                         margin-right: 20px;
@@ -969,34 +932,33 @@
                 height: 100%;
                 .swiper-pagination {
                     position: relative;
-                    height: 20px;
-                    width: auto;
+                    margin-left: 50px;
+                    padding: 0 35px 0 15px;
                     left: 0;
                     bottom: 60px;
+                    height: 100%;
+                    width: auto;
                     display: flex;
                     align-items: flex-end;
                     gap: 18px;
-                    height: 100%;
-                    padding: 0 35px 0 15px;
-                    margin-left: 50px;
                     .swiper-pagination-bullet {
-                        background-color: $Sand-Light;
+                        margin: 0;
                         width: 8px;
                         height: 8px;
                         transform: rotate(45deg) translateY(-2px);
+                        background-color: $Sand-Light;
                         border-radius: 0;
                         opacity: 1;
-                        margin: 0;
                         box-shadow: 0px 0px 0px 2px #ffffff;
                     }
                     .swiper-pagination-bullet-active {
-                        background-color: $Blue-Dark;
+                        margin: 0;
                         width: 11px;
                         height: 11px;
                         transform: rotate(45deg);
+                        background-color: $Blue-Dark;
                         border-radius: 0;
                         opacity: 1;
-                        margin: 0;
                         box-shadow: 0px 0px 0px 2px #ffffff;
                     }
                     &::before {
@@ -1011,9 +973,9 @@
                 }
                 .swiper-button-next {
                     position: relative;
+                    margin: 0px;
                     top: -94px;
                     left: 270px;
-                    margin: 0px;
                     width: 60px;
                     height: 60px;
                     background: #d6b29200
@@ -1022,11 +984,11 @@
                     background-position: center;
                     transition: all 0.2s;
                     &:hover {
+                        width: 60px;
+                        height: 60px;
                         border: 1px solid $Blue-Dark;
                         background: #d6b2922c
                             url("../img/invest-karwia/home-page/arrow-next-testimonial.svg");
-                        width: 60px;
-                        height: 60px;
                         background-position: center;
                     }
                     &:after {
@@ -1057,8 +1019,8 @@
             }
         }
         @media (max-width: $lg) {
-            margin-top: 50px;
             position: relative;
+            margin-top: 50px;
             width: 100%;
             min-height: auto;
             background: linear-gradient(
@@ -1067,28 +1029,23 @@
                 $Blue-Tint 160px
             );
             &__content {
+                margin: 0 0 15px 0;
+                min-height: auto;
                 display: flex;
                 flex-direction: column;
-                min-height: auto;
-                margin: 0 0 15px 0;
                 &::after {
-                    content: "";
-                    position: absolute;
                     top: -39px;
                     left: 24px;
-                    transform: translateX(-50%);
-                    background: $White
-                        url("../img/invest-karwia/home-page/icon1.svg");
-                    background-size: cover;
                     width: 54px;
                     height: 40px;
+                    background-size: cover;
                     border: 15px solid #ffffff;
                 }
                 &__box {
                     margin-left: 15px;
-                    min-height: auto;
-                    top: 0;
                     margin-top: 30px;
+                    top: 0;
+                    min-height: auto;
                     .f-testimonial:first-child {
                         font-size: 50px;
                         line-height: 60px;
@@ -1099,8 +1056,8 @@
                     }
                 }
                 &__entry {
-                    left: 0;
                     margin: 0 15px;
+                    left: 0;
                     width: 100%;
                     .swiper-slide {
                         min-height: auto;
@@ -1122,31 +1079,31 @@
                         bottom: 45px;
                         margin-left: 15px;
                         .swiper-pagination-bullet {
-                            background-color: $Sand-Light;
+                            margin: 0;
                             width: 8px;
                             height: 8px;
                             transform: rotate(45deg) translateY(-2px);
                             border-radius: 0;
                             opacity: 1;
-                            margin: 0;
+                            background-color: $Sand-Light;
                             box-shadow: 0px 0px 0px 2px $Blue-Tint;
                         }
                         .swiper-pagination-bullet-active {
-                            background-color: $Blue-Dark;
+                            margin: 0;
                             width: 11px;
                             height: 11px;
                             transform: rotate(45deg);
                             border-radius: 0;
                             opacity: 1;
-                            margin: 0;
+                            background-color: $Blue-Dark;
                             box-shadow: 0px 0px 0px 2px $Blue-Tint;
                         }
                     }
                     .swiper-button-next {
                         position: relative;
+                        margin: 0px;
                         top: -80px;
                         left: 245px;
-                        margin: 0px;
                         width: 60px;
                         height: 60px;
                         background: #d6b29200
@@ -1155,11 +1112,11 @@
                         background-position: center;
                         transition: all 0.2s;
                         &:hover {
+                            width: 60px;
+                            height: 60px;
                             border: 1px solid $Blue-Dark;
                             background: #d6b2922c
                                 url("../img/invest-karwia/home-page/arrow-next-testimonial.svg");
-                            width: 60px;
-                            height: 60px;
                             background-position: center;
                         }
                         &:after {
@@ -1175,31 +1132,31 @@
         margin-top: 140px;
         .row-background {
             position: relative;
+            padding: 60px 80px 130px 80px;
             left: 15px;
             width: 100%;
             height: auto;
             background-color: $Sand-Tint;
-            padding: 60px 80px 130px 80px;
             &::after {
                 content: "";
                 position: absolute;
                 bottom: 17px;
                 left: 25%;
                 transform: translateX(-50%) rotate(45deg);
-                border: 1px solid #6892b8;
-                box-sizing: border-box;
                 width: 85px;
                 height: 85px;
+                border: 1px solid #6892b8;
+                box-sizing: border-box;
             }
             .bottom-item-move-2 {
                 position: absolute;
                 bottom: -39px;
                 left: 25%;
                 transform: translate(-50%, 0%) rotate(45deg);
-                border: 3px solid #d6b292;
-                box-sizing: border-box;
                 width: 58px;
                 height: 58px;
+                border: 3px solid #d6b292;
+                box-sizing: border-box;
                 z-index: 1;
                 animation: rhombus-fp 4s infinite ease-in-out;
             }
@@ -1229,25 +1186,19 @@
         @media (max-width: $xl) {
             margin-top: 50px;
             .row-background {
-                height: auto;
                 padding: 50px 30px 100px 30px;
+                height: auto;
                 &::after {
-                    content: "";
-                    position: absolute;
                     bottom: 12px;
                     left: 50%;
-                    transform: translateX(-50%) rotate(45deg);
                     width: 60px;
                     height: 60px;
                 }
                 .bottom-item-move-2 {
-                    position: absolute;
                     bottom: -30px;
                     left: 50%;
-                    transform: translate(-50%, 0%) rotate(45deg);
                     width: 40px;
                     height: 40px;
-                    animation: rhombus-fp 4s infinite ease-in-out;
                 }
             }
             &__content {

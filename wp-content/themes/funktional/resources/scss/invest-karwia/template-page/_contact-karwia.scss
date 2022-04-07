@@ -1,8 +1,8 @@
 .ek-contact {
     
     .sec1-contact-karwia {
-        padding-top: 560px;
         position: relative;
+        padding-top: 560px;
         width: 100%;
         height: auto;
         background-image: url("../img/invest-karwia/contact/background-contact-form1.png");
@@ -33,18 +33,17 @@
         &__sales-box {
             .person-sales {
                 margin-top: 80px;
-                display: flex;
+                padding: 0 0 0 30px;
                 width: 100%;
                 height: auto;
-                padding: 0 0 0 30px;
+                display: flex;
                 border: 1px solid $Sand-Medium;
                 background-color: $White;
-
                 &__photo {
                     margin-top: -30px;
+                    margin-bottom: 20px;
                     height: 235px;
                     width: 205px;
-                    margin-bottom: 20px;
                     img {
                         width: 100%;
                         height: 100%;
@@ -53,17 +52,17 @@
                     }
                 }
                 .person-info {
+                    padding: 45px 20px 40px 35px;
                     display: flex;
                     flex-direction: column;
                     justify-content: flex-start;
-                    padding: 45px 20px 40px 35px;
                     &__email {
                         margin-top: 12px;
+                        margin-bottom: 3px;
                         display: flex;
                         justify-content: flex-start;
                         align-items: center;
                         gap: 18px;
-                        margin-bottom: 3px;
                         img {
                             width: fit-content;
                             height: fit-content;
@@ -102,17 +101,17 @@
         }
         .person-service {
             margin-top: 80px;
-            display: flex;
+            padding: 0 0 0 30px;
             width: 100%;
             height: auto;
-            padding: 0 0 0 30px;
+            display: flex;
             border: 1px solid $Sand-Medium;
             background-color: $White;
             &__photo {
                 margin-top: -30px;
+                margin-bottom: 20px;
                 height: 235px;
                 width: 205px;
-                margin-bottom: 20px;
                 img {
                     width: 100%;
                     height: 100%;
@@ -121,17 +120,17 @@
                 }
             }
             .person-info {
+                padding: 45px 20px 40px 35px;
                 display: flex;
                 flex-direction: column;
                 justify-content: flex-start;
-                padding: 45px 20px 40px 35px;
                 &__email {
                     margin-top: 20px;
+                    margin-bottom: 3px;
                     display: flex;
                     justify-content: flex-start;
                     align-items: center;
                     gap: 18px;
-                    margin-bottom: 3px;
                     img {
                         width: fit-content;
                         height: fit-content;
@@ -269,8 +268,9 @@
     }
 
     .sec2-about-company {
-        padding-top: 650px;
         position: relative;
+        margin-top: -120px;
+        padding-top: 650px;
         width: 100%;
         height: auto;
         background: $Sand-Tint
@@ -278,16 +278,15 @@
         background-position: center;
         background-repeat: no-repeat;
         background-position-y: top;
-        margin-top: -120px;
         .ek-right-karwia {
             position: absolute;
             bottom: -39px;
             left: 29%;
             transform: translateX(-50%);
-            background: url("../img/invest-karwia/home-page/rhombus-hp-s2.svg");
-            background-size: cover;
             width: 160px;
             height: 160px;
+            background: url("../img/invest-karwia/home-page/rhombus-hp-s2.svg");
+            background-size: cover;
             z-index: 1;
         }
         &__content {
@@ -376,6 +375,7 @@
     .sec3-contact-number {
         position: relative;
         margin-top: 0px;
+        padding-top: 80px;
         width: 100%;
         height: auto;
         background: $Sand-Tint
@@ -383,29 +383,27 @@
         background-position: center;
         background-repeat: no-repeat;
         background-position-y: bottom;
-        padding-top: 80px;
        .left-rotate-item-1 {
             position: absolute;
             bottom: -77px;
             left: 50%;
             transform: translateX(-50%);
-            background: url("../img/invest-karwia/home-page/Element-Circle-footer.svg");
-            background-size: contain;
             width: 160px;
             height: 160px;
+            background: url("../img/invest-karwia/home-page/Element-Circle-footer.svg");
+            background-size: contain;
         }
         &__box {
+            margin-bottom: 600px;
             width: 100%;
-            margin-bottom: 170px;
             display: flex;
             flex-direction: column;
             align-items: center;
             gap: 80px;
-            margin-bottom: 600px;
             .box-row {
+                width: 85%;
                 display: flex;
                 justify-content: space-between;
-                width: 85%;
                 &__info {
                     display: flex;
                     flex-direction: column;
@@ -415,7 +413,6 @@
                         justify-content: center;
                         align-items: flex-end;
                         gap: 10px;
-
                         .f-h4 {
                             font-size: 40px;
                             line-height: 80px;
@@ -484,47 +481,47 @@
     }
 
     .sec4-testimonial {
-        margin-top: 120px;
         position: relative;
+        margin-top: 120px;
         width: 100%;
         min-height: 540px;
         background: linear-gradient(to left, $Blue-Tint 70%, transparent 70%);
         &__content {
-            display: flex;
-            min-height: 430px;
-            margin: 55px 0 55px 45px;
-            border: 1px solid $Sand-Light;
             position: relative;
+            margin: 55px 0 55px 45px;
+            min-height: 430px;
+            display: flex;
+            border: 1px solid $Sand-Light;
             &::after {
                 content: "";
                 position: absolute;
                 top: -76px;
                 left: 29px;
                 transform: translateX(-50%);
+                width: 120px;
+                height: 88px;
                 background: $White
                     url("../img/invest-karwia/home-page/icon1.svg");
                 background-size: contain;
-                width: 120px;
-                height: 88px;
                 border: 35px solid $White;
             }
             &__box {
+                position: relative;
+                top: -35px;
                 margin-left: 45px;
+                min-height: 430px;
                 display: flex;
                 flex-direction: column;
                 justify-content: center;
-                min-height: 430px;
-                position: relative;
-                top: -35px;
             }
             &__entry {
                 left: 3vw;
                 width: 42vw;
                 .swiper-slide {
+                    min-height: 430px;
                     display: flex;
                     flex-direction: column;
                     justify-content: center;
-                    min-height: 430px;
                     .testimonial-text {
                         margin-top: 20px;
                         margin-right: 20px;
@@ -542,34 +539,33 @@
                 height: 100%;
                 .swiper-pagination {
                     position: relative;
-                    height: 20px;
-                    width: auto;
                     left: 0;
                     bottom: 60px;
+                    margin-left: 50px;
+                    padding: 0 35px 0 15px;
+                    height: 100%;
+                    width: auto;
                     display: flex;
                     align-items: flex-end;
                     gap: 18px;
-                    height: 100%;
-                    padding: 0 35px 0 15px;
-                    margin-left: 50px;
                     .swiper-pagination-bullet {
-                        background-color: $Sand-Light;
+                        margin: 0;
                         width: 8px;
                         height: 8px;
+                        background-color: $Sand-Light;
                         transform: rotate(45deg) translateY(-2px);
                         border-radius: 0;
                         opacity: 1;
-                        margin: 0;
                         box-shadow: 0px 0px 0px 2px #ffffff;
                     }
                     .swiper-pagination-bullet-active {
-                        background-color: $Blue-Dark;
+                        margin: 0;
                         width: 11px;
                         height: 11px;
                         transform: rotate(45deg);
+                        background-color: $Blue-Dark;
                         border-radius: 0;
                         opacity: 1;
-                        margin: 0;
                         box-shadow: 0px 0px 0px 2px #ffffff;
                     }
                     &::before {
@@ -595,11 +591,11 @@
                     background-position: center;
                     transition: all 0.2s;
                     &:hover {
+                        width: 60px;
+                        height: 60px;
                         border: 1px solid $Blue-Dark;
                         background: #d6b2922c
                             url("../img/invest-karwia/home-page/arrow-next-testimonial.svg");
-                        width: 60px;
-                        height: 60px;
                         background-position: center;
                     }
                     &:after {
@@ -630,8 +626,8 @@
             }
         }
         @media (max-width: $lg) {
-            margin-top: 60px;
             position: relative;
+            margin-top: 60px;
             width: 100%;
             min-height: auto;
             background: linear-gradient(
@@ -640,28 +636,22 @@
                 $Blue-Tint 160px
             );
             &__content {
+                margin: 0 0 15px 0;
                 display: flex;
                 flex-direction: column;
                 min-height: auto;
-                margin: 0 0 15px 0;
                 &::after {
-                    content: "";
-                    position: absolute;
                     top: -39px;
                     left: 24px;
-                    transform: translateX(-50%);
-                    background: $White
-                        url("../img/invest-karwia/home-page/icon1.svg");
-                    background-size: cover;
                     width: 54px;
                     height: 40px;
                     border: 15px solid #ffffff;
                 }
                 &__box {
-                    margin-left: 15px;
-                    min-height: auto;
                     top: 0;
                     margin-top: 30px;
+                    margin-left: 15px;
+                    min-height: auto;
                     .f-testimonial:first-child {
                         font-size: 50px;
                         line-height: 60px;
@@ -695,23 +685,23 @@
                         bottom: 45px;
                         margin-left: 15px;
                         .swiper-pagination-bullet {
-                            background-color: $Sand-Light;
+                            margin: 0;
                             width: 8px;
                             height: 8px;
                             transform: rotate(45deg) translateY(-2px);
+                            background-color: $Sand-Light;
                             border-radius: 0;
                             opacity: 1;
-                            margin: 0;
                             box-shadow: 0px 0px 0px 2px $Blue-Tint;
                         }
                         .swiper-pagination-bullet-active {
-                            background-color: $Blue-Dark;
+                            margin: 0;
                             width: 11px;
                             height: 11px;
                             transform: rotate(45deg);
+                            background-color: $Blue-Dark;
                             border-radius: 0;
                             opacity: 1;
-                            margin: 0;
                             box-shadow: 0px 0px 0px 2px $Blue-Tint;
                         }
                     }
@@ -728,11 +718,11 @@
                         background-position: center;
                         transition: all 0.2s;
                         &:hover {
+                            width: 60px;
+                            height: 60px;
                             border: 1px solid $Blue-Dark;
                             background: #d6b2922c
                                 url("../img/invest-karwia/home-page/arrow-next-testimonial.svg");
-                            width: 60px;
-                            height: 60px;
                             background-position: center;
                         }
                         &:after {
@@ -752,9 +742,9 @@
             height: 545px;
         }
         &__content {
+            height: 545px;
             display: flex;
             flex-direction: column;
-            height: 545px;
             .locat-logo {
                 width: fit-content;
             }
@@ -804,8 +794,8 @@
         }
         @media (max-width: $xl) {
             &__content {
-                height: auto;
                 margin-top: 50px;
+                height: auto;
                 .locat-info {
                     &__data-firm {
                         width: 49%;

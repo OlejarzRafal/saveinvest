@@ -1,22 +1,22 @@
 .ek-gallery {
     .ek-gallery-karwia {
         position: relative;
+        padding-top: 30px;
+        margin-bottom: 110px;
         min-height: 936px;
         width: 100%;
         background: url(../img/invest-karwia/gallery/background-contact-karwia.png);
         background-size: auto;
         background-repeat: no-repeat;
         background-position: center top;
-        padding-top: 30px;
-        margin-bottom: 110px;
         display: flex;
         justify-content: center;
         z-index: 999;
         &__title {
             margin-top: 635px;
+            width: 100%;
             display: flex;
             justify-content: center;
-            width: 100%;
             h5 {
                 width: 67%;
                 text-align: center;
@@ -24,26 +24,26 @@
         }
         .category {
             margin-top: 60px;
+            width: 100%;
             display: flex;
             flex-direction: row;
             justify-content: center;
             align-items: center;
-            width: 100%;
             gap: 90px;
             &__item {
+                position: relative;
+                padding: 16px 20px;
                 display: flex;
                 flex-direction: row;
                 justify-content: center;
                 align-items: center;
-                position: relative;
                 background-color: transparent;
-                padding: 16px 20px;
                 border: 1px solid #d6b29200;
                 cursor: pointer;
                 transition: all 0.3s;
                 span {
-                    display: block;
                     position: relative;
+                    display: block;
                     z-index: 999;
                     background-color: transparent;
                     font-family: $inter;
@@ -74,7 +74,6 @@
             gap: 20px;
             &__item {
                 position: relative;
-                // max-height: 335px;
                 height: 18vw;
                 cursor: pointer;
                 display: none;
@@ -89,26 +88,26 @@
                     &:after {
                         content: "";
                         position: absolute;
+                        left: 50%;
+                        top: 50%;
+                        transform: translate(-50%, -50%);
                         width: 81px;
                         height: 81px;
                         background: url(../img/invest-karwia/gallery/icon-gallery-plus.svg);
                         background-repeat: no-repeat;
                         background-size: auto;
-                        transition: all 0.2s;
-                        left: 50%;
-                        top: 50%;
-                        transform: translate(-50%, -50%);
                         opacity: 0;
-                        z-index: 9;
                         pointer-events: none;
+                        transition: all 0.2s;
+                        z-index: 9;
                     }
                     &:before {
                         content: "";
                         position: absolute;
-                        width: 100%;
-                        height: 100%;
                         left: 0;
                         top: 0;
+                        width: 100%;
+                        height: 100%;
                         background: #01161b;
                         opacity: 0;
                         transition: 0.2s;
@@ -135,18 +134,18 @@
                     &::before {
                         content: "";
                         position: absolute;
+                        left: 50%;
+                        top: 50%;
+                        transform: translate(-50%, -50%);
                         width: 42%;
                         height: 42%;
                         background: url(../img/invest-karwia/home-page/photo-move-play.svg);
                         background-repeat: no-repeat;
                         background-position: center;
                         background-size: contain;
-                        transition: all 0.2s;
-                        left: 50%;
-                        top: 50%;
-                        transform: translate(-50%, -50%);
-                        z-index: 9;
                         pointer-events: none;
+                        transition: all 0.2s;
+                        z-index: 9;
                     }
                     a {
                         position: relative;
@@ -155,10 +154,10 @@
                         &:before {
                             content: "";
                             position: absolute;
-                            width: 100%;
-                            height: 100%;
                             left: 0;
                             top: 0;
+                            width: 100%;
+                            height: 100%;
                             background: #01161b;
                             opacity: 0;
                             transition: 0.2s;
