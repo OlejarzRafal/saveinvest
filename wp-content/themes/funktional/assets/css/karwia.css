@@ -3672,8 +3672,8 @@ a:hover {
 .ek-frontpage .sec2-info__bottom__content .content-boxs:nth-child(1) .content-box::after {
   content: "";
   position: absolute;
-  bottom: -47%;
-  right: -21%;
+  bottom: -38%;
+  right: -24%;
   width: 80px;
   height: 80px;
   background: url("../img/invest-karwia/home-page/icon-plus-ph-sec2.svg");
@@ -3799,7 +3799,7 @@ a:hover {
     height: auto;
   }
   .ek-frontpage .sec2-info__bottom__content .content-boxs:nth-child(1) .content-box::after {
-    bottom: -39%;
+    bottom: -30%;
     right: -13%;
     width: 50px;
     height: 50px;
@@ -4830,7 +4830,7 @@ a:hover {
 .ek-about .header__content {
   position: relative;
   padding: 40px 70px 60px 60px;
-  top: 40px;
+  top: 50px;
   margin: 0px;
   background: #E5EBF0;
 }
@@ -5718,9 +5718,9 @@ a:hover {
 }
 .ek-localization .sec1-info-map__map .logo-karwia {
   position: relative;
-  top: 6%;
-  left: 14%;
-  width: 23%;
+  top: 7%;
+  left: 17%;
+  width: 15%;
   height: auto;
 }
 @media (max-width: 1199px) {
