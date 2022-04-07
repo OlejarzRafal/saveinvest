@@ -29,7 +29,6 @@ gulp.task('front-sass', () => {
         }))
         .pipe(autoprefixer())
         .pipe(minifyCss())
-        .pipe(concat('front.css'))
         .pipe(gulp.dest(distFolder + '/front/css'))
         .pipe(browserSync.stream());
 });
@@ -46,7 +45,6 @@ gulp.task('admin-sass', () => {
         }))
         .pipe(autoprefixer())
         .pipe(minifyCss())
-        .pipe(concat('admin.css'))
         .pipe(gulp.dest(distFolder + '/admin/css'))
         .pipe(browserSync.stream());
 });
@@ -91,16 +89,22 @@ gulp.task('serve', () => {
 });
 
 gulp.task('watch', () => {
-    const watch = [
-        srcFolder + 'admin/scss/**/*.scss',
+    const watchJs = [
         srcFolder + 'admin/js/**/*.js',
-        srcFolder + 'admin/templates/**/*.php',
-        srcFolder + 'front/scss/**/*.scss',
         srcFolder + 'front/js/**/*.js',
+    ];
+    const watchScss = [
+        srcFolder + 'admin/scss/**/*.scss',
+        srcFolder + 'front/scss/**/*.scss'
+    ];
+    const watchPhp = [
+        srcFolder + 'admin/templates/**/*.php',
         srcFolder + 'admin/front/**/*.php',
     ];
 
-    gulp.watch(watch, gulp.series('dev')).on('complete', browserSync.reload);
+    gulp.watch(watchJs, gulp.series('front-js', 'admin-js')).on('complete', browserSync.reload);
+    gulp.watch(watchScss, gulp.series('front-sass', 'admin-sass')).on('complete', browserSync.reload);
+    gulp.watch(watchPhp, browserSync.reload);
 });
 
 gulp.task('default', gulp.series('build', gulp.parallel('serve', 'watch')));

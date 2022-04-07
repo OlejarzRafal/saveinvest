@@ -44,8 +44,7 @@ class FunktionalPlots {
         this.plotsTableBody = $('.funktional-plots__table tbody');
         this.filtersForm = $('.funktional-plots__filters');
         this.rangeSliders = {};
-        this.timeout = setTimeout(() => {
-        });
+        this.timeout = setTimeout(() => {});
 
         this.initFilters(true);
         this.initEvents();
@@ -300,3 +299,4 @@ $(() => {
         new FunktionalPlots();
     }
 });
+

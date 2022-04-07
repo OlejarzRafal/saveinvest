@@ -9,6 +9,7 @@ Version: 1.0.0
 */
 
 require_once(__DIR__ . '/includes/plots-admin.php');
+require_once(__DIR__ . '/includes/plots-importer.php');
 require_once(__DIR__ . '/includes/plots-front.php');
 
 class FunktionalPlots
@@ -165,5 +166,3 @@ class FunktionalPlots
 }
 
 $funktionalPlots = new FunktionalPlots();
-
-
