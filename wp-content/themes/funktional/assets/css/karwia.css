@@ -7243,11 +7243,16 @@ a:hover {
 }
 
 .plots-list {
-  margin-top: 120px;
+  margin-top: 80px;
 }
 @media (max-width: 991px) {
   .plots-list {
     margin-top: 80px;
+  }
+}
+@media (max-width: 767px) {
+  .plots-list {
+    margin-top: 30px;
   }
 }
 .plots-list__header__img {
@@ -8346,14 +8351,18 @@ a:hover {
 
 @media (max-width: 1199px) {
   .osada-karwia-template-plot-pricing .plots-map {
-    magin-top: 80px;
+    margin-top: 80px;
   }
 }
-.osada-karwia-template-plot-pricing .plots-map [data-plots-sector] {
-  height: 1043px;
+.osada-karwia-template-plot-pricing .plots-map .plot-sectors [data-plots-sectors],
+.osada-karwia-template-plot-pricing .plots-map .plot-sectors [data-plots-sector],
+.osada-karwia-template-plot-pricing .plots-map .plot-sector [data-plots-sectors],
+.osada-karwia-template-plot-pricing .plots-map .plot-sector [data-plots-sector] {
   position: relative;
 }
-.osada-karwia-template-plot-pricing .plots-map__img {
+.osada-karwia-template-plot-pricing .plots-map .plot-sectors__img,
+.osada-karwia-template-plot-pricing .plots-map .plot-sector__img {
+  position: relative;
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
@@ -8361,60 +8370,163 @@ a:hover {
   -o-object-position: right;
      object-position: right;
 }
-.osada-karwia-template-plot-pricing .plots-map__svg {
-  position: absolute !important;
-  width: 1920px;
+.osada-karwia-template-plot-pricing .plots-map .plot-sectors__svg,
+.osada-karwia-template-plot-pricing .plots-map .plot-sector__svg {
+  position: absolute;
+  z-index: 9;
+  max-width: 100%;
+  top: 0;
   right: 0;
 }
+.osada-karwia-template-plot-pricing .plots-map .plot-sectors__svg path,
+.osada-karwia-template-plot-pricing .plots-map .plot-sector__svg path {
+  opacity: 0;
+}
 @media (max-width: 767px) {
-  .osada-karwia-template-plot-pricing .plots-map__desktop {
+  .osada-karwia-template-plot-pricing .plots-map .plot-sectors__desktop,
+.osada-karwia-template-plot-pricing .plots-map .plot-sector__desktop {
     display: none;
   }
 }
-.osada-karwia-template-plot-pricing .plots-map__mobile {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  width: 768px;
+.osada-karwia-template-plot-pricing .plots-map .plot-sectors__mobile,
+.osada-karwia-template-plot-pricing .plots-map .plot-sector__mobile {
+  position: relative;
+  display: none;
 }
-.osada-karwia-template-plot-pricing .plots-map__mobile__info {
+@media (max-width: 767px) {
+  .osada-karwia-template-plot-pricing .plots-map .plot-sectors__mobile,
+.osada-karwia-template-plot-pricing .plots-map .plot-sector__mobile {
+    display: block;
+  }
+}
+.osada-karwia-template-plot-pricing .plots-map .plot-sectors__backMainMap [data-plots-back-to-sectors],
+.osada-karwia-template-plot-pricing .plots-map .plot-sector__backMainMap [data-plots-back-to-sectors] {
   position: absolute;
-  left: 15px;
-  top: 90px;
-  padding: 10px 50px 10px 20px;
-  background-color: #fff;
-  color: #0b345a;
+  top: 25%;
+  left: 0;
+  z-index: 9999999;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+  padding: 36px 36px 35px 8%;
+  letter-spacing: 0.3em;
   font-weight: 600;
+  line-height: normal;
+  background: rgba(11, 52, 90, 0.8);
+}
+.osada-karwia-template-plot-pricing .plots-map .plot-sectors__backMainMap [data-plots-back-to-sectors] p,
+.osada-karwia-template-plot-pricing .plots-map .plot-sector__backMainMap [data-plots-back-to-sectors] p {
+  color: white;
+  position: relative;
+}
+.osada-karwia-template-plot-pricing .plots-map .plot-sectors__backMainMap [data-plots-back-to-sectors] p:before,
+.osada-karwia-template-plot-pricing .plots-map .plot-sector__backMainMap [data-plots-back-to-sectors] p:before {
+  content: "";
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  background: url("../img/invest-karwia/price/arrow-prices.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  left: -40px;
+  top: 3px;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+}
+.osada-karwia-template-plot-pricing .plots-map .plot-sectors__backMainMap [data-plots-back-to-sectors]:hover,
+.osada-karwia-template-plot-pricing .plots-map .plot-sector__backMainMap [data-plots-back-to-sectors]:hover {
+  cursor: pointer;
+  background-color: #0b345a;
+}
+.osada-karwia-template-plot-pricing .plots-map .plot-sectors__backMainMap [data-plots-back-to-sectors]:hover p:before,
+.osada-karwia-template-plot-pricing .plots-map .plot-sector__backMainMap [data-plots-back-to-sectors]:hover p:before {
+  left: -60px;
+}
+.osada-karwia-template-plot-pricing .plots-map .plot-sectors__name,
+.osada-karwia-template-plot-pricing .plots-map .plot-sector__name {
+  background: linear-gradient(358deg, #1951a4 0%, rgba(25, 81, 164, 0) 70%);
+  z-index: 9999999;
+  position: absolute;
+  left: 0;
+  height: 400px;
+  width: 100%;
+  bottom: 0px;
+  pointer-events: none;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  background: rgba(255, 255, 255, 0.89) url(../img/invest-kladno/ico/arrow-right-grant.png);
-  background-position: 95%;
-  background-repeat: no-repeat;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  padding-bottom: 30px;
 }
-.osada-karwia-template-plot-pricing .plots-map__mobile__info img {
-  margin-left: 20px;
+.osada-karwia-template-plot-pricing .plots-map .plot-sectors__name h2,
+.osada-karwia-template-plot-pricing .plots-map .plot-sector__name h2 {
+  color: white;
 }
-@media (min-width: 768px) {
-  .osada-karwia-template-plot-pricing .plots-map__mobile {
-    display: none;
+@media (max-width: 1399px) {
+  .osada-karwia-template-plot-pricing .plots-map .plot-sectors__backMainMap [data-plots-back-to-sectors],
+.osada-karwia-template-plot-pricing .plots-map .plot-sector__backMainMap [data-plots-back-to-sectors] {
+    padding: 20px 20px 20px 80px;
+  }
+  .osada-karwia-template-plot-pricing .plots-map .plot-sectors__backMainMap [data-plots-back-to-sectors] p,
+.osada-karwia-template-plot-pricing .plots-map .plot-sector__backMainMap [data-plots-back-to-sectors] p {
+    font-size: 14px;
+  }
+  .osada-karwia-template-plot-pricing .plots-map .plot-sectors__backMainMap [data-plots-back-to-sectors] p:before,
+.osada-karwia-template-plot-pricing .plots-map .plot-sector__backMainMap [data-plots-back-to-sectors] p:before {
+    left: -40px;
+    top: 0;
+  }
+  .osada-karwia-template-plot-pricing .plots-map .plot-sectors__backMainMap [data-plots-back-to-sectors]:hover p:before,
+.osada-karwia-template-plot-pricing .plots-map .plot-sector__backMainMap [data-plots-back-to-sectors]:hover p:before {
+    left: -50px;
+  }
+}
+@media (max-width: 992px) {
+  .osada-karwia-template-plot-pricing .plots-map .plot-sectors__backMainMap [data-plots-back-to-sectors],
+.osada-karwia-template-plot-pricing .plots-map .plot-sector__backMainMap [data-plots-back-to-sectors] {
+    padding: 10px 10px 10px 40px;
+    letter-spacing: 0.2px;
+    top: 60px;
+  }
+  .osada-karwia-template-plot-pricing .plots-map .plot-sectors__backMainMap [data-plots-back-to-sectors] p,
+.osada-karwia-template-plot-pricing .plots-map .plot-sector__backMainMap [data-plots-back-to-sectors] p {
+    font-size: 12px;
+  }
+  .osada-karwia-template-plot-pricing .plots-map .plot-sectors__backMainMap [data-plots-back-to-sectors] p:before,
+.osada-karwia-template-plot-pricing .plots-map .plot-sector__backMainMap [data-plots-back-to-sectors] p:before {
+    left: -35px;
+    top: -1px;
+  }
+  .osada-karwia-template-plot-pricing .plots-map .plot-sectors__backMainMap [data-plots-back-to-sectors]:hover p:before,
+.osada-karwia-template-plot-pricing .plots-map .plot-sector__backMainMap [data-plots-back-to-sectors]:hover p:before {
+    left: -35px;
+  }
+  .osada-karwia-template-plot-pricing .plots-map .plot-sectors__name,
+.osada-karwia-template-plot-pricing .plots-map .plot-sector__name {
+    background: none;
   }
 }
 @media (max-width: 767px) {
-  .osada-karwia-template-plot-pricing .plots-map [data-plots-sector] {
-    height: 945px;
+  .osada-karwia-template-plot-pricing .plots-map .plot-sectors [data-plots-sector],
+.osada-karwia-template-plot-pricing .plots-map .plot-sectors [data-plots-sectors],
+.osada-karwia-template-plot-pricing .plots-map .plot-sector [data-plots-sector],
+.osada-karwia-template-plot-pricing .plots-map .plot-sector [data-plots-sectors] {
     overflow-x: scroll;
   }
-  .osada-karwia-template-plot-pricing .plots-map__img {
-    position: relative !important;
+  .osada-karwia-template-plot-pricing .plots-map .plot-sectors__all__mobile,
+.osada-karwia-template-plot-pricing .plots-map .plot-sector__all__mobile {
+    height: 669px;
+    width: 768px;
   }
-  .osada-karwia-template-plot-pricing .plots-map__svg {
-    width: 768px !important;
-    height: 945px;
-    right: auto;
+  .osada-karwia-template-plot-pricing .plots-map .plot-sectors__single__mobile,
+.osada-karwia-template-plot-pricing .plots-map .plot-sector__single__mobile {
+    height: 785px;
+    width: 768px;
+  }
+  .osada-karwia-template-plot-pricing .plots-map .plot-sectors__svg path,
+.osada-karwia-template-plot-pricing .plots-map .plot-sector__svg path {
+    opacity: 0.9;
   }
 }
 

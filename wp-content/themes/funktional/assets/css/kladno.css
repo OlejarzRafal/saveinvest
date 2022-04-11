@@ -7804,38 +7804,41 @@ a:hover {
 }
 @media (max-width: 1199px) {
   .ostoja-kladno-template-plot-pricing .plots-map {
-    magin-top: 80px;
+    margin-top: 80px;
   }
 }
-.ostoja-kladno-template-plot-pricing .plots-map [data-plots-sector] {
+.ostoja-kladno-template-plot-pricing .plots-map .plot-sectors [data-plots-sector] {
   height: 1043px;
   position: relative;
 }
-.ostoja-kladno-template-plot-pricing .plots-map__img {
+.ostoja-kladno-template-plot-pricing .plots-map .plot-sectors__img {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
   -o-object-position: right;
      object-position: right;
+  position: absolute;
+  left: 0;
+  top: 0;
 }
-.ostoja-kladno-template-plot-pricing .plots-map__svg {
+.ostoja-kladno-template-plot-pricing .plots-map .plot-sectors__svg {
   position: absolute !important;
   width: 1920px;
   right: 0;
 }
 @media (max-width: 767px) {
-  .ostoja-kladno-template-plot-pricing .plots-map__desktop {
+  .ostoja-kladno-template-plot-pricing .plots-map .plot-sectors__desktop {
     display: none;
   }
 }
-.ostoja-kladno-template-plot-pricing .plots-map__mobile {
+.ostoja-kladno-template-plot-pricing .plots-map .plot-sectors__mobile {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   width: 768px;
 }
-.ostoja-kladno-template-plot-pricing .plots-map__mobile__info {
+.ostoja-kladno-template-plot-pricing .plots-map .plot-sectors__mobile__info {
   position: absolute;
   left: 15px;
   top: 90px;
@@ -7853,23 +7856,23 @@ a:hover {
   background-position: 95%;
   background-repeat: no-repeat;
 }
-.ostoja-kladno-template-plot-pricing .plots-map__mobile__info img {
+.ostoja-kladno-template-plot-pricing .plots-map .plot-sectors__mobile__info img {
   margin-left: 20px;
 }
 @media (min-width: 768px) {
-  .ostoja-kladno-template-plot-pricing .plots-map__mobile {
+  .ostoja-kladno-template-plot-pricing .plots-map .plot-sectors__mobile {
     display: none;
   }
 }
 @media (max-width: 767px) {
-  .ostoja-kladno-template-plot-pricing .plots-map [data-plots-sector] {
-    height: 945px;
+  .ostoja-kladno-template-plot-pricing .plots-map .plot-sectors [data-plots-sector] {
+    height: 962px;
     overflow-x: scroll;
   }
-  .ostoja-kladno-template-plot-pricing .plots-map__img {
+  .ostoja-kladno-template-plot-pricing .plots-map .plot-sectors__img {
     position: relative !important;
   }
-  .ostoja-kladno-template-plot-pricing .plots-map__svg {
+  .ostoja-kladno-template-plot-pricing .plots-map .plot-sectors__svg {
     width: 768px !important;
     height: 945px;
     right: auto;

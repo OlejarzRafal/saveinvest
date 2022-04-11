@@ -15,7 +15,7 @@
   \*****************************************************/
 /***/ (function() {
 
-eval("$(document).ready(function () {//  $('body').bind('cut copy paste', function (e) {\n  //     e.preventDefault();\n  //  });\n  //  document.addEventListener('contextmenu', event => event.preventDefault());\n});\n\n//# sourceURL=webpack://webpack/./resources/js/all-page/disabled-copy-text.js?");
+eval("$(document).ready(function () {\n  $('body').bind('cut copy paste', function (e) {\n    e.preventDefault();\n  }); // document.addEventListener('contextmenu', event => event.preventDefault());\n});\n\n//# sourceURL=webpack://webpack/./resources/js/all-page/disabled-copy-text.js?");
 
 /***/ }),
 

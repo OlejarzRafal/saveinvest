@@ -48,7 +48,7 @@ $plotsAcfArray = array(
             ),
             'choices' => array(
                 '' => '',
-                // 'A' => 'A',
+                'A' => 'A',
                 // 'B' => 'B',
                 // 'C' => 'C',
                 // 'D' => 'D',
@@ -112,10 +112,10 @@ $plotsAcfArray = array(
                 'id' => '',
             ),
             'choices' => array(
-                // 'budowlana' => 'Budowlana',
-                // 'rolna-rekreacyjna' => 'Rolna / Rekreacyjna',
-                // 'rolna' => 'Rolna',
-                // 'rekreacyjna' => 'Rekreacyjna'
+                'budowlana' => 'Budowlana',
+                'rolna-rekreacyjna' => 'Rolna / Rekreacyjna',
+                'rolna' => 'Rolna',
+                'rekreacyjna' => 'Rekreacyjna',
                 'rolna-pod-domek-na-zgloszenie' => 'Rekreacyjna/pod domek na zgłoszenie',
             ),
             'return_format' => 'array',

@@ -99,18 +99,44 @@ $PlotsFront->getScriptsAndStyles('Osada Karwia');
     </div>
     <!-- END MODAL -->
 
-    <!-- Dla sektorów -->
-    <div data-plots-sector>
-        <div class="plots-map__desktop">
-            <img class="plots-map__img" src="<?= get_theme_file_uri('/investitions/osada-karwia/assets/sectors/kladno-all-desktop.jpg') ?>">
-            <?= file_get_contents(get_theme_file_path('/investitions/osada-karwia/assets/sectors/kladno-all-desktop.svg')) ?>
+    <!-- FOR SECTORS -->
+    <div class="plot-sectors">
+        <!-- ALL -->
+        <div class="plot-sectors__all">
+            <div data-plots-sectors>
+                <div class="plot-sectors__desktop">
+                    <img class="plot-sectors__img" src="<?= get_theme_file_uri('/investitions/osada-karwia/assets/sectors/desktop/All-desktop.png') ?>">
+                    <?= file_get_contents(get_theme_file_path('/investitions/osada-karwia/assets/sectors/desktop/All-desktop.svg')) ?>
+                </div>
+                <div class="plot-sectors__mobile  plot-sectors__all__mobile">
+                    <img class="plot-sectors__img" src="<?= get_theme_file_uri('/investitions/osada-karwia/assets/sectors/mobile/All-mobile.png') ?>">
+                    <?= file_get_contents(get_theme_file_path('/investitions/osada-karwia/assets/sectors/mobile/All-mobile.svg')) ?>
+                </div>
+            </div>
         </div>
-        <div class="plots-map__mobile">
-            <img class="plots-map__img" src="<?= get_theme_file_uri('/investitions/osada-karwia/assets/sectors/kladno-all-mobile.png') ?>">
-            <?= file_get_contents(get_theme_file_path('/investitions/osada-karwia/assets/sectors/kladno-all-mobile.svg')) ?>
-            <div class="plots-map__mobile__info">
-                Przesuń mapę w bok, <br>
-                aby zobaczyć więcej działek
+        <!-- SINGLE -->
+        <div class="plot-sector__single">
+            <div data-plots-sector="A">
+                <div class="plot-sectors__desktop">
+                    <img class="plot-sectors__img " src="<?= get_theme_file_uri('/investitions/osada-karwia/assets/sectors/desktop/A-desktop.png') ?>">
+                    <?= file_get_contents(get_theme_file_path('/investitions/osada-karwia/assets/sectors/desktop/A-desktop.svg')) ?>
+                </div>
+                <div class="plot-sectors__mobile plot-sectors__single__mobile">
+                    <img class="plot-sectors__img" src="<?= get_theme_file_uri('/investitions/osada-karwia/assets/sectors/mobile/A-mobile.png') ?>">
+                    <?= file_get_contents(get_theme_file_path('/investitions/osada-karwia/assets/sectors/mobile/A-mobile.svg')) ?>
+                </div>
+                
+                <div class="plot-sectors__backMainMap">
+                    <div data-plots-back-to-sectors>
+                        <p>WRÓĆ DO MAPY SEKTORÓW</p>
+                    </div>
+                </div>
+                <div class="plot-sectors__name">
+                    <div class="container">
+                        <h2 class="f-h2">Sektor A</h2>
+                    </div>
+                </div>
+
             </div>
         </div>
     </div>

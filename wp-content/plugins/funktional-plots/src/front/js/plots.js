@@ -210,30 +210,50 @@ class FunktionalPlotsMap {
         });
     }
 
+    // setPlotsStatus() {
+    //     window.FunktionalPlots.forEach((plot) => {
+    //         let plotEl;
+    //         if (plot.sector && plot.sector.value && this.sector && this.sector.length && this.sector.attr('data-plots-sector')) {
+    //             const sectorEl = $(`[data-plots-sector="${plot.sector.value}"]`);
+    //             if (sectorEl && sectorEl.length) {
+    //                 plotEl = sectorEl.find(`[data-plots-plot="${plot.plotNr}"]`)
+    //             } else {
+    //                 console.warn('sector element for plot not found! Plot data: ', plot);
+    //             }
+    //         } else if (this.sector) {
+    //             plotEl = $(this.sector).find(`[data-plots-plot="${plot.plotNr}"]`);
+    //         }
+
+    //         if (plotEl && plotEl.length) {
+    //             plotEl.addClass(`plot-status--${plot.status.value}`);
+    //         } else {
+    //             console.warn('plot element not found! Plot data: ', plot);
+    //         }
+    //     })
+    // }
     setPlotsStatus() {
         window.FunktionalPlots.forEach((plot) => {
             let plotEl;
 
-            if (plot.sector && plot.sector.value && this.sector && this.sector.length && this.sector.attr('data-plots-sector')) {
+            if (plot.sector && plot.sector.value) {
                 const sectorEl = $(`[data-plots-sector="${plot.sector.value}"]`);
 
                 if (sectorEl && sectorEl.length) {
                     plotEl = sectorEl.find(`[data-plots-plot="${plot.plotNr}"]`)
                 } else {
-                    console.warn('sector element for plot not found! Plot data: ', plot);
+                    console.log(`sector element for plot ${plot} not found!`);
                 }
             } else if (this.sector) {
-                plotEl = $(this.sector).find(`[data-plots-plot="${plot.plotNr}"]`);
+                plotEl = $(this.sector).find(`[data-plots-plot="${plot.plotNr}"]`)
             }
 
-            if (plotEl && plotEl.length) {
+            if(plotEl && plotEl.length) {
                 plotEl.addClass(`plot-status--${plot.status.value}`);
             } else {
-                console.warn('plot element not found! Plot data: ', plot);
+                console.log(`plot ${plot} element not found!`);
             }
         })
     }
-
     handleSelectSector(event) {
         const sector = $(event.currentTarget).attr('data-plots-sector-selector');
         const url = new URL(window.location.href);
