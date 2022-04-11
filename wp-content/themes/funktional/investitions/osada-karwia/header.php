@@ -20,7 +20,7 @@
     <!-- end preload -->
     <?php global $post; ?>
 
-    <nav class="karwia-nav <?php if ($post->ID ==1244  ) : ?> karwia-nav__home <?php endif; ?>">
+    <nav class="karwia-nav <?php if ($post->ID == 1220  ) : ?> karwia-nav__home <?php endif; ?>">
         <div class="container">
             <div class="row">
                 <div class="col-xl-12">

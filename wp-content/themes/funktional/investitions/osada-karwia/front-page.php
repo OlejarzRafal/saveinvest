@@ -337,7 +337,6 @@ get_template_part('investitions/osada-karwia/header');
                                     <?php while (have_rows('opinion_sec5_hp_karwia')) :
                                         the_row(); ?>
                                         <div class="swiper-slide">
-
                                             <?php if ($text_opinion_sec5_hp_karwia = get_sub_field('text_opinion_sec5_hp_karwia')) : ?>
                                                 <div class="testimonial-text">
                                                     <p class="text-main"><?php echo $text_opinion_sec5_hp_karwia; ?></p>
@@ -348,7 +347,6 @@ get_template_part('investitions/osada-karwia/header');
                                                     <p class="text-main text-main--fw700"><?php echo $name_opinion_sec5_hp_karwia; ?></p>
                                                 </div>
                                             <?php endif; ?>
-
                                         </div>
                                     <?php endwhile; ?>
                                 <?php endif; ?>
