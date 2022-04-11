@@ -10,6 +10,7 @@ import "../js/invest-karwia/nav-scroll";
 import "../js/invest-karwia/scroll-rotate";
 import "../js/invest-karwia/hover-play";
 import "../js/invest-karwia/loader.js";
+import "../js/invest-karwia/plots.js";
 
 
 

@@ -1,6 +1,6 @@
 $(document).ready(function () {
     $('body').bind('cut copy paste', function (e) {
-       e.preventDefault();
+        e.preventDefault();
     });
-    document.addEventListener('contextmenu', event => event.preventDefault());
- });
+    // document.addEventListener('contextmenu', event => event.preventDefault());
+});
