@@ -99,21 +99,27 @@ $PlotsFront->getScriptsAndStyles('Ostoja Kładno');
     </div>
     <!-- END MODAL -->
 
-    <!-- Dla sektorów -->
-    <div data-plots-sector>
-        <div class="plots-map__desktop">
-            <img class="plots-map__img" src="<?= get_theme_file_uri('/investitions/ostoja-kladno/assets/sectors/kladno-all-desktop.jpg') ?>">
-            <?= file_get_contents(get_theme_file_path('/investitions/ostoja-kladno/assets/sectors/kladno-all-desktop.svg')) ?>
-        </div>
-        <div class="plots-map__mobile">
-            <img class="plots-map__img" src="<?= get_theme_file_uri('/investitions/ostoja-kladno/assets/sectors/kladno-all-mobile.png') ?>">
-            <?= file_get_contents(get_theme_file_path('/investitions/ostoja-kladno/assets/sectors/kladno-all-mobile.svg')) ?>
-            <div class="plots-map__mobile__info">
-                Przesuń mapę w bok, <br>
-                aby zobaczyć więcej działek
+    <!-- FOR SECTORS -->
+    <div class="plot-sectors">
+        <div class="plot-sectors__all">
+            <!-- ALL -->
+            <div data-plots-sector>
+                <div class="plot-sectors__desktop">
+                    <img class="plot-sectors__img" src="<?= get_theme_file_uri('/investitions/ostoja-kladno/assets/sectors/kladno-all-desktop.jpg') ?>">
+                    <?= file_get_contents(get_theme_file_path('/investitions/ostoja-kladno/assets/sectors/kladno-all-desktop.svg')) ?>
+                </div>
+                <div class="plot-sectors__mobile">
+                    <img class="plot-sectors__img" src="<?= get_theme_file_uri('/investitions/ostoja-kladno/assets/sectors/kladno-all-mobile.png') ?>">
+                    <?= file_get_contents(get_theme_file_path('/investitions/ostoja-kladno/assets/sectors/kladno-all-mobile.svg')) ?>
+                    <div class="plot-sectors__mobile__info">
+                        Przesuń mapę w bok, <br>
+                        aby zobaczyć więcej działek
+                    </div>
+                </div>
             </div>
         </div>
     </div>
+
 </section>
 
 <!-- ****************************** -->
