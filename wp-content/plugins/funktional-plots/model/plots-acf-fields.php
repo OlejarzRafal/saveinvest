@@ -113,9 +113,7 @@ $plotsAcfArray = array(
             ),
             'choices' => array(
                 'budowlana' => 'Budowlana',
-                'rolna-rekreacyjna' => 'Rolna / Rekreacyjna',
-                'rolna' => 'Rolna',
-                'rekreacyjna' => 'Rekreacyjna',
+                'w-trakcie-przeksztalcenia-rolna' => 'W trakcie przekształcenia/rolna',
                 'rolna-pod-domek-na-zgloszenie' => 'Rekreacyjna/pod domek na zgłoszenie',
             ),
             'return_format' => 'array',

@@ -96,6 +96,7 @@ class PlotDataElement {
 
         const investName = plotData.investition.label.toLowerCase().replace(' ', '-');
         const sectorUrlPath = plotData.sector && plotData.sector.value ? plotData.sector.value + '/' : '';
+        const sectorName = plotData.sector && plotData.sector.value ? plotData.sector.value : '';
         const investitionAssetsUrl = `${window.FunktionalGlobals.homeUrl}/Plots/${investName}/${sectorUrlPath}`
 
         element.find('[data-plot-info-image]').attr('src', `${investitionAssetsUrl}obrysy/${sectorUrlPath.replace('/', '-')}${plotData.plotNr}.png`);
@@ -106,7 +107,8 @@ class PlotDataElement {
         element.find('[data-plot-info-image-send-message]').click((e) => {
             e.preventDefault();
             $('.form-plots .form-plots-number').val(plotData.plotNr);
-            $('.form-plots-text-number').html("Działka " + "<span>" + plotData.plotNr + "</span>");
+            $('.form-plots .form-plots-sector').val(sectorName);
+            $('.form-plots-text-number').html("Działka " + "<span>" + sectorName + plotData.plotNr  + "</span>");
             $('.form-plots').show();
         })
         $('.form-plots-close').click((e) => {
