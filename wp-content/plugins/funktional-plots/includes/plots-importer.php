@@ -10,17 +10,17 @@ class PlotsImporter
 
     public function addPlotsImporterMenuItem()
     {
-        add_submenu_page(
-            'investitions',
-            'Importuj działki',
-            'Importuj działki',
-            'manage_options',
-            'import-plots',
-            function () {
-                require_once(__DIR__ . '/../src/admin/templates/importer.php');
-            },
-            100
-        );
+        // add_submenu_page(
+        //     'investitions',
+        //     'Importuj działki',
+        //     'Importuj działki',
+        //     'manage_options',
+        //     'import-plots',
+        //     function () {
+        //         require_once(__DIR__ . '/../src/admin/templates/importer.php');
+        //     },
+        //     100
+        // );
     }
 
     public function addImporterApiRoutes()

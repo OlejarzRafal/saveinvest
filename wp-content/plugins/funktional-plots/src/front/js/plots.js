@@ -96,6 +96,7 @@ class PlotDataElement {
 
         const investName = plotData.investition.label.toLowerCase().replace(' ', '-');
         const sectorUrlPath = plotData.sector && plotData.sector.value ? plotData.sector.value + '/' : '';
+        const sectorName = plotData.sector && plotData.sector.value ? plotData.sector.value : '';
         const investitionAssetsUrl = `${window.FunktionalGlobals.homeUrl}/Plots/${investName}/${sectorUrlPath}`
 
         element.find('[data-plot-info-image]').attr('src', `${investitionAssetsUrl}obrysy/${sectorUrlPath.replace('/', '-')}${plotData.plotNr}.png`);
@@ -106,7 +107,8 @@ class PlotDataElement {
         element.find('[data-plot-info-image-send-message]').click((e) => {
             e.preventDefault();
             $('.form-plots .form-plots-number').val(plotData.plotNr);
-            $('.form-plots-text-number').html("Działka " + "<span>" + plotData.plotNr + "</span>");
+            $('.form-plots .form-plots-sector').val(sectorName);
+            $('.form-plots-text-number').html("Działka " + "<span>" + sectorName + plotData.plotNr  + "</span>");
             $('.form-plots').show();
         })
         $('.form-plots-close').click((e) => {
@@ -210,30 +212,50 @@ class FunktionalPlotsMap {
         });
     }
 
+    // setPlotsStatus() {
+    //     window.FunktionalPlots.forEach((plot) => {
+    //         let plotEl;
+    //         if (plot.sector && plot.sector.value && this.sector && this.sector.length && this.sector.attr('data-plots-sector')) {
+    //             const sectorEl = $(`[data-plots-sector="${plot.sector.value}"]`);
+    //             if (sectorEl && sectorEl.length) {
+    //                 plotEl = sectorEl.find(`[data-plots-plot="${plot.plotNr}"]`)
+    //             } else {
+    //                 console.warn('sector element for plot not found! Plot data: ', plot);
+    //             }
+    //         } else if (this.sector) {
+    //             plotEl = $(this.sector).find(`[data-plots-plot="${plot.plotNr}"]`);
+    //         }
+
+    //         if (plotEl && plotEl.length) {
+    //             plotEl.addClass(`plot-status--${plot.status.value}`);
+    //         } else {
+    //             console.warn('plot element not found! Plot data: ', plot);
+    //         }
+    //     })
+    // }
     setPlotsStatus() {
         window.FunktionalPlots.forEach((plot) => {
             let plotEl;
 
-            if (plot.sector && plot.sector.value && this.sector && this.sector.length && this.sector.attr('data-plots-sector')) {
+            if (plot.sector && plot.sector.value) {
                 const sectorEl = $(`[data-plots-sector="${plot.sector.value}"]`);
 
                 if (sectorEl && sectorEl.length) {
                     plotEl = sectorEl.find(`[data-plots-plot="${plot.plotNr}"]`)
                 } else {
-                    console.warn('sector element for plot not found! Plot data: ', plot);
+                    console.log(`sector element for plot ${plot} not found!`);
                 }
             } else if (this.sector) {
-                plotEl = $(this.sector).find(`[data-plots-plot="${plot.plotNr}"]`);
+                plotEl = $(this.sector).find(`[data-plots-plot="${plot.plotNr}"]`)
             }
 
-            if (plotEl && plotEl.length) {
+            if(plotEl && plotEl.length) {
                 plotEl.addClass(`plot-status--${plot.status.value}`);
             } else {
-                console.warn('plot element not found! Plot data: ', plot);
+                console.log(`plot ${plot} element not found!`);
             }
         })
     }
-
     handleSelectSector(event) {
         const sector = $(event.currentTarget).attr('data-plots-sector-selector');
         const url = new URL(window.location.href);

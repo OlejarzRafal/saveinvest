@@ -77,7 +77,7 @@ get_template_part('investitions/osada-karwia/header');
                 </div>
                 <div class="offset-xl-1 col-xl-6">
                     <div class="sec1-info-map__map">
-                        <img class="logo-karwia" src=" <?php echo get_template_directory_uri(); ?>/assets/img/invest-karwia/localization/logo-top-map.svg" alt="mapa Polski" />
+                        <img class="logo-karwia" src=" <?php echo get_template_directory_uri(); ?>/assets/img/invest-karwia/home-page/logo-header.svg" alt="logo Karwia" />
                         <img src=" <?php echo get_template_directory_uri(); ?>/assets/img/invest-karwia/localization/mapa-polski.png" alt="mapa Polski" />
                     </div>
                 </div>

@@ -10,7 +10,7 @@ get_template_part('investitions/osada-karwia/header');
 <div class="ek-frontpage">
     <section class="header">
         <video autoplay="" playsinline="" muted="" loop="" id="myVideo" class="video-home-page video-home-page--desktop">
-            <source src="https://saveinvest.pl/wp-content/themes/funktional/assets/video/saveinvest-new-optimize.mp4" type="video/mp4">
+            <source src="<?php echo get_template_directory_uri(); ?>/assets/img/invest-karwia/video/Enklawa-Karwia_Video_AdaptiveLowBitrate.mp4" type="video/mp4">
         </video>
         <div class="rotate-item-1"></div>
     </section>
@@ -225,9 +225,8 @@ get_template_part('investitions/osada-karwia/header');
             </div>
         </div>
     </section>
-
+    
     <section class="sec4-links">
-
         <?php if (have_rows('first_box_sec4_hp_karwia')) : ?>
             <?php while (have_rows('first_box_sec4_hp_karwia')) :
                 the_row(); ?>
@@ -235,7 +234,7 @@ get_template_part('investitions/osada-karwia/header');
                     <?php if ($first_link_box_sec4_hp_karwia = get_sub_field('first_link_box_sec4_hp_karwia')) : ?>
                         <a href="<?php echo $first_link_box_sec4_hp_karwia; ?>" class="video__box video-first-box">
                             <video playsinline="" muted="" loop="" preload="true" id="myVideo" class="video__box__hover">
-                                <source src="https://saveinvest.pl/wp-content/themes/funktional/assets/video/saveinvest-new-optimize.mp4" type="video/mp4">
+                                <source src="<?php echo get_template_directory_uri(); ?>/assets/img/invest-karwia/video/Karwia_Video_Lokalizacja.mp4" type="video/mp4">
                             </video>
                             <?php if ($first_title_box_sec4_hp_karwia = get_sub_field('first_title_box_sec4_hp_karwia')) : ?>
                                 <div class="video__box__title">
@@ -266,8 +265,8 @@ get_template_part('investitions/osada-karwia/header');
                     <?php if ($second_link_box_sec4_hp_karwia = get_sub_field('second_link_box_sec4_hp_karwia')) : ?>
                         <a href="<?php echo $second_link_box_sec4_hp_karwia; ?>" class="video__box video-second-box">
                             <video playsinline="" muted="" loop="" preload="true" id="myVideo" class="video__box__hover">
-                                <source src="https://saveinvest.pl/wp-content/themes/funktional/assets/video/saveinvest-new-optimize.mp4" type="video/mp4">
-                            </video>
+                            <source src="<?php echo get_template_directory_uri(); ?>/assets/img/invest-karwia/video/Karwia_Video_Ceny-dzialek.mp4" type="video/mp4">
+                             </video>
                             <?php if ($second_title_box_sec4_hp_karwia = get_sub_field('second_title_box_sec4_hp_karwia')) : ?>
                                 <div class="video__box__title">
                                     <h2 class="f-h2 f-h2--white ">
@@ -297,7 +296,7 @@ get_template_part('investitions/osada-karwia/header');
                     <?php if ($last_link_box_sec4_hp_karwia = get_sub_field('last_link_box_sec4_hp_karwia')) : ?>
                         <a href="<?php echo $last_link_box_sec4_hp_karwia; ?>" class="video__box video-last-box">
                             <video playsinline="" muted="" loop="" preload="true" id="myVideo" class="video__box__hover">
-                                <source src="https://saveinvest.pl/wp-content/themes/funktional/assets/video/saveinvest-new-optimize.mp4" type="video/mp4">
+                            <source src="<?php echo get_template_directory_uri(); ?>/assets/img/invest-karwia/video/Karwia_Video_Finansowanie.mp4" type="video/mp4">
                             </video>
                             <?php if ($last_title_box_sec4_hp_karwia = get_sub_field('last_title_box_sec4_hp_karwia')) : ?>
                                 <div class="video__box__title">
@@ -338,7 +337,6 @@ get_template_part('investitions/osada-karwia/header');
                                     <?php while (have_rows('opinion_sec5_hp_karwia')) :
                                         the_row(); ?>
                                         <div class="swiper-slide">
-
                                             <?php if ($text_opinion_sec5_hp_karwia = get_sub_field('text_opinion_sec5_hp_karwia')) : ?>
                                                 <div class="testimonial-text">
                                                     <p class="text-main"><?php echo $text_opinion_sec5_hp_karwia; ?></p>
@@ -349,7 +347,6 @@ get_template_part('investitions/osada-karwia/header');
                                                     <p class="text-main text-main--fw700"><?php echo $name_opinion_sec5_hp_karwia; ?></p>
                                                 </div>
                                             <?php endif; ?>
-
                                         </div>
                                     <?php endwhile; ?>
                                 <?php endif; ?>
@@ -372,7 +369,7 @@ get_template_part('investitions/osada-karwia/header');
                 <div class="col-xl-6">
                     <div class="sec6-about-saveinwest__content">
                         <div class="sec6-about-saveinwest__content__top-left">
-                            <img src="<?php bloginfo('template_url'); ?>/assets/img/invest-karwia/home-page/home-karwia-company-logo.png" alt="logo saveinvest" />
+                            <img class="ek-fadein-karwia" src="<?php bloginfo('template_url'); ?>/assets/img/invest-karwia/home-page/home-karwia-company-logo.png" alt="logo saveinvest" />
                             <h3 class="f-h3 ek-fadein-karwia">O firmie</h3>
                         </div>
                         <?php if ($text_left_sec6_hp_karwia = get_field('text_left_sec6_hp_karwia')) : ?>

@@ -20,7 +20,7 @@
     <!-- end preload -->
     <?php global $post; ?>
 
-    <nav class="karwia-nav <?php if ($post->ID == 614) : ?> kladno-nav__home <?php endif; ?>">
+    <nav class="karwia-nav <?php if ($post->ID == 1220  ) : ?> karwia-nav__home <?php endif; ?>">
         <div class="container">
             <div class="row">
                 <div class="col-xl-12">
@@ -28,28 +28,28 @@
                         <div class="karwia-nav__container__box">
                             <ul class="nav-sticky">
                                 <div class="btn-box">
-                                    <li class="btn-nav <?php if (strpos($_SERVER['REQUEST_URI'], "/dzialki/enklawakarwia/o-inwestycji/") !== false) {; ?> btn-nav--active  <?php }; ?>">
-                                        <a href="<?php echo get_home_url(); ?>/dzialki/enklawakarwia/o-inwestycji/" class="text-main text-main--fw500 text-main--f15 text-main--ls3 text-main--white">
+                                    <li class="btn-nav <?php if (strpos($_SERVER['REQUEST_URI'], "/dzialki/osadakarwia/o-osadzie/") !== false) {; ?> btn-nav--active  <?php }; ?>">
+                                        <a href="<?php echo get_home_url(); ?>/dzialki/osadakarwia/o-osadzie/" class="text-main text-main--fw500 text-main--f15 text-main--ls3 text-main--white">
                                             O OSADZIE
                                         </a>
                                     </li>
-                                    <li class="btn-nav <?php if (strpos($_SERVER['REQUEST_URI'], "/dzialki/enklawakarwia/lokalizacja/") !== false) {; ?> btn-nav--active  <?php }; ?>">
-                                        <a href="<?php echo get_home_url(); ?>/dzialki/enklawakarwia/lokalizacja/" class="text-main text-main--fw500 text-main--f15 text-main--ls3 text-main--white">
+                                    <li class="btn-nav <?php if (strpos($_SERVER['REQUEST_URI'], "/dzialki/osadakarwia/lokalizacja/") !== false) {; ?> btn-nav--active  <?php }; ?>">
+                                        <a href="<?php echo get_home_url(); ?>/dzialki/osadakarwia/lokalizacja/" class="text-main text-main--fw500 text-main--f15 text-main--ls3 text-main--white">
                                             LOKALIZACJA
                                         </a>
                                     </li>
-                                    <li class="btn-nav <?php if (strpos($_SERVER['REQUEST_URI'], "/dzialki/enklawakarwia/ceny-dzialek/") !== false) {; ?> btn-nav--active  <?php }; ?>">
-                                        <a href="<?php echo get_home_url(); ?>/dzialki/enklawakarwia/ceny-dzialek/" class="text-main text-main--fw500 text-main--f15 text-main--ls3 text-main--white">
+                                    <li class="btn-nav <?php if (strpos($_SERVER['REQUEST_URI'], "/dzialki/osadakarwia/ceny-dzialek/") !== false) {; ?> btn-nav--active  <?php }; ?>">
+                                        <a href="<?php echo get_home_url(); ?>/dzialki/osadakarwia/ceny-dzialek/" class="text-main text-main--fw500 text-main--f15 text-main--ls3 text-main--white">
                                             CENY DZIAŁEK
                                         </a>
                                     </li>
                                 </div>
-                                <div class="logo-karwia<?php if (strpos($_SERVER['REQUEST_URI'], "/dzialki/enklawakarwia/strona-glowna/") !== false) {; ?> logo-karwia--active  <?php }; ?>">
-                                    <a href="<?php echo get_home_url(); ?>/dzialki/enklawakarwia/strona-glowna/">
+                                <div class="logo-karwia<?php if (strpos($_SERVER['REQUEST_URI'], "/dzialki/osadakarwia/strona-glowna/") !== false) {; ?> logo-karwia--active  <?php }; ?>">
+                                    <a href="<?php echo get_home_url(); ?>/dzialki/osadakarwia/strona-glowna/">
                                     </a>
                                 </div>
-                                <div class="logo-karwia-sticky<?php if (strpos($_SERVER['REQUEST_URI'], "/dzialki/enklawakarwia/strona-glowna/") !== false) {; ?> logo-karwia-sticky--active  <?php }; ?>">
-                                    <a href="<?php echo get_home_url(); ?>/dzialki/enklawakarwia/strona-glowna/">
+                                <div class="logo-karwia-sticky<?php if (strpos($_SERVER['REQUEST_URI'], "/dzialki/osadakarwia/strona-glowna/") !== false) {; ?> logo-karwia-sticky--active  <?php }; ?>">
+                                    <a href="<?php echo get_home_url(); ?>/dzialki/osadakarwia/strona-glowna/">
                                     </a>
                                 </div>
                                 <div class="btn-box">
@@ -58,13 +58,13 @@
                                             FINANSOWANIE
                                         </a>
                                     </li> -->
-                                    <li class="btn-nav <?php if (strpos($_SERVER['REQUEST_URI'], "/dzialki/enklawakarwia/galeria/") !== false) {; ?> btn-nav--active  <?php }; ?>">
-                                        <a href="<?php echo get_home_url(); ?>/dzialki/enklawakarwia/galeria/" class="text-main text-main--fw500 text-main--f15 text-main--ls3 text-main--white">
+                                    <li class="btn-nav <?php if (strpos($_SERVER['REQUEST_URI'], "/dzialki/osadakarwia/galeria/") !== false) {; ?> btn-nav--active  <?php }; ?>">
+                                        <a href="<?php echo get_home_url(); ?>/dzialki/osadakarwia/galeria/" class="text-main text-main--fw500 text-main--f15 text-main--ls3 text-main--white">
                                             GALERIA
                                         </a>
                                     </li>
-                                    <li class="btn-nav <?php if (strpos($_SERVER['REQUEST_URI'], "/dzialki/enklawakarwia/kontakt/") !== false) {; ?> btn-nav--active  <?php }; ?>">
-                                        <a href="<?php echo get_home_url(); ?>/dzialki/enklawakarwia/kontakt/" class="text-main text-main--fw500 text-main--f15 text-main--ls3 text-main--white">
+                                    <li class="btn-nav <?php if (strpos($_SERVER['REQUEST_URI'], "/dzialki/osadakarwia/kontakt/") !== false) {; ?> btn-nav--active  <?php }; ?>">
+                                        <a href="<?php echo get_home_url(); ?>/dzialki/osadakarwia/kontakt/" class="text-main text-main--fw500 text-main--f15 text-main--ls3 text-main--white">
                                             KONTAKT
                                         </a>
                                     </li>
@@ -79,22 +79,22 @@
                         </div>
                         <div class="karwia-nav__container__mobile">
                             <ul class="nav-sticky">
-                                <li class="logo-karwia<?php if (strpos($_SERVER['REQUEST_URI'], "/dzialki/enklawakarwia/strona-glowna/") !== false) {; ?> logo-karwia--active  <?php }; ?>">
-                                    <a href="<?php echo get_home_url(); ?>/dzialki/enklawakarwia/strona-glowna/">
+                                <li class="logo-karwia<?php if (strpos($_SERVER['REQUEST_URI'], "/dzialki/osadakarwia/strona-glowna/") !== false) {; ?> logo-karwia--active  <?php }; ?>">
+                                    <a href="<?php echo get_home_url(); ?>/dzialki/osadakarwia/strona-glowna/">
                                     </a>
                                 </li>
-                                <li class="btn-nav <?php if (strpos($_SERVER['REQUEST_URI'], "/dzialki/enklawakarwia/o-inwestycji/") !== false) {; ?> btn-nav--active  <?php }; ?>">
-                                    <a href="<?php echo get_home_url(); ?>/dzialki/enklawakarwia/o-inwestycji/" class="text-main text-main--fw500 text-main--f15 text-main--ls3">
+                                <li class="btn-nav <?php if (strpos($_SERVER['REQUEST_URI'], "/dzialki/osadakarwia/o-osadzie/") !== false) {; ?> btn-nav--active  <?php }; ?>">
+                                    <a href="<?php echo get_home_url(); ?>/dzialki/osadakarwia/o-osadzie/" class="text-main text-main--fw500 text-main--f15 text-main--ls3">
                                         O ENKLAWIE
                                     </a>
                                 </li>
-                                <li class="btn-nav <?php if (strpos($_SERVER['REQUEST_URI'], "/dzialki/enklawakarwia/lokalizacja/") !== false) {; ?> btn-nav--active  <?php }; ?>">
-                                    <a href="<?php echo get_home_url(); ?>/dzialki/enklawakarwia/lokalizacja/" class="text-main text-main--fw500 text-main--f15 text-main--ls3">
+                                <li class="btn-nav <?php if (strpos($_SERVER['REQUEST_URI'], "/dzialki/osadakarwia/lokalizacja/") !== false) {; ?> btn-nav--active  <?php }; ?>">
+                                    <a href="<?php echo get_home_url(); ?>/dzialki/osadakarwia/lokalizacja/" class="text-main text-main--fw500 text-main--f15 text-main--ls3">
                                         LOKALIZACJA
                                     </a>
                                 </li>
-                                <li class="btn-nav <?php if (strpos($_SERVER['REQUEST_URI'], "/dzialki/enklawakarwia/ceny-dzialek/") !== false) {; ?> btn-nav--active  <?php }; ?>">
-                                    <a href="<?php echo get_home_url(); ?>/dzialki/enklawakarwia/ceny-dzialek/" class="text-main text-main--fw500 text-main--f15 text-main--ls3">
+                                <li class="btn-nav <?php if (strpos($_SERVER['REQUEST_URI'], "/dzialki/osadakarwia/ceny-dzialek/") !== false) {; ?> btn-nav--active  <?php }; ?>">
+                                    <a href="<?php echo get_home_url(); ?>/dzialki/osadakarwia/ceny-dzialek/" class="text-main text-main--fw500 text-main--f15 text-main--ls3">
                                         CENY DZIAŁEK
                                     </a>
                                 </li>
@@ -103,13 +103,13 @@
                                         FINANSOWANIE
                                     </a>
                                 </li> -->
-                                <li class="btn-nav <?php if (strpos($_SERVER['REQUEST_URI'], "/dzialki/enklawakarwia/galeria/") !== false) {; ?> btn-nav--active  <?php }; ?>">
-                                    <a href="<?php echo get_home_url(); ?>/dzialki/enklawakarwia/galeria/" class="text-main text-main--fw500 text-main--f15 text-main--ls3">
+                                <li class="btn-nav <?php if (strpos($_SERVER['REQUEST_URI'], "/dzialki/osadakarwia/galeria/") !== false) {; ?> btn-nav--active  <?php }; ?>">
+                                    <a href="<?php echo get_home_url(); ?>/dzialki/osadakarwia/galeria/" class="text-main text-main--fw500 text-main--f15 text-main--ls3">
                                         GALERIA
                                     </a>
                                 </li>
-                                <li class="btn-nav <?php if (strpos($_SERVER['REQUEST_URI'], "/dzialki/enklawakarwia/kontakt/") !== false) {; ?> btn-nav--active  <?php }; ?>">
-                                    <a href="<?php echo get_home_url(); ?>/dzialki/enklawakarwia/kontakt/" class="text-main text-main--fw500 text-main--f15 text-main--ls3">
+                                <li class="btn-nav <?php if (strpos($_SERVER['REQUEST_URI'], "/dzialki/osadakarwia/kontakt/") !== false) {; ?> btn-nav--active  <?php }; ?>">
+                                    <a href="<?php echo get_home_url(); ?>/dzialki/osadakarwia/kontakt/" class="text-main text-main--fw500 text-main--f15 text-main--ls3">
                                         KONTAKT
                                     </a>
                                 </li>

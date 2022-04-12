@@ -1,19 +1,15 @@
 .karwia-nav {
-    height: 300px;
+    height: auto;
     width: 100%;
-    background-color: linear-gradient(
-        180deg,
-        #1951a4 0%,
-        rgba(25, 81, 164, 0) 100%
-    );
+    background: linear-gradient(180deg, #1951a4 0%, rgba(25, 81, 164, 0) 100%);
     opacity: 1;
     position: fixed;
     z-index: 9999;
     &--sticky {
         height: 125px;
-        background-color: $White;
+        background: $White;
         box-shadow: 0px 10px 10px -10px rgba(172, 171, 171, 0.418);
-        transition: background-color .5s;
+        transition: background-color 0.5s;
     }
     &__container {
         &__mobile {
@@ -31,7 +27,7 @@
                     display: flex;
                     flex-direction: column;
                     gap: 20px;
-                    .btn-nav{
+                    .btn-nav {
                         text-align: center;
                         &--active {
                             .text-main {
@@ -105,6 +101,26 @@
                         margin-top: 53px;
                         &--visibility {
                             visibility: hidden;
+                            position: relative;
+                            &::before {
+                                content: "";
+                                position: absolute;
+                                width: 23px;
+                                height: 23px;
+                                background: url(../img/invest-karwia/header/financing-arow.svg);
+                                background-repeat: no-repeat;
+                                background-size: cover;
+                                right: -20px;
+                                top: 50%;
+                                transform: translateY(-50%);
+                                transition: all 0.6s;
+                                pointer-events: none;
+                            }
+                            &:hover.btn-nav--visibility::before {
+                                content: "";
+                                position: absolute;
+                                transform: translateY(-80%);
+                            }
                         }
                         &--sticky {
                             .text-main {
@@ -116,26 +132,27 @@
                             &:hover {
                                 color: $Sand-Light-Very;
                             }
-                            &::before{
+                            &:hover .btn-nav--visibility::before {
                                 content: "";
                                 position: absolute;
-                                bottom: -13px;
-                                left: 0;
-                                margin-left: 25%;
-                                width: 0px;
-                                height: 3px;
-                                background-color: $Sand-Light-Very;
-                                transition: all cubic-bezier(.38,.76,.56,.31) .6s;
-                 
+                                transform: translateY(-150%);
                             }
-                            &:hover::before{
+                            &::before {
                                 content: "";
                                 position: absolute;
-                                bottom: -13px;
-                                left: 0;
                                 width: 50%;
+                                transform: scaleX(0);
                                 height: 3px;
-                                background-color: $Sand-Light-Very;
+                                bottom: -13px;
+                                left: 24% !important;
+                                color: $Sand-Light-Very;
+                                background: currentcolor;
+                                transform-origin: right;
+                                transition: transform 0.25s ease-out;
+                            }
+                            &:hover::before {
+                                transform: scaleX(1);
+                                transform-origin: left;
                             }
                         }
                         &--active {
@@ -143,13 +160,7 @@
                                 color: $Sand-Light-Very;
                                 position: relative;
                                 &::before {
-                                    content: "";
-                                    position: absolute;
-                                    bottom: -13px;
-                                    left: 0;
-                                    width: 50%;
-                                    height: 3px;
-                                    background-color: $Sand-Light-Very;
+                                    transform: scaleX(1);
                                 }
                             }
                         }
@@ -193,45 +204,20 @@
                         z-index: -1;
                     }
                     &--sticky {
-                        margin-right: 6vw;
-                        margin-left: 6vw;
-                        display: flex;
-                        flex-direction: row;
-                        position: relative;
-                        background: #12406a
-                            url(../img/invest-karwia/home-page/logo-header.svg);
-                        background-repeat: no-repeat;
-                        background-size: 150px 180px;
-                        background-position: center;
-                        width: 215px;
-                        height: 230px;
-                        opacity: 1;
                         transform: translateY(-240px);
-                        &::after {
-                            content: "";
-                            position: absolute;
-                            top: 50%;
-                            left: 50%;
-                            transform: translate(-50%, -50%);
-                            width: calc(100% + 20px);
-                            height: calc(100% + 20px);
-                            background: #022545;
-                            opacity: 0.15;
-                            z-index: -1;
-                        }
                     }
                 }
                 .logo-karwia-sticky {
                     position: absolute;
                     top: 0px;
                     left: 50%;
-                    transform: translateX(-50%);
+                    transform: translateX(-59%);
+                    width: 215px;
+                    height: 125px;
                     background: url(../img/invest-karwia/home-page/logo-header-sticky.svg);
                     background-repeat: no-repeat;
                     background-size: 150px 62px;
                     background-position: center;
-                    width: 215px;
-                    height: 125px;
                     opacity: 0;
                     transition: all 0.4s ease;
                     a {
@@ -253,27 +239,27 @@
         &__burger {
             display: none;
             @media (max-width: $xl) {
-                display: block;
-                width: 30px;
-                height: 30px;
                 position: absolute;
                 top: 32px;
                 left: auto;
                 right: 15px;
                 transform: rotate(0deg);
+                width: 30px;
+                height: 30px;
+                display: block;
                 transition-duration: 0.3s;
                 z-index: 999;
                 cursor: pointer;
                 span {
-                    display: block;
                     position: absolute;
+                    left: 0;
+                    transform: rotate(0deg);
                     height: 2px;
                     width: 100%;
+                    display: block;
                     background: $Sand-Dark;
                     border-radius: 0px;
                     opacity: 1;
-                    left: 0;
-                    transform: rotate(0deg);
                     transition: 0.25s ease-in-out;
                 }
                 span:nth-child(1) {
@@ -346,16 +332,16 @@
                     .logo-karwia {
                         margin-right: 2.5vw;
                         margin-left: 2.5vw;
-                        background-size: 100px 120px;
                         width: 150px;
                         height: 170px;
+                        background-size: 100px 120px;
                     }
                     .logo-karwia-sticky {
                         position: absolute;
                         top: 0px;
-                        background-size: 110px 45px;
                         width: 150px;
                         height: 125px;
+                        background-size: 110px 45px;
                         opacity: 0;
                         &--sticky {
                             opacity: 1;
@@ -366,7 +352,7 @@
         }
     }
     @media (max-width: $xl) {
-        height: 100px;
+        height: auto;
         &--sticky {
             height: 80px;
             background: $White;
@@ -381,18 +367,15 @@
                     }
                     .logo-karwia {
                         position: absolute;
-                        width: 100%;
-                        margin-right: 0vw;
-                        margin-left: 0vw;
                         left: 15px;
                         top: 0;
-                        background-size: 50px 57px;
+                        margin-right: 0vw;
+                        margin-left: 0vw;
                         width: 70px;
                         height: 65px;
+                        background-size: 50px 57px;
                         opacity: 1;
                         &::after {
-                            content: "";
-                            position: absolute;
                             width: calc(100% + 10px);
                             height: calc(100% + 10px);
                         }
@@ -401,9 +384,9 @@
                         position: absolute;
                         top: 8px;
                         left: 50px;
-                        background-size: 100px 50px;
                         width: 100px;
                         height: 65px;
+                        background-size: 100px 50px;
                         opacity: 0;
                         &--sticky {
                             opacity: 1;
