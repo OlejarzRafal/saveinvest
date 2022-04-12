@@ -249,6 +249,29 @@
                 display: block;
                 transition-duration: 0.3s;
                 z-index: 999;
+                &::after {
+                    content: "";
+                    position: absolute;
+                    top: 35%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    width: 170%;
+                    height: 150%;
+                    background: #0f3c64;
+                    z-index: -1;
+                }
+                &::before {
+                    content: "";
+                    position: absolute;
+                    top: 35%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    width: calc(170% + 10px);
+                    height: calc(150% + 10px);
+                    background: #022545;
+                    opacity: 0.15;
+                    z-index: -1;
+                }
                 cursor: pointer;
                 span {
                     position: absolute;
@@ -257,10 +280,32 @@
                     height: 2px;
                     width: 100%;
                     display: block;
-                    background: $Sand-Dark;
+                    background: $White;
                     border-radius: 0px;
                     opacity: 1;
                     transition: 0.25s ease-in-out;
+                }
+                &--sticky {
+                    &::after {
+                        display: none;
+                    }
+                    &::before {
+                        display: none;
+                    }
+                    span {
+                        background: $Sand-Dark;
+                    }
+                }
+                &.open {
+                    &::after {
+                        display: none;
+                    }
+                    &::before {
+                        display: none;
+                    }
+                    span {
+                        background: $Sand-Dark;
+                    }
                 }
                 span:nth-child(1) {
                     top: 0px;

@@ -3467,12 +3467,19 @@ a:hover {
     background: -webkit-gradient(linear, right top, left top, color-stop(100%, #F7F1EB), color-stop(0%, transparent));
     background: linear-gradient(to left, #F7F1EB 100%, transparent 0%);
   }
+  .ek-frontpage .sec1-video .row {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+  }
   .ek-frontpage .sec1-video__movie {
-    padding-top: 50px;
+    padding-bottom: 30px;
     min-height: auto;
   }
   .ek-frontpage .sec1-video__content {
     min-height: auto;
+    padding: 10px 0 30px;
   }
 }
 @media (max-width: 767px) {
@@ -3483,9 +3490,6 @@ a:hover {
     width: 20vw;
     height: 20vw;
     background-size: 20vw 20vw;
-  }
-  .ek-frontpage .sec1-video__content {
-    padding: 30px 0;
   }
 }
 .ek-frontpage .sec2-info {
@@ -5276,6 +5280,9 @@ a:hover {
           animation: rhombus-fp-s3 4.5s infinite ease-in-out;
   z-index: 1;
 }
+.ek-about .sec3-two-text__box2__photo {
+  margin-top: 80px;
+}
 .ek-about .sec3-two-text__box2__photo .photo-box2 .rotate-item-4 {
   position: absolute;
   top: 43%;
@@ -5285,12 +5292,23 @@ a:hover {
   background: url("../img/invest-karwia/about/icon-about-sec3.svg");
   background-size: contain;
 }
+.ek-about .sec3-two-text__box2__content .content-text .text-main {
+  margin-left: 8%;
+  margin-right: 8%;
+}
 @media (max-width: 1199px) {
   .ek-about .sec3-two-text__box1__photo .photo-box1 .bottom-item-3 {
     display: none;
   }
+  .ek-about .sec3-two-text__box2__photo {
+    margin-top: 50px;
+  }
   .ek-about .sec3-two-text__box2__photo .photo-box2 .rotate-item-4 {
     display: none;
+  }
+  .ek-about .sec3-two-text__box2__content .content-text .text-main {
+    margin-left: 0%;
+    margin-right: 0%;
   }
 }
 .ek-about .sec2-comfort {
@@ -9401,6 +9419,31 @@ footer .footer .footer-box a p {
     z-index: 999;
     cursor: pointer;
   }
+  .karwia-nav__container__burger::after {
+    content: "";
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+    width: 170%;
+    height: 150%;
+    background: #0f3c64;
+    z-index: -1;
+  }
+  .karwia-nav__container__burger::before {
+    content: "";
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+    width: calc(170% + 10px);
+    height: calc(150% + 10px);
+    background: #022545;
+    opacity: 0.15;
+    z-index: -1;
+  }
   .karwia-nav__container__burger span {
     position: absolute;
     left: 0;
@@ -9409,11 +9452,29 @@ footer .footer .footer-box a p {
     height: 2px;
     width: 100%;
     display: block;
-    background: #443401;
+    background: #ffffff;
     border-radius: 0px;
     opacity: 1;
     -webkit-transition: 0.25s ease-in-out;
     transition: 0.25s ease-in-out;
+  }
+  .karwia-nav__container__burger--sticky::after {
+    display: none;
+  }
+  .karwia-nav__container__burger--sticky::before {
+    display: none;
+  }
+  .karwia-nav__container__burger--sticky span {
+    background: #443401;
+  }
+  .karwia-nav__container__burger.open::after {
+    display: none;
+  }
+  .karwia-nav__container__burger.open::before {
+    display: none;
+  }
+  .karwia-nav__container__burger.open span {
+    background: #443401;
   }
   .karwia-nav__container__burger span:nth-child(1) {
     top: 0px;
@@ -9554,6 +9615,18 @@ footer .footer .footer-box a p {
       -ms-flex-direction: column;
           flex-direction: column;
   z-index: 9999999999;
+}
+.karwia-loader .logo-wrap {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 .karwia-loader .logo-wrap svg .sail {
   -webkit-animation: sail 3s infinite cubic-bezier(0.74, 0.54, 0.73, 1.16);

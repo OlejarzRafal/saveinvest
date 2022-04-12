@@ -351,6 +351,7 @@
         }
         &__box2 {
             &__photo {
+                margin-top: 80px;
                 .photo-box2 {
                     .rotate-item-4 {
                         position: absolute;
@@ -360,6 +361,14 @@
                         height: 160px;
                         background: url("../img/invest-karwia/about/icon-about-sec3.svg");
                         background-size: contain;
+                    }
+                }
+            }
+            &__content {
+                .content-text {
+                    .text-main {
+                        margin-left: 8%;
+                        margin-right: 8%;
                     }
                 }
             }
@@ -376,9 +385,18 @@
             }
             &__box2 {
                 &__photo {
+                    margin-top: 50px;
                     .photo-box2 {
                         .rotate-item-4 {
                             display: none;
+                        }
+                    }
+                }
+                &__content {
+                    .content-text {
+                        .text-main {
+                            margin-left: 0%;
+                            margin-right: 0%;
                         }
                     }
                 }

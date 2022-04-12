@@ -225,7 +225,7 @@ get_template_part('investitions/osada-karwia/header');
             </div>
         </div>
     </section>
-    
+
     <section class="sec4-links">
         <?php if (have_rows('first_box_sec4_hp_karwia')) : ?>
             <?php while (have_rows('first_box_sec4_hp_karwia')) :
@@ -265,8 +265,8 @@ get_template_part('investitions/osada-karwia/header');
                     <?php if ($second_link_box_sec4_hp_karwia = get_sub_field('second_link_box_sec4_hp_karwia')) : ?>
                         <a href="<?php echo $second_link_box_sec4_hp_karwia; ?>" class="video__box video-second-box">
                             <video playsinline="" muted="" loop="" preload="true" id="myVideo" class="video__box__hover">
-                            <source src="<?php echo get_template_directory_uri(); ?>/assets/img/invest-karwia/video/Karwia_Video_Ceny-dzialek.mp4" type="video/mp4">
-                             </video>
+                                <source src="<?php echo get_template_directory_uri(); ?>/assets/img/invest-karwia/video/Karwia_Video_Ceny-dzialek.mp4" type="video/mp4">
+                            </video>
                             <?php if ($second_title_box_sec4_hp_karwia = get_sub_field('second_title_box_sec4_hp_karwia')) : ?>
                                 <div class="video__box__title">
                                     <h2 class="f-h2 f-h2--white ">
@@ -296,7 +296,7 @@ get_template_part('investitions/osada-karwia/header');
                     <?php if ($last_link_box_sec4_hp_karwia = get_sub_field('last_link_box_sec4_hp_karwia')) : ?>
                         <a href="<?php echo $last_link_box_sec4_hp_karwia; ?>" class="video__box video-last-box">
                             <video playsinline="" muted="" loop="" preload="true" id="myVideo" class="video__box__hover">
-                            <source src="<?php echo get_template_directory_uri(); ?>/assets/img/invest-karwia/video/Karwia_Video_Finansowanie.mp4" type="video/mp4">
+                                <source src="<?php echo get_template_directory_uri(); ?>/assets/img/invest-karwia/video/Karwia_Video_Finansowanie.mp4" type="video/mp4">
                             </video>
                             <?php if ($last_title_box_sec4_hp_karwia = get_sub_field('last_title_box_sec4_hp_karwia')) : ?>
                                 <div class="video__box__title">
