@@ -60,7 +60,7 @@
                         </label>
 
                         <p>Plik csv musi zawierać tylko i wyłącznie pola, które można wypełnić dla danej działki.
-                            Wartości muszą być rozdzielone przecinami</p>
+                            Wartości muszą być rozdzielone przecinkami</p>
                         <label class="file-upload-input">
                             <input type="file" name="import-plots-file" accept="text/csv">
                             <button class="button action" type="button">Wybierz</button>

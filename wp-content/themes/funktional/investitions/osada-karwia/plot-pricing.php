@@ -356,7 +356,7 @@ $PlotsFront->getScriptsAndStyles('Osada Karwia');
 </div>
 
 <div class="form-plots form-main">
-    <?php echo do_shortcode('[contact-form-7 id="380" title="Formularz działki Kładno"]'); ?>
+    <?php echo do_shortcode('[contact-form-7 id="1321" title="Formularz działki Karwia"]'); ?>
 </div>
 
 <?php

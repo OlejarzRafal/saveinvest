@@ -28,7 +28,7 @@ get_template_part('investitions/osada-karwia/header');
                             <?php endif; ?>
                         </div>
                         <div class="form-main">
-                            <?php echo do_shortcode('[contact-form-7 id="1147" title="Formularz kontaktowy Karwia kontakt"]'); ?>
+                            <?php echo do_shortcode('[contact-form-7 id="1267" title="Formularz kontaktowy Karwia"]'); ?>
                         </div>
                     </div>
                 </div>
@@ -136,7 +136,7 @@ get_template_part('investitions/osada-karwia/header');
                                     <?php if ($mail_box1_service_sec3_contact_karwia = get_sub_field('mail_box1_service_sec3_contact_karwia')) : ?>
                                         <div class="person-info__email">
                                             <img src="<?php bloginfo('template_url'); ?>/assets/img/invest-karwia/contact/icon-mail-contact.svg" alt=" ikona email" />
-                                            <a class="text-main text-main--fw500" href="<?php echo $mail_box1_service_sec3_contact_karwia; ?>"><?php echo $mail_box1_service_sec3_contact_karwia; ?></a>
+                                            <a class="text-main text-main--fw500" href="mailto:<?php echo $mail_box1_service_sec3_contact_karwia; ?>"><?php echo $mail_box1_service_sec3_contact_karwia; ?></a>
                                         </div>
                                     <?php endif; ?>
                                     <?php if ($tel_box1_service_sec3_contact_karwia = get_sub_field('tel_box1_service_sec3_contact_karwia')) : ?>
@@ -181,7 +181,7 @@ get_template_part('investitions/osada-karwia/header');
 
                                         <div class="person-info__email">
                                             <img src="<?php bloginfo('template_url'); ?>/assets/img/invest-karwia/contact/icon-mail-contact.svg" alt=" ikona email" />
-                                            <a class="text-main text-main--fw500" href="<?php echo $mail_box2_service_sec3_contact_karwia; ?>"><?php echo $mail_box2_service_sec3_contact_karwia; ?></a>
+                                            <a class="text-main text-main--fw500" href="mailto:<?php echo $mail_box2_service_sec3_contact_karwia; ?>"><?php echo $mail_box2_service_sec3_contact_karwia; ?></a>
                                         </div>
                                     <?php endif; ?>
                                     <?php if ($tel_box2_service_sec3_contact_karwia = get_sub_field('tel_box2_service_sec3_contact_karwia')) : ?>
@@ -368,17 +368,17 @@ get_template_part('investitions/osada-karwia/header');
                         </div>
                         <div class="sec4-testimonial__content__entry swiper">
                             <div class="swiper-wrapper">
-                                <?php if (have_rows('opinion_sec4_contact_karwia')) : ?>
-                                    <?php while (have_rows('opinion_sec4_contact_karwia')) :
+                            <?php if (have_rows('opinion_sec5_hp_karwia',1220)) : ?>
+                                    <?php while (have_rows('opinion_sec5_hp_karwia',1220)) :
                                         the_row(); ?>
                                         <div class="swiper-slide">
 
-                                            <?php if ($text_opinion_sec5_contact_karwia = get_sub_field('text_opinion_sec5_contact_karwia')) : ?>
+                                            <?php if ($text_opinion_sec5_contact_karwia = get_sub_field('text_opinion_sec5_hp_karwia')) : ?>
                                                 <div class="testimonial-text">
                                                     <p class="text-main"><?php echo $text_opinion_sec5_contact_karwia; ?></p>
                                                 </div>
                                             <?php endif; ?>
-                                            <?php if ($name_opinion_sec5_contact_karwia = get_sub_field('name_opinion_sec5_contact_karwia')) : ?>
+                                            <?php if ($name_opinion_sec5_contact_karwia = get_sub_field('name_opinion_sec5_hp_karwia')) : ?>
                                                 <div class="testimonial-name">
                                                     <p class="text-main text-main--fw700"><?php echo $name_opinion_sec5_contact_karwia; ?></p>
                                                 </div>

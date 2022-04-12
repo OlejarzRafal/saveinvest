@@ -10,6 +10,8 @@ module.exports = {
         main: "./resources/js/index.js",
         kladno: "./resources/js/invest-kladno.js",
         karwia: "./resources/js/invest-karwia.js",
+        osadadziwnowek: "./resources/js/invest-osadadziwnowek.js",
+        seagolf: "./resources/js/invest-seagolf.js",
     },
     output: {
         path: path.resolve(__dirname, "./assets/js"),

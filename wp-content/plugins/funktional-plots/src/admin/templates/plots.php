@@ -59,6 +59,7 @@
                     <table class="wp-list-table widefat fixed striped table-view-list posts">
                         <thead>
                         <tr>
+                            <th scope="col" class="manage-column status-column"></th>
                             <th scope="col" class="manage-column">
                                 <span>Inwestycja</span>
                                 <div class="sorting-buttons">

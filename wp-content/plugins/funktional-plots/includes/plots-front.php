@@ -5,7 +5,7 @@ class PlotsFront
     public function getScriptsAndStyles($investitionName)
     {
         echo '<script> window.FunktionalPlots = ' . json_encode($this->getPlotsForInvestition($investitionName)) . '</script>';
-        echo '<link rel="stylesheet" href="' . home_url('/wp-content/plugins/funktional-plots/dist/front/css/front.css?') . filemtime(__DIR__ . '/../dist/front/css/front.css') . '">';
+        echo '<link rel="stylesheet" href="' . home_url('/wp-content/plugins/funktional-plots/dist/front/css/plots.css?') . filemtime(__DIR__ . '/../dist/front/css/plots.css') . '">';
         echo '<script src="' . home_url('/wp-content/plugins/funktional-plots/dist/front/js/front.js?') . filemtime(__DIR__ . '/../dist/front/js/front.js') . '"></script>';
     }
 
@@ -13,7 +13,7 @@ class PlotsFront
     {
         $plotsPosts = get_posts(array(
             'post_type' => 'plots',
-            'posts_per_page' => 28,
+            'posts_per_page' => -1,
             'orderby'   => 'meta_value',
             'post_status' => 'publish',
             'meta_query' => array(

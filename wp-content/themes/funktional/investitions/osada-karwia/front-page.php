@@ -233,7 +233,7 @@ get_template_part('investitions/osada-karwia/header');
                 <div class="video">
                     <?php if ($first_link_box_sec4_hp_karwia = get_sub_field('first_link_box_sec4_hp_karwia')) : ?>
                         <a href="<?php echo $first_link_box_sec4_hp_karwia; ?>" class="video__box video-first-box">
-                            <video playsinline="" muted="" loop="" preload="true" id="myVideo" class="video__box__hover">
+                            <video playsinline="" muted="" loop="" preload="true" class="video__box__hover">
                                 <source src="<?php echo get_template_directory_uri(); ?>/assets/img/invest-karwia/video/Karwia_Video_Lokalizacja.mp4" type="video/mp4">
                             </video>
                             <?php if ($first_title_box_sec4_hp_karwia = get_sub_field('first_title_box_sec4_hp_karwia')) : ?>
@@ -264,7 +264,11 @@ get_template_part('investitions/osada-karwia/header');
                 <div class="video">
                     <?php if ($second_link_box_sec4_hp_karwia = get_sub_field('second_link_box_sec4_hp_karwia')) : ?>
                         <a href="<?php echo $second_link_box_sec4_hp_karwia; ?>" class="video__box video-second-box">
+<<<<<<< HEAD
                             <video playsinline="" muted="" loop="" preload="true" id="myVideo" class="video__box__hover">
+=======
+                            <video playsinline="" muted="" loop="" preload="true" class="video__box__hover">
+>>>>>>> 3377da106f4c0fdff4f0fb2df13f282da23dab38
                                 <source src="<?php echo get_template_directory_uri(); ?>/assets/img/invest-karwia/video/Karwia_Video_Ceny-dzialek.mp4" type="video/mp4">
                             </video>
                             <?php if ($second_title_box_sec4_hp_karwia = get_sub_field('second_title_box_sec4_hp_karwia')) : ?>
@@ -295,7 +299,11 @@ get_template_part('investitions/osada-karwia/header');
                 <div class="video video-financing">
                     <?php if ($last_link_box_sec4_hp_karwia = get_sub_field('last_link_box_sec4_hp_karwia')) : ?>
                         <a href="<?php echo $last_link_box_sec4_hp_karwia; ?>" class="video__box video-last-box">
+<<<<<<< HEAD
                             <video playsinline="" muted="" loop="" preload="true" id="myVideo" class="video__box__hover">
+=======
+                            <video playsinline="" muted="" loop="" preload="true" class="video__box__hover">
+>>>>>>> 3377da106f4c0fdff4f0fb2df13f282da23dab38
                                 <source src="<?php echo get_template_directory_uri(); ?>/assets/img/invest-karwia/video/Karwia_Video_Finansowanie.mp4" type="video/mp4">
                             </video>
                             <?php if ($last_title_box_sec4_hp_karwia = get_sub_field('last_title_box_sec4_hp_karwia')) : ?>

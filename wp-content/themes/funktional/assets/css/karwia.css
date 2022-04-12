@@ -354,6 +354,10 @@ a:hover {
   outline: 0 !important;
 }
 
+.compensate-for-scrollbar {
+  margin-right: 0 !important;
+}
+
 .container {
   width: 100%;
   padding-right: 15px;
@@ -5697,13 +5701,13 @@ a:hover {
 .ek-localization .sec1-info-map__box__table-location .row-table:first-child {
   border-top: 0px solid #b68b1d;
 }
-.ek-localization .sec1-info-map__box__table-location .row-table:nth-child(2) {
+.ek-localization .sec1-info-map__box__table-location .row-table:nth-child(6) {
   position: relative;
 }
-.ek-localization .sec1-info-map__box__table-location .row-table:nth-child(2) .row-table__time p {
+.ek-localization .sec1-info-map__box__table-location .row-table:nth-child(6) .row-table__time p {
   position: relative;
 }
-.ek-localization .sec1-info-map__box__table-location .row-table:nth-child(2) .row-table__time p::after {
+.ek-localization .sec1-info-map__box__table-location .row-table:nth-child(6) .row-table__time p::after {
   content: "";
   position: absolute;
   top: 18px;
@@ -7202,7 +7206,7 @@ a:hover {
   position: relative;
 }
 .ek-contact .sec5-location-karwia__content .locat-info__data-firm a:hover, .ek-contact .sec5-location-karwia__content .locat-info__data-person a:hover {
-  color: red;
+  color: #BF9875;
 }
 .ek-contact .sec5-location-karwia__content .locat-info__data-firm {
   width: 38%;
@@ -7475,7 +7479,7 @@ a:hover {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  height: 200px;
+  height: auto;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -7529,13 +7533,11 @@ a:hover {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  height: 190px;
+  height: auto;
 }
 .plots-list .plot-item .plot-img img {
-  width: 100%;
-  height: 100%;
-  -o-object-fit: contain;
-     object-fit: contain;
+  width: auto;
+  height: auto;
 }
 .plots-list .plot-item .plot-info {
   display: -webkit-box;
@@ -8396,10 +8398,6 @@ a:hover {
   top: 0;
   right: 0;
 }
-.osada-karwia-template-plot-pricing .plots-map .plot-sectors__svg path,
-.osada-karwia-template-plot-pricing .plots-map .plot-sector__svg path {
-  opacity: 0;
-}
 @media (max-width: 767px) {
   .osada-karwia-template-plot-pricing .plots-map .plot-sectors__desktop,
 .osada-karwia-template-plot-pricing .plots-map .plot-sector__desktop {
@@ -8532,10 +8530,18 @@ a:hover {
 .osada-karwia-template-plot-pricing .plots-map .plot-sector [data-plots-sectors] {
     overflow-x: scroll;
   }
+  .osada-karwia-template-plot-pricing .plots-map .plot-sectors__all [data-plots-sectors],
+.osada-karwia-template-plot-pricing .plots-map .plot-sector__all [data-plots-sectors] {
+    height: 674px;
+  }
   .osada-karwia-template-plot-pricing .plots-map .plot-sectors__all__mobile,
 .osada-karwia-template-plot-pricing .plots-map .plot-sector__all__mobile {
     height: 669px;
     width: 768px;
+  }
+  .osada-karwia-template-plot-pricing .plots-map .plot-sectors__single [data-plots-sector],
+.osada-karwia-template-plot-pricing .plots-map .plot-sector__single [data-plots-sector] {
+    height: 790px;
   }
   .osada-karwia-template-plot-pricing .plots-map .plot-sectors__single__mobile,
 .osada-karwia-template-plot-pricing .plots-map .plot-sector__single__mobile {
@@ -9408,7 +9414,7 @@ footer .footer .footer-box a p {
     position: absolute;
     top: 32px;
     left: auto;
-    right: 15px;
+    right: 30px;
     -webkit-transform: rotate(0deg);
             transform: rotate(0deg);
     width: 30px;

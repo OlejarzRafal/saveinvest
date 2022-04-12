@@ -26,7 +26,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _scs
   \**************************************************/
 /***/ (function() {
 
-eval("if ($(window).width() > 767) {\n  var hoverVideo = function hoverVideo(e) {\n    $(\".video\", this).get(0).play();\n  };\n\n  var hideVideo = function hideVideo(e) {\n    $(\".video\", this).get(0).pause();\n  };\n\n  var movieHover = $(\".video\").hover(hoverVideo, hideVideo);\n} else {\n  $(\".video\", this).get(0).play();\n}\n\n//# sourceURL=webpack://webpack/./resources/js/invest-karwia/hover-play.js?");
+eval("if ($(window).width() > 767) {\n  $(\".video\").hover(function () {\n    $(this).find($('.video__box__hover')).get(0).play();\n  }, function () {\n    $(this).find($('.video__box__hover')).get(0).pause();\n  });\n} else {\n  $('.video__box__hover').each(function () {\n    $(this).get(0).play();\n  });\n}\n\n//# sourceURL=webpack://webpack/./resources/js/invest-karwia/hover-play.js?");
 
 /***/ }),
 
@@ -66,7 +66,7 @@ eval("$(document).ready(function () {\n  var stickyNav = function stickyNav() {\
   \*********************************************/
 /***/ (function() {
 
-eval("$(document).ready(function () {\n  $(\".area-hover\").hover(function () {\n    $('.area-click path').css({\n      \"opacity\": \"0.9\"\n    });\n    $(\".area-click path\").hover(function () {\n      $(\".area-click path\").css('opacity', '0.9');\n      $(this).css('opacity', '0.7');\n    }, function () {\n      $(\".area-click path\").css('opacity', '0');\n    });\n  }, function () {\n    $('.area-click path').css('opacity', '0');\n  });\n});\n\n//# sourceURL=webpack://webpack/./resources/js/invest-karwia/plots.js?");
+eval("$(document).ready(function () {\n  if ($(window).width() > 767) {\n    $('.area-click__sector .plot-status--sprzedana path').css({\n      \"opacity\": \"0.6\"\n    });\n    $('.area-click__sector .plot-status--zarezerwowana path').css({\n      \"opacity\": \"0.6\"\n    });\n  }\n\n  $(\".area-hover\").hover(function () {\n    $('.area-click__sectors path').css({\n      \"opacity\": \"1\"\n    });\n    $(\".area-click__sectors path\").hover(function () {\n      $(this).css('opacity', '1');\n    }, function () {\n      $(this).css('opacity', '0');\n    });\n    $('.area-click__sector path').css({\n      \"opacity\": \"0.9\"\n    });\n    $(\".area-click__sector path\").hover(function () {\n      $(\".area-click path\").css('opacity', '0.9');\n      $(this).css('opacity', '0.7');\n    }, function () {\n      $(\".area-click path\").css('opacity', '0');\n    });\n  }, function () {\n    $('.area-click__sectors path').css({\n      \"opacity\": \"0\"\n    });\n    $('.area-click__sector path').css({\n      \"opacity\": \"0\"\n    });\n    $('.area-click__sector .plot-status--sprzedana path').css({\n      \"opacity\": \"0.6\"\n    });\n    $('.area-click__sector .plot-status--zarezerwowana path').css({\n      \"opacity\": \"0.6\"\n    });\n  }); // var elemhalf = ($('.plot-sectors__all .plot-sectors__all__mobile').width() / 4);\n  // console.log(elemhalf);\n\n  $('.plot-sectors__all [data-plots-sectors]').scrollLeft(220);\n});\n\n//# sourceURL=webpack://webpack/./resources/js/invest-karwia/plots.js?");
 
 /***/ }),
 
@@ -140,7 +140,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extr
 /******/ 		};
 /******/ 	
 /******/ 		// Execute the module function
-/******/ 		__webpack_modules__[moduleId].call(module.exports, module, module.exports, __webpack_require__);
+/******/ 		__webpack_modules__[moduleId](module, module.exports, __webpack_require__);
 /******/ 	
 /******/ 		// Return the exports of the module
 /******/ 		return module.exports;

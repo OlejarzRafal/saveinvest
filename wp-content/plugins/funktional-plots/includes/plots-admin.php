@@ -47,6 +47,11 @@ class PlotsAdmin
             'methods' => 'DELETE',
             'callback' => array($this, 'removePlot'),
         ));
+
+        register_rest_route('funktional-plots/v1', '/set-plot-status', array(
+            'methods' => 'POST',
+            'callback' => array($this, 'setPlotStatus'),
+        ));
     }
 
     public function getFiltersValues()
@@ -126,7 +131,8 @@ class PlotsAdmin
         $plotsPosts = get_posts(array(
             'post_type' => 'plots',
             'posts_per_page' => -1,
-            'post_status' => 'publish',
+            'post_status' => array('publish', 'private'),
+//           TODO FIX THIS!!
             'meta_query' => $meta_query,
             'orderby' => in_array($data['sort']['sortBy'], array('plotNr', 'discount', 'priceNetto', 'area')) ? 'meta_value_num' : 'meta_value',
             'meta_key' => $data['sort']['sortBy'],
@@ -134,7 +140,7 @@ class PlotsAdmin
         ));
 
         echo json_encode($this->getPlotsObjectFromPosts($plotsPosts));
-        exit();
+        exit();  
     }
 
     public function updatePlot($data, $echo = true)
@@ -191,6 +197,8 @@ class PlotsAdmin
         foreach ($plotsPosts as $index => $plotPost) {
             $plotsData[$index] = array('postId' => $plotPost->ID);
 
+            $plotsData[$index]['postStatus'] = $plotPost->post_status === 'publish';
+
             foreach ($plotsAcfArray['fields'] as $field) {
                 $plotsData[$index][$field['name']] = get_field($field['name'], $plotPost->ID);
             }
@@ -230,6 +238,19 @@ class PlotsAdmin
     public function removePlot($data)
     {
         if (!wp_delete_post((int)$data['plotId'])) {
+            echo false;
+        } else {
+            echo true;
+        }
+        exit();
+    }
+
+    public function setPlotStatus($data)
+    {
+        if (!wp_update_post(array(
+            'ID' => (int)$data['plotId'],
+            'post_status' => $data['status'] === 'true' ? 'publish' : 'private'
+        ))) {
             echo false;
         } else {
             echo true;

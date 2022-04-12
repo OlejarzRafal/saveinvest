@@ -1,6 +1,5 @@
-
 $(document).ready(function () {
- var stickyNav = function () {
+    var stickyNav = function () {
         var scrollTop = $(window).scrollTop();
         if (scrollTop > 0) {
             $(".karwia-nav").addClass("karwia-nav--sticky");
@@ -23,4 +22,3 @@ $(document).ready(function () {
         stickyNav();
     });
 });
-

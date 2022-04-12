@@ -23,9 +23,25 @@
                 max-width: 100%;
                 top: 0;
                 right: 0;
-                path {
-                    opacity: 0;
-                }
+                // .area-click__sectors{
+                //     path {
+                //         opacity: 1;
+                //     }
+                // }
+                // .area-click__sector{
+                //     path{
+                //         opacity: 0;
+                //     }
+                //     .plot-status--sprzedana,
+                //     .plot-status--zarezerwowana{
+                //         path{
+                //             opacity: 0.6;
+                //         }
+                //     }
+
+        
+                // }
+            
             }
             &__desktop {
                 @media (max-width: 767px) {
@@ -151,12 +167,18 @@
                     overflow-x: scroll;
                 }
                 &__all {
+                    [data-plots-sectors]{
+                        height: 674px;
+                    }
                     &__mobile {
                         height: 669px;
                         width: 768px;
                     }
                 }
                 &__single {
+                    [data-plots-sector]{
+                        height: 790px;
+                    }
                     &__mobile {
                         height: 785px;
                         width: 768px;
