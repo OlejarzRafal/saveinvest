@@ -25,7 +25,14 @@ function add_theme_assets()
     }
     else if (get_post_type(get_queried_object_id()) === 'osada-karwia') {
         wp_enqueue_style('karwiacss', get_template_directory_uri() . '/assets/css/karwia.css', false, 1, 'all');
-    }else {
+    }
+    else if (get_post_type(get_queried_object_id()) === 'osada-dziwnowek') {
+        wp_enqueue_style('osadadziwnowekcss', get_template_directory_uri() . '/assets/css/osadadziwnowek.css', false, 1, 'all');
+    }
+    else if (get_post_type(get_queried_object_id()) === 'sea-golf') {
+        wp_enqueue_style('seagolfcss', get_template_directory_uri() . '/assets/css/seagolf.css', false, 1, 'all');
+    }
+    else {
         // to na pewno w else?
         wp_enqueue_style('style', get_template_directory_uri() . '/assets/css/main.css', false, 1, 'all');
     }
@@ -39,6 +46,12 @@ function add_theme_assets()
     }
     else if (get_post_type(get_queried_object_id()) === 'osada-karwia') {
         wp_enqueue_script('karwiajs', get_stylesheet_directory_uri() . '/assets/js/karwia.js', array(), null, true);
+    }
+    else if (get_post_type(get_queried_object_id()) === 'osada-dziwnowek') {
+        wp_enqueue_script('osadadziwnowekjs', get_stylesheet_directory_uri() . '/assets/js/osadadziwnowek.js', array(), null, true);
+    }
+    else if (get_post_type(get_queried_object_id()) === 'sea-golf') {
+        wp_enqueue_script('seagolfcssjs', get_stylesheet_directory_uri() . '/assets/js/seagolf.js', array(), null, true);
     }
 
     // saveinvest page&blog
