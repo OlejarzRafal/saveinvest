@@ -32,7 +32,15 @@ class FunktionalPlotsService {
         return $.ajax({
             url: `${window.FunktionalGlobals.homeUrl}wp-json/funktional-plots/v1/remove-plot`,
             method: 'DELETE',
-            data: { plotId }
+            data: {plotId},
+        });
+    }
+
+    setPlotStatus(plotId, status) {
+        return $.ajax({
+            url: `${window.FunktionalGlobals.homeUrl}wp-json/funktional-plots/v1/set-plot-status`,
+            method: 'POST',
+            data: {plotId, status},
         });
     }
 }
@@ -210,6 +218,9 @@ class FunktionalPlots {
 
     buildPlotRow(params) {
         return params ? `<tr class="author-self status-publish hentry">
+                            <td class="column-primary status-column">
+                                <input type="checkbox" value="true" data-toggle-status ${params.postStatus ? 'checked="true"' : ''}>
+                            </td>
                             <td class="column-primary"><strong>${params.investition.label}</strong></td>
                             <td class="column-primary"><strong>${params.sector && params.sector.label ? params.sector.label : '-'}</strong></td>
                             <td class="column-primary"><strong>${params.plotNr}</strong></td>
@@ -264,6 +275,24 @@ class FunktionalPlots {
                 });
             }
         });
+
+        this.plotsTableBody.find('[data-toggle-status]').on('click', (event) => {
+            const status = $(event.currentTarget).is(':checked');
+
+            this.service.setPlotStatus(
+                this.getPlotEditData($(event.currentTarget).parent().parent()).plotId,
+                status
+            ).then(() => {
+                if (status) {
+                    toastr.success('Działka została poprawnie aktywowana');
+                } else {
+                    toastr.success('Działka została poprawnie dezaktywowana');
+                }
+            }).catch(() => {
+                toastr.error('Wystąpił problem podczas usuwania działki');
+            });
+        });
+
     }
 
     saveAllPlotsData() {
@@ -279,7 +308,7 @@ class FunktionalPlots {
 
     getPlotEditData(plotRow) {
         const plotId = plotRow.find('input[name="postId"]').val();
-        const inputs = plotRow.find('input:not([name="postId"])');
+        const inputs = plotRow.find('input:not([name="postId"]):not([type="checkbox"])');
         const editData = {plotId, fields: {}};
 
         inputs.toArray().forEach(input => {
