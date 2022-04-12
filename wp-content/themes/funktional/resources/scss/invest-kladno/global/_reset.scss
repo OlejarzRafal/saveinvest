@@ -41,3 +41,7 @@ a:hover {
 .fancybox-container{
     z-index: 99999999;
 }
+// remove margin from fancybox
+.compensate-for-scrollbar{
+    margin-right: 0 !important;
+}

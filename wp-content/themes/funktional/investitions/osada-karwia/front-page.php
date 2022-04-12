@@ -225,7 +225,7 @@ get_template_part('investitions/osada-karwia/header');
             </div>
         </div>
     </section>
-    
+
     <section class="sec4-links">
         <?php if (have_rows('first_box_sec4_hp_karwia')) : ?>
             <?php while (have_rows('first_box_sec4_hp_karwia')) :
@@ -233,7 +233,7 @@ get_template_part('investitions/osada-karwia/header');
                 <div class="video">
                     <?php if ($first_link_box_sec4_hp_karwia = get_sub_field('first_link_box_sec4_hp_karwia')) : ?>
                         <a href="<?php echo $first_link_box_sec4_hp_karwia; ?>" class="video__box video-first-box">
-                            <video playsinline="" muted="" loop="" preload="true" id="myVideo" class="video__box__hover">
+                            <video playsinline="" muted="" loop="" preload="true" class="video__box__hover">
                                 <source src="<?php echo get_template_directory_uri(); ?>/assets/img/invest-karwia/video/Karwia_Video_Lokalizacja.mp4" type="video/mp4">
                             </video>
                             <?php if ($first_title_box_sec4_hp_karwia = get_sub_field('first_title_box_sec4_hp_karwia')) : ?>
@@ -264,9 +264,9 @@ get_template_part('investitions/osada-karwia/header');
                 <div class="video">
                     <?php if ($second_link_box_sec4_hp_karwia = get_sub_field('second_link_box_sec4_hp_karwia')) : ?>
                         <a href="<?php echo $second_link_box_sec4_hp_karwia; ?>" class="video__box video-second-box">
-                            <video playsinline="" muted="" loop="" preload="true" id="myVideo" class="video__box__hover">
-                            <source src="<?php echo get_template_directory_uri(); ?>/assets/img/invest-karwia/video/Karwia_Video_Ceny-dzialek.mp4" type="video/mp4">
-                             </video>
+                            <video playsinline="" muted="" loop="" preload="true" class="video__box__hover">
+                                <source src="<?php echo get_template_directory_uri(); ?>/assets/img/invest-karwia/video/Karwia_Video_Ceny-dzialek.mp4" type="video/mp4">
+                            </video>
                             <?php if ($second_title_box_sec4_hp_karwia = get_sub_field('second_title_box_sec4_hp_karwia')) : ?>
                                 <div class="video__box__title">
                                     <h2 class="f-h2 f-h2--white ">
@@ -295,8 +295,8 @@ get_template_part('investitions/osada-karwia/header');
                 <div class="video video-financing">
                     <?php if ($last_link_box_sec4_hp_karwia = get_sub_field('last_link_box_sec4_hp_karwia')) : ?>
                         <a href="<?php echo $last_link_box_sec4_hp_karwia; ?>" class="video__box video-last-box">
-                            <video playsinline="" muted="" loop="" preload="true" id="myVideo" class="video__box__hover">
-                            <source src="<?php echo get_template_directory_uri(); ?>/assets/img/invest-karwia/video/Karwia_Video_Finansowanie.mp4" type="video/mp4">
+                            <video playsinline="" muted="" loop="" preload="true" class="video__box__hover">
+                                <source src="<?php echo get_template_directory_uri(); ?>/assets/img/invest-karwia/video/Karwia_Video_Finansowanie.mp4" type="video/mp4">
                             </video>
                             <?php if ($last_title_box_sec4_hp_karwia = get_sub_field('last_title_box_sec4_hp_karwia')) : ?>
                                 <div class="video__box__title">
@@ -337,6 +337,7 @@ get_template_part('investitions/osada-karwia/header');
                                     <?php while (have_rows('opinion_sec5_hp_karwia')) :
                                         the_row(); ?>
                                         <div class="swiper-slide">
+
                                             <?php if ($text_opinion_sec5_hp_karwia = get_sub_field('text_opinion_sec5_hp_karwia')) : ?>
                                                 <div class="testimonial-text">
                                                     <p class="text-main"><?php echo $text_opinion_sec5_hp_karwia; ?></p>
@@ -347,6 +348,7 @@ get_template_part('investitions/osada-karwia/header');
                                                     <p class="text-main text-main--fw700"><?php echo $name_opinion_sec5_hp_karwia; ?></p>
                                                 </div>
                                             <?php endif; ?>
+
                                         </div>
                                     <?php endwhile; ?>
                                 <?php endif; ?>

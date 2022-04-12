@@ -133,14 +133,14 @@ class PlotsAdmin
             'posts_per_page' => -1,
             'post_status' => array('publish', 'private'),
 //           TODO FIX THIS!!
-//           'meta_query' => $meta_query,
+            'meta_query' => $meta_query,
             'orderby' => in_array($data['sort']['sortBy'], array('plotNr', 'discount', 'priceNetto', 'area')) ? 'meta_value_num' : 'meta_value',
             'meta_key' => $data['sort']['sortBy'],
             'order' => strtoupper($data['sort']['sort'])
         ));
 
         echo json_encode($this->getPlotsObjectFromPosts($plotsPosts));
-        exit();
+        exit();  
     }
 
     public function updatePlot($data, $echo = true)
