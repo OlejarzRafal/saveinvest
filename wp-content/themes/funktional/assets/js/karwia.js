@@ -26,7 +26,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _scs
   \**************************************************/
 /***/ (function() {
 
-eval("var movieHover = $(\".video\").hover(hoverVideo, hideVideo);\n\nfunction hoverVideo(e) {\n  $('video', this).get(0).play();\n}\n\nfunction hideVideo(e) {\n  $('video', this).get(0).pause();\n}\n\n//# sourceURL=webpack://webpack/./resources/js/invest-karwia/hover-play.js?");
+eval("if ($(window).width() > 767) {\n  var hoverVideo = function hoverVideo(e) {\n    $(\".video\", this).get(0).play();\n  };\n\n  var hideVideo = function hideVideo(e) {\n    $(\".video\", this).get(0).pause();\n  };\n\n  var movieHover = $(\".video\").hover(hoverVideo, hideVideo);\n} else {\n  $(\".video\", this).get(0).play();\n}\n\n//# sourceURL=webpack://webpack/./resources/js/invest-karwia/hover-play.js?");
 
 /***/ }),
 
@@ -56,7 +56,7 @@ eval("$(document).ready(function () {\n  $(\".karwia-nav__container__burger\").c
   \**************************************************/
 /***/ (function() {
 
-eval("$(document).ready(function () {\n  var stickyNav = function stickyNav() {\n    var scrollTop = $(window).scrollTop();\n\n    if (scrollTop > 0) {\n      $(\".karwia-nav\").addClass(\"karwia-nav--sticky\");\n      $(\".logo-karwia\").addClass(\"logo-karwia--sticky\");\n      $(\".btn-nav\").addClass(\"btn-nav--sticky\");\n      $(\".nav-sticky\").addClass(\"nav-sticky--sticky\");\n      $(\".logo-karwia-sticky\").addClass(\"logo-karwia-sticky--sticky\");\n    } else {\n      $(\".karwia-nav\").removeClass(\"karwia-nav--sticky\");\n      $(\".logo-karwia\").removeClass(\"logo-karwia--sticky\");\n      $(\".btn-nav\").removeClass(\"btn-nav--sticky\");\n      $(\".nav-sticky\").removeClass(\"nav-sticky--sticky\");\n      $(\".logo-karwia-sticky\").removeClass(\"logo-karwia-sticky--sticky\");\n    }\n  };\n\n  stickyNav();\n  $(window).scroll(function () {\n    stickyNav();\n  });\n});\n\n//# sourceURL=webpack://webpack/./resources/js/invest-karwia/nav-scroll.js?");
+eval("$(document).ready(function () {\n  var stickyNav = function stickyNav() {\n    var scrollTop = $(window).scrollTop();\n\n    if (scrollTop > 0) {\n      $(\".karwia-nav\").addClass(\"karwia-nav--sticky\");\n      $(\".logo-karwia\").addClass(\"logo-karwia--sticky\");\n      $(\".btn-nav\").addClass(\"btn-nav--sticky\");\n      $(\".nav-sticky\").addClass(\"nav-sticky--sticky\");\n      $(\".logo-karwia-sticky\").addClass(\"logo-karwia-sticky--sticky\");\n      $(\".karwia-nav__container__burger\").addClass(\"karwia-nav__container__burger--sticky\");\n    } else {\n      $(\".karwia-nav\").removeClass(\"karwia-nav--sticky\");\n      $(\".logo-karwia\").removeClass(\"logo-karwia--sticky\");\n      $(\".btn-nav\").removeClass(\"btn-nav--sticky\");\n      $(\".nav-sticky\").removeClass(\"nav-sticky--sticky\");\n      $(\".logo-karwia-sticky\").removeClass(\"logo-karwia-sticky--sticky\");\n      $(\".karwia-nav__container__burger\").removeClass(\"karwia-nav__container__burger--sticky\");\n    }\n  };\n\n  stickyNav();\n  $(window).scroll(function () {\n    stickyNav();\n  });\n});\n\n//# sourceURL=webpack://webpack/./resources/js/invest-karwia/nav-scroll.js?");
 
 /***/ }),
 
@@ -130,7 +130,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extr
 /******/ 		};
 /******/ 	
 /******/ 		// Execute the module function
-/******/ 		__webpack_modules__[moduleId](module, module.exports, __webpack_require__);
+/******/ 		__webpack_modules__[moduleId].call(module.exports, module, module.exports, __webpack_require__);
 /******/ 	
 /******/ 		// Return the exports of the module
 /******/ 		return module.exports;

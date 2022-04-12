@@ -104,6 +104,9 @@
             }
         }
         @media (max-width: $xl) {
+            .row{
+                flex-direction: column-reverse;
+            } 
             margin-top: 80px;
             min-height: auto;
             background: linear-gradient(
@@ -112,11 +115,12 @@
                 transparent 0%
             );
             &__movie {
-                padding-top: 50px;
+                padding-bottom: 30px;
                 min-height: auto;
             }
             &__content {
                 min-height: auto;
+                padding: 10px 0 30px;  
             }
         }
         @media (max-width: $md) {
@@ -129,9 +133,6 @@
                         background-size: 20vw 20vw;
                     }
                 }
-            }
-            &__content {
-                padding: 30px 0;
             }
         }
     }
@@ -743,7 +744,6 @@
                 &::after {
                     background: url("../img/invest-karwia/home-page/rhombus-hp-s2.svg");
                     background-size: cover;
-                    
                 }
             }
             .video-second-box {
@@ -857,7 +857,6 @@
                         padding: 12px 16px;
                         font-size: 12px;
                         line-height: 8px;
-
                     }
                 }
                 .video-first-box,
@@ -905,7 +904,7 @@
                 min-height: 430px;
                 display: flex;
                 flex-direction: column;
-                justify-content: center;    
+                justify-content: center;
             }
             &__entry {
                 left: 3vw;

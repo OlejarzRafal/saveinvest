@@ -12,6 +12,9 @@
     flex-direction: column;
     z-index: 9999999999;
     .logo-wrap {
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
         svg{
             .sail {
                 animation: sail 3s infinite cubic-bezier(0.74, 0.54, 0.73, 1.16);
@@ -22,7 +25,6 @@
             .boat{
                 animation: boat 3s infinite cubic-bezier(0.74, 0.54, 0.73, 1.16);
             }
-            
         }
     }
 }
