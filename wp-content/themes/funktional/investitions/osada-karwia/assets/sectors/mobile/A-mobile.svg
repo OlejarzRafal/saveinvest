@@ -4,7 +4,7 @@
             <rect id="Rectangle 4477" width="768" height="785" fill="#C4C4C4" />
         </mask>
         <g mask="url(#mask0_529_9995)">
-            <g class="area-click">
+            <g class="area-click area-click__sector">
                 <g data-plots-plot="1">
                     <path id="Vector" opacity="0.6" d="M167.875 328.548L171.856 331.589L214.889 334.846L219.486 333.384L228.296 316.492L180.213 313.048L167.875 328.548Z" fill="#36B122" stroke="#1D3D2B" stroke-width="2" stroke-miterlimit="10" />
                     <text id="1" fill="white" xml:space="preserve" style="white-space: pre" font-family="EB Garamond" font-size="16" letter-spacing="0em">

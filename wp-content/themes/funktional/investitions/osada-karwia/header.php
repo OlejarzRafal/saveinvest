@@ -85,7 +85,7 @@
                                 </li>
                                 <li class="btn-nav <?php if (strpos($_SERVER['REQUEST_URI'], "/dzialki/osadakarwia/o-osadzie/") !== false) {; ?> btn-nav--active  <?php }; ?>">
                                     <a href="<?php echo get_home_url(); ?>/dzialki/osadakarwia/o-osadzie/" class="text-main text-main--fw500 text-main--f15 text-main--ls3">
-                                        O ENKLAWIE
+                                        O OSADZIE
                                     </a>
                                 </li>
                                 <li class="btn-nav <?php if (strpos($_SERVER['REQUEST_URI'], "/dzialki/osadakarwia/lokalizacja/") !== false) {; ?> btn-nav--active  <?php }; ?>">

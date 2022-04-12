@@ -136,7 +136,7 @@ get_template_part('investitions/osada-karwia/header');
                                     <?php if ($mail_box1_service_sec3_contact_karwia = get_sub_field('mail_box1_service_sec3_contact_karwia')) : ?>
                                         <div class="person-info__email">
                                             <img src="<?php bloginfo('template_url'); ?>/assets/img/invest-karwia/contact/icon-mail-contact.svg" alt=" ikona email" />
-                                            <a class="text-main text-main--fw500" href="<?php echo $mail_box1_service_sec3_contact_karwia; ?>"><?php echo $mail_box1_service_sec3_contact_karwia; ?></a>
+                                            <a class="text-main text-main--fw500" href="mailto:<?php echo $mail_box1_service_sec3_contact_karwia; ?>"><?php echo $mail_box1_service_sec3_contact_karwia; ?></a>
                                         </div>
                                     <?php endif; ?>
                                     <?php if ($tel_box1_service_sec3_contact_karwia = get_sub_field('tel_box1_service_sec3_contact_karwia')) : ?>
@@ -181,7 +181,7 @@ get_template_part('investitions/osada-karwia/header');
 
                                         <div class="person-info__email">
                                             <img src="<?php bloginfo('template_url'); ?>/assets/img/invest-karwia/contact/icon-mail-contact.svg" alt=" ikona email" />
-                                            <a class="text-main text-main--fw500" href="<?php echo $mail_box2_service_sec3_contact_karwia; ?>"><?php echo $mail_box2_service_sec3_contact_karwia; ?></a>
+                                            <a class="text-main text-main--fw500" href="mailto:<?php echo $mail_box2_service_sec3_contact_karwia; ?>"><?php echo $mail_box2_service_sec3_contact_karwia; ?></a>
                                         </div>
                                     <?php endif; ?>
                                     <?php if ($tel_box2_service_sec3_contact_karwia = get_sub_field('tel_box2_service_sec3_contact_karwia')) : ?>

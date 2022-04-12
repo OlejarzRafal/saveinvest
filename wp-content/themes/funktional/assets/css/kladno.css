@@ -216,6 +216,9 @@ a:hover {
 .fancybox-container {
   z-index: 99999999; }
 
+.compensate-for-scrollbar {
+  margin-right: 0 !important; }
+
 .container {
   width: 100%;
   padding-right: 15px;

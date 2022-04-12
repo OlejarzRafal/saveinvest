@@ -201,7 +201,8 @@
         border: 1px solid rgba(191, 152, 117, 0.5);
         padding: 25px 40px;
         align-items: center;
-        height: 200px;
+        // height: 300px;
+        height: auto;
         justify-content: space-between;
         position: relative;
         &.param--status--wolna {
@@ -251,11 +252,11 @@
             width: 14%;
             display: flex;
             justify-content: center;
-            height: 190px;
+            // height: 190px;
+            height: auto;
             img {
-                width: 100%;
-                height: 100%;
-                object-fit: contain;
+                width: auto;
+                height: auto;
             }
         }
         .plot-info {

@@ -7,7 +7,7 @@
             <g class="area-hover">
                 <rect id="Rectangle 4481" opacity="0" x="432" y="275" width="1429" height="588" rx="280" fill="#C4C4C4" />
             </g>
-            <g class="area-click">
+            <g class="area-click area-click__sector">
                 <g data-plots-plot="1">
                     <path id="Vector" opacity="0.6" d="M528 728.955L536.857 735.721L632.598 742.967L642.824 739.714L662.426 702.132L555.45 694.47L528 728.955Z" fill="#36B122" stroke="#1D3D2B" stroke-width="2" stroke-miterlimit="10" />
                     <text id="1" fill="white" xml:space="preserve" style="white-space: pre" font-family="EB Garamond" font-size="26" letter-spacing="0em">
