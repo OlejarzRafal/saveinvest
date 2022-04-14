@@ -1,0 +1,244 @@
+footer {
+    margin-top: 200px;
+    .footer-top {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        height: 650px;
+        &::after {
+            content: "";
+            position: absolute;
+            left: 50%;
+            bottom: -75px;
+            transform: translate(-50%, 0%) rotate(0deg);
+            width: 175px;
+            height: 175px;
+            background: url(../img/sea-golf/footer/circle-rotate.svg);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: contain;
+            animation: rotate-text 30s infinite linear;
+        }
+        &__paralax {
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            position: relative;
+            &__box {
+                position: absolute;
+                top: 0;
+                left: 50%;
+                transform: translateX(-50%);
+                min-width: 1920px;
+                height: fit-content;
+            }
+        }
+        &__box {
+            position: absolute;
+            left: 50%;
+            top: -85px;
+            transform: translate(-50%, 0%);
+            width: 400px;
+            height: 400px;
+            display: flex;
+            justify-content: center;
+            background-color: $brown;
+            &__content {
+                margin: 22px;
+                padding: 55px 0;
+                height: auto;
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                align-items: center;
+                border: 1px solid #c4c4c43b;
+                &::after {
+                    content: "";
+                    position: absolute;
+                    left: 50%;
+                    top: 14px;
+                    transform: translate(-50%, 0%);
+                    width: 130px;
+                    height: 17px;
+                    background: $brown
+                        url(../img/sea-golf/footer/element-footer-top.svg);
+                    background-repeat: no-repeat;
+                    background-position: center;
+                    background-size: 103px 17px;
+                    pointer-events: none;
+                }
+                &__text {
+                    .f-h4 {
+                        text-align: center;
+                    }
+                }
+            }
+        }
+        @media (max-width: $lg) {
+            height: 500px;
+            &::after {
+                bottom: -42px;
+                width: 100px;
+                height: 100px;
+            }
+            &__paralax {
+                &__box {
+                    min-width: 1300px;
+                }
+            }
+            &__box {
+                top: -50px;
+                width: 300px;
+                height: 300px;
+                &__content {
+                    margin: 15px;
+                    padding: 45px 0;
+                    &::after {
+                        top: 7px;
+                    }
+                }
+            }
+        }
+    }
+    .footer {
+        margin-top: 155px;
+        padding: 80px 0 55px;
+        width: 100%;
+        height: auto;
+        background-color: $brown;
+        position: relative;
+
+        &::after {
+            content: "";
+            position: absolute;
+            left: 50%;
+            top: 0;
+            transform: translate(-50%, 0%);
+            width: 250px;
+            height: 125px;
+            background: url(../img/sea-golf/footer/element-footer-bottom.png);
+            background-repeat: no-repeat;
+            background-size: cover;
+            pointer-events: none;
+        }
+        .footer-box {
+            margin: 40px 0 0;
+            &__title {
+                height: 25px;
+            }
+            &__title-name-firm {
+                position: relative;
+                width: 120%;
+            }
+            &__info {
+                margin: 30px 0 0;
+                display: flex;
+                flex-direction: column;
+                p {
+                    margin: 0;
+                }
+            }
+            &__map,
+            &__office {
+                a {
+                    transition: 0.2s;
+                    width: fit-content;
+                    &:hover {
+                        color: $gold-medium;
+                    }
+                }
+            }
+            &__map {
+                a {
+                    position: relative;
+                    margin-bottom: 10px;
+                    &::before {
+                        content: "";
+                        position: absolute;
+                        width: 100%;
+                        transform: scaleX(0);
+                        height: 1px;
+                        bottom: 0px;
+                        left: 0;
+                        color: #b17b25;
+                        background: currentcolor;
+                        transform-origin: right;
+                        transition: transform 0.25s ease-out;
+                    }
+                    &:hover::before {
+                        transform: scaleX(1);
+                        transform-origin: left;
+                    }
+                }
+            }
+        }
+        &__text-bottom {
+            margin: 30px 0 0;
+            padding-top: 25px;
+            border-top: 1px solid #b7976342;
+            display: flex;
+            justify-content: flex-start;
+        }
+        &__text-created {
+            margin: 40px 0 0;
+            display: flex;
+            justify-content: center;
+            .dot-footer {
+                margin: auto 25px;
+                width: 8px;
+                height: 8px;
+                display: inline-block;
+                border-radius: 50%;
+                background-color: $gold-medium;
+            }
+            a {
+                position: relative;
+                top: 2px;
+                margin-right: 5px;
+            }
+        }
+        @media (max-width: 1399px) {
+            .footer-box {
+                &__title,
+                &__info,
+                a {
+                    p {
+                        font-size: 13px;
+                    }
+                    font-size: 13px;
+                }
+            }
+            .footer-box {
+                &__map {
+                    a {
+                        font-size: 10px;
+                    }
+                }
+            }
+        }
+        @media (max-width: $lg) {
+            margin-top: 60px;
+        }
+        @media (max-width: 767px) {
+            padding: 150px 0 30px;
+            &__text-created {
+                margin: 30px 0 0;
+            }
+            .footer-box {
+                &__title {
+                    height: auto;
+                }
+            }
+        }
+    }
+    @keyframes rotate-text {
+        0% {
+            transform: translate(-50%, 0%) rotate(0deg);
+        }
+        100% {
+            transform: translate(-50%, 0%) rotate(360deg);
+        }
+    }
+}

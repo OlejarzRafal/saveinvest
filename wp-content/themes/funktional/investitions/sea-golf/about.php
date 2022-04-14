@@ -5,7 +5,7 @@
  * Template Post Type: sea-golf
  */
 
-gget_template_part('investitions/sea-golf/header');
+get_template_part('investitions/sea-golf/header');
 ?>
 
 
