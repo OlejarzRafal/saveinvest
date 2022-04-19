@@ -1,0 +1,270 @@
+// /*FONT*/
+@import url("https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,400&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap");
+$playfair: "Playfair Display", serif;
+$mulish: "Mulish", sans-serif;
+
+// /*   Resolution  */
+$xxxl: 1679px;
+$xxl: 1399px;
+$xl: 1199px;
+$lg: 991px;
+$md: 767px;
+$sm: 575px;
+
+// /*styl-fonts*/
+h1 {
+    font-size: 82px;
+    line-height: 110px;
+    @media (max-width: $lg) {
+        font-size: 50px;
+        line-height: 70px;
+    }
+}
+
+h2 {
+    font-size: 56px;
+    line-height: 67px;
+    @media (max-width: $lg) {
+        font-size: 36px;
+        line-height: 42px;
+    }
+}
+h3 {
+    font-size: 52px;
+    line-height: 69px;
+    @media (max-width: $lg) {
+        font-size: 34px;
+        line-height: 40px;
+    }
+}
+h4 {
+    font-size: 44px;
+    line-height: 53px;
+    @media (max-width: $lg) {
+        font-size: 30px;
+        line-height: 35px;
+    }
+}
+h5 {
+    font-size: 32px;
+    line-height: 38.5px;
+    @media (max-width: $lg) {
+        font-size: 18px;
+        line-height: 22px;
+    }
+}
+h6 {
+    font-size: 22px;
+    line-height: 29px;
+    @media (max-width: $lg) {
+        font-size: 16px;
+        line-height: 20px;
+    }
+}
+.f-h1,
+.f-h2,
+.f-h3,
+.f-h4,
+.f-h5,
+.f-h6 {
+    font-family: $playfair;
+    font-style: normal;
+    color: $white;
+    font-weight: 400;
+    &--gold-medium {
+        color: $gold-medium;
+    }
+    &--gold-dark {
+        color: $gold-dark;
+    }
+    &--black-dark {
+        color: $black-dark;
+    }
+    &--fw500 {
+        font-weight: 500;
+    }
+    &--fw500-italic {
+        font-weight: 500;
+        font-style: italic;
+    }
+    &--fw600-italic {
+        font-weight: 600;
+        font-style: italic;
+    }
+    &--f20 {
+        font-size: 20px;
+        line-height: 140%;
+        @media (max-width: $lg) {
+            font-size: 16px;
+        }
+    }
+    &--f24 {
+        font-size: 24px;
+        line-height: 31px;
+        @media (max-width: $lg) {
+            font-size: 18px;
+            line-height: 20px;
+        }
+    }
+    &--f28 {
+        font-size: 28px;
+        line-height: 37px;
+        @media (max-width: $lg) {
+            font-size: 20px;
+            line-height: 25px;
+        }
+    }
+    &--f35 {
+        font-size: 35px;
+        line-height: 42px;
+        @media (max-width: $lg) {
+            font-size: 26px;
+            line-height: 28px;
+        }
+    }
+    &--f42 {
+        font-size: 42px;
+        line-height: 56px;
+        @media (max-width: $lg) {
+            font-size: 28px;
+            line-height: 32px;
+        }
+    }
+    &--f80 {
+        font-size: 80px;
+        line-height: 106px;
+        @media (max-width: $lg) {
+            font-size: 55px;
+            line-height: 75px;
+        }
+    }
+    &--ls4 {
+        letter-spacing: 0.04em;
+    }
+    &--ls2 {
+        letter-spacing: 0.2em;
+    }
+
+    @media (max-width: $xxl) {
+        line-height: normal;
+    }
+}
+
+.text-main,
+p {
+    font-family: $mulish;
+    font-style: normal;
+    color: $black-dark;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 200%;
+    @media (max-width: $lg) {
+        font-size: 14px;
+    }
+    &--white {
+        color: $white;
+    }
+    &--gold-dark {
+        color: $gold-dark;
+    }
+    &--grey {
+        color: $grey;
+    }
+    &--nav-font {
+        color: $nav-font;
+    }
+    &--black-medium {
+        color: $black-medium;
+    }
+    &--f11 {
+        font-size: 11px;
+        line-height: 16px;
+    }
+    &--f12 {
+        font-size: 12px;
+        line-height: 160%;
+    }
+    &--f13 {
+        font-size: 13px;
+        line-height: 16px;
+    }
+    &--f14 {
+        font-size: 14px;
+        line-height: 25px;
+    }
+    &--f15 {
+        font-size: 15px;
+        line-height: 20px;
+    }
+    &--f18 {
+        font-size: 18px;
+        line-height: 22px;
+    }
+    &--f20 {
+        font-size: 20px;
+        line-height: 30px;
+        @media (max-width: $xl) {
+            font-size: 16px;
+            line-height: 18px;
+        }
+    }
+    &--f28 {
+        font-size: 28px;
+        line-height: 37px;
+        @media (max-width: $xl) {
+            font-size: 18px;
+            line-height: 22px;
+        }
+    }
+    &--f36 {
+        font-size: 36px;
+        line-height: 65px;
+        @media (max-width: $xl) {
+            font-size: 28px;
+            line-height: 45px;
+        }
+    }
+    &--f40 {
+        font-size: 40px;
+        line-height: 46px;
+        @media (max-width: $xl) {
+            font-size: 32px;
+            line-height: 38px;
+        }
+    }
+    &--fw400 {
+        font-weight: 400;
+    }
+    &--fw400-italic {
+        font-weight: 400;
+        font-style: italic;
+    }
+    &--fw700 {
+        font-weight: 700;
+    }
+    &--fw800 {
+        font-weight: 800;
+    }
+    &--fw900 {
+        font-weight: 900;
+    }
+    &--ls2 {
+        letter-spacing: 0.2em;
+    }
+    &--ls4 {
+        letter-spacing: 0.04em;
+    }
+    &--ls5 {
+        letter-spacing: 0.5em;
+    }
+    &--opacity5 {
+        opacity: 0.5;
+    }
+    &--opacity7 {
+        opacity: 0.7;
+    }
+    @media (max-width: $xxl) {
+        line-height: 23px;
+    }
+}
+

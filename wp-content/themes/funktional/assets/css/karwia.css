@@ -8398,9 +8398,39 @@ a:hover {
   top: 0;
   right: 0;
 }
+.osada-karwia-template-plot-pricing .plots-map .plot-sectors__svg path,
+.osada-karwia-template-plot-pricing .plots-map .plot-sector__svg path {
+  opacity: 0;
+}
 @media (max-width: 767px) {
   .osada-karwia-template-plot-pricing .plots-map .plot-sectors__desktop,
 .osada-karwia-template-plot-pricing .plots-map .plot-sector__desktop {
+    display: none;
+  }
+}
+.osada-karwia-template-plot-pricing .plots-map .plot-sectors__desktop__apla,
+.osada-karwia-template-plot-pricing .plots-map .plot-sector__desktop__apla {
+  position: absolute;
+  top: 25.8%;
+  left: 8.4%;
+  padding: 25px;
+  width: auto;
+  height: auto;
+  background: #022545bb;
+  z-index: 1;
+}
+.osada-karwia-template-plot-pricing .plots-map .plot-sectors__desktop__apla .text-main,
+.osada-karwia-template-plot-pricing .plots-map .plot-sector__desktop__apla .text-main {
+  font-size: 22px;
+  line-height: 37px;
+}
+.osada-karwia-template-plot-pricing .plots-map .plot-sectors__desktop__apla .text-main b sup,
+.osada-karwia-template-plot-pricing .plots-map .plot-sector__desktop__apla .text-main b sup {
+  line-height: 0px;
+}
+@media (max-width: 1199px) {
+  .osada-karwia-template-plot-pricing .plots-map .plot-sectors__desktop__apla,
+.osada-karwia-template-plot-pricing .plots-map .plot-sector__desktop__apla {
     display: none;
   }
 }
@@ -8530,18 +8560,10 @@ a:hover {
 .osada-karwia-template-plot-pricing .plots-map .plot-sector [data-plots-sectors] {
     overflow-x: scroll;
   }
-  .osada-karwia-template-plot-pricing .plots-map .plot-sectors__all [data-plots-sectors],
-.osada-karwia-template-plot-pricing .plots-map .plot-sector__all [data-plots-sectors] {
-    height: 674px;
-  }
   .osada-karwia-template-plot-pricing .plots-map .plot-sectors__all__mobile,
 .osada-karwia-template-plot-pricing .plots-map .plot-sector__all__mobile {
     height: 669px;
     width: 768px;
-  }
-  .osada-karwia-template-plot-pricing .plots-map .plot-sectors__single [data-plots-sector],
-.osada-karwia-template-plot-pricing .plots-map .plot-sector__single [data-plots-sector] {
-    height: 790px;
   }
   .osada-karwia-template-plot-pricing .plots-map .plot-sectors__single__mobile,
 .osada-karwia-template-plot-pricing .plots-map .plot-sector__single__mobile {

@@ -105,9 +105,6 @@ $PlotsFront->getScriptsAndStyles('Osada Karwia');
         <div class="plot-sectors__all">
             <div data-plots-sectors>
                 <div class="plot-sectors__desktop">
-                    <div class="plot-sectors__desktop__apla">
-                        <div class="text-main text-main--white">Ceny działek w sąsiedniej Karwi<br> to nawet 760 000 zł za 850 m2</div>
-                    </div>
                     <img class="plot-sectors__img" src="<?= get_theme_file_uri('/investitions/osada-karwia/assets/sectors/desktop/All-desktop.png') ?>">
                     <?= file_get_contents(get_theme_file_path('/investitions/osada-karwia/assets/sectors/desktop/All-desktop.svg')) ?>
                 </div>
@@ -128,7 +125,7 @@ $PlotsFront->getScriptsAndStyles('Osada Karwia');
                     <img class="plot-sectors__img" src="<?= get_theme_file_uri('/investitions/osada-karwia/assets/sectors/mobile/A-mobile.png') ?>">
                     <?= file_get_contents(get_theme_file_path('/investitions/osada-karwia/assets/sectors/mobile/A-mobile.svg')) ?>
                 </div>
-
+                
                 <div class="plot-sectors__backMainMap">
                     <div data-plots-back-to-sectors>
                         <p>WRÓĆ DO MAPY SEKTORÓW</p>

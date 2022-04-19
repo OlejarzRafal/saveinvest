@@ -39,4 +39,13 @@ function my_acf_op_init()
         'parent_slug'    => 'footer-all',
         'redirect'    => false
     ));
+    // Register options page.
+    $option_page = acf_add_options_page(array(
+        'page_title'   => 'Sea Golf',
+        'menu_title'  => 'Sea Golf',
+        'menu_slug'   => 'sea-golf',
+        'capability'  => 'edit_posts',
+        'parent_slug'    => 'footer-all',
+        'redirect'    => false
+    ));
 };
