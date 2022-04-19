@@ -1,0 +1,114 @@
+.footer {
+    background-color: #141c09;
+    color: white;
+    padding: 128px 0;
+    position: relative;
+    font-size: 14px;
+    line-height: 26px;
+    letter-spacing: 0.8px;
+    &::after {
+      content: url("../img/footer-bg.svg");
+      position: absolute;
+      bottom: 0;
+      right: -47px;
+      height: 262px;
+      width: 309px;
+      z-index: 2;
+    }
+    &__logo {
+      max-width: 195px;
+      margin-bottom: 26px;
+    }
+    &__company {
+      color: #898d84;
+      font-weight: 300;
+      strong {
+        color: white;
+        font-weight: normal;
+      }
+    }
+    &__sales {
+      margin-bottom: 42px;
+    }
+    &__name,
+    &__title {
+      text-transform: uppercase;
+      margin-bottom: 8px;
+    }
+    &__position {
+      color: #898d84;
+    }
+    &__phone,
+    &__mail {
+      font-weight: 300;
+      color: #898d84;
+      text-decoration: none;
+      &:hover {
+        color: white;
+      }
+    }
+    &__president {
+      color: #898d84;
+      font-weight: 300;
+      strong {
+        color: white;
+        font-weight: normal;
+      }
+      p:first-of-type {
+        margin-top: 0;
+      }
+    }
+    &__menu {
+      ul {
+        margin: 0;
+        padding: 0;
+        li {
+          list-style: none;
+          a {
+            color: #ac9e54;
+            text-decoration: none;
+            text-transform: uppercase;
+            display: block;
+            margin-bottom: 20px;
+            &:hover {
+              color: white;
+            }
+          }
+        }
+      }
+    }
+  }
+  @media screen and (max-width: $lg - 1px) {
+    .footer {
+      &__menu-box {
+        display: none;
+      }
+    }
+  }
+  @media screen and (max-width: $sm - 1px) {
+    .footer {
+      padding: 60px 0;
+      &__logo,
+      &__company,
+      &__name,
+      &__title,
+      &__position,
+      &__phone,
+      &__mail,
+      &__president {
+        margin-left: 27px;
+      }
+      &__president {
+        margin-top: 42px;
+      }
+    }
+  }
+  
+  @media (min-width: 1660px) {
+    .footer {
+      .container {
+        max-width: 1394px;
+      }
+    }
+  }
+  

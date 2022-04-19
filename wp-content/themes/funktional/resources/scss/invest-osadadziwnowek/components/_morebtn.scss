@@ -1,0 +1,50 @@
+.more-btn {
+    padding: 12px;
+    color: white;
+    text-transform: uppercase;
+    text-decoration: none;
+    text-align: center;
+    position: relative;
+    display: block;
+    margin: auto;
+    width: max-content;
+    min-width: 200px;
+    cursor: pointer;
+    user-select: none;
+    outline: none;
+    &--repeat {
+        margin: 35px 0 0 0;
+        color: $main;
+        font-size: 17px;
+    }
+    &::after,
+    &::before {
+        content: "";
+        position: absolute;
+        height: 1px;
+        width: 83px;
+        background-color: #e2cf6c;
+        transition: all ease-in-out 0.3s;
+    }
+    &::before {
+        top: 0;
+        left: 0;
+    }
+    &::after {
+        bottom: 0;
+        right: 0;
+    }
+    &:hover {
+        &::after,
+        &::before {
+            width: 100%;
+        }
+    }
+}
+
+@media screen and (max-width: $sm - 1px) {
+    .more__btn {
+        font-size: 14px;
+        width: 200px;
+    }
+}

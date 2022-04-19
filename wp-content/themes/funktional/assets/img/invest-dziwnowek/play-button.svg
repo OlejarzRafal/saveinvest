@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" id="prefix__play-button" width="72.163" height="72.163" viewBox="0 0 72.163 72.163">
+    <defs>
+        <style>
+            .prefix__cls-1{fill:#fff}
+        </style>
+    </defs>
+    <g id="prefix__Group_1143" data-name="Group 1143">
+        <path id="prefix__Path_1575" d="M225.1 167.117l-19.9-13.608a1.53 1.53 0 00-2.4 1.267v27.216a1.527 1.527 0 002.4 1.267l19.9-13.608a1.531 1.531 0 000-2.534zm-19.222 11.973v-21.414l15.622 10.707z" class="prefix__cls-1" data-name="Path 1575" transform="translate(-174.553 -132.302)"/>
+        <path id="prefix__Path_1576" d="M47.082 11a36.082 36.082 0 1036.081 36.082A36.121 36.121 0 0047.082 11zm0 69.085a33 33 0 1133-33 33.035 33.035 0 01-33 33z" class="prefix__cls-1" data-name="Path 1576" transform="translate(-11 -11)"/>
+    </g>
+</svg>

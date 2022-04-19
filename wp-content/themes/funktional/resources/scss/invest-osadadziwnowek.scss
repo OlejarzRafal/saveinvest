@@ -1,8 +1,42 @@
-@import "invest-osadadziwnowek/test";
+@import "invest-osadadziwnowek/abstracts/_variables";
 
+@import "invest-osadadziwnowek/components/_form";
+@import "invest-osadadziwnowek/components/_morebtn";
+@import "invest-osadadziwnowek/components/_secicons";
+@import "invest-osadadziwnowek/components/_seclast";
+@import "invest-osadadziwnowek/components/_secrepeats";
 
+@import "invest-osadadziwnowek/layout/custombstrp";
+@import "invest-osadadziwnowek/layout/footer";
+@import "invest-osadadziwnowek/layout/header";
 
+@import "invest-osadadziwnowek/pages/about";
+@import "invest-osadadziwnowek/pages/contact";
+@import "invest-osadadziwnowek/pages/front-page";
+@import "invest-osadadziwnowek/pages/gallery";
+@import "invest-osadadziwnowek/pages/localization";
 
+* {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+  
+  body,
+  html {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden !important;
+  }
+  body {
+    font-family: $font-main;
+    overflow: hidden !important;
+  }
 
 
 // @import "invest-kladno/global/colors";
