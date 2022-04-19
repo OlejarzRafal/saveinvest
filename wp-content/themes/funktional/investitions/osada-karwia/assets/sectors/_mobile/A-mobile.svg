@@ -1,0 +1,323 @@
+<svg class="plot-sectors__svg"  viewBox="0 0 768 785" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <g id="Mask group">
+        <mask id="mask0_529_9995" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="768" height="785">
+            <rect id="Rectangle 4477" width="768" height="785" fill="#C4C4C4" />
+        </mask>
+        <g mask="url(#mask0_529_9995)">
+            <g class="area-click area-click__sector">
+                <g data-plots-plot="1">
+                    <path id="Vector" opacity="0.6" d="M167.875 328.548L171.856 331.589L214.889 334.846L219.486 333.384L228.296 316.492L180.213 313.048L167.875 328.548Z" fill="#36B122" stroke="#1D3D2B" stroke-width="2" stroke-miterlimit="10" />
+                    <text id="1" fill="white" xml:space="preserve" style="white-space: pre" font-family="EB Garamond" font-size="16" letter-spacing="0em">
+                        <tspan x="195.078" y="329.172">1</tspan>
+                    </text>
+                </g>
+                <g data-plots-plot="2">
+                    <path id="Vector_2" opacity="0.6" d="M198.506 289.995L193.244 296.895L179.758 313.048L227.841 316.492L230.283 311.806L241.544 310.011L229.738 291.179L213.789 265.737L198.506 289.995Z" fill="#36B122" stroke="#1D3D2B" stroke-width="2" stroke-miterlimit="10" />
+                    <text id="2" fill="white" xml:space="preserve" style="white-space: pre" font-family="EB Garamond" font-size="16" letter-spacing="0em">
+                        <tspan x="209.078" y="305.172">2</tspan>
+                    </text>
+                </g>
+                <g data-plots-plot="3">
+                    <path id="Vector_3" opacity="0.6" d="M219.163 257.116L213.797 265.737L229.741 291.179L241.547 310.011L269.281 305.595L256.701 286.908L235.411 255.259L219.163 257.116Z" fill="#36B122" stroke="#1D3D2B" stroke-width="2" stroke-miterlimit="10" />
+                    <text id="3" fill="white" xml:space="preserve" style="white-space: pre" font-family="EB Garamond" font-size="16" letter-spacing="0em">
+                        <tspan x="235.078" y="290.172">3</tspan>
+                    </text>
+                </g>
+                <g data-plots-plot="4">
+                    <path id="Vector_4" opacity="0.6" d="M235.41 255.259L256.7 286.908L269.279 305.595L296.589 301.249L283.19 282.708L261.334 252.293L235.41 255.259Z" fill="#36B122" stroke="#1D3D2B" stroke-width="2" stroke-miterlimit="10" />
+                    <text id="4" fill="white" xml:space="preserve" style="white-space: pre" font-family="EB Garamond" font-size="16" letter-spacing="0em">
+                        <tspan x="261.078" y="286.172">4</tspan>
+                    </text>
+                </g>
+                <g data-plots-plot="5">
+                    <path id="Vector_5" opacity="0.6" d="M261.336 252.293L283.192 282.707L296.59 301.249L324.183 296.853L310.089 278.449L287.738 249.264L261.336 252.293Z" fill="#36B122" stroke="#1D3D2B" stroke-width="2" stroke-miterlimit="10" />
+                    <text id="5" fill="white" xml:space="preserve" style="white-space: pre" font-family="EB Garamond" font-size="16" letter-spacing="0em">
+                        <tspan x="288.078" y="282.172">5</tspan>
+                    </text>
+                </g>
+                <g data-plots-plot="6">
+                    <path id="Vector_6" opacity="0.6" d="M287.746 249.264L310.097 278.449L324.19 296.853L351.545 292.5L336.699 274.232L313.953 246.26L287.746 249.264Z" fill="#36B122" stroke="#1D3D2B" stroke-width="2" stroke-miterlimit="10" />
+                    <text id="6" fill="white" xml:space="preserve" style="white-space: pre" font-family="EB Garamond" font-size="16" letter-spacing="0em">
+                        <tspan x="315.078" y="279.172">6</tspan>
+                    </text>
+                </g>
+                <g data-plots-plot="7">
+                    <path id="Vector_7" opacity="0.6" d="M313.949 246.26L336.695 274.233L351.542 292.5L379.209 288.092L363.597 269.974L340.551 243.219L313.949 246.26Z" fill="#36B122" stroke="#1D3D2B" stroke-width="2" stroke-miterlimit="10" />
+                    <text id="7" fill="white" xml:space="preserve" style="white-space: pre" font-family="EB Garamond" font-size="16" letter-spacing="0em">
+                        <tspan x="343.078" y="275.172">7</tspan>
+                    </text>
+                </g>
+                <g data-plots-plot="8">
+                    <path id="Vector_8" opacity="0.6" d="M340.551 243.219L363.596 269.974L379.208 288.092L406.48 283.751L390.119 265.77L366.862 240.203L340.551 243.219Z" fill="#36B122" stroke="#1D3D2B" stroke-width="2" stroke-miterlimit="10" />
+                    <text id="8" fill="white" xml:space="preserve" style="white-space: pre" font-family="EB Garamond" font-size="16" letter-spacing="0em">
+                        <tspan x="369.668" y="271.475">8</tspan>
+                    </text>
+                </g>
+                <g data-plots-plot="9">
+                    <path id="Vector_9" opacity="0.6" d="M366.859 240.203L390.117 265.77L406.478 283.75L433.733 279.413L416.627 261.57L393.245 237.183L366.859 240.203Z" fill="#36B122" stroke="#1D3D2B" stroke-width="2" stroke-miterlimit="10" />
+                    <text id="9" fill="white" xml:space="preserve" style="white-space: pre" font-family="EB Garamond" font-size="16" letter-spacing="0em">
+                        <tspan x="397.535" y="267.88">9</tspan>
+                    </text>
+                </g>
+                <g data-plots-plot="10">
+                    <path id="Vector_10" opacity="0.6" d="M393.254 237.183L416.636 261.57L433.741 279.413L460.531 275.147L442.693 257.444L419.299 234.204L393.254 237.183Z" fill="#36B122" stroke="#1D3D2B" stroke-width="2" stroke-miterlimit="10" />
+                    <text id="10" fill="white" xml:space="preserve" style="white-space: pre" font-family="EB Garamond" font-size="16" letter-spacing="0em">
+                        <tspan x="420.312" y="263.172">10</tspan>
+                    </text>
+                </g>
+                <g data-plots-plot="11">
+                    <path id="Vector_11" opacity="0.6" d="M419.289 234.204L442.684 257.444L460.521 275.146L487.618 270.83L469.036 253.269L445.679 231.18L419.289 234.204Z" fill="#36B122" stroke="#1D3D2B" stroke-width="2" stroke-miterlimit="10" />
+                    <text id="11" fill="white" xml:space="preserve" style="white-space: pre" font-family="EB Garamond" font-size="16" letter-spacing="0em">
+                        <tspan x="447.812" y="259.172">11</tspan>
+                    </text>
+                </g>
+                <g data-plots-plot="12">
+                    <path id="Vector_12" opacity="0.6" d="M445.684 231.18L469.041 253.269L487.623 270.83L514.762 266.509L495.443 249.086L472.232 228.143L445.684 231.18Z" fill="#36B122" stroke="#1D3D2B" stroke-width="2" stroke-miterlimit="10" />
+                    <text id="12" fill="white" xml:space="preserve" style="white-space: pre" font-family="EB Garamond" font-size="16" letter-spacing="0em">
+                        <tspan x="473.312" y="256.172">12</tspan>
+                    </text>
+                </g>
+                <g data-plots-plot="13">
+                    <path id="Vector_13" opacity="0.6" d="M472.23 228.143L495.442 249.085L514.76 266.509L541.421 262.263L521.412 244.968L498.425 225.143L472.23 228.143Z" fill="#36B122" stroke="#1D3D2B" stroke-width="2" stroke-miterlimit="10" />
+                    <text id="13" fill="white" xml:space="preserve" style="white-space: pre" font-family="EB Garamond" font-size="16" letter-spacing="0em">
+                        <tspan x="500.312" y="252.172">13</tspan>
+                    </text>
+                </g>
+                <g data-plots-plot="14">
+                    <path id="Vector_14" opacity="0.6" d="M498.426 225.143L521.413 244.969L541.422 262.264L568.103 258.018L547.337 240.864L524.662 222.136L498.426 225.143Z" fill="#36B122" stroke="#1D3D2B" stroke-width="2" stroke-miterlimit="10" />
+                    <text id="14" fill="white" xml:space="preserve" style="white-space: pre" font-family="EB Garamond" font-size="16" letter-spacing="0em">
+                        <tspan x="525.812" y="248.172">14</tspan>
+                    </text>
+                </g>
+                <g data-plots-plot="15">
+                    <path id="Vector_15" opacity="0.6" d="M524.66 222.136L547.335 240.864L568.101 258.018L595.148 253.71L573.65 236.693L551.383 219.07L524.66 222.136Z" fill="#36B122" stroke="#1D3D2B" stroke-width="2" stroke-miterlimit="10" />
+                    <text id="15" fill="white" xml:space="preserve" style="white-space: pre" font-family="EB Garamond" font-size="16" letter-spacing="0em">
+                        <tspan x="553.812" y="245.172">15</tspan>
+                    </text>
+                </g>
+                <g data-plots-plot="16">
+                    <path id="Vector_16" opacity="0.6" d="M551.375 219.069L573.643 236.693L595.141 253.709L621.738 249.476L599.521 232.592L577.744 216.045L551.375 219.069Z" fill="#36B122" stroke="#1D3D2B" stroke-width="2" stroke-miterlimit="10" />
+                    <text id="16" fill="white" xml:space="preserve" style="white-space: pre" font-family="EB Garamond" font-size="16" letter-spacing="0em">
+                        <tspan x="579.312" y="240.172">16</tspan>
+                    </text>
+                </g>
+                <g data-plots-plot="17">
+                    <path id="Vector_17" opacity="0.6" d="M577.746 216.045L599.523 232.592L621.74 249.476L648.388 245.234L625.455 228.488L604.252 213.008L577.746 216.045Z" fill="#36B122" stroke="#1D3D2B" stroke-width="2" stroke-miterlimit="10" />
+                    <text id="17" fill="white" xml:space="preserve" style="white-space: pre" font-family="EB Garamond" font-size="16" letter-spacing="0em">
+                        <tspan x="605.812" y="237.172">17</tspan>
+                    </text>
+                </g>
+                <g data-plots-plot="18">
+                    <path id="Vector_18" opacity="0.6" d="M604.258 213.008L625.46 228.488L648.394 245.234L675.391 240.934L651.734 224.325L631.213 209.921L604.258 213.008Z" fill="#36B122" stroke="#1D3D2B" stroke-width="2" stroke-miterlimit="10" />
+                    <text id="18" fill="white" xml:space="preserve" style="white-space: pre" font-family="EB Garamond" font-size="16" letter-spacing="0em">
+                        <tspan x="631.312" y="232.172">18</tspan>
+                    </text>
+                </g>
+                <g data-plots-plot="19">
+                    <path id="Vector_19" opacity="0.6" d="M728.967 198.725L631.211 209.921L651.731 224.325L675.388 240.934L689.677 238.658L689.86 241.977L738.884 234.167L736.538 211.001L734.903 197.321L728.967 198.725Z" fill="#36B122" stroke="#1D3D2B" stroke-width="2" stroke-miterlimit="10" />
+                    <text id="19" fill="white" xml:space="preserve" style="white-space: pre" font-family="EB Garamond" font-size="16" letter-spacing="0em">
+                        <tspan x="691.312" y="226.172">19</tspan>
+                    </text>
+                </g>
+                <g data-plots-plot="20">
+                    <path id="Vector_20" opacity="0.6" d="M690.117 253.734L741.42 256.688L738.883 234.167L689.859 241.977L690.117 253.734Z" fill="#36B122" stroke="#1D3D2B" stroke-width="2" stroke-miterlimit="10" />
+                    <text id="20" fill="white" xml:space="preserve" style="white-space: pre" font-family="EB Garamond" font-size="16" letter-spacing="0em">
+                        <tspan x="707.312" y="253.172">20</tspan>
+                    </text>
+                </g>
+                <g data-plots-plot="21">
+                    <path id="Vector_21" opacity="0.6" d="M690.467 265.849L742.635 268.964L741.42 256.688L690.117 253.734L690.467 265.849Z" fill="#36B122" stroke="#1D3D2B" stroke-width="2" stroke-miterlimit="10" />
+                    <text id="21" fill="white" xml:space="preserve" style="white-space: pre" font-family="EB Garamond" font-size="16" letter-spacing="0em">
+                        <tspan x="708.812" y="266.172">21</tspan>
+                    </text>
+                </g>
+                <g data-plots-plot="22">
+                    <path id="Vector_22" opacity="0.6" d="M690.91 278.287L743.952 281.682L742.637 268.965L690.469 265.849L690.91 278.287Z" fill="#36B122" stroke="#1D3D2B" stroke-width="2" stroke-miterlimit="10" />
+                    <text id="22" fill="white" xml:space="preserve" style="white-space: pre" font-family="EB Garamond" font-size="16" letter-spacing="0em">
+                        <tspan x="709.312" y="279.172">22</tspan>
+                    </text>
+                </g>
+                <g data-plots-plot="52">
+                    <path id="Vector_23" opacity="0.6" d="M646.454 284.735L669.728 280.984L674.778 277.415L674.516 263.527L628.695 270.888L646.454 284.735Z" fill="#36B122" stroke="#1D3D2B" stroke-width="2" stroke-miterlimit="10" />
+                    <text id="52" fill="white" xml:space="preserve" style="white-space: pre" font-family="EB Garamond" font-size="16" letter-spacing="0em">
+                        <tspan x="648.812" y="280.172">52</tspan>
+                    </text>
+                </g>
+                <g data-plots-plot="51">
+                    <path id="Vector_24" opacity="0.6" d="M628.701 270.888L620.618 272.184L601.188 275.304L618.081 289.309L646.459 284.735L628.701 270.888Z" fill="#36B122" stroke="#1D3D2B" stroke-width="2" stroke-miterlimit="10" />
+                    <text id="51" fill="white" xml:space="preserve" style="white-space: pre" font-family="EB Garamond" font-size="16" letter-spacing="0em">
+                        <tspan x="615.812" y="285.172">51</tspan>
+                    </text>
+                </g>
+                <g data-plots-plot="50">
+                    <path id="Vector_25" opacity="0.6" d="M593.131 276.601L573.68 279.725L590.257 293.792L618.082 289.309L601.189 275.304L593.131 276.601Z" fill="#36B122" stroke="#1D3D2B" stroke-width="2" stroke-miterlimit="10" />
+                    <text id="50" fill="white" xml:space="preserve" style="white-space: pre" font-family="EB Garamond" font-size="16" letter-spacing="0em">
+                        <tspan x="588.312" y="290.172">50</tspan>
+                    </text>
+                </g>
+                <g data-plots-plot="49">
+                    <path id="Vector_26" opacity="0.6" d="M565.525 281.033L545.949 284.178L562.081 298.333L590.26 293.792L573.683 279.725L565.525 281.033Z" fill="#36B122" stroke="#1D3D2B" stroke-width="2" stroke-miterlimit="10" />
+                    <text id="49" fill="white" xml:space="preserve" style="white-space: pre" font-family="EB Garamond" font-size="16" letter-spacing="0em">
+                        <tspan x="560.812" y="294.172">49</tspan>
+                    </text>
+                </g>
+                <g data-plots-plot="48">
+                    <path id="Vector_27" opacity="0.6" d="M518.031 288.661L533.406 302.957L562.075 298.333L545.944 284.178L518.031 288.661Z" fill="#36B122" stroke="#1D3D2B" stroke-width="2" stroke-miterlimit="10" />
+                    <text id="48" fill="white" xml:space="preserve" style="white-space: pre" font-family="EB Garamond" font-size="16" letter-spacing="0em">
+                        <tspan x="531.812" y="299.172">48</tspan>
+                    </text>
+                </g>
+                <g data-plots-plot="47">
+                    <path id="Vector_28" opacity="0.6" d="M509.82 289.978L490.406 293.098L505.182 307.501L533.402 302.956L518.027 288.661L509.82 289.978Z" fill="#36B122" stroke="#1D3D2B" stroke-width="2" stroke-miterlimit="10" />
+                    <text id="47" fill="white" xml:space="preserve" style="white-space: pre" font-family="EB Garamond" font-size="16" letter-spacing="0em">
+                        <tspan x="502.812" y="303.172">47</tspan>
+                    </text>
+                </g>
+                <g data-plots-plot="46">
+                    <path id="Vector_29" opacity="0.6" d="M482.413 294.382C482.413 294.382 482.417 294.386 482.413 294.382L462.496 297.581L476.669 312.096L505.193 307.502L490.417 293.098L482.417 294.382H482.413Z" fill="#36B122" stroke="#1D3D2B" stroke-width="2" stroke-miterlimit="10" />
+                    <text id="46" fill="white" xml:space="preserve" style="white-space: pre" font-family="EB Garamond" font-size="16" letter-spacing="0em">
+                        <tspan x="475.812" y="308.172">46</tspan>
+                    </text>
+                </g>
+                <g data-plots-plot="45">
+                    <path id="Vector_30" opacity="0.6" d="M454.134 298.923L434.438 302.088L448.003 316.716L476.66 312.101L462.491 297.581L454.134 298.923Z" fill="#36B122" stroke="#1D3D2B" stroke-width="2" stroke-miterlimit="10" />
+                    <text id="45" fill="white" xml:space="preserve" style="white-space: pre" font-family="EB Garamond" font-size="16" letter-spacing="0em">
+                        <tspan x="448.312" y="312.172">45</tspan>
+                    </text>
+                </g>
+                <g data-plots-plot="44">
+                    <path id="Vector_31" opacity="0.6" d="M434.441 302.088L426.38 303.38L406.504 306.575L419.37 321.332L448.006 316.716L434.441 302.088Z" fill="#36B122" stroke="#1D3D2B" stroke-width="2" stroke-miterlimit="10" />
+                    <text id="44" fill="white" xml:space="preserve" style="white-space: pre" font-family="EB Garamond" font-size="16" letter-spacing="0em">
+                        <tspan x="418.812" y="317.172">44</tspan>
+                    </text>
+                </g>
+                <g data-plots-plot="43">
+                    <path id="Vector_32" opacity="0.6" d="M398.282 307.896L378.406 311.087L390.682 325.956L419.372 321.332L406.506 306.575L398.282 307.896Z" fill="#36B122" stroke="#1D3D2B" stroke-width="2" stroke-miterlimit="10" />
+                    <text id="43" fill="white" xml:space="preserve" style="white-space: pre" font-family="EB Garamond" font-size="16" letter-spacing="0em">
+                        <tspan x="391.312" y="321.172">43</tspan>
+                    </text>
+                </g>
+                <g data-plots-plot="42">
+                    <path id="Vector_33" opacity="0.6" d="M369.745 312.479L350.219 315.615L361.941 330.588L390.681 325.956L378.406 311.087L369.745 312.479Z" fill="#36B122" stroke="#1D3D2B" stroke-width="2" stroke-miterlimit="10" />
+                    <text id="42" fill="white" xml:space="preserve" style="white-space: pre" font-family="EB Garamond" font-size="16" letter-spacing="0em">
+                        <tspan x="362.812" y="326.172">42</tspan>
+                    </text>
+                </g>
+                <g data-plots-plot="41">
+                    <path id="Vector_34" opacity="0.6" d="M341.897 316.949L321.863 320.168C322.096 320.497 332.504 334.713 332.97 335.257L361.943 330.588L350.217 315.615L341.901 316.953L341.897 316.949Z" fill="#36B122" stroke="#1D3D2B" stroke-width="2" stroke-miterlimit="10" />
+                    <text id="41" fill="white" xml:space="preserve" style="white-space: pre" font-family="EB Garamond" font-size="16" letter-spacing="0em">
+                        <tspan x="333.812" y="330.172">41</tspan>
+                    </text>
+                </g>
+                <g data-plots-plot="40">
+                    <path id="Vector_35" opacity="0.6" d="M321.864 320.168L313.507 321.51L293.461 324.73L304.077 339.915L332.967 335.258C332.501 334.713 322.093 320.497 321.86 320.168H321.864Z" fill="#36B122" stroke="#1D3D2B" stroke-width="2" stroke-miterlimit="10" />
+                    <text id="40" fill="white" xml:space="preserve" style="white-space: pre" font-family="EB Garamond" font-size="16" letter-spacing="0em">
+                        <tspan x="304.812" y="334.172">40</tspan>
+                    </text>
+                </g>
+                <g data-plots-plot="39">
+                    <path id="Vector_36" opacity="0.6" d="M285.028 326.085L264.824 329.329L274.671 344.651L304.085 339.911L293.469 324.73L285.028 326.085Z" fill="#36B122" stroke="#1D3D2B" stroke-width="2" stroke-miterlimit="10" />
+                    <text id="39" fill="white" xml:space="preserve" style="white-space: pre" font-family="EB Garamond" font-size="16" letter-spacing="0em">
+                        <tspan x="276.312" y="340.172">39</tspan>
+                    </text>
+                </g>
+                <g data-plots-plot="38">
+                    <path id="Vector_37" opacity="0.6" d="M233.395 334.377L225.508 349.703L232.434 351.456L274.664 344.651L264.818 329.329L233.395 334.377Z" fill="#36B122" stroke="#1D3D2B" stroke-width="2" stroke-miterlimit="10" />
+                    <text id="38" fill="white" xml:space="preserve" style="white-space: pre" font-family="EB Garamond" font-size="16" letter-spacing="0em">
+                        <tspan x="243.812" y="345.172">38</tspan>
+                    </text>
+                </g>
+                <g data-plots-plot="23">
+                    <path id="Vector_38" opacity="0.6" d="M264.826 329.329L285.03 326.084L274.913 311.112L247.067 315.561L241.027 319.043L233.402 334.377L264.826 329.329Z" fill="#36B122" stroke="#1D3D2B" stroke-width="2" stroke-miterlimit="10" />
+                    <text id="23" fill="white" xml:space="preserve" style="white-space: pre" font-family="EB Garamond" font-size="16" letter-spacing="0em">
+                        <tspan x="254.312" y="326.172">23</tspan>
+                    </text>
+                </g>
+                <g data-plots-plot="24">
+                    <path id="Vector_39" opacity="0.6" d="M293.467 324.73L313.509 321.51L302.848 306.745L274.91 311.112L285.027 326.084L293.467 324.73Z" fill="#36B122" stroke="#1D3D2B" stroke-width="2" stroke-miterlimit="10" />
+                    <text id="24" fill="white" xml:space="preserve" style="white-space: pre" font-family="EB Garamond" font-size="16" letter-spacing="0em">
+                        <tspan x="285.812" y="321.172">24</tspan>
+                    </text>
+                </g>
+                <g data-plots-plot="25">
+                    <path id="Vector_40" opacity="0.6" d="M302.844 306.745L313.505 321.51L321.862 320.168L341.896 316.949L330.706 302.242L302.844 306.745Z" fill="#36B122" stroke="#1D3D2B" stroke-width="2" stroke-miterlimit="10" />
+                    <text id="25" fill="white" xml:space="preserve" style="white-space: pre" font-family="EB Garamond" font-size="16" letter-spacing="0em">
+                        <tspan x="314.312" y="317.172">25</tspan>
+                    </text>
+                </g>
+                <g data-plots-plot="26">
+                    <path id="Vector_41" opacity="0.6" d="M330.711 302.242L341.901 316.949L350.221 315.615L369.747 312.479L357.821 297.859L330.711 302.242Z" fill="#36B122" stroke="#1D3D2B" stroke-width="2" stroke-miterlimit="10" />
+                    <text id="26" fill="white" xml:space="preserve" style="white-space: pre" font-family="EB Garamond" font-size="16" letter-spacing="0em">
+                        <tspan x="341.812" y="312.172">26</tspan>
+                    </text>
+                </g>
+                <g data-plots-plot="27">
+                    <path id="Vector_42" opacity="0.6" d="M357.812 297.859L369.739 312.479L378.399 311.087L398.275 307.896L385.509 293.434L357.812 297.859Z" fill="#36B122" stroke="#1D3D2B" stroke-width="2" stroke-miterlimit="10" />
+                    <text id="27" fill="white" xml:space="preserve" style="white-space: pre" font-family="EB Garamond" font-size="16" letter-spacing="0em">
+                        <tspan x="368.312" y="308.172">27</tspan>
+                    </text>
+                </g>
+                <g data-plots-plot="28">
+                    <path id="Vector_43" opacity="0.6" d="M385.516 293.434L398.282 307.896L406.506 306.575L426.382 303.38L413.253 289.002L385.516 293.434Z" fill="#36B122" stroke="#1D3D2B" stroke-width="2" stroke-miterlimit="10" />
+                    <text id="28" fill="white" xml:space="preserve" style="white-space: pre" font-family="EB Garamond" font-size="16" letter-spacing="0em">
+                        <tspan x="397.312" y="303.172">28</tspan>
+                    </text>
+                </g>
+                <g data-plots-plot="29">
+                    <path id="Vector_44" opacity="0.6" d="M434.444 302.088L454.141 298.927C454.095 298.881 441.125 285.225 440.492 284.648L413.254 289.002L426.382 303.384L434.444 302.088Z" fill="#36B122" stroke="#1D3D2B" stroke-width="2" stroke-miterlimit="10" />
+                    <text id="29" fill="white" xml:space="preserve" style="white-space: pre" font-family="EB Garamond" font-size="16" letter-spacing="0em">
+                        <tspan x="425.312" y="299.172">29</tspan>
+                    </text>
+                </g>
+                <g data-plots-plot="30">
+                    <path id="Vector_45" opacity="0.6" d="M462.494 297.581L482.411 294.382C482.045 294.02 468.746 280.946 468.101 280.231L440.492 284.643C441.129 285.221 454.095 298.873 454.141 298.922L462.494 297.581Z" fill="#36B122" stroke="#1D3D2B" stroke-width="2" stroke-miterlimit="10" />
+                    <text id="30" fill="white" xml:space="preserve" style="white-space: pre" font-family="EB Garamond" font-size="16" letter-spacing="0em">
+                        <tspan x="452.812" y="295.172">30</tspan>
+                    </text>
+                </g>
+                <g data-plots-plot="31">
+                    <path id="Vector_46" opacity="0.6" d="M490.411 293.098L509.821 289.982L494.933 275.948L468.098 280.236C468.747 280.95 482.041 294.02 482.407 294.386L490.407 293.102L490.411 293.098Z" fill="#36B122" stroke="#1D3D2B" stroke-width="2" stroke-miterlimit="10" />
+                    <text id="31" fill="white" xml:space="preserve" style="white-space: pre" font-family="EB Garamond" font-size="16" letter-spacing="0em">
+                        <tspan x="481.312" y="290.172">31</tspan>
+                    </text>
+                </g>
+                <g data-plots-plot="32">
+                    <path id="Vector_47" opacity="0.6" d="M494.938 275.944L509.826 289.978L518.033 288.661L537.925 285.466L522.367 271.561L494.938 275.944Z" fill="#36B122" stroke="#1D3D2B" stroke-width="2" stroke-miterlimit="10" />
+                    <text id="32" fill="white" xml:space="preserve" style="white-space: pre" font-family="EB Garamond" font-size="16" letter-spacing="0em">
+                        <tspan x="507.312" y="286.172">32</tspan>
+                    </text>
+                </g>
+                <g data-plots-plot="33">
+                    <path id="Vector_48" opacity="0.6" d="M549.468 267.228L522.371 271.561L537.929 285.466L565.525 281.033L549.468 267.228Z" fill="#36B122" stroke="#1D3D2B" stroke-width="2" stroke-miterlimit="10" />
+                    <text id="33" fill="white" xml:space="preserve" style="white-space: pre" font-family="EB Garamond" font-size="16" letter-spacing="0em">
+                        <tspan x="536.312" y="281.172">33</tspan>
+                    </text>
+                </g>
+                <g data-plots-plot="34">
+                    <path id="Vector_49" opacity="0.6" d="M549.465 267.228L565.522 281.033L573.679 279.725L593.131 276.601L576.604 262.891L549.465 267.228Z" fill="#36B122" stroke="#1D3D2B" stroke-width="2" stroke-miterlimit="10" />
+                    <text id="34" fill="white" xml:space="preserve" style="white-space: pre" font-family="EB Garamond" font-size="16" letter-spacing="0em">
+                        <tspan x="563.312" y="277.172">34</tspan>
+                    </text>
+                </g>
+                <g data-plots-plot="35">
+                    <path id="Vector_50" opacity="0.6" d="M576.605 262.891L593.132 276.601L601.19 275.304L620.621 272.184L603.42 258.608L576.605 262.891Z" fill="#36B122" stroke="#1D3D2B" stroke-width="2" stroke-miterlimit="10" />
+                    <text id="35" fill="white" xml:space="preserve" style="white-space: pre" font-family="EB Garamond" font-size="16" letter-spacing="0em">
+                        <tspan x="591.312" y="272.172">35</tspan>
+                    </text>
+                </g>
+                <g data-plots-plot="36">
+                    <path id="Vector_51" opacity="0.6" d="M603.418 258.608L620.619 272.184L628.701 270.888L648.174 267.76L630.374 254.299L603.418 258.608Z" fill="#36B122" stroke="#1D3D2B" stroke-width="2" stroke-miterlimit="10" />
+                    <text id="36" fill="white" xml:space="preserve" style="white-space: pre" font-family="EB Garamond" font-size="16" letter-spacing="0em">
+                        <tspan x="617.312" y="268.172">36</tspan>
+                    </text>
+                </g>
+                <g data-plots-plot="37">
+                    <path id="Vector_52" opacity="0.6" d="M674.59 249.842L666.395 248.541L630.375 254.299L648.175 267.76L674.523 263.526L674.59 249.842Z" fill="#36B122" stroke="#1D3D2B" stroke-width="2" stroke-miterlimit="10" />
+                    <text id="37" fill="white" xml:space="preserve" style="white-space: pre" font-family="EB Garamond" font-size="16" letter-spacing="0em">
+                        <tspan x="648.312" y="264.172">37</tspan>
+                    </text>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

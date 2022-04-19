@@ -23,29 +23,35 @@
                 max-width: 100%;
                 top: 0;
                 right: 0;
-                // .area-click__sectors{
-                //     path {
-                //         opacity: 1;
-                //     }
-                // }
-                // .area-click__sector{
-                //     path{
-                //         opacity: 0;
-                //     }
-                //     .plot-status--sprzedana,
-                //     .plot-status--zarezerwowana{
-                //         path{
-                //             opacity: 0.6;
-                //         }
-                //     }
-
-        
-                // }
-            
+                path {
+                    opacity: 0;
+                }
             }
             &__desktop {
                 @media (max-width: 767px) {
                     display: none;
+                }
+                &__apla {
+                    position: absolute;
+                    top: 25.8%;
+                    left: 8.4%;
+                    padding: 25px;
+                    width: auto;
+                    height: auto;
+                    background: #022545bb;
+                    z-index: 1;
+                    .text-main {
+                        font-size: 22px;
+                        line-height: 37px;
+                        b {
+                            sup {
+                                line-height: 0px;
+                            }
+                        }
+                    }
+                    @media (max-width: $xl) {
+                        display: none;
+                    }
                 }
             }
             &__mobile {
@@ -95,7 +101,11 @@
                 }
             }
             &__name {
-                background: linear-gradient(358deg, #1951a4 0%, rgba(25, 81, 164, 0) 70%);
+                background: linear-gradient(
+                    358deg,
+                    #1951a4 0%,
+                    rgba(25, 81, 164, 0) 70%
+                );
                 z-index: 9999999;
                 position: absolute;
                 left: 0;
@@ -167,18 +177,12 @@
                     overflow-x: scroll;
                 }
                 &__all {
-                    [data-plots-sectors]{
-                        height: 674px;
-                    }
                     &__mobile {
                         height: 669px;
                         width: 768px;
                     }
                 }
                 &__single {
-                    [data-plots-sector]{
-                        height: 790px;
-                    }
                     &__mobile {
                         height: 785px;
                         width: 768px;

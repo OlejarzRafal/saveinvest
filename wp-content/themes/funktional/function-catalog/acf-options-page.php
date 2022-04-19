@@ -40,13 +40,22 @@ function my_acf_op_init()
         'redirect'    => false
     ));
 
-        // Footer Dziwnowek
-        $option_page = acf_add_options_page(array(
-            'page_title'   => 'Osada Dziwnowek',
-            'menu_title'  => 'Osada Dziwnowek',
-            'menu_slug'   => 'stopka-dziwnowek',
-            'capability'  => 'edit_posts',
-            'parent_slug'    => 'footer-all',
-            'redirect'    => false
-        ));
+    // Footer Dziwnowek
+    $option_page = acf_add_options_page(array(
+        'page_title'   => 'Osada Dziwnowek',
+        'menu_title'  => 'Osada Dziwnowek',
+        'menu_slug'   => 'stopka-dziwnowek',
+        'capability'  => 'edit_posts',
+        'parent_slug'    => 'footer-all',
+        'redirect'    => false
+    ));
+    // Register options page.
+    $option_page = acf_add_options_page(array(
+        'page_title'   => 'Sea Golf',
+        'menu_title'  => 'Sea Golf',
+        'menu_slug'   => 'sea-golf',
+        'capability'  => 'edit_posts',
+        'parent_slug'    => 'footer-all',
+        'redirect'    => false
+    ));
 };
