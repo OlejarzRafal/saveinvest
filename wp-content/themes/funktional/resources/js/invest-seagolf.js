@@ -2,6 +2,7 @@ import "../scss/invest-seagolf.scss";
 
 // INVEST SEAGOLF
 import "../js/invest-seagolf/scroll-trigger";
+import "../js/invest-seagolf/link-play";
 // import "../js/invest-kladno/animation";
 // import "../js/invest-kladno/sliders-localizations";
 // import "../js/invest-kladno/sliders-contact";

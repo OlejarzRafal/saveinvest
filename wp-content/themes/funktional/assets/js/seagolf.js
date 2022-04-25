@@ -16,7 +16,17 @@
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _scss_invest_seagolf_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../scss/invest-seagolf.scss */ \"./resources/scss/invest-seagolf.scss\");\n/* harmony import */ var _js_invest_seagolf_scroll_trigger__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../js/invest-seagolf/scroll-trigger */ \"./resources/js/invest-seagolf/scroll-trigger.js\");\n/* harmony import */ var _js_invest_seagolf_scroll_trigger__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_js_invest_seagolf_scroll_trigger__WEBPACK_IMPORTED_MODULE_1__);\n // INVEST SEAGOLF\n\n // import \"../js/invest-kladno/animation\";\n// import \"../js/invest-kladno/sliders-localizations\";\n// import \"../js/invest-kladno/sliders-contact\";\n// import \"../js/invest-kladno/sliders-front-page\";\n// import \"../js/invest-kladno/nav-burger\";\n// import \"../js/invest-kladno/plots\";\n// import \"../js/invest-kladno/nav-scroll\";\n// import \"../js/invest-kladno/loader\";\n\n//# sourceURL=webpack://webpack/./resources/js/invest-seagolf.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _scss_invest_seagolf_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../scss/invest-seagolf.scss */ \"./resources/scss/invest-seagolf.scss\");\n/* harmony import */ var _js_invest_seagolf_scroll_trigger__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../js/invest-seagolf/scroll-trigger */ \"./resources/js/invest-seagolf/scroll-trigger.js\");\n/* harmony import */ var _js_invest_seagolf_scroll_trigger__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_js_invest_seagolf_scroll_trigger__WEBPACK_IMPORTED_MODULE_1__);\n/* harmony import */ var _js_invest_seagolf_link_play__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../js/invest-seagolf/link-play */ \"./resources/js/invest-seagolf/link-play.js\");\n/* harmony import */ var _js_invest_seagolf_link_play__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_js_invest_seagolf_link_play__WEBPACK_IMPORTED_MODULE_2__);\n // INVEST SEAGOLF\n\n\n // import \"../js/invest-kladno/animation\";\n// import \"../js/invest-kladno/sliders-localizations\";\n// import \"../js/invest-kladno/sliders-contact\";\n// import \"../js/invest-kladno/sliders-front-page\";\n// import \"../js/invest-kladno/nav-burger\";\n// import \"../js/invest-kladno/plots\";\n// import \"../js/invest-kladno/nav-scroll\";\n// import \"../js/invest-kladno/loader\";\n\n//# sourceURL=webpack://webpack/./resources/js/invest-seagolf.js?");
+
+/***/ }),
+
+/***/ "./resources/js/invest-seagolf/link-play.js":
+/*!**************************************************!*\
+  !*** ./resources/js/invest-seagolf/link-play.js ***!
+  \**************************************************/
+/***/ (function() {
+
+eval("if ($(window).width() > 767) {\n  $(\".sec8-links__video-link\").hover(function () {\n    $(this).find($('.sec8-links__video-link__box__hover')).get(0).play();\n  }, function () {\n    $(this).find($('.sec8-links__video-link__box__hover')).get(0).pause();\n  });\n} else {\n  $('.sec8-links__video-link__box__hover').each(function () {\n    $(this).get(0).play();\n  });\n}\n\n//# sourceURL=webpack://webpack/./resources/js/invest-seagolf/link-play.js?");
 
 /***/ }),
 
