@@ -1,5 +1,9 @@
 footer {
-    margin-top: 200px;
+    margin-top: 350px;
+    @media (max-width: $lg) {
+        margin-top: 220px;
+    }
+
     .footer-top {
         position: relative;
         display: flex;

@@ -1,15 +1,15 @@
 if ($(window).width() > 767) {
-    $(".sec8-links__video-link").hover(
+    $(".sec8-links__box__video-link").hover(
         function () {
-            $(this).find($('.sec8-links__video-link__box__hover')).get(0).play();
+            $(this).find($('.sec8-links__box__video-link__item__hover')).get(0).play();
         },
         function () {
-            $(this).find($('.sec8-links__video-link__box__hover')).get(0).pause();
+            $(this).find($('.sec8-links__box__video-link__item__hover')).get(0).pause();
         }
     );
 
 } else {
-    $('.sec8-links__video-link__box__hover').each(function () {
+    $('.sec8-links__box__video-link__item__hover').each(function () {
         $(this).get(0).play();
     });
 }

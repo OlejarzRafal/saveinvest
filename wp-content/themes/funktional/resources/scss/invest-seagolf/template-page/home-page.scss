@@ -276,6 +276,12 @@
                     font-size: 30px;
                 }
             }
+            &__movie {
+                &__icon-play {
+                    width: 100px;
+                    height: 100px;
+                }
+            }
         }
     }
     .sec2-info {
@@ -992,7 +998,9 @@
     .sec8-links {
         margin-top: 120px;
         &__box {
-            width: 100%;
+            position: relative;
+            width: calc(100% + 30px);
+            left: -15px;
             display: flex;
             justify-content: space-between;
             gap: 10px;
@@ -1006,49 +1014,588 @@
                 overflow: hidden;
                 cursor: pointer;
                 height: 600px;
-                background-color: #29304e;
+                &::before {
+                    content: "";
+                    position: relative;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    background: linear-gradient(
+                        180deg,
+                        #242424 0%,
+                        rgba(36, 36, 36, 0.7) 100%
+                    );
+                    // opacity: 0.9;
+                    z-index: 1;
+                }
+                &:hover::before {
+                    background: linear-gradient(
+                        180deg,
+                        #312718 0%,
+                        rgba(49, 39, 24, 0.7) 100%
+                    );
+                    z-index: 1;
+                }
                 &__item {
                     &__hover {
                         position: absolute;
                         top: 50%;
                         left: 50%;
                         transform: translate(-50%, -50%);
-                        width: 100%;
-                        height: 100%;
+                        width: 150%;
+                        height: 110%;
                     }
                     &__container {
                         position: absolute;
                         top: 50%;
                         left: 50%;
                         transform: translate(-50%, -50%);
+                        width: calc(100% - 30px);
+                        height: calc(100% - 30px);
                         display: flex;
                         flex-direction: column;
                         justify-content: center;
                         align-content: center;
+                        border-width: 1px;
+                        border-style: solid;
+                        border-image: linear-gradient(
+                                90deg,
+                                #f4f1e540 35%,
+                                transparent 35%,
+                                transparent 65%,
+                                #f4f1e540 65%
+                            )
+                            1;
+                        transition: all 0.1s;
                         z-index: 1;
-                        width: 100%;
+                        &::after {
+                            content: "";
+                            position: absolute;
+                            left: 50%;
+                            top: -9px;
+                            transform: translate(-50%, 0%);
+                            width: 130px;
+                            height: 17px;
+                            background: url(../img/sea-golf/home-page/element-sec8-container.svg);
+                            background-repeat: no-repeat;
+                            background-position: center;
+                            background-size: 103px 17px;
+                            pointer-events: none;
+                        }
+                        &::before {
+                            content: "";
+                            position: absolute;
+                            left: 50%;
+                            bottom: -9px;
+                            transform: translate(-50%, 0%);
+                            width: 130px;
+                            height: 17px;
+                            background: url(../img/sea-golf/home-page/element-sec8-container.svg);
+                            background-repeat: no-repeat;
+                            background-position: center;
+                            background-size: 103px 17px;
+                            pointer-events: none;
+                        }
+                        img,
                         .f-h3,
                         .text-main,
                         .btn {
                             position: relative;
-                            top: 2vw;
                             z-index: 2;
                             text-align: center;
                             left: 50%;
                             transform: translate(-50%, 0%);
                         }
-                        .btn {
-                            position: relative;
-                            left: calc(50% - 15px);
-                            transform: translate(-50%, 0%);
-                            font-size: 15px;
-                            line-height: 15px;
+                        img {
+                            width: 85px;
+                            height: 85px;
+                        }
+                        .f-h3 {
+                            margin-top: 60px;
                         }
                         .text-main {
-                            margin-top: 10px;
+                            margin-top: 30px;
                             width: 45%;
                         }
+                        .btn {
+                            margin-left: -10px;
+                            margin-top: 50px;
+                            transition: all 0.2s;
+                        }
                     }
+                }
+                &:hover .sec8-links__box__video-link__item__container {
+                    border-image: linear-gradient(
+                            90deg,
+                            $gold-medium 35%,
+                            transparent 35%,
+                            transparent 65%,
+                            $gold-medium 65%
+                        )
+                        1;
+                }
+
+                &:hover .btn::before {
+                    transform: scaleX(1);
+                    transform-origin: left;
+                }
+            }
+        }
+        @media (max-width: $xxl) {
+            &__box {
+                &__video-link {
+                    height: 500px;
+                    &__item {
+                        &__container {
+                            .f-h3 {
+                                margin-top: 35px;
+                                font-size: 40px;
+                            }
+                            .text-main {
+                                width: 70%;
+                            }
+                            border-image: linear-gradient(
+                                    90deg,
+                                    #f4f1e540 25%,
+                                    transparent 25%,
+                                    transparent 75%,
+                                    #f4f1e540 75%
+                                )
+                                1;
+                        }
+                    }
+                }
+                &:hover .sec8-links__box__video-link__item__container {
+                    border-image: linear-gradient(
+                            90deg,
+                            $gold-medium 25%,
+                            transparent 25%,
+                            transparent 75%,
+                            $gold-medium 75%
+                        )
+                        1;
+                }
+            }
+        }
+        @media (max-width: $xl) {
+            margin-top: 70px;
+            &__box {
+                &__video-link {
+                    height: 420px;
+                    &__item {
+                        &__container {
+                            img {
+                                width: 70px;
+                                height: 70px;
+                            }
+                            .f-h3 {
+                                margin-top: 25px;
+                                font-size: 35px;
+                            }
+                            .text-main {
+                                width: 70%;
+                            }
+                            border-image: linear-gradient(
+                                    90deg,
+                                    #f4f1e540 35%,
+                                    transparent 35%,
+                                    transparent 65%,
+                                    #f4f1e540 65%
+                                )
+                                1;
+                        }
+                    }
+                }
+            }
+        }
+        @media (max-width: $lg) {
+            margin-top: 50px;
+            &__box {
+                flex-direction: column;
+                height: 1300px;
+                align-items: center;
+                width: 100%;
+                left: 0px;
+                &__video-link {
+                    width: 71%;
+                }
+            }
+        }
+        @media (max-width: $md) {
+            &__box {
+                &__video-link {
+                    width: 100%;
+                    &__item {
+                        &__hover {
+                            width: 170%;
+                            height: 150%;
+                        }
+
+                        &__container {
+                            border-image: linear-gradient(
+                                    90deg,
+                                    #f4f1e540 25%,
+                                    transparent 25%,
+                                    transparent 75%,
+                                    #f4f1e540 75%
+                                )
+                                1;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .sec9-testimonial {
+        margin-top: 200px;
+        @media (max-width: $lg) {
+            margin-top: 90px;
+        }
+        &__box {
+            position: relative;
+            padding: 10px 0 35px 85px;
+            width: 100%;
+            left: -15px;
+            height: auto;
+            background: linear-gradient(
+                to right,
+                $gold-tint-light 97%,
+                transparent 97%
+            );
+            &::before {
+                content: "";
+                position: absolute;
+                top: -50px;
+                right: 13.3%;
+                width: 120px;
+                height: 145px;
+                background-color: transparent;
+                border-right: 1px solid #d5cdae;
+                border-top: 1px solid #d5cdae;
+            }
+            &::after {
+                content: "";
+                position: absolute;
+                bottom: -80px;
+                right: 13.3%;
+                width: 120px;
+                height: 33%;
+                background-color: transparent;
+                border-right: 1px solid #d5cdae;
+                border-bottom: 1px solid #d5cdae;
+            }
+            .f-h3--black-dark {
+                position: absolute;
+                left: 85px;
+                top: -90px;
+            }
+            .swiper {
+                margin-top: 30px;
+                .swiper-wrapper {
+                    .swiper-slide {
+                        .swiper-text {
+                            width: 71%;
+                            b {
+                                font-weight: 800;
+                            }
+                        }
+                        .swiper-name {
+                            margin-top: 20px;
+                        }
+                    }
+                }
+            }
+            &__nav {
+                position: absolute;
+                top: 0;
+                width: 100%;
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+                align-items: flex-end;
+                margin-top: 15px;
+                padding-right: 14%;
+                &::before {
+                    content: "";
+                    position: absolute;
+                    top: 0;
+                    right: 10%;
+                    width: 10%;
+                    height: 68%;
+                    background-color: $gold-tint-light;
+                }
+                .swiper-pagination {
+                    position: relative;
+                    padding-bottom: 35px;
+                    height: auto;
+                    width: auto;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: start;
+                    align-items: flex-end;
+                    gap: 15px;
+                    background-color: $gold-tint-light;
+                    .swiper-pagination-bullet {
+                        margin: 0;
+                        width: 10px;
+                        height: 10px;
+                        margin: 0 2px;
+                        background-color: $black-dark;
+                        border-radius: 50%;
+                        opacity: 0.5;
+                        box-shadow: 0px;
+                    }
+                    .swiper-pagination-bullet-active {
+                        margin: 0;
+                        width: 14px;
+                        height: 14px;
+                        background-color: $black-dark;
+                        border-radius: 50%;
+                        opacity: 1;
+                    }
+                }
+                .swiper-button-next {
+                    position: relative;
+                    margin: 0px;
+                    top: 0px;
+                    left: 0px;
+                    transform: translateX(39%);
+                    width: 60px;
+                    height: 60px;
+                    border: 1px solid $gold-medium;
+                    overflow: hidden;
+                    transition: all 0.2s;
+                    background-color: $gold-tint-light;
+                    &::before {
+                        content: "";
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-50%, -50%);
+                        width: 100%;
+                        height: 100%;
+                        background: url("../img/sea-golf/home-page/testimonial-arrow.svg");
+                        background-repeat: no-repeat;
+                        background-position: center;
+                    }
+                    &:hover::before {
+                        animation: arrow infinite 1s;
+                    }
+                    &:after {
+                        display: none;
+                    }
+                }
+            }
+            &__icon {
+                position: absolute;
+                bottom: -125px;
+                left: 38%;
+                width: 120px;
+                height: 85px;
+            }
+        }
+        @keyframes arrow {
+            0% {
+                transform: translate(-50%, -50%);
+            }
+            25% {
+                transform: translate(-45%, -50%);
+            }
+
+            50% {
+                transform: translate(-55%, -50%);
+            }
+
+            75% {
+                transform: translate(-45%, -50%);
+            }
+            100% {
+                transform: translate(-50%, -50%);
+            }
+        }
+        &__company {
+            position: relative;
+            padding: 10px 0 35px 100px;
+            left: 15px;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to left, #f1f1ef 97%, transparent 97%);
+            &::before {
+                content: "";
+                position: absolute;
+                top: -50px;
+                right: 13.3%;
+                width: 120px;
+                height: 145px;
+                background-color: transparent;
+                border-right: 1px solid #d5cdae;
+                border-top: 1px solid #d5cdae;
+            }
+            &::after {
+                content: "";
+                position: absolute;
+                bottom: -80px;
+                right: 13.3%;
+                width: 80px;
+                height: 30%;
+                background-color: transparent;
+                border-right: 1px solid #d5cdae;
+                border-bottom: 1px solid #d5cdae;
+            }
+
+            &__icon {
+                position: absolute;
+                left: 85px;
+                top: -80px;
+            }
+            .text-main {
+                margin-top: 30px;
+
+                padding-right: 60px;
+                width: 100%;
+                z-index: 9;
+                b {
+                    font-weight: 800;
+                }
+            }
+            &__icon-content {
+                position: absolute;
+                bottom: -160px;
+                left: 3vw;
+                padding: 10px;
+                max-height: 140px;
+                display: flex;
+                gap: 30px;
+                background-color: $white;
+                z-index: 1;
+                img {
+                    height: 100%;
+                    width: fit-content;
+                }
+            }
+        }
+        @media (max-width: $xl) {
+            &__box,
+            &__company {
+                left: 0px;
+            }
+            &__box {
+                background-color: $gold-tint-light;
+                padding: 20px 0 65px 85px;
+                &::after {
+                    height: 25%;
+                }
+                &__nav {
+                    &::before {
+                        height: 100%;
+                    }
+                }
+                &__icon {
+                    bottom: -110px;
+                    left: 55%;
+                    width: 100px;
+                    height: auto;
+                }
+            }
+            &__company {
+                margin-top: 200px;
+                background-color: #f1f1ef;
+                height: auto;
+                padding: 20px 0 60px 85px;
+            }
+        }
+        @media (max-width: $lg) {
+            &__box {
+                padding: 10px 0 65px 85px;
+                .f-h3--black-dark {
+                    top: -50px;
+                }
+                &::after {
+                    bottom: -70px;
+                }
+                &__nav {
+                    &::before {
+                        height: 100%;
+                    }
+                }
+                &__icon {
+                    bottom: -50px;
+                    left: auto;
+                    right: 27%;
+                    width: 50px;
+                    height: auto;
+                }
+            }
+            &__company {
+                margin-top: 150px;
+                background-color: #f1f1ef;
+                height: auto;
+                padding: 20px 0 60px 85px;
+                &__icon {
+                    top: -40px;
+                    height: 35px;
+                }
+                &__icon-content {
+                    bottom: -100px;
+                    display: flex;
+                    justify-content: center;
+                    width: 100%;
+                    left: 0vw;
+                    background-color: transparent;
+                    img {
+                        height: 80px;
+                        width: fit-content;
+                    }
+                }
+                &::after {
+                    bottom: -110px;
+                }
+            }
+        }
+        @media (max-width: $sm) {
+            &__box {
+                padding: 10px 0 35px 15px;
+                &::before,
+                &::after {
+                    right: 9%;
+                }
+                .f-h3--black-dark {
+                    left: 15px;
+                }
+                .swiper {
+                    margin-top: 25px;
+                    .swiper-wrapper {
+                        .swiper-slide {
+                            .swiper-text {
+                                width: 78%;
+                            }
+                        }
+                    }
+                }
+                &__nav {
+                    padding-right: 8%;
+                    .swiper-button-next {
+                        width: 50px;
+                        height: 50px;
+                    }
+                }
+                &__icon {
+                    right: 22%;
+                }
+            }
+            &__company {
+                padding: 10px 0 35px 15px;
+                &::before,
+                &::after {
+                    right: 9%;
+                }
+                &__icon {
+                    left: 15px;
+                }
+                &__icon-content {
+                    gap: 10px;
+                    left: -10px;
                 }
             }
         }
