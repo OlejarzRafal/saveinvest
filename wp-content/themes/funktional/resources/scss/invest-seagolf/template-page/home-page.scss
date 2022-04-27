@@ -794,7 +794,6 @@
                 border-left: 1px solid #b797634a;
                 .btn {
                     margin-top: 30px;
-                    padding-bottom: 5px;
                 }
             }
         }
@@ -1249,6 +1248,7 @@
     }
     .sec9-testimonial {
         margin-top: 200px;
+        margin-bottom: 360px;
         @media (max-width: $lg) {
             margin-top: 90px;
         }
@@ -1506,8 +1506,9 @@
             }
         }
         @media (max-width: $lg) {
+            margin-bottom: 200px;
             &__box {
-                padding: 10px 0 65px 85px;
+                padding: 10px 0 50px 85px;
                 .f-h3--black-dark {
                     top: -50px;
                 }
@@ -1531,13 +1532,13 @@
                 margin-top: 150px;
                 background-color: #f1f1ef;
                 height: auto;
-                padding: 20px 0 60px 85px;
+                padding: 20px 0 50px 85px;
                 &__icon {
-                    top: -40px;
+                    top: -50px;
                     height: 35px;
                 }
                 &__icon-content {
-                    bottom: -100px;
+                    bottom: -110px;
                     display: flex;
                     justify-content: center;
                     width: 100%;
@@ -1549,7 +1550,12 @@
                     }
                 }
                 &::after {
-                    bottom: -110px;
+                    bottom: -120px;
+                    height: 40%;
+                }
+                &::before {
+                    top: -65px;
+                    height: 165px;
                 }
             }
         }
