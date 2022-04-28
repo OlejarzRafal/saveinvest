@@ -1,0 +1,65 @@
+.sg-contact {
+    .sec1-contact-sg {
+        position: relative;
+        padding-top: 560px;
+        width: 100%;
+        height: auto;
+        background-image: url("../img/sea-golf/contact/background-header.jpg");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-position-y: top;
+        z-index: 1;
+        &__form {
+            position: relative;
+            left: -15px;
+            width: calc(100% + 30px);
+            height: 100%;
+            background-color: $brown;
+            padding: 55px 150px 220px 135px;
+            &::before {
+                content: "";
+                position: absolute;
+                right: 35px;
+                top: 0px;
+                width: 290px;
+                height: 140px;
+                background: url(../img/sea-golf/contact/sec1-form-element.png);
+                background-repeat: no-repeat;
+                background-position: center;
+                background-size: contain;
+            }
+            &::after {
+                content: "";
+                position: absolute;
+                right:20px;
+                bottom: 0px;
+                width: 370px;
+                height: 220px;
+                background: url(../img/sea-golf/contact/sec1-form-ball.png);
+                background-repeat: no-repeat;
+                background-position: center;
+                background-size: contain;
+            }
+            &__border{
+                position: absolute;
+                width: calc(100% - 40px);
+                height: calc(100% - 40px);
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                border: 1px solid #c4c4c445;
+                pointer-events: none;
+                z-index: 1;
+
+            }
+    
+        }
+        &__sales-box{
+            position: relative;
+            left: -15px;
+            width: calc(100% + 30px);
+            height: 100%;
+            background-color: $black-tint-grey;
+        }
+    }
+}

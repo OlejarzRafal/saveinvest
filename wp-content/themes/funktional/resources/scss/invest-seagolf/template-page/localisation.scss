@@ -1,0 +1,511 @@
+.sg-localisation {
+    .header {
+        position: relative;
+        height: 1315px;
+        width: 100%;
+        background: #004870
+            url("../img/sea-golf/localisation/header-background.jpg");
+        background-size: cover;
+        background-position: center top;
+        display: flex;
+        align-items: flex-end;
+        background-repeat: no-repeat;
+        &::after {
+            content: "";
+            position: absolute;
+            bottom: 200px;
+            left: 50%;
+            transform: translate(-50%, 0);
+            width: 24px;
+            height: 24px;
+            background: url("../img/invest-karwia/localization/scroller-down.svg");
+            background-size: cover;
+            animation: scroller 2.5s infinite ease-in-out;
+            z-index: 1;
+        }
+        @keyframes scroller {
+            0% {
+                transform: translate(-50%, 0%);
+            }
+            50% {
+                transform: translate(-50%, 180%);
+            }
+            100% {
+                transform: translate(-50%, 0%);
+            }
+        }
+        @media (max-width: $lg) {
+            height: 665px;
+        }
+        @media (max-width: $md) {
+            height: 520px;
+        }
+        @media (max-width: $sm) {
+            background-position: 65% top;
+        }
+    }
+    .sec1-info-map {
+        position: relative;
+        margin-top: -335px;
+        height: auto;
+        width: 100%;
+        background: linear-gradient(
+            177.26deg,
+            rgba(85, 209, 187, 0) 6.87%,
+            rgba(0, 166, 189, 0.65) 13.04%,
+            #088fad 20.36%,
+            #005483 51.26%,
+            #00476f 104.5%
+        );
+        background-size: cover;
+        background-position: center top;
+        display: flex;
+        align-items: flex-end;
+        background-repeat: no-repeat;
+        &::after {
+            content: "";
+            position: absolute;
+            left: 50%;
+            bottom: -85px;
+            transform: translate(-50%, 0%) rotate(0deg);
+            width: 175px;
+            height: 175px;
+            background: url(../img/sea-golf/footer/circle-rotate.svg);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: contain;
+            animation: rotate-text 30s infinite linear;
+        }
+        &__box {
+            padding-top: 280px;
+            padding-bottom: 80px;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            .f-h3 {
+                width: 180%;
+            }
+            .box-text {
+                margin-top: 30px;
+            }
+            &__table-location {
+                margin-top: 40px;
+                display: flex;
+                flex-direction: column;
+                .row-table {
+                    position: relative;
+                    width: 100%;
+                    display: flex;
+                    border-bottom: 1px solid #b68b1d;
+                    &__title {
+                        padding-left: 3px;
+                        margin: auto;
+                        flex-basis: 61%;
+                        p {
+                            padding-right: 4vw !important;
+                            padding-left: 15px !important;
+                        }
+                    }
+                    &__time {
+                        flex-basis: 21%;
+                        margin: auto;
+                    }
+                    &__distance {
+                        flex-basis: 18%;
+                        margin: auto;
+                    }
+                    .row-table__distance {
+                        p {
+                            position: relative;
+                            .icon-bicycle {
+                                position: absolute;
+                                top: 18px;
+                                left: 70px;
+                                height: 15px;
+                                width: 24px;
+                                background: url("../img/sea-golf/localisation/icon-bicycle.png");
+                                background-repeat: no-repeat;
+                                background-size: cover;
+                            }
+                        }
+                    }
+
+                    p {
+                        padding: 12px 0;
+                        text-align: start;
+                        line-height: 22px;
+                    }
+                }
+            }
+        }
+        &__map {
+            position: relative;
+            left: -45px;
+            padding-bottom: 380px;
+            width: 110%;
+            height: 100%;
+            display: flex;
+            justify-content: flex-end;
+            flex-direction: column;
+            .logo-sea-golf {
+                position: relative;
+                top: 1%;
+                left: 14%;
+                width: 15%;
+                height: auto;
+            }
+        }
+
+        @media (max-width: $xxl) {
+            &__box {
+                &__table-location {
+                    .row-table {
+                        .row-table__distance {
+                            p {
+                                .icon-bicycle {
+                                    top: 15px;
+                                    left: 57px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        @media (max-width: $xl) {
+            margin-top: -475px;
+            &__box {
+                padding-top: 40%;
+                padding-bottom: 50px;
+                .f-h3 {
+                    width: 100%;
+                }
+            }
+            &__map {
+                position: relative;
+                left: 0px;
+                padding-top: 0px;
+                padding-bottom: 130px;
+                width: 100%;
+            }
+        }
+        @media (max-width: $lg) {
+            margin-top: -300px;
+            background: linear-gradient(
+                177.26deg,
+                rgba(85, 209, 187, 0) 10.87%,
+                rgba(0, 166, 189, 0.65) 13.04%,
+                #088fad 14.36%,
+                #005483 51.26%,
+                #00476f 104.5%
+            );
+            .bottom-item-4 {
+                bottom: -33px;
+                width: 40px;
+                height: 40px;
+            }
+            &::after {
+                bottom: -42px;
+                width: 100px;
+                height: 100px;
+            }
+            &__map {
+                padding-bottom: 85px;
+            }
+        }
+        @media (max-width: $md) {
+            margin-top: -340px;
+            &__box {
+                padding-top: 250px;
+                padding-bottom: 25px;
+                .f-h3 {
+                    font-size: 32px;
+                    line-height: 42px;
+                }
+                .box-text {
+                    margin-top: 20px;
+                }
+                &__table-location {
+                    .row-table {
+                        &:nth-child(2) {
+                            .row-table__time {
+                                p {
+                                    position: relative;
+                                    &::after {
+                                        top: 18px;
+                                        left: 45px;
+                                        height: 16px;
+                                        width: 10px;
+                                    }
+                                }
+                            }
+                        }
+                        p {
+                            font-size: 12px;
+                            padding-left: 0 !important;
+                        }
+                    }
+                }
+            }
+        }
+        @media (max-width: $sm) {
+            &__box {
+                &__table-location {
+                    .row-table {
+                        .row-table__distance {
+                            p {
+                                .icon-bicycle {
+                                    top: 16px;
+                                    left: 12vw;
+                                    height: 12px;
+                                    width: 19px;
+                                }
+                            }
+                        }
+                        &__title {
+                            flex-basis: 60%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .sec2-info {
+        position: relative;
+        margin-top: 170px;
+        padding-bottom: 50px;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        .f-h3 {
+            text-align: center;
+        }
+        &::before {
+            content: "";
+            position: absolute;
+            left: 50%;
+            bottom: 0px;
+            transform: translate(-50%, 0);
+            width: 103px;
+            height: 17px;
+            background: url(../img/sea-golf/footer/element-footer-top.svg);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: contain;
+        }
+
+        @media (max-width: $lg) {
+            margin-top: 70px;
+        }
+        @media (max-width: $sm) {
+            padding-bottom: 30px;
+            .f-h3 {
+                font-size: 19px;
+            }
+        }
+    }
+    .sec3-info {
+        margin-top: 80px;
+        .row-text-rotate {
+            position: relative;
+            &::after {
+                content: "";
+                position: absolute;
+                right: -120px;
+                bottom: -85px;
+                width: 175px;
+                height: 175px;
+                background: url(../img/sea-golf/footer/circle-rotate.svg);
+                background-repeat: no-repeat;
+                background-position: center;
+                background-size: contain;
+                animation: rotate-text 30s infinite linear;
+            }
+        }
+        &__box {
+            position: relative;
+            width: calc(100% - 70px);
+            left: 35px;
+            display: flex;
+            flex-direction: column;
+            align-content: space-between;
+            background-color: $brown;
+            overflow: hidden;
+            &::before {
+                content: "";
+                position: absolute;
+                left: 50%;
+                top: -200px;
+                transform: translateX(-50%);
+                width: 99%;
+                height: 33%;
+                background: url(../img/sea-golf/home-page/photo-after.png);
+                background-repeat: no-repeat;
+                background-position: center;
+                background-size: contain;
+            }
+            &__content {
+                display: flex;
+                justify-content: center;
+                flex-wrap: wrap;
+                padding: 65px 150px 70px 200px;
+                gap: 50px 115px;
+                z-index: 1;
+                &__items {
+                    padding: 26px 25px 20px 0;
+                    width: 200px;
+                    height: auto;
+                    display: flex;
+                    flex-direction: column;
+                    align-content: center;
+                    border-width: 1px;
+                    border-style: solid;
+                    border-image: linear-gradient(to bottom, #b79763, #b7976344)
+                        1;
+                    img {
+                        margin-left: -15px;
+                        max-width: fit-content;
+                        background-color: $brown;
+                    }
+                    .f-h6 {
+                        position: relative;
+                        left: -45px;
+                        width: 220px;
+                        min-height: 105px;
+                        background-color: $brown;
+                    }
+                }
+            }
+            &__background {
+                position: relative;
+                left: 0;
+                bottom: 0;
+                width: 100%;
+                height: auto;
+                img {
+                    width: 100%;
+                }
+            }
+        }
+        @media (max-width: $xxxl) {
+            .row-text-rotate {
+                &::after {
+                    right: -130px;
+                    bottom: -70px;
+                    width: 150px;
+                    height: 150px;
+                }
+            }
+            &__box {
+                width: 100%;
+                left: 0px;
+                &__content {
+                    padding: 65px 50px 70px 100px;
+                    gap: 50px 100px;
+                }
+            }
+        }
+        @media (max-width: $xxl) {
+            &__box {
+                &__content {
+                    padding: 65px 40px 70px 50px;
+                    gap: 50px 85px;
+                    &__items {
+                        width: 160px;
+                        .f-h6 {
+                            left: -30px;
+                            width: 160px;
+                            min-height: 80px;
+                            font-size: 16px;
+                        }
+                    }
+                }
+            }
+        }
+        @media (max-width: $xl) {
+            margin-top: 50px;
+            &__box {
+                padding-left: 40px;
+                padding-right: 40px;
+                &::before {
+                    top: -130px;
+                    transform: translateX(-46%);
+                    width: 100%;
+                    height: 220px;
+                }
+                &__content {
+                    padding: 65px 0px 40px 30px;
+                    flex-wrap: nowrap;
+                    justify-content: flex-start;
+                    overflow-x: scroll;
+
+                    &__items {
+                        min-width: 160px;
+                        .f-h6 {
+                            left: -30px;
+                            width: 160px;
+                            min-height: 80px;
+                            font-size: 16px;
+                        }
+                    }
+                    &::-webkit-scrollbar-track {
+                        box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+                        border-radius: 4px;
+                    }
+                    &::-webkit-scrollbar {
+                        height: 4px;
+                    }
+                    &::-webkit-scrollbar-thumb {
+                        border-radius: 4px;
+                        background-color: $grey;
+                    }
+                }
+                &__background {
+                    margin-top: 30px;
+                    width: calc(100% + 80px);
+                    left: -40px;
+                }
+            }
+        }
+        @media (max-width: $lg) {
+            .row-text-rotate {
+                &::after {
+                    bottom: 43px;
+                    width: 100px;
+                    height: 100px;
+                    right: 0;
+                    left: 50%;
+                }
+            }
+        }
+        @media (max-width: $md) {
+            .row-text-rotate {
+                &::after {
+                    bottom: 32px;
+                    width: 75px;
+                    height: 75px;
+                }
+            }
+        }
+        @media (max-width: $sm) {
+            .row-text-rotate {
+                &::after {
+                    bottom: 6vw;
+                    width: 14vw;
+                    height: 14vw;
+                }
+            }
+        }
+    }
+    .sec4-map {
+        margin-top: 185px;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        @media (max-width: $lg) {
+            margin-top: 40px;
+        }
+    }
+}

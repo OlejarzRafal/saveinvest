@@ -350,6 +350,18 @@ p--f20 {
     line-height: 18px;
   }
 }
+.text-main--f24,
+p--f24 {
+  font-size: 24px;
+  line-height: 31px;
+}
+@media (max-width: 1199px) {
+  .text-main--f24,
+p--f24 {
+    font-size: 16px;
+    line-height: 18px;
+  }
+}
 .text-main--f28,
 p--f28 {
   font-size: 28px;
@@ -483,6 +495,10 @@ a:hover {
 
 .compensate-for-scrollbar {
   margin-right: 0 !important;
+}
+
+sup {
+  line-height: 0;
 }
 
 .container {
@@ -3468,6 +3484,44 @@ a:hover {
   }
 }
 
+.form-showhide__p {
+  font-size: 11px;
+  line-height: normal;
+}
+.form-showhide__p--info {
+  margin-top: 20px !important;
+}
+.form-showhide__p--display {
+  margin-top: 2px !important;
+}
+.form-showhide .rodo {
+  margin-top: 0 !important;
+}
+.form-showhide__btn {
+  font-weight: 700;
+  text-decoration: underline;
+  cursor: pointer;
+}
+.form-showhide__information {
+  margin-top: 10px !important;
+  display: none;
+}
+.form-showhide__information--active {
+  margin-top: 10px;
+  display: block;
+}
+.form-showhide .wpcf7-acceptance label {
+  margin-top: 20px !important;
+  margin-bottom: 0 !important;
+}
+.form-showhide__obligatory {
+  color: red;
+}
+.form-showhide .wpcf7-list-item-label {
+  position: relative;
+  top: 3px;
+}
+
 .sg-frontpage .header {
   position: relative;
   top: 0px;
@@ -5969,6 +6023,998 @@ a:hover {
   }
 }
 
+.sg-localisation .header {
+  position: relative;
+  height: 1315px;
+  width: 100%;
+  background: #004870 url("../img/sea-golf/localisation/header-background.jpg");
+  background-size: cover;
+  background-position: center top;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  background-repeat: no-repeat;
+}
+.sg-localisation .header::after {
+  content: "";
+  position: absolute;
+  bottom: 200px;
+  left: 50%;
+  -webkit-transform: translate(-50%, 0);
+          transform: translate(-50%, 0);
+  width: 24px;
+  height: 24px;
+  background: url("../img/invest-karwia/localization/scroller-down.svg");
+  background-size: cover;
+  -webkit-animation: scroller 2.5s infinite ease-in-out;
+          animation: scroller 2.5s infinite ease-in-out;
+  z-index: 1;
+}
+@-webkit-keyframes scroller {
+  0% {
+    -webkit-transform: translate(-50%, 0%);
+            transform: translate(-50%, 0%);
+  }
+  50% {
+    -webkit-transform: translate(-50%, 180%);
+            transform: translate(-50%, 180%);
+  }
+  100% {
+    -webkit-transform: translate(-50%, 0%);
+            transform: translate(-50%, 0%);
+  }
+}
+@keyframes scroller {
+  0% {
+    -webkit-transform: translate(-50%, 0%);
+            transform: translate(-50%, 0%);
+  }
+  50% {
+    -webkit-transform: translate(-50%, 180%);
+            transform: translate(-50%, 180%);
+  }
+  100% {
+    -webkit-transform: translate(-50%, 0%);
+            transform: translate(-50%, 0%);
+  }
+}
+@media (max-width: 991px) {
+  .sg-localisation .header {
+    height: 665px;
+  }
+}
+@media (max-width: 767px) {
+  .sg-localisation .header {
+    height: 520px;
+  }
+}
+@media (max-width: 575px) {
+  .sg-localisation .header {
+    background-position: 65% top;
+  }
+}
+.sg-localisation .sec1-info-map {
+  position: relative;
+  margin-top: -335px;
+  height: auto;
+  width: 100%;
+  background: linear-gradient(177.26deg, rgba(85, 209, 187, 0) 6.87%, rgba(0, 166, 189, 0.65) 13.04%, #088fad 20.36%, #005483 51.26%, #00476f 104.5%);
+  background-size: cover;
+  background-position: center top;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  background-repeat: no-repeat;
+}
+.sg-localisation .sec1-info-map::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -85px;
+  -webkit-transform: translate(-50%, 0%) rotate(0deg);
+          transform: translate(-50%, 0%) rotate(0deg);
+  width: 175px;
+  height: 175px;
+  background: url(../img/sea-golf/footer/circle-rotate.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  -webkit-animation: rotate-text 30s infinite linear;
+          animation: rotate-text 30s infinite linear;
+}
+.sg-localisation .sec1-info-map__box {
+  padding-top: 280px;
+  padding-bottom: 80px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+.sg-localisation .sec1-info-map__box .f-h3 {
+  width: 180%;
+}
+.sg-localisation .sec1-info-map__box .box-text {
+  margin-top: 30px;
+}
+.sg-localisation .sec1-info-map__box__table-location {
+  margin-top: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.sg-localisation .sec1-info-map__box__table-location .row-table {
+  position: relative;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border-bottom: 1px solid #b68b1d;
+}
+.sg-localisation .sec1-info-map__box__table-location .row-table__title {
+  padding-left: 3px;
+  margin: auto;
+  -ms-flex-preferred-size: 61%;
+      flex-basis: 61%;
+}
+.sg-localisation .sec1-info-map__box__table-location .row-table__title p {
+  padding-right: 4vw !important;
+  padding-left: 15px !important;
+}
+.sg-localisation .sec1-info-map__box__table-location .row-table__time {
+  -ms-flex-preferred-size: 21%;
+      flex-basis: 21%;
+  margin: auto;
+}
+.sg-localisation .sec1-info-map__box__table-location .row-table__distance {
+  -ms-flex-preferred-size: 18%;
+      flex-basis: 18%;
+  margin: auto;
+}
+.sg-localisation .sec1-info-map__box__table-location .row-table .row-table__distance p {
+  position: relative;
+}
+.sg-localisation .sec1-info-map__box__table-location .row-table .row-table__distance p .icon-bicycle {
+  position: absolute;
+  top: 18px;
+  left: 70px;
+  height: 15px;
+  width: 24px;
+  background: url("../img/sea-golf/localisation/icon-bicycle.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.sg-localisation .sec1-info-map__box__table-location .row-table p {
+  padding: 12px 0;
+  text-align: start;
+  line-height: 22px;
+}
+.sg-localisation .sec1-info-map__map {
+  position: relative;
+  left: -45px;
+  padding-bottom: 380px;
+  width: 110%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.sg-localisation .sec1-info-map__map .logo-sea-golf {
+  position: relative;
+  top: 1%;
+  left: 14%;
+  width: 15%;
+  height: auto;
+}
+@media (max-width: 1399px) {
+  .sg-localisation .sec1-info-map__box__table-location .row-table .row-table__distance p .icon-bicycle {
+    top: 15px;
+    left: 57px;
+  }
+}
+@media (max-width: 1199px) {
+  .sg-localisation .sec1-info-map {
+    margin-top: -475px;
+  }
+  .sg-localisation .sec1-info-map__box {
+    padding-top: 40%;
+    padding-bottom: 50px;
+  }
+  .sg-localisation .sec1-info-map__box .f-h3 {
+    width: 100%;
+  }
+  .sg-localisation .sec1-info-map__map {
+    position: relative;
+    left: 0px;
+    padding-top: 0px;
+    padding-bottom: 130px;
+    width: 100%;
+  }
+}
+@media (max-width: 991px) {
+  .sg-localisation .sec1-info-map {
+    margin-top: -300px;
+    background: linear-gradient(177.26deg, rgba(85, 209, 187, 0) 10.87%, rgba(0, 166, 189, 0.65) 13.04%, #088fad 14.36%, #005483 51.26%, #00476f 104.5%);
+  }
+  .sg-localisation .sec1-info-map .bottom-item-4 {
+    bottom: -33px;
+    width: 40px;
+    height: 40px;
+  }
+  .sg-localisation .sec1-info-map::after {
+    bottom: -42px;
+    width: 100px;
+    height: 100px;
+  }
+  .sg-localisation .sec1-info-map__map {
+    padding-bottom: 85px;
+  }
+}
+@media (max-width: 767px) {
+  .sg-localisation .sec1-info-map {
+    margin-top: -340px;
+  }
+  .sg-localisation .sec1-info-map__box {
+    padding-top: 250px;
+    padding-bottom: 25px;
+  }
+  .sg-localisation .sec1-info-map__box .f-h3 {
+    font-size: 32px;
+    line-height: 42px;
+  }
+  .sg-localisation .sec1-info-map__box .box-text {
+    margin-top: 20px;
+  }
+  .sg-localisation .sec1-info-map__box__table-location .row-table:nth-child(2) .row-table__time p {
+    position: relative;
+  }
+  .sg-localisation .sec1-info-map__box__table-location .row-table:nth-child(2) .row-table__time p::after {
+    top: 18px;
+    left: 45px;
+    height: 16px;
+    width: 10px;
+  }
+  .sg-localisation .sec1-info-map__box__table-location .row-table p {
+    font-size: 12px;
+    padding-left: 0 !important;
+  }
+}
+@media (max-width: 575px) {
+  .sg-localisation .sec1-info-map__box__table-location .row-table .row-table__distance p .icon-bicycle {
+    top: 16px;
+    left: 12vw;
+    height: 12px;
+    width: 19px;
+  }
+  .sg-localisation .sec1-info-map__box__table-location .row-table__title {
+    -ms-flex-preferred-size: 60%;
+        flex-basis: 60%;
+  }
+}
+.sg-localisation .sec2-info {
+  position: relative;
+  margin-top: 170px;
+  padding-bottom: 50px;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.sg-localisation .sec2-info .f-h3 {
+  text-align: center;
+}
+.sg-localisation .sec2-info::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 0px;
+  -webkit-transform: translate(-50%, 0);
+          transform: translate(-50%, 0);
+  width: 103px;
+  height: 17px;
+  background: url(../img/sea-golf/footer/element-footer-top.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+@media (max-width: 991px) {
+  .sg-localisation .sec2-info {
+    margin-top: 70px;
+  }
+}
+@media (max-width: 575px) {
+  .sg-localisation .sec2-info {
+    padding-bottom: 30px;
+  }
+  .sg-localisation .sec2-info .f-h3 {
+    font-size: 19px;
+  }
+}
+.sg-localisation .sec3-info {
+  margin-top: 80px;
+}
+.sg-localisation .sec3-info .row-text-rotate {
+  position: relative;
+}
+.sg-localisation .sec3-info .row-text-rotate::after {
+  content: "";
+  position: absolute;
+  right: -120px;
+  bottom: -85px;
+  width: 175px;
+  height: 175px;
+  background: url(../img/sea-golf/footer/circle-rotate.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  -webkit-animation: rotate-text 30s infinite linear;
+          animation: rotate-text 30s infinite linear;
+}
+.sg-localisation .sec3-info__box {
+  position: relative;
+  width: calc(100% - 70px);
+  left: 35px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-line-pack: justify;
+      align-content: space-between;
+  background-color: #33312F;
+  overflow: hidden;
+}
+.sg-localisation .sec3-info__box::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: -200px;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  width: 99%;
+  height: 33%;
+  background: url(../img/sea-golf/home-page/photo-after.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+.sg-localisation .sec3-info__box__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  padding: 65px 150px 70px 200px;
+  gap: 50px 115px;
+  z-index: 1;
+}
+.sg-localisation .sec3-info__box__content__items {
+  padding: 26px 25px 20px 0;
+  width: 200px;
+  height: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  border-width: 1px;
+  border-style: solid;
+  -o-border-image: linear-gradient(to bottom, #b79763, #b7976344) 1;
+     border-image: -webkit-gradient(linear, left top, left bottom, from(#b79763), to(#b7976344)) 1;
+     border-image: linear-gradient(to bottom, #b79763, #b7976344) 1;
+}
+.sg-localisation .sec3-info__box__content__items img {
+  margin-left: -15px;
+  max-width: -webkit-fit-content;
+  max-width: -moz-fit-content;
+  max-width: fit-content;
+  background-color: #33312F;
+}
+.sg-localisation .sec3-info__box__content__items .f-h6 {
+  position: relative;
+  left: -45px;
+  width: 220px;
+  min-height: 105px;
+  background-color: #33312F;
+}
+.sg-localisation .sec3-info__box__background {
+  position: relative;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: auto;
+}
+.sg-localisation .sec3-info__box__background img {
+  width: 100%;
+}
+@media (max-width: 1679px) {
+  .sg-localisation .sec3-info .row-text-rotate::after {
+    right: -130px;
+    bottom: -70px;
+    width: 150px;
+    height: 150px;
+  }
+  .sg-localisation .sec3-info__box {
+    width: 100%;
+    left: 0px;
+  }
+  .sg-localisation .sec3-info__box__content {
+    padding: 65px 50px 70px 100px;
+    gap: 50px 100px;
+  }
+}
+@media (max-width: 1399px) {
+  .sg-localisation .sec3-info__box__content {
+    padding: 65px 40px 70px 50px;
+    gap: 50px 85px;
+  }
+  .sg-localisation .sec3-info__box__content__items {
+    width: 160px;
+  }
+  .sg-localisation .sec3-info__box__content__items .f-h6 {
+    left: -30px;
+    width: 160px;
+    min-height: 80px;
+    font-size: 16px;
+  }
+}
+@media (max-width: 1199px) {
+  .sg-localisation .sec3-info {
+    margin-top: 50px;
+  }
+  .sg-localisation .sec3-info__box {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+  .sg-localisation .sec3-info__box::before {
+    top: -130px;
+    -webkit-transform: translateX(-46%);
+            transform: translateX(-46%);
+    width: 100%;
+    height: 220px;
+  }
+  .sg-localisation .sec3-info__box__content {
+    padding: 65px 0px 40px 30px;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    overflow-x: scroll;
+  }
+  .sg-localisation .sec3-info__box__content__items {
+    min-width: 160px;
+  }
+  .sg-localisation .sec3-info__box__content__items .f-h6 {
+    left: -30px;
+    width: 160px;
+    min-height: 80px;
+    font-size: 16px;
+  }
+  .sg-localisation .sec3-info__box__content::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+            box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    border-radius: 4px;
+  }
+  .sg-localisation .sec3-info__box__content::-webkit-scrollbar {
+    height: 4px;
+  }
+  .sg-localisation .sec3-info__box__content::-webkit-scrollbar-thumb {
+    border-radius: 4px;
+    background-color: #707070;
+  }
+  .sg-localisation .sec3-info__box__background {
+    margin-top: 30px;
+    width: calc(100% + 80px);
+    left: -40px;
+  }
+}
+@media (max-width: 991px) {
+  .sg-localisation .sec3-info .row-text-rotate::after {
+    bottom: 43px;
+    width: 100px;
+    height: 100px;
+    right: 0;
+    left: 50%;
+  }
+}
+@media (max-width: 767px) {
+  .sg-localisation .sec3-info .row-text-rotate::after {
+    bottom: 32px;
+    width: 75px;
+    height: 75px;
+  }
+}
+@media (max-width: 575px) {
+  .sg-localisation .sec3-info .row-text-rotate::after {
+    bottom: 6vw;
+    width: 14vw;
+    height: 14vw;
+  }
+}
+.sg-localisation .sec4-map {
+  margin-top: 185px;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+@media (max-width: 991px) {
+  .sg-localisation .sec4-map {
+    margin-top: 40px;
+  }
+}
+
+.sg-gallery .sg-gallery-seagolf {
+  position: relative;
+  min-height: 920px;
+  width: 100%;
+  background: url(../img/sea-golf/gallery/background.jpg);
+  background-size: auto;
+  background-repeat: no-repeat;
+  background-position: center top;
+}
+.sg-gallery .sg-gallery-seagolf__title {
+  position: relative;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  margin-top: 635px;
+  padding: 20px;
+  width: 74%;
+  background-color: #33312F;
+}
+.sg-gallery .sg-gallery-seagolf__title__box {
+  width: 100%;
+  padding: 40px 35px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border: 1px solid #c4c4c455;
+}
+.sg-gallery .sg-gallery-seagolf__title::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 12px;
+  -webkit-transform: translate(-50%, 0%);
+          transform: translate(-50%, 0%);
+  width: 130px;
+  height: 17px;
+  background: #33312F url(../img/sea-golf/footer/element-footer-top.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 103px 17px;
+  pointer-events: none;
+}
+.sg-gallery .sg-gallery-seagolf__title::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 109px;
+  height: 215px;
+  background: url("../img/sea-golf/about/sec1-element.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  z-index: -1;
+}
+.sg-gallery .sg-gallery-seagolf__title h5 {
+  width: 100%;
+  text-align: center;
+}
+.sg-gallery .sg-gallery-seagolf__title .text-main {
+  width: 100%;
+  margin-top: 15px;
+  text-align: center;
+}
+.sg-gallery .sg-gallery-seagolf .category {
+  margin-top: 180px;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 0px;
+}
+.sg-gallery .sg-gallery-seagolf .category__item {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-bottom: 1px solid #A37A55;
+  cursor: pointer;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+.sg-gallery .sg-gallery-seagolf .category__item span {
+  position: relative;
+  display: block;
+  background-color: white;
+  font-family: "Mulish", sans-serif;
+  font-size: 15px;
+  font-weight: 800;
+  color: #A37A55;
+  letter-spacing: 0.2em;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  padding: 16px 50px;
+}
+.sg-gallery .sg-gallery-seagolf .category__item span:hover {
+  background: #f5f1ed;
+}
+.sg-gallery .sg-gallery-seagolf .category__item::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 0px;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 12px 12px 0 12px;
+  border-color: #A37A55 transparent transparent;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+.sg-gallery .sg-gallery-seagolf .category__item.active span, .sg-gallery .sg-gallery-seagolf .category__item:hover {
+  background: #f5f1ed;
+}
+.sg-gallery .sg-gallery-seagolf .category__item.active span::before, .sg-gallery .sg-gallery-seagolf .category__item:hover::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -12px;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 12px 12px 0 12px;
+  border-color: #A37A55 transparent transparent;
+}
+.sg-gallery .sg-gallery-seagolf .gallery {
+  margin-top: 70px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 20px;
+}
+.sg-gallery .sg-gallery-seagolf .gallery__item {
+  position: relative;
+  height: 18vw;
+  cursor: pointer;
+  display: none;
+}
+.sg-gallery .sg-gallery-seagolf .gallery__item.show {
+  display: block;
+}
+.sg-gallery .sg-gallery-seagolf .gallery__item a {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.sg-gallery .sg-gallery-seagolf .gallery__item a:after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 81px;
+  height: 81px;
+  background: url(../img/sea-golf/gallery/icon-gallery-plus.svg);
+  background-repeat: no-repeat;
+  background-size: auto;
+  opacity: 0;
+  pointer-events: none;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+  z-index: 9;
+}
+.sg-gallery .sg-gallery-seagolf .gallery__item a:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: #01161b;
+  opacity: 0;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+.sg-gallery .sg-gallery-seagolf .gallery__item a:hover:after {
+  opacity: 1;
+}
+.sg-gallery .sg-gallery-seagolf .gallery__item a:hover:before {
+  opacity: 0.6;
+}
+.sg-gallery .sg-gallery-seagolf .gallery__item a img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+}
+.sg-gallery .sg-gallery-seagolf .gallery__item--video {
+  position: relative;
+  height: 18vw;
+  width: 100%;
+}
+.sg-gallery .sg-gallery-seagolf .gallery__item--video::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 42%;
+  height: 42%;
+  background: url(../img/sea-golf/gallery/photo-move-play.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  pointer-events: none;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+  z-index: 9;
+}
+.sg-gallery .sg-gallery-seagolf .gallery__item--video a {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+.sg-gallery .sg-gallery-seagolf .gallery__item--video a:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: #01161b;
+  opacity: 0;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+.sg-gallery .sg-gallery-seagolf .gallery__item--video a:after {
+  content: "";
+  display: none;
+}
+.sg-gallery .sg-gallery-seagolf .gallery__item--video a:hover:before {
+  opacity: 0.6;
+}
+.sg-gallery .sg-gallery-seagolf .gallery__item .yt-video-link {
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+@media (max-width: 1679px) {
+  .sg-gallery .sg-gallery-seagolf__title h5 {
+    width: 83%;
+  }
+}
+@media (max-width: 1399px) {
+  .sg-gallery .sg-gallery-seagolf__title h5 {
+    width: 95%;
+  }
+}
+@media (max-width: 1199px) {
+  .sg-gallery .sg-gallery-seagolf__title h5 {
+    font-size: 35px;
+    width: 100%;
+  }
+}
+@media (max-width: 991px) {
+  .sg-gallery .sg-gallery-seagolf {
+    top: -180px;
+  }
+  .sg-gallery .sg-gallery-seagolf__title {
+    width: 100%;
+  }
+  .sg-gallery .sg-gallery-seagolf .category {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin-top: 30px;
+    gap: 20px;
+  }
+  .sg-gallery .sg-gallery-seagolf .gallery {
+    grid-template-columns: 1fr 1fr;
+  }
+  .sg-gallery .sg-gallery-seagolf .gallery__item {
+    position: relative;
+    height: 24vw;
+  }
+  .sg-gallery .sg-gallery-seagolf .gallery__item--video {
+    position: relative;
+    height: 24vw;
+  }
+}
+@media (max-width: 767px) {
+  .sg-gallery .sg-gallery-seagolf {
+    margin-bottom: 40px;
+  }
+  .sg-gallery .sg-gallery-seagolf__title {
+    margin-top: 510px;
+  }
+  .sg-gallery .sg-gallery-seagolf__title h5 {
+    font-size: 25px;
+  }
+  .sg-gallery .sg-gallery-seagolf .gallery {
+    grid-template-columns: 1fr;
+    margin-top: 50px;
+  }
+  .sg-gallery .sg-gallery-seagolf .gallery .gallery-item {
+    margin: 0 auto;
+  }
+  .sg-gallery .sg-gallery-seagolf .gallery__item {
+    position: relative;
+    height: 50vw;
+  }
+  .sg-gallery .sg-gallery-seagolf .gallery__item--video {
+    position: relative;
+    height: 50vw;
+  }
+}
+@media (max-width: 575px) {
+  .sg-gallery .sg-gallery-seagolf__title__box {
+    padding: 35px 20px;
+  }
+  .sg-gallery .sg-gallery-seagolf .category__item span {
+    padding: 16px 30px;
+  }
+  .sg-gallery .sg-gallery-seagolf .gallery__item {
+    position: relative;
+    height: 60vw;
+  }
+  .sg-gallery .sg-gallery-seagolf .gallery__item--video {
+    position: relative;
+    height: 60vw;
+  }
+}
+
+.sg-contact .sec1-contact-sg {
+  position: relative;
+  padding-top: 560px;
+  width: 100%;
+  height: auto;
+  background-image: url("../img/sea-golf/contact/background-header.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-position-y: top;
+  z-index: 1;
+}
+.sg-contact .sec1-contact-sg__form {
+  position: relative;
+  left: -15px;
+  width: calc(100% + 30px);
+  height: 100%;
+  background-color: #33312F;
+  padding: 55px 150px 220px 135px;
+}
+.sg-contact .sec1-contact-sg__form::before {
+  content: "";
+  position: absolute;
+  right: 35px;
+  top: 0px;
+  width: 290px;
+  height: 140px;
+  background: url(../img/sea-golf/contact/sec1-form-element.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+.sg-contact .sec1-contact-sg__form::after {
+  content: "";
+  position: absolute;
+  right: 20px;
+  bottom: 0px;
+  width: 370px;
+  height: 220px;
+  background: url(../img/sea-golf/contact/sec1-form-ball.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+.sg-contact .sec1-contact-sg__form__border {
+  position: absolute;
+  width: calc(100% - 40px);
+  height: calc(100% - 40px);
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  border: 1px solid #c4c4c445;
+  pointer-events: none;
+  z-index: 1;
+}
+.sg-contact .sec1-contact-sg__sales-box {
+  position: relative;
+  left: -15px;
+  width: calc(100% + 30px);
+  height: 100%;
+  background-color: #F1F1EF;
+}
+
 footer {
   margin-top: 250px;
 }
@@ -6266,5 +7312,287 @@ footer .footer .footer-box a p {
   100% {
     -webkit-transform: translate(-50%, 0%) rotate(360deg);
             transform: translate(-50%, 0%) rotate(360deg);
+  }
+}
+
+.form-main {
+  margin-top: 80px;
+}
+@media (max-width: 1199px) {
+  .form-main {
+    margin-top: 30px;
+  }
+}
+.form-main p {
+  margin: 0;
+  color: #707070;
+}
+.form-main__p {
+  font-size: 11px;
+  line-height: 18px;
+  color: #707070;
+  margin: 15px 0 20px 0 !important;
+}
+.form-main__p--obligatory {
+  margin: 5px 0 0 0px !important;
+}
+.form-main .rodo {
+  margin-top: 20px;
+  display: block;
+}
+.form-main__obligatory {
+  color: #c8220b;
+}
+.form-main form .form-showhide {
+  margin-top: 10px;
+}
+.form-main form input[type=text],
+.form-main form input[type=email] {
+  -webkit-appearance: none;
+  outline: none;
+  height: 60px;
+  width: 100%;
+  border: 1px solid #b79763;
+  background-color: white;
+  margin-bottom: 22px;
+  padding: 0 22px;
+  font-size: 16px;
+  color: #b79763;
+}
+.form-main form input[type=text]:hover,
+.form-main form input[type=email]:hover {
+  border: 1px solid #b79763;
+}
+.form-main form input[type=text]:focus,
+.form-main form input[type=email]:focus {
+  border: 2px solid #b79763;
+}
+.form-main form input[type=text].wpcf7-not-valid,
+.form-main form input[type=email].wpcf7-not-valid {
+  border: 2px solid #c8220b;
+}
+.form-main form input[type=submit] {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+  margin-top: 0;
+  font-family: "Mulish", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 15px;
+  line-height: 18px;
+  color: #ffffff;
+  text-align: center;
+  letter-spacing: 0.2em;
+  border: 1px solid transparent;
+  cursor: pointer;
+  padding: 16px 22px;
+  background-color: #bf9875;
+  margin-top: 35px;
+}
+.form-main form input[type=submit]:hover {
+  background: #916137;
+}
+@media (max-width: 575px) {
+  .form-main form input[type=submit] {
+    font-size: 12px;
+  }
+}
+.form-main form .wpcf7-submit {
+  position: relative;
+  left: calc(100% - 118px);
+}
+.form-main form input[type=email] {
+  margin-bottom: 14px;
+}
+.form-main form .wpcf7-acceptance label {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 20px;
+}
+.form-main form .accept-box {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 20px;
+  margin: 0 4px;
+}
+.form-main form .accept-box .wpcf7-list-item {
+  margin: 0;
+}
+.form-main form span.wpcf7-list-item {
+  margin: 0;
+}
+.form-main form input[type=checkbox] {
+  background: transparent;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  outline: 0 !important;
+  outline: none !important;
+  -webkit-tap-highlight-color: transparent !important;
+  border: none;
+  padding: 0;
+  height: unset;
+  width: unset;
+  background-color: unset;
+  position: relative;
+  cursor: pointer;
+  margin: 2px 16px 0 0;
+}
+.form-main form input[type=checkbox]:hover::before {
+  border: 2px solid #b79763;
+}
+.form-main form input[type=checkbox]:focus::before {
+  border: 2px solid #b79763;
+}
+.form-main form input[type=checkbox]::before {
+  content: "";
+  display: block;
+  position: relative;
+  left: 0;
+  width: 16px;
+  height: 16px;
+  background-color: white;
+  border: 2px solid #b79763;
+}
+.form-main form input[type=checkbox]:checked::before {
+  border: 2px solid #b79763;
+}
+.form-main form input[type=checkbox]:checked::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 5px;
+  left: 4px;
+  width: 9px;
+  height: 5px;
+  border-left: 2px solid #b79763;
+  border-bottom: 2px solid #b79763;
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+.form-main form .ajax-loader {
+  position: absolute;
+  bottom: 15px;
+}
+.form-main form .wpcf7-list-item-label {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  display: inline-block;
+  font-size: 11px;
+  line-height: 18px;
+  color: #122039;
+}
+.form-main form .wpcf7-not-valid {
+  border: 2px solid #707070;
+}
+.form-main form .wpcf7-not-valid-tip {
+  color: #707070;
+  -webkit-animation: alert linear 0.3s;
+          animation: alert linear 0.3s;
+  font-size: 11px;
+  font-size: 11px;
+  position: absolute;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  z-index: 9999;
+  top: 35px;
+}
+.form-main form .wpcf7-response-output {
+  text-align: center;
+  margin: 0;
+  margin-bottom: 16px;
+  padding: 13px;
+}
+.form-main form .wpcf7-mail-sent-ng,
+.form-main form .wpcf7-aborted {
+  border: 2px solid blue;
+}
+.form-main form .wpcf7-validation-errors,
+.form-main form .wpcf7-acceptance-missing {
+  border: 2px solid blue;
+}
+.form-main form ::-webkit-input-placeholder {
+  /* WebKit browsers */
+  color: #b79763;
+  opacity: 1;
+}
+.form-main form :-moz-placeholder {
+  /* Mozilla Firefox 4 to 18 */
+  color: #b79763;
+  opacity: 1;
+}
+.form-main form ::-moz-placeholder {
+  /* Mozilla Firefox 19+ */
+  color: #b79763;
+  opacity: 1;
+}
+.form-main form :-ms-input-placeholder {
+  /* Internet Explorer 10+ */
+  color: #b79763;
+  opacity: 1;
+}
+@media screen and (max-width: 768px) {
+  .form-main__p {
+    font-size: 12px;
+    margin: 10px 0 20px 0 !important;
+    line-height: normal;
+  }
+  .form-main form .wpcf7-list-item-label {
+    font-size: 12px;
+    line-height: normal;
+  }
+  .form-main form .wpcf7-acceptance label {
+    margin-bottom: 10px;
+  }
+  .form-main form input[type=submit] {
+    width: 170px;
+    height: 42px;
+    margin-top: 20px;
+    padding: 7px 22px;
+  }
+  .form-main form ::-webkit-input-placeholder {
+    /* WebKit browsers */
+    color: #b79763 !important;
+    opacity: 1;
+    font-size: 14px;
+  }
+  .form-main form :-moz-placeholder {
+    /* Mozilla Firefox 4 to 18 */
+    color: #b79763 !important;
+    opacity: 1;
+    font-size: 14px;
+  }
+  .form-main form ::-moz-placeholder {
+    /* Mozilla Firefox 19+ */
+    color: #b79763 !important;
+    opacity: 1;
+    font-size: 14px;
+  }
+  .form-main form :-ms-input-placeholder {
+    /* Internet Explorer 10+ */
+    color: #b79763 !important;
+    opacity: 1;
+    font-size: 14px;
   }
 }
