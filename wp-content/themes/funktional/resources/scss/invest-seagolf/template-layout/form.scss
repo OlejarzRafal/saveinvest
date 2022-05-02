@@ -1,12 +1,14 @@
 .form-main {
-    margin-top: 80px;
+    margin-top: 65px;
     @media (max-width: $xl) {
         margin-top: 30px;
     }
     p {
         margin: 0;
         color: #707070;
+
     }
+
     &__p {
         font-size: 11px;
         line-height: 18px;
@@ -15,6 +17,7 @@
         &--obligatory {
             margin: 5px 0 0 0px !important;
         }
+
     }
     .rodo {
         margin-top: 20px;
@@ -52,33 +55,63 @@
         }
 
         input[type="submit"] {
-            display: flex;
-            flex-direction: row;
-            justify-content: center;
-            align-items: center;
             position: relative;
-            margin-top: 0;
+            margin: 35px 0 40px 10px;
+            padding-right: 30px;
+            width: fit-content;
+            height: 30px;
             font-family: $mulish;
+            color: $gold-medium;
             font-style: normal;
             font-weight: 700;
             font-size: 15px;
             line-height: 18px;
-            color: #ffffff;
             text-align: center;
             letter-spacing: 0.2em;
             border: 1px solid transparent;
             cursor: pointer;
-            padding: 16px 22px;
-            background-color: #bf9875;
-            margin-top: 35px;
-            &:hover {
-                background: #916137;
-            }
+            background: transparent url(../img/sea-golf/footer/arrow-btn.svg);
+            background-repeat: no-repeat;
+            background-position: center right;
+            background-size: auto;
+
+            // &::before {
+            //     content: "";
+            //     position: absolute;
+            //     width: calc(100% + 37px);
+            //     transform: scaleX(0);
+            //     height: 2px;
+            //     bottom: -5px;
+            //     left: 0;
+            //     color: $gold-medium;
+            //     background: currentcolor;
+            //     transform-origin: right;
+            //     transition: transform 0.25s ease-out;
+            //     &:hover {
+            //         &::before {
+            //             transform: scaleX(1);
+            //             transform-origin: left;
+            //             background-color: #b79763;
+            //         }
+            //     }
+            // }
+            // &:hover {
+            //     &::before {
+            //         transform: scaleX(1);
+            //         transform-origin: left;
+            //         background-color: #b79763;
+            //     }
+            // }
+            // &:hover {
+            //     border-bottom: 2px solid $mulish !important;
+                
+            // }
             @media (max-width: $sm) {
                 font-size: 12px;
             }
+          
         }
-        .wpcf7-submit{
+        .wpcf7-submit {
             position: relative;
             left: calc(100% - 118px);
         }
@@ -216,7 +249,6 @@
         }
     }
 
-
     @media screen and (max-width: 768px) {
         &__p {
             font-size: 12px;
@@ -234,10 +266,17 @@
                 }
             }
             input[type="submit"] {
-                width: 170px;
+                width: 120px;
                 height: 42px;
                 margin-top: 20px;
                 padding: 7px 22px;
+                left:72%;
+                @media (max-width: $sm) {
+                    width: 100px;
+                    left: -10px;
+                    padding: 7px 22px 7px 0px;
+                    margin-left: 0;
+                }
             }
             ::-webkit-input-placeholder {
                 /* WebKit browsers */

@@ -292,6 +292,10 @@ p {
 p--white {
   color: #FFFFFF;
 }
+.text-main--gold-medium,
+p--gold-medium {
+  color: #B79763;
+}
 .text-main--gold-dark,
 p--gold-dark {
   color: #A37A55;
@@ -6971,6 +6975,9 @@ sup {
   background-color: #33312F;
   padding: 55px 150px 220px 135px;
 }
+.sg-contact .sec1-contact-sg__form__text {
+  margin-top: 40px;
+}
 .sg-contact .sec1-contact-sg__form::before {
   content: "";
   position: absolute;
@@ -7011,8 +7018,697 @@ sup {
   position: relative;
   left: -15px;
   width: calc(100% + 30px);
+  padding: 55px 60px 40px 90px;
   height: 100%;
   background-color: #F1F1EF;
+}
+.sg-contact .sec1-contact-sg__sales-box__text {
+  margin-top: 40px;
+}
+.sg-contact .sec1-contact-sg__sales-box .person-sales {
+  margin-top: 80px;
+  padding: 0 0 0 30px;
+  width: 100%;
+  height: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border: 1px solid #B79763;
+}
+.sg-contact .sec1-contact-sg__sales-box .person-sales__photo {
+  margin-top: -30px;
+  margin-bottom: 20px;
+  height: 235px;
+  width: 205px;
+}
+.sg-contact .sec1-contact-sg__sales-box .person-sales__photo img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+}
+.sg-contact .sec1-contact-sg__sales-box .person-sales .person-info {
+  padding: 35px 20px 40px 35px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+.sg-contact .sec1-contact-sg__sales-box .person-sales .person-info__position {
+  margin-top: 10px;
+}
+.sg-contact .sec1-contact-sg__sales-box .person-sales .person-info__email {
+  margin-top: 12px;
+  margin-bottom: 3px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 18px;
+}
+.sg-contact .sec1-contact-sg__sales-box .person-sales .person-info__email img {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+.sg-contact .sec1-contact-sg__sales-box .person-sales .person-info__email a {
+  position: relative;
+}
+.sg-contact .sec1-contact-sg__sales-box .person-sales .person-info__email a:hover {
+  color: #B79763;
+}
+.sg-contact .sec1-contact-sg__sales-box .person-sales .person-info__phone {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 18px;
+}
+.sg-contact .sec1-contact-sg__sales-box .person-sales .person-info__phone img {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+.sg-contact .sec1-contact-sg__sales-box .person-sales .person-info__phone a {
+  position: relative;
+}
+.sg-contact .sec1-contact-sg__sales-box .person-sales .person-info__phone a:hover {
+  color: #B79763;
+}
+.sg-contact .sec1-contact-sg__service {
+  margin-top: 115px;
+}
+.sg-contact .sec1-contact-sg__service__text {
+  margin-top: 40px;
+}
+.sg-contact .sec1-contact-sg .person-service {
+  margin-top: 80px;
+  padding: 0 0 0 30px;
+  width: 100%;
+  height: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border: 1px solid #B79763;
+}
+.sg-contact .sec1-contact-sg .person-service__photo {
+  margin-top: -30px;
+  margin-bottom: 20px;
+  height: 235px;
+  width: 205px;
+}
+.sg-contact .sec1-contact-sg .person-service__photo img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: none;
+     object-fit: none;
+  -o-object-position: center;
+     object-position: center;
+}
+.sg-contact .sec1-contact-sg .person-service .person-info {
+  padding: 35px 20px 40px 35px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+.sg-contact .sec1-contact-sg .person-service .person-info__position {
+  margin-top: 10px;
+}
+.sg-contact .sec1-contact-sg .person-service .person-info__email {
+  margin-top: 20px;
+  margin-bottom: 3px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 18px;
+}
+.sg-contact .sec1-contact-sg .person-service .person-info__email img {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+.sg-contact .sec1-contact-sg .person-service .person-info__email a {
+  position: relative;
+}
+.sg-contact .sec1-contact-sg .person-service .person-info__email a:hover {
+  color: #B79763;
+}
+.sg-contact .sec1-contact-sg .person-service .person-info__phone {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 18px;
+}
+.sg-contact .sec1-contact-sg .person-service .person-info__phone img {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+.sg-contact .sec1-contact-sg .person-service .person-info__phone a {
+  position: relative;
+}
+.sg-contact .sec1-contact-sg .person-service .person-info__phone a:hover {
+  color: #B79763;
+}
+.sg-contact .sec1-contact-sg__logo {
+  position: relative;
+  margin-top: 90px;
+  padding-top: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: relative;
+}
+.sg-contact .sec1-contact-sg__logo::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 0px;
+  -webkit-transform: translate(-50%, 0);
+          transform: translate(-50%, 0);
+  width: 103px;
+  height: 17px;
+  background: url(../img/sea-golf/footer/element-footer-top.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+@media (max-width: 1679px) {
+  .sg-contact .sec1-contact-sg__sales-box .person-sales {
+    padding: 0 0 0 20px;
+  }
+  .sg-contact .sec1-contact-sg__sales-box .person-sales .person-info {
+    padding: 25px 20px 20px 20px;
+  }
+  .sg-contact .sec1-contact-sg__sales-box .person-sales .person-info__email {
+    margin-bottom: 10px;
+  }
+  .sg-contact .sec1-contact-sg__sales-box .person-sales .person-info__email, .sg-contact .sec1-contact-sg__sales-box .person-sales .person-info__phone {
+    gap: 5px;
+  }
+  .sg-contact .sec1-contact-sg__sales-box .person-sales .person-info__email a, .sg-contact .sec1-contact-sg__sales-box .person-sales .person-info__phone a {
+    position: relative;
+  }
+  .sg-contact .sec1-contact-sg__sales-box .person-sales .person-info__email a::after, .sg-contact .sec1-contact-sg__sales-box .person-sales .person-info__phone a::after {
+    right: -30px;
+  }
+  .sg-contact .sec1-contact-sg .person-service {
+    padding: 0 0 0 20px;
+  }
+  .sg-contact .sec1-contact-sg .person-service .person-info {
+    padding: 25px 20px 20px 20px;
+  }
+  .sg-contact .sec1-contact-sg .person-service .person-info__email {
+    margin-bottom: 10px;
+  }
+}
+@media (max-width: 1399px) {
+  .sg-contact .sec1-contact-sg__form .sales-title, .sg-contact .sec1-contact-sg__sales-box .sales-title {
+    margin-top: 40px;
+  }
+  .sg-contact .sec1-contact-sg__form .text-form,
+.sg-contact .sec1-contact-sg__form .sales-text, .sg-contact .sec1-contact-sg__sales-box .text-form,
+.sg-contact .sec1-contact-sg__sales-box .sales-text {
+    margin-top: 10px;
+  }
+  .sg-contact .sec1-contact-sg__form .person-sales, .sg-contact .sec1-contact-sg__sales-box .person-sales {
+    margin-top: 40px;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+  }
+  .sg-contact .sec1-contact-sg__form .person-sales .person-info, .sg-contact .sec1-contact-sg__sales-box .person-sales .person-info {
+    min-width: 350px;
+  }
+  .sg-contact .sec1-contact-sg .person-service {
+    margin-top: 50px;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+  }
+  .sg-contact .sec1-contact-sg .person-service .person-info {
+    min-width: 350px;
+  }
+  .sg-contact .sec1-contact-sg__service {
+    margin-top: 50px;
+  }
+}
+@media (max-width: 767px) {
+  .sg-contact .sec1-contact-sg {
+    padding: 28% 0 0;
+    background-size: contain;
+  }
+  .sg-contact .sec1-contact-sg__form {
+    padding: 45px 35px 100px 35px;
+  }
+  .sg-contact .sec1-contact-sg__form__border {
+    width: calc(100% - 30px);
+    height: calc(100% - 30px);
+  }
+  .sg-contact .sec1-contact-sg__form::before {
+    width: 180px;
+    height: 85px;
+  }
+  .sg-contact .sec1-contact-sg__form::after {
+    width: 200px;
+    height: 115px;
+  }
+  .sg-contact .sec1-contact-sg__sales-box {
+    padding: 40px 15px 15px 15px;
+  }
+  .sg-contact .sec1-contact-sg__sales-box .person-sales {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 100%;
+  }
+  .sg-contact .sec1-contact-sg__sales-box .person-sales .person-info {
+    min-width: auto;
+    padding: 0px 20px 20px 0px;
+  }
+  .sg-contact .sec1-contact-sg__sales-box .person-sales .person-info__email, .sg-contact .sec1-contact-sg__sales-box .person-sales .person-info__phone {
+    gap: 5px;
+  }
+  .sg-contact .sec1-contact-sg__sales-box .person-sales .person-info__email a, .sg-contact .sec1-contact-sg__sales-box .person-sales .person-info__phone a {
+    position: relative;
+    font-size: 14px;
+  }
+  .sg-contact .sec1-contact-sg__sales-box .person-sales .person-info__email a::after, .sg-contact .sec1-contact-sg__sales-box .person-sales .person-info__phone a::after {
+    right: -30px;
+  }
+  .sg-contact .sec1-contact-sg .person-service {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 100%;
+  }
+  .sg-contact .sec1-contact-sg .person-service .person-info {
+    min-width: auto;
+    padding: 0px 20px 20px 0px;
+  }
+  .sg-contact .sec1-contact-sg .person-service .person-info__email, .sg-contact .sec1-contact-sg .person-service .person-info__phone {
+    gap: 5px;
+  }
+  .sg-contact .sec1-contact-sg .person-service .person-info__email a, .sg-contact .sec1-contact-sg .person-service .person-info__phone a {
+    position: relative;
+    font-size: 14px;
+  }
+  .sg-contact .sec1-contact-sg .person-service .person-info__email a::after, .sg-contact .sec1-contact-sg .person-service .person-info__phone a::after {
+    right: -30px;
+  }
+}
+@media (max-width: 575px) {
+  .sg-contact .sec1-contact-sg__form::before {
+    width: 100px;
+    height: 50px;
+  }
+  .sg-contact .sec1-contact-sg__sales-box__text {
+    margin-top: 10px;
+  }
+  .sg-contact .sec1-contact-sg__service {
+    margin-top: 30px;
+  }
+  .sg-contact .sec1-contact-sg__service__text {
+    margin-top: 10px;
+  }
+  .sg-contact .sec1-contact-sg__logo {
+    margin-top: 40px;
+    padding-top: 40px;
+  }
+}
+.sg-contact .sec2-info {
+  margin-top: 70px;
+}
+.sg-contact .sec2-info__about {
+  position: relative;
+  padding: 40px 140px 100px 80px;
+  left: -15px;
+  width: calc(100% + 30px);
+  height: 100%;
+  background-color: #F1F1EF;
+  z-index: 1;
+}
+.sg-contact .sec2-info__about .text-main {
+  margin-top: 40px;
+}
+.sg-contact .sec2-info__about__icons {
+  margin-top: 60px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+.sg-contact .sec2-info__about__icons img {
+  max-height: 140px;
+  max-width: 140px;
+}
+.sg-contact .sec2-info__numbers {
+  position: relative;
+  padding: 150px 60px 55px 60px;
+  left: -15px;
+  width: calc(100% + 30px);
+  height: 100%;
+  background-color: #33312F;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  z-index: 1;
+}
+.sg-contact .sec2-info__numbers::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  top: 0px;
+  width: 290px;
+  height: 140px;
+  background: url(../img/sea-golf/contact/sec1-form-element.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+.sg-contact .sec2-info__numbers__box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  padding-bottom: 30px;
+  margin-top: 10px;
+  border-bottom: 1px solid #f4f1e526;
+}
+.sg-contact .sec2-info__numbers__box__left, .sg-contact .sec2-info__numbers__box__right, .sg-contact .sec2-info__numbers__box__center {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.sg-contact .sec2-info__numbers__box__left .box-row__number, .sg-contact .sec2-info__numbers__box__right .box-row__number, .sg-contact .sec2-info__numbers__box__center .box-row__number {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+.sg-contact .sec2-info__numbers__box__left .box-row__number .f-h1, .sg-contact .sec2-info__numbers__box__right .box-row__number .f-h1, .sg-contact .sec2-info__numbers__box__center .box-row__number .f-h1 {
+  line-height: 82px;
+}
+.sg-contact .sec2-info__numbers__box__left .box-row .text-main, .sg-contact .sec2-info__numbers__box__right .box-row .text-main, .sg-contact .sec2-info__numbers__box__center .box-row .text-main {
+  text-align: center;
+}
+.sg-contact .sec2-info__numbers__box:nth-last-child(1) {
+  padding-bottom: 0px;
+  border-bottom: 0px solid #f4f1e526;
+}
+.sg-contact .sec2-info__numbers__box:nth-child(1), .sg-contact .sec2-info__numbers__box:nth-child(2) {
+  position: relative;
+}
+.sg-contact .sec2-info__numbers__box:nth-child(1)::before, .sg-contact .sec2-info__numbers__box:nth-child(2)::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 1px;
+  height: 60%;
+  background-color: #f4f1e526;
+}
+@media (max-width: 1399px) {
+  .sg-contact .sec2-info__about {
+    position: relative;
+    padding: 40px 80px 100px 80px;
+  }
+}
+@media (max-width: 991px) {
+  .sg-contact .sec2-info__numbers__box__left .box-row__number .f-h1, .sg-contact .sec2-info__numbers__box__right .box-row__number .f-h1, .sg-contact .sec2-info__numbers__box__center .box-row__number .f-h1 {
+    line-height: 50px;
+  }
+}
+@media (max-width: 767px) {
+  .sg-contact .sec2-info__about {
+    padding: 20px 20px 40px 20px;
+  }
+  .sg-contact .sec2-info__about .text-main {
+    margin-top: 20px;
+  }
+  .sg-contact .sec2-info__about__icons {
+    margin-top: 30px;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    gap: 10px;
+  }
+  .sg-contact .sec2-info__about__icons img {
+    max-height: 100px;
+    max-width: 100px;
+  }
+  .sg-contact .sec2-info__numbers {
+    padding: 80px 20px 30px 20px;
+  }
+  .sg-contact .sec2-info__numbers::before {
+    width: 180px;
+    height: 85px;
+  }
+}
+@media (max-width: 575px) {
+  .sg-contact .sec2-info__numbers__box:nth-child(1), .sg-contact .sec2-info__numbers__box:nth-child(2) {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .sg-contact .sec2-info__numbers__box:nth-child(1)::before, .sg-contact .sec2-info__numbers__box:nth-child(2)::before {
+    display: none;
+  }
+  .sg-contact .sec2-info__numbers__box__left {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    padding-bottom: 30px;
+    width: 100%;
+    border-bottom: 1px solid #f4f1e526;
+  }
+}
+.sg-contact .sec3-photo {
+  position: relative;
+  top: 0px;
+  left: 0px;
+  margin-top: -260px;
+  width: 100%;
+  height: 1080px;
+  background-image: url("../img/sea-golf/contact/background-sec3.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.sg-contact .sec3-photo::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -75px;
+  -webkit-transform: translate(-50%, 0%) rotate(0deg);
+          transform: translate(-50%, 0%) rotate(0deg);
+  width: 175px;
+  height: 175px;
+  background: url(../img/sea-golf/footer/circle-rotate.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  -webkit-animation: rotate-text 30s infinite linear;
+          animation: rotate-text 30s infinite linear;
+}
+@media (max-width: 991px) {
+  .sg-contact .sec3-photo {
+    height: 600px;
+    margin-top: -200px;
+  }
+  .sg-contact .sec3-photo::after {
+    bottom: -42px;
+    width: 100px;
+    height: 100px;
+  }
+}
+.sg-contact .sec5-location-seagolf {
+  margin-top: 200px;
+}
+.sg-contact .sec5-location-seagolf .row {
+  border: 1px solid #B79763;
+}
+.sg-contact .sec5-location-seagolf__map {
+  position: relative;
+  margin-top: 0px;
+  height: 545px;
+  width: calc(100% + 30px);
+  left: -15px;
+}
+.sg-contact .sec5-location-seagolf__content {
+  height: 545px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.sg-contact .sec5-location-seagolf__content .locat-logo {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+.sg-contact .sec5-location-seagolf__content .locat-info {
+  margin-top: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  gap: 20px;
+}
+.sg-contact .sec5-location-seagolf__content .locat-info__data-firm p:nth-child(even), .sg-contact .sec5-location-seagolf__content .locat-info__data-person p:nth-child(even) {
+  line-height: 30px;
+}
+.sg-contact .sec5-location-seagolf__content .locat-info__data-firm p:nth-child(3),
+.sg-contact .sec5-location-seagolf__content .locat-info__data-firm p:nth-child(4), .sg-contact .sec5-location-seagolf__content .locat-info__data-person p:nth-child(3),
+.sg-contact .sec5-location-seagolf__content .locat-info__data-person p:nth-child(4) {
+  margin-top: 25px;
+}
+.sg-contact .sec5-location-seagolf__content .locat-info__data-firm p:nth-child(3), .sg-contact .sec5-location-seagolf__content .locat-info__data-person p:nth-child(3) {
+  line-height: 20px;
+}
+.sg-contact .sec5-location-seagolf__content .locat-info__data-firm a, .sg-contact .sec5-location-seagolf__content .locat-info__data-person a {
+  position: relative;
+}
+.sg-contact .sec5-location-seagolf__content .locat-info__data-firm a:hover, .sg-contact .sec5-location-seagolf__content .locat-info__data-person a:hover {
+  color: #B79763;
+}
+.sg-contact .sec5-location-seagolf__content .locat-info__data-firm {
+  width: 38%;
+}
+.sg-contact .sec5-location-seagolf__content .locat-info__data-person {
+  width: 55%;
+}
+@media (max-width: 1399px) {
+  .sg-contact .sec5-location-seagolf__content .locat-info__data-firm {
+    width: 49%;
+  }
+  .sg-contact .sec5-location-seagolf__content .locat-info__data-person {
+    width: 51%;
+  }
+}
+@media (max-width: 1199px) {
+  .sg-contact .sec5-location-seagolf__content {
+    margin-top: 50px;
+    margin-bottom: 30px;
+    height: auto;
+  }
+  .sg-contact .sec5-location-seagolf__content .locat-info__data-firm {
+    width: 49%;
+  }
+  .sg-contact .sec5-location-seagolf__content .locat-info__data-person {
+    width: 51%;
+  }
+}
+@media (max-width: 767px) {
+  .sg-contact .sec5-location-seagolf {
+    margin-top: 50px;
+    padding: 0 15px;
+  }
+  .sg-contact .sec5-location-seagolf__map {
+    position: relative;
+    margin-top: 0px;
+    height: 300px;
+  }
+  .sg-contact .sec5-location-seagolf__content {
+    margin-top: 30px;
+  }
+  .sg-contact .sec5-location-seagolf__content .locat-info {
+    margin-top: 30px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 30px;
+  }
+  .sg-contact .sec5-location-seagolf__content .locat-info__data-firm, .sg-contact .sec5-location-seagolf__content .locat-info__data-person {
+    width: 100%;
+  }
 }
 
 footer {
@@ -7316,7 +8012,7 @@ footer .footer .footer-box a p {
 }
 
 .form-main {
-  margin-top: 80px;
+  margin-top: 65px;
 }
 @media (max-width: 1199px) {
   .form-main {
@@ -7372,37 +8068,27 @@ footer .footer .footer-box a p {
   border: 2px solid #c8220b;
 }
 .form-main form input[type=submit] {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   position: relative;
-  margin-top: 0;
+  margin: 35px 0 40px 10px;
+  padding-right: 30px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: 30px;
   font-family: "Mulish", sans-serif;
+  color: #B79763;
   font-style: normal;
   font-weight: 700;
   font-size: 15px;
   line-height: 18px;
-  color: #ffffff;
   text-align: center;
   letter-spacing: 0.2em;
   border: 1px solid transparent;
   cursor: pointer;
-  padding: 16px 22px;
-  background-color: #bf9875;
-  margin-top: 35px;
-}
-.form-main form input[type=submit]:hover {
-  background: #916137;
+  background: transparent url(../img/sea-golf/footer/arrow-btn.svg);
+  background-repeat: no-repeat;
+  background-position: center right;
+  background-size: auto;
 }
 @media (max-width: 575px) {
   .form-main form input[type=submit] {
@@ -7566,29 +8252,46 @@ footer .footer .footer-box a p {
     margin-bottom: 10px;
   }
   .form-main form input[type=submit] {
-    width: 170px;
+    width: 120px;
     height: 42px;
     margin-top: 20px;
     padding: 7px 22px;
+    left: 72%;
   }
+}
+@media screen and (max-width: 768px) and (max-width: 575px) {
+  .form-main form input[type=submit] {
+    width: 100px;
+    left: -10px;
+    padding: 7px 22px 7px 0px;
+    margin-left: 0;
+  }
+}
+@media screen and (max-width: 768px) {
   .form-main form ::-webkit-input-placeholder {
     /* WebKit browsers */
     color: #b79763 !important;
     opacity: 1;
     font-size: 14px;
   }
+}
+@media screen and (max-width: 768px) {
   .form-main form :-moz-placeholder {
     /* Mozilla Firefox 4 to 18 */
     color: #b79763 !important;
     opacity: 1;
     font-size: 14px;
   }
+}
+@media screen and (max-width: 768px) {
   .form-main form ::-moz-placeholder {
     /* Mozilla Firefox 19+ */
     color: #b79763 !important;
     opacity: 1;
     font-size: 14px;
   }
+}
+@media screen and (max-width: 768px) {
   .form-main form :-ms-input-placeholder {
     /* Internet Explorer 10+ */
     color: #b79763 !important;

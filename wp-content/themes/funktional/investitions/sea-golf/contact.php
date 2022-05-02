@@ -14,18 +14,17 @@ get_template_part('investitions/sea-golf/header');
             <div class="row">
                 <div class="col-xxl-6">
                     <div class="sec1-contact-sg__form">
-                        
                         <div class="sec1-contact-sg__form__title">
-                            <h5 class="f-h5"><?php the_field('title_sec1_contact_sg'); ?></h5>
+                            <h2 class="f-h2 f-h2--gold-medium f-h2--fw500"><?php the_field('title_sec1_contact_sg'); ?></h2>
                         </div>
                         <div class="sec1-contact-sg__form__text">
                             <?php if ($text_sec1_contact_sg = get_field('text_sec1_contact_sg')) : ?>
-                                <p class="text-main">
+                                <p class="text-main text-main--fw400 text-main--gold-medium">
                                     <?php echo $text_sec1_contact_sg; ?>
-                                </p>&nbsp
-                            <?php endif; ?>
-                            <?php if ($tel_sec1_contact_sg = get_field('tel_sec1_contact_sg')) : ?>
-                                <a class="text-main" class="text-main text-main--fw500" href="tel:<?php echo $tel_sec1_contact_sg; ?>"><?php echo $tel_sec1_contact_sg; ?>.</a>
+                                    <?php if ($tel_sec1_contact_sg = get_field('tel_sec1_contact_sg')) : ?>
+                                        <a class="text-main text-main--fw400 text-main--gold-medium" href="tel:<?php echo $tel_sec1_contact_sg; ?>"><?php echo $tel_sec1_contact_sg; ?>.</a>
+                                    <?php endif; ?>
+                                </p>
                             <?php endif; ?>
                         </div>
                         <div class="form-main">
@@ -38,11 +37,11 @@ get_template_part('investitions/sea-golf/header');
                     <div class="sec1-contact-sg__sales-box">
                         <?php if ($title_sec2_contact_sg = get_field('title_sec2_contact_sg')) : ?>
                             <div class="sec1-contact-sg__sales-box__title">
-                                <h5 class="f-h5"> <?php echo $title_sec2_contact_sg; ?></h5>
+                                <h2 class="f-h2 f-h2--black-dark f-h2--fw500"> <?php echo $title_sec2_contact_sg; ?></h2>
                             </div>
                         <?php endif; ?>
                         <div class="sec1-contact-sg__sales-box__text">
-                            <p class="text-main">
+                            <p class="text-main text-main--black-dark text-main--fw400">
                                 <?php the_field('text_sec2_contact_sg'); ?>
                             </p>
                         </div>
@@ -60,32 +59,31 @@ get_template_part('investitions/sea-golf/header');
                                     <div class="person-info">
                                         <?php if ($name_box_sales_sec2_contact_sg = get_sub_field('name_box_sales_sec2_contact_sg')) : ?>
                                             <div class="person-info__name">
-                                                <h6 class="f-h6 f-h6-fw600">
+                                                <h5 class="f-h5 f-h5--black-dark">
                                                     <?php echo $name_box_sales_sec2_contact_sg; ?>
-                                                </h6>
+                                                </h5>
                                             </div>
                                         <?php endif; ?>
                                         <?php if ($positions_box_sales_sec2_contact_sg = get_sub_field('positions_box_sales_sec2_contact_sg')) : ?>
                                             <div class="person-info__position">
-                                                <p class="text-main text-main--grey">
+                                                <p class="text-main text-main--grey text-main--fw400">
                                                     <?php echo $positions_box_sales_sec2_contact_sg; ?>
                                                 </p>
                                             </div>
                                         <?php endif; ?>
                                         <?php if ($mail_box_sales_sec2_contact_sg = get_sub_field('mail_box_sales_sec2_contact_sg')) : ?>
                                             <div class="person-info__email">
-                                                <img src="<?php bloginfo('template_url'); ?>/assets/img/invest-sg/contact/icon-mail-contact.svg" alt=" ikona email" />
-                                                <a class="text-main text-main--fw500" href="mailto:<?php echo $mail_box_sales_sec2_contact_sg; ?>"><?php echo $mail_box_sales_sec2_contact_sg; ?></a>
+                                                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/sea-golf/contact/mail-icon.svg" alt=" ikona email" />
+                                                <a class="text-main text-main--black-dark text-main--fw400" href="mailto:<?php echo $mail_box_sales_sec2_contact_sg; ?>"><?php echo $mail_box_sales_sec2_contact_sg; ?></a>
                                             </div>
                                         <?php endif; ?>
                                         <?php if ($tel_box_sales_sec2_contact_sg = get_sub_field('tel_box_sales_sec2_contact_sg')) : ?>
                                             <div class="person-info__phone">
-                                                <img src="<?php bloginfo('template_url'); ?>/assets/img/invest-sg/contact/icon-tel-contact.svg" alt="ikona telefonu" />
-                                                <a class="text-main text-main--fw500" href="tel:<?php echo $tel_box_sales_sec2_contact_sg; ?>"><?php echo $tel_box_sales_sec2_contact_sg; ?></a>
+                                                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/sea-golf/contact/phone-icon.svg" alt="ikona telefonu" />
+                                                <a class="text-main text-main--black-dark text-main--fw400" href="tel:<?php echo $tel_box_sales_sec2_contact_sg; ?>"><?php echo $tel_box_sales_sec2_contact_sg; ?></a>
                                             </div>
                                         <?php endif; ?>
                                     </div>
-
                                 </div>
                             <?php endwhile; ?>
                         <?php endif; ?>
@@ -95,18 +93,17 @@ get_template_part('investitions/sea-golf/header');
                     <div class="sec1-contact-sg__service">
                         <?php if ($title_sec3_contact_sg = get_field('title_sec3_contact_sg')) : ?>
                             <div class="sec1-contact-sg__service__title">
-                                <h5 class="f-h5"><?php echo $title_sec3_contact_sg; ?></h5>
+                                <h2 class="f-h2 f-h2--black-dark f-h2--fw500"><?php echo $title_sec3_contact_sg; ?></h2>
                             </div>
                         <?php endif; ?>
                         <?php if ($text_sec3_contact_sg = get_field('text_sec3_contact_sg')) : ?>
                             <div class="sec1-contact-sg__service__text">
-                                <p class="text-main"><?php echo $text_sec3_contact_sg; ?></p>
+                                <p class="text-main text-main--black-dark text-main--fw400"><?php echo $text_sec3_contact_sg; ?></p>
                             </div>
                         <?php endif; ?>
 
                     </div>
                 </div>
-
                 <div class="offset-xxl-1 col-xxl-5">
                     <?php if (have_rows('box1_service_sec3_contact_sg')) : ?>
                         <?php while (have_rows('box1_service_sec3_contact_sg')) :
@@ -123,28 +120,28 @@ get_template_part('investitions/sea-golf/header');
                                 <div class="person-info">
                                     <?php if ($name_box1_service_sec3_contact_sg = get_sub_field('name_box1_service_sec3_contact_sg')) : ?>
                                         <div class="person-info__name">
-                                            <h6 class="f-h6 f-h6-fw600">
+                                            <h5 class="f-h5 f-h5--black-dark">
                                                 <?php echo $name_box1_service_sec3_contact_sg; ?>
-                                            </h6>
+                                            </h5>
                                         </div>
                                     <?php endif; ?>
                                     <?php if ($positions_box1_service_sec3_contact_sg = get_sub_field('positions_box1_service_sec3_contact_sg')) : ?>
                                         <div class="person-info__position">
-                                            <p class="text-main text-main--grey">
+                                            <p class="text-main text-main--grey text-main--fw400">
                                                 <?php echo $positions_box1_service_sec3_contact_sg; ?>
                                             </p>
                                         </div>
                                     <?php endif; ?>
                                     <?php if ($mail_box1_service_sec3_contact_sg = get_sub_field('mail_box1_service_sec3_contact_sg')) : ?>
                                         <div class="person-info__email">
-                                            <img src="<?php bloginfo('template_url'); ?>/assets/img/invest-sg/contact/icon-mail-contact.svg" alt=" ikona email" />
-                                            <a class="text-main text-main--fw500" href="mailto:<?php echo $mail_box1_service_sec3_contact_sg; ?>"><?php echo $mail_box1_service_sec3_contact_sg; ?></a>
+                                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/sea-golf/contact/mail-icon.svg" alt=" ikona email" />
+                                            <a class="text-main text-main--black-dark text-main--fw400" href="mailto:<?php echo $mail_box1_service_sec3_contact_sg; ?>"><?php echo $mail_box1_service_sec3_contact_sg; ?></a>
                                         </div>
                                     <?php endif; ?>
                                     <?php if ($tel_box1_service_sec3_contact_sg = get_sub_field('tel_box1_service_sec3_contact_sg')) : ?>
                                         <div class="person-info__phone">
-                                            <img src="<?php bloginfo('template_url'); ?>/assets/img/invest-sg/contact/icon-tel-contact.svg" alt="ikona telefonu" />
-                                            <a class="text-main text-main--fw500" href="tel:<?php echo $tel_box1_service_sec3_contact_sg; ?>"><?php echo $tel_box1_service_sec3_contact_sg; ?></a>
+                                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/sea-golf/contact/phone-icon.svg" alt="ikona telefonu" />
+                                            <a class="text-main text-main--black-dark text-main--fw400" href="tel:<?php echo $tel_box1_service_sec3_contact_sg; ?>"><?php echo $tel_box1_service_sec3_contact_sg; ?></a>
                                         </div>
                                     <?php endif; ?>
                                 </div>
@@ -167,14 +164,14 @@ get_template_part('investitions/sea-golf/header');
                                 <div class="person-info">
                                     <?php if ($name_box2_service_sec3_contact_sg = get_sub_field('name_box2_service_sec3_contact_sg')) : ?>
                                         <div class="person-info__name">
-                                            <h6 class="f-h6 f-h6-fw600">
+                                            <h5 class="f-h5 f-h5--black-dark">
                                                 <?php echo $name_box2_service_sec3_contact_sg; ?>
-                                            </h6>
+                                            </h5>
                                         </div>
                                     <?php endif; ?>
                                     <?php if ($positions_box2_service_sec3_contact_sg = get_sub_field('positions_box2_service_sec3_contact_sg')) : ?>
                                         <div class="person-info__position">
-                                            <p class="text-main text-main--grey">
+                                            <p class="text-main text-main--grey text-main--fw400">
                                                 <?php echo $positions_box2_service_sec3_contact_sg; ?>
                                             </p>
                                         </div>
@@ -182,25 +179,216 @@ get_template_part('investitions/sea-golf/header');
                                     <?php if ($mail_box2_service_sec3_contact_sg = get_sub_field('mail_box2_service_sec3_contact_sg')) : ?>
 
                                         <div class="person-info__email">
-                                            <img src="<?php bloginfo('template_url'); ?>/assets/img/invest-sg/contact/icon-mail-contact.svg" alt=" ikona email" />
-                                            <a class="text-main text-main--fw500" href="mailto:<?php echo $mail_box2_service_sec3_contact_sg; ?>"><?php echo $mail_box2_service_sec3_contact_sg; ?></a>
+                                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/sea-golf/contact/mail-icon.svg" alt=" ikona email" />
+                                            <a class="text-main text-main--black-dark text-main--fw400" href="mailto:<?php echo $mail_box2_service_sec3_contact_sg; ?>"><?php echo $mail_box2_service_sec3_contact_sg; ?></a>
                                         </div>
                                     <?php endif; ?>
                                     <?php if ($tel_box2_service_sec3_contact_sg = get_sub_field('tel_box2_service_sec3_contact_sg')) : ?>
                                         <div class="person-info__phone">
-                                            <img src="<?php bloginfo('template_url'); ?>/assets/img/invest-sg/contact/icon-tel-contact.svg" alt="ikona telefonu" />
-                                            <a class="text-main text-main--fw500" href="tel:<?php echo $tel_box2_service_sec3_contact_sg; ?>"><?php echo $tel_box2_service_sec3_contact_sg; ?></a>
+                                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/sea-golf/contact/phone-icon.svg" alt="ikona telefonu" />
+                                            <a class="text-main text-main--black-dark text-main--fw400" href="tel:<?php echo $tel_box2_service_sec3_contact_sg; ?>"><?php echo $tel_box2_service_sec3_contact_sg; ?></a>
                                         </div>
                                     <?php endif; ?>
                                 </div>
                             </div>
                         <?php endwhile; ?>
                     <?php endif; ?>
+                </div>
+            </div>
+        </div>
+        <div class="sec1-contact-sg__logo">
+            <img class="sec9-testimonial__company__icon" src=" <?php echo get_template_directory_uri(); ?>/assets/img/sea-golf/home-page/logo_home-page.png" alt="logo" />
+        </div>
+    </section>
+    <section class="sec2-info">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-6">
+                    <div class="sec2-info__about">
+                        <h2 class="f-h2 f-h2--f80 f-h2--black-dark">O firmie</h2>
+                        <div class="text-main"> Saveinvest to polska firma z 20-letnim doświadczeniem, której zaufało już ponad 1000 Klientów.
+                            <br><br>
+                            Firma jest właścicielem wszystkich oferowanych działek, których zakup finansowany jest z własnego kapitału.<br><br>
+                            Saveinvest tworzą eksperci rynku nieruchomości i koordynatorzy projektów inwestycyjnych, których publikacje można znaleźć na łamach wszystkich branżowych czasopism i portali.
+                        </div>
+                        <div class="sec2-info__about__icons">
+                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/sea-golf/contact/about-icon1.png" alt=" ikona 1000 zadowolonych klientów" />
+                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/sea-golf/contact/about-icon2.png" alt=" ikona 20 lat doświadcznia" />
+                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/sea-golf/contact/about-icon3.png" alt=" ikona 100% sprawdzonych gruntów" />
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-6">
+                    <div class="sec2-info__numbers" id="counter">
+                        <div class="sec2-info__numbers__box">
+                            <div class="sec2-info__numbers__box__left">
+                                <div class="box-row">
+                                    <div class="box-row__number">
+                                        <h1 class="f-h1 f-h1--gold-medium count percent" data-count="100">
+                                            0
+                                        </h1>&nbsp;
+                                        <h4 class="f-h4 f-h4--gold-medium  f-h4--f42">%</h4>
+                                    </div>
 
+                                    <p class="text-main text-main--fw400 text-main--white">
+                                        sprawdzonych gruntów
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="sec2-info__numbers__box__right">
+                                <div class="box-row">
+                                    <div class="box-row__number">
+                                        <h1 class="f-h1 f-h1--gold-medium count percent" data-count="200">
+                                            0
+                                        </h1>&nbsp;
+                                        <h4 class="f-h4 f-h4--gold-medium  f-h4--f42"></h4>
+                                    </div>
+                                    <p class="text-main text-main--fw400 text-main--white">
+                                        zaufanych partnerów
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="sec2-info__numbers__box">
+                            <div class="sec2-info__numbers__box__left">
+                                <div class="box-row">
+                                    <div class="box-row__number">
+                                        <h1 class="f-h1 f-h1--gold-medium count percent" data-count="1000">
+                                            0
+                                        </h1>&nbsp;
+                                        <h4 class="f-h4 f-h4--gold-medium  f-h4--f42"></h4>
+                                    </div>
+
+                                    <p class="text-main text-main--fw400 text-main--white">
+                                        zadowolonych klientów
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="sec2-info__numbers__box__right">
+                                <div class="box-row">
+                                    <div class="box-row__number">
+                                        <h1 class="f-h1 f-h1--gold-medium count percent" data-count="2000">
+                                            0
+                                        </h1>&nbsp;
+                                        <h4 class="f-h4 f-h4--gold-medium  f-h4--f42"></h4>
+                                    </div>
+                                    <p class="text-main text-main--fw400 text-main--white">
+                                        eksperckich publikacji
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="sec2-info__numbers__box">
+                            <div class="sec2-info__numbers__box__center">
+                                <div class="box-row">
+                                    <div class="box-row__number">
+                                        <h1 class="f-h1 f-h1--gold-medium count percent" data-count="1000000">
+                                            0
+                                        </h1>&nbsp;
+                                        <h4 class="f-h4 f-h4--gold-medium  f-h4--f42">m2</h4>
+                                    </div>
+
+                                    <p class="text-main text-main--fw400 text-main--white">
+                                        działek
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="sec2-info__numbers__box">
+                            <div class="sec2-info__numbers__box__center">
+                                <div class="box-row">
+                                    <div class="box-row__number">
+                                        <h1 class="f-h1 f-h1--gold-medium count percent" data-count="200">
+                                            0
+                                        </h1>&nbsp;
+                                        <h4 class="f-h4 f-h4--gold-medium  f-h4--f42">mln</h4>
+                                    </div>
+
+                                    <p class="text-main text-main--fw400 text-main--white">
+                                        kapitału w gruntach
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
+    <section class="sec3-photo">
+    </section>
+
+    <section class="sec-4-testimonial">
+        <div class="container">
+            <div class="row">
+                <div class="offset-xl-1 col-xl-10"></div>
+            </div>
+        </div>
+    </section>
+    <section class="sec5-location-seagolf">
+        <div class="container">
+            <div class="row">
+                <div class="col-xxxl-6 col-xl-6">
+                    <div class="sec5-location-seagolf__map">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5123.034396244537!2d19.925893201171686!3d50.057874985922346!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4716585e08e6c88b%3A0x4b0b9c983ed0d5a2!2sSaveinvest%20Sp.%20z%20o.%20o.!5e0!3m2!1spl!2spl!4v1645539936854!5m2!1spl!2spl" width="100%" height="100%" style="border: 0" allowfullscreen="" loading="lazy"></iframe>
+                    </div>
+                </div>
+                <div class="offset-xl-1 col-xl-5">
+                    <div class="sec5-location-seagolf__content">
+                        <div class="locat-logo">
+                            <img src=" <?php echo get_template_directory_uri(); ?>/assets/img/sea-golf/contact/logo-contact-sec5.png" alt="logo" />
+                        </div>
+                        <div class="locat-info">
+                            <div class="locat-info__data-firm">
+                                <?php if ($name_firm_sec5_contact_seagolf = get_field('name_firm_sec5_contact_seagolf')) : ?>
+                                    <p class="text-main text-main--fw900 text-main--f14">
+                                        <?php echo $name_firm_sec5_contact_seagolf; ?>
+                                    </p>
+                                <?php endif; ?>
+                                <?php if ($adres_firm_sec5_contact_seagolf = get_field('adres_firm_sec5_contact_seagolf')) : ?>
+                                    <p class="text-main text-main--fw400 text-main--f14">
+                                        <?php echo $adres_firm_sec5_contact_seagolf; ?>
+                                        <?php if ($tel_firm_sec5_contact_seagolf = get_field('tel_firm_sec5_contact_seagolf')) : ?>
+                                            <a class="text-main text-main--fw400 text-main--f14" href="tel:	<?php echo $tel_firm_sec5_contact_seagolf; ?>">
+                                            <br>tel.: <?php echo $tel_firm_sec5_contact_seagolf; ?></a>
+                                        <?php endif; ?>
+                                    </p>
+                                <?php endif; ?>
+                                <?php if ($data_firm_sec5_contact_seagolf = get_field('data_firm_sec5_contact_seagolf')) : ?>
+                                    <p class="text-main text-main--fw400 text-main--f14">
+                                        <?php echo $data_firm_sec5_contact_seagolf; ?>
+                                    </p>
+                                <?php endif; ?>
+                                <?php if ($nip_data_firm_sec5_contact_seagolf = get_field('nip_data_firm_sec5_contact_seagolf')) : ?>
+                                    <p class="text-main text-main--fw400 text-main--f14">
+                                        <?php echo $nip_data_firm_sec5_contact_seagolf; ?>
+                                    </p>
+                                <?php endif; ?>
+                            </div>
+                            <div class="locat-info__data-person">
+                                <?php if ($name_person_sec5_contact_seagolf = get_field('name_person_sec5_contact_seagolf')) : ?>
+                                    <p class="text-main text-main--fw900 text-main--f14">
+                                        <?php echo $name_person_sec5_contact_seagolf; ?>
+                                    </p>
+                                <?php endif; ?>
+                                <?php if ($adres_person_sec5_contact_seagolf = get_field('adres_person_sec5_contact_seagolf')) : ?>
+                                    <p class="text-main text-main--fw400 text-main--f14">
+                                        <?php echo $adres_person_sec5_contact_seagolf; ?>
+                                    </p>
+                                <?php endif; ?>
+                                <?php if ($bank_sec5_contact_seagolf = get_field('bank_sec5_contact_seagolf')) : ?>
+                                    <p class="text-main text-main--fw400 text-main--f14">
+                                        <?php echo $bank_sec5_contact_seagolf; ?>
+                                    </p>
+                                <?php endif; ?>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
 </div>
 <?php
 get_template_part('investitions/sea-golf/footer');

@@ -16,6 +16,9 @@
             height: 100%;
             background-color: $brown;
             padding: 55px 150px 220px 135px;
+            &__text {
+                margin-top: 40px;
+            }
             &::before {
                 content: "";
                 position: absolute;
@@ -31,7 +34,7 @@
             &::after {
                 content: "";
                 position: absolute;
-                right:20px;
+                right: 20px;
                 bottom: 0px;
                 width: 370px;
                 height: 220px;
@@ -40,7 +43,7 @@
                 background-position: center;
                 background-size: contain;
             }
-            &__border{
+            &__border {
                 position: absolute;
                 width: calc(100% - 40px);
                 height: calc(100% - 40px);
@@ -50,16 +53,614 @@
                 border: 1px solid #c4c4c445;
                 pointer-events: none;
                 z-index: 1;
-
             }
-    
         }
-        &__sales-box{
+        &__sales-box {
             position: relative;
+            left: -15px;
+            width: calc(100% + 30px);
+            padding: 55px 60px 40px 90px;
+            height: 100%;
+            background-color: $black-tint-grey;
+            &__text {
+                margin-top: 40px;
+            }
+            .person-sales {
+                margin-top: 80px;
+                padding: 0 0 0 30px;
+                width: 100%;
+                height: auto;
+                display: flex;
+                border: 1px solid $gold-medium;
+
+                &__photo {
+                    margin-top: -30px;
+                    margin-bottom: 20px;
+                    height: 235px;
+                    width: 205px;
+                    img {
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                        object-position: center;
+                    }
+                }
+                .person-info {
+                    padding: 35px 20px 40px 35px;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: flex-start;
+                    &__position {
+                        margin-top: 10px;
+                    }
+                    &__email {
+                        margin-top: 12px;
+                        margin-bottom: 3px;
+                        display: flex;
+                        justify-content: flex-start;
+                        align-items: center;
+                        gap: 18px;
+                        img {
+                            width: fit-content;
+                            height: fit-content;
+                        }
+                        a {
+                            position: relative;
+                            &:hover {
+                                color: $gold-medium;
+                            }
+                        }
+                    }
+                    &__phone {
+                        display: flex;
+                        justify-content: flex-start;
+                        align-items: center;
+                        gap: 18px;
+                        img {
+                            width: fit-content;
+                            height: fit-content;
+                        }
+                        a {
+                            position: relative;
+                            &:hover {
+                                color: $gold-medium;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        &__service {
+            margin-top: 115px;
+            &__text {
+                margin-top: 40px;
+            }
+        }
+        .person-service {
+            margin-top: 80px;
+            padding: 0 0 0 30px;
+            width: 100%;
+            height: auto;
+            display: flex;
+            border: 1px solid $gold-medium;
+
+            &__photo {
+                margin-top: -30px;
+                margin-bottom: 20px;
+                height: 235px;
+                width: 205px;
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: none;
+                    object-position: center;
+                }
+            }
+            .person-info {
+                padding: 35px 20px 40px 35px;
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-start;
+                &__position {
+                    margin-top: 10px;
+                }
+                &__email {
+                    margin-top: 20px;
+                    margin-bottom: 3px;
+                    display: flex;
+                    justify-content: flex-start;
+                    align-items: center;
+                    gap: 18px;
+                    img {
+                        width: fit-content;
+                        height: fit-content;
+                    }
+                    a {
+                        position: relative;
+                        &:hover {
+                            color: $gold-medium;
+                        }
+                    }
+                }
+                &__phone {
+                    display: flex;
+                    justify-content: flex-start;
+                    align-items: center;
+                    gap: 18px;
+                    img {
+                        width: fit-content;
+                        height: fit-content;
+                    }
+                    a {
+                        position: relative;
+                        &:hover {
+                            color: $gold-medium;
+                        }
+                    }
+                }
+            }
+        }
+        &__logo {
+            position: relative;
+            margin-top: 90px;
+            padding-top: 50px;
+            display: flex;
+            justify-content: center;
+            position: relative;
+            &::before {
+                content: "";
+                position: absolute;
+                left: 50%;
+                top: 0px;
+                transform: translate(-50%, 0);
+                width: 103px;
+                height: 17px;
+                background: url(../img/sea-golf/footer/element-footer-top.svg);
+                background-repeat: no-repeat;
+                background-position: center;
+                background-size: contain;
+            }
+        }
+        @media (max-width: $xxxl) {
+            &__sales-box {
+                .person-sales {
+                    padding: 0 0 0 20px;
+                    .person-info {
+                        padding: 25px 20px 20px 20px;
+                        &__email {
+                            margin-bottom: 10px;
+                        }
+                        &__email,
+                        &__phone {
+                            gap: 5px;
+                            a {
+                                position: relative;
+                                &::after {
+                                    right: -30px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .person-service {
+                padding: 0 0 0 20px;
+                .person-info {
+                    padding: 25px 20px 20px 20px;
+                    &__email {
+                        margin-bottom: 10px;
+                    }
+                }
+            }
+        }
+        @media (max-width: $xxl) {
+            &__form,
+            &__sales-box {
+                .sales-title {
+                    margin-top: 40px;
+                }
+                .text-form,
+                .sales-text {
+                    margin-top: 10px;
+                }
+                .person-sales {
+                    margin-top: 40px;
+                    width: fit-content;
+                    .person-info {
+                        min-width: 350px;
+                    }
+                }
+            }
+            .person-service {
+                margin-top: 50px;
+                width: fit-content;
+                .person-info {
+                    min-width: 350px;
+                }
+            }
+            &__service {
+                margin-top: 50px;
+            }
+        }
+        @media (max-width: $md) {
+            &__form {
+                padding: 45px 35px 100px 35px;
+                &__border {
+                    width: calc(100% - 30px);
+                    height: calc(100% - 30px);
+                }
+                &::before {
+                    width: 180px;
+                    height: 85px;
+                }
+                &::after {
+                    width: 200px;
+                    height: 115px;
+                }
+            }
+            padding: 28% 0 0;
+            background-size: contain;
+            &__sales-box {
+                padding: 40px 15px 15px 15px;
+                .person-sales {
+                    flex-direction: column;
+                    width: 100%;
+                    .person-info {
+                        min-width: auto;
+                        padding: 0px 20px 20px 0px;
+                        &__email,
+                        &__phone {
+                            gap: 5px;
+                            a {
+                                position: relative;
+                                font-size: 14px;
+                                &::after {
+                                    right: -30px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .person-service {
+                flex-direction: column;
+                width: 100%;
+                .person-info {
+                    min-width: auto;
+                    padding: 0px 20px 20px 0px;
+                    &__email,
+                    &__phone {
+                        gap: 5px;
+                        a {
+                            position: relative;
+                            font-size: 14px;
+                            &::after {
+                                right: -30px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        @media (max-width: $sm) {
+            &__form {
+                &::before {
+                    width: 100px;
+                    height: 50px;
+                }
+            }
+            &__sales-box {
+                &__text {
+                    margin-top: 10px;
+                }
+            }
+            &__service {
+                margin-top: 30px;
+                &__text {
+                    margin-top: 10px;
+                }
+            }
+            &__logo {
+                margin-top: 40px;
+                padding-top: 40px;
+            }
+        }
+    }
+    .sec2-info {
+        margin-top: 70px;
+        &__about {
+            position: relative;
+            padding: 40px 140px 100px 80px;
             left: -15px;
             width: calc(100% + 30px);
             height: 100%;
             background-color: $black-tint-grey;
+            z-index: 1;
+            .text-main {
+                margin-top: 40px;
+            }
+
+            &__icons {
+                margin-top: 60px;
+                display: flex;
+                justify-content: space-around;
+                img {
+                    max-height: 140px;
+                    max-width: 140px;
+                }
+            }
+        }
+        &__numbers {
+            position: relative;
+            padding: 150px 60px 55px 60px;
+            left: -15px;
+            width: calc(100% + 30px);
+            height: 100%;
+            background-color: $brown;
+            display: flex;
+            flex-direction: column;
+            z-index: 1;
+            &::before {
+                content: "";
+                position: absolute;
+                left: 50%;
+                transform: translateX(-50%);
+                top: 0px;
+                width: 290px;
+                height: 140px;
+                background: url(../img/sea-golf/contact/sec1-form-element.png);
+                background-repeat: no-repeat;
+                background-position: center;
+                background-size: contain;
+            }
+            &__box {
+                display: flex;
+                justify-content: space-around;
+                padding-bottom: 30px;
+                margin-top: 10px;
+                border-bottom: 1px solid #f4f1e526;
+                &__left,
+                &__right,
+                &__center {
+                    display: flex;
+                    .box-row {
+                        &__number {
+                            display: flex;
+                            justify-content: center;
+                            align-items: flex-end;
+                            .f-h1 {
+                                line-height: 82px;
+                            }
+                        }
+                        .text-main {
+                            text-align: center;
+                        }
+                    }
+                }
+                &:nth-last-child(1) {
+                    padding-bottom: 0px;
+                    border-bottom: 0px solid #f4f1e526;
+                }
+                &:nth-child(1),
+                &:nth-child(2) {
+                    position: relative;
+                    &::before {
+                        content: "";
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-50%, -50%);
+                        width: 1px;
+                        height: 60%;
+                        background-color: #f4f1e526;
+                    }
+                }
+            }
+        }
+        @media (max-width: $xxl) {
+            &__about {
+                position: relative;
+                padding: 40px 80px 100px 80px;
+            }
+        }
+        @media (max-width: $lg) {
+            &__numbers {
+                &__box {
+                    &__left,
+                    &__right,
+                    &__center {
+                        .box-row {
+                            &__number {
+                                .f-h1 {
+                                    line-height: 50px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        @media (max-width: $md) {
+            &__about {
+                padding: 20px 20px 40px 20px;
+                .text-main {
+                    margin-top: 20px;
+                }
+                &__icons {
+                    margin-top: 30px;
+                    flex-wrap: wrap;
+                    gap: 10px;
+                    img {
+                        max-height: 100px;
+                        max-width: 100px;
+                    }
+                }
+            }
+            &__numbers {
+                padding: 80px 20px 30px 20px;
+                &::before {
+                    width: 180px;
+                    height: 85px;
+                }
+            }
+        }
+        @media (max-width: $sm) {
+            &__numbers {
+                &__box {
+                    &:nth-child(1),
+                    &:nth-child(2) {
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        &::before {
+                            display: none;
+                        }
+                    }
+                    &__left {
+                        justify-content: center;
+                        padding-bottom: 30px;
+                        width: 100%;
+                        border-bottom: 1px solid #f4f1e526;
+                    }
+                }
+            }
+        }
+    }
+    .sec3-photo {
+        position: relative;
+        top: 0px;
+        left: 0px;
+        margin-top: -260px;
+        width: 100%;
+        height: 1080px;
+        background-image: url("../img/sea-golf/contact/background-sec3.jpg");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        &::after {
+            content: "";
+            position: absolute;
+            left: 50%;
+            bottom: -75px;
+            transform: translate(-50%, 0%) rotate(0deg);
+            width: 175px;
+            height: 175px;
+            background: url(../img/sea-golf/footer/circle-rotate.svg);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: contain;
+            animation: rotate-text 30s infinite linear;
+        }
+        @media (max-width: $lg) {
+            height: 600px;
+            margin-top: -200px;
+            &::after {
+                bottom: -42px;
+                width: 100px;
+                height: 100px;
+            }
+        }
+    }
+    .sec5-location-seagolf {
+        margin-top: 200px;
+        .row{
+            border: 1px solid $gold-medium;
+        }
+        &__map {
+            position: relative;
+            margin-top: 0px;
+            height: 545px;
+            width: calc(100% + 30px);
+            left: -15px;
+        }
+        &__content {
+            height: 545px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            .locat-logo {
+                width: fit-content;
+            }
+            .locat-info {
+                margin-top: 40px;
+                display: flex;
+                justify-content: flex-start;
+                gap: 20px;
+                &__data-firm,
+                &__data-person {
+                    p:nth-child(even) {
+                        line-height: 30px;
+                    }
+                    p:nth-child(3),
+                    p:nth-child(4) {
+                        margin-top: 25px;
+                    }
+                    p:nth-child(3) {
+                        line-height: 20px;
+                    }
+                    a {
+                        position: relative;
+                        &:hover {
+                            color: $gold-medium;
+                        }
+                    }
+                }
+                &__data-firm {
+                    width: 38%;
+                }
+                &__data-person {
+                    width: 55%;
+                }
+            }
+        }
+        @media (max-width: $xxl) {
+            &__content {
+                .locat-info {
+                    &__data-firm {
+                        width: 49%;
+                    }
+                    &__data-person {
+                        width: 51%;
+                    }
+                }
+            }
+        }
+        @media (max-width: $xl) {
+            &__content {
+                margin-top: 50px;
+                margin-bottom: 30px;
+                height: auto;
+                .locat-info {
+                    &__data-firm {
+                        width: 49%;
+                    }
+                    &__data-person {
+                        width: 51%;
+                    }
+                }
+            }
+        }
+        @media (max-width: $md) {
+            margin-top: 50px;
+            padding: 0 15px;
+            &__map {
+                position: relative;
+                margin-top: 0px;
+                height: 300px;
+            }
+            &__content {
+                margin-top: 30px;
+                .locat-info {
+                    margin-top: 30px;
+                    display: flex;
+                    flex-direction: column;
+                    gap: 30px;
+                    &__data-firm,
+                    &__data-person {
+                        width: 100%;
+                    }
+                }
+            }
         }
     }
 }
