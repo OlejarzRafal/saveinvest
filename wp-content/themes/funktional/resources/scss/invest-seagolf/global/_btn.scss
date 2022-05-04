@@ -1,8 +1,9 @@
 .btn {
     position: relative;
-    left:-20px;
+    left: 0;
     margin: 0;
     padding: 0;
+    padding-bottom: 5px;
     width: fit-content;
     display: flex;
     flex-direction: row;
@@ -35,7 +36,7 @@
         width: calc(100% + 37px);
         transform: scaleX(0);
         height: 2px;
-        bottom: -10px;
+        bottom: -5px;
         left: 0;
         color: $gold-medium;
         background: currentcolor;

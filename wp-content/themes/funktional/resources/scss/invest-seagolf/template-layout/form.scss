@@ -1,0 +1,367 @@
+.form-main {
+    margin-top: 65px;
+    @media (max-width: $xl) {
+        margin-top: 30px;
+    }
+    p {
+        margin: 0;
+        color: #707070;
+
+    }
+
+    &__p {
+        font-size: 11px;
+        line-height: 18px;
+        color: #707070;
+        margin: 15px 0 20px 0 !important;
+        &--obligatory {
+            margin: 5px 0 0 0px !important;
+        }
+
+    }
+    .rodo {
+        margin-top: 20px;
+        display: block;
+    }
+    &__obligatory {
+        color: #c8220b;
+    }
+    form {
+        .form-showhide {
+            margin-top: 10px;
+        }
+        input[type="text"],
+        input[type="email"] {
+            -webkit-appearance: none;
+            outline: none;
+
+            height: 60px;
+            width: 100%;
+            border: 1px solid #b79763;
+            background-color: white;
+            margin-bottom: 22px;
+            padding: 0 22px;
+            font-size: 16px;
+            color: #b79763;
+            &:hover {
+                border: 1px solid #b79763;
+            }
+            &:focus {
+                border: 2px solid #b79763;
+            }
+            &.wpcf7-not-valid {
+                border: 2px solid #c8220b;
+            }
+        }
+
+        input[type="submit"] {
+            position: relative;
+            margin: 35px 0 40px 10px;
+            padding-right: 30px;
+            width: fit-content;
+            height: 30px;
+            font-family: $mulish;
+            color: $gold-medium;
+            font-style: normal;
+            font-weight: 700;
+            font-size: 15px;
+            line-height: 18px;
+            text-align: center;
+            letter-spacing: 0.2em;
+            border: 1px solid transparent;
+            cursor: pointer;
+            background: transparent url(../img/sea-golf/footer/arrow-btn.svg);
+            background-repeat: no-repeat;
+            background-position: center right;
+            background-size: auto;
+
+            // &::before {
+            //     content: "";
+            //     position: absolute;
+            //     width: calc(100% + 37px);
+            //     transform: scaleX(0);
+            //     height: 2px;
+            //     bottom: -5px;
+            //     left: 0;
+            //     color: $gold-medium;
+            //     background: currentcolor;
+            //     transform-origin: right;
+            //     transition: transform 0.25s ease-out;
+            //     &:hover {
+            //         &::before {
+            //             transform: scaleX(1);
+            //             transform-origin: left;
+            //             background-color: #b79763;
+            //         }
+            //     }
+            // }
+            // &:hover {
+            //     &::before {
+            //         transform: scaleX(1);
+            //         transform-origin: left;
+            //         background-color: #b79763;
+            //     }
+            // }
+            // &:hover {
+            //     border-bottom: 2px solid $mulish !important;
+                
+            // }
+            @media (max-width: $sm) {
+                font-size: 12px;
+            }
+          
+        }
+        .wpcf7-submit {
+            position: relative;
+            left: calc(100% - 118px);
+        }
+        input[type="email"] {
+            margin-bottom: 14px;
+        }
+        .wpcf7-acceptance {
+            label {
+                display: flex;
+                margin-bottom: 20px;
+            }
+        }
+        .accept-box {
+            user-select: none;
+            display: flex;
+            font-size: 20px;
+            margin: 0 4px;
+            .wpcf7-list-item {
+                margin: 0;
+            }
+        }
+        span.wpcf7-list-item {
+            margin: 0;
+        }
+        input[type="checkbox"] {
+            background: transparent;
+            box-shadow: none;
+            outline: 0 !important;
+            outline: none !important;
+            -webkit-tap-highlight-color: transparent !important;
+            border: none;
+            padding: 0;
+            height: unset;
+            width: unset;
+            background-color: unset;
+            position: relative;
+            cursor: pointer;
+            margin: 2px 16px 0 0;
+            &:hover {
+                &::before {
+                    border: 2px solid #b79763;
+                }
+            }
+            &:focus {
+                &::before {
+                    border: 2px solid #b79763;
+                }
+            }
+            &::before {
+                content: "";
+                display: block;
+                position: relative;
+                left: 0;
+                width: 16px;
+                height: 16px;
+                background-color: white;
+                border: 2px solid #b79763;
+            }
+            &:checked {
+                &::before {
+                    border: 2px solid #b79763;
+                }
+                &::after {
+                    content: "";
+                    display: block;
+                    position: absolute;
+                    top: 5px;
+                    left: 4px;
+                    width: 9px;
+                    height: 5px;
+                    border-left: 2px solid #b79763;
+                    border-bottom: 2px solid #b79763;
+                    transform: rotate(-45deg);
+                }
+            }
+        }
+        .ajax-loader {
+            position: absolute;
+            bottom: 15px;
+        }
+        .wpcf7-list-item-label {
+            user-select: none;
+            display: inline-block;
+            font-size: 11px;
+            line-height: 18px;
+            color: #122039;
+        }
+        .wpcf7-not-valid {
+            border: 2px solid #707070;
+        }
+        .wpcf7-not-valid-tip {
+            color: #707070;
+            animation: alert linear 0.3s;
+            font-size: 11px;
+            font-size: 11px;
+            position: absolute;
+            width: 100%;
+            display: flex;
+            z-index: 9999;
+            top: 35px;
+        }
+        .wpcf7-response-output {
+            text-align: center;
+            margin: 0;
+            margin-bottom: 16px;
+            padding: 13px;
+        }
+        .wpcf7-mail-sent-ng,
+        .wpcf7-aborted {
+            border: 2px solid blue;
+        }
+        .wpcf7-validation-errors,
+        .wpcf7-acceptance-missing {
+            border: 2px solid blue;
+        }
+        ::-webkit-input-placeholder {
+            /* WebKit browsers */
+            color: #b79763;
+            opacity: 1;
+        }
+        :-moz-placeholder {
+            /* Mozilla Firefox 4 to 18 */
+            color: #b79763;
+            opacity: 1;
+        }
+        ::-moz-placeholder {
+            /* Mozilla Firefox 19+ */
+            color: #b79763;
+            opacity: 1;
+        }
+        :-ms-input-placeholder {
+            /* Internet Explorer 10+ */
+            color: #b79763;
+            opacity: 1;
+        }
+    }
+
+    @media screen and (max-width: 768px) {
+        &__p {
+            font-size: 12px;
+            margin: 10px 0 20px 0 !important;
+            line-height: normal;
+        }
+        form {
+            .wpcf7-list-item-label {
+                font-size: 12px;
+                line-height: normal;
+            }
+            .wpcf7-acceptance {
+                label {
+                    margin-bottom: 10px;
+                }
+            }
+            input[type="submit"] {
+                width: 120px;
+                height: 42px;
+                margin-top: 20px;
+                padding: 7px 22px;
+                left:72%;
+                @media (max-width: $sm) {
+                    width: 100px;
+                    left: -10px;
+                    padding: 7px 22px 7px 0px;
+                    margin-left: 0;
+                }
+            }
+            ::-webkit-input-placeholder {
+                /* WebKit browsers */
+                color: #b79763 !important;
+                opacity: 1;
+                font-size: 14px;
+            }
+            :-moz-placeholder {
+                /* Mozilla Firefox 4 to 18 */
+                color: #b79763 !important;
+                opacity: 1;
+                font-size: 14px;
+            }
+            ::-moz-placeholder {
+                /* Mozilla Firefox 19+ */
+                color: #b79763 !important;
+                opacity: 1;
+                font-size: 14px;
+            }
+            :-ms-input-placeholder {
+                /* Internet Explorer 10+ */
+                color: #b79763 !important;
+                opacity: 1;
+                font-size: 14px;
+            }
+        }
+    }
+}
+
+// .form-plots {
+//     display: none;
+//     position: fixed;
+//     width: 100%;
+//     height: 100%;
+//     background: rgba(0, 0, 0, 0.9);
+//     z-index: 999999999;
+//     top: 0;
+//     left: 0;
+//     overflow-x: scroll;
+//     &.form-main{
+//         margin-top:0;
+//     }
+//     form {
+//         position: absolute;
+//         left: 50%;
+//         top: 5%;
+//         transform: translateX(-50%);
+//         background: #efebeb;
+//         padding: 15px 30px 15px 30px;
+//         width: 600px;
+//         max-width: 100%;
+
+//         .form-plots-close {
+//             position: absolute;
+//             width: 30px;
+//             height: 30px;
+//             background: url(../img/invest-kladno/ico/close.png) no-repeat center;
+//             position: absolute;
+//             right: 25px;
+//             top: 20px;
+//             -webkit-transition: all 0.3s;
+//             transition: all 0.3s;
+//             &:hover {
+//                 cursor: pointer;
+//                 transform: rotate(180deg);
+//             }
+//         }
+//         .form-plots-header {
+//             font-weight: 400;
+//             margin: 8px 0 15px 0;
+//             font-family: $brygada;
+//         }
+//         .form-plots-text-number {
+//             text-align: center;
+//             margin-bottom: 15px;
+//             font-weight: 600;
+//             span {
+//                 color: #B79763;
+//             }
+//         }
+//         @media(max-width:767px){
+//             padding:15px;
+//             .form-plots-close {
+//                 right:10px;
+//             }
+//         }
+//     }
+// }

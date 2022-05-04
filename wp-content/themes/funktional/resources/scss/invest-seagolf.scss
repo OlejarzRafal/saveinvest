@@ -3,14 +3,14 @@
 @import "invest-seagolf/global/reset";
 @import "invest-seagolf/global/grid";
 @import "invest-seagolf/global/btn";
-// @import "invest-kladno/global/form-showhide";
+@import "invest-seagolf/global/form-showhide";
 
 
 @import "invest-seagolf/template-page/home-page";
-// @import "invest-kladno/template-page/about-kladno";
-// @import "invest-kladno/template-page/location-kladno";
-// @import "invest-kladno/template-page/gallery-kladno";
-// @import "invest-kladno/template-page/contact-kladno";
+@import "invest-seagolf/template-page/about";
+@import "invest-seagolf/template-page/localisation";
+@import "invest-seagolf/template-page/gallery";
+@import "invest-seagolf/template-page/contact";
 // @import "invest-kladno/template-page/plot-prices-list";
 // @import "invest-kladno/template-page/plot-prices-modal";
 // @import "invest-kladno/template-page/plot-prices";
@@ -19,4 +19,4 @@
 // @import "invest-kladno/template-layout/preloader";
 // @import "invest-kladno/template-layout/header";
 @import "invest-seagolf/template-layout/footer";
-// @import "invest-kladno/template-layout/form";
+@import "invest-seagolf/template-layout/form";

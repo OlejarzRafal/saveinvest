@@ -1,0 +1,338 @@
+.sg-gallery {
+    .sg-gallery-seagolf {
+        position: relative;
+        min-height: 920px;
+        width: 100%;
+        background: url(../img/sea-golf/gallery/background.jpg);
+        background-size: auto;
+        background-repeat: no-repeat;
+        background-position: center top;
+        &__title {
+            position: relative;
+            left: 50%;
+            transform: translateX(-50%);
+            margin-top: 635px;
+            padding: 20px;
+            width: 74%;
+            background-color: $brown;
+
+            &__box {
+                width: 100%;
+                padding: 40px 35px;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                border: 1px solid #c4c4c455;
+            }
+            &::before {
+                content: "";
+                position: absolute;
+                left: 50%;
+                top: 12px;
+                transform: translate(-50%, 0%);
+                width: 130px;
+                height: 17px;
+                background: $brown
+                    url(../img/sea-golf/footer/element-footer-top.svg);
+                background-repeat: no-repeat;
+                background-position: center;
+                background-size: 103px 17px;
+                pointer-events: none;
+            }
+            &::after {
+                content: "";
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                width: 109px;
+                height: 215px;
+                background: url("../img/sea-golf/about/sec1-element.png");
+                background-repeat: no-repeat;
+                background-position: center;
+                background-size: cover;
+                z-index: -1;
+            }
+            h5 {
+                width: 100%;
+                text-align: center;
+            }
+            .text-main {
+                width: 100%;
+                margin-top: 15px;
+                text-align: center;
+            }
+        }
+        .category {
+            margin-top: 180px;
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            gap: 0px;
+            &__item {
+                position: relative;
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+                border-bottom: 1px solid $gold-dark;
+                cursor: pointer;
+                transition: all 0.3s;
+                span {
+                    position: relative;
+                    display: block;
+                    background-color: white;
+                    font-family: $mulish;
+                    font-size: 15px;
+                    font-weight: 800;
+                    color: $gold-dark;
+                    letter-spacing: 0.2em;
+                    transition: all 0.3s;
+                    padding: 16px 50px;
+                    &:hover {
+                        background: #f5f1ed;
+                    }
+                }
+                &::before {
+                    content: "";
+                    position: absolute;
+                    left: 50%;
+                    bottom: 0px;
+                    transform: translateX(-50%);
+                    width: 0;
+                    height: 0;
+                    border-style: solid;
+                    border-width: 12px 12px 0 12px;
+                    border-color: $gold-dark transparent transparent;
+                    transition: all 0.3s;
+                }
+                &.active span,
+                &:hover {
+                    background: #f5f1ed;
+                    &::before {
+                        content: "";
+                        position: absolute;
+                        left: 50%;
+                        bottom: -12px;
+                        transform: translateX(-50%);
+                        width: 0;
+                        height: 0;
+                        border-style: solid;
+                        border-width: 12px 12px 0 12px;
+                        border-color: $gold-dark transparent transparent;
+                    }
+                }
+            }
+        }
+        .gallery {
+            margin-top: 70px;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 20px;
+            &__item {
+                position: relative;
+                height: 18vw;
+                cursor: pointer;
+                display: none;
+                &.show {
+                    display: block;
+                }
+                a {
+                    position: relative;
+                    display: block;
+                    width: 100%;
+                    height: 100%;
+                    &:after {
+                        content: "";
+                        position: absolute;
+                        left: 50%;
+                        top: 50%;
+                        transform: translate(-50%, -50%);
+                        width: 81px;
+                        height: 81px;
+                        background: url(../img/sea-golf/gallery/icon-gallery-plus.svg);
+                        background-repeat: no-repeat;
+                        background-size: auto;
+                        opacity: 0;
+                        pointer-events: none;
+                        transition: all 0.2s;
+                        z-index: 9;
+                    }
+                    &:before {
+                        content: "";
+                        position: absolute;
+                        left: 0;
+                        top: 0;
+                        width: 100%;
+                        height: 100%;
+                        background: #01161b;
+                        opacity: 0;
+                        transition: 0.2s;
+                    }
+                    &:hover {
+                        &:after {
+                            opacity: 1;
+                        }
+                        &:before {
+                            opacity: 0.6;
+                        }
+                    }
+                    img {
+                        width: 100%;
+                        height: 100%;
+                        -o-object-fit: cover;
+                        object-fit: cover;
+                    }
+                }
+                &--video {
+                    position: relative;
+                    height: 18vw;
+                    width: 100%;
+                    &::before {
+                        content: "";
+                        position: absolute;
+                        left: 50%;
+                        top: 50%;
+                        transform: translate(-50%, -50%);
+                        width: 42%;
+                        height: 42%;
+                        background: url(../img/sea-golf/gallery/photo-move-play.svg);
+                        background-repeat: no-repeat;
+                        background-position: center;
+                        background-size: contain;
+                        pointer-events: none;
+                        transition: all 0.2s;
+                        z-index: 9;
+                    }
+                    a {
+                        position: relative;
+                        width: 100%;
+                        height: 100%;
+                        &:before {
+                            content: "";
+                            position: absolute;
+                            left: 0;
+                            top: 0;
+                            width: 100%;
+                            height: 100%;
+                            background: #01161b;
+                            opacity: 0;
+                            transition: 0.2s;
+                        }
+                        &:after {
+                            content: "";
+                            display: none;
+                        }
+                        &:hover {
+                            &:before {
+                                opacity: 0.6;
+                            }
+                        }
+                    }
+                }
+                .yt-video-link {
+                    background-position: center;
+                    background-size: cover;
+                    background-repeat: no-repeat;
+                }
+            }
+        }
+        @media (max-width: $xxxl) {
+            &__title {
+                h5 {
+                    width: 83%;
+                }
+            }
+        }
+        @media (max-width: $xxl) {
+            &__title {
+                h5 {
+                    width: 95%;
+                }
+            }
+        }
+        @media (max-width: $xl) {
+            &__title {
+                h5 {
+                    font-size: 35px;
+                    width: 100%;
+                }
+            }
+        }
+        @media (max-width: $lg) {
+            top: -180px;
+            &__title {
+                width: 100%;
+            }
+            .category {
+                display: flex;
+                flex-direction: column;
+                margin-top: 30px;
+                gap: 20px;
+            }
+
+            .gallery {
+                grid-template-columns: 1fr 1fr;
+                &__item {
+                    position: relative;
+                    height: 24vw;
+                    &--video {
+                        position: relative;
+                        height: 24vw;
+                    }
+                }
+            }
+        }
+        @media (max-width: $md) {
+            margin-bottom: 40px;
+            &__title {
+                margin-top: 510px;
+                h5 {
+                    font-size: 25px;
+                }
+            }
+
+            .gallery {
+                grid-template-columns: 1fr;
+                margin-top: 50px;
+                .gallery-item {
+                    margin: 0 auto;
+                }
+                &__item {
+                    position: relative;
+                    height: 50vw;
+                    &--video {
+                        position: relative;
+                        height: 50vw;
+                    }
+                }
+            }
+        }
+        @media (max-width: $sm) {
+            &__title {
+                &__box {
+                    padding: 35px 20px;
+                }
+            }
+            .category {
+                &__item {
+                    span {
+                        padding: 16px 30px;
+                    }
+                }
+            }
+            .gallery {
+                &__item {
+                    position: relative;
+                    height: 60vw;
+                    &--video {
+                        position: relative;
+                        height: 60vw;
+                    }
+                }
+            }
+        }
+    }
+}
