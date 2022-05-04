@@ -3909,6 +3909,19 @@ a:hover {
               height: 17px;
               width: 11px;
               background: url("../img/invest-karwia/localization/time-icon.png"); }
+        .ek-localization .sec1-info-map__box__table-location .row-table:nth-child(2) {
+          position: relative; }
+          .ek-localization .sec1-info-map__box__table-location .row-table:nth-child(2) .row-table__time p {
+            position: relative; }
+            .ek-localization .sec1-info-map__box__table-location .row-table:nth-child(2) .row-table__time p::after {
+              content: "";
+              position: absolute;
+              top: 11px;
+              left: 60px;
+              height: 20px;
+              width: 26px;
+              background: url("../img/invest-karwia/localization/bike.svg");
+              background-repeat: no-repeat; }
         .ek-localization .sec1-info-map__box__table-location .row-table p {
           padding: 12px 0;
           text-align: start;
@@ -3963,13 +3976,20 @@ a:hover {
           line-height: 42px; }
         .ek-localization .sec1-info-map__box .box-text {
           margin-top: 20px; }
-        .ek-localization .sec1-info-map__box__table-location .row-table:nth-child(2) .row-table__time p {
+        .ek-localization .sec1-info-map__box__table-location .row-table:nth-child(6) .row-table__time p {
           position: relative; }
-          .ek-localization .sec1-info-map__box__table-location .row-table:nth-child(2) .row-table__time p::after {
-            top: 18px;
+          .ek-localization .sec1-info-map__box__table-location .row-table:nth-child(6) .row-table__time p::after {
+            top: 14px;
             left: 45px;
             height: 16px;
             width: 10px; }
+        .ek-localization .sec1-info-map__box__table-location .row-table:nth-child(2) .row-table__time p {
+          position: relative; }
+          .ek-localization .sec1-info-map__box__table-location .row-table:nth-child(2) .row-table__time p::after {
+            top: 11px;
+            left: 45px;
+            height: 20px;
+            width: 26px; }
         .ek-localization .sec1-info-map__box__table-location .row-table p {
           font-size: 12px;
           padding-left: 0 !important; } }
