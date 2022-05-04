@@ -318,10 +318,58 @@ get_template_part('investitions/sea-golf/header');
     <section class="sec3-photo">
     </section>
 
-    <section class="sec-4-testimonial">
+    <section class="sec4-testimonial">
         <div class="container">
             <div class="row">
-                <div class="offset-xl-1 col-xl-10"></div>
+                <div class="offset-xl-1 col-xl-1">
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/sea-golf/contact/testimonial-icon.svg" alt="ikona" />
+                </div>
+                <div class="col-xl-3">
+                    <div class="sec4-testimonial__box">
+                        <h3 class="f-h3 f-h3--black-dark">Opinie</h3>
+                        <h4 class="f-h4 f-h4--f80 f-h4--black-dark">klientów</h4>
+                        <div class="sec4-testimonial__box__nav">
+                            <div class="swiper-pagination"></div>
+                            <div class="swiper-button-next"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-6">
+                    <div class="sec4-testimonial__swiper swiper">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <div class="swiper-text text-main"><b>Jestem zadowolony z obsługi, jaką oferuje firma Saveinvest. Specjaliści bardzo sprawnie, szybko i terminowo zgromadzili wymagane dokumenty i uzyskali dla mojej działki warunki zabudowy.</b><br><br>Nie martwiłem się, w jaki sposób zdobyć dokumenty oraz dopełnić wszelkich formalności, ponieważ pracownicy Saveinvest wszystkim się zajęli. Kompetencja, rzetelność i doświadczenie – te trzy słowa najlepiej oddają jakość usług świadczonych przez firmę! </div>
+                                <div class="swiper-name text-main text-main--fw700">Sebastian, Kijowice
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="swiper-text text-main"><b>2 Jestem zadowolony z obsługi, jaką oferuje firma Saveinvest. Specjaliści bardzo sprawnie, szybko i terminowo zgromadzili wymagane dokumenty i uzyskali dla mojej działki warunki zabudowy.</b><br>Nie martwiłem się, w jaki sposób zdobyć dokumenty oraz dopełnić wszelkic formalności, ponieważ pracownicy formalności, ponieważ pracownicy Saveinvest formalności, ponieważ pracownicy Saveinvestszystkim się zajęl trzy słowa najlepiej oddają jakość usług świadczonych przez firmę! </div>
+                                <div class="swiper-name text-main text-main--fw700">Sebastian, Kijowice
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="swiper-text text-main"><b>3 Jestem zadowolony z obsługi, jaką oferuje firma Saveinvest. Specjaliści bardzo sprawnie, szybko i terminowo zgromadzili wymagane dokumenty i uzyskali dla mojej działki warunki zabudowy.</b><br>Nie martwiłem się, w jaki sposób zdobyć dokumenty oraz dopełnić wszelkich formalności, ponieważ pracownicy Saveinvest wszystkim się zajęli. Kompetencja, rzetelność i doświadczenie – te trzy słowa najlepiej oddają jakość usług świadczonych przez firmę! </div>
+                                <div class="swiper-name text-main text-main--fw700">Sebastian, Kijowice
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="swiper-text text-main"><b>4 Jestem zadowolony z obsługi, jaką oferuje firma Saveinvest. Specjaliści bardzo sprawnie, szybko i terminowo zgromadzili wymagane dokumenty i uzyskali dla mojej działki warunki zabudowy.</b><br>Nie martwiłem się, w jaki sposób zdobyć dokumenty oraz dopełnić wszelkich formalności, ponieważ pracownicy Saveinvest wszystkim się zajęli. Kompetencja, rzetelność i doświadczenie – te trzy słowa najlepiej oddają jakość usług świadczonych przez firmę! </div>
+                                <div class="swiper-name text-main text-main--fw700">Sebastian, Kijowice
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="swiper-text text-main"><b>5 Jestem zadowolony z obsługi, jaką oferuje firma Saveinvest. Specjaliści bardzo sprawnie, szybko i terminowo zgromadzili wymagane dokumenty i uzyskali dla mojej działki warunki zabudowy.</b><br>Nie martwiłem się, w jaki sposób zdobyć dokumenty oraz dopełnić wszelkich formalności, ponieważ pracownicy Saveinvest wszystkim się zajęli. Kompetencja, rzetelność i doświadczenie – te trzy słowa najlepiej oddają jakość usług świadczonych przez firmę! </div>
+                                <div class="swiper-name text-main text-main--fw700">Sebastian, Kijowice
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="swiper-text text-main"><b>6 Jestem zadowolony z obsługi, jaką oferuje firma Saveinvest. Specjaliści bardzo sprawnie, szybko i terminowo zgromadzili wymagane dokumenty i uzyskali dla mojej działki warunki zabudowy.</b><br>Nie martwiłem się, w jaki sposób zdobyć dokumenty oraz dopełnić wszelkich formalności, ponieważ pracownicy Saveinvest wszystkim się zajęli. Kompetencja, rzetelność i doświadczenie – te trzy słowa najlepiej oddają jakość usług świadczonych przez firmę! </div>
+                                <div class="swiper-name text-main text-main--fw700">Sebastian, Kijowice
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -350,7 +398,7 @@ get_template_part('investitions/sea-golf/header');
                                         <?php echo $adres_firm_sec5_contact_seagolf; ?>
                                         <?php if ($tel_firm_sec5_contact_seagolf = get_field('tel_firm_sec5_contact_seagolf')) : ?>
                                             <a class="text-main text-main--fw400 text-main--f14" href="tel:	<?php echo $tel_firm_sec5_contact_seagolf; ?>">
-                                            <br>tel.: <?php echo $tel_firm_sec5_contact_seagolf; ?></a>
+                                                <br>tel.: <?php echo $tel_firm_sec5_contact_seagolf; ?></a>
                                         <?php endif; ?>
                                     </p>
                                 <?php endif; ?>

@@ -7597,6 +7597,119 @@ sup {
     height: 100px;
   }
 }
+.sg-contact .sec4-testimonial {
+  margin-top: 215px;
+}
+.sg-contact .sec4-testimonial__box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  padding-left: 15px;
+  margin-top: 20px;
+  border-left: 1px solid #b797635b;
+}
+.sg-contact .sec4-testimonial__box .f-h3 {
+  line-height: 42px;
+}
+.sg-contact .sec4-testimonial__box__nav {
+  top: 0;
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  margin-top: 15px;
+  padding-right: 14%;
+}
+.sg-contact .sec4-testimonial__box__nav .swiper-pagination {
+  position: relative;
+  padding-bottom: 35px;
+  height: auto;
+  width: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  gap: 15px;
+  background-color: transparent;
+}
+.sg-contact .sec4-testimonial__box__nav .swiper-pagination .swiper-pagination-bullet {
+  margin: 0;
+  width: 10px;
+  height: 10px;
+  margin: 0 2px;
+  background-color: #292827;
+  border-radius: 50%;
+  opacity: 0.5;
+  -webkit-box-shadow: 0px;
+          box-shadow: 0px;
+}
+.sg-contact .sec4-testimonial__box__nav .swiper-pagination .swiper-pagination-bullet-active {
+  margin: 0;
+  width: 14px;
+  height: 14px;
+  background-color: #292827;
+  border-radius: 50%;
+  opacity: 1;
+}
+.sg-contact .sec4-testimonial__box__nav .swiper-button-next {
+  position: relative;
+  margin: 0px;
+  top: 0px;
+  left: 0px;
+  -webkit-transform: translateX(39%);
+          transform: translateX(39%);
+  width: 60px;
+  height: 60px;
+  border: 1px solid #B79763;
+  overflow: hidden;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+  background-color: #F4F1E5;
+}
+.sg-contact .sec4-testimonial__box__nav .swiper-button-next::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+  background: url("../img/sea-golf/home-page/testimonial-arrow.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.sg-contact .sec4-testimonial__box__nav .swiper-button-next:hover::before {
+  -webkit-animation: arrow infinite 1s;
+          animation: arrow infinite 1s;
+}
+.sg-contact .sec4-testimonial__box__nav .swiper-button-next:after {
+  display: none;
+}
 .sg-contact .sec5-location-seagolf {
   margin-top: 200px;
 }

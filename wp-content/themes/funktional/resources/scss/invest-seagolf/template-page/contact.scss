@@ -561,6 +561,92 @@
             }
         }
     }
+    .sec4-testimonial{
+        margin-top: 215px;
+        &__box {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            padding-left: 15px;
+            margin-top: 20px;
+            border-left: 1px solid #b797635b;
+            .f-h3{
+                line-height: 42px;
+            }
+            &__nav {
+                // position: absolute;
+                top: 0;
+                width: 100%;
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                margin-top: 15px;
+                padding-right: 14%;
+                .swiper-pagination {
+                    position: relative;
+                    padding-bottom: 35px;
+                    height: auto;
+                    width: auto;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: start;
+                    align-items: flex-start;
+                    gap: 15px;
+                    background-color: transparent;
+                    .swiper-pagination-bullet {
+                        margin: 0;
+                        width: 10px;
+                        height: 10px;
+                        margin: 0 2px;
+                        background-color: $black-dark;
+                        border-radius: 50%;
+                        opacity: 0.5;
+                        box-shadow: 0px;
+                    }
+                    .swiper-pagination-bullet-active {
+                        margin: 0;
+                        width: 14px;
+                        height: 14px;
+                        background-color: $black-dark;
+                        border-radius: 50%;
+                        opacity: 1;
+                    }
+                }
+                .swiper-button-next {
+                    position: relative;
+                    margin: 0px;
+                    top: 0px;
+                    left: 0px;
+                    transform: translateX(39%);
+                    width: 60px;
+                    height: 60px;
+                    border: 1px solid $gold-medium;
+                    overflow: hidden;
+                    transition: all 0.2s;
+                    background-color: $gold-tint-light;
+                    &::before {
+                        content: "";
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-50%, -50%);
+                        width: 100%;
+                        height: 100%;
+                        background: url("../img/sea-golf/home-page/testimonial-arrow.svg");
+                        background-repeat: no-repeat;
+                        background-position: center;
+                    }
+                    &:hover::before {
+                        animation: arrow infinite 1s;
+                    }
+                    &:after {
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
     .sec5-location-seagolf {
         margin-top: 200px;
         .row{
