@@ -5191,6 +5191,10 @@ sup {
   .sg-frontpage .sec9-testimonial__box__nav::before {
     height: 100%;
   }
+  .sg-frontpage .sec9-testimonial__box__nav .swiper-pagination {
+    padding-bottom: 25px;
+    gap: 12px;
+  }
   .sg-frontpage .sec9-testimonial__box__icon {
     bottom: -110px;
     left: 55%;
@@ -6668,7 +6672,7 @@ sup {
   text-align: center;
 }
 .sg-gallery .sg-gallery-seagolf .category {
-  margin-top: 180px;
+  margin-top: 100px;
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -7307,7 +7311,7 @@ sup {
 }
 @media (max-width: 767px) {
   .sg-contact .sec1-contact-sg {
-    padding: 28% 0 0;
+    padding: 40% 0 0;
     background-size: contain;
   }
   .sg-contact .sec1-contact-sg__form {
@@ -7600,6 +7604,9 @@ sup {
 .sg-contact .sec4-testimonial {
   margin-top: 215px;
 }
+.sg-contact .sec4-testimonial__icon {
+  margin-top: 20px;
+}
 .sg-contact .sec4-testimonial__box {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -7611,14 +7618,28 @@ sup {
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
-  padding-left: 15px;
+  padding-left: 20px;
   margin-top: 20px;
   border-left: 1px solid #b797635b;
+}
+.sg-contact .sec4-testimonial__box::after {
+  content: "";
+  position: absolute;
+  right: -105px;
+  bottom: -75px;
+  width: 180px;
+  height: 130px;
+  background: url(../img/sea-golf/contact/contact-sec4-icon.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  z-index: 2;
 }
 .sg-contact .sec4-testimonial__box .f-h3 {
   line-height: 42px;
 }
 .sg-contact .sec4-testimonial__box__nav {
+  position: relative;
   top: 0;
   width: 100%;
   height: 100%;
@@ -7632,8 +7653,8 @@ sup {
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
-  margin-top: 15px;
-  padding-right: 14%;
+  margin-top: 45px;
+  margin-left: 30px;
 }
 .sg-contact .sec4-testimonial__box__nav .swiper-pagination {
   position: relative;
@@ -7679,16 +7700,14 @@ sup {
   position: relative;
   margin: 0px;
   top: 0px;
-  left: 0px;
-  -webkit-transform: translateX(39%);
-          transform: translateX(39%);
+  left: -25px;
   width: 60px;
   height: 60px;
   border: 1px solid #B79763;
   overflow: hidden;
   -webkit-transition: all 0.2s;
   transition: all 0.2s;
-  background-color: #F4F1E5;
+  background-color: transparent;
 }
 .sg-contact .sec4-testimonial__box__nav .swiper-button-next::before {
   content: "";
@@ -7709,6 +7728,117 @@ sup {
 }
 .sg-contact .sec4-testimonial__box__nav .swiper-button-next:after {
   display: none;
+}
+.sg-contact .sec4-testimonial__swiper {
+  padding: 70px 70px 70px 85px;
+  width: 100%;
+  height: 100%;
+  background-color: #F4F1E5;
+}
+@media (max-width: 1199px) {
+  .sg-contact .sec4-testimonial {
+    margin-top: 150px;
+  }
+  .sg-contact .sec4-testimonial__icon {
+    position: absolute;
+    margin-top: 0;
+    width: 50px;
+    height: auto;
+    left: 0px;
+  }
+  .sg-contact .sec4-testimonial__box {
+    margin-top: 0;
+    border-left: 0px solid #b797635b;
+    width: 100%;
+    padding-left: 70px;
+  }
+  .sg-contact .sec4-testimonial__box::after {
+    right: 10px;
+    bottom: -35px;
+    width: 85px;
+    height: 65px;
+  }
+  .sg-contact .sec4-testimonial__box__nav {
+    position: absolute;
+    margin-top: 0px;
+    margin-left: 0px;
+    top: -25%;
+    left: auto;
+    right: 0px;
+    width: 40%;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+  }
+  .sg-contact .sec4-testimonial__box__nav .swiper-pagination {
+    height: 100%;
+    padding-bottom: 0px;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin-right: 20px;
+  }
+  .sg-contact .sec4-testimonial__box__nav .swiper-button-next {
+    margin: 0px;
+    top: 32px;
+    left: 0px;
+  }
+  .sg-contact .sec4-testimonial__swiper {
+    padding: 40px 70px 40px 85px;
+    width: calc(100% + 30px);
+    left: -15px;
+  }
+}
+@media (max-width: 991px) {
+  .sg-contact .sec4-testimonial {
+    margin-top: 80px;
+  }
+  .sg-contact .sec4-testimonial__icon {
+    width: 40px;
+    left: 10px;
+    top: 5px;
+  }
+  .sg-contact .sec4-testimonial__box {
+    padding-left: 40px;
+  }
+  .sg-contact .sec4-testimonial__box::after {
+    bottom: 0px;
+    width: 53px;
+    height: 61px;
+  }
+  .sg-contact .sec4-testimonial__box__nav {
+    top: -20%;
+    width: 48%;
+    right: 10px;
+  }
+  .sg-contact .sec4-testimonial__box__nav .swiper-pagination {
+    gap: 6px;
+    margin-right: 10px;
+  }
+  .sg-contact .sec4-testimonial__box__nav .swiper-pagination .swiper-pagination-bullet {
+    width: 8px;
+    height: 8px;
+  }
+  .sg-contact .sec4-testimonial__box__nav .swiper-pagination .swiper-pagination-bullet-active {
+    width: 12px;
+    height: 12px;
+  }
+  .sg-contact .sec4-testimonial__box__nav .swiper-button-next {
+    top: 22px;
+    width: 50px;
+    height: 50px;
+  }
+  .sg-contact .sec4-testimonial__swiper {
+    padding: 20px 15px 20px 57px;
+  }
 }
 .sg-contact .sec5-location-seagolf {
   margin-top: 200px;
@@ -7783,6 +7913,9 @@ sup {
   }
 }
 @media (max-width: 1199px) {
+  .sg-contact .sec5-location-seagolf {
+    margin-top: 80px;
+  }
   .sg-contact .sec5-location-seagolf__content {
     margin-top: 50px;
     margin-bottom: 30px;
@@ -7822,6 +7955,530 @@ sup {
   .sg-contact .sec5-location-seagolf__content .locat-info__data-firm, .sg-contact .sec5-location-seagolf__content .locat-info__data-person {
     width: 100%;
   }
+}
+
+.seagolf-nav {
+  height: auto;
+  width: 100%;
+  background: -webkit-gradient(linear, left top, left bottom, from(#1951a4da), to(rgba(25, 81, 164, 0)));
+  background: linear-gradient(180deg, #1951a4da 0%, rgba(25, 81, 164, 0) 100%);
+  opacity: 1;
+  position: fixed;
+  z-index: 9999;
+}
+.seagolf-nav--sticky {
+  height: 125px;
+  background: #FFFFFF;
+  -webkit-box-shadow: 0px 10px 10px -10px rgba(172, 171, 171, 0.418);
+          box-shadow: 0px 10px 10px -10px rgba(172, 171, 171, 0.418);
+  -webkit-transition: background-color 0.5s;
+  transition: background-color 0.5s;
+}
+.seagolf-nav__container {
+  position: relative;
+  margin-top: 56px;
+  height: 95px;
+  width: calc(100% + 30px);
+  left: -15px;
+  background: #33312fc9;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+.seagolf-nav__container::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: calc(100% - 14px);
+  height: calc(100% - 15px);
+  border: 1px solid #B79763;
+}
+.seagolf-nav__container.active {
+  background: transparent;
+}
+.seagolf-nav__container.active::before {
+  display: none;
+}
+.seagolf-nav__container--sticky {
+  margin-top: 10px;
+  background: transparent;
+}
+.seagolf-nav__container--sticky::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: calc(100% - 14px);
+  height: calc(100% - 15px);
+  border: 0px solid #B79763;
+}
+.seagolf-nav__container__mobile {
+  display: none;
+}
+.seagolf-nav__container__mobile.active {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  left: 0px;
+  top: 0px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.seagolf-nav__container__mobile.active ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 20px;
+}
+.seagolf-nav__container__mobile.active ul .btn-nav {
+  text-align: center;
+}
+.seagolf-nav__container__mobile.active ul .btn-nav--active .text-main {
+  color: #B79763;
+  position: relative;
+}
+.seagolf-nav__container__mobile.active ul .btn-nav--active .text-main::before {
+  content: "";
+  position: absolute;
+  bottom: -13px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  width: 50px;
+  height: 2px;
+  background-color: #B79763;
+}
+.seagolf-nav__container__mobile.active ul .logo-seagolf {
+  width: 100%;
+  left: 0;
+  top: 0;
+  margin-right: 0vw;
+  margin-left: 0vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  position: relative;
+  background: url(../img/sea-golf/header/logo.svg);
+  background-repeat: no-repeat;
+  background-size: 155px 75px;
+  background-position: center;
+  width: 100%;
+  height: 125px;
+  opacity: 1;
+}
+.seagolf-nav__container__mobile.active ul .logo-seagolf a {
+  width: 100%;
+  height: auto;
+}
+.seagolf-nav__container__mobile.active ul .logo-seagolf::after {
+  content: "";
+  display: none;
+}
+.seagolf-nav__container__box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: auto;
+  width: 100%;
+}
+.seagolf-nav__container__box.none {
+  display: none;
+}
+.seagolf-nav__container__box ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  width: 100%;
+  position: relative;
+}
+.seagolf-nav__container__box ul .btn-box {
+  height: 95px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 3vw;
+}
+.seagolf-nav__container__box ul .btn-box .btn-nav {
+  margin-top: 0;
+}
+.seagolf-nav__container__box ul .btn-box .btn-nav--visibility {
+  position: relative;
+}
+.seagolf-nav__container__box ul .btn-box .btn-nav--visibility::before {
+  content: "";
+  position: absolute;
+  width: 23px;
+  height: 23px;
+  background: url(../img/sea-golf/header/financing-arow.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  right: -20px;
+  top: 55%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  -webkit-transition: all 0.6s;
+  transition: all 0.6s;
+  pointer-events: none;
+}
+.seagolf-nav__container__box ul .btn-box .btn-nav--visibility:hover.btn-nav--visibility::before {
+  content: "";
+  position: absolute;
+  -webkit-transform: translateY(-80%);
+          transform: translateY(-80%);
+}
+.seagolf-nav__container__box ul .btn-box .btn-nav--sticky .text-main {
+  color: #292827;
+}
+.seagolf-nav__container__box ul .btn-box .btn-nav .text-main {
+  position: relative;
+}
+.seagolf-nav__container__box ul .btn-box .btn-nav .text-main:hover {
+  color: #B79763;
+}
+.seagolf-nav__container__box ul .btn-box .btn-nav .text-main:hover .btn-nav--visibility::before {
+  content: "";
+  position: absolute;
+  -webkit-transform: translateY(-150%);
+          transform: translateY(-150%);
+}
+.seagolf-nav__container__box ul .btn-box .btn-nav .text-main::before {
+  content: "";
+  position: absolute;
+  width: 50%;
+  -webkit-transform: scaleX(0);
+          transform: scaleX(0);
+  height: 2px;
+  bottom: -13px;
+  left: 24% !important;
+  color: #B79763;
+  background: currentcolor;
+  -webkit-transform-origin: right;
+          transform-origin: right;
+  -webkit-transition: -webkit-transform 0.25s ease-out;
+  transition: -webkit-transform 0.25s ease-out;
+  transition: transform 0.25s ease-out;
+  transition: transform 0.25s ease-out, -webkit-transform 0.25s ease-out;
+}
+.seagolf-nav__container__box ul .btn-box .btn-nav .text-main:hover::before {
+  -webkit-transform: scaleX(1);
+          transform: scaleX(1);
+  -webkit-transform-origin: left;
+          transform-origin: left;
+}
+.seagolf-nav__container__box ul .btn-box .btn-nav--active .text-main {
+  color: #B79763;
+  position: relative;
+}
+.seagolf-nav__container__box ul .btn-box .btn-nav--active .text-main::before {
+  -webkit-transform: scaleX(1);
+          transform: scaleX(1);
+}
+.seagolf-nav__container__box ul .logo-seagolf {
+  top: -45px;
+  margin-right: 3vw;
+  margin-left: 3vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  position: relative;
+  background: white url(../img/sea-golf/header/logo.svg);
+  background-repeat: no-repeat;
+  background-size: 150px 180px;
+  background-position: center;
+  width: 270px;
+  height: 185px;
+  opacity: 1;
+  -webkit-transform: translateY(0px);
+          transform: translateY(0px);
+  -webkit-box-shadow: 0px 30px 30px rgba(0, 0, 0, 0.25);
+          box-shadow: 0px 30px 30px rgba(0, 0, 0, 0.25);
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+  cursor: pointer;
+  z-index: 1;
+}
+.seagolf-nav__container__box ul .logo-seagolf::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: calc(100% - 14px);
+  height: calc(100% - 15px);
+  border: 1px solid #B79763;
+}
+.seagolf-nav__container__box ul .logo-seagolf a {
+  position: absolute;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+}
+.seagolf-nav__container__box ul .logo-seagolf--sticky {
+  -webkit-transform: translateY(-240px);
+          transform: translateY(-240px);
+}
+.seagolf-nav__container__box ul .logo-seagolf-sticky {
+  position: absolute;
+  top: 15px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  width: 188px;
+  height: 76px;
+  background: url(../img/sea-golf/header/logo-sticky.svg);
+  background-repeat: no-repeat;
+  background-size: 150px 62px;
+  background-position: center;
+  opacity: 0;
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+}
+.seagolf-nav__container__box ul .logo-seagolf-sticky a {
+  position: absolute;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+}
+.seagolf-nav__container__box ul .logo-seagolf-sticky--sticky {
+  opacity: 1;
+}
+.seagolf-nav__container__box .nav-sticky--sticky {
+  height: 125px;
+}
+.seagolf-nav__container__burger {
+  display: none;
+}
+@media (max-width: 1199px) {
+  .seagolf-nav__container__burger {
+    position: absolute;
+    top: 36px;
+    left: auto;
+    right: 30px;
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+    width: 30px;
+    height: 30px;
+    display: block;
+    -webkit-transition-duration: 0.3s;
+            transition-duration: 0.3s;
+    z-index: 999;
+    cursor: pointer;
+  }
+  .seagolf-nav__container__burger span {
+    position: absolute;
+    left: 0;
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+    height: 2px;
+    width: 100%;
+    display: block;
+    background: #FFFFFF;
+    border-radius: 0px;
+    opacity: 1;
+    -webkit-transition: 0.25s ease-in-out;
+    transition: 0.25s ease-in-out;
+  }
+  .seagolf-nav__container__burger--sticky {
+    top: 13px;
+  }
+  .seagolf-nav__container__burger--sticky::after {
+    display: none;
+  }
+  .seagolf-nav__container__burger--sticky::before {
+    display: none;
+  }
+  .seagolf-nav__container__burger--sticky span {
+    background: #292827;
+  }
+  .seagolf-nav__container__burger.open::after {
+    display: none;
+  }
+  .seagolf-nav__container__burger.open::before {
+    display: none;
+  }
+  .seagolf-nav__container__burger.open span {
+    background: #292827;
+  }
+  .seagolf-nav__container__burger span:nth-child(1) {
+    top: 0px;
+  }
+  .seagolf-nav__container__burger span:nth-child(2),
+.seagolf-nav__container__burger span:nth-child(3) {
+    top: 10px;
+  }
+  .seagolf-nav__container__burger span:nth-child(4) {
+    top: 20px;
+  }
+  .seagolf-nav__container__burger.open span:nth-child(1) {
+    top: 10px;
+    width: 0%;
+    left: 50%;
+  }
+  .seagolf-nav__container__burger.open span:nth-child(2) {
+    visibility: visible;
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
+  .seagolf-nav__container__burger.open span:nth-child(3) {
+    -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+  }
+  .seagolf-nav__container__burger.open span:nth-child(4) {
+    top: 9px;
+    width: 0%;
+    left: 50%;
+  }
+}
+@media (max-width: 1679px) {
+  .seagolf-nav__container__box ul .btn-box {
+    gap: 2.5vw;
+  }
+  .seagolf-nav__container__box ul .logo-seagolf {
+    margin-right: 2vw;
+    margin-left: 2vw;
+  }
+}
+@media (max-width: 1399px) {
+  .seagolf-nav__container__box ul .btn-box .btn-nav--visibility::before {
+    top: 50%;
+  }
+  .seagolf-nav__container__box ul .btn-box .btn-nav .text-main {
+    font-size: 12px;
+  }
+  .seagolf-nav__container__box ul .btn-box .btn-nav--sticky .text-main {
+    font-size: 12px;
+  }
+  .seagolf-nav__container__box ul .logo-seagolf {
+    top: -20px;
+    margin-right: 1.5vw;
+    margin-left: 1.5vw;
+    width: 150px;
+    height: 140px;
+    background-size: 115px 120px;
+  }
+  .seagolf-nav__container__box ul .logo-seagolf-sticky {
+    position: absolute;
+    top: -10px;
+    margin-left: 15px;
+    width: 150px;
+    height: 125px;
+    background-size: 120px 60px;
+    opacity: 0;
+  }
+  .seagolf-nav__container__box ul .logo-seagolf-sticky--sticky {
+    opacity: 1;
+  }
+}
+@media (max-width: 1199px) {
+  .seagolf-nav {
+    height: auto;
+  }
+  .seagolf-nav--sticky {
+    height: 80px;
+    background: #FFFFFF;
+    -webkit-box-shadow: 0px 10px 10px -10px rgba(172, 171, 171, 0.418);
+            box-shadow: 0px 10px 10px -10px rgba(172, 171, 171, 0.418);
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+  .seagolf-nav__container {
+    margin-top: 20px;
+  }
+  .seagolf-nav__container__box ul .btn-box {
+    display: none;
+  }
+  .seagolf-nav__container__box ul .logo-seagolf {
+    position: absolute;
+    left: 15px;
+    top: 15px;
+    margin-right: 0vw;
+    margin-left: 0vw;
+    width: 70px;
+    height: 65px;
+    background-size: 50px 57px;
+    opacity: 1;
+  }
+  .seagolf-nav__container__box ul .logo-seagolf::after {
+    width: calc(100% + 10px);
+    height: calc(100% + 10px);
+  }
+  .seagolf-nav__container__box ul .logo-seagolf-sticky {
+    position: absolute;
+    top: 8px;
+    left: 50px;
+    width: 100px;
+    height: 65px;
+    background-size: 100px 50px;
+    opacity: 0;
+  }
+  .seagolf-nav__container__box ul .logo-seagolf-sticky--sticky {
+    opacity: 1;
+    top: -5px;
+  }
+}
+.seagolf-nav.active {
+  background: #FFFFFF;
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  z-index: 99999;
 }
 
 footer {

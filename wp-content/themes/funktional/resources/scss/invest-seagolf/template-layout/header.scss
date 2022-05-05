@@ -1,0 +1,526 @@
+.seagolf-nav {
+    height: auto;
+    width: 100%;
+    background: linear-gradient(
+        180deg,
+        #1951a4da 0%,
+        rgba(25, 81, 164, 0) 100%
+    );
+    opacity: 1;
+    position: fixed;
+    z-index: 9999;
+    &--sticky {
+        height: 125px;
+        background: $white;
+        box-shadow: 0px 10px 10px -10px rgba(172, 171, 171, 0.418);
+        transition: background-color 0.5s;
+    }
+    &__container {
+        position: relative;
+        margin-top: 56px;
+        height: 95px;
+        width: calc(100% + 30px);
+        left: -15px;
+        background: #33312fc9;
+        transition: all 0.3s;
+        &::before {
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: calc(100% - 14px);
+            height: calc(100% - 15px);
+            border: 1px solid $gold-medium;
+        }
+        &.active {
+            background: transparent;
+            &::before {
+                display: none;
+            }
+        }
+        &--sticky {
+            margin-top: 10px;
+            background: transparent;
+            &::before {
+                content: "";
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                width: calc(100% - 14px);
+                height: calc(100% - 15px);
+                border: 0px solid $gold-medium;
+            }
+        }
+        &__mobile {
+            display: none;
+            &.active {
+                position: fixed;
+                width: 100%;
+                height: 100%;
+                left: 0px;
+                top: 0px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                ul {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 20px;
+                    .btn-nav {
+                        text-align: center;
+                        &--active {
+                            .text-main {
+                                color: $gold-medium;
+                                position: relative;
+                                &::before {
+                                    content: "";
+                                    position: absolute;
+                                    bottom: -13px;
+                                    left: 50%;
+                                    transform: translateX(-50%);
+                                    width: 50px;
+                                    height: 2px;
+                                    background-color: $gold-medium;
+                                }
+                            }
+                        }
+                    }
+                    .logo-seagolf {
+                        width: 100%;
+                        left: 0;
+                        top: 0;
+                        margin-right: 0vw;
+                        margin-left: 0vw;
+                        display: flex;
+                        flex-direction: row;
+                        position: relative;
+                        background: url(../img/sea-golf/header/logo.svg);
+                        background-repeat: no-repeat;
+                        background-size: 155px 75px;
+                        background-position: center;
+                        width: 100%;
+                        height: 125px;
+                        opacity: 1;
+                        a {
+                            width: 100%;
+                            height: auto;
+                        }
+                        &::after {
+                            content: "";
+                            display: none;
+                        }
+                    }
+                }
+            }
+        }
+        &__box {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: auto;
+            width: 100%;
+            &.none {
+                display: none;
+            }
+            ul {
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                align-items: flex-start;
+                width: 100%;
+                position: relative;
+                .btn-box {
+                    height: 95px;
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: space-between;
+                    align-items: center;
+                    gap: 3vw;
+                    .btn-nav {
+                        margin-top: 0;
+                        &--visibility {
+                            // visibility: hidden;
+                            position: relative;
+                            &::before {
+                                content: "";
+                                position: absolute;
+                                width: 23px;
+                                height: 23px;
+                                background: url(../img/sea-golf/header/financing-arow.svg);
+                                background-repeat: no-repeat;
+                                background-size: cover;
+                                right: -20px;
+                                top: 55%;
+                                transform: translateY(-50%);
+                                transition: all 0.6s;
+                                pointer-events: none;
+                            }
+                            &:hover.btn-nav--visibility::before {
+                                content: "";
+                                position: absolute;
+                                transform: translateY(-80%);
+                            }
+                        }
+                        &--sticky {
+                            .text-main {
+                                color: $black-dark;
+                            }
+                        }
+                        .text-main {
+                            position: relative;
+                            &:hover {
+                                color: $gold-medium;
+                            }
+                            &:hover .btn-nav--visibility::before {
+                                content: "";
+                                position: absolute;
+                                transform: translateY(-150%);
+                            }
+                            &::before {
+                                content: "";
+                                position: absolute;
+                                width: 50%;
+                                transform: scaleX(0);
+                                height: 2px;
+                                bottom: -13px;
+                                left: 24% !important;
+                                color: $gold-medium;
+                                background: currentcolor;
+                                transform-origin: right;
+                                transition: transform 0.25s ease-out;
+                            }
+                            &:hover::before {
+                                transform: scaleX(1);
+                                transform-origin: left;
+                            }
+                        }
+                        &--active {
+                            .text-main {
+                                color: $gold-medium;
+                                position: relative;
+                                &::before {
+                                    transform: scaleX(1);
+                                }
+                            }
+                        }
+                    }
+                }
+                .logo-seagolf {
+                    top: -45px;
+                    margin-right: 3vw;
+                    margin-left: 3vw;
+                    display: flex;
+                    flex-direction: row;
+                    position: relative;
+                    background: white url(../img/sea-golf/header/logo.svg);
+                    background-repeat: no-repeat;
+                    background-size: 150px 180px;
+                    background-position: center;
+                    width: 270px;
+                    height: 185px;
+                    opacity: 1;
+                    transform: translateY(-0px);
+                    box-shadow: 0px 30px 30px rgba(0, 0, 0, 0.25);
+                    transition: all 0.4s ease;
+                    cursor: pointer;
+                    z-index: 1;
+                    &::before {
+                        content: "";
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-50%, -50%);
+                        width: calc(100% - 14px);
+                        height: calc(100% - 15px);
+                        border: 1px solid $gold-medium;
+                    }
+                    a {
+                        position: absolute;
+                        left: 0;
+                        right: 0;
+                        width: 100%;
+                        height: 100%;
+                    }
+                    // &::after {
+                    //     content: "";
+                    //     position: absolute;
+                    //     top: 50%;
+                    //     left: 50%;
+                    //     transform: translate(-50%, -50%);
+                    //     width: calc(100% + 20px);
+                    //     height: calc(100% + 20px);
+                    //     background: #022545;
+                    //     opacity: 0.15;
+                    //     z-index: -1;
+                    // }
+                    &--sticky {
+                        transform: translateY(-240px);
+                    }
+                }
+                .logo-seagolf-sticky {
+                    position: absolute;
+                    top: 15px;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    width: 188px;
+                    height: 76px;
+                    background: url(../img/sea-golf/header/logo-sticky.svg);
+                    background-repeat: no-repeat;
+                    background-size: 150px 62px;
+                    background-position: center;
+                    opacity: 0;
+                    transition: all 0.4s ease;
+                    a {
+                        position: absolute;
+                        left: 0;
+                        right: 0;
+                        width: 100%;
+                        height: 100%;
+                    }
+                    &--sticky {
+                        opacity: 1;
+                    }
+                }
+            }
+            .nav-sticky--sticky {
+                height: 125px;
+            }
+        }
+        &__burger {
+            display: none;
+            @media (max-width: $xl) {
+                position: absolute;
+                top: 36px;
+                left: auto;
+                right: 30px;
+                transform: rotate(0deg);
+                width: 30px;
+                height: 30px;
+                display: block;
+                transition-duration: 0.3s;
+                z-index: 999;
+                // &::after {
+                //     content: "";
+                //     position: absolute;
+                //     top: 35%;
+                //     left: 50%;
+                //     transform: translate(-50%, -50%);
+                //     width: 170%;
+                //     height: 150%;
+                //     background: #0f3c64;
+                //     z-index: -1;
+                // }
+                // &::before {
+                //     content: "";
+                //     position: absolute;
+                //     top: 35%;
+                //     left: 50%;
+                //     transform: translate(-50%, -50%);
+                //     width: calc(170% + 10px);
+                //     height: calc(150% + 10px);
+                //     background: #022545;
+                //     opacity: 0.15;
+                //     z-index: -1;
+                // }
+                cursor: pointer;
+                span {
+                    position: absolute;
+                    left: 0;
+                    transform: rotate(0deg);
+                    height: 2px;
+                    width: 100%;
+                    display: block;
+                    background: $white;
+                    border-radius: 0px;
+                    opacity: 1;
+                    transition: 0.25s ease-in-out;
+                }
+                &--sticky {
+                    top: 13px;
+                    &::after {
+                        display: none;
+                    }
+                    &::before {
+                        display: none;
+                    }
+                    span {
+                        background: $black-dark;
+                    }
+                }
+                &.open {
+                    &::after {
+                        display: none;
+                    }
+                    &::before {
+                        display: none;
+                    }
+                    span {
+                        background: $black-dark;
+                    }
+                }
+                span:nth-child(1) {
+                    top: 0px;
+                }
+                span:nth-child(2),
+                span:nth-child(3) {
+                    top: 10px;
+                }
+                span:nth-child(4) {
+                    top: 20px;
+                }
+                &.open span:nth-child(1) {
+                    top: 10px;
+                    width: 0%;
+                    left: 50%;
+                }
+                &.open span:nth-child(2) {
+                    visibility: visible;
+                    -webkit-transform: rotate(45deg);
+                    -moz-transform: rotate(45deg);
+                    -o-transform: rotate(45deg);
+                    transform: rotate(45deg);
+                }
+                &.open span:nth-child(3) {
+                    -webkit-transform: rotate(-45deg);
+                    -moz-transform: rotate(-45deg);
+                    -o-transform: rotate(-45deg);
+                    transform: rotate(-45deg);
+                }
+                &.open span:nth-child(4) {
+                    top: 9px;
+                    width: 0%;
+                    left: 50%;
+                }
+            }
+        }
+    }
+    @media (max-width: $xxxl) {
+        &__container {
+            &__box {
+                ul {
+                    .btn-box {
+                        gap: 2.5vw;
+                    }
+                    .logo-seagolf {
+                        margin-right: 2vw;
+                        margin-left: 2vw;
+                    }
+                }
+            }
+        }
+    }
+    @media (max-width: $xxl) {
+        &__container {
+            &__box {
+                ul {
+                    .btn-box {
+                        .btn-nav {
+                            &--visibility {
+                                // visibility: hidden;
+                                &::before {
+                                    top: 50%;
+                                }
+                            }
+                            .text-main {
+                                font-size: 12px;
+                            }
+                            &--sticky {
+                                .text-main {
+                                    font-size: 12px;
+                                }
+                            }
+                        }
+                    }
+                    .logo-seagolf {
+                        top: -20px;
+                        margin-right: 1.5vw;
+                        margin-left: 1.5vw;
+                        width: 150px;
+                        height: 140px;
+                        background-size: 115px 120px;
+                    }
+                    .logo-seagolf-sticky {
+                        position: absolute;
+                        top: -10px;
+                        margin-left: 15px;
+                        width: 150px;
+                        height: 125px;
+                        background-size: 120px 60px;
+                        opacity: 0;
+                        &--sticky {
+                            opacity: 1;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    @media (max-width: $xl) {
+        height: auto;
+        &--sticky {
+            height: 80px;
+            background: $white;
+            box-shadow: 0px 10px 10px -10px rgba(172, 171, 171, 0.418);
+            align-items: flex-start;
+        }
+        &__container {
+            margin-top: 20px;
+            &__box {
+                ul {
+                    .btn-box {
+                        display: none;
+                    }
+                    .logo-seagolf {
+                        position: absolute;
+                        left: 15px;
+                        top: 15px;
+                        margin-right: 0vw;
+                        margin-left: 0vw;
+                        width: 70px;
+                        height: 65px;
+                        background-size: 50px 57px;
+                        opacity: 1;
+                        &::after {
+                            width: calc(100% + 10px);
+                            height: calc(100% + 10px);
+                        }
+                    }
+                    .logo-seagolf-sticky {
+                        position: absolute;
+                        top: 8px;
+                        left: 50px;
+                        width: 100px;
+                        height: 65px;
+                        background-size: 100px 50px;
+                        opacity: 0;
+                        &--sticky {
+                            opacity: 1;
+                            top: -5px;
+                        }
+                    }
+                }
+            }
+        }
+
+    }
+    // @media (max-width: $xl) {
+    //     &__container {
+    //         background: transparent;
+    //         &::before {
+    //             display: none;
+    //         }
+    //     }
+    // }
+
+    &.active {
+        background: $white;
+        height: 100%;
+        width: 100%;
+        position: fixed;
+        z-index: 99999;
+
+    }
+}

@@ -321,10 +321,10 @@ get_template_part('investitions/sea-golf/header');
     <section class="sec4-testimonial">
         <div class="container">
             <div class="row">
-                <div class="offset-xl-1 col-xl-1">
-                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/sea-golf/contact/testimonial-icon.svg" alt="ikona" />
+                <div class="offset-xxxl-1 col-xl-1">
+                    <img  class="sec4-testimonial__icon" src="<?php echo get_template_directory_uri(); ?>/assets/img/sea-golf/contact/testimonial-icon.svg" alt="ikona" />
                 </div>
-                <div class="col-xl-3">
+                <div class="col-xxxl-3 col-xl-4">
                     <div class="sec4-testimonial__box">
                         <h3 class="f-h3 f-h3--black-dark">Opinie</h3>
                         <h4 class="f-h4 f-h4--f80 f-h4--black-dark">klientów</h4>

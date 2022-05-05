@@ -1490,6 +1490,10 @@
                     &::before {
                         height: 100%;
                     }
+                    .swiper-pagination {
+                        padding-bottom: 25px;
+                        gap: 12px;
+                    }
                 }
                 &__icon {
                     bottom: -110px;

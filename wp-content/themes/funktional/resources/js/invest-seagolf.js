@@ -10,9 +10,10 @@ import "../js/invest-seagolf/scroll-contact";
 // import "../js/invest-kladno/sliders-localizations";
 
 // import "../js/invest-kladno/sliders-front-page";
-// import "../js/invest-kladno/nav-burger";
+import "../js/invest-seagolf/nav-burger";
+import "../js/invest-seagolf/nav-scroll";
 
 // import "../js/invest-kladno/plots";
-// import "../js/invest-kladno/nav-scroll";
+
 // import "../js/invest-kladno/loader";
 
