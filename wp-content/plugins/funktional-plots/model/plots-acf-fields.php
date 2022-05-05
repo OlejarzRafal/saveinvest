@@ -24,6 +24,7 @@ $plotsAcfArray = array(
                 // 'Osada Jaworek' => 'Osada Jaworek',
                 'Ostoja Kładno' => 'Ostoja Kładno',
                 'Osada Karwia' => 'Osada Karwia',
+                'Resort Sea&golf' => 'Resort Sea&golf',
             ),
             'return_format' => 'array',
             'default_value' => false,
@@ -49,7 +50,7 @@ $plotsAcfArray = array(
             'choices' => array(
                 '' => '',
                 'A' => 'A',
-                // 'B' => 'B',
+                'B' => 'B',
                 // 'C' => 'C',
                 // 'D' => 'D',
                 // 'E' => 'E',
