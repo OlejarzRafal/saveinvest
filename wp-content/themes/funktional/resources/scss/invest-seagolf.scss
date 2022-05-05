@@ -11,12 +11,13 @@
 @import "invest-seagolf/template-page/localisation";
 @import "invest-seagolf/template-page/gallery";
 @import "invest-seagolf/template-page/contact";
-// @import "invest-kladno/template-page/plot-prices-list";
-// @import "invest-kladno/template-page/plot-prices-modal";
-// @import "invest-kladno/template-page/plot-prices";
+@import "invest-seagolf/template-page/plot-prices-list";
+@import "invest-seagolf/template-page/plot-prices-modal";
+@import "invest-seagolf/template-page/plot-prices";
 
 
 // @import "invest-kladno/template-layout/preloader";
 // @import "invest-kladno/template-layout/header";
 @import "invest-seagolf/template-layout/footer";
 @import "invest-seagolf/template-layout/form";
+@import "invest-seagolf/template-layout/form-plots";
