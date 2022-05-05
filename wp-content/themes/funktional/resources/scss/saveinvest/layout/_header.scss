@@ -20,6 +20,15 @@
         z-index: -1;
         pointer-events: none;
         object-fit: cover;
+        &--mobile{
+            display: none;
+        }
+        @media(max-width:767px){
+            display: none;
+            &--mobile{
+                display: block;
+            }
+        }
     }
     .nav {
         position: fixed;

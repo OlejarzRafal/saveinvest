@@ -2,19 +2,19 @@ gsap.registerPlugin(ScrollTrigger);
 ScrollTrigger.matchMedia({
     "(min-width: 1200px) and (max-width: 1920px) ": function () {
    
-        // gsap.to(".parallax", {
-        //     x: 0,
-        //     y: 50,
-        //     duration: 2,
-        //     ease: "none",
-        //     scrollTrigger: {
-        //         trigger: ".paralax",
-        //         start: "top 90%",
-        //         end: "top 10%",
-        //         scrub: 1,
-        //         markers: false,
-        //     },
-        // });
+        gsap.to(".parallax", {
+            x: 0,
+            y: 50,
+            duration: 2,
+            ease: "none",
+            scrollTrigger: {
+                trigger: ".parallax",
+                start: "top 90%",
+                end: "top 10%",
+                scrub: 1,
+                markers: false,
+            },
+        });
         gsap.to(".letter-down", {
             x: 0,
             y: 300,

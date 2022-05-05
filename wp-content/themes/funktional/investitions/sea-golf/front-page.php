@@ -12,38 +12,51 @@ get_template_part('investitions/sea-golf/header');
         <video autoplay="" playsinline="" muted="" loop="" class="video-home-page video-home-page--desktop">
             <source src="<?php echo get_template_directory_uri(); ?>/assets/img/invest-karwia/video/Enklawa-Karwia_Video_AdaptiveLowBitrate.mp4" type="video/mp4">
         </video>
-        <div class="header__text">
-            <h1 class="f-h1 ">W pobliżu morza</h1>
-            <h1 class="f-h1 f-h1--fw600-italic">w sąsiedztwie pola golfowego,<br>jeziora i przystani</h1>
-        </div>
+        <?php if ($seagolf_sec1_title = get_field('seagolf_sec1_title')) : ?>
+            <div class="header__text">
+                <h1 class="f-h1 "><?php echo $seagolf_sec1_title; ?></h1>
+                <!-- <h1 class="f-h1 f-h1--fw600-italic">w sąsiedztwie pola golfowego,<br>jeziora i przystani</h1> -->
+            </div>
+        <?php endif; ?>
         <div class="header__scroller">
             <div class="header__scroller__center"></div>
         </div>
     </section>
     <section class="header-text-gold">
-        <h5 class="f-h5 f-h5--gold-dark f-h5--fw500-italic">Odkryj działki budowlane usytuowane 2500 m do morza i plaży. Zamieszkaj na osiedlu z jacuzzi, sauną, prywatnym basenem i brodzikiem dla dzieci, w sąsiedztwie pola golfowego, jeziora i przystani.
-        </h5>
+        <?php if ($seagolf_sec1_text = get_field('seagolf_sec1_text')) : ?>
+            <h5 class="f-h5 f-h5--gold-dark f-h5--fw500-italic"><?php echo $seagolf_sec1_text; ?>
+            </h5>
+        <?php endif; ?>
     </section>
     <section class="sec1-video">
         <div class="container">
             <div class="row row-backgorund">
                 <div class="offset-xl-2 col-xl-8 offset-xl-2">
-                    <div class="sec1-video__title">
-                        <h2 class="f-h2 f-h2--black-dark f-h2--f80">Odkryj </h2>
-                        <h2 class="f-h2 f-h2--black-dark  f-h2--f80 f-h2--fw600-italic">nasze działki</h2>
-                    </div>
+                    <?php if ($seagolf_sec2_title = get_field('seagolf_sec2_title')) : ?>
+                        <div class="sec1-video__title">
+                            <h2 class="f-h2 f-h2--black-dark f-h2--f80"><?php echo $seagolf_sec2_title; ?></h2>
+                        </div>
+                    <?php endif; ?>
                 </div>
                 <div class="offset-xl-2 col-xl-8 offset-xl-2">
-                    <p class="text-main">
-                        Sea & Golf Resort Wolin to miejsce, w którym walory nadmorskiej natury spotykają się z troską o Twój komfort. Na tym osiedlu wypoczniesz, korzystając z jacuzzi, sauny, lub pływając w dużym basenie. W Twoim sąsiedztwie znajduje się pole golfowe, a jedynie spacer dzieli Cię od przystani nad jeziorem. Na piaszczystą plażę i nad szemrzący Bałtyk wybierzesz się pieszo albo rowerem, by cieszyć się kąpielą w morzu lub godzinami spacerować po ciepłym piasku…
-                    </p>
+                    <?php if ($seagolf_sec2_text = get_field('seagolf_sec2_text')) : ?>
+                        <p class="text-main">
+                            <?php echo $seagolf_sec2_text; ?>
+                        </p>
+                    <?php endif; ?>
                 </div>
                 <div class="offset-xl-2 col-xl-8">
                     <div class="sec1-video__movie">
-                        <a class="sec1-video__movie__sea-golf" data-fancybox="gallery" href="https://www.youtube.com/watch?v=8PTAqhCVC00">
-                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/sea-golf/home-page/movie-photo.jpg" alt="zdjęcie plaży" />
-                        </a>
-                        <div class="sec1-video__movie__icon-play"></div>
+                        <?php if ($seagolf_sec2_link = get_field('seagolf_sec2_link')) : ?>
+                            <a class="sec1-video__movie__sea-golf" data-fancybox="gallery" href="<?php echo $seagolf_sec2_link; ?>">
+                                <?php
+                                $seagolf_sec2_photo = get_field('seagolf_sec2_photo');
+                                if ($seagolf_sec2_photo) : ?>
+                                    <img src="<?php echo esc_url($seagolf_sec2_photo['url']); ?>" alt="<?php echo esc_attr($seagolf_sec2_photo['alt']); ?>" />
+                                <?php endif; ?>
+                            </a>
+                            <div class="sec1-video__movie__icon-play"></div>
+                        <?php endif; ?>
                     </div>
                 </div>
                 <div class="sec1-video__letter-s letter-down"></div>
@@ -61,31 +74,41 @@ get_template_part('investitions/sea-golf/header');
                             <img src=" <?php echo get_template_directory_uri(); ?>/assets/img/sea-golf/home-page/icon-sec2.svg" alt="ikona" />
                         </div>
                         <div class="sec2-info__content__texts">
-                            <div class="sec2-info__content__texts__text">
-                                <div class="text-main text-main--white text-main--fw400-italic">Blisko plaży i morza, w sąsiedztwie pola golfowego i przystani nad jeziorem – w przepięknej, nadmorskiej lokalizacji, stworzyliśmy Sea & Golf Resort Wolin – osiedle, na którym Ty, Twoja rodzina i goście odpoczną i zaznają odrobiny zasłużonego luksusu. </div>
-                            </div>
-                            <div class="sec2-info__content__texts__name">
-                                <h5 class="f-h5 f-h5--f35 f-h5--gold-medium">Robert Tomaszewski</h5>
-                            </div>
-                            <div class="sec2-info__content__texts__position">
-                                <h5 class="f-h5 f-h5--f20 f-h5--gold-medium f-h5--ls2">PREZES SAVEINVEST
-                                </h5>
-                            </div>
+                            <?php if ($seagolf_sec3_text = get_field('seagolf_sec3_text')) : ?>
+                                <div class="sec2-info__content__texts__text">
+                                    <div class="text-main text-main--white text-main--fw400-italic"><?php echo $seagolf_sec3_text; ?></div>
+                                </div>
+                            <?php endif; ?>
+                            <?php if ($seagolf_sec3_name = get_field('seagolf_sec3_name')) : ?>
+                                <div class="sec2-info__content__texts__name">
+                                    <h5 class="f-h5 f-h5--f35 f-h5--gold-medium"> <?php echo $seagolf_sec3_name; ?></h5>
+                                </div>
+                            <?php endif; ?>
+                            <?php if ($seagolf_sec3_position = get_field('seagolf_sec3_position')) : ?>
+                                <div class="sec2-info__content__texts__position">
+                                    <h5 class="f-h5 f-h5--f20 f-h5--gold-medium f-h5--ls2"> <?php echo $seagolf_sec3_position; ?>
+                                    </h5>
+                                </div>
+                            <?php endif; ?>
                         </div>
                         <div class="sec2-info__content__photo">
-                            <img src=" <?php echo get_template_directory_uri(); ?>/assets/img/sea-golf/home-page/photo-sec2.jpg" alt="zdjęcie" />
+                            <?php
+                            $seagolf_sec3_photo = get_field('seagolf_sec3_photo');
+                            if ($seagolf_sec3_photo) : ?>
+                                <img src="<?php echo esc_url($seagolf_sec3_photo['url']); ?>" alt="<?php echo esc_attr($seagolf_sec3_photo['alt']); ?>" />
+                            <?php endif; ?>
                         </div>
-
                     </div>
                 </div>
             </div>
         </div>
         <div class="sec2-info__box">
             <div class="sec2-info__box__content">
-                <div class="sec2-info__box__content__text">
-                    <h4 class="f-h4">W połączeniu z naturą </h4>
-                    <h4 class="f-h4 f-h4--fw600-italic">dajemy Ci to, co najlepsze</h4>
-                </div>
+                <?php if ($seagolf_sec3_text_box = get_field('seagolf_sec3_text_box')) : ?>
+                    <div class="sec2-info__box__content__text">
+                        <h4 class="f-h4"> <?php echo $seagolf_sec3_text_box; ?></h4>
+                    </div>
+                <?php endif; ?>
             </div>
         </div>
 
@@ -96,49 +119,34 @@ get_template_part('investitions/sea-golf/header');
                 <div class="col-xl-12">
                     <div class="sec3-info__box">
                         <div class="sec3-info__box__content">
-                            <div class="sec3-info__box__content__items">
-                                <img class="sec3-info__box__items__icon" src=" <?php echo get_template_directory_uri(); ?>/assets/img/sea-golf/home-page/icon-1.png" alt="ikona" />
-                                <h6 class="f-h6">Tylko 2500 m do morza i piaszczystej plaży</h6>
-                            </div>
-                            <div class="sec3-info__box__content__items">
-                                <img class="sec3-info__box__items__icon" src=" <?php echo get_template_directory_uri(); ?>/assets/img/sea-golf/home-page/icon-2.png" alt="ikona" />
-                                <h6 class="f-h6">Działki budowlane z warunkami zabudowy</h6>
-                            </div>
-                            <div class="sec3-info__box__content__items">
-                                <img class="sec3-info__box__items__icon" src=" <?php echo get_template_directory_uri(); ?>/assets/img/sea-golf/home-page/icon-3.png" alt="ikona" />
-                                <h6 class="f-h6">Cicha, spokojna, zielona okolica</h6>
-                            </div>
-                            <div class="sec3-info__box__content__items">
-                                <img class="sec3-info__box__items__icon" src=" <?php echo get_template_directory_uri(); ?>/assets/img/sea-golf/home-page/icon-4.png" alt="ikona" />
-                                <h6 class="f-h6">Utwardzona<br>droga wewnętrzna</h6>
-                            </div>
-                            <div class="sec3-info__box__content__items">
-                                <img class="sec3-info__box__items__icon" src=" <?php echo get_template_directory_uri(); ?>/assets/img/sea-golf/home-page/icon-5.png" alt="ikona" />
-                                <h6 class="f-h6">Ogrodzony teren<br>z wjazdem</h6>
-                            </div>
-                            <div class="sec3-info__box__content__items">
-                                <img class="sec3-info__box__items__icon" src=" <?php echo get_template_directory_uri(); ?>/assets/img/sea-golf/home-page/icon-6.png" alt="ikona" />
-                                <h6 class="f-h6">Duży basen, sauna, jacuzzi oraz brodzik dla dzieci</h6>
-                            </div>
-                            <div class="sec3-info__box__content__items">
-                                <img class="sec3-info__box__items__icon" src=" <?php echo get_template_directory_uri(); ?>/assets/img/sea-golf/home-page/icon-7.png" alt="ikona" />
-                                <h6 class="f-h6">Profesjonalne pole golfowe w okolicy</h6>
-                            </div>
-                            <div class="sec3-info__box__content__items">
-                                <img class="sec3-info__box__items__icon" src=" <?php echo get_template_directory_uri(); ?>/assets/img/sea-golf/home-page/icon-8.png" alt="ikona" />
-                                <h6 class="f-h6">Bliskość atrakcji turystycznych</h6>
-                            </div>
+                            <?php if (have_rows('seagolf_sec4_info_box')) : ?>
+                                <?php while (have_rows('seagolf_sec4_info_box')) :
+                                    the_row(); ?>
+                                    <div class="sec3-info__box__content__items">
+                                        <?php
+                                        $seagolf_sec4_info_box_icon = get_sub_field('seagolf_sec4_info_box_icon');
+                                        if ($seagolf_sec4_info_box_icon) : ?>
+                                            <img class="sec3-info__box__items__icon" src="<?php echo esc_url($seagolf_sec4_info_box_icon['url']); ?>" alt="<?php echo esc_attr($seagolf_sec4_info_box_icon['alt']); ?>" />
+                                        <?php endif; ?>
+                                        <?php if ($seagolf_sec4_info_box_text = get_sub_field('seagolf_sec4_info_box_text')) : ?>
+                                            <h6 class="f-h6"> <?php echo $seagolf_sec4_info_box_text; ?></h6>
+                                        <?php endif; ?>
+                                    </div>
+                                <?php endwhile; ?>
+                            <?php endif; ?>
                         </div>
                         <div class="sec3-info__box__background">
-                            <img class="paralax"src=" <?php echo get_template_directory_uri(); ?>/assets/img/sea-golf/home-page/Golf-Ball_Black.png" alt="zdjęcie piłki golfowej" />
+                            <img class="parallax" src=" <?php echo get_template_directory_uri(); ?>/assets/img/sea-golf/home-page/Golf-Ball_Black.png" alt="zdjęcie piłki golfowej" />
                         </div>
                     </div>
                 </div>
             </div>
         </div>
         <div class="sec3-info__text">
-            <h5 class="f-h5 f-h5--gold-medium f-h5--fw500-italic">Sea & Golf Resort Wolin – Twoje osiedle działek budowlanych z wygodami i luksusowymi atrakcjami, w pobliżu znanych i lubianych nadmorskich miejscowości.
-            </h5>
+            <?php if ($seagolf_sec4_info_text = get_field('seagolf_sec4_info_text')) : ?>
+                <h5 class="f-h5 f-h5--gold-medium f-h5--fw500-italic"> <?php echo $seagolf_sec4_info_text; ?>
+                </h5>
+            <?php endif; ?>
         </div>
     </section>
     <section class="sec4-about">
@@ -146,16 +154,32 @@ get_template_part('investitions/sea-golf/header');
             <div class="row">
                 <div class="col-xl-8">
                     <div class="sec4-about__photo">
-                        <img src=" <?php echo get_template_directory_uri(); ?>/assets/img/sea-golf/home-page/sec-4-photo.jpg" alt="zdjęcie" />
+                        <?php
+                        $seagolf_sec5_photo = get_field('seagolf_sec5_photo');
+                        if ($seagolf_sec5_photo) : ?>
+                            <img src="<?php echo esc_url($seagolf_sec5_photo['url']); ?>" alt="<?php echo esc_attr($seagolf_sec5_photo['alt']); ?>" />
+                        <?php endif; ?>
                     </div>
                 </div>
                 <div class="col-xl-4">
                     <div class="sec4-about__box">
-                        <h3 class="f-h3 f-h3--black-dark">Twój prywatny, luksusowy zakątek</h3>
-
+                        <?php if ($seagolf_sec5_title = get_field('seagolf_sec5_title')) : ?>
+                            <h3 class="f-h3 f-h3--black-dark"> <?php echo $seagolf_sec5_title; ?></h3>
+                        <?php endif; ?>
                         <div class="sec4-about__box__content">
-                            <p class="text-main">Spełnij swoje marzenie o kawałku ziemi nad morzem lub własnym, nadmorskim biznesie! Zamieszkaj niedaleko morza i klimatycznej plaży, która nie znika z rankingów najpiękniejszych plaż na polskim wybrzeżu. Tutaj, na przybrzeżnej wyspie Wolin, czeka na Ciebie Twoja wymarzona działka. Usytuowana w sąsiedztwie pola golfowego, ścieżki rowerowej i przystani nad jeziorem. Odkryj osiedle z prywatnymi atrakcjami – jacuzzi, sauną, basenem, brodzikiem dla dzieci i miejscem na leżaki. Podaruj sobie kawałek własnego raju na ziemi lub zaoferuj wyjątkową gościnę w Sea & Golf Resort Wolin. </p>
-                            <div class="btn">O RESORCIE</div>
+                            <?php if ($seagolf_sec5_text = get_field('seagolf_sec5_text')) : ?>
+                                <p class="text-main"> <?php echo $seagolf_sec5_text; ?></p>
+                            <?php endif; ?>
+
+                            <?php
+                            $link = get_field('seagolf_sec5_link');
+                            if ($link) :
+                                $link_url = $link['url'];
+                                $link_title = $link['title'];
+                                $link_target = $link['target'] ? $link['target'] : '_self';
+                            ?>
+                                <a class="btn" href="<?php echo esc_url($link_url); ?>" target="<?php echo esc_attr($link_target); ?>"><?php echo esc_html($link_title); ?></a>
+                            <?php endif; ?>
                         </div>
                     </div>
                 </div>
@@ -167,19 +191,33 @@ get_template_part('investitions/sea-golf/header');
             <div class="row">
                 <div class="offset-xxxl-1 col-xl-5">
                     <div class="sec5-localization__box">
-                        <h3 class="f-h3 f-h3--black-dark">Lokalizacja perfekcyjna
-                            pod każdym względem</h3>
+                        <?php if ($seagolf_sec6_title = get_field('seagolf_sec6_title')) : ?>
+                            <h3 class="f-h3 f-h3--black-dark"> <?php echo $seagolf_sec6_title; ?></h3>
+                        <?php endif; ?>
                         <div class="sec5-localization__box__content">
-                            <p class="text-main">To miejsce daje nieograniczone możliwości! Korzystaj z bliskości znanych i popularnych kurortów, jak Międzyzdroje, Wisełka, Dziwnów, Świnoujście i wiele innych. Ciesz się sąsiedztwem Wolińskiego Parku Narodowego oraz rezerwatu przyrody Łuniewo. Wybierz się nad pobliskie jezioro Kołczewo, idealne do błogiego relaksu, lub Zatokę Morza Bałtyckiego – Zalew Szczeciński. Gdy nacieszysz się nadmorskimi atrakcjami, w pełni oddasz się błogiemu odpoczynkowi na osiedlu, które powstało z myślą o Twoim komforcie.
-
-                            </p>
-                            <div class="btn">LOKALIZACJA</div>
+                            <?php if ($seagolf_sec6_text = get_field('seagolf_sec6_text')) : ?>
+                                <p class="text-main"><?php echo $seagolf_sec6_text; ?>
+                                </p>
+                            <?php endif; ?>
+                            <?php
+                            $link = get_field('seagolf_sec6_link');
+                            if ($link) :
+                                $link_url = $link['url'];
+                                $link_title = $link['title'];
+                                $link_target = $link['target'] ? $link['target'] : '_self';
+                            ?>
+                                <a class="btn" href="<?php echo esc_url($link_url); ?>" target="<?php echo esc_attr($link_target); ?>"><?php echo esc_html($link_title); ?></a>
+                            <?php endif; ?>
                         </div>
                     </div>
                 </div>
                 <div class="col-xl-6">
                     <div class="sec5-localization__photo">
-                        <img src=" <?php echo get_template_directory_uri(); ?>/assets/img/sea-golf/home-page/sec-5-photo.jpg" alt="zdjęcie" />
+                        <?php
+                        $seagolf_sec6_photo = get_field('seagolf_sec6_photo');
+                        if ($seagolf_sec6_photo) : ?>
+                            <img src="<?php echo esc_url($seagolf_sec6_photo['url']); ?>" alt="<?php echo esc_attr($seagolf_sec6_photo['alt']); ?>" />
+                        <?php endif; ?>
                     </div>
                 </div>
             </div>
@@ -190,16 +228,31 @@ get_template_part('investitions/sea-golf/header');
             <div class="row">
                 <div class="col-xl-8">
                     <div class="sec6-price__photo">
-                        <img src=" <?php echo get_template_directory_uri(); ?>/assets/img/sea-golf/home-page/sec-6-photo.jpg" alt="zdjęcie" />
+                        <?php
+                        $seagolf_sec7_photo = get_field('seagolf_sec7_photo');
+                        if ($seagolf_sec7_photo) : ?>
+                            <img src="<?php echo esc_url($seagolf_sec7_photo['url']); ?>" alt="<?php echo esc_attr($seagolf_sec7_photo['alt']); ?>" />
+                        <?php endif; ?>
                     </div>
                 </div>
                 <div class="col-xl-4">
                     <div class="sec6-price__box">
-                        <h3 class="f-h3 f-h3--black-dark">Własny raj na ziemi – od zaraz!</h3>
+                        <?php if ($seagolf_sec7_title = get_field('seagolf_sec7_title')) : ?>
+                            <h3 class="f-h3 f-h3--black-dark"><?php echo $seagolf_sec7_title; ?></h3>
+                        <?php endif; ?>
                         <div class="sec6-price__box__content">
-                            <p class="text-main">Sea & Golf Resort Wolin odkrywa przed Tobą szeroką gamę atrakcji, dzięki którym poczujesz się jak w raju! Prywatne jacuzzi, sauna, basen, brodzik dla dzieci i miejsce na leżaki – to wszystko powstanie, by dać Tobie i Twojej rodzinie odrobinę zasłużonego luksusu. Osiedle zostanie stworzone w spójnej i estetycznej zabudowie, z zakazem lokalizacji domków holenderskich, blaszaków oraz przyczep. Szutrowa droga i wyłożony kostką brukową wjazd zapewnią bezpieczne poruszanie się po terenie. Aby dać Ci jeszcze większe poczucie bezpieczeństwa i prywatności, Twoje osiedle zostanie ogrodzone. A gdy tylko zapragniesz znaleźć się nad morzem, wystarczy spacer, by zażyć morskiej kąpieli i przechadzać się po jednej z piękniejszych plaż na polskim wybrzeżu.
-                            </p>
-                            <div class="btn">CENY DZIAŁEK</div>
+                            <?php if ($seagolf_sec7_text = get_field('seagolf_sec7_text')) : ?>
+                                <p class="text-main"> <?php echo $seagolf_sec7_text; ?>
+                                </p><?php endif; ?>
+                            <?php
+                            $link = get_field('seagolf_sec7_link');
+                            if ($link) :
+                                $link_url = $link['url'];
+                                $link_title = $link['title'];
+                                $link_target = $link['target'] ? $link['target'] : '_self';
+                            ?>
+                                <a class="btn" href="<?php echo esc_url($link_url); ?>" target="<?php echo esc_attr($link_target); ?>"><?php echo esc_html($link_title); ?></a>
+                            <?php endif; ?>
                         </div>
                     </div>
                 </div>

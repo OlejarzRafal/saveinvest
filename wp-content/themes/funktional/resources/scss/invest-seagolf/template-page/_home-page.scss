@@ -15,6 +15,9 @@
             height: auto;
             .f-h1 {
                 text-align: center;
+                em {
+                    font-weight: 600;
+                }
             }
         }
         &__scroller {
@@ -162,6 +165,11 @@
             display: flex;
             justify-content: center;
             gap: 15px;
+            .f-h2 {
+                em {
+                    font-weight: 600;
+                }
+            }
         }
         &__movie {
             margin-top: 50px;
@@ -446,6 +454,9 @@
                 &__text {
                     .f-h4 {
                         text-align: center;
+                        em {
+                            font-weight: 600;
+                        }
                     }
                 }
             }

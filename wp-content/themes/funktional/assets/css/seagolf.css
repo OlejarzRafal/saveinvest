@@ -3546,6 +3546,9 @@ sup {
 .sg-frontpage .header__text .f-h1 {
   text-align: center;
 }
+.sg-frontpage .header__text .f-h1 em {
+  font-weight: 600;
+}
 .sg-frontpage .header__scroller {
   position: absolute;
   top: 75%;
@@ -3733,6 +3736,9 @@ sup {
       -ms-flex-pack: center;
           justify-content: center;
   gap: 15px;
+}
+.sg-frontpage .sec1-video__title .f-h2 em {
+  font-weight: 600;
 }
 .sg-frontpage .sec1-video__movie {
   margin-top: 50px;
@@ -4056,6 +4062,9 @@ sup {
 }
 .sg-frontpage .sec2-info__box__content__text .f-h4 {
   text-align: center;
+}
+.sg-frontpage .sec2-info__box__content__text .f-h4 em {
+  font-weight: 600;
 }
 @media (max-width: 991px) {
   .sg-frontpage .sec2-info {
@@ -9259,6 +9268,51 @@ sup {
   }
 }
 
+.seagolf-loader {
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  display: none;
+  background: white;
+  position: fixed;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  z-index: 9999999999;
+}
+.seagolf-loader .logo-wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100%;
+}
+.seagolf-loader .f-h4 {
+  text-align: center;
+  margin-top: 80px;
+  line-height: 46px;
+}
+
 .seagolf-nav {
   height: auto;
   width: 100%;
@@ -9637,7 +9691,7 @@ sup {
     transition: 0.25s ease-in-out;
   }
   .seagolf-nav__container__burger--sticky {
-    top: 13px;
+    top: 28px;
   }
   .seagolf-nav__container__burger--sticky::after {
     display: none;
@@ -9741,7 +9795,7 @@ sup {
             align-items: flex-start;
   }
   .seagolf-nav__container {
-    margin-top: 20px;
+    margin-top: 0px;
   }
   .seagolf-nav__container__box ul .btn-box {
     display: none;
@@ -9772,7 +9826,7 @@ sup {
   }
   .seagolf-nav__container__box ul .logo-seagolf-sticky--sticky {
     opacity: 1;
-    top: -5px;
+    top: 7px;
   }
 }
 .seagolf-nav.active {
