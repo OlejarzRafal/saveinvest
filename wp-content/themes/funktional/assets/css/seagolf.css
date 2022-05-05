@@ -7957,6 +7957,1308 @@ sup {
   }
 }
 
+.plots-list {
+  margin-top: 80px;
+}
+@media (max-width: 991px) {
+  .plots-list {
+    margin-top: 80px;
+  }
+}
+@media (max-width: 767px) {
+  .plots-list {
+    margin-top: 30px;
+  }
+}
+.plots-list__header__img {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+@media (max-width: 1199px) {
+  .plots-list__header__img {
+    display: none;
+  }
+}
+.plots-list__header .text-main {
+  margin-top: 30px;
+}
+.plots-list__sorting {
+  margin-top: 100px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.plots-list__sorting__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 50px;
+}
+.plots-list__sorting__header {
+  position: relative;
+  top: 6px;
+}
+.plots-list__sorting span {
+  font-size: 14px;
+}
+.plots-list__sorting__item {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.plots-list__sorting__item__direction {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-left: 15px;
+}
+.plots-list__sorting__item__direction button {
+  width: 16px;
+  height: 16px;
+  border: none;
+  cursor: pointer;
+  background: url(../img/invest-kladno/ico/next.png);
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.plots-list__sorting__item__direction button.asc {
+  -webkit-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+}
+.plots-list__sorting__item__direction button.desc {
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+}
+.plots-list__sorting__hideEmpty {
+  /* Hide the browser's default checkbox */
+  /* Create a custom checkbox */
+  /* On mouse-over, add a grey background color */
+  /* When the checkbox is checked, add a blue background */
+  /* Create the checkmark/indicator (hidden when not checked) */
+  /* Show the checkmark when checked */
+  /* Style the checkmark/indicator */
+}
+.plots-list__sorting__hideEmpty .sold-wrap {
+  display: block;
+  position: relative;
+  cursor: pointer;
+  font-size: 14px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  padding-left: 25px;
+}
+.plots-list__sorting__hideEmpty .sold-wrap input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+.plots-list__sorting__hideEmpty .checkmark {
+  position: absolute;
+  top: 1px;
+  left: 0;
+  height: 15px;
+  width: 15px;
+  border: 1px solid #A37A55;
+}
+.plots-list__sorting__hideEmpty .sold-wrap:hover input ~ .checkmark {
+  background-color: #f3f3f3;
+}
+.plots-list__sorting__hideEmpty .sold-wrap input:checked ~ .checkmark {
+  background-color: #f3f3f3;
+}
+.plots-list__sorting__hideEmpty .checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+.plots-list__sorting__hideEmpty .sold-wrap input:checked ~ .checkmark:after {
+  display: block;
+}
+.plots-list__sorting__hideEmpty .sold-wrap .checkmark:after {
+  left: 6px;
+  top: -4px;
+  width: 6px;
+  height: 12px;
+  border: solid #b68b1d;
+  border-width: 0px 2px 2px 0;
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+@media (max-width: 1199px) {
+  .plots-list__sorting {
+    margin-top: 70px;
+  }
+}
+@media (max-width: 991px) {
+  .plots-list__sorting {
+    padding-top: 50px;
+    margin-top: 0px;
+    width: auto;
+    overflow-x: scroll;
+    padding-bottom: 30px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+  .plots-list__sorting__list {
+    min-width: 560px;
+    gap: 40px;
+    position: relative;
+    height: 70px;
+  }
+  .plots-list__sorting__list div:first-child {
+    position: absolute;
+    top: -25px;
+    left: 0;
+  }
+  .plots-list__sorting__hideEmpty {
+    min-width: 200px;
+  }
+}
+.plots-list .plots-all {
+  margin-top: 50px;
+  gap: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.plots-list .plots-all .plots-list__item:nth-child(3n+1) .plot-quality img:nth-child(1) {
+  display: block;
+}
+.plots-list .plots-all .plots-list__item:nth-child(3n+2) .plot-quality img:nth-child(2) {
+  display: block;
+}
+.plots-list .plots-all .plots-list__item:nth-child(3n+3) .plot-quality img:nth-child(3) {
+  display: block;
+}
+.plots-list .plot-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border: 1px solid #b79763;
+  padding: 25px 40px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: auto;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  position: relative;
+}
+.plots-list .plot-item.param--status--wolna .plot-status {
+  color: #397d03;
+}
+.plots-list .plot-item.param--status--zarezerwowana .plot-status {
+  color: #df9401;
+}
+.plots-list .plot-item.param--status--sprzedana .plot-status {
+  color: #b41818;
+}
+.plots-list .plot-item .plot-status {
+  padding-right: 20px;
+  width: 200px;
+  width: 13%;
+}
+.plots-list .plot-item .plot-status__header {
+  font-size: 16px;
+}
+.plots-list .plot-item .plot-status__number {
+  font-family: "Playfair Display", serif;
+  font-weight: normal;
+  font-size: 56px;
+  line-height: 66px;
+}
+.plots-list .plot-item .plot-status__status {
+  margin-top: 10px;
+}
+.plots-list .plot-item .plot-status__status div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.plots-list .plot-item .plot-status__status div span {
+  margin-left: 10px;
+  font-size: 16px;
+}
+.plots-list .plot-item .plot-img {
+  padding: 10px 0;
+  margin: 0 10px;
+  width: 14%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: auto;
+}
+.plots-list .plot-item .plot-img img {
+  width: auto;
+  height: auto;
+}
+.plots-list .plot-item .plot-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0 10px;
+  font-size: 14px;
+  width: 32%;
+  margin-left: 3%;
+}
+.plots-list .plot-item .plot-info p {
+  font-size: 14px;
+  line-height: normal;
+}
+.plots-list .plot-item .plot-info__text {
+  width: 160px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 8px;
+}
+.plots-list .plot-item .plot-info__text div {
+  padding: 5px 0;
+}
+.plots-list .plot-item .plot-info__text .plot-text__priceMonth {
+  font-weight: 600;
+}
+.plots-list .plot-item .plot-info__desc {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 8px;
+}
+.plots-list .plot-item .plot-info__desc div {
+  padding: 5px 0;
+}
+.plots-list .plot-item .plot-info__desc .plot-desc__sufrace {
+  position: relative;
+}
+.plots-list .plot-item .plot-info__desc .plot-desc__sufrace sup {
+  position: absolute;
+  top: 0;
+}
+.plots-list .plot-item .plot-info__desc .plot-desc__price {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.plots-list .plot-item .plot-info__desc .plot-desc__price__afterDiscount {
+  margin-right: 20px;
+}
+.plots-list .plot-item .plot-info__desc .plot-desc__price__beforeDiscount {
+  position: relative;
+}
+.plots-list .plot-item .plot-info__desc .plot-desc__price__beforeDiscount:before {
+  position: absolute;
+  content: "";
+  width: calc(100% + 10px);
+  height: 1px;
+  left: -5px;
+  top: 10px;
+  background-color: #b41818;
+}
+.plots-list .plot-item .plot-info__desc .plot-desc__rate {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.plots-list .plot-item .plot-info__desc .plot-desc__rate p {
+  font-weight: 600;
+}
+.plots-list .plot-item .plot-info__desc .plot-desc__rate__afterDiscount {
+  margin-right: 20px;
+}
+.plots-list .plot-item .plot-info__desc .plot-desc__rate__beforeDiscount {
+  position: relative;
+}
+.plots-list .plot-item .plot-info__desc .plot-desc__rate__beforeDiscount:before {
+  position: absolute;
+  content: "";
+  width: calc(100% + 10px);
+  height: 1px;
+  left: -5px;
+  top: 10px;
+  background-color: #b41818;
+}
+.plots-list .plot-item .plot-contact {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 8px;
+  width: 27%;
+}
+.plots-list .plot-item .plot-contact__btn {
+  width: 260px;
+  height: 44px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  font-size: 18px;
+  letter-spacing: 0.085em;
+  color: #A37A55;
+  background-color: white;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+  font-weight: bold;
+  position: relative;
+}
+.plots-list .plot-item .plot-contact__btn span {
+  display: block;
+  margin-left: 15px;
+  position: relative;
+}
+.plots-list .plot-item .plot-contact__btn span::after {
+  content: "";
+  position: absolute;
+  right: -30px;
+  top: 5px;
+  width: 20px;
+  height: 15px;
+  background: url(../../investitions/sea-golf/assets/arrow-btn.png);
+  background-repeat: no-repeat;
+  background-size: auto;
+  pointer-events: none;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+}
+.plots-list .plot-item .plot-contact__btn svg path {
+  stroke: #A37A55;
+}
+.plots-list .plot-item .plot-contact__btn:nth-child(1):before {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 100%;
+  border: 1px dashed rgba(163, 122, 85, 0.6);
+}
+.plots-list .plot-item .plot-quality {
+  width: auto;
+  width: 7%;
+}
+.plots-list .plot-item .plot-quality img {
+  display: none;
+}
+.plots-list .plot-item .plot-difference {
+  background: #33312F;
+  position: absolute;
+  right: -1px;
+  top: -22px;
+  height: 44px;
+  width: 230px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.plots-list .plot-item .plot-difference p {
+  font-weight: 500;
+  font-size: 16px;
+  color: white;
+}
+.plots-list .plot-item .plot-difference p span {
+  font-weight: bold;
+  font-size: 20px;
+}
+@media (max-width: 1199px) {
+  .plots-list .plot-item {
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    gap: 25px;
+  }
+  .plots-list .plot-item .plot-img {
+    width: 30%;
+  }
+  .plots-list .plot-item .plot-contact {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    gap: 8px;
+    width: 100%;
+  }
+  .plots-list .plot-item .plot-quality {
+    display: none;
+  }
+}
+@media (max-width: 991px) {
+  .plots-list .plot-item {
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    gap: 25px;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .plots-list .plot-item .plot-status {
+    -ms-flex-preferred-size: 25%;
+        flex-basis: 25%;
+  }
+  .plots-list .plot-item .plot-img {
+    width: 30%;
+    -ms-flex-preferred-size: 30%;
+        flex-basis: 30%;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+  }
+  .plots-list .plot-item .plot-info {
+    -ms-flex-preferred-size: 52%;
+        flex-basis: 52%;
+  }
+  .plots-list .plot-item .plot-contact {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    gap: 8px;
+    width: 100%;
+  }
+}
+@media (max-width: 767px) {
+  .plots-list .plot-item {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 100%;
+    padding: 30px 15px 20px 15px;
+  }
+  .plots-list .plot-item .plot-status {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 100%;
+  }
+  .plots-list .plot-item .plot-img {
+    width: 100%;
+    max-width: 240px;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .plots-list .plot-item .plot-info {
+    width: 100%;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    font-size: 12px;
+  }
+  .plots-list .plot-item .plot-info p {
+    font-size: 12px;
+  }
+  .plots-list .plot-item .plot-info__text {
+    width: 115px;
+    gap: 5px;
+  }
+  .plots-list .plot-item .plot-info__desc {
+    gap: 5px;
+  }
+  .plots-list .plot-item .plot-info__desc .plot-desc__rate__beforeDiscount:before {
+    top: 7px;
+  }
+  .plots-list .plot-item .plot-contact {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    width: 220px;
+    margin-left: 0;
+  }
+  .plots-list .plot-item .plot-contact a {
+    width: auto;
+  }
+  .plots-list .plot-item .plot-contact a span {
+    font-size: 14px;
+  }
+  .plots-list .plot-item .plot-difference {
+    width: auto;
+    height: 40px;
+    padding: 0 15px;
+    top: -20px;
+  }
+  .plots-list .plot-item .plot-difference P {
+    font-size: 14px;
+  }
+  .plots-list .plot-item .plot-difference P span {
+    font-size: 16px;
+  }
+}
+.plots-list .plot-baner {
+  height: 200px;
+  position: relative;
+}
+.plots-list .plot-baner img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.plots-list .plot-baner__content {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+.plots-list .plot-baner__content h4 {
+  font-weight: 600;
+  font-size: 32px;
+  color: white;
+  font-family: "Playfair Display", serif;
+}
+.plots-list .plot-baner__content .bnt {
+  margin-top: 30px;
+}
+.plots-list .plots-nav {
+  margin-top: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: relative;
+}
+.plots-list .plots-nav__wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.plots-list .plots-nav__wrap__name {
+  color: #292827;
+  font-size: 16px;
+  font-weight: 400;
+}
+.plots-list .plots-nav button {
+  border: none;
+  background: none;
+}
+.plots-list .plots-nav button:hover {
+  cursor: pointer;
+}
+.plots-list .plots-nav__number {
+  margin: 0 8px;
+  font-weight: 400;
+  font-size: 16px;
+  color: #292827;
+}
+.plots-list .plots-nav__number--active {
+  color: #B79763;
+}
+.plots-list .plots-nav__prev, .plots-list .plots-nav__next {
+  font-size: 16px;
+  color: #A37A55;
+}
+.plots-list .plots-nav__prev {
+  position: absolute;
+  left: 15px;
+  padding-left: 30px;
+  background: url(../img/invest-kladno/ico/left.png) !important;
+  background-repeat: no-repeat !important;
+  background-position: center left !important;
+}
+.plots-list .plots-nav__next {
+  position: absolute;
+  right: 15px;
+  padding-right: 30px;
+  background: url(../img/invest-kladno/ico/next.png) !important;
+  background-repeat: no-repeat !important;
+  background-position: center right !important;
+}
+@media (max-width: 767px) {
+  .plots-list .plots-nav__prev {
+    font-size: 12px;
+    top: -25px;
+    left: 15px;
+  }
+  .plots-list .plots-nav__next {
+    font-size: 12px;
+    top: -25px;
+    right: 15px;
+  }
+  .plots-list .plots-nav__wrap__name {
+    font-size: 14px;
+  }
+  .plots-list .plots-nav__number {
+    font-size: 14px;
+    line-height: 18px;
+  }
+}
+.plots-list .plots-bottom-info {
+  text-align: center;
+  margin-top: 100px;
+}
+.plots-list .plots-bottom-info__logos {
+  margin-top: 60px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  gap: 30px 70px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+@media (max-width: 767px) {
+  .plots-list .plots-bottom-info {
+    margin-top: 50px;
+  }
+  .plots-list .plots-bottom-info__logos {
+    margin-top: 40px;
+  }
+}
+
+.plotModal {
+  border: 1px solid #A37A55;
+  position: relative;
+  padding: 36px;
+  width: 780px;
+  z-index: 99999999 !important;
+}
+.plotModal__item.param--status--wolna .plotModal-status {
+  color: #397d03;
+}
+.plotModal__item.param--status--zarezerwowana .plotModal-status {
+  color: #df9401;
+}
+.plotModal__item.param--status--sprzedana .plotModal-status {
+  color: #b41818;
+}
+.plotModal .plotModal-close {
+  position: absolute;
+  top: 20px;
+  right: 18px;
+  cursor: pointer;
+}
+.plotModal .plotModal-close img {
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+}
+.plotModal .plotModal-close:hover img {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+.plotModal .plotModal-arrows__prev, .plotModal .plotModal-arrows__next {
+  position: absolute;
+  top: 50%;
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}
+.plotModal .plotModal-arrows__prev {
+  left: 18px;
+  background: url(../img/invest-kladno/ico/left.png);
+  background-repeat: no-repeat;
+  background-position: center left;
+}
+.plotModal .plotModal-arrows__next {
+  right: 18px;
+  background: url(../img/invest-kladno/ico/next.png);
+  background-repeat: no-repeat;
+  background-position: center right;
+}
+.plotModal .plotModal-difference {
+  background: #292827;
+  position: absolute;
+  left: -1px;
+  top: -22px;
+  height: 44px;
+  width: 230px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.plotModal .plotModal-difference p {
+  font-weight: 500;
+  font-size: 16px;
+  color: white;
+}
+.plotModal .plotModal-difference p span {
+  font-weight: bold;
+  font-size: 20px;
+}
+.plotModal .plotModal-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.plotModal .plotModal-content__img {
+  width: 200px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.plotModal .plotModal-content__desc {
+  margin-left: 30px;
+}
+.plotModal .plotModal-content .plotModal-status {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 20px;
+}
+.plotModal .plotModal-content .plotModal-status__number {
+  font-family: "Playfair Display", serif;
+  font-weight: normal;
+  font-size: 56px;
+  line-height: 66px;
+}
+.plotModal .plotModal-content .plotModal-status__status div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.plotModal .plotModal-content .plotModal-status__status div span {
+  margin-left: 10px;
+  font-size: 16px;
+}
+.plotModal .plotModal-content .plotModal-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 10px;
+  font-size: 14px;
+}
+.plotModal .plotModal-content .plotModal-info p {
+  font-size: 14px;
+  line-height: normal;
+}
+.plotModal .plotModal-content .plotModal-info__text {
+  width: 160px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 8px;
+}
+.plotModal .plotModal-content .plotModal-info__text div {
+  padding: 5px 0;
+}
+.plotModal .plotModal-content .plotModal-info__text .plot-text__priceMonth {
+  font-weight: 600;
+}
+.plotModal .plotModal-content .plotModal-info__desc {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 8px;
+}
+.plotModal .plotModal-content .plotModal-info__desc div {
+  padding: 5px 0;
+}
+.plotModal .plotModal-content .plotModal-info__desc .plot-desc__sufrace {
+  position: relative;
+}
+.plotModal .plotModal-content .plotModal-info__desc .plot-desc__sufrace sup {
+  position: absolute;
+  top: 0;
+}
+.plotModal .plotModal-content .plotModal-info__desc .plot-desc__price {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.plotModal .plotModal-content .plotModal-info__desc .plot-desc__price__afterDiscount {
+  margin-right: 20px;
+}
+.plotModal .plotModal-content .plotModal-info__desc .plot-desc__price__beforeDiscount {
+  position: relative;
+}
+.plotModal .plotModal-content .plotModal-info__desc .plot-desc__price__beforeDiscount:before {
+  position: absolute;
+  content: "";
+  width: calc(100% + 10px);
+  height: 1px;
+  left: -5px;
+  top: 10px;
+  background-color: #b41818;
+}
+.plotModal .plotModal-content .plotModal-info__desc .plot-desc__rate {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.plotModal .plotModal-content .plotModal-info__desc .plot-desc__rate p {
+  font-weight: 600;
+}
+.plotModal .plotModal-content .plotModal-info__desc .plot-desc__rate__afterDiscount {
+  margin-right: 20px;
+}
+.plotModal .plotModal-content .plotModal-info__desc .plot-desc__rate__beforeDiscount {
+  position: relative;
+}
+.plotModal .plotModal-content .plotModal-info__desc .plot-desc__rate__beforeDiscount:before {
+  position: absolute;
+  content: "";
+  width: calc(100% + 10px);
+  height: 1px;
+  left: -5px;
+  top: 10px;
+  background-color: #b41818;
+}
+.plotModal .plotModal-btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 28px;
+}
+.plotModal .plotModal-btn__clickplot {
+  width: 200px;
+  text-align: center;
+}
+.plotModal .plotModal-btn__buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-left: 30px;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+.plotModal .plotModal-btn__buttons__btn {
+  width: 230px;
+  height: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-size: 18px;
+  letter-spacing: 0.085em;
+  background-color: white;
+  color: #A37A55;
+  background-color: white;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+  font-weight: bold;
+  border: 1px solid #A37A55;
+}
+.plotModal .plotModal-btn__buttons__btn span {
+  display: block;
+  margin-left: 15px;
+  position: relative;
+}
+.plotModal .plotModal-btn__buttons__btn svg path {
+  stroke: #A37A55;
+}
+.plotModal .plotModal-btn__buttons__btn:hover {
+  background-color: #A37A55;
+  color: white;
+}
+.plotModal .plotModal-btn__buttons__btn:hover svg path {
+  stroke: white;
+}
+@media (max-width: 991px) {
+  .plotModal {
+    padding: 30px 15px;
+    left: 15px !important;
+  }
+}
+@media (max-width: 767px) {
+  .plotModal {
+    width: calc(100% - 30px);
+  }
+  .plotModal .plotModal-btn {
+    margin-top: 20px;
+  }
+  .plotModal .plotModal-btn__clickplot {
+    display: none;
+  }
+  .plotModal .plotModal-btn__buttons {
+    gap: 10px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .plotModal .plotModal-btn__buttons__btn {
+    width: 200px;
+  }
+  .plotModal .plotModal-btn__buttons__btn span {
+    margin-left: 15px;
+    font-size: 12px;
+  }
+  .plotModal .plotModal-content__desc {
+    margin-left: 0;
+  }
+  .plotModal .plotModal-content .plotModal-info {
+    font-size: 12px;
+  }
+  .plotModal .plotModal-content .plotModal-info p {
+    font-size: 12px;
+  }
+  .plotModal .plotModal-content .plotModal-info__text {
+    width: 115px;
+    gap: 5px;
+  }
+  .plotModal .plotModal-content .plotModal-info__desc {
+    gap: 5px;
+  }
+  .plotModal .plotModal-content .plotModal-info__desc .plot-desc__rate__beforeDiscount:before {
+    top: 7px;
+  }
+  .plotModal .plotModal-content .plotModal-status {
+    gap: 10px;
+  }
+  .plotModal .plotModal-content .plotModal-status__status div span {
+    font-size: 14px;
+  }
+  .plotModal .plotModal-content .plotModal-status__number {
+    font-size: 48px;
+    line-height: normal;
+  }
+  .plotModal .plotModal-difference {
+    width: auto;
+    height: 40px;
+    padding: 0 15px;
+    top: -20px;
+  }
+  .plotModal .plotModal-difference p {
+    font-size: 14px;
+  }
+  .plotModal .plotModal-difference p span {
+    font-size: 16px;
+  }
+  .plotModal .plotModal-arrows__next {
+    right: 4px;
+  }
+  .plotModal .plotModal-arrows__prev {
+    left: 4px;
+  }
+}
+
+@media (max-width: 1199px) {
+  .sea-golf-template-plot-pricing .plots-map {
+    margin-top: 80px;
+  }
+}
+.sea-golf-template-plot-pricing .plots-map .plot-sectors [data-plots-sectors],
+.sea-golf-template-plot-pricing .plots-map .plot-sectors [data-plots-sector],
+.sea-golf-template-plot-pricing .plots-map .plot-sector [data-plots-sectors],
+.sea-golf-template-plot-pricing .plots-map .plot-sector [data-plots-sector] {
+  position: relative;
+}
+.sea-golf-template-plot-pricing .plots-map .plot-sectors__img,
+.sea-golf-template-plot-pricing .plots-map .plot-sector__img {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: right;
+     object-position: right;
+}
+.sea-golf-template-plot-pricing .plots-map .plot-sectors__svg,
+.sea-golf-template-plot-pricing .plots-map .plot-sector__svg {
+  position: absolute;
+  z-index: 9;
+  max-width: 100%;
+  top: 0;
+  right: 0;
+}
+.sea-golf-template-plot-pricing .plots-map .plot-sectors__svg path,
+.sea-golf-template-plot-pricing .plots-map .plot-sector__svg path {
+  opacity: 0.5;
+}
+@media (max-width: 767px) {
+  .sea-golf-template-plot-pricing .plots-map .plot-sectors__desktop,
+.sea-golf-template-plot-pricing .plots-map .plot-sector__desktop {
+    display: none;
+  }
+}
+.sea-golf-template-plot-pricing .plots-map .plot-sectors__desktop__apla,
+.sea-golf-template-plot-pricing .plots-map .plot-sector__desktop__apla {
+  position: absolute;
+  top: 25.8%;
+  left: 8.4%;
+  padding: 25px;
+  width: auto;
+  height: auto;
+  background: rgba(51, 49, 47, 0.7);
+  z-index: 1;
+}
+.sea-golf-template-plot-pricing .plots-map .plot-sectors__desktop__apla .text-main,
+.sea-golf-template-plot-pricing .plots-map .plot-sector__desktop__apla .text-main {
+  font-size: 20px;
+  line-height: 37px;
+}
+.sea-golf-template-plot-pricing .plots-map .plot-sectors__desktop__apla .text-main b,
+.sea-golf-template-plot-pricing .plots-map .plot-sector__desktop__apla .text-main b {
+  font-size: 36px;
+  font-weight: 400;
+  margin: 10px 0;
+  display: block;
+}
+.sea-golf-template-plot-pricing .plots-map .plot-sectors__desktop__apla .text-main b sup,
+.sea-golf-template-plot-pricing .plots-map .plot-sector__desktop__apla .text-main b sup {
+  line-height: 0px;
+}
+@media (max-width: 1199px) {
+  .sea-golf-template-plot-pricing .plots-map .plot-sectors__desktop__apla,
+.sea-golf-template-plot-pricing .plots-map .plot-sector__desktop__apla {
+    display: none;
+  }
+}
+.sea-golf-template-plot-pricing .plots-map .plot-sectors__mobile,
+.sea-golf-template-plot-pricing .plots-map .plot-sector__mobile {
+  position: relative;
+  display: none;
+}
+@media (max-width: 767px) {
+  .sea-golf-template-plot-pricing .plots-map .plot-sectors__mobile,
+.sea-golf-template-plot-pricing .plots-map .plot-sector__mobile {
+    display: block;
+  }
+}
+.sea-golf-template-plot-pricing .plots-map .plot-sectors__backMainMap [data-plots-back-to-sectors],
+.sea-golf-template-plot-pricing .plots-map .plot-sector__backMainMap [data-plots-back-to-sectors] {
+  position: absolute;
+  top: 25%;
+  left: 0;
+  z-index: 9999999;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+  padding: 36px 36px 35px 8%;
+  letter-spacing: 0.3em;
+  font-weight: 600;
+  line-height: normal;
+  background: rgba(51, 49, 47, 0.7);
+}
+.sea-golf-template-plot-pricing .plots-map .plot-sectors__backMainMap [data-plots-back-to-sectors] p,
+.sea-golf-template-plot-pricing .plots-map .plot-sector__backMainMap [data-plots-back-to-sectors] p {
+  color: white;
+  position: relative;
+}
+.sea-golf-template-plot-pricing .plots-map .plot-sectors__backMainMap [data-plots-back-to-sectors] p:before,
+.sea-golf-template-plot-pricing .plots-map .plot-sector__backMainMap [data-plots-back-to-sectors] p:before {
+  content: "";
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  background: url("../img/invest-karwia/price/arrow-prices.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  left: -40px;
+  top: 3px;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+}
+.sea-golf-template-plot-pricing .plots-map .plot-sectors__backMainMap [data-plots-back-to-sectors]:hover,
+.sea-golf-template-plot-pricing .plots-map .plot-sector__backMainMap [data-plots-back-to-sectors]:hover {
+  cursor: pointer;
+  background: #33312f;
+}
+.sea-golf-template-plot-pricing .plots-map .plot-sectors__backMainMap [data-plots-back-to-sectors]:hover p:before,
+.sea-golf-template-plot-pricing .plots-map .plot-sector__backMainMap [data-plots-back-to-sectors]:hover p:before {
+  left: -60px;
+}
+@media (max-width: 1399px) {
+  .sea-golf-template-plot-pricing .plots-map .plot-sectors__backMainMap [data-plots-back-to-sectors],
+.sea-golf-template-plot-pricing .plots-map .plot-sector__backMainMap [data-plots-back-to-sectors] {
+    padding: 20px 20px 20px 80px;
+  }
+  .sea-golf-template-plot-pricing .plots-map .plot-sectors__backMainMap [data-plots-back-to-sectors] p,
+.sea-golf-template-plot-pricing .plots-map .plot-sector__backMainMap [data-plots-back-to-sectors] p {
+    font-size: 14px;
+  }
+  .sea-golf-template-plot-pricing .plots-map .plot-sectors__backMainMap [data-plots-back-to-sectors] p:before,
+.sea-golf-template-plot-pricing .plots-map .plot-sector__backMainMap [data-plots-back-to-sectors] p:before {
+    left: -40px;
+    top: 0;
+  }
+  .sea-golf-template-plot-pricing .plots-map .plot-sectors__backMainMap [data-plots-back-to-sectors]:hover p:before,
+.sea-golf-template-plot-pricing .plots-map .plot-sector__backMainMap [data-plots-back-to-sectors]:hover p:before {
+    left: -50px;
+  }
+}
+@media (max-width: 992px) {
+  .sea-golf-template-plot-pricing .plots-map .plot-sectors__backMainMap [data-plots-back-to-sectors],
+.sea-golf-template-plot-pricing .plots-map .plot-sector__backMainMap [data-plots-back-to-sectors] {
+    padding: 10px 10px 10px 40px;
+    letter-spacing: 0.2px;
+    top: 60px;
+  }
+  .sea-golf-template-plot-pricing .plots-map .plot-sectors__backMainMap [data-plots-back-to-sectors] p,
+.sea-golf-template-plot-pricing .plots-map .plot-sector__backMainMap [data-plots-back-to-sectors] p {
+    font-size: 12px;
+  }
+  .sea-golf-template-plot-pricing .plots-map .plot-sectors__backMainMap [data-plots-back-to-sectors] p:before,
+.sea-golf-template-plot-pricing .plots-map .plot-sector__backMainMap [data-plots-back-to-sectors] p:before {
+    left: -35px;
+    top: -1px;
+  }
+  .sea-golf-template-plot-pricing .plots-map .plot-sectors__backMainMap [data-plots-back-to-sectors]:hover p:before,
+.sea-golf-template-plot-pricing .plots-map .plot-sector__backMainMap [data-plots-back-to-sectors]:hover p:before {
+    left: -35px;
+  }
+  .sea-golf-template-plot-pricing .plots-map .plot-sectors__name,
+.sea-golf-template-plot-pricing .plots-map .plot-sector__name {
+    background: none;
+  }
+}
+@media (max-width: 767px) {
+  .sea-golf-template-plot-pricing .plots-map .plot-sectors [data-plots-sector],
+.sea-golf-template-plot-pricing .plots-map .plot-sectors [data-plots-sectors],
+.sea-golf-template-plot-pricing .plots-map .plot-sector [data-plots-sector],
+.sea-golf-template-plot-pricing .plots-map .plot-sector [data-plots-sectors] {
+    overflow-x: scroll;
+    overflow-y: hidden;
+  }
+  .sea-golf-template-plot-pricing .plots-map .plot-sectors__all__mobile,
+.sea-golf-template-plot-pricing .plots-map .plot-sector__all__mobile {
+    height: 440px;
+    width: 700px;
+  }
+  .sea-golf-template-plot-pricing .plots-map .plot-sectors__single__mobile,
+.sea-golf-template-plot-pricing .plots-map .plot-sector__single__mobile {
+    height: 440px;
+    width: 700px;
+  }
+  .sea-golf-template-plot-pricing .plots-map .plot-sectors__svg path,
+.sea-golf-template-plot-pricing .plots-map .plot-sector__svg path {
+    opacity: 0.9;
+  }
+}
+
 .seagolf-nav {
   height: auto;
   width: 100%;
@@ -9066,5 +10368,68 @@ footer .footer .footer-box a p {
     color: #b79763 !important;
     opacity: 1;
     font-size: 14px;
+  }
+}
+
+.form-plots {
+  display: none;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.9);
+  z-index: 999999999;
+  top: 0;
+  left: 0;
+  overflow-x: scroll;
+}
+.form-plots.form-main {
+  margin-top: 0;
+}
+.form-plots form {
+  position: absolute;
+  left: 50%;
+  top: 5%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  background: #efebeb;
+  padding: 15px 30px 15px 30px;
+  width: 600px;
+  max-width: 100%;
+}
+.form-plots form .form-plots-close {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  background: url(../img/invest-kladno/ico/close.png) no-repeat center;
+  position: absolute;
+  right: 25px;
+  top: 20px;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+.form-plots form .form-plots-close:hover {
+  cursor: pointer;
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+.form-plots form .form-plots-header {
+  font-weight: 400;
+  margin: 8px 0 15px 0;
+  font-family: "Playfair Display", serif;
+}
+.form-plots form .form-plots-text-number {
+  text-align: center;
+  margin-bottom: 15px;
+  font-weight: 600;
+}
+.form-plots form .form-plots-text-number span {
+  color: #A37A55;
+}
+@media (max-width: 767px) {
+  .form-plots form {
+    padding: 15px;
+  }
+  .form-plots form .form-plots-close {
+    right: 10px;
   }
 }

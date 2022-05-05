@@ -1,0 +1,204 @@
+.sea-golf-template-plot-pricing {
+    .plots-map {
+        @media (max-width: 1199px) {
+            margin-top: 80px;
+        }
+
+        .plot-sectors,
+        .plot-sector {
+            [data-plots-sectors],
+            [data-plots-sector] {
+                position: relative;
+            }
+            &__img {
+                position: relative;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                object-position: right;
+            }
+            &__svg {
+                position: absolute;
+                z-index: 9;
+                max-width: 100%;
+                top: 0;
+                right: 0;
+                path {
+                    opacity: 0.5;
+                }
+            }
+            &__desktop {
+                @media (max-width: 767px) {
+                    display: none;
+                }
+                &__apla {
+                    position: absolute;
+                    top: 25.8%;
+                    left: 8.4%;
+                    padding: 25px;
+                    width: auto;
+                    height: auto;
+                    background: rgba(51, 49, 47, 0.7);
+                    z-index: 1;
+                    .text-main {
+                        font-size: 20px;
+                        line-height: 37px;
+                        b {
+                            font-size: 36px;
+                            font-weight: 400;
+                            margin: 10px 0;
+                            display: block;
+                            sup {
+                                line-height: 0px;
+                            }
+                        }
+                    }
+                    @media (max-width: $xl) {
+                        display: none;
+                    }
+                }
+            }
+            &__mobile {
+                position: relative;
+                display: none;
+                @media (max-width: 767px) {
+                    display: block;
+                }
+            }
+            &__backMainMap {
+                [data-plots-back-to-sectors] {
+                    position: absolute;
+                    top: 25%;
+                    left: 0;
+                    z-index: 9999999;
+                    transition: all 0.2s;
+                    padding: 36px 36px 35px 8%;
+                    letter-spacing: 0.3em;
+                    font-weight: 600;
+                    line-height: normal;
+                    background: rgba(51, 49, 47, 0.7);
+                    p {
+                        color: white;
+                        position: relative;
+                        &:before {
+                            content: "";
+                            position: absolute;
+                            width: 25px;
+                            height: 25px;
+                            background: url("../img/invest-karwia/price/arrow-prices.png");
+                            background-position: center;
+                            background-repeat: no-repeat;
+                            left: -40px;
+                            top: 3px;
+                            transition: all 0.2s;
+                        }
+                    }
+                    &:hover {
+                        cursor: pointer;
+                        background: rgba(51, 49, 47, 1);
+                        p {
+                            &:before {
+                                left: -60px;
+                            }
+                        }
+                    }
+                }
+            }
+            &__name {
+                // background: linear-gradient(
+                //     358deg,
+                //     #1951a4 0%,
+                //     rgba(25, 81, 164, 0) 70%
+                // );
+                // z-index: 9999999;
+                // position: absolute;
+                // left: 0;
+                // height: 400px;
+                // width: 100%;
+                // bottom: 0px;
+                // pointer-events: none;
+                // display: flex;
+                // align-items: flex-end;
+                // padding-bottom: 30px;
+                // h2 {
+                //     color: white;
+                // }
+            }
+            @media (max-width: 1399px) {
+                &__backMainMap {
+                    [data-plots-back-to-sectors] {
+                        padding: 20px 20px 20px 80px;
+                        p {
+                            font-size: 14px;
+                            &:before {
+                                left: -40px;
+                                top: 0;
+                            }
+                        }
+                        &:hover {
+                            p {
+                                &:before {
+                                    left: -50px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            @media (max-width: 992px) {
+                &__backMainMap {
+                    [data-plots-back-to-sectors] {
+                        padding: 10px 10px 10px 40px;
+                        letter-spacing: 0.2px;
+                        top: 60px;
+                        p {
+                            font-size: 12px;
+                            &:before {
+                                left: -35px;
+                                top: -1px;
+                            }
+                        }
+                        &:hover {
+                            p {
+                                &:before {
+                                    left: -35px;
+                                }
+                            }
+                        }
+                    }
+                }
+                &__name {
+                    background: none;
+                }
+            }
+            ////////////////////////////
+            // MOBILE
+            ///////////////////////////
+
+            @media (max-width: 767px) {
+                [data-plots-sector],
+                [data-plots-sectors] {
+                    overflow-x: scroll;
+                    overflow-y: hidden;
+                }
+                &__all {
+                    &__mobile {
+                        height: 440px;
+                        width: 700px;
+                    }
+                }
+                &__single {
+                    &__mobile {
+                        height: 440px;
+                        width: 700px;
+                    }
+                }
+                &__svg {
+                    path {
+                        opacity: 0.9;
+                    }
+                }
+            }
+        }
+    }
+}

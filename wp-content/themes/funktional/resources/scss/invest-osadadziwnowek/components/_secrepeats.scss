@@ -1,0 +1,132 @@
+.secrepeat {
+    margin: 64px 0 192px 0;
+    position: relative;
+    &::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        height: 100%;
+        width: 90%;
+        z-index: 0;
+        background-color: white;
+    }
+    &--right {
+        &::after {
+            left: unset;
+            right: 0;
+        }
+        .secrepeat__content-box {
+            order: 2;
+        }
+        .secrepeat__content {
+            padding: 0 120px 0 70px;
+        }
+        .secrepeat__img-box {
+            order: 1;
+        }
+    }
+    &__content-box,
+    &__img-box {
+        position: relative;
+        z-index: 2;
+    }
+    &__content {
+        margin-top: 64px;
+        padding: 0 120px;
+        color: $main;
+    }
+    &__title {
+        font-size: 30px;
+        font-family: $font-second;
+        font-weight: bold;
+        line-height: 1.5;
+        margin: 0;
+    }
+    &__text {
+        font-size: 16px;
+        line-height: 1.94;
+    }
+    &__img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transform: translateY(64px);
+    }
+    @media screen and (max-width: 1659px) {
+        &--right {
+            .secrepeat__content {
+                padding: 32px;
+            }
+        }
+        &__content {
+            margin-top: 0;
+            padding: 32px;
+        }
+        &__img-box {
+            display: flex;
+            align-items: center;
+        }
+        &__img {
+            height: 75%;
+            transform: unset;
+        }
+    }
+    @media screen and (max-width: $xl - 1px) {
+        &__title {
+            font-size: 24px;
+        }
+    }
+    @media screen and (max-width: $lg - 1px) {
+        margin: 64px 0 96px 0;
+        &::after {
+            width: 100%;
+        }
+        &--right {
+            .secrepeat__content {
+                padding: 16px 32px 32px 32px;
+            }
+        }
+        &__content-box {
+            order: 2;
+        }
+        &__content {
+            margin-top: -64px;
+            padding: 16px 32px 32px 32px;
+        }
+        &__img-box {
+            order: 1;
+            justify-content: center;
+        }
+        &__img {
+            width: 90%;
+            height: auto;
+            transform: translateY(-64px);
+        }
+        &__title {
+            br {
+                display: none;
+            }
+        }
+    }
+    @media screen and (max-width: $md - 1px) {
+    }
+    @media screen and (max-width: $sm - 1px) {
+        &--right {
+            .secrepeat__content {
+                padding: 16px;
+            }
+        }
+        &__content {
+            margin-top: -64px;
+            padding: 16px;
+        }
+        &__title {
+            font-size: 20px;
+        }
+        &__text {
+            font-size: 14px;
+        }
+    }
+}

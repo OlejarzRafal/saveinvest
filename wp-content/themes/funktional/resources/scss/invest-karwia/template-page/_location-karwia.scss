@@ -3,8 +3,7 @@
         position: relative;
         height: 1280px;
         width: 100%;
-        background: #004870
-            url("../img/invest-karwia/localization/background-header-localization.jpg");
+        background: #004870 url("../img/invest-karwia/localization/background-header-localization.jpg");
         background-size: cover;
         background-position: center top;
         display: flex;
@@ -23,7 +22,7 @@
             animation: scroller 2.5s infinite ease-in-out;
             z-index: 1;
         }
-        @keyframes scroller{
+        @keyframes scroller {
             0% {
                 transform: translate(-50%, 0%);
             }
@@ -141,6 +140,24 @@
                             }
                         }
                     }
+                    &:nth-child(2) {
+                        position: relative;
+                        .row-table__time {
+                            p {
+                                position: relative;
+                                &::after {
+                                    content: "";
+                                    position: absolute;
+                                    top: 11px;
+                                    left: 60px;
+                                    height: 20px;
+                                    width: 26px;
+                                    background: url("../img/invest-karwia/localization/bike.svg");
+                                    background-repeat: no-repeat;
+                                }
+                            }
+                        }
+                    }
                     p {
                         padding: 12px 0;
                         text-align: start;
@@ -164,8 +181,6 @@
                 left: 17%;
                 width: 15%;
                 height: auto;
-            
-
             }
         }
         @media (max-width: $xl) {
@@ -211,15 +226,28 @@
                 }
                 &__table-location {
                     .row-table {
+                        &:nth-child(6) {
+                            .row-table__time {
+                                p {
+                                    position: relative;
+                                    &::after {
+                                        top: 14px;
+                                        left: 45px;
+                                        height: 16px;
+                                        width: 10px;
+                                    }
+                                }
+                            }
+                        }
                         &:nth-child(2) {
                             .row-table__time {
                                 p {
                                     position: relative;
                                     &::after {
-                                        top: 18px;
+                                        top: 11px;
                                         left: 45px;
-                                        height: 16px;
-                                        width: 10px;
+                                        height: 20px;
+                                        width: 26px;
                                     }
                                 }
                             }
@@ -363,7 +391,7 @@
             margin-top: 45px;
         }
     }
-    @keyframes rhombus{
+    @keyframes rhombus {
         0% {
             transform: translate(-50%, 0%) rotate(45deg);
         }
@@ -374,5 +402,4 @@
             transform: translate(-50%, 0%) rotate(45deg);
         }
     }
-   
 }

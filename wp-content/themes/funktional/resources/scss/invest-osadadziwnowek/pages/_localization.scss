@@ -1,0 +1,88 @@
+.location-page {
+    .sec1 {
+        background-position: top center;
+        background-size: 100%;
+        background-repeat: no-repeat;
+        background-color: #184366;
+        padding: 32.552vw 0 152px 0;
+        &__title {
+            font-family: $font-second;
+            font-size: 50px;
+            font-weight: bold;
+            line-height: 1.24;
+            color: white;
+            margin: 0;
+        }
+        &__text {
+            margin: 42px 0;
+            font-size: 16px;
+            line-height: 1.94;
+            color: white;
+        }
+        &__img-container {
+            display: flex;
+            align-items: flex-end;
+        }
+        &__img-box {
+            margin-top: 48px;
+        }
+        &__img {
+            width: 100%;
+            max-width: 680px;
+        }
+        .distances {
+            width: 100%;
+            font-size: 16px;
+            &__col {
+                &--1 {
+                    width: 60;
+                }
+                &--2 {
+                    width: 27%;
+                }
+                &--3 {
+                    width: 18%;
+                }
+            }
+            &__text {
+                color: white;
+                &--walk::after {
+                    content: url("../img/walk.svg");
+                    width: 10px;
+                    margin: 5px;
+                    height: auto;
+                }
+            }
+        }
+    }
+    .zoom-map {
+        margin: 0 0 -5px 0;
+        padding: 0;
+        &__img {
+            width: 100%;
+        }
+    }
+    @media screen and (max-width: $lg - 1px) {
+        .sec1 {
+            padding: 32.552vw 0 64px 0;
+        }
+        &__title {
+            font-size: 42px;
+        }
+    }
+    @media screen and (max-width: $sm - 1px) {
+        .sec1 {
+            padding: 32.552vw 0 32px 0;
+            &__title {
+                font-size: 32px;
+            }
+            &__text {
+                font-size: 14px;
+                line-height: 1.84;
+            }
+            .distances {
+                font-size: 12px;
+            }
+        }
+    }
+}

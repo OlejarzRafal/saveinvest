@@ -1,0 +1,35 @@
+.seclast {
+    background-image: url("../img/invest-dziwnowek/last-section.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 500px;
+    color: white;
+    display: flex;
+    align-items: center;
+    &__text {
+        font-family: $font-second;
+        font-size: 45px;
+        font-weight: normal;
+        margin: 0 0 72px 0;
+        text-align: center;
+    }
+}
+@media screen and (max-width: $md - 1px) {
+    .seclast {
+        height: 350px;
+        &__text {
+            font-size: 36px;
+            margin: 0 0 52px 0;
+        }
+    }
+}
+@media screen and (max-width: $sm - 1px) {
+    .seclast {
+        height: 300px;
+        &__text {
+            font-size: 28px;
+            margin: 0 0 48px 0;
+        }
+    }
+}

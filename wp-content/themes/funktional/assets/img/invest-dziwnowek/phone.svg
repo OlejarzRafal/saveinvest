@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="15.843" height="17.054" viewBox="0 0 15.843 17.054">
+    <defs>
+        <style>
+            .prefix__cls-2{fill:#afa77f}
+        </style>
+    </defs>
+    <g id="prefix__Group_1389" data-name="Group 1389" transform="rotate(-30 9.692 2.597)">
+        <g id="prefix__Group_1381" data-name="Group 1381">
+            <path id="prefix__Rectangle_798" d="M0 0H9.165V12.473H0z" data-name="Rectangle 798" transform="translate(.611 .611)" style="fill:none"/>
+            <path id="prefix__Path_1773" d="M10.388 13.694H0V0h10.388zm-9.166-1.222h7.943V1.222H1.222z" class="prefix__cls-2" data-name="Path 1773"/>
+        </g>
+        <g id="prefix__Group_1382" data-name="Group 1382" transform="translate(2.23 10.228)">
+            <path id="prefix__Rectangle_799" d="M0 0H1.295V1.295H0z" class="prefix__cls-2" data-name="Rectangle 799"/>
+        </g>
+        <g id="prefix__Group_1383" data-name="Group 1383" transform="translate(4.546 10.228)">
+            <path id="prefix__Rectangle_800" d="M0 0H1.295V1.295H0z" class="prefix__cls-2" data-name="Rectangle 800"/>
+        </g>
+        <g id="prefix__Group_1384" data-name="Group 1384" transform="translate(6.868 10.228)">
+            <path id="prefix__Rectangle_801" d="M0 0H1.295V1.295H0z" class="prefix__cls-2" data-name="Rectangle 801"/>
+        </g>
+        <g id="prefix__Group_1385" data-name="Group 1385" transform="translate(2.23 8.136)">
+            <path id="prefix__Rectangle_802" d="M0 0H1.295V1.295H0z" class="prefix__cls-2" data-name="Rectangle 802"/>
+        </g>
+        <g id="prefix__Group_1386" data-name="Group 1386" transform="translate(4.546 8.136)">
+            <path id="prefix__Rectangle_803" d="M0 0H1.295V1.295H0z" class="prefix__cls-2" data-name="Rectangle 803"/>
+        </g>
+        <g id="prefix__Group_1387" data-name="Group 1387" transform="translate(6.868 8.136)">
+            <path id="prefix__Rectangle_804" d="M0 0H1.295V1.295H0z" class="prefix__cls-2" data-name="Rectangle 804"/>
+        </g>
+        <g id="prefix__Group_1388" data-name="Group 1388" transform="translate(2.181 2.234)">
+            <path id="prefix__Path_1774" d="M6.005 5.072H0V0h6.005zM.917 4.155h4.172V.917H.917z" class="prefix__cls-2" data-name="Path 1774"/>
+        </g>
+    </g>
+</svg>

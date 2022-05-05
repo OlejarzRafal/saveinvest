@@ -11,7 +11,7 @@ function my_acf_op_init()
         'menu_title'    => 'Stopki',
         'menu_slug'     => 'footer-all',
     ));
-    // Register options page.
+    // Footer SaveInvest
     $option_page = acf_add_options_page(array(
         'page_title'   => 'SaveInvest',
         'menu_title'  => 'SaveInvest',
@@ -21,7 +21,7 @@ function my_acf_op_init()
         'redirect'    => false
 
     ));
-    // Register options page.
+    // Footer Ostoja
     $option_page = acf_add_options_page(array(
         'page_title'   => 'Ostoja Kladno',
         'menu_title'  => 'Ostoja Kladno',
@@ -30,11 +30,21 @@ function my_acf_op_init()
         'parent_slug'    => 'footer-all',
         'redirect'    => false
     ));
-    // Register options page.
+    // Footer Karwia
     $option_page = acf_add_options_page(array(
         'page_title'   => 'Osada Karwia',
         'menu_title'  => 'Osada Karwia',
         'menu_slug'   => 'stopka-karwia',
+        'capability'  => 'edit_posts',
+        'parent_slug'    => 'footer-all',
+        'redirect'    => false
+    ));
+
+    // Footer Dziwnowek
+    $option_page = acf_add_options_page(array(
+        'page_title'   => 'Osada Dziwnowek',
+        'menu_title'  => 'Osada Dziwnowek',
+        'menu_slug'   => 'stopka-dziwnowek',
         'capability'  => 'edit_posts',
         'parent_slug'    => 'footer-all',
         'redirect'    => false

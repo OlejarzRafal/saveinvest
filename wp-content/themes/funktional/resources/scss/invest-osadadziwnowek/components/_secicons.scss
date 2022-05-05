@@ -1,0 +1,162 @@
+.secicons {
+    display: flex;
+    align-items: center;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    &__box {
+        padding: 80px 0;
+    }
+    &__title {
+        text-align: center;
+        font-family: $font-second;
+        font-size: 50px;
+        font-weight: normal;
+        line-height: 1.36;
+        margin: 0 0 72px 0;
+        color: white;
+    }
+    &__adventages {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    &__item {
+        width: 20%;
+        flex: 20%;
+        text-align: center;
+        line-height: 1.8;
+        color: white;
+        font-size: 15px;
+        margin-bottom: 32px;
+    }
+    &__icon {
+        max-width: 154px;
+        width: 100%;
+    }
+    &__advantage {
+        margin: 16px 0;
+    }
+    &__sub-text {
+        margin: 16px 0;
+        opacity: 0.6;
+    }
+    &--number {
+        position: relative;
+        .secicons__item {
+            width: 33.33%;
+            flex: 33.33%;
+            margin: 40px 0;
+        }
+        .secicons__value {
+            font-family: $font-second;
+            font-size: 45px;
+            line-height: 1;
+        }
+    }
+    &--carousel {
+        .secicons__box {
+            padding: 48px 0;
+        }
+        .secicons__adventages {
+            padding: 0 32px;
+            .owl {
+                &-nav {
+                    position: absolute;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    left: 0;
+                    right: 0;
+                    height: 40px;
+                    width: 100%;
+                    padding: 0;
+                    display: flex;
+                    justify-content: space-between;
+                }
+                &-prev,
+                &-next {
+                    height: 40px;
+                    width: 25px;
+                    outline: none;
+                    span {
+                        display: none;
+                    }
+                    &::after {
+                        content: url("../img/arrow-right.svg");
+                        position: relative;
+                        top: 2px;
+                        height: 22px;
+                        display: block;
+                        transition: all ease-in-out 0.1s;
+                    }
+                }
+                &-prev {
+                    &::after {
+                        transform: rotate(180deg);
+                    }
+                    &:hover::after {
+                        transform: rotate(180deg) translateX(2px);
+                    }
+                    &:active::after {
+                        transform: rotate(180deg) translateX(4px);
+                    }
+                }
+                &-next {
+                    &:hover::after {
+                        transform: translateX(2px);
+                    }
+                    &:active::after {
+                        transform: translateX(4px);
+                    }
+                }
+            }
+        }
+        .secicons__item {
+            width: 100%;
+            flex: 100%;
+        }
+        .secicons__icon {
+            margin: auto;
+        }
+    }
+    @media screen and (max-width: 1659px) {
+    }
+    @media screen and (max-width: $xl - 1px) {
+        &__title {
+            font-size: 42px;
+        }
+    }
+    @media screen and (max-width: $lg - 1px) {
+        &__title {
+            font-size: 32px;
+        }
+        &__advantage {
+            font-size: 14px;
+            padding: 0 8px;
+        }
+    }
+    @media screen and (max-width: $md - 1px) {
+        &__item {
+            flex: 50% !important;
+        }
+        &--number {
+            .secicons__value {
+                font-size: 32px;
+            }
+        }
+    }
+    @media screen and (max-width: $sm - 1px) {
+        &--carousel {
+            .secicons__adventages {
+                padding: 0 32px;
+            }
+        }
+        &--number {
+            .secicons__value {
+                font-size: 29px;
+            }
+            .secicons__advantage {
+                font-size: 12px;
+            }
+        }
+    }
+}

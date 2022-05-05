@@ -67,7 +67,7 @@ get_template_part('investitions/ostoja-kladno/header');
                 <div class="col-xl-7">
                     <div class="around-video__movie">
                         <?php if ($move_sec1_hp_kladno = get_field('move_sec1_hp_kladno')) : ?>
-                            <a  data-fancybox="gallery" href="<?php echo $move_sec1_hp_kladno; ?>">
+                            <a data-fancybox="gallery" href="<?php echo $move_sec1_hp_kladno; ?>">
                                 <?php
                                 $photo_move_sec1_hp_kladno = get_field('photo_move_sec1_hp_kladno');
                                 if ($photo_move_sec1_hp_kladno) : ?>
@@ -110,8 +110,8 @@ get_template_part('investitions/ostoja-kladno/header');
         <!-- wave -->
         <div id="wave-home-3" class="wave wave--3"></div>
         <div id="wave-home-4" class="wave wave--4"></div>
-        <div id="wave-home-5"  class="wave wave--5"></div>
-        
+        <div id="wave-home-5" class="wave wave--5"></div>
+
         <section class="information-ostoja">
             <div class="container">
                 <div class="row">
@@ -464,7 +464,7 @@ get_template_part('investitions/ostoja-kladno/header');
                 <div class="col-xl-6">
                     <div class="about-company__graphics">
                         <div class="company-logo">
-                            <img src="<?php bloginfo('template_url'); ?>/assets/img/invest-kladno/home-page/home-enklawa-company-logo.png" alt="logo saveinvest" />
+                            <img src="<?php bloginfo('template_url'); ?>/assets/img/invest-kladno/home-page/home-about-company-logo.png" alt="logo saveinvest" />
                         </div>
                         <div class="company-awards">
                             <img src="<?php bloginfo('template_url'); ?>/assets/img/invest-kladno/home-page/home-about-company-700.png" alt="ikona 700 zadowolonych klientów" />

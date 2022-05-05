@@ -1,0 +1,32 @@
+<svg class="plot-sectors__svg" viewBox="0 0 1920 1180" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <g id="Mask group">
+        <mask id="mask0_529_9973" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="1920" height="1180">
+            <rect id="Rectangle 4478" width="1920" height="1180" fill="#C4C4C4" />
+        </mask>
+        <g mask="url(#mask0_529_9973)">
+            <g class="area-hover">
+                <rect id="Rectangle 4482" opacity="0" x="70" y="387" width="1789" height="724" rx="282" fill="#C4C4C4" />
+            </g>
+            <g data-plots-sector-selector="A" class="area-click area-click__sectors">
+                <path id="Vector" opacity="0" d="M1580.33 631.667L1566.26 617.247L1552.61 602.931L1544.48 594.708L1538.21 595.513L927.32 630.004L926.677 630.039L904.866 631.268L897.026 637.304L874.015 654.836L825 684.491L830.609 686.887L894.426 689.206L901.307 688.013H924.5L914 701L1503.5 646L1525 644.5L1593.5 646L1580.33 631.667Z" fill="#36B122" />
+                <g id="Sektor A" filter="url(#filter0_d_529_9973)">
+                    <text fill="white" xml:space="preserve" style="white-space: pre" font-family="EB Garamond" font-size="40" letter-spacing="0em">
+                        <tspan x="1024" y="662.18">Sektor A</tspan>
+                    </text>
+                </g>
+            </g>
+        </g>
+    </g>
+    <defs>
+        <filter id="filter0_d_529_9973" x="1025.6" y="633.8" width="138.957" height="34.8398" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+            <feFlood flood-opacity="0" result="BackgroundImageFix" />
+            <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha" />
+            <feOffset dx="3" dy="3" />
+            <feGaussianBlur stdDeviation="1.5" />
+            <feComposite in2="hardAlpha" operator="out" />
+            <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.2 0" />
+            <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_529_9973" />
+            <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_529_9973" result="shape" />
+        </filter>
+    </defs>
+</svg>
