@@ -4191,6 +4191,13 @@ h6, .f-h6 {
   z-index: -1;
   pointer-events: none;
   object-fit: cover; }
+  .header .video-home-page--mobile {
+    display: none; }
+  @media (max-width: 767px) {
+    .header .video-home-page {
+      display: none; }
+      .header .video-home-page--mobile {
+        display: block; } }
 
 .header .nav {
   position: fixed;
