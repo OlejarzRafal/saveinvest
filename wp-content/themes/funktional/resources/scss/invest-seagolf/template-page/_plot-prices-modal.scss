@@ -242,6 +242,9 @@
         left: 15px !important;
     }
     @media (max-width: 767px) {
+        &.stay-visible{
+            box-shadow:0px 0px 100vw 100vh rgba(0,0,0,0.7);
+        }
         width: calc(100% - 30px);
         .plotModal-btn {
             margin-top: 20px;
