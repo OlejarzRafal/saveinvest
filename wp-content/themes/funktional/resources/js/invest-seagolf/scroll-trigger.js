@@ -1,6 +1,100 @@
 gsap.registerPlugin(ScrollTrigger);
 ScrollTrigger.matchMedia({
     "(min-width: 1200px) and (max-width: 1920px) ": function () {
+   
+        // gsap.to(".parallax", {
+        //     x: 0,
+        //     y: 50,
+        //     duration: 2,
+        //     ease: "none",
+        //     scrollTrigger: {
+        //         trigger: ".paralax",
+        //         start: "top 90%",
+        //         end: "top 10%",
+        //         scrub: 1,
+        //         markers: false,
+        //     },
+        // });
+        gsap.to(".letter-down", {
+            x: 0,
+            y: 300,
+            duration: 4,
+            ease: "none",
+            scrollTrigger: {
+                trigger: ".letter-down",
+                start: "top 85%",
+                end: "top 25%",
+                scrub: 1,
+                markers: false,
+            },
+        });
+        gsap.to(".letter-up", {
+            x: 0,
+            y: -200,
+            duration: 4,
+            ease: "none",
+            scrollTrigger: {
+                trigger: ".letter-up",
+                start: "top 85%",
+                end: "top 25%",
+                scrub: 1,
+                markers: false,
+            },
+        });
+        gsap.to(".letter-right", {
+            x: 100,
+            y: 0,
+            duration: 2,
+            ease: "none",
+            scrollTrigger: {
+                trigger: ".letter-right",
+                start: "top 85%",
+                end: "top 25%",
+                scrub: 1,
+                markers: false,
+            },
+        });
+        gsap.to(".letter-left", {
+            x: -100,
+            y: 0,
+            duration: 2,
+            ease: "none",
+            scrollTrigger: {
+                trigger: ".letter-left",
+                start: "top 85%",
+                end: "top 25%",
+                scrub: 1,
+                markers: false,
+            },
+        });
+        gsap.to(".letter-right-2", {
+            x: 100,
+            y: 0,
+            duration: 2,
+            ease: "none",
+            scrollTrigger: {
+                trigger: ".letter-right-2",
+                start: "top 85%",
+                end: "top 25%",
+                scrub: 1,
+                markers: false,
+            },
+        });
+        gsap.to(".letter-left-2", {
+            x: -100,
+            y: 0,
+            duration: 2,
+            ease: "none",
+            scrollTrigger: {
+                trigger: ".letter-left-2 ",
+                start: "top 85%",
+                end: "top 25%",
+                scrub: 1,
+                markers: false,
+            },
+        });
+    },
+});
         // gsap.to(".rotate-item-1", {
         //     rotation: 180,
         //     duration: 1,
@@ -12,36 +106,7 @@ ScrollTrigger.matchMedia({
         //         scrub: 1,
         //         markers: false,
         //     },
-        // });       
-        gsap.to(".paralax", {
-            x: 0,
-            y: 100,
-            duration: 5,
-            ease: "none",
-            scrollTrigger: {
-                trigger: ".paralax",
-                start: "top 85%",
-                end: "top 25%",
-                scrub: 1,
-                markers: false,
-            },
-        });
-        gsap.to(".letter-down", {
-            x: 0,
-            y: 100,
-            duration: 5,
-            ease: "none",
-            scrollTrigger: {
-                trigger: ".letter-down",
-                start: "top 85%",
-                end: "top 25%",
-                scrub: 1,
-                markers: false,
-            },
-        });
-    },
-});
-
+        // });    
 
 // if ($(window).width() > 1200) {
 
@@ -108,3 +173,4 @@ ScrollTrigger.matchMedia({
 //         });
 //     });
 // }
+

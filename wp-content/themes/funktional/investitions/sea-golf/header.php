@@ -82,7 +82,6 @@
                                 <li class="logo-seagolf<?php if (strpos($_SERVER['REQUEST_URI'], "/dzialki/osadaseagolf/strona-glowna/") !== false) {; ?> logo-seagolf--active  <?php }; ?>">
                                     <a href="<?php echo get_home_url(); ?>/dzialki/osadaseagolf/strona-glowna/">
                                     </a>
-
                                 </li>
                                 <li class="btn-nav <?php if (strpos($_SERVER['REQUEST_URI'], "/dzialki/osadaseagolf/o-osadzie/") !== false) {; ?> btn-nav--active  <?php }; ?>">
                                     <a href="<?php echo get_home_url(); ?>/dzialki/osadaseagolf/o-osadzie/" class="text-main text-main--fw500 text-main--f15 text-main--ls3">

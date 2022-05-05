@@ -8516,22 +8516,17 @@ footer .footer-top::after {
   -webkit-animation: rotate-text 30s infinite linear;
           animation: rotate-text 30s infinite linear;
 }
-footer .footer-top__paralax {
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
+footer .footer-top__parallax {
   position: relative;
+  width: 100%;
+  height: 650px;
+  overflow: hidden;
 }
-footer .footer-top__paralax__box {
+footer .footer-top__parallax__box {
   position: absolute;
   top: 0;
-  left: 50%;
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
-  min-width: 1920px;
-  height: -webkit-fit-content;
-  height: -moz-fit-content;
-  height: fit-content;
+  width: 100%;
+  height: 120%;
 }
 footer .footer-top__box {
   position: absolute;
@@ -8599,7 +8594,7 @@ footer .footer-top__box__content .btn {
     width: 100px;
     height: 100px;
   }
-  footer .footer-top__paralax__box {
+  footer .footer-top__parallax__box {
     min-width: 1300px;
   }
   footer .footer-top__box {
@@ -8859,6 +8854,10 @@ footer .footer .footer-box a p {
   background-repeat: no-repeat;
   background-position: center right;
   background-size: auto;
+  translate: all 0.3s;
+}
+.form-main form input[type=submit]:hover {
+  border-bottom: 2px solid #B79763;
 }
 @media (max-width: 575px) {
   .form-main form input[type=submit] {

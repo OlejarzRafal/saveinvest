@@ -68,12 +68,17 @@
             line-height: 18px;
             text-align: center;
             letter-spacing: 0.2em;
+            // border-bottom: 1px solid transparent;
             border: 1px solid transparent;
             cursor: pointer;
             background: transparent url(../img/sea-golf/footer/arrow-btn.svg);
             background-repeat: no-repeat;
             background-position: center right;
             background-size: auto;
+            translate: all .3s;
+            &:hover{
+                border-bottom: 2px solid $gold-medium;
+            }
 
             // &::before {
             //     content: "";

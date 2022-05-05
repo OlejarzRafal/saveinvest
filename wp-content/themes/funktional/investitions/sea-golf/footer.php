@@ -4,12 +4,12 @@ wp_footer();
 
 <footer>
     <section class="footer-top">
-        <div class="footer-top__paralax">
-            <img class="footer-top__paralax__box paralax" src=" <?php echo get_template_directory_uri(); ?>/assets/img/sea-golf/footer/paralax-footer.jpg" alt="zdjęcie plaża z lasem" />
+        <div class="footer-top__parallax">
+            <img class="footer-top__parallax__box" src=" <?php echo get_template_directory_uri(); ?>/assets/img/sea-golf/footer/paralax-footer.jpg" alt="zdjęcie plaża z lasem" />
         </div>
         <div class="footer-top__box">
             <div class="footer-top__box__content">
-                <div class="footer-top__box__content__text">
+                <div class="footer-top__box__content__text ">
                     <?php if ($italic_sec1_footer_top_seagolf = get_field('italic_sec1_footer_top_seagolf', 'options')) : ?>
                         <h4 class="f-h4 f-h4 f-h4--fw600-italic"><?php echo $italic_sec1_footer_top_seagolf; ?></h4>
                     <?php endif; ?>

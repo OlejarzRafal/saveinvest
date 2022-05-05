@@ -46,8 +46,8 @@ get_template_part('investitions/sea-golf/header');
                         <div class="sec1-video__movie__icon-play"></div>
                     </div>
                 </div>
-                <div class="sec1-video__letter-s .letter-down"></div>
-                <div class="sec1-video__letter-g"></div>
+                <div class="sec1-video__letter-s letter-down"></div>
+                <div class="sec1-video__letter-g letter-up"></div>
             </div>
         </div>
     </section>
@@ -130,7 +130,7 @@ get_template_part('investitions/sea-golf/header');
                             </div>
                         </div>
                         <div class="sec3-info__box__background">
-                            <img src=" <?php echo get_template_directory_uri(); ?>/assets/img/sea-golf/home-page/Golf-Ball_Black.png" alt="zdjęcie piłki golfowej" />
+                            <img class="paralax"src=" <?php echo get_template_directory_uri(); ?>/assets/img/sea-golf/home-page/Golf-Ball_Black.png" alt="zdjęcie piłki golfowej" />
                         </div>
                     </div>
                 </div>

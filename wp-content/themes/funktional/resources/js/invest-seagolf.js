@@ -12,6 +12,7 @@ import "../js/invest-seagolf/scroll-contact";
 // import "../js/invest-kladno/sliders-front-page";
 import "../js/invest-seagolf/nav-burger";
 import "../js/invest-seagolf/nav-scroll";
+import "../js/invest-seagolf/parallax";
 
 // import "../js/invest-kladno/plots";
 

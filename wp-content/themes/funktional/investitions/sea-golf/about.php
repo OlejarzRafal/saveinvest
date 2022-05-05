@@ -38,7 +38,7 @@ get_template_part('investitions/sea-golf/header');
         </div>
     </section>
     <section class="sec2-info">
-        <div class="sec2-info__letter-s"></div>
+        <div class="sec2-info__letter-s letter-right"></div>
         <div class="container">
             <div class="row">
                 <div class="col-xl-7">
@@ -61,7 +61,7 @@ get_template_part('investitions/sea-golf/header');
         </div>
     </section>
     <section class="sec3-info">
-        <div class="sec3-info__letter-g"></div>
+        <div class="sec3-info__letter-g letter-left"></div>
         <div class="container">
             <div class="row">
                 <div class="col-xl-5">
@@ -82,7 +82,7 @@ get_template_part('investitions/sea-golf/header');
         </div>
     </section>
     <section class="sec4-slider">
-        <div class="sec4-slider__ball"></div>
+        <div class="sec4-slider__ball paralax"></div>
         <div class="container">
             <div class="row">
                 <div class="col-xl-12">
@@ -180,7 +180,7 @@ get_template_part('investitions/sea-golf/header');
 
     </section>
     <section class="sec5-info">
-        <div class="sec5-info__letter-s"></div>
+        <div class="sec5-info__letter-s letter-right-2"></div>
         <div class="container">
             <div class="row">
                 <div class="col-xl-7">
@@ -202,7 +202,7 @@ get_template_part('investitions/sea-golf/header');
         </div>
     </section>
     <section class="sec6-info">
-        <div class="sec6-info__letter-g"></div>
+        <div class="sec6-info__letter-g letter-left-2"></div>
         <div class="container">
             <div class="row">
                 <div class="col-xl-5">

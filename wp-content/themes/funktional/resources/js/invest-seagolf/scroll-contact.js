@@ -38,3 +38,4 @@ if ($(".sec1-contact-sg").length) {
         }
     });
 }
+
