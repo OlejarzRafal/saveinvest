@@ -15,7 +15,6 @@ get_template_part('investitions/sea-golf/header');
         <?php if ($seagolf_sec1_title = get_field('seagolf_sec1_title')) : ?>
             <div class="header__text">
                 <h1 class="f-h1 "><?php echo $seagolf_sec1_title; ?></h1>
-                <!-- <h1 class="f-h1 f-h1--fw600-italic">w sąsiedztwie pola golfowego,<br>jeziora i przystani</h1> -->
             </div>
         <?php endif; ?>
         <div class="header__scroller">
@@ -262,14 +261,17 @@ get_template_part('investitions/sea-golf/header');
     <section class="sec7-text">
         <div class="container">
             <div class="row">
-                <div class="offset-xl-1 col-xl-5">
-                    <h5 class="f-h5 f-h5--gold-dark f-h5--fw500-italic">
-                        Pływasz w basenie, leżysz w jacuzzi, relaksujesz się w saunie lub obserwujesz, jak Twoje dzieci spędzają beztrosko czas w brodziku…
-                    </h5>
+                <div class="offset-xl-1 col-xl-5"><?php if ($seagolf_sec8_text_left = get_field('seagolf_sec8_text_left')) : ?>
+                        <h5 class="f-h5 f-h5--gold-dark f-h5--fw500-italic">
+                            <?php echo $seagolf_sec8_text_left; ?>
+                        </h5>
+                    <?php endif; ?>
                 </div>
-                <div class="col-xl-5">
-                    <p class="text-main">Poczuj się błogo i spełniaj swoje marzenia w Sea & Golf Resort Wolin. Tu w każdej chwili możesz wybrać się na pobliskie pole golfowe lub wyruszyć na rowerową przygodę, biegnącą tuż przy osiedlu ścieżką. Spacerem dotrzesz nad morze, by cieszyć się słońcem, ciepłym piaskiem i morską bryzą, która przyjemnie Cię orzeźwi.</p>
-                </div>
+                <?php if ($seagolf_sec8_text_right = get_field('seagolf_sec8_text_right')) : ?>
+                    <div class="col-xl-5">
+                        <p class="text-main"><?php echo $seagolf_sec8_text_right; ?></p>
+                    </div>
+                <?php endif; ?>
             </div>
         </div>
     </section>
@@ -278,46 +280,84 @@ get_template_part('investitions/sea-golf/header');
             <div class="row">
                 <div class="col-xl-12">
                     <div class="sec8-links__box">
-                        <div class="sec8-links__box__video-link">
-                            <a href="<?php echo $first_link_box_sec4_hp_karwia; ?>" class="sec8-links__box__video-link__item video-first-link">
-                                <video playsinline="" muted="" loop="" preload="true" class="sec8-links__box__video-link__item__hover">
-                                    <source src="<?php echo get_template_directory_uri(); ?>/assets/img/invest-karwia/video/Karwia_Video_Lokalizacja.mp4" type="video/mp4">
-                                </video>
-                                <div class="sec8-links__box__video-link__item__container">
-                                    <img src=" <?php echo get_template_directory_uri(); ?>/assets/img/sea-golf/home-page/icon-sec8-item-1.svg" alt="ikona" />
-                                    <h3 class="f-h3 f-h3--gold-medium ">Lokalizacja</h3>
-                                    <p class="text-main text-main--white text-main--fw600">Sprawdź, gdzie znajduje się Sea & Golf Resort</p>
-                                    <div class="btn">ZOBACZ</div>
+                        <?php if (have_rows('seagolf_sec9_first_box')) : ?>
+                            <?php while (have_rows('seagolf_sec9_first_box')) :
+                                the_row(); ?>
+                                <div class="sec8-links__box__video-link">
+                                    <?php if ($seagolf_sec9_first_box_link = get_sub_field('seagolf_sec9_first_box_link')) : ?>
+                                        <a href="<?php echo $seagolf_sec9_first_box_link; ?>" class="sec8-links__box__video-link__item video-first-link">
+                                            <video playsinline="" muted="" loop="" preload="true" class="sec8-links__box__video-link__item__hover">
+                                                <source src="<?php echo get_template_directory_uri(); ?>/assets/img/invest-karwia/video/Karwia_Video_Lokalizacja.mp4" type="video/mp4">
+                                            </video>
+                                            <div class="sec8-links__box__video-link__item__container">
+                                                <img src=" <?php echo get_template_directory_uri(); ?>/assets/img/sea-golf/home-page/icon-sec8-item-1.svg" alt="ikona" />
+                                                <?php if ($seagolf_sec9_first_box_title = get_sub_field('seagolf_sec9_first_box_title')) : ?>
+                                                    <h3 class="f-h3 f-h3--gold-medium "><?php echo $seagolf_sec9_first_box_title; ?></h3>
+                                                <?php endif; ?>
+                                                <?php if ($seagolf_sec9_first_box_text = get_sub_field('seagolf_sec9_first_box_text')) : ?>
+                                                    <p class="text-main text-main--white text-main--fw600"><?php echo $seagolf_sec9_first_box_text; ?></p>
+                                                <?php endif; ?>
+                                                <?php if ($seagolf_sec9_first_box_button = get_sub_field('seagolf_sec9_first_box_button')) : ?>
+                                                    <div class="btn"><?php echo $seagolf_sec9_first_box_button; ?></div>
+                                                <?php endif; ?>
+                                            </div>
+                                        </a>
+                                    <?php endif; ?>
                                 </div>
-
-                            </a>
-                        </div>
-                        <div class="sec8-links__box__video-link">
-                            <a href="<?php echo $first_link_box_sec4_hp_karwia; ?>" class="sec8-links__box__video-link__item video-second-link">
-                                <video playsinline="" muted="" loop="" preload="true" class="sec8-links__box__video-link__item__hover">
-                                    <source src="<?php echo get_template_directory_uri(); ?>/assets/img/invest-karwia/video/Karwia_Video_Ceny-dzialek.mp4" type="video/mp4">
-                                </video>
-                                <div class="sec8-links__box__video-link__item__container">
-                                    <img src=" <?php echo get_template_directory_uri(); ?>/assets/img/sea-golf/home-page/icon-sec8-item-2.svg" alt="ikona" />
-                                    <h3 class="f-h3 f-h3--gold-medium ">Ceny działek</h3>
-                                    <p class="text-main text-main--white text-main--fw600">Znajdź dla siebie najkorzystniejszą ofertę </p>
-                                    <div class="btn">ZOBACZ</div>
+                            <?php endwhile; ?>
+                        <?php endif; ?>
+                        <?php if (have_rows('seagolf_sec9_second_box')) : ?>
+                            <?php while (have_rows('seagolf_sec9_second_box')) :
+                                the_row(); ?>
+                                <div class="sec8-links__box__video-link">
+                                    <?php if ($seagolf_sec9_second_box_link = get_sub_field('seagolf_sec9_second_box_link')) : ?>
+                                        <a href="<?php echo $seagolf_sec9_second_box_link; ?>" class="sec8-links__box__video-link__item video-second-link">
+                                            <video playsinline="" muted="" loop="" preload="true" class="sec8-links__box__video-link__item__hover">
+                                                <source src="<?php echo get_template_directory_uri(); ?>/assets/img/invest-karwia/video/Karwia_Video_Ceny-dzialek.mp4" type="video/mp4">
+                                            </video>
+                                            <div class="sec8-links__box__video-link__item__container">
+                                                <img src=" <?php echo get_template_directory_uri(); ?>/assets/img/sea-golf/home-page/icon-sec8-item-2.svg" alt="ikona" />
+                                                <?php if ($seagolf_sec9_second_box_title = get_sub_field('seagolf_sec9_second_box_title')) : ?>
+                                                    <h3 class="f-h3 f-h3--gold-medium "><?php echo $seagolf_sec9_second_box_title; ?></h3>
+                                                <?php endif; ?>
+                                                <?php if ($seagolf_sec9_second_box_text = get_sub_field('seagolf_sec9_second_box_text')) : ?>
+                                                    <p class="text-main text-main--white text-main--fw600"><?php echo $seagolf_sec9_second_box_text; ?></p>
+                                                <?php endif; ?>
+                                                <?php if ($seagolf_sec9_second_box_button = get_sub_field('seagolf_sec9_second_box_button')) : ?>
+                                                    <div class="btn"><?php echo $seagolf_sec9_second_box_button; ?></div>
+                                                <?php endif; ?>
+                                            </div>
+                                        </a>
+                                    <?php endif; ?>
                                 </div>
-                            </a>
-                        </div>
-                        <div class="sec8-links__box__video-link">
-                            <a href="<?php echo $first_link_box_sec4_hp_karwia; ?>" class="sec8-links__box__video-link__item video-last-link">
-                                <video playsinline="" muted="" loop="" preload="true" class="sec8-links__box__video-link__item__hover">
-                                    <source src="<?php echo get_template_directory_uri(); ?>/assets/img/invest-karwia/video/Karwia_Video_Finansowanie.mp4" type="video/mp4">
-                                </video>
-                                <div class="sec8-links__box__video-link__item__container">
-                                    <img src=" <?php echo get_template_directory_uri(); ?>/assets/img/sea-golf/home-page/icon-sec8-item-3.svg" alt="ikona" />
-                                    <h3 class="f-h3 f-h3--gold-medium ">Finansowanie</h3>
-                                    <p class="text-main text-main--white text-main--fw600">Dowiedz się,<br> dlaczego to się opłaca</p>
-                                    <div class="btn">ZOBACZ</div>
+                            <?php endwhile; ?>
+                        <?php endif; ?>
+                        <?php if (have_rows('seagolf_sec9_third_box')) : ?>
+                            <?php while (have_rows('seagolf_sec9_third_box')) :
+                                the_row(); ?>
+                                <div class="sec8-links__box__video-link">
+                                    <?php if ($seagolf_sec9_third_box_link = get_sub_field('seagolf_sec9_third_box_link')) : ?>
+                                        <a href=" <?php echo $seagolf_sec9_third_box_link; ?>" class="sec8-links__box__video-link__item video-last-link">
+                                            <video playsinline="" muted="" loop="" preload="true" class="sec8-links__box__video-link__item__hover">
+                                                <source src="<?php echo get_template_directory_uri(); ?>/assets/img/invest-karwia/video/Karwia_Video_Finansowanie.mp4" type="video/mp4">
+                                            </video>
+                                            <div class="sec8-links__box__video-link__item__container">
+                                                <img src=" <?php echo get_template_directory_uri(); ?>/assets/img/sea-golf/home-page/icon-sec8-item-3.svg" alt="ikona" />
+                                                <?php if ($seagolf_sec9_third_box_title = get_sub_field('seagolf_sec9_third_box_title')) : ?>
+                                                    <h3 class="f-h3 f-h3--gold-medium "><?php echo $seagolf_sec9_third_box_title; ?></h3>
+                                                <?php endif; ?>
+                                                <?php if ($seagolf_sec9_third_box_text = get_sub_field('seagolf_sec9_third_box_text')) : ?>
+                                                    <p class="text-main text-main--white text-main--fw600"><?php echo $seagolf_sec9_third_box_text; ?></p>
+                                                <?php endif; ?>
+                                                <?php if ($seagolf_sec9_third_box_button = get_sub_field('seagolf_sec9_third_box_button')) : ?>
+                                                    <div class="btn"><?php echo $seagolf_sec9_third_box_button; ?></div>
+                                                <?php endif; ?>
+                                            </div>
+                                        </a>
+                                    <?php endif; ?>
                                 </div>
-                            </a>
-                        </div>
+                            <?php endwhile; ?>
+                        <?php endif; ?>
                     </div>
                 </div>
             </div>
@@ -332,36 +372,19 @@ get_template_part('investitions/sea-golf/header');
                         <h4 class="f-h4 f-h4--f80 f-h4--black-dark">klientów</h4>
                         <div class="swiper">
                             <div class="swiper-wrapper">
-                                <div class="swiper-slide">
-                                    <div class="swiper-text text-main"><b>Jestem zadowolony z obsługi, jaką oferuje firma Saveinvest. Specjaliści bardzo sprawnie, szybko i terminowo zgromadzili wymagane dokumenty i uzyskali dla mojej działki warunki zabudowy.</b><br><br>Nie martwiłem się, w jaki sposób zdobyć dokumenty oraz dopełnić wszelkich formalności, ponieważ pracownicy Saveinvest wszystkim się zajęli. Kompetencja, rzetelność i doświadczenie – te trzy słowa najlepiej oddają jakość usług świadczonych przez firmę! </div>
-                                    <div class="swiper-name text-main text-main--fw700">Sebastian, Kijowice
-                                    </div>
-                                </div>
-                                <div class="swiper-slide">
-                                    <div class="swiper-text text-main"><b>2 Jestem zadowolony z obsługi, jaką oferuje firma Saveinvest. Specjaliści bardzo sprawnie, szybko i terminowo zgromadzili wymagane dokumenty i uzyskali dla mojej działki warunki zabudowy.</b><br>Nie martwiłem się, w jaki sposób zdobyć dokumenty oraz dopełnić wszelkic formalności, ponieważ pracownicy formalności, ponieważ pracownicy Saveinvest formalności, ponieważ pracownicy Saveinvestszystkim się zajęl trzy słowa najlepiej oddają jakość usług świadczonych przez firmę! </div>
-                                    <div class="swiper-name text-main text-main--fw700">Sebastian, Kijowice
-                                    </div>
-                                </div>
-                                <div class="swiper-slide">
-                                    <div class="swiper-text text-main"><b>3 Jestem zadowolony z obsługi, jaką oferuje firma Saveinvest. Specjaliści bardzo sprawnie, szybko i terminowo zgromadzili wymagane dokumenty i uzyskali dla mojej działki warunki zabudowy.</b><br>Nie martwiłem się, w jaki sposób zdobyć dokumenty oraz dopełnić wszelkich formalności, ponieważ pracownicy Saveinvest wszystkim się zajęli. Kompetencja, rzetelność i doświadczenie – te trzy słowa najlepiej oddają jakość usług świadczonych przez firmę! </div>
-                                    <div class="swiper-name text-main text-main--fw700">Sebastian, Kijowice
-                                    </div>
-                                </div>
-                                <div class="swiper-slide">
-                                    <div class="swiper-text text-main"><b>4 Jestem zadowolony z obsługi, jaką oferuje firma Saveinvest. Specjaliści bardzo sprawnie, szybko i terminowo zgromadzili wymagane dokumenty i uzyskali dla mojej działki warunki zabudowy.</b><br>Nie martwiłem się, w jaki sposób zdobyć dokumenty oraz dopełnić wszelkich formalności, ponieważ pracownicy Saveinvest wszystkim się zajęli. Kompetencja, rzetelność i doświadczenie – te trzy słowa najlepiej oddają jakość usług świadczonych przez firmę! </div>
-                                    <div class="swiper-name text-main text-main--fw700">Sebastian, Kijowice
-                                    </div>
-                                </div>
-                                <div class="swiper-slide">
-                                    <div class="swiper-text text-main"><b>5 Jestem zadowolony z obsługi, jaką oferuje firma Saveinvest. Specjaliści bardzo sprawnie, szybko i terminowo zgromadzili wymagane dokumenty i uzyskali dla mojej działki warunki zabudowy.</b><br>Nie martwiłem się, w jaki sposób zdobyć dokumenty oraz dopełnić wszelkich formalności, ponieważ pracownicy Saveinvest wszystkim się zajęli. Kompetencja, rzetelność i doświadczenie – te trzy słowa najlepiej oddają jakość usług świadczonych przez firmę! </div>
-                                    <div class="swiper-name text-main text-main--fw700">Sebastian, Kijowice
-                                    </div>
-                                </div>
-                                <div class="swiper-slide">
-                                    <div class="swiper-text text-main"><b>6 Jestem zadowolony z obsługi, jaką oferuje firma Saveinvest. Specjaliści bardzo sprawnie, szybko i terminowo zgromadzili wymagane dokumenty i uzyskali dla mojej działki warunki zabudowy.</b><br>Nie martwiłem się, w jaki sposób zdobyć dokumenty oraz dopełnić wszelkich formalności, ponieważ pracownicy Saveinvest wszystkim się zajęli. Kompetencja, rzetelność i doświadczenie – te trzy słowa najlepiej oddają jakość usług świadczonych przez firmę! </div>
-                                    <div class="swiper-name text-main text-main--fw700">Sebastian, Kijowice
-                                    </div>
-                                </div>
+                                <?php if (have_rows('seagolf_sec10_box_opinions')) : ?>
+                                    <?php while (have_rows('seagolf_sec10_box_opinions')) :
+                                        the_row(); ?>
+                                        <div class="swiper-slide">
+                                            <?php if ($seagolf_sec10_box_opinions_text = get_sub_field('seagolf_sec10_box_opinions_text')) : ?>
+                                                <div class="swiper-text text-main"> <?php echo $seagolf_sec10_box_opinions_text; ?></div>
+                                            <?php endif; ?>
+                                            <?php if ($seagolf_sec10_box_opinions_name = get_sub_field('seagolf_sec10_box_opinions_name')) : ?>
+                                                <div class="swiper-name text-main text-main--fw700"> <?php echo $seagolf_sec10_box_opinions_name; ?></div>
+                                            <?php endif; ?>
+                                        </div>
+                                    <?php endwhile; ?>
+                                <?php endif; ?>
                             </div>
                             <div class="sec9-testimonial__box__nav">
                                 <div class="swiper-pagination"></div>
@@ -375,13 +398,20 @@ get_template_part('investitions/sea-golf/header');
                     <div class="sec9-testimonial__company">
                         <img class="sec9-testimonial__company__icon" src=" <?php echo get_template_directory_uri(); ?>/assets/img/sea-golf/home-page/logo_home-page.png" alt="logo" />
                         <h4 class="f-h4 f-h4--f80 f-h4--black-dark">O firmie</h4>
-                        <div class="text-main"><b>Saveinvest to polska firma z 20-letnim doświadczeniem, której zaufało już ponad 1000 Klientów.</b><br><br>
-                            Firma jest właścicielem wszystkich oferowanych działek, których zakup finansowany jest z własnego kapitału.<br><br>
-                            Saveinvest tworzą eksperci rynku nieruchomości i koordynatorzy projektów inwestycyjnych, których publikacje można znaleźć na łamach wszystkich branżowych czasopism i portali.</div>
+                        <?php if ($seagolf_sec10_about_company_text = get_field('seagolf_sec10_about_company_text')) : ?>
+                            <div class="text-main"><?php echo $seagolf_sec10_about_company_text; ?></div>
+                        <?php endif; ?>
                         <div class="sec9-testimonial__company__icon-content">
-                            <img src=" <?php echo get_template_directory_uri(); ?>/assets/img/sea-golf/home-page/sec9-20year.png" alt="ikona" />
-                            <img src=" <?php echo get_template_directory_uri(); ?>/assets/img/sea-golf/home-page/sec9-1000.png" alt="ikona" />
-                            <img src=" <?php echo get_template_directory_uri(); ?>/assets/img/sea-golf/home-page/sec9-quality.png" alt="ikona" />
+                            <?php if (have_rows('seagolf_sec10_about_company_icons')) : ?>
+                                <?php while (have_rows('seagolf_sec10_about_company_icons')) :
+                                    the_row(); ?>
+                                    <?php
+                                    $seagolf_sec10_about_company_icons_img = get_sub_field('seagolf_sec10_about_company_icons_img');
+                                    if ($seagolf_sec10_about_company_icons_img) : ?>
+                                        <img src="<?php echo esc_url($seagolf_sec10_about_company_icons_img['url']); ?>" alt="<?php echo esc_attr($seagolf_sec10_about_company_icons_img['alt']); ?>" />
+                                    <?php endif; ?>
+                                <?php endwhile; ?>
+                            <?php endif; ?>
                         </div>
                     </div>
                 </div>

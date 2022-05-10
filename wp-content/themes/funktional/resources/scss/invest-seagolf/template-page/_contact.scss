@@ -8,6 +8,7 @@
         background-position: center;
         background-repeat: no-repeat;
         background-position-y: top;
+        background-size: contain;
         z-index: 1;
         &__form {
             position: relative;
@@ -45,11 +46,11 @@
             }
             &__border {
                 position: absolute;
-                width: calc(100% - 40px);
-                height: calc(100% - 40px);
                 top: 50%;
                 left: 50%;
                 transform: translate(-50%, -50%);
+                width: calc(100% - 40px);
+                height: calc(100% - 40px);
                 border: 1px solid #c4c4c445;
                 pointer-events: none;
                 z-index: 1;
@@ -57,9 +58,9 @@
         }
         &__sales-box {
             position: relative;
+            padding: 55px 60px 40px 90px;
             left: -15px;
             width: calc(100% + 30px);
-            padding: 55px 60px 40px 90px;
             height: 100%;
             background-color: $black-tint-grey;
             &__text {
@@ -72,7 +73,6 @@
                 height: auto;
                 display: flex;
                 border: 1px solid $gold-medium;
-
                 &__photo {
                     margin-top: -30px;
                     margin-bottom: 20px;
@@ -222,6 +222,7 @@
             }
         }
         @media (max-width: $xxxl) {
+            background-size: auto;
             &__sales-box {
                 .person-sales {
                     padding: 0 0 0 20px;
@@ -746,7 +747,6 @@
                             width: 12px;
                             height: 12px;
                         }
-
                     }
                     .swiper-button-next {
                         top: 22px;
@@ -839,6 +839,9 @@
                     }
                 }
             }
+        }
+        @media (max-width: $lg) {
+            margin-bottom: 80px;
         }
         @media (max-width: $md) {
             margin-top: 50px;

@@ -2,23 +2,22 @@
     .header {
         position: relative;
         top: 0px;
-        left: 0px;
         height: auto;
         width: 100%;
+        display: flex;
+        justify-content: center;
         &__text {
             position: absolute;
             padding: 0 15px;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
+            top: 35%;
             width: 100%;
             height: auto;
             .f-h1 {
                 text-align: center;
-                em {
-                    font-weight: 600;
-                }
             }
+        }
+        .video-home-page {
+            width: 100%;
         }
         &__scroller {
             position: absolute;
@@ -86,6 +85,11 @@
                         opacity: 0;
                     }
                 }
+            }
+        }
+        @media (max-width: $xxxl) {
+            .video-home-page {
+                width: fit-content;
             }
         }
     }
@@ -181,10 +185,10 @@
                 top: 50%;
                 left: 50%;
                 transform: translate(-50%, -50%);
-                background: #292827ce;
                 width: 140px;
                 height: 140px;
                 border-radius: 50%;
+                background: #292827ce;
                 pointer-events: none;
                 transition: all 0.3s;
                 &::after {
@@ -195,8 +199,8 @@
                     transform: translate(-50%, -50%);
                     width: 68%;
                     height: 68%;
-                    background: $gold-medium;
                     border-radius: 50%;
+                    background: $gold-medium;
                     transition: all 0.3s;
                 }
                 &::before {
@@ -251,8 +255,8 @@
         @media (max-width: $xl) {
             .row-backgorund {
                 position: relative;
-                background-color: $gold-tint-light;
                 padding-bottom: 70px;
+                background-color: $gold-tint-light;
                 &::after {
                     bottom: -42px;
                     width: 100px;
@@ -296,20 +300,15 @@
         position: relative;
         margin-top: 320px;
         height: 1640px;
-        background: url(../img/sea-golf/home-page/background-sec2.jpg);
+        background: linear-gradient(
+                180deg,
+                #1f3657 0%,
+                rgba(25, 81, 164, 0) 35%
+            ),
+            url(../img/sea-golf/home-page/background-sec2.jpg);
         background-position: center;
-        &::before {
-            content: "";
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 500px;
-            background: url(../img/sea-golf/home-page/sky-background-sec2.png);
-            background-repeat: no-repeat;
-            background-position: center;
-            background-size: cover;
-        }
+        background-repeat: no-repeat;
+        background-size: cover;
         &__content {
             position: relative;
             top: -125px;
@@ -404,8 +403,6 @@
                     position: absolute;
                     left: -35px;
                     top: 17%;
-                    width: 104%;
-                    height: 86%;
                     height: 33px;
                     width: 33px;
                     background: url(../img/sea-golf/home-page/RT-line-sec2.svg);
@@ -590,10 +587,10 @@
                 background-size: contain;
             }
             &__content {
+                padding: 65px 150px 70px 200px;
                 display: flex;
                 justify-content: center;
                 flex-wrap: wrap;
-                padding: 65px 150px 70px 200px;
                 gap: 50px 115px;
                 z-index: 1;
                 &__items {
@@ -732,10 +729,10 @@
             .row-text-rotate {
                 &::after {
                     bottom: 43px;
-                    width: 100px;
-                    height: 100px;
                     right: 0;
                     left: 50%;
+                    width: 100px;
+                    height: 100px;
                 }
             }
             &__text {
@@ -782,9 +779,9 @@
         overflow: hidden;
         &__photo {
             position: relative;
+            left: -190px;
             width: 1200px;
             height: 100%;
-            left: -190px;
             display: flex;
             align-items: center;
             img {
@@ -1024,6 +1021,9 @@
                 overflow: hidden;
                 cursor: pointer;
                 height: 600px;
+                &:nth-last-child(1){
+                    pointer-events: none;
+                }
                 &::before {
                     content: "";
                     position: relative;
@@ -1036,7 +1036,6 @@
                         #242424 0%,
                         rgba(36, 36, 36, 0.7) 100%
                     );
-                    // opacity: 0.9;
                     z-index: 1;
                 }
                 &:hover::before {
@@ -1260,14 +1259,15 @@
     .sec9-testimonial {
         margin-top: 200px;
         margin-bottom: 360px;
+        margin-bottom: 150px;
         @media (max-width: $lg) {
             margin-top: 90px;
         }
         &__box {
             position: relative;
             padding: 10px 0 35px 85px;
-            width: 100%;
             left: -15px;
+            width: 100%;
             height: auto;
             background: linear-gradient(
                 to right,

@@ -35,7 +35,7 @@
                     position: absolute;
                     top: 25.8%;
                     left: 8.4%;
-                    padding: 25px;
+                    padding: 25px 80px 25px 25px;
                     width: auto;
                     height: auto;
                     background: rgba(51, 49, 47, 0.7);
@@ -45,11 +45,11 @@
                         line-height: 37px;
                         b {
                             font-size: 36px;
-                            font-weight: 400;
-                            margin: 10px 0;
-                            display: block;
+                            font-weight: 300;
+                            line-height: 70px;
                             sup {
                                 line-height: 0px;
+                                font-size: 20px;
                             }
                         }
                     }

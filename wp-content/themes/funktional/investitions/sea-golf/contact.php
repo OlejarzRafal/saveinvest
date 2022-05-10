@@ -205,16 +205,24 @@ get_template_part('investitions/sea-golf/header');
             <div class="row">
                 <div class="col-xl-6">
                     <div class="sec2-info__about">
-                        <h2 class="f-h2 f-h2--f80 f-h2--black-dark">O firmie</h2>
-                        <div class="text-main"> Saveinvest to polska firma z 20-letnim doświadczeniem, której zaufało już ponad 1000 Klientów.
-                            <br><br>
-                            Firma jest właścicielem wszystkich oferowanych działek, których zakup finansowany jest z własnego kapitału.<br><br>
-                            Saveinvest tworzą eksperci rynku nieruchomości i koordynatorzy projektów inwestycyjnych, których publikacje można znaleźć na łamach wszystkich branżowych czasopism i portali.
-                        </div>
+                        <?php if ($title_about_sec4_contact_seagolf = get_field('title_about_sec4_contact_seagolf')) : ?>
+                            <h2 class="f-h2 f-h2--f80 f-h2--black-dark"> <?php echo $title_about_sec4_contact_seagolf; ?></h2>
+                        <?php endif; ?>
+                        <?php if ($text_about_sec4_contact_seagolf = get_field('text_about_sec4_contact_seagolf')) : ?>
+                            <div class="text-main"> <?php echo $text_about_sec4_contact_seagolf; ?>
+                            </div>
+                        <?php endif; ?>
                         <div class="sec2-info__about__icons">
-                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/sea-golf/contact/about-icon1.png" alt=" ikona 1000 zadowolonych klientów" />
-                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/sea-golf/contact/about-icon2.png" alt=" ikona 20 lat doświadcznia" />
-                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/sea-golf/contact/about-icon3.png" alt=" ikona 100% sprawdzonych gruntów" />
+                            <?php if (have_rows('icons_about_sec4_contact_seagolf')) : ?>
+                                <?php while (have_rows('icons_about_sec4_contact_seagolf')) :
+                                    the_row(); ?>
+                                    <?php
+                                    $img_icons_about_sec4_contact_seagolf = get_sub_field('img_icons_about_sec4_contact_seagolf');
+                                    if ($img_icons_about_sec4_contact_seagolf) : ?>
+                                        <img src="<?php echo esc_url($img_icons_about_sec4_contact_seagolf['url']); ?>" alt="<?php echo esc_attr($img_icons_about_sec4_contact_seagolf['alt']); ?>" />
+                                    <?php endif; ?>
+                                <?php endwhile; ?>
+                            <?php endif; ?>
                         </div>
                     </div>
                 </div>
@@ -224,28 +232,37 @@ get_template_part('investitions/sea-golf/header');
                             <div class="sec2-info__numbers__box__left">
                                 <div class="box-row">
                                     <div class="box-row__number">
-                                        <h1 class="f-h1 f-h1--gold-medium count percent" data-count="100">
-                                            0
-                                        </h1>&nbsp;
-                                        <h4 class="f-h4 f-h4--gold-medium  f-h4--f42">%</h4>
+                                        <?php if ($number1_sec6_contact_seagolf = get_field('number1_sec6_contact_seagolf')) : ?>
+                                            <h1 class="f-h1 f-h1--gold-medium count percent" data-count="<?php echo $number1_sec6_contact_seagolf; ?>">
+                                                0
+                                            </h1>&nbsp;
+                                        <?php endif; ?>
+                                        <?php if ($term1_sec6_contact_seagolf = get_field('term1_sec6_contact_seagolf')) : ?>
+                                            <h4 class="f-h4 f-h4--gold-medium  f-h4--f42"><?php echo $term1_sec6_contact_seagolf; ?></h4>
+                                        <?php endif; ?>
                                     </div>
-
-                                    <p class="text-main text-main--fw400 text-main--white">
-                                        sprawdzonych gruntów
-                                    </p>
+                                    <?php if ($text1_sec6_contact_seagolf = get_field('text1_sec6_contact_seagolf')) : ?>
+                                        <p class="text-main text-main--fw400 text-main--white"><?php echo $text1_sec6_contact_seagolf; ?></p>
+                                    <?php endif; ?>
                                 </div>
                             </div>
                             <div class="sec2-info__numbers__box__right">
                                 <div class="box-row">
                                     <div class="box-row__number">
-                                        <h1 class="f-h1 f-h1--gold-medium count percent" data-count="200">
-                                            0
-                                        </h1>&nbsp;
-                                        <h4 class="f-h4 f-h4--gold-medium  f-h4--f42"></h4>
+                                        <?php if ($number2_sec6_contact_seagolf = get_field('number2_sec6_contact_seagolf')) : ?>
+                                            <h1 class="f-h1 f-h1--gold-medium count percent" data-count="<?php echo $number2_sec6_contact_seagolf; ?>">
+                                                0
+                                            </h1>&nbsp;
+                                        <?php endif; ?>
+                                        <?php if ($term2_sec6_contact_seagolf = get_field('term2_sec6_contact_seagolf')) : ?>
+                                            <h4 class="f-h4 f-h4--gold-medium  f-h4--f42"><?php echo $term2_sec6_contact_seagolf; ?></h4>
+                                        <?php endif; ?>
                                     </div>
-                                    <p class="text-main text-main--fw400 text-main--white">
-                                        zaufanych partnerów
-                                    </p>
+                                    <?php if ($text2_sec6_contact_seagolf = get_field('text2_sec6_contact_seagolf')) : ?>
+                                        <p class="text-main text-main--fw400 text-main--white">
+                                            <?php echo $text2_sec6_contact_seagolf; ?>
+                                        </p>
+                                    <?php endif; ?>
                                 </div>
                             </div>
                         </div>
@@ -253,28 +270,39 @@ get_template_part('investitions/sea-golf/header');
                             <div class="sec2-info__numbers__box__left">
                                 <div class="box-row">
                                     <div class="box-row__number">
-                                        <h1 class="f-h1 f-h1--gold-medium count percent" data-count="1000">
-                                            0
-                                        </h1>&nbsp;
-                                        <h4 class="f-h4 f-h4--gold-medium  f-h4--f42"></h4>
+                                        <?php if ($number3_sec6_contact_seagolf = get_field('number3_sec6_contact_seagolf')) : ?>
+                                            <h1 class="f-h1 f-h1--gold-medium count percent" data-count="<?php echo $number3_sec6_contact_seagolf; ?>">
+                                                0
+                                            </h1>&nbsp;
+                                        <?php endif; ?>
+                                        <?php if ($term3_sec6_contact_seagolf = get_field('term3_sec6_contact_seagolf')) : ?>
+                                            <h4 class="f-h4 f-h4--gold-medium  f-h4--f42"><?php echo $term3_sec6_contact_seagolf; ?></h4>
+                                        <?php endif; ?>
                                     </div>
-
-                                    <p class="text-main text-main--fw400 text-main--white">
-                                        zadowolonych klientów
-                                    </p>
+                                    <?php if ($text3_sec6_contact_seagolf = get_field('text3_sec6_contact_seagolf')) : ?>
+                                        <p class="text-main text-main--fw400 text-main--white">
+                                            <?php echo $text3_sec6_contact_seagolf; ?>
+                                        </p>
+                                    <?php endif; ?>
                                 </div>
                             </div>
                             <div class="sec2-info__numbers__box__right">
                                 <div class="box-row">
                                     <div class="box-row__number">
-                                        <h1 class="f-h1 f-h1--gold-medium count percent" data-count="2000">
-                                            0
-                                        </h1>&nbsp;
-                                        <h4 class="f-h4 f-h4--gold-medium  f-h4--f42"></h4>
+                                        <?php if ($number4_sec6_contact_seagolf = get_field('number4_sec6_contact_seagolf')) : ?>
+                                            <h1 class="f-h1 f-h1--gold-medium count percent" data-count="<?php echo $number4_sec6_contact_seagolf; ?>">
+                                                0
+                                            </h1>&nbsp;
+                                        <?php endif; ?>
+                                        <?php if ($term4_sec6_contact_seagolf = get_field('term4_sec6_contact_seagolf')) : ?>
+                                            <h4 class="f-h4 f-h4--gold-medium  f-h4--f42"><?php echo $term4_sec6_contact_seagolf; ?></h4>
+                                        <?php endif; ?>
                                     </div>
-                                    <p class="text-main text-main--fw400 text-main--white">
-                                        eksperckich publikacji
-                                    </p>
+                                    <?php if ($text4_sec6_contact_seagolf = get_field('text4_sec6_contact_seagolf')) : ?>
+                                        <p class="text-main text-main--fw400 text-main--white">
+                                            <?php echo $text4_sec6_contact_seagolf; ?>
+                                        </p>
+                                    <?php endif; ?>
                                 </div>
                             </div>
                         </div>
@@ -282,15 +310,20 @@ get_template_part('investitions/sea-golf/header');
                             <div class="sec2-info__numbers__box__center">
                                 <div class="box-row">
                                     <div class="box-row__number">
-                                        <h1 class="f-h1 f-h1--gold-medium count percent" data-count="1000000">
-                                            0
-                                        </h1>&nbsp;
-                                        <h4 class="f-h4 f-h4--gold-medium  f-h4--f42">m2</h4>
+                                        <?php if ($number5_sec6_contact_seagolf = get_field('number5_sec6_contact_seagolf')) : ?>
+                                            <h1 class="f-h1 f-h1--gold-medium count percent" data-count="<?php echo $number5_sec6_contact_seagolf; ?>">
+                                                0
+                                            </h1>&nbsp;
+                                        <?php endif; ?>
+                                        <?php if ($term5_sec6_contact_seagolf = get_field('term5_sec6_contact_seagolf')) : ?>
+                                            <h4 class="f-h4 f-h4--gold-medium  f-h4--f42"><?php echo $term5_sec6_contact_seagolf; ?></h4>
+                                        <?php endif; ?>
                                     </div>
-
-                                    <p class="text-main text-main--fw400 text-main--white">
-                                        działek
-                                    </p>
+                                    <?php if ($text5_sec6_contact_seagolf = get_field('text5_sec6_contact_seagolf')) : ?>
+                                        <p class="text-main text-main--fw400 text-main--white">
+                                            <?php echo $text5_sec6_contact_seagolf; ?>
+                                        </p>
+                                    <?php endif; ?>
                                 </div>
                             </div>
                         </div>
@@ -298,15 +331,20 @@ get_template_part('investitions/sea-golf/header');
                             <div class="sec2-info__numbers__box__center">
                                 <div class="box-row">
                                     <div class="box-row__number">
-                                        <h1 class="f-h1 f-h1--gold-medium count percent" data-count="200">
-                                            0
-                                        </h1>&nbsp;
-                                        <h4 class="f-h4 f-h4--gold-medium  f-h4--f42">mln</h4>
+                                        <?php if ($number6_sec6_contact_seagolf = get_field('number6_sec6_contact_seagolf')) : ?>
+                                            <h1 class="f-h1 f-h1--gold-medium count percent" data-count="<?php echo $number6_sec6_contact_seagolf; ?>">
+                                                0
+                                            </h1>&nbsp;
+                                        <?php endif; ?>
+                                        <?php if ($term6_sec6_contact_seagolf = get_field('term6_sec6_contact_seagolf')) : ?>
+                                            <h4 class="f-h4 f-h4--gold-medium  f-h4--f42"><?php echo $term6_sec6_contact_seagolf; ?></h4>
+                                        <?php endif; ?>
                                     </div>
-
-                                    <p class="text-main text-main--fw400 text-main--white">
-                                        kapitału w gruntach
-                                    </p>
+                                    <?php if ($text6_sec6_contact_seagolf = get_field('text6_sec6_contact_seagolf')) : ?>
+                                        <p class="text-main text-main--fw400 text-main--white">
+                                            <?php echo $text6_sec6_contact_seagolf; ?>
+                                        </p>
+                                    <?php endif; ?>
                                 </div>
                             </div>
                         </div>
@@ -322,7 +360,7 @@ get_template_part('investitions/sea-golf/header');
         <div class="container">
             <div class="row">
                 <div class="offset-xxxl-1 col-xl-1">
-                    <img  class="sec4-testimonial__icon" src="<?php echo get_template_directory_uri(); ?>/assets/img/sea-golf/contact/testimonial-icon.svg" alt="ikona" />
+                    <img class="sec4-testimonial__icon" src="<?php echo get_template_directory_uri(); ?>/assets/img/sea-golf/contact/testimonial-icon.svg" alt="ikona" />
                 </div>
                 <div class="col-xxxl-3 col-xl-4">
                     <div class="sec4-testimonial__box">
@@ -337,36 +375,20 @@ get_template_part('investitions/sea-golf/header');
                 <div class="col-xl-6">
                     <div class="sec4-testimonial__swiper swiper">
                         <div class="swiper-wrapper">
-                            <div class="swiper-slide">
-                                <div class="swiper-text text-main"><b>Jestem zadowolony z obsługi, jaką oferuje firma Saveinvest. Specjaliści bardzo sprawnie, szybko i terminowo zgromadzili wymagane dokumenty i uzyskali dla mojej działki warunki zabudowy.</b><br><br>Nie martwiłem się, w jaki sposób zdobyć dokumenty oraz dopełnić wszelkich formalności, ponieważ pracownicy Saveinvest wszystkim się zajęli. Kompetencja, rzetelność i doświadczenie – te trzy słowa najlepiej oddają jakość usług świadczonych przez firmę! </div>
-                                <div class="swiper-name text-main text-main--fw700">Sebastian, Kijowice
-                                </div>
-                            </div>
-                            <div class="swiper-slide">
-                                <div class="swiper-text text-main"><b>2 Jestem zadowolony z obsługi, jaką oferuje firma Saveinvest. Specjaliści bardzo sprawnie, szybko i terminowo zgromadzili wymagane dokumenty i uzyskali dla mojej działki warunki zabudowy.</b><br>Nie martwiłem się, w jaki sposób zdobyć dokumenty oraz dopełnić wszelkic formalności, ponieważ pracownicy formalności, ponieważ pracownicy Saveinvest formalności, ponieważ pracownicy Saveinvestszystkim się zajęl trzy słowa najlepiej oddają jakość usług świadczonych przez firmę! </div>
-                                <div class="swiper-name text-main text-main--fw700">Sebastian, Kijowice
-                                </div>
-                            </div>
-                            <div class="swiper-slide">
-                                <div class="swiper-text text-main"><b>3 Jestem zadowolony z obsługi, jaką oferuje firma Saveinvest. Specjaliści bardzo sprawnie, szybko i terminowo zgromadzili wymagane dokumenty i uzyskali dla mojej działki warunki zabudowy.</b><br>Nie martwiłem się, w jaki sposób zdobyć dokumenty oraz dopełnić wszelkich formalności, ponieważ pracownicy Saveinvest wszystkim się zajęli. Kompetencja, rzetelność i doświadczenie – te trzy słowa najlepiej oddają jakość usług świadczonych przez firmę! </div>
-                                <div class="swiper-name text-main text-main--fw700">Sebastian, Kijowice
-                                </div>
-                            </div>
-                            <div class="swiper-slide">
-                                <div class="swiper-text text-main"><b>4 Jestem zadowolony z obsługi, jaką oferuje firma Saveinvest. Specjaliści bardzo sprawnie, szybko i terminowo zgromadzili wymagane dokumenty i uzyskali dla mojej działki warunki zabudowy.</b><br>Nie martwiłem się, w jaki sposób zdobyć dokumenty oraz dopełnić wszelkich formalności, ponieważ pracownicy Saveinvest wszystkim się zajęli. Kompetencja, rzetelność i doświadczenie – te trzy słowa najlepiej oddają jakość usług świadczonych przez firmę! </div>
-                                <div class="swiper-name text-main text-main--fw700">Sebastian, Kijowice
-                                </div>
-                            </div>
-                            <div class="swiper-slide">
-                                <div class="swiper-text text-main"><b>5 Jestem zadowolony z obsługi, jaką oferuje firma Saveinvest. Specjaliści bardzo sprawnie, szybko i terminowo zgromadzili wymagane dokumenty i uzyskali dla mojej działki warunki zabudowy.</b><br>Nie martwiłem się, w jaki sposób zdobyć dokumenty oraz dopełnić wszelkich formalności, ponieważ pracownicy Saveinvest wszystkim się zajęli. Kompetencja, rzetelność i doświadczenie – te trzy słowa najlepiej oddają jakość usług świadczonych przez firmę! </div>
-                                <div class="swiper-name text-main text-main--fw700">Sebastian, Kijowice
-                                </div>
-                            </div>
-                            <div class="swiper-slide">
-                                <div class="swiper-text text-main"><b>6 Jestem zadowolony z obsługi, jaką oferuje firma Saveinvest. Specjaliści bardzo sprawnie, szybko i terminowo zgromadzili wymagane dokumenty i uzyskali dla mojej działki warunki zabudowy.</b><br>Nie martwiłem się, w jaki sposób zdobyć dokumenty oraz dopełnić wszelkich formalności, ponieważ pracownicy Saveinvest wszystkim się zajęli. Kompetencja, rzetelność i doświadczenie – te trzy słowa najlepiej oddają jakość usług świadczonych przez firmę! </div>
-                                <div class="swiper-name text-main text-main--fw700">Sebastian, Kijowice
-                                </div>
-                            </div>
+                            <?php if (have_rows('testimonial_sec7_contact_seagolf')) : ?>
+                                <?php while (have_rows('testimonial_sec7_contact_seagolf')) :
+                                    the_row(); ?>
+                                    <div class="swiper-slide">
+                                        <?php if ($testimonial_sec7_contact_seagolf_text = get_sub_field('testimonial_sec7_contact_seagolf_text')) : ?>
+                                            <div class="swiper-text text-main"><?php echo $testimonial_sec7_contact_seagolf_text; ?></div>
+                                        <?php endif; ?>
+                                        <?php if ($testimonial_sec7_contact_seagolf_name = get_sub_field('testimonial_sec7_contact_seagolf_name')) : ?>
+                                            <div class="swiper-name text-main text-main--fw700"><?php echo $testimonial_sec7_contact_seagolf_name; ?>
+                                            </div>
+                                        <?php endif; ?>
+                                    </div>
+                                <?php endwhile; ?>
+                            <?php endif; ?>
                         </div>
                     </div>
                 </div>

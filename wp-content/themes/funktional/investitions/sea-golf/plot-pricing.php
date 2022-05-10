@@ -104,10 +104,11 @@ $PlotsFront->getScriptsAndStyles('Resort Sea&golf');
         <!-- ALL -->
         <div class="plot-sectors__all">
             <div data-plots-sectors>
-                <div class="plot-sectors__desktop">
-                    <div class="plot-sectors__desktop__apla">
-                        <div class="text-main text-main--white">Sprawdź ceny działek<b>500 000 zł za 700 m<sup>2</sup></b>Wybierz najkorzystniejszą opcję</div>
-                    </div>
+                <div class="plot-sectors__desktop"><?php if ($sg_pricing_header_text = get_field('sg_pricing_header_text')) : ?>
+                        <div class="plot-sectors__desktop__apla">
+                            <div class="text-main text-main--white"><?php echo $sg_pricing_header_text; ?></div>
+                        </div>
+                    <?php endif; ?>
                     <img class="plot-sectors__img" src="<?= get_theme_file_uri('/investitions/sea-golf/assets/sectors/desktop/All-desktop.jpg') ?>">
                     <?= file_get_contents(get_theme_file_path('/investitions/sea-golf/assets/sectors/desktop/All-desktop.svg')) ?>
                 </div>
@@ -187,10 +188,12 @@ $PlotsFront->getScriptsAndStyles('Resort Sea&golf');
                     <div class="row">
                         <div class="col-xl-10 col-lg-12">
                             <div class="plots-list__header__desc">
-                                <h2 class="f-h2 f-h2--black-dark">Lista działek</h2>
-                                <div class="text-main">
-                                    Do ceny netto należy doliczyć 23% podatku VAT. Przedsiębiorca otrzymuje zwrot podatku VAT w ciągu 30 lub 60 dni od wystąpienia o zwrot do urzędu skarbowego. Nakłady inwestycyjne związane z budową basenu i części rekreacyjnej oraz utwardzeniem drogi wewnętrznej zostaną podzielone na wszystkich właścicieli działek.
-                                </div>
+                                <?php if ($sg_pricing_title = get_field('sg_pricing_title')) : ?>
+                                    <h2 class="f-h2 f-h2--black-dark"> <?php echo $sg_pricing_title; ?></h2>
+                                <?php endif; ?>
+                                <?php if ($sg_pricing_text = get_field('sg_pricing_text')) : ?>
+                                    <div class="text-main"><?php echo $sg_pricing_text; ?></div>
+                                <?php endif; ?>
                             </div>
                         </div>
                         <div class="col-xl-2 col-lg-0">

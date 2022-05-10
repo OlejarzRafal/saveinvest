@@ -1,10 +1,6 @@
 footer {
-    margin-top: 250px;
-    @media (max-width: $lg) {
-        margin-top: 100px;
-    }
-
     .footer-top {
+        padding-top: 250px;
         position: relative;
         display: flex;
         justify-content: center;
@@ -14,7 +10,7 @@ footer {
             content: "";
             position: absolute;
             left: 50%;
-            bottom: -75px;
+            bottom: -335px;
             transform: translate(-50%, 0%) rotate(0deg);
             width: 175px;
             height: 175px;
@@ -29,30 +25,19 @@ footer {
             width: 100%;
             height: 650px;
             overflow: hidden;
-          
-            // background: url(../img/sea-golf/footer/paralax-footer.jpg);
-            // background-attachment: fixed;
-            // background-position: center;
-            // background-repeat: no-repeat;
-            // background-size: cover;
+            display: flex;
+            justify-content: center;
             &__box {
                 position: absolute;
-                // background: url(../img/sea-golf/footer/paralax-footer.jpg);
                 top: 0;
-                // left: 50%;
-                // transform: translateX(-50%);
-                // height: 100%;
-                // min-width: 1920px;
-                // height: fit-content;
-                width: 100%;
+                min-width: 1955px;
                 height: 120%;
-                // z-index: -1;
             }
         }
         &__box {
             position: absolute;
             left: 50%;
-            top: -85px;
+            top: 165px;
             transform: translate(-50%, 0%);
             width: 400px;
             height: 400px;
@@ -96,14 +81,17 @@ footer {
         }
         @media (max-width: $lg) {
             height: 500px;
+            padding-top: 5px;
             &::after {
                 bottom: -42px;
                 width: 100px;
                 height: 100px;
             }
             &__parallax {
+                height: 490px;
                 &__box {
-                    min-width: 1300px;
+                    min-width: 1000px;
+                    height: 140%;
                 }
             }
             &__box {
@@ -121,7 +109,7 @@ footer {
         }
     }
     .footer {
-        margin-top: 155px;
+        margin-top: 400px;
         padding: 80px 0 55px;
         width: 100%;
         height: auto;

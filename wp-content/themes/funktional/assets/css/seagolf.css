@@ -505,6 +505,10 @@ sup {
   line-height: 0;
 }
 
+em {
+  font-weight: 600;
+}
+
 .container {
   width: 100%;
   padding-right: 15px;
@@ -3529,25 +3533,27 @@ sup {
 .sg-frontpage .header {
   position: relative;
   top: 0px;
-  left: 0px;
   height: auto;
   width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 .sg-frontpage .header__text {
   position: absolute;
   padding: 0 15px;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
+  top: 35%;
   width: 100%;
   height: auto;
 }
 .sg-frontpage .header__text .f-h1 {
   text-align: center;
 }
-.sg-frontpage .header__text .f-h1 em {
-  font-weight: 600;
+.sg-frontpage .header .video-home-page {
+  width: 100%;
 }
 .sg-frontpage .header__scroller {
   position: absolute;
@@ -3648,6 +3654,13 @@ sup {
     -webkit-transform: translate(-50%, 0%);
             transform: translate(-50%, 0%);
     opacity: 0;
+  }
+}
+@media (max-width: 1679px) {
+  .sg-frontpage .header .video-home-page {
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
   }
 }
 .sg-frontpage .header-text-gold {
@@ -3752,10 +3765,10 @@ sup {
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
-  background: #292827ce;
   width: 140px;
   height: 140px;
   border-radius: 50%;
+  background: #292827ce;
   pointer-events: none;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
@@ -3769,8 +3782,8 @@ sup {
           transform: translate(-50%, -50%);
   width: 68%;
   height: 68%;
-  background: #B79763;
   border-radius: 50%;
+  background: #B79763;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
 }
@@ -3828,8 +3841,8 @@ sup {
 @media (max-width: 1199px) {
   .sg-frontpage .sec1-video .row-backgorund {
     position: relative;
-    background-color: #F4F1E5;
     padding-bottom: 70px;
+    background-color: #F4F1E5;
   }
   .sg-frontpage .sec1-video .row-backgorund::after {
     bottom: -42px;
@@ -3871,19 +3884,10 @@ sup {
   position: relative;
   margin-top: 320px;
   height: 1640px;
-  background: url(../img/sea-golf/home-page/background-sec2.jpg);
+  background: -webkit-gradient(linear, left top, left bottom, from(#1f3657), color-stop(35%, rgba(25, 81, 164, 0))), url(../img/sea-golf/home-page/background-sec2.jpg);
+  background: linear-gradient(180deg, #1f3657 0%, rgba(25, 81, 164, 0) 35%), url(../img/sea-golf/home-page/background-sec2.jpg);
   background-position: center;
-}
-.sg-frontpage .sec2-info::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 500px;
-  background: url(../img/sea-golf/home-page/sky-background-sec2.png);
   background-repeat: no-repeat;
-  background-position: center;
   background-size: cover;
 }
 .sg-frontpage .sec2-info__content {
@@ -3998,8 +4002,6 @@ sup {
   position: absolute;
   left: -35px;
   top: 17%;
-  width: 104%;
-  height: 86%;
   height: 33px;
   width: 33px;
   background: url(../img/sea-golf/home-page/RT-line-sec2.svg);
@@ -4218,6 +4220,7 @@ sup {
   background-size: contain;
 }
 .sg-frontpage .sec3-info__box__content {
+  padding: 65px 150px 70px 200px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -4226,7 +4229,6 @@ sup {
           justify-content: center;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  padding: 65px 150px 70px 200px;
   gap: 50px 115px;
   z-index: 1;
 }
@@ -4378,10 +4380,10 @@ sup {
 @media (max-width: 991px) {
   .sg-frontpage .sec3-info .row-text-rotate::after {
     bottom: 43px;
-    width: 100px;
-    height: 100px;
     right: 0;
     left: 50%;
+    width: 100px;
+    height: 100px;
   }
   .sg-frontpage .sec3-info__text {
     margin-top: 40px;
@@ -4421,9 +4423,9 @@ sup {
 .sg-frontpage .sec4-about__photo,
 .sg-frontpage .sec6-price__photo {
   position: relative;
+  left: -190px;
   width: 1200px;
   height: 100%;
-  left: -190px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -4709,6 +4711,9 @@ sup {
   cursor: pointer;
   height: 600px;
 }
+.sg-frontpage .sec8-links__box__video-link:nth-last-child(1) {
+  pointer-events: none;
+}
 .sg-frontpage .sec8-links__box__video-link::before {
   content: "";
   position: relative;
@@ -4915,6 +4920,7 @@ sup {
 .sg-frontpage .sec9-testimonial {
   margin-top: 200px;
   margin-bottom: 360px;
+  margin-bottom: 150px;
 }
 @media (max-width: 991px) {
   .sg-frontpage .sec9-testimonial {
@@ -4924,8 +4930,8 @@ sup {
 .sg-frontpage .sec9-testimonial__box {
   position: relative;
   padding: 10px 0 35px 85px;
-  width: 100%;
   left: -15px;
+  width: 100%;
   height: auto;
   background: -webkit-gradient(linear, left top, right top, color-stop(97%, #F4F1E5), color-stop(97%, transparent));
   background: linear-gradient(to right, #F4F1E5 97%, transparent 97%);
@@ -5761,6 +5767,7 @@ sup {
   height: 1510px;
   background: url(../img/sea-golf/about/sec4-background.jpg);
   background-position: center;
+  background-repeat: no-repeat;
 }
 .sg-about .sec4-slider__ball {
   position: absolute;
@@ -6037,6 +6044,11 @@ sup {
   }
   .sg-about .sec4-slider__slider-nav {
     top: 85px;
+  }
+}
+@media (max-width: 991px) {
+  .sg-about .sec6-info {
+    margin-bottom: 80px;
   }
 }
 
@@ -6352,6 +6364,9 @@ sup {
 .sg-localisation .sec2-info .f-h3 {
   text-align: center;
 }
+.sg-localisation .sec2-info .f-h3 em {
+  font-weight: 600;
+}
 .sg-localisation .sec2-info::before {
   content: "";
   position: absolute;
@@ -6603,6 +6618,7 @@ sup {
 @media (max-width: 991px) {
   .sg-localisation .sec4-map {
     margin-top: 40px;
+    margin-bottom: 80px;
   }
 }
 
@@ -6611,16 +6627,13 @@ sup {
   min-height: 920px;
   width: 100%;
   background: url(../img/sea-golf/gallery/background.jpg);
-  background-size: auto;
+  background-size: contain;
   background-repeat: no-repeat;
   background-position: center top;
 }
 .sg-gallery .sg-gallery-seagolf__title {
   position: relative;
-  left: 50%;
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
-  margin-top: 635px;
+  margin: 635px auto 0;
   padding: 20px;
   width: 74%;
   background-color: #33312F;
@@ -6881,6 +6894,9 @@ sup {
   background-repeat: no-repeat;
 }
 @media (max-width: 1679px) {
+  .sg-gallery .sg-gallery-seagolf {
+    background-size: auto;
+  }
   .sg-gallery .sg-gallery-seagolf__title h5 {
     width: 83%;
   }
@@ -6978,6 +6994,7 @@ sup {
   background-position: center;
   background-repeat: no-repeat;
   background-position-y: top;
+  background-size: contain;
   z-index: 1;
 }
 .sg-contact .sec1-contact-sg__form {
@@ -7017,21 +7034,21 @@ sup {
 }
 .sg-contact .sec1-contact-sg__form__border {
   position: absolute;
-  width: calc(100% - 40px);
-  height: calc(100% - 40px);
   top: 50%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
+  width: calc(100% - 40px);
+  height: calc(100% - 40px);
   border: 1px solid #c4c4c445;
   pointer-events: none;
   z-index: 1;
 }
 .sg-contact .sec1-contact-sg__sales-box {
   position: relative;
+  padding: 55px 60px 40px 90px;
   left: -15px;
   width: calc(100% + 30px);
-  padding: 55px 60px 40px 90px;
   height: 100%;
   background-color: #F1F1EF;
 }
@@ -7259,6 +7276,9 @@ sup {
   background-size: contain;
 }
 @media (max-width: 1679px) {
+  .sg-contact .sec1-contact-sg {
+    background-size: auto;
+  }
   .sg-contact .sec1-contact-sg__sales-box .person-sales {
     padding: 0 0 0 20px;
   }
@@ -7935,6 +7955,11 @@ sup {
   }
   .sg-contact .sec5-location-seagolf__content .locat-info__data-person {
     width: 51%;
+  }
+}
+@media (max-width: 991px) {
+  .sg-contact .sec5-location-seagolf {
+    margin-bottom: 80px;
   }
 }
 @media (max-width: 767px) {
@@ -8709,6 +8734,11 @@ sup {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
 }
+@media (max-width: 991px) {
+  .plots-list .plots-bottom-info {
+    margin-bottom: 80px;
+  }
+}
 @media (max-width: 767px) {
   .plots-list .plots-bottom-info {
     margin-top: 50px;
@@ -9119,7 +9149,7 @@ sup {
   position: absolute;
   top: 25.8%;
   left: 8.4%;
-  padding: 25px;
+  padding: 25px 80px 25px 25px;
   width: auto;
   height: auto;
   background: rgba(51, 49, 47, 0.7);
@@ -9133,13 +9163,13 @@ sup {
 .sea-golf-template-plot-pricing .plots-map .plot-sectors__desktop__apla .text-main b,
 .sea-golf-template-plot-pricing .plots-map .plot-sector__desktop__apla .text-main b {
   font-size: 36px;
-  font-weight: 400;
-  margin: 10px 0;
-  display: block;
+  font-weight: 300;
+  line-height: 70px;
 }
 .sea-golf-template-plot-pricing .plots-map .plot-sectors__desktop__apla .text-main b sup,
 .sea-golf-template-plot-pricing .plots-map .plot-sector__desktop__apla .text-main b sup {
   line-height: 0px;
+  font-size: 20px;
 }
 @media (max-width: 1199px) {
   .sea-golf-template-plot-pricing .plots-map .plot-sectors__desktop__apla,
@@ -9307,10 +9337,152 @@ sup {
           flex-direction: column;
   width: 100%;
 }
+.seagolf-loader .logo-wrap svg .top-wave {
+  -webkit-transform: translateZ(0px) rotateX(0deg) rotateY(0deg) translateX(10px) translateY(0px);
+          transform: translateZ(0px) rotateX(0deg) rotateY(0deg) translateX(10px) translateY(0px);
+  -webkit-animation: top-wave 2s infinite cubic-bezier(0.74, 0.54, 0.73, 1.16);
+          animation: top-wave 2s infinite cubic-bezier(0.74, 0.54, 0.73, 1.16);
+}
+.seagolf-loader .logo-wrap svg .center-wave {
+  -webkit-transform: translateZ(0px) rotateX(0deg) rotateY(0deg) translateX(10px) translateY(2px);
+          transform: translateZ(0px) rotateX(0deg) rotateY(0deg) translateX(10px) translateY(2px);
+  -webkit-animation: center-wave 2s infinite cubic-bezier(0.74, 0.54, 0.73, 1.16);
+          animation: center-wave 2s infinite cubic-bezier(0.74, 0.54, 0.73, 1.16);
+  -webkit-animation-delay: 0.25s;
+          animation-delay: 0.25s;
+}
+.seagolf-loader .logo-wrap svg .bottom-wave {
+  -webkit-transform: translateZ(0px) rotateX(0deg) rotateY(0deg) translateX(10px) translateY(4px);
+          transform: translateZ(0px) rotateX(0deg) rotateY(0deg) translateX(10px) translateY(4px);
+  -webkit-animation: bottom-wave 2s infinite cubic-bezier(0.74, 0.54, 0.73, 1.16);
+          animation: bottom-wave 2s infinite cubic-bezier(0.74, 0.54, 0.73, 1.16);
+  -webkit-animation-delay: 0.5s;
+          animation-delay: 0.5s;
+}
+.seagolf-loader .logo-wrap svg .ball {
+  -webkit-transform: translateZ(0px) rotateX(0deg) rotateY(0deg) translateX(10px) translateY(0px);
+          transform: translateZ(0px) rotateX(0deg) rotateY(0deg) translateX(10px) translateY(0px);
+  -webkit-animation: ball 2s infinite cubic-bezier(0.74, 0.54, 0.73, 1.16);
+          animation: ball 2s infinite cubic-bezier(0.74, 0.54, 0.73, 1.16);
+  -webkit-animation-delay: 0.2s;
+          animation-delay: 0.2s;
+}
 .seagolf-loader .f-h4 {
   text-align: center;
-  margin-top: 80px;
+  margin: 80px 15px 0 15px;
   line-height: 46px;
+}
+@-webkit-keyframes top-wave {
+  0% {
+    -webkit-transform: translateZ(0px) rotateX(0deg) rotateY(0deg) translateX(10px) translateY(0px);
+            transform: translateZ(0px) rotateX(0deg) rotateY(0deg) translateX(10px) translateY(0px);
+  }
+  50% {
+    -webkit-transform: translateZ(0px) rotateX(0) rotateY(0) translateX(-10px) translateY(0px);
+            transform: translateZ(0px) rotateX(0) rotateY(0) translateX(-10px) translateY(0px);
+  }
+  100% {
+    -webkit-transform: translateZ(0px) rotateX(0deg) rotateY(0deg) translateX(10px) translateY(0px);
+            transform: translateZ(0px) rotateX(0deg) rotateY(0deg) translateX(10px) translateY(0px);
+  }
+}
+@keyframes top-wave {
+  0% {
+    -webkit-transform: translateZ(0px) rotateX(0deg) rotateY(0deg) translateX(10px) translateY(0px);
+            transform: translateZ(0px) rotateX(0deg) rotateY(0deg) translateX(10px) translateY(0px);
+  }
+  50% {
+    -webkit-transform: translateZ(0px) rotateX(0) rotateY(0) translateX(-10px) translateY(0px);
+            transform: translateZ(0px) rotateX(0) rotateY(0) translateX(-10px) translateY(0px);
+  }
+  100% {
+    -webkit-transform: translateZ(0px) rotateX(0deg) rotateY(0deg) translateX(10px) translateY(0px);
+            transform: translateZ(0px) rotateX(0deg) rotateY(0deg) translateX(10px) translateY(0px);
+  }
+}
+@-webkit-keyframes center-wave {
+  0% {
+    -webkit-transform: translateZ(0px) rotateX(0deg) rotateY(0deg) translateX(10px) translateY(2px);
+            transform: translateZ(0px) rotateX(0deg) rotateY(0deg) translateX(10px) translateY(2px);
+  }
+  50% {
+    -webkit-transform: translateZ(0px) rotateX(0) rotateY(0) translateX(-10px) translateY(2px);
+            transform: translateZ(0px) rotateX(0) rotateY(0) translateX(-10px) translateY(2px);
+  }
+  100% {
+    -webkit-transform: translateZ(0px) rotateX(0deg) rotateY(0deg) translateX(10px) translateY(2px);
+            transform: translateZ(0px) rotateX(0deg) rotateY(0deg) translateX(10px) translateY(2px);
+  }
+}
+@keyframes center-wave {
+  0% {
+    -webkit-transform: translateZ(0px) rotateX(0deg) rotateY(0deg) translateX(10px) translateY(2px);
+            transform: translateZ(0px) rotateX(0deg) rotateY(0deg) translateX(10px) translateY(2px);
+  }
+  50% {
+    -webkit-transform: translateZ(0px) rotateX(0) rotateY(0) translateX(-10px) translateY(2px);
+            transform: translateZ(0px) rotateX(0) rotateY(0) translateX(-10px) translateY(2px);
+  }
+  100% {
+    -webkit-transform: translateZ(0px) rotateX(0deg) rotateY(0deg) translateX(10px) translateY(2px);
+            transform: translateZ(0px) rotateX(0deg) rotateY(0deg) translateX(10px) translateY(2px);
+  }
+}
+@-webkit-keyframes bottom-wave {
+  0% {
+    -webkit-transform: translateZ(0px) rotateX(0deg) rotateY(0deg) translateX(10px) translateY(4px);
+            transform: translateZ(0px) rotateX(0deg) rotateY(0deg) translateX(10px) translateY(4px);
+  }
+  50% {
+    -webkit-transform: translateZ(0px) rotateX(0) rotateY(0) translateX(-10px) translateY(4px);
+            transform: translateZ(0px) rotateX(0) rotateY(0) translateX(-10px) translateY(4px);
+  }
+  100% {
+    -webkit-transform: translateZ(0px) rotateX(0deg) rotateY(0deg) translateX(10px) translateY(4px);
+            transform: translateZ(0px) rotateX(0deg) rotateY(0deg) translateX(10px) translateY(4px);
+  }
+}
+@keyframes bottom-wave {
+  0% {
+    -webkit-transform: translateZ(0px) rotateX(0deg) rotateY(0deg) translateX(10px) translateY(4px);
+            transform: translateZ(0px) rotateX(0deg) rotateY(0deg) translateX(10px) translateY(4px);
+  }
+  50% {
+    -webkit-transform: translateZ(0px) rotateX(0) rotateY(0) translateX(-10px) translateY(4px);
+            transform: translateZ(0px) rotateX(0) rotateY(0) translateX(-10px) translateY(4px);
+  }
+  100% {
+    -webkit-transform: translateZ(0px) rotateX(0deg) rotateY(0deg) translateX(10px) translateY(4px);
+            transform: translateZ(0px) rotateX(0deg) rotateY(0deg) translateX(10px) translateY(4px);
+  }
+}
+@-webkit-keyframes ball {
+  0% {
+    -webkit-transform: translateZ(0px) rotateX(0deg) rotateY(0deg) translateX(10px) translateY(0px);
+            transform: translateZ(0px) rotateX(0deg) rotateY(0deg) translateX(10px) translateY(0px);
+  }
+  50% {
+    -webkit-transform: translateZ(0px) rotateX(0) rotateY(0) translateX(-10px) translateY(0px);
+            transform: translateZ(0px) rotateX(0) rotateY(0) translateX(-10px) translateY(0px);
+  }
+  100% {
+    -webkit-transform: translateZ(0px) rotateX(0deg) rotateY(0deg) translateX(10px) translateY(0px);
+            transform: translateZ(0px) rotateX(0deg) rotateY(0deg) translateX(10px) translateY(0px);
+  }
+}
+@keyframes ball {
+  0% {
+    -webkit-transform: translateZ(0px) rotateX(0deg) rotateY(0deg) translateX(10px) translateY(0px);
+            transform: translateZ(0px) rotateX(0deg) rotateY(0deg) translateX(10px) translateY(0px);
+  }
+  50% {
+    -webkit-transform: translateZ(0px) rotateX(0) rotateY(0) translateX(-10px) translateY(0px);
+            transform: translateZ(0px) rotateX(0) rotateY(0) translateX(-10px) translateY(0px);
+  }
+  100% {
+    -webkit-transform: translateZ(0px) rotateX(0deg) rotateY(0deg) translateX(10px) translateY(0px);
+            transform: translateZ(0px) rotateX(0deg) rotateY(0deg) translateX(10px) translateY(0px);
+  }
 }
 
 .seagolf-nav {
@@ -9433,17 +9605,42 @@ sup {
       -ms-flex-direction: row;
           flex-direction: row;
   position: relative;
-  background: url(../img/sea-golf/header/logo.svg);
-  background-repeat: no-repeat;
-  background-size: 155px 75px;
-  background-position: center;
-  width: 100%;
-  height: 125px;
+  height: 100px;
   opacity: 1;
 }
 .seagolf-nav__container__mobile.active ul .logo-seagolf a {
   width: 100%;
   height: auto;
+}
+.seagolf-nav__container__mobile.active ul .logo-seagolf a svg .top-wave {
+  -webkit-transform: translateZ(0px) rotateX(0deg) rotateY(0deg) translateX(10px) translateY(0px);
+          transform: translateZ(0px) rotateX(0deg) rotateY(0deg) translateX(10px) translateY(0px);
+  -webkit-animation: top-wave 2s infinite cubic-bezier(0.74, 0.54, 0.73, 1.16);
+          animation: top-wave 2s infinite cubic-bezier(0.74, 0.54, 0.73, 1.16);
+}
+.seagolf-nav__container__mobile.active ul .logo-seagolf a svg .center-wave {
+  -webkit-transform: translateZ(0px) rotateX(0deg) rotateY(0deg) translateX(10px) translateY(2px);
+          transform: translateZ(0px) rotateX(0deg) rotateY(0deg) translateX(10px) translateY(2px);
+  -webkit-animation: center-wave 2s infinite cubic-bezier(0.74, 0.54, 0.73, 1.16);
+          animation: center-wave 2s infinite cubic-bezier(0.74, 0.54, 0.73, 1.16);
+  -webkit-animation-delay: 0.25s;
+          animation-delay: 0.25s;
+}
+.seagolf-nav__container__mobile.active ul .logo-seagolf a svg .bottom-wave {
+  -webkit-transform: translateZ(0px) rotateX(0deg) rotateY(0deg) translateX(10px) translateY(4px);
+          transform: translateZ(0px) rotateX(0deg) rotateY(0deg) translateX(10px) translateY(4px);
+  -webkit-animation: bottom-wave 2s infinite cubic-bezier(0.74, 0.54, 0.73, 1.16);
+          animation: bottom-wave 2s infinite cubic-bezier(0.74, 0.54, 0.73, 1.16);
+  -webkit-animation-delay: 0.5s;
+          animation-delay: 0.5s;
+}
+.seagolf-nav__container__mobile.active ul .logo-seagolf a svg .ball {
+  -webkit-transform: translateZ(0px) rotateX(0deg) rotateY(0deg) translateX(10px) translateY(0px);
+          transform: translateZ(0px) rotateX(0deg) rotateY(0deg) translateX(10px) translateY(0px);
+  -webkit-animation: ball 2s infinite cubic-bezier(0.74, 0.54, 0.73, 1.16);
+          animation: ball 2s infinite cubic-bezier(0.74, 0.54, 0.73, 1.16);
+  -webkit-animation-delay: 0.2s;
+          animation-delay: 0.2s;
 }
 .seagolf-nav__container__mobile.active ul .logo-seagolf::after {
   content: "";
@@ -9507,6 +9704,7 @@ sup {
   margin-top: 0;
 }
 .seagolf-nav__container__box ul .btn-box .btn-nav--visibility {
+  visibility: hidden;
   position: relative;
 }
 .seagolf-nav__container__box ul .btn-box .btn-nav--visibility::before {
@@ -9829,6 +10027,11 @@ sup {
     top: 7px;
   }
 }
+@media (max-width: 575px) {
+  .seagolf-nav .seagolf-nav__container::before {
+    display: none;
+  }
+}
 .seagolf-nav.active {
   background: #FFFFFF;
   height: 100%;
@@ -9837,15 +10040,8 @@ sup {
   z-index: 99999;
 }
 
-footer {
-  margin-top: 250px;
-}
-@media (max-width: 991px) {
-  footer {
-    margin-top: 100px;
-  }
-}
 footer .footer-top {
+  padding-top: 250px;
   position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -9860,7 +10056,7 @@ footer .footer-top::after {
   content: "";
   position: absolute;
   left: 50%;
-  bottom: -75px;
+  bottom: -335px;
   -webkit-transform: translate(-50%, 0%) rotate(0deg);
           transform: translate(-50%, 0%) rotate(0deg);
   width: 175px;
@@ -9877,17 +10073,23 @@ footer .footer-top__parallax {
   width: 100%;
   height: 650px;
   overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 footer .footer-top__parallax__box {
   position: absolute;
   top: 0;
-  width: 100%;
+  min-width: 1955px;
   height: 120%;
 }
 footer .footer-top__box {
   position: absolute;
   left: 50%;
-  top: -85px;
+  top: 165px;
   -webkit-transform: translate(-50%, 0%);
           transform: translate(-50%, 0%);
   width: 400px;
@@ -9944,14 +10146,19 @@ footer .footer-top__box__content .btn {
 @media (max-width: 991px) {
   footer .footer-top {
     height: 500px;
+    padding-top: 5px;
   }
   footer .footer-top::after {
     bottom: -42px;
     width: 100px;
     height: 100px;
   }
+  footer .footer-top__parallax {
+    height: 490px;
+  }
   footer .footer-top__parallax__box {
-    min-width: 1300px;
+    min-width: 1000px;
+    height: 140%;
   }
   footer .footer-top__box {
     top: -50px;
@@ -9967,7 +10174,7 @@ footer .footer-top__box__content .btn {
   }
 }
 footer .footer {
-  margin-top: 155px;
+  margin-top: 400px;
   padding: 80px 0 55px;
   width: 100%;
   height: auto;

@@ -89,8 +89,9 @@ get_template_part('investitions/sea-golf/header');
     </section>
 
     <section class="sec2-info">
-        <h3 class="f-h3 f-h3--gold-medium f-h3--fw500">Szerokie spektrum możliwości</h3>
-        <h3 class="f-h3 f-h3--gold-medium f-h3--fw600-italic"> Twoje wymarzone miejsce</h3>
+        <?php if ($text_sec2_localization_seagolf = get_field('text_sec2_localization_seagolf')) : ?>
+            <h3 class="f-h3 f-h3--gold-medium f-h3--fw500"><?php echo $text_sec2_localization_seagolf; ?></h3>
+        <?php endif; ?>
     </section>
 
     <section class="sec3-info">
@@ -99,38 +100,21 @@ get_template_part('investitions/sea-golf/header');
                 <div class="col-xl-12">
                     <div class="sec3-info__box">
                         <div class="sec3-info__box__content">
-                            <div class="sec3-info__box__content__items">
-                                <img class="sec3-info__box__items__icon" src=" <?php echo get_template_directory_uri(); ?>/assets/img/sea-golf/home-page/icon-1.png" alt="ikona" />
-                                <h6 class="f-h6">Tylko 2500 m do morza i piaszczystej plaży</h6>
-                            </div>
-                            <div class="sec3-info__box__content__items">
-                                <img class="sec3-info__box__items__icon" src=" <?php echo get_template_directory_uri(); ?>/assets/img/sea-golf/home-page/icon-2.png" alt="ikona" />
-                                <h6 class="f-h6">Działki budowlane z warunkami zabudowy</h6>
-                            </div>
-                            <div class="sec3-info__box__content__items">
-                                <img class="sec3-info__box__items__icon" src=" <?php echo get_template_directory_uri(); ?>/assets/img/sea-golf/home-page/icon-3.png" alt="ikona" />
-                                <h6 class="f-h6">Cicha, spokojna, zielona okolica</h6>
-                            </div>
-                            <div class="sec3-info__box__content__items">
-                                <img class="sec3-info__box__items__icon" src=" <?php echo get_template_directory_uri(); ?>/assets/img/sea-golf/home-page/icon-4.png" alt="ikona" />
-                                <h6 class="f-h6">Utwardzona<br>droga wewnętrzna</h6>
-                            </div>
-                            <div class="sec3-info__box__content__items">
-                                <img class="sec3-info__box__items__icon" src=" <?php echo get_template_directory_uri(); ?>/assets/img/sea-golf/home-page/icon-5.png" alt="ikona" />
-                                <h6 class="f-h6">Ogrodzony teren<br>z wjazdem</h6>
-                            </div>
-                            <div class="sec3-info__box__content__items">
-                                <img class="sec3-info__box__items__icon" src=" <?php echo get_template_directory_uri(); ?>/assets/img/sea-golf/home-page/icon-6.png" alt="ikona" />
-                                <h6 class="f-h6">Duży basen, sauna, jacuzzi oraz brodzik dla dzieci</h6>
-                            </div>
-                            <div class="sec3-info__box__content__items">
-                                <img class="sec3-info__box__items__icon" src=" <?php echo get_template_directory_uri(); ?>/assets/img/sea-golf/home-page/icon-7.png" alt="ikona" />
-                                <h6 class="f-h6">Profesjonalne pole golfowe w okolicy</h6>
-                            </div>
-                            <div class="sec3-info__box__content__items">
-                                <img class="sec3-info__box__items__icon" src=" <?php echo get_template_directory_uri(); ?>/assets/img/sea-golf/home-page/icon-8.png" alt="ikona" />
-                                <h6 class="f-h6">Bliskość atrakcji turystycznych</h6>
-                            </div>
+                            <?php if (have_rows('info_sec2_localization_seagolf')) : ?>
+                                <?php while (have_rows('info_sec2_localization_seagolf')) :
+                                    the_row(); ?>
+                                    <div class="sec3-info__box__content__items">
+                                        <?php
+                                        $info_sec2_localization_seagolf_icon = get_sub_field('info_sec2_localization_seagolf_icon');
+                                        if ($info_sec2_localization_seagolf_icon) : ?>
+                                            <img class="sec3-info__box__items__icon" src="<?php echo esc_url($info_sec2_localization_seagolf_icon['url']); ?>" alt="<?php echo esc_attr($info_sec2_localization_seagolf_icon['alt']); ?>" />
+                                        <?php endif; ?>
+                                        <?php if ($info_sec2_localization_seagolf_text = get_sub_field('info_sec2_localization_seagolf_text')) : ?>
+                                            <h6 class="f-h6"><?php echo $info_sec2_localization_seagolf_text; ?></h6>
+                                        <?php endif; ?>
+                                    </div>
+                                <?php endwhile; ?>
+                            <?php endif; ?>
                         </div>
                         <div class="sec3-info__box__background">
                             <img class="parallax" src=" <?php echo get_template_directory_uri(); ?>/assets/img/sea-golf/home-page/Golf-Ball_Black.png" alt="zdjęcie piłki golfowej" />

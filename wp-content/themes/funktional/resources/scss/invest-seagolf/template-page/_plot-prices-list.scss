@@ -355,7 +355,7 @@
                 transition: all 0.2s;
                 font-weight: bold;
                 position: relative;
-                
+
                 span {
                     display: block;
                     margin-left: 15px;
@@ -376,19 +376,18 @@
                 }
                 svg {
                     path {
-                        stroke:  $gold-dark;
+                        stroke: $gold-dark;
                     }
                 }
-                &:nth-child(1){
-                    &:before{
-                        content:"";
+                &:nth-child(1) {
+                    &:before {
+                        content: "";
                         position: absolute;
-                        bottom:-5px;
-                        left:0;
+                        bottom: -5px;
+                        left: 0;
                         width: 100%;
-                        border: 1px dashed rgba(163, 122, 85 , 0.6)
+                        border: 1px dashed rgba(163, 122, 85, 0.6);
                     }
-                    
                 }
             }
         }
@@ -639,6 +638,9 @@
             align-items: flex-start;
             gap: 30px 70px;
             flex-wrap: wrap;
+        }
+        @media (max-width: $lg) {
+            margin-bottom: 80px;
         }
         @media (max-width: $md) {
             margin-top: 50px;

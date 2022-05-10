@@ -372,6 +372,7 @@
         height: 1510px;
         background: url(../img/sea-golf/about/sec4-background.jpg);
         background-position: center;
+        background-repeat: no-repeat;
         &__ball {
             position: absolute;
             top: -240px;
@@ -604,6 +605,11 @@
             &__slider-nav {
                 top: 85px;
             }
+        }
+    }
+    .sec6-info {
+        @media (max-width: $lg) {
+            margin-bottom: 80px;
         }
     }
 }

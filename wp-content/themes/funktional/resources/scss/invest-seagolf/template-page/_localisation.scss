@@ -281,6 +281,9 @@
         align-items: center;
         .f-h3 {
             text-align: center;
+            em {
+                font-weight: 600;
+            }
         }
         &::before {
             content: "";
@@ -506,6 +509,7 @@
         justify-content: center;
         @media (max-width: $lg) {
             margin-top: 40px;
+            margin-bottom: 80px;
         }
     }
 }

@@ -4,18 +4,15 @@
         min-height: 920px;
         width: 100%;
         background: url(../img/sea-golf/gallery/background.jpg);
-        background-size: auto;
+        background-size: contain;
         background-repeat: no-repeat;
         background-position: center top;
         &__title {
             position: relative;
-            left: 50%;
-            transform: translateX(-50%);
-            margin-top: 635px;
+            margin: 635px auto 0;
             padding: 20px;
             width: 74%;
             background-color: $brown;
-
             &__box {
                 width: 100%;
                 padding: 40px 35px;
@@ -240,6 +237,7 @@
             }
         }
         @media (max-width: $xxxl) {
+            background-size: auto;
             &__title {
                 h5 {
                     width: 83%;
