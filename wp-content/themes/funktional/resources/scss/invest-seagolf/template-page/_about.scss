@@ -244,6 +244,12 @@
             }
         }
         @media (max-width: $md) {
+            &__photo {
+                height: 66vw;
+                img {
+                    height: auto;
+                }
+            }
             &__box {
                 .f-h3 {
                     margin-right: 0px;

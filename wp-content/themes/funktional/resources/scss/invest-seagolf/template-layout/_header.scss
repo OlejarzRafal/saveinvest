@@ -65,8 +65,10 @@
                 align-items: center;
                 justify-content: center;
                 ul {
+                    height: 100%;
                     display: flex;
                     flex-direction: column;
+                    justify-content: center;
                     gap: 20px;
                     .btn-nav {
                         text-align: center;
@@ -93,6 +95,8 @@
                         top: 0;
                         margin-right: 0vw;
                         margin-left: 0vw;
+                        margin-bottom: 20px;
+                        padding-bottom: 10px;
                         display: flex;
                         flex-direction: row;
                         position: relative;
@@ -100,40 +104,44 @@
                         // background-repeat: no-repeat;
                         // background-size: 155px 75px;
                         // background-position: center;
-                        height: 100px;
+                        height: 80px;
                         opacity: 1;
                         a {
                             width: 100%;
                             height: auto;
                             svg {
                                 .top-wave {
-                                    transform: translateZ(0px) rotateX(0deg) rotateY(0deg)
-                                        translateX(10px) translateY(0px);
+                                    transform: translateZ(0px) rotateX(0deg)
+                                        rotateY(0deg) translateX(10px)
+                                        translateY(0px);
                                     animation: top-wave 2s infinite
                                         cubic-bezier(0.74, 0.54, 0.73, 1.16);
                                 }
                                 .center-wave {
-                                    transform: translateZ(0px) rotateX(0deg) rotateY(0deg)
-                                        translateX(10px) translateY(2px);
+                                    transform: translateZ(0px) rotateX(0deg)
+                                        rotateY(0deg) translateX(10px)
+                                        translateY(2px);
                                     animation: center-wave 2s infinite
                                         cubic-bezier(0.74, 0.54, 0.73, 1.16);
                                     animation-delay: 0.25s;
                                 }
                                 .bottom-wave {
-                                    transform: translateZ(0px) rotateX(0deg) rotateY(0deg)
-                                        translateX(10px) translateY(4px);
+                                    transform: translateZ(0px) rotateX(0deg)
+                                        rotateY(0deg) translateX(10px)
+                                        translateY(4px);
                                     animation: bottom-wave 2s infinite
                                         cubic-bezier(0.74, 0.54, 0.73, 1.16);
                                     animation-delay: 0.5s;
                                 }
                                 .ball {
-                                    transform: translateZ(0px) rotateX(0deg) rotateY(0deg)
-                                        translateX(10px) translateY(0px);
-                                    animation: ball 2s infinite cubic-bezier(0.74, 0.54, 0.73, 1.16);
+                                    transform: translateZ(0px) rotateX(0deg)
+                                        rotateY(0deg) translateX(10px)
+                                        translateY(0px);
+                                    animation: ball 2s infinite
+                                        cubic-bezier(0.74, 0.54, 0.73, 1.16);
                                     animation-delay: 0.2s;
                                 }
                             }
-                           
                         }
                         &::after {
                             content: "";
@@ -499,8 +507,17 @@
         }
     }
     @media (max-width: $sm) {
-        .seagolf-nav__container::before {
-            display: none;
+        .seagolf-nav__container {
+            background: transparent;
+            &::before {
+                display: none;
+            }
+        }
+
+        .seagolf-nav__container__burger {
+            span {
+                background: $black-dark;
+            }
         }
     }
     &.active {
@@ -511,4 +528,3 @@
         z-index: 99999;
     }
 }
-

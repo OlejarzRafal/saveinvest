@@ -28,7 +28,7 @@ get_template_part('investitions/sea-golf/header');
                             <?php endif; ?>
                         </div>
                         <div class="form-main">
-                            <?php echo do_shortcode('[contact-form-7 id="1327" title="Formularz kontaktowy Sea-Golf"]'); ?>
+                            <?php echo do_shortcode('[contact-form-7 id="1633" title="Formularz kontaktowy Sea-Golf"]'); ?>
                         </div>
                         <div class="sec1-contact-sg__form__border"></div>
                     </div>

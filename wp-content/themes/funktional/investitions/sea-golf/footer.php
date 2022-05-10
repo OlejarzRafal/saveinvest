@@ -34,7 +34,7 @@ wp_footer();
             <div class="row">
                 <div class="col-xl-12">
                     <div class="footer__logo">
-                        <a href="<?php the_permalink(1220); ?>">
+                        <a href="<?php the_permalink(1392); ?>">
                             <img src="<?php bloginfo('template_url'); ?>/assets/img/invest-karwia/home-page/home-enklawa-company-logo.png" alt="logo saveinvest" />
                         </a>
                     </div>
@@ -119,15 +119,17 @@ wp_footer();
                             </h6>
                         </div>
                         <div class="footer-box__info footer-box__map">
-                            <a class="text-main text-main--white text-main--fw500 text-main--f12 text-main--ls4" href="<?php the_permalink(1220); ?>">STRONA GŁÓWNA
+                            <a class="text-main text-main--white text-main--fw500 text-main--f12 text-main--ls4" href="<?php the_permalink(1392); ?>">STRONA GŁÓWNA
                             </a>
-                            <a class="text-main text-main--white text-main--fw500 text-main--f12 text-main--ls4" href="<?php the_permalink(1221); ?>">CENY DZIAŁEK
+                            <a class="text-main text-main--white text-main--fw500 text-main--f12 text-main--ls4" href="<?php the_permalink(1393); ?>">CENY DZIAŁEK
                             </a>
-                            <a class="text-main text-main--white text-main--fw500 text-main--f12 text-main--ls4" href="<?php the_permalink(1258); ?>">LOKALIZACJA
+                            <a class="text-main text-main--white text-main--fw500 text-main--f12 text-main--ls4" href="<?php the_permalink(1407); ?>">O RESORCIE
                             </a>
-                            <a class="text-main text-main--white text-main--fw500 text-main--f12 text-main--ls4" href="<?php the_permalink(1259); ?>">GALERIA
+                            <a class="text-main text-main--white text-main--fw500 text-main--f12 text-main--ls4" href="<?php the_permalink(1405); ?>">LOKALIZACJA
                             </a>
-                            <a class="ttext-main text-main--white text-main--fw500 text-main--f12 text-main--ls4" href="<?php the_permalink(1250); ?>">KONTAKT
+                            <a class="text-main text-main--white text-main--fw500 text-main--f12 text-main--ls4" href="<?php the_permalink(1406); ?>">GALERIA
+                            </a>
+                            <a class="ttext-main text-main--white text-main--fw500 text-main--f12 text-main--ls4" href="<?php the_permalink(1404); ?>">KONTAKT
                             </a>
                             <!-- <a class="text-main text-main--f12 text-main--fw600 text-main--white text-main--ls4" href="<?php the_permalink(); ?>">POLITYKA PRYWATNOŚCI
                             </a> -->
