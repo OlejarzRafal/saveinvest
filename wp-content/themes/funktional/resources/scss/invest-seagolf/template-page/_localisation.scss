@@ -10,30 +10,6 @@
         display: flex;
         align-items: flex-end;
         background-repeat: no-repeat;
-        &::after {
-            content: "";
-            position: absolute;
-            bottom: 200px;
-            left: 50%;
-            transform: translate(-50%, 0);
-            width: 24px;
-            height: 24px;
-            background: url("../img/invest-karwia/localization/scroller-down.svg");
-            background-size: cover;
-            animation: scroller 2.5s infinite ease-in-out;
-            z-index: 1;
-        }
-        @keyframes scroller {
-            0% {
-                transform: translate(-50%, 0%);
-            }
-            50% {
-                transform: translate(-50%, 180%);
-            }
-            100% {
-                transform: translate(-50%, 0%);
-            }
-        }
         @media (max-width: $lg) {
             height: 665px;
         }
@@ -369,7 +345,8 @@
                         1;
                     img {
                         margin-left: -15px;
-                        max-width: fit-content;
+                        height: 120px;
+                        width: 120px;
                         background-color: $brown;
                     }
                     .f-h6 {
@@ -388,6 +365,9 @@
                 width: 100%;
                 height: auto;
                 img {
+                    position: relative;
+                    top: 5px;
+                    margin-top: 10px;
                     width: 100%;
                 }
             }
@@ -475,7 +455,7 @@
         @media (max-width: $lg) {
             .row-text-rotate {
                 &::after {
-                    bottom: 43px;
+                    bottom: 37px;
                     width: 100px;
                     height: 100px;
                     right: 0;
@@ -486,7 +466,7 @@
         @media (max-width: $md) {
             .row-text-rotate {
                 &::after {
-                    bottom: 32px;
+                    bottom: 28px;
                     width: 75px;
                     height: 75px;
                 }
@@ -495,7 +475,7 @@
         @media (max-width: $sm) {
             .row-text-rotate {
                 &::after {
-                    bottom: 6vw;
+                    bottom: 5vw;
                     width: 14vw;
                     height: 14vw;
                 }
@@ -503,13 +483,99 @@
         }
     }
     .sec4-map {
-        margin-top: 185px;
         position: relative;
-        display: flex;
-        justify-content: center;
+        &__photo {
+            margin-top: 185px;
+            position: relative;
+            display: flex;
+            justify-content: center;
+        }
         @media (max-width: $lg) {
-            margin-top: 40px;
-            margin-bottom: 80px;
+            &__photo {
+                bottom: 80px;
+            }
+        }
+        @media (max-width: 810px) {
+            &__photo {
+                margin-top: 120px;
+                margin-bottom: -10px;
+                padding-bottom: 55px;
+                justify-content: flex-start;
+                overflow-x: scroll;
+                img {
+                    height: auto;
+                    min-width: 810px;
+                }
+            }
+            &__scroller {
+                position: absolute;
+                bottom: 100px;
+                right: 30px;
+                width: 70px;
+                height: 70px;
+                border-radius: 50%;
+                border: 1px solid #ffffff7a;
+                box-shadow: 0px 0px 3px rgb(197, 197, 197);
+                &__center {
+                    position: absolute;
+                    left: 50%;
+                    top: 50%;
+                    transform: translate(-50%, -50%);
+                    width: 67%;
+                    height: 67%;
+                    border-radius: 50%;
+                    background-color: $white;
+                    box-shadow: 0px 0px 2px rgb(197, 197, 197);
+                    &::before {
+                        content: "";
+                        position: absolute;
+                        left: 43%;
+                        top: 50%;
+                        transform: translate(-50%, -50%) rotate(-90deg);
+                        width: 20px;
+                        height: 8px;
+                        background: url(../img/sea-golf/home-page/header-arrow.svg);
+                        background-repeat: no-repeat;
+                        background-position: center;
+                        background-size: contain;
+                        animation: scrollright  1s infinite linear;
+                        animation-delay: 0.1s;
+                    }
+                    &::after {
+                        content: "";
+                        position: absolute;
+                        left: 57%;
+                        top: 50%;
+                        transform: translate(-50%, -50%) rotate(-90deg);
+                        width: 20px;
+                        height: 8px;
+                        background: url(../img/sea-golf/home-page/header-arrow.svg);
+                        background-repeat: no-repeat;
+                        background-position: center;
+                        background-size: contain;
+                        opacity: 1;
+                        animation: scrollright 1s infinite linear;
+                    }
+                    @keyframes scrollright {
+                        0% {
+                            transform: translate(-100%, -50%) rotate(-90deg);
+                            opacity: 0;
+                        }
+                        20% {
+                            transform: translate(-50%, -50%) rotate(-90deg);
+                            opacity: 1;
+                        }
+                        80% {
+                            transform: translate(-50%, -50%) rotate(-90deg);
+                            opacity: 1;
+                        }
+                        100% {
+                            transform: translate(0%, -50%) rotate(-90deg);
+                            opacity: 0;
+                        }
+                    }
+                }
+            }
         }
     }
 }

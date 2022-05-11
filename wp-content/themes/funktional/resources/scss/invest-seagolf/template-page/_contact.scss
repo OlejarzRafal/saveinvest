@@ -207,6 +207,10 @@
             display: flex;
             justify-content: center;
             position: relative;
+            img {
+                width: 268px;
+                height: 47px;
+            }
             &::before {
                 content: "";
                 position: absolute;
@@ -233,7 +237,7 @@
                         }
                         &__email,
                         &__phone {
-                            gap: 5px;
+                            gap: 12px;
                             a {
                                 position: relative;
                                 &::after {
@@ -311,13 +315,17 @@
                         padding: 0px 20px 20px 0px;
                         &__email,
                         &__phone {
-                            gap: 5px;
                             a {
                                 position: relative;
                                 font-size: 14px;
                                 &::after {
                                     right: -30px;
                                 }
+                            }
+                        }
+                        &__name {
+                            .f-h5 {
+                                font-size: 24px;
                             }
                         }
                     }
@@ -331,13 +339,18 @@
                     padding: 0px 20px 20px 0px;
                     &__email,
                     &__phone {
-                        gap: 5px;
+                        gap: 12px;
                         a {
                             position: relative;
                             font-size: 14px;
                             &::after {
                                 right: -30px;
                             }
+                        }
+                    }
+                    &__name {
+                        .f-h5 {
+                            font-size: 24px;
                         }
                     }
                 }
@@ -456,6 +469,11 @@
                         background-color: #f4f1e526;
                     }
                 }
+                &__right {
+                    .box-row {
+                        margin-top: 10px;
+                    }
+                }
             }
         }
         @media (max-width: $xxl) {
@@ -492,8 +510,8 @@
                     flex-wrap: wrap;
                     gap: 10px;
                     img {
-                        max-height: 100px;
-                        max-width: 100px;
+                        max-height: 120px;
+                        max-width: 120px;
                     }
                 }
             }
@@ -553,12 +571,19 @@
             animation: rotate-text 30s infinite linear;
         }
         @media (max-width: $lg) {
-            height: 600px;
-            margin-top: -200px;
+            height: 70vw;
+            margin-top: -50px;
             &::after {
                 bottom: -42px;
                 width: 100px;
                 height: 100px;
+            }
+        }
+        @media (max-width: $sm) {
+            &::after {
+                bottom: -35px;
+                width: 70px;
+                height: 70px;
             }
         }
     }
@@ -667,6 +692,9 @@
             width: 100%;
             height: 100%;
             background-color: $gold-tint-light;
+            .swiper-name{
+                margin-top: 15px;
+            }
         }
         @media (max-width: $xl) {
             margin-top: 150px;
@@ -757,6 +785,20 @@
             }
             &__swiper {
                 padding: 20px 15px 20px 57px;
+            }
+        }
+        @media (max-width: $lg) {
+            &__icon {
+                display: none;
+            }
+            &__box {
+                padding-left: 0px;
+                &::after {
+                    display: none;
+                }
+            }
+            &__swiper {
+                padding: 20px 15px 20px 15px;
             }
         }
     }
@@ -854,13 +896,25 @@
             &__content {
                 margin-top: 30px;
                 .locat-info {
-                    margin-top: 30px;
+                    margin-top: 25px;
                     display: flex;
                     flex-direction: column;
-                    gap: 30px;
+                    gap: 20px;
                     &__data-firm,
                     &__data-person {
                         width: 100%;
+                        p:nth-last-child(1) {
+                            margin-top: 20px;
+                        }
+                        p:nth-child(2),
+                        p:nth-child(4) {
+                            line-height: 25px;
+                        }
+                    }
+                    &__data-firm {
+                        p:nth-last-child(2) {
+                            margin-top: 20px;
+                        }
                     }
                 }
             }

@@ -1,0 +1,79 @@
+.reference {
+   
+    position: relative;
+    margin: 0;
+    padding: 0;
+    &__box {
+        margin-top: 100px;
+        position: relative;
+        width: 100%;
+        display: inline-block;
+        padding: 20px 25px;
+        flex-basis: 48%;
+        height: fit-content;
+        border: 1px solid rgba(141, 141, 154, 0.3);
+        &__picture {
+            width: 500px;
+            height: 215px;
+            background: url(../img/sea-golf/home-page/sec-6-photo.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+        &__type-entry {
+            margin-top: 10px;
+            font-style: normal;
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 150%;
+            color: #8d8d9a;
+        }
+        &__text {
+            margin-top: 10px;
+            font-style: normal;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 160%;
+            color: #2e2d4d;
+        }
+        &__bottom {
+            margin-top: 20px;
+            display: flex;
+            width: 100%;
+            justify-content: space-between;
+            align-items: center;
+            &__info {
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-start;
+                align-items: flex-start;
+                gap: 5px;
+                &__name {
+                    font-style: normal;
+                    font-weight: 500;
+                    font-size: 20px;
+                    line-height: 150%;
+                    color: #2e2d4d;
+                }
+                &__date {
+                    font-style: normal;
+                    font-weight: 400;
+                    font-size: 14px;
+                    line-height: 150%;
+                    color: #2e2d4d;
+                }
+            }
+            &__btn {
+                padding: 15px 35px;
+                font-style: normal;
+                font-weight: 700;
+                font-size: 14px;
+                line-height: 140%;
+                text-align: center;
+                letter-spacing: 0.1em;
+                text-transform: uppercase;
+                color: #b79d63;
+                border: 1px solid #b79d63;
+            }
+        }
+    }
+}

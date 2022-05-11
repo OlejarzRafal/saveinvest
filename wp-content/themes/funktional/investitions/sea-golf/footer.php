@@ -35,7 +35,7 @@ wp_footer();
                 <div class="col-xl-12">
                     <div class="footer__logo">
                         <a href="<?php the_permalink(1392); ?>">
-                            <img src="<?php bloginfo('template_url'); ?>/assets/img/invest-karwia/home-page/home-enklawa-company-logo.png" alt="logo saveinvest" />
+                            <img src="<?php bloginfo('template_url'); ?>/assets/img/sea-golf/footer/logo-link-funktional-1.png" alt="logo saveinvest" />
                         </a>
                     </div>
                 </div>
@@ -129,7 +129,7 @@ wp_footer();
                             </a>
                             <a class="text-main text-main--white text-main--fw500 text-main--f12 text-main--ls4" href="<?php the_permalink(1406); ?>">GALERIA
                             </a>
-                            <a class="ttext-main text-main--white text-main--fw500 text-main--f12 text-main--ls4" href="<?php the_permalink(1404); ?>">KONTAKT
+                            <a class="text-main text-main--white text-main--fw500 text-main--f12 text-main--ls4" href="<?php the_permalink(1404); ?>">KONTAKT
                             </a>
                             <!-- <a class="text-main text-main--f12 text-main--fw600 text-main--white text-main--ls4" href="<?php the_permalink(); ?>">POLITYKA PRYWATNOŚCI
                             </a> -->
@@ -152,7 +152,7 @@ wp_footer();
                                 <?php echo $text_sec4_footer_bottom_seagolf; ?>
                             <div class="dot-footer"></div>
                             <a href="https://www.funktional.pl/" target="_blank" class="text-main text-main--f14 text-main--white">
-                                <img src="<?php bloginfo('template_url'); ?>/assets/img/invest-karwia/home-page/logo-funktional-footer.png" alt="logo saveinvest" />
+                                <img src="<?php bloginfo('template_url'); ?>/assets/img/sea-golf/footer/logo-funktional.svg" alt="logo saveinvest" />
 
                             </a>
                             <p class="text-main text-main--f14 text-main--white text-main--ls4"> creation</p>

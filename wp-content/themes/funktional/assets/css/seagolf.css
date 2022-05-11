@@ -4191,12 +4191,21 @@ em {
   }
   .sg-frontpage .sec2-info__box {
     width: 300px;
-    height: 300px;
+    height: 250px;
     top: 47%;
   }
   .sg-frontpage .sec2-info__box__content {
     margin: 15px;
-    padding: 45px 0;
+    padding: 30px 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .sg-frontpage .sec2-info__box__content::after {
+    top: 7px;
   }
 }
 .sg-frontpage .sec3-info .row-text-rotate {
@@ -4281,9 +4290,8 @@ em {
 }
 .sg-frontpage .sec3-info__box__content__items img {
   margin-left: -15px;
-  max-width: -webkit-fit-content;
-  max-width: -moz-fit-content;
-  max-width: fit-content;
+  width: 120px;
+  height: 120px;
   background-color: #33312F;
 }
 .sg-frontpage .sec3-info__box__content__items .f-h6 {
@@ -4430,13 +4438,11 @@ em {
     width: 75px;
     height: 75px;
   }
-  .sg-frontpage .sec3-info__box__content__items img {
-    max-width: 100px;
-  }
 }
 @media (max-width: 575px) {
   .sg-frontpage .sec3-info .row-text-rotate::after {
-    bottom: 6vw;
+    left: calc(50% - 1px);
+    bottom: 4.8vw;
     width: 14vw;
     height: 14vw;
   }
@@ -4554,6 +4560,10 @@ em {
     width: 100%;
     height: auto;
   }
+  .sg-frontpage .sec4-about__box,
+.sg-frontpage .sec6-price__box {
+    margin: 15px 0 50px;
+  }
   .sg-frontpage .sec4-about__box .f-h3,
 .sg-frontpage .sec6-price__box .f-h3 {
     margin-right: 0px;
@@ -4669,11 +4679,15 @@ em {
 }
 @media (max-width: 767px) {
   .sg-frontpage .sec5-localization__photo {
+    margin-top: 5px;
     height: 50vw;
   }
   .sg-frontpage .sec5-localization__photo img {
     width: 100%;
     height: auto;
+  }
+  .sg-frontpage .sec5-localization__box {
+    margin: 5px 0 80px;
   }
   .sg-frontpage .sec5-localization__box .f-h3 {
     margin-right: 0px;
@@ -4782,8 +4796,8 @@ em {
   left: 0;
   width: 100%;
   height: 100%;
-  background: -webkit-gradient(linear, left top, left bottom, from(#242424), to(rgba(36, 36, 36, 0.7)));
-  background: linear-gradient(180deg, #242424 0%, rgba(36, 36, 36, 0.7) 100%);
+  background: -webkit-gradient(linear, left top, left bottom, from(#242424), to(rgba(36, 36, 36, 0.4)));
+  background: linear-gradient(180deg, #242424 0%, rgba(36, 36, 36, 0.4) 100%);
   z-index: 1;
 }
 .sg-frontpage .sec8-links__box__video-link:hover::before {
@@ -5224,6 +5238,8 @@ em {
   position: absolute;
   left: 85px;
   top: -80px;
+  height: 47px;
+  width: auto;
 }
 .sg-frontpage .sec9-testimonial__company .text-main {
   margin-top: 30px;
@@ -5248,10 +5264,8 @@ em {
   z-index: 1;
 }
 .sg-frontpage .sec9-testimonial__company__icon-content img {
-  height: 100%;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
+  height: 140px;
+  width: 140px;
 }
 @media (max-width: 1199px) {
   .sg-frontpage .sec9-testimonial__box, .sg-frontpage .sec9-testimonial__company {
@@ -5392,6 +5406,16 @@ em {
   background-size: contain;
   background-repeat: no-repeat;
   background-position: left top;
+}
+@media (max-width: 450px) {
+  .sg-about .header {
+    background: url(../img/sea-golf/about/background-header-mobile.jpg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center top;
+    width: 100%;
+    height: 81vw;
+  }
 }
 .sg-about .sec1-about {
   margin-top: 120px;
@@ -5683,18 +5707,6 @@ em {
   }
 }
 @media (max-width: 767px) {
-  .sg-about .sec2-info__photo,
-.sg-about .sec3-info__photo,
-.sg-about .sec5-info__photo,
-.sg-about .sec6-info__photo {
-    height: 66vw;
-  }
-  .sg-about .sec2-info__photo img,
-.sg-about .sec3-info__photo img,
-.sg-about .sec5-info__photo img,
-.sg-about .sec6-info__photo img {
-    height: auto;
-  }
   .sg-about .sec2-info__box .f-h3,
 .sg-about .sec3-info__box .f-h3,
 .sg-about .sec5-info__box .f-h3,
@@ -5708,6 +5720,21 @@ em {
 .sg-about .sec6-info__box__content {
     padding-left: 20px;
     padding-right: 0px;
+  }
+}
+@media (max-width: 575px) {
+  .sg-about .sec2-info__photo,
+.sg-about .sec3-info__photo,
+.sg-about .sec5-info__photo,
+.sg-about .sec6-info__photo {
+    margin-top: -10px;
+    height: 66vw;
+  }
+  .sg-about .sec2-info__photo img,
+.sg-about .sec3-info__photo img,
+.sg-about .sec5-info__photo img,
+.sg-about .sec6-info__photo img {
+    height: auto;
   }
 }
 .sg-about .sec2-info,
@@ -5746,6 +5773,12 @@ em {
   .sg-about .sec2-info__letter-s,
 .sg-about .sec5-info__letter-s {
     display: none;
+  }
+}
+@media (max-width: 575px) {
+  .sg-about .sec2-info,
+.sg-about .sec5-info {
+    margin-top: 25px;
   }
 }
 .sg-about .sec3-info,
@@ -5898,9 +5931,8 @@ em {
 }
 .sg-about .sec4-slider__slider .swiper-slide__items img {
   margin-left: -15px;
-  max-width: -webkit-fit-content;
-  max-width: -moz-fit-content;
-  max-width: fit-content;
+  width: 120px;
+  height: 120px;
   background-color: #33312F;
 }
 .sg-about .sec4-slider__slider .swiper-slide__items .f-h6 {
@@ -6138,49 +6170,6 @@ em {
       -ms-flex-align: end;
           align-items: flex-end;
   background-repeat: no-repeat;
-}
-.sg-localisation .header::after {
-  content: "";
-  position: absolute;
-  bottom: 200px;
-  left: 50%;
-  -webkit-transform: translate(-50%, 0);
-          transform: translate(-50%, 0);
-  width: 24px;
-  height: 24px;
-  background: url("../img/invest-karwia/localization/scroller-down.svg");
-  background-size: cover;
-  -webkit-animation: scroller 2.5s infinite ease-in-out;
-          animation: scroller 2.5s infinite ease-in-out;
-  z-index: 1;
-}
-@-webkit-keyframes scroller {
-  0% {
-    -webkit-transform: translate(-50%, 0%);
-            transform: translate(-50%, 0%);
-  }
-  50% {
-    -webkit-transform: translate(-50%, 180%);
-            transform: translate(-50%, 180%);
-  }
-  100% {
-    -webkit-transform: translate(-50%, 0%);
-            transform: translate(-50%, 0%);
-  }
-}
-@keyframes scroller {
-  0% {
-    -webkit-transform: translate(-50%, 0%);
-            transform: translate(-50%, 0%);
-  }
-  50% {
-    -webkit-transform: translate(-50%, 180%);
-            transform: translate(-50%, 180%);
-  }
-  100% {
-    -webkit-transform: translate(-50%, 0%);
-            transform: translate(-50%, 0%);
-  }
 }
 @media (max-width: 991px) {
   .sg-localisation .header {
@@ -6550,9 +6539,8 @@ em {
 }
 .sg-localisation .sec3-info__box__content__items img {
   margin-left: -15px;
-  max-width: -webkit-fit-content;
-  max-width: -moz-fit-content;
-  max-width: fit-content;
+  height: 120px;
+  width: 120px;
   background-color: #33312F;
 }
 .sg-localisation .sec3-info__box__content__items .f-h6 {
@@ -6570,6 +6558,9 @@ em {
   height: auto;
 }
 .sg-localisation .sec3-info__box__background img {
+  position: relative;
+  top: 5px;
+  margin-top: 10px;
   width: 100%;
 }
 @media (max-width: 1679px) {
@@ -6656,7 +6647,7 @@ em {
 }
 @media (max-width: 991px) {
   .sg-localisation .sec3-info .row-text-rotate::after {
-    bottom: 43px;
+    bottom: 37px;
     width: 100px;
     height: 100px;
     right: 0;
@@ -6665,19 +6656,22 @@ em {
 }
 @media (max-width: 767px) {
   .sg-localisation .sec3-info .row-text-rotate::after {
-    bottom: 32px;
+    bottom: 28px;
     width: 75px;
     height: 75px;
   }
 }
 @media (max-width: 575px) {
   .sg-localisation .sec3-info .row-text-rotate::after {
-    bottom: 6vw;
+    bottom: 5vw;
     width: 14vw;
     height: 14vw;
   }
 }
 .sg-localisation .sec4-map {
+  position: relative;
+}
+.sg-localisation .sec4-map__photo {
   margin-top: 185px;
   position: relative;
   display: -webkit-box;
@@ -6688,9 +6682,126 @@ em {
           justify-content: center;
 }
 @media (max-width: 991px) {
-  .sg-localisation .sec4-map {
-    margin-top: 40px;
-    margin-bottom: 80px;
+  .sg-localisation .sec4-map__photo {
+    bottom: 80px;
+  }
+}
+@media (max-width: 810px) {
+  .sg-localisation .sec4-map__photo {
+    margin-top: 120px;
+    margin-bottom: -10px;
+    padding-bottom: 55px;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    overflow-x: scroll;
+  }
+  .sg-localisation .sec4-map__photo img {
+    height: auto;
+    min-width: 810px;
+  }
+  .sg-localisation .sec4-map__scroller {
+    position: absolute;
+    bottom: 100px;
+    right: 30px;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    border: 1px solid #ffffff7a;
+    -webkit-box-shadow: 0px 0px 3px #c5c5c5;
+            box-shadow: 0px 0px 3px #c5c5c5;
+  }
+  .sg-localisation .sec4-map__scroller__center {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+    width: 67%;
+    height: 67%;
+    border-radius: 50%;
+    background-color: #FFFFFF;
+    -webkit-box-shadow: 0px 0px 2px #c5c5c5;
+            box-shadow: 0px 0px 2px #c5c5c5;
+  }
+  .sg-localisation .sec4-map__scroller__center::before {
+    content: "";
+    position: absolute;
+    left: 43%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%) rotate(-90deg);
+            transform: translate(-50%, -50%) rotate(-90deg);
+    width: 20px;
+    height: 8px;
+    background: url(../img/sea-golf/home-page/header-arrow.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    -webkit-animation: scrollright 1s infinite linear;
+            animation: scrollright 1s infinite linear;
+    -webkit-animation-delay: 0.1s;
+            animation-delay: 0.1s;
+  }
+  .sg-localisation .sec4-map__scroller__center::after {
+    content: "";
+    position: absolute;
+    left: 57%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%) rotate(-90deg);
+            transform: translate(-50%, -50%) rotate(-90deg);
+    width: 20px;
+    height: 8px;
+    background: url(../img/sea-golf/home-page/header-arrow.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    opacity: 1;
+    -webkit-animation: scrollright 1s infinite linear;
+            animation: scrollright 1s infinite linear;
+  }
+  @-webkit-keyframes scrollright {
+    0% {
+      -webkit-transform: translate(-100%, -50%) rotate(-90deg);
+              transform: translate(-100%, -50%) rotate(-90deg);
+      opacity: 0;
+    }
+    20% {
+      -webkit-transform: translate(-50%, -50%) rotate(-90deg);
+              transform: translate(-50%, -50%) rotate(-90deg);
+      opacity: 1;
+    }
+    80% {
+      -webkit-transform: translate(-50%, -50%) rotate(-90deg);
+              transform: translate(-50%, -50%) rotate(-90deg);
+      opacity: 1;
+    }
+    100% {
+      -webkit-transform: translate(0%, -50%) rotate(-90deg);
+              transform: translate(0%, -50%) rotate(-90deg);
+      opacity: 0;
+    }
+  }
+  @keyframes scrollright {
+    0% {
+      -webkit-transform: translate(-100%, -50%) rotate(-90deg);
+              transform: translate(-100%, -50%) rotate(-90deg);
+      opacity: 0;
+    }
+    20% {
+      -webkit-transform: translate(-50%, -50%) rotate(-90deg);
+              transform: translate(-50%, -50%) rotate(-90deg);
+      opacity: 1;
+    }
+    80% {
+      -webkit-transform: translate(-50%, -50%) rotate(-90deg);
+              transform: translate(-50%, -50%) rotate(-90deg);
+      opacity: 1;
+    }
+    100% {
+      -webkit-transform: translate(0%, -50%) rotate(-90deg);
+              transform: translate(0%, -50%) rotate(-90deg);
+      opacity: 0;
+    }
   }
 }
 
@@ -6992,15 +7103,11 @@ em {
     width: 100%;
   }
   .sg-gallery .sg-gallery-seagolf .category {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
     margin-top: 30px;
-    gap: 20px;
+  }
+  .sg-gallery .sg-gallery-seagolf .category__item span {
+    text-align: center;
+    font-size: 12px;
   }
   .sg-gallery .sg-gallery-seagolf .gallery {
     grid-template-columns: 1fr 1fr;
@@ -7017,16 +7124,36 @@ em {
 @media (max-width: 767px) {
   .sg-gallery .sg-gallery-seagolf {
     margin-bottom: 40px;
+    top: -50px;
   }
   .sg-gallery .sg-gallery-seagolf__title {
-    margin: 350px auto 0;
+    margin: 230px auto 0;
   }
   .sg-gallery .sg-gallery-seagolf__title h5 {
     font-size: 25px;
   }
+  .sg-gallery .sg-gallery-seagolf .category {
+    margin-top: 25px;
+  }
+  .sg-gallery .sg-gallery-seagolf .category__item {
+    -ms-flex-preferred-size: 33.33%;
+        flex-basis: 33.33%;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    height: 50px;
+  }
+  .sg-gallery .sg-gallery-seagolf .category__item span {
+    font-size: 12px;
+    background-color: white;
+    letter-spacing: 0em;
+    width: 100%;
+    height: 100%;
+    padding: 17px 5px 0 5px;
+  }
   .sg-gallery .sg-gallery-seagolf .gallery {
     grid-template-columns: 1fr;
-    margin-top: 50px;
+    margin-top: 40px;
   }
   .sg-gallery .sg-gallery-seagolf .gallery .gallery-item {
     margin: 0 auto;
@@ -7044,9 +7171,6 @@ em {
   .sg-gallery .sg-gallery-seagolf__title__box {
     padding: 35px 20px;
   }
-  .sg-gallery .sg-gallery-seagolf .category__item span {
-    padding: 16px 30px;
-  }
   .sg-gallery .sg-gallery-seagolf .gallery__item {
     position: relative;
     height: 60vw;
@@ -7054,6 +7178,14 @@ em {
   .sg-gallery .sg-gallery-seagolf .gallery__item--video {
     position: relative;
     height: 60vw;
+  }
+}
+@media (max-width: 504px) {
+  .sg-gallery .sg-gallery-seagolf .category__item span {
+    padding: 10px 5px 0 5px;
+  }
+  .sg-gallery .sg-gallery-seagolf .category__item:nth-child(1) span, .sg-gallery .sg-gallery-seagolf .category__item:nth-child(3) span {
+    padding-top: 17px;
   }
 }
 
@@ -7333,6 +7465,10 @@ em {
           justify-content: center;
   position: relative;
 }
+.sg-contact .sec1-contact-sg__logo img {
+  width: 268px;
+  height: 47px;
+}
 .sg-contact .sec1-contact-sg__logo::before {
   content: "";
   position: absolute;
@@ -7361,7 +7497,7 @@ em {
     margin-bottom: 10px;
   }
   .sg-contact .sec1-contact-sg__sales-box .person-sales .person-info__email, .sg-contact .sec1-contact-sg__sales-box .person-sales .person-info__phone {
-    gap: 5px;
+    gap: 12px;
   }
   .sg-contact .sec1-contact-sg__sales-box .person-sales .person-info__email a, .sg-contact .sec1-contact-sg__sales-box .person-sales .person-info__phone a {
     position: relative;
@@ -7444,15 +7580,15 @@ em {
     min-width: auto;
     padding: 0px 20px 20px 0px;
   }
-  .sg-contact .sec1-contact-sg__sales-box .person-sales .person-info__email, .sg-contact .sec1-contact-sg__sales-box .person-sales .person-info__phone {
-    gap: 5px;
-  }
   .sg-contact .sec1-contact-sg__sales-box .person-sales .person-info__email a, .sg-contact .sec1-contact-sg__sales-box .person-sales .person-info__phone a {
     position: relative;
     font-size: 14px;
   }
   .sg-contact .sec1-contact-sg__sales-box .person-sales .person-info__email a::after, .sg-contact .sec1-contact-sg__sales-box .person-sales .person-info__phone a::after {
     right: -30px;
+  }
+  .sg-contact .sec1-contact-sg__sales-box .person-sales .person-info__name .f-h5 {
+    font-size: 24px;
   }
   .sg-contact .sec1-contact-sg .person-service {
     -webkit-box-orient: vertical;
@@ -7466,7 +7602,7 @@ em {
     padding: 0px 20px 20px 0px;
   }
   .sg-contact .sec1-contact-sg .person-service .person-info__email, .sg-contact .sec1-contact-sg .person-service .person-info__phone {
-    gap: 5px;
+    gap: 12px;
   }
   .sg-contact .sec1-contact-sg .person-service .person-info__email a, .sg-contact .sec1-contact-sg .person-service .person-info__phone a {
     position: relative;
@@ -7474,6 +7610,9 @@ em {
   }
   .sg-contact .sec1-contact-sg .person-service .person-info__email a::after, .sg-contact .sec1-contact-sg .person-service .person-info__phone a::after {
     right: -30px;
+  }
+  .sg-contact .sec1-contact-sg .person-service .person-info__name .f-h5 {
+    font-size: 24px;
   }
 }
 @media (max-width: 575px) {
@@ -7602,6 +7741,9 @@ em {
   height: 60%;
   background-color: #f4f1e526;
 }
+.sg-contact .sec2-info__numbers__box__right .box-row {
+  margin-top: 10px;
+}
 @media (max-width: 1399px) {
   .sg-contact .sec2-info__about {
     position: relative;
@@ -7627,8 +7769,8 @@ em {
     gap: 10px;
   }
   .sg-contact .sec2-info__about__icons img {
-    max-height: 100px;
-    max-width: 100px;
+    max-height: 120px;
+    max-width: 120px;
   }
   .sg-contact .sec2-info__numbers {
     padding: 80px 20px 30px 20px;
@@ -7693,13 +7835,20 @@ em {
 }
 @media (max-width: 991px) {
   .sg-contact .sec3-photo {
-    height: 600px;
-    margin-top: -200px;
+    height: 70vw;
+    margin-top: -50px;
   }
   .sg-contact .sec3-photo::after {
     bottom: -42px;
     width: 100px;
     height: 100px;
+  }
+}
+@media (max-width: 575px) {
+  .sg-contact .sec3-photo::after {
+    bottom: -35px;
+    width: 70px;
+    height: 70px;
   }
 }
 .sg-contact .sec4-testimonial {
@@ -7836,6 +7985,9 @@ em {
   height: 100%;
   background-color: #F4F1E5;
 }
+.sg-contact .sec4-testimonial__swiper .swiper-name {
+  margin-top: 15px;
+}
 @media (max-width: 1199px) {
   .sg-contact .sec4-testimonial {
     margin-top: 150px;
@@ -7939,6 +8091,20 @@ em {
   }
   .sg-contact .sec4-testimonial__swiper {
     padding: 20px 15px 20px 57px;
+  }
+}
+@media (max-width: 991px) {
+  .sg-contact .sec4-testimonial__icon {
+    display: none;
+  }
+  .sg-contact .sec4-testimonial__box {
+    padding-left: 0px;
+  }
+  .sg-contact .sec4-testimonial__box::after {
+    display: none;
+  }
+  .sg-contact .sec4-testimonial__swiper {
+    padding: 20px 15px 20px 15px;
   }
 }
 .sg-contact .sec5-location-seagolf {
@@ -8048,7 +8214,7 @@ em {
     margin-top: 30px;
   }
   .sg-contact .sec5-location-seagolf__content .locat-info {
-    margin-top: 30px;
+    margin-top: 25px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -8056,10 +8222,21 @@ em {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    gap: 30px;
+    gap: 20px;
   }
   .sg-contact .sec5-location-seagolf__content .locat-info__data-firm, .sg-contact .sec5-location-seagolf__content .locat-info__data-person {
     width: 100%;
+  }
+  .sg-contact .sec5-location-seagolf__content .locat-info__data-firm p:nth-last-child(1), .sg-contact .sec5-location-seagolf__content .locat-info__data-person p:nth-last-child(1) {
+    margin-top: 20px;
+  }
+  .sg-contact .sec5-location-seagolf__content .locat-info__data-firm p:nth-child(2),
+.sg-contact .sec5-location-seagolf__content .locat-info__data-firm p:nth-child(4), .sg-contact .sec5-location-seagolf__content .locat-info__data-person p:nth-child(2),
+.sg-contact .sec5-location-seagolf__content .locat-info__data-person p:nth-child(4) {
+    line-height: 25px;
+  }
+  .sg-contact .sec5-location-seagolf__content .locat-info__data-firm p:nth-last-child(2) {
+    margin-top: 20px;
   }
 }
 
@@ -10113,6 +10290,18 @@ em {
     display: none;
   }
   .seagolf-nav .seagolf-nav__container__burger span {
+    background: #FFFFFF;
+  }
+  .seagolf-nav .seagolf-nav__container__burger--sticky span {
+    background: #292827;
+  }
+  .seagolf-nav .seagolf-nav__container__burger.open::after {
+    display: none;
+  }
+  .seagolf-nav .seagolf-nav__container__burger.open::before {
+    display: none;
+  }
+  .seagolf-nav .seagolf-nav__container__burger.open span {
     background: #292827;
   }
 }
@@ -10226,6 +10415,7 @@ footer .footer-top__box__content__text .f-h4 {
 }
 footer .footer-top__box__content .btn {
   left: -20px;
+  font-size: 12px;
 }
 @media (max-width: 991px) {
   footer .footer-top {
@@ -10278,6 +10468,10 @@ footer .footer::after {
   background-repeat: no-repeat;
   background-size: cover;
   pointer-events: none;
+}
+footer .footer__logo {
+  width: 260px;
+  height: 45px;
 }
 footer .footer .footer-box {
   margin: 40px 0 0;
@@ -10395,13 +10589,26 @@ footer .footer .footer-box a p {
 }
 @media (max-width: 767px) {
   footer .footer {
-    padding: 150px 0 30px;
+    padding: 110px 0 30px;
+  }
+  footer .footer::after {
+    width: 175px;
+    height: 85px;
   }
   footer .footer__text-created {
     margin: 30px 0 0;
   }
   footer .footer .footer-box__title {
     height: auto;
+  }
+  footer .footer .footer-box .text-main {
+    font-size: 15px;
+  }
+  footer .footer .footer-box .f-h6 {
+    font-size: 22px;
+  }
+  footer .footer__text-bottom .text-main {
+    min-height: 20px;
   }
 }
 @-webkit-keyframes rotate-text {

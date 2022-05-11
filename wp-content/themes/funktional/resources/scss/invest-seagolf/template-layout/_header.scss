@@ -516,7 +516,23 @@
 
         .seagolf-nav__container__burger {
             span {
-                background: $black-dark;
+                background: $white;
+            }
+            &--sticky {
+                span {
+                    background: $black-dark;
+                }
+            }
+            &.open {
+                &::after {
+                    display: none;
+                }
+                &::before {
+                    display: none;
+                }
+                span {
+                    background: $black-dark;
+                }
             }
         }
     }

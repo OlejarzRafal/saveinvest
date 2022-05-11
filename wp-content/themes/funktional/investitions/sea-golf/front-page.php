@@ -10,7 +10,7 @@ get_template_part('investitions/sea-golf/header');
 <div class="sg-frontpage">
     <section class="header">
         <video autoplay="" playsinline="" muted="" loop="" class="video-home-page video-home-page--desktop">
-            <source src="<?php echo get_template_directory_uri(); ?>/assets/img/invest-karwia/video/Enklawa-Karwia_Video_AdaptiveLowBitrate.mp4" type="video/mp4">
+            <source src="<?php echo get_template_directory_uri(); ?>/assets/img/sea-golf/video/Hero_Video.mp4" type="video/mp4">
         </video>
         <?php if ($seagolf_sec1_title = get_field('seagolf_sec1_title')) : ?>
             <div class="header__text">
@@ -287,7 +287,7 @@ get_template_part('investitions/sea-golf/header');
                                     <?php if ($seagolf_sec9_first_box_link = get_sub_field('seagolf_sec9_first_box_link')) : ?>
                                         <a href="<?php echo $seagolf_sec9_first_box_link; ?>" class="sec8-links__box__video-link__item video-first-link">
                                             <video playsinline="" muted="" loop="" preload="true" class="sec8-links__box__video-link__item__hover">
-                                                <source src="<?php echo get_template_directory_uri(); ?>/assets/img/invest-karwia/video/Karwia_Video_Lokalizacja.mp4" type="video/mp4">
+                                                <source src="<?php echo get_template_directory_uri(); ?>/assets/img/sea-golf/video/Video_Lokalizacja.mp4" type="video/mp4">
                                             </video>
                                             <div class="sec8-links__box__video-link__item__container">
                                                 <img src=" <?php echo get_template_directory_uri(); ?>/assets/img/sea-golf/home-page/icon-sec8-item-1.svg" alt="ikona" />
@@ -313,7 +313,7 @@ get_template_part('investitions/sea-golf/header');
                                     <?php if ($seagolf_sec9_second_box_link = get_sub_field('seagolf_sec9_second_box_link')) : ?>
                                         <a href="<?php echo $seagolf_sec9_second_box_link; ?>" class="sec8-links__box__video-link__item video-second-link">
                                             <video playsinline="" muted="" loop="" preload="true" class="sec8-links__box__video-link__item__hover">
-                                                <source src="<?php echo get_template_directory_uri(); ?>/assets/img/invest-karwia/video/Karwia_Video_Ceny-dzialek.mp4" type="video/mp4">
+                                                <source src="<?php echo get_template_directory_uri(); ?>/assets/img/sea-golf/video/Video_Ceny-dzialek.mp4" type="video/mp4">
                                             </video>
                                             <div class="sec8-links__box__video-link__item__container">
                                                 <img src=" <?php echo get_template_directory_uri(); ?>/assets/img/sea-golf/home-page/icon-sec8-item-2.svg" alt="ikona" />
@@ -339,7 +339,7 @@ get_template_part('investitions/sea-golf/header');
                                     <?php if ($seagolf_sec9_third_box_link = get_sub_field('seagolf_sec9_third_box_link')) : ?>
                                         <a href=" <?php echo $seagolf_sec9_third_box_link; ?>" class="sec8-links__box__video-link__item video-last-link">
                                             <video playsinline="" muted="" loop="" preload="true" class="sec8-links__box__video-link__item__hover">
-                                                <source src="<?php echo get_template_directory_uri(); ?>/assets/img/invest-karwia/video/Karwia_Video_Finansowanie.mp4" type="video/mp4">
+                                                <source src="<?php echo get_template_directory_uri(); ?>/assets/img/sea-golf/video/Video_Finansowanie.mp4" type="video/mp4">
                                             </video>
                                             <div class="sec8-links__box__video-link__item__container">
                                                 <img src=" <?php echo get_template_directory_uri(); ?>/assets/img/sea-golf/home-page/icon-sec8-item-3.svg" alt="ikona" />
@@ -402,16 +402,19 @@ get_template_part('investitions/sea-golf/header');
                             <div class="text-main"><?php echo $seagolf_sec10_about_company_text; ?></div>
                         <?php endif; ?>
                         <div class="sec9-testimonial__company__icon-content">
-                            <?php if (have_rows('seagolf_sec10_about_company_icons')) : ?>
+                            <img src="<?php bloginfo('template_url'); ?>/assets/img/sea-golf/home-page/sec9-20year-icon.svg" alt="ikona" />
+                            <img src="<?php bloginfo('template_url'); ?>/assets/img/sea-golf/home-page/sec9-1000-icon.svg" alt="ikona" />
+                            <img src="<?php bloginfo('template_url'); ?>/assets/img/sea-golf/home-page/sec9-quality-icon.svg" alt="ikona" />
+                            <!-- <?php if (have_rows('seagolf_sec10_about_company_icons')) : ?>
                                 <?php while (have_rows('seagolf_sec10_about_company_icons')) :
-                                    the_row(); ?>
+                                            the_row(); ?>
                                     <?php
-                                    $seagolf_sec10_about_company_icons_img = get_sub_field('seagolf_sec10_about_company_icons_img');
-                                    if ($seagolf_sec10_about_company_icons_img) : ?>
+                                            $seagolf_sec10_about_company_icons_img = get_sub_field('seagolf_sec10_about_company_icons_img');
+                                            if ($seagolf_sec10_about_company_icons_img) : ?>
                                         <img src="<?php echo esc_url($seagolf_sec10_about_company_icons_img['url']); ?>" alt="<?php echo esc_attr($seagolf_sec10_about_company_icons_img['alt']); ?>" />
                                     <?php endif; ?>
                                 <?php endwhile; ?>
-                            <?php endif; ?>
+                            <?php endif; ?> -->
                         </div>
                     </div>
                 </div>

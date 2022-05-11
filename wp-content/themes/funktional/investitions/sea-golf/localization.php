@@ -126,7 +126,13 @@ get_template_part('investitions/sea-golf/header');
     </section>
 
     <section class="sec4-map">
-        <img src=" <?php echo get_template_directory_uri(); ?>/assets/img/sea-golf/localisation/sec4-mapa.jpg" alt="mapa" />
+        <div class="sec4-map__photo">
+            <img src=" <?php echo get_template_directory_uri(); ?>/assets/img/sea-golf/localisation/sec4-mapa.jpg" alt="mapa" />
+
+        </div>
+        <div class="sec4-map__scroller">
+            <div class="sec4-map__scroller__center"></div>
+        </div>
     </section>
 </div>
 

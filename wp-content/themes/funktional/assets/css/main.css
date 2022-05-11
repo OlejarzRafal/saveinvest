@@ -5547,6 +5547,103 @@ form span.your-phone::before {
   top: 3px;
 }
 
+.reference {
+  position: relative;
+  margin: 0;
+  padding: 0;
+}
+.reference__box {
+  margin-top: 100px;
+  position: relative;
+  width: 100%;
+  display: inline-block;
+  padding: 20px 25px;
+  -ms-flex-preferred-size: 48%;
+      flex-basis: 48%;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  border: 1px solid rgba(141, 141, 154, 0.3);
+}
+.reference__box__picture {
+  width: 500px;
+  height: 215px;
+  background: url(../img/sea-golf/home-page/sec-6-photo.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.reference__box__type-entry {
+  margin-top: 10px;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 150%;
+  color: #8d8d9a;
+}
+.reference__box__text {
+  margin-top: 10px;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 160%;
+  color: #2e2d4d;
+}
+.reference__box__bottom {
+  margin-top: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.reference__box__bottom__info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  gap: 5px;
+}
+.reference__box__bottom__info__name {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 150%;
+  color: #2e2d4d;
+}
+.reference__box__bottom__info__date {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 150%;
+  color: #2e2d4d;
+}
+.reference__box__bottom__btn {
+  padding: 15px 35px;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 140%;
+  text-align: center;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #b79d63;
+  border: 1px solid #b79d63;
+}
+
 .page-blog .news-main__header {
   margin-top: 60px;
 }

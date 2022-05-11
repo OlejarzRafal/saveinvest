@@ -76,6 +76,7 @@ footer {
                 }
                 .btn {
                     left: -20px;
+                    font-size: 12px;
                 }
             }
         }
@@ -128,6 +129,10 @@ footer {
             background-repeat: no-repeat;
             background-size: cover;
             pointer-events: none;
+        }
+        &__logo{
+            width: 260px;
+            height: 45px;
         }
         .footer-box {
             margin: 40px 0 0;
@@ -230,13 +235,28 @@ footer {
             margin-top: 60px;
         }
         @media (max-width: 767px) {
-            padding: 150px 0 30px;
+            padding: 110px 0 30px;
+            &::after {
+                width: 175px;
+                height: 85px;
+            }
             &__text-created {
                 margin: 30px 0 0;
             }
             .footer-box {
                 &__title {
                     height: auto;
+                }
+                .text-main{
+                    font-size: 15px;
+                }
+                .f-h6{
+                    font-size: 22px;
+                }
+            }
+            &__text-bottom {
+                .text-main{
+                    min-height: 20px;
                 }
             }
         }
