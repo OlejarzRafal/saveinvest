@@ -207,6 +207,7 @@
                         position: relative;
                         width: 100%;
                         height: 100%;
+                        background-color: black;
                         &:before {
                             content: "";
                             position: absolute;
@@ -226,6 +227,11 @@
                             &:before {
                                 opacity: 0.6;
                             }
+                        }
+                        .gallery__img {
+                            width: 100%;
+                            height: 100%;
+                            object-fit: cover;
                         }
                     }
                 }

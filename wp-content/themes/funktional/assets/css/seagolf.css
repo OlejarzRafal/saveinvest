@@ -7051,6 +7051,7 @@ em {
   position: relative;
   width: 100%;
   height: 100%;
+  background-color: black;
 }
 .sg-gallery .sg-gallery-seagolf .gallery__item--video a:before {
   content: "";
@@ -7070,6 +7071,12 @@ em {
 }
 .sg-gallery .sg-gallery-seagolf .gallery__item--video a:hover:before {
   opacity: 0.6;
+}
+.sg-gallery .sg-gallery-seagolf .gallery__item--video a .gallery__img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .sg-gallery .sg-gallery-seagolf .gallery__item .yt-video-link {
   background-position: center;
