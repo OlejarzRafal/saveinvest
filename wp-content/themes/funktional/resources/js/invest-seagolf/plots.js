@@ -7,12 +7,14 @@ $(document).ready(function () {
         $('.area-click__sector .plot-status--zarezerwowana path').css({
             "opacity": "0.6"
         });
+
         $('.area-click__sectors path').css({
             "opacity": "0"
         });
         $('.area-click__sector path').css({
             "opacity": "0"
         });
+        
         $(".area-hover").hover(
             function () {
                 $('.area-click__sectors path').css({
@@ -63,5 +65,5 @@ $(document).ready(function () {
 
     // var elemhalf = ($('.plot-sectors__all .plot-sectors__all__mobile').width() / 4);
     // console.log(elemhalf);
-    // $('.plot-sectors__all [data-plots-sectors]').scrollLeft(220);
+    $('.plot-sector__single [data-plots-sectors]').scrollLeft(220);
 });
