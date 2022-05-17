@@ -162,11 +162,11 @@
                                         CENY DZIAŁEK
                                     </a>
                                 </li>
-                                <li class="btn-nav btn-nav--visibility<?php if (strpos($_SERVER['REQUEST_URI'], "/dzialki/ostojakladno/finansowanie") !== false) {; ?> btn-nav--active  <?php }; ?>">
+                                <!-- <li class="btn-nav btn-nav--visibility<?php if (strpos($_SERVER['REQUEST_URI'], "/dzialki/ostojakladno/finansowanie") !== false) {; ?> btn-nav--active  <?php }; ?>">
                                     <a href="<?php echo get_home_url(); ?>/dzialki/ostojakladno/finansowanie" class="text-main text-main--fw500 text-main--f15 text-main--ls3">
                                         FINANSOWANIE
                                     </a>
-                                </li>
+                                </li> -->
                                 <li class="btn-nav <?php if (strpos($_SERVER['REQUEST_URI'], "/dzialki/seagolf/galeria/") !== false) {; ?> btn-nav--active  <?php }; ?>">
                                     <a href="<?php echo get_home_url(); ?>/dzialki/seagolf/galeria/" class="text-main text-main--fw500 text-main--f15 text-main--ls3">
                                         GALERIA

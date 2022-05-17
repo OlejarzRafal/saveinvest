@@ -233,8 +233,8 @@ get_template_part('investitions/sea-golf/header');
                                 <div class="box-row">
                                     <div class="box-row__number">
                                         <?php if ($number1_sec6_contact_seagolf = get_field('number1_sec6_contact_seagolf')) : ?>
-                                            <h1 class="f-h1 f-h1--gold-medium count percent" data-count="<?php echo $number1_sec6_contact_seagolf; ?>">
-                                                0
+                                            <h1 class="f-h1 f-h1--gold-medium count percent">
+                                                <?php echo $number1_sec6_contact_seagolf; ?>
                                             </h1>&nbsp;
                                         <?php endif; ?>
                                         <?php if ($term1_sec6_contact_seagolf = get_field('term1_sec6_contact_seagolf')) : ?>
@@ -250,8 +250,8 @@ get_template_part('investitions/sea-golf/header');
                                 <div class="box-row">
                                     <div class="box-row__number">
                                         <?php if ($number2_sec6_contact_seagolf = get_field('number2_sec6_contact_seagolf')) : ?>
-                                            <h1 class="f-h1 f-h1--gold-medium count percent" data-count="<?php echo $number2_sec6_contact_seagolf; ?>">
-                                                0
+                                            <h1 class="f-h1 f-h1--gold-medium count percent">
+                                                <?php echo $number2_sec6_contact_seagolf; ?>
                                             </h1>&nbsp;
                                         <?php endif; ?>
                                         <?php if ($term2_sec6_contact_seagolf = get_field('term2_sec6_contact_seagolf')) : ?>
@@ -271,8 +271,8 @@ get_template_part('investitions/sea-golf/header');
                                 <div class="box-row">
                                     <div class="box-row__number">
                                         <?php if ($number3_sec6_contact_seagolf = get_field('number3_sec6_contact_seagolf')) : ?>
-                                            <h1 class="f-h1 f-h1--gold-medium count percent" data-count="<?php echo $number3_sec6_contact_seagolf; ?>">
-                                                0
+                                            <h1 class="f-h1 f-h1--gold-medium count percent">
+                                                <?php echo $number3_sec6_contact_seagolf; ?>
                                             </h1>&nbsp;
                                         <?php endif; ?>
                                         <?php if ($term3_sec6_contact_seagolf = get_field('term3_sec6_contact_seagolf')) : ?>
@@ -290,8 +290,8 @@ get_template_part('investitions/sea-golf/header');
                                 <div class="box-row">
                                     <div class="box-row__number">
                                         <?php if ($number4_sec6_contact_seagolf = get_field('number4_sec6_contact_seagolf')) : ?>
-                                            <h1 class="f-h1 f-h1--gold-medium count percent" data-count="<?php echo $number4_sec6_contact_seagolf; ?>">
-                                                0
+                                            <h1 class="f-h1 f-h1--gold-medium count percent">
+                                                <?php echo $number4_sec6_contact_seagolf; ?>
                                             </h1>&nbsp;
                                         <?php endif; ?>
                                         <?php if ($term4_sec6_contact_seagolf = get_field('term4_sec6_contact_seagolf')) : ?>
@@ -311,8 +311,8 @@ get_template_part('investitions/sea-golf/header');
                                 <div class="box-row">
                                     <div class="box-row__number">
                                         <?php if ($number5_sec6_contact_seagolf = get_field('number5_sec6_contact_seagolf')) : ?>
-                                            <h1 class="f-h1 f-h1--gold-medium count percent" data-count="<?php echo $number5_sec6_contact_seagolf; ?>">
-                                                0
+                                            <h1 class="f-h1 f-h1--gold-medium count percent">
+                                                <?php echo $number5_sec6_contact_seagolf; ?>
                                             </h1>&nbsp;
                                         <?php endif; ?>
                                         <?php if ($term5_sec6_contact_seagolf = get_field('term5_sec6_contact_seagolf')) : ?>
@@ -332,8 +332,8 @@ get_template_part('investitions/sea-golf/header');
                                 <div class="box-row">
                                     <div class="box-row__number">
                                         <?php if ($number6_sec6_contact_seagolf = get_field('number6_sec6_contact_seagolf')) : ?>
-                                            <h1 class="f-h1 f-h1--gold-medium count percent" data-count="<?php echo $number6_sec6_contact_seagolf; ?>">
-                                                0
+                                            <h1 class="f-h1 f-h1--gold-medium count percent">
+                                                <?php echo $number6_sec6_contact_seagolf; ?>
                                             </h1>&nbsp;
                                         <?php endif; ?>
                                         <?php if ($term6_sec6_contact_seagolf = get_field('term6_sec6_contact_seagolf')) : ?>

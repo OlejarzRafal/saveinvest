@@ -1,203 +1,182 @@
-// .reference {
-//     position: relative;
-//     margin: 0;
-//     padding: 0;
-//     .row{
-//         align-items: stretch;
-//     }
-//     &__box {
-//         margin-top: 30px;
-//         position: relative;
-//         width: 100%;
-//         display: inline-block;
-//         padding: 20px 25px;
-//         flex-basis: 48%;
-//         height: fit-content;
-//         border: 1px solid rgba(141, 141, 154, 0.3);
-//         &__picture {
-//             width: 100%;
-//             height: 215px;
-//             background: url(../img/sea-golf/home-page/sec-6-photo.jpg);
-//             background-size: cover;
-//             background-repeat: no-repeat;
-//         }
-//         &__type-entry {
-//             margin-top: 10px;
-//             font-style: normal;
-//             font-weight: 400;
-//             font-size: 14px;
-//             line-height: 150%;
-//             color: #8d8d9a;
-//         }
-//         &__title {
-//             margin-top: 5px;
-//             font-style: normal;
-//             font-weight: 700;
-//             font-size: 20px;
-//             line-height: 150%;
-//             color: #b79d63;
-//         }
-//         &__text {
-//             margin-top: 10px;
-//             font-style: normal;
-//             font-weight: 400;
-//             font-size: 16px;
-//             line-height: 160%;
-//             color: #2e2d4d;
-//         }
-//         &__bottom {
-//             margin-top: 15px;
-//             display: flex;
-//             width: 100%;
-//             justify-content: space-between;
-//             align-items: center;
-//             &__info {
-//                 display: flex;
-//                 flex-direction: column;
-//                 justify-content: flex-start;
-//                 align-items: flex-start;
-//                 gap: 5px;
-//                 &__name {
-//                     font-style: normal;
-//                     font-weight: 500;
-//                     font-size: 20px;
-//                     line-height: 150%;
-//                     color: #2e2d4d;
-//                 }
-//                 &__date {
-//                     font-style: normal;
-//                     font-weight: 400;
-//                     font-size: 14px;
-//                     line-height: 150%;
-//                     color: #2e2d4d;
-//                 }
-//             }
-//             &__btn {
-//                 padding: 15px 35px;
-//                 font-style: normal;
-//                 font-weight: 700;
-//                 font-size: 14px;
-//                 line-height: 140%;
-//                 text-align: center;
-//                 letter-spacing: 0.1em;
-//                 text-transform: uppercase;
-//                 color: #b79d63;
-//                 border: 1px solid #b79d63;
-//                 cursor: pointer;
-//                 &:hover {
-//                     color: #ffffff;
-//                     background: #b79d63;
-//                 }
-//             }
-//         }
-//     }
-// }
-// .reference2 {
-//     position: relative;
-//     margin: 0;
-//     padding: 0;
-// column-count: 2;
-// .row{
-//     align-items: stretch;
-// }
-// .box{
-//     column-gap: 1.5em;
-// }
+.references {
+    padding-top: 170px;
+    @media screen and (max-width: $lg) {
+      padding-top: 100px;
+    }
+    .hero-history-container{
+      &::before {
+        content: url("../img/squares.png");
+          position: absolute;
+          z-index: 99;
+          left: 60px;
+          top: 50%;
+          transform: translateY(-50%);
+          z-index: -1;
+          @media screen and (max-width: $lg){
+              display: none;
+          }
+      }
+    }
+  
+    .hero-history {
+      position: relative;
+  
+  
+      &__right-col {
+        display: flex;
+        align-items: center;
+      }
+  
+      &__right-main {
+        display: flex;
+        flex-direction: column;
+        @media screen and (max-width: $lg) {
+          padding-top: 20px;
+        }
+        .text-mini {
+          font-weight: 700;
+          font-size: 10px;
+          line-height: 13px;
+          color: #8d8d9a;
+          letter-spacing: 0.1em;
+          padding-bottom: 7px;
+        }
+        .hero-history-header {
+          font-weight: 700;
+          font-size: 32px;
+          line-height: 42px;
+          color: #b79d63;
+        }
+        .hero-history-desc {
+          font-weight: 400;
+          font-size: 16px;
+          line-height: 160%;
+          color: #2e2d4d;
+          padding: 18px 0 30px 0;
+        }
+        .name-date {
+          gap: 5px;
+          display: flex;
+          flex-direction: column;
+          .hero-history-showup-name {
+            font-weight: 500;
+            font-size: 20px;
+            line-height: 150%;
+            color: #2e2d4d;
+          }
+          .mini-hero-history-showup-name {
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 150%;
+            color: #8d8d9a;
+          }
+        }
+      }
+    }
+  
+    .consultation {
+      padding-bottom: 35px;
+      &__header-topic {
+        font-weight: 700;
+        font-size: 48px;
+        line-height: 62px;
+        color: #2e2d4d;
+        @media screen and (max-width: $sm) {
+          font-size: 40px;
+          line-height: 45px;
+        }
+      }
+  
+      &__right-col {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        @media screen and (max-width: $lg) {
+          justify-content: flex-start;
+        }
+      }
+      &__header-button {
+        background-color: #b79d63;
+        color: #ffffff;
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 140%;
+        text-align: center;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        padding: 24px 25px;
+        @media screen and (max-width: $lg) {
+          margin-top: 20px;
+        }
+        @media screen and (max-width: $sm){
+          font-size: 12px;
+        }
+      }
+    }
+  }
+  
+  .free-consult{
+    background: #EDEFF5;
+    padding: 66px 0;
+    margin-top: 100px;
+    &__main{
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      h3{
+        color: #2E2D4D;
+      }
+      .consult-desc{
+        padding: 22px 0 40px 0;
+        font-weight: 500;
+        font-size: 20px;
+        color: #2E2D4D;
+        span{
+          font-weight: 700;
+        }
+      }
+      .consult-contact{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 30px;
+        @media screen and (max-width: $md){
+          flex-direction: column;
+          gap: 16px;    
+        }
+        .contact-button{
+          color: #FFFFFF;
+          background: #B79D63;
+          font-weight: 700;
+          font-size: 14px;
+          padding: 20px 30px;
+          letter-spacing: 0.1em;
+          line-height: 20px;
+          text-transform: uppercase;
+        }
+        span .contact-phone{
+          font-weight: 400;
+          font-size: 16px;
+          line-height: 26px;
+          color: #2E2D4D;
+        }
+        .contact-phone{
+          position: relative;
+          padding-left: 15px;
+          &::before{
+            position:absolute;
+            content: url("../img/phone.png");
+            left: -15px;
+          }
+        }
+      }
+    }
+  }
 
-// &__box {
-//     margin-top: 30px;
-//     position: relative;
-//     width: 42%;
-//     width: 100%;
-//     margin: 10px 0;
-//     display: inline-block;
-//     padding: 20px 25px;
-//     // flex-basis: 45%;
-//     height: auto;
-//     border: 1px solid rgba(141, 141, 154, 0.3);
-//     &__picture {
-//         width: 100%;
-//         height: 215px;
-//         background: url(../img/sea-golf/home-page/sec-6-photo.jpg);
-//         background-size: cover;
-//         background-repeat: no-repeat;
-//     }
-//     &__type-entry {
-//         margin-top: 10px;
-//         font-style: normal;
-//         font-weight: 400;
-//         font-size: 14px;
-//         line-height: 150%;
-//         color: #8d8d9a;
-//     }
-//     &__title {
-//         margin-top: 5px;
-//         font-style: normal;
-//         font-weight: 700;
-//         font-size: 20px;
-//         line-height: 150%;
-//         color: #b79d63;
-//     }
-//     &__text {
-//         margin-top: 10px;
-//         font-style: normal;
-//         font-weight: 400;
-//         font-size: 16px;
-//         line-height: 160%;
-//         color: #2e2d4d;
-//     }
-//     &__bottom {
-//         margin-top: 15px;
-//         display: flex;
-//         width: 100%;
-//         justify-content: space-between;
-//         align-items: center;
-//         &__info {
-//             display: flex;
-//             flex-direction: column;
-//             justify-content: flex-start;
-//             align-items: flex-start;
-//             gap: 5px;
-//             &__name {
-//                 font-style: normal;
-//                 font-weight: 500;
-//                 font-size: 20px;
-//                 line-height: 150%;
-//                 color: #2e2d4d;
-//             }
-//             &__date {
-//                 font-style: normal;
-//                 font-weight: 400;
-//                 font-size: 14px;
-//                 line-height: 150%;
-//                 color: #2e2d4d;
-//             }
-//         }
-//         &__btn {
-//             padding: 15px 35px;
-//             font-style: normal;
-//             font-weight: 700;
-//             font-size: 14px;
-//             line-height: 140%;
-//             text-align: center;
-//             letter-spacing: 0.1em;
-//             text-transform: uppercase;
-//             color: #b79d63;
-//             border: 1px solid #b79d63;
-//             cursor: pointer;
-//             &:hover {
-//                 color: #ffffff;
-//                 background: #b79d63;
-//             }
-//         }
-//     }
-// }
-// @media only screen and (min-width: 1100px) {
-//     .box {
-//         column-count: 2;
-//     }
-// }
-// }
+
+
 
 .ref {
     width: 95%;
@@ -205,12 +184,7 @@
 }
 
 .reference2 {
-    // margin: 1.5em 0;
-    // padding: 0;
-    // -moz-column-gap: 1.5em;
-    // -webkit-column-gap: 1.5em;
-    // column-gap: 1.5em;
-    // font-size: .85em;
+
 
     &__box {
         margin-top: 30px;
@@ -310,29 +284,6 @@
     }
 }
 
-// @media only screen and (min-width: 400px) {
-//     .reference2 {
-//         -moz-column-count: 2;
-//         -webkit-column-count: 2;
-//         column-count: 2;
-//     }
-// }
-
-// @media only screen and (min-width: 700px) {
-//     .reference2 {
-//         -moz-column-count: 3;
-//         -webkit-column-count: 3;
-//         column-count: 3;
-//     }
-// }
-
-// @media only screen and (min-width: 900px) {
-//     .reference2 {
-//         -moz-column-count: 4;
-//         -webkit-column-count: 4;
-//         column-count: 4;
-//     }
-// }
 
 @media only screen and (min-width: 1100px) {
     .reference2 {

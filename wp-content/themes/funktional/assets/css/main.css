@@ -5547,6 +5547,232 @@ form span.your-phone::before {
   top: 3px;
 }
 
+.references {
+  padding-top: 170px;
+}
+@media screen and (max-width: 992px) {
+  .references {
+    padding-top: 100px;
+  }
+}
+.references .hero-history-container::before {
+  content: url("../img/squares.png");
+  position: absolute;
+  z-index: 99;
+  left: 60px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  z-index: -1;
+}
+@media screen and (max-width: 992px) {
+  .references .hero-history-container::before {
+    display: none;
+  }
+}
+.references .hero-history {
+  position: relative;
+}
+.references .hero-history__right-col {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.references .hero-history__right-main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+@media screen and (max-width: 992px) {
+  .references .hero-history__right-main {
+    padding-top: 20px;
+  }
+}
+.references .hero-history__right-main .text-mini {
+  font-weight: 700;
+  font-size: 10px;
+  line-height: 13px;
+  color: #8d8d9a;
+  letter-spacing: 0.1em;
+  padding-bottom: 7px;
+}
+.references .hero-history__right-main .hero-history-header {
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 42px;
+  color: #b79d63;
+}
+.references .hero-history__right-main .hero-history-desc {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 160%;
+  color: #2e2d4d;
+  padding: 18px 0 30px 0;
+}
+.references .hero-history__right-main .name-date {
+  gap: 5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.references .hero-history__right-main .name-date .hero-history-showup-name {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 150%;
+  color: #2e2d4d;
+}
+.references .hero-history__right-main .name-date .mini-hero-history-showup-name {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 150%;
+  color: #8d8d9a;
+}
+.references .consultation {
+  padding-bottom: 35px;
+}
+.references .consultation__header-topic {
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 62px;
+  color: #2e2d4d;
+}
+@media screen and (max-width: 576px) {
+  .references .consultation__header-topic {
+    font-size: 40px;
+    line-height: 45px;
+  }
+}
+.references .consultation__right-col {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+@media screen and (max-width: 992px) {
+  .references .consultation__right-col {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
+}
+.references .consultation__header-button {
+  background-color: #b79d63;
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 140%;
+  text-align: center;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 24px 25px;
+}
+@media screen and (max-width: 992px) {
+  .references .consultation__header-button {
+    margin-top: 20px;
+  }
+}
+@media screen and (max-width: 576px) {
+  .references .consultation__header-button {
+    font-size: 12px;
+  }
+}
+
+.free-consult {
+  background: #EDEFF5;
+  padding: 66px 0;
+  margin-top: 100px;
+}
+.free-consult__main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+}
+.free-consult__main h3 {
+  color: #2E2D4D;
+}
+.free-consult__main .consult-desc {
+  padding: 22px 0 40px 0;
+  font-weight: 500;
+  font-size: 20px;
+  color: #2E2D4D;
+}
+.free-consult__main .consult-desc span {
+  font-weight: 700;
+}
+.free-consult__main .consult-contact {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 30px;
+}
+@media screen and (max-width: 768px) {
+  .free-consult__main .consult-contact {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 16px;
+  }
+}
+.free-consult__main .consult-contact .contact-button {
+  color: #FFFFFF;
+  background: #B79D63;
+  font-weight: 700;
+  font-size: 14px;
+  padding: 20px 30px;
+  letter-spacing: 0.1em;
+  line-height: 20px;
+  text-transform: uppercase;
+}
+.free-consult__main .consult-contact span .contact-phone {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 26px;
+  color: #2E2D4D;
+}
+.free-consult__main .consult-contact .contact-phone {
+  position: relative;
+  padding-left: 15px;
+}
+.free-consult__main .consult-contact .contact-phone::before {
+  position: absolute;
+  content: url("../img/phone.png");
+  left: -15px;
+}
+
 .ref {
   width: 95%;
   margin: 3em auto;

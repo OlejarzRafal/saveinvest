@@ -1084,6 +1084,10 @@
                 height: 600px;
                 &:nth-last-child(1) {
                     pointer-events: none;
+    
+                    .sec8-links__box__video-link__item {
+                        opacity: 0.8;
+                    }
                 }
                 &::before {
                     content: "";

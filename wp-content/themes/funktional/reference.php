@@ -5,162 +5,93 @@
  */
 get_header(); ?>
 
-<!-- <section class="reference">
-    <div class="container">
-        <div class="row">
-            <div class="col-xl-6 reference__col">
-                <div class="reference__box">
-                    <div class="reference__box__picture"></div>
-                    <div class="reference__box__type-entry">OPINIE</div>
-                    <div class="reference__box__title">Zysk 200% na przestrzeni 5 lat dzięki działce w Mielnie Marina</div>
-                    <div class="reference__box__text">Naszą misją jest zabezpieczenie przyszłości finansowej naszych Klientów i spełnianie ich marzeń o posiadaniu własnego kawałka Ziemi w wyjątkowej lokalizacji. Bezpieczeństwo inwestycji gwarantowane jest na każdym jej etapie, o czym przekonało się już ponad tysiąc naszych zadowolonych Klientów.</div>
-                    <div class="reference__box__bottom">
-                        <div class="reference__box__bottom__info">
-                            <div class="reference__box__bottom__info__name">Ewelina i Tomasz Mruk</div>
-                            <div class="reference__box__bottom__info__date">Taldo Furniture, 2021-12-29</div>
-                        </div>
-                        <div class="reference__box__bottom__btn">pobierz pdf</div>
-                    </div>
+<!-- <section class="futureFairs">
+        <div class="container">
+            <div class="row futureFairs__title">
+                <div class="col-12">
+                    <h2><?php _e('Najbliższe wydarzenia', 'prosperplast'); ?></h2>
                 </div>
             </div>
-            <div class="col-xl-6 reference__col">
-                <div class="reference__box">
-                    <div class="reference__box__picture"></div>
-                    <div class="reference__box__type-entry">OPINIE</div>
+            <?php $future_args = array(
+                'post_type' => array('clientStory', 'referentions', 'CharitySupport'),
+                'post_status' => 'publish',
+                'orderby' => 'date',
+                'order'   => 'DESC',
+                'posts_per_page' => 6,
+            );
+            $loop = new WP_Query($future_args);
+            ?>
+            <div class="row futureFairs__slider">
+                <div class="swiper-wrapper">
+                        <?php while ($loop->have_posts()) : $loop->the_post(); ?>
+                            <div class="swiper-slide futureFairs__slide d-flex">
+                                <div class="col-12 col-lg-7 futureFairs__thumbbox">
+                                    <img src="<?php the_post_thumbnail_url(); ?>" alt="<?php the_title(); ?>">
+                                </div>
+                                <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+                                <div class="col-12 col-lg-5 futureFairs__contentbox">
+                                </div>
+                            </div>
 
-                    <div class="reference__box__text">Naszą misją jest zabezpieczenie przyszłości finansowej naszych Klientów i spełnianie ich marzeń o posiadaniu własnego kawałka Ziemi w wyjątkowej lokalizacji. Bezpieczeństwo inwestycji gwarantowane jest na każdym jej etapie, o czym przekonało się już ponad tysiąc naszych zadowolonych Klientów.</div>
-                    <div class="reference__box__bottom">
-                        <div class="reference__box__bottom__info">
-                            <div class="reference__box__bottom__info__name">Ewelina i Tomasz Mruk</div>
-                            <div class="reference__box__bottom__info__date">Taldo Furniture, 2021-12-29</div>
-                        </div>
-                        <div class="reference__box__bottom__btn">pobierz pdf</div>
-                    </div>
+                        <?php endwhile;
+                        wp_reset_postdata(); ?>     
                 </div>
             </div>
-            <div class="col-xl-6 reference__col">
-                <div class="reference__box">
-                    <div class="reference__box__type-entry">OPINIE</div>
-                    <div class="reference__box__text">Naszą misją jest zabezpieczenie przyszłości finansowej naszych Klientów i spełnianie ich marzeń o posiadaniu własnego kawałka Ziemi w wyjątkowej lokalizacji. Bezpieczeństwo inwestycji gwarantowane jest na każdym jej etapie, o czym przekonało się już ponad tysiąc naszych zadowolonych Klientów.</div>
-                    <div class="reference__box__bottom">
-                        <div class="reference__box__bottom__info">
-                            <div class="reference__box__bottom__info__name">Ewelina i Tomasz Mruk</div>
-                            <div class="reference__box__bottom__info__date">Taldo Furniture, 2021-12-29</div>
-                        </div>
-                        <div class="reference__box__bottom__btn">pobierz pdf</div>
-                    </div>
+        </div>
+    </section> -->
+<section class="references">
+    <div class="container">
+        <div class="row consultation">
+            <div class="col-12 col-lg-6">
+                <div class="consultation__header-topic">
+                    Referencje i historie naszych Klientów
                 </div>
             </div>
-            <div class="col-xl-6 reference__col">
-                <div class="reference__box">
-                    <div class="reference__box__picture"></div>
-                    <div class="reference__box__type-entry">OPINIE</div>
-                    <div class="reference__box__title">Zysk 200% na przestrzeni 5 lat dzięki działce w Mielnie Marina</div>
-                    <div class="reference__box__text">Naszą misją jest zabezpieczenie przyszłości finansowej naszych Klientów i spełnianie ich marzeń o posiadaniu własnego kawałka Ziemi w wyjątkowej lokalizacji. Bezpieczeństwo inwestycji gwarantowane jest na każdym jej etapie, o czym przekonało się już ponad tysiąc naszych zadowolonych Klientów.</div>
-                    <div class="reference__box__bottom">
-                        <div class="reference__box__bottom__info">
-                            <div class="reference__box__bottom__info__name">Ewelina i Tomasz Mruk</div>
-                            <div class="reference__box__bottom__info__date">Taldo Furniture, 2021-12-29</div>
-                        </div>
-                        <div class="reference__box__bottom__btn">pobierz pdf</div>
-                    </div>
-                </div>
+            <div class="col-12 col-lg-6 consultation__right-col">
+                <a class="consultation__header-button" href="">UMÓW SIĘ NA DARMOWĄ KONSULTACJĘ</a>
             </div>
-            <div class="col-xl-6 reference__col">
-                <div class="reference__box">
-                    <div class="reference__box__picture"></div>
-                    <div class="reference__box__type-entry">OPINIE</div>
-                    <div class="reference__box__title">Zysk 200% na przestrzeni 5 lat dzięki działce w Mielnie Marina</div>
-                    <div class="reference__box__text">Naszą misją jest zabezpieczenie przyszłości finansowej naszych Klientów i spełnianie ich marzeń o posiadaniu własnego kawałka Ziemi w wyjątkowej lokalizacji. Bezpieczeństwo inwestycji gwarantowane jest na każdym jej etapie, o czym przekonało się już ponad tysiąc naszych zadowolonych Klientów.</div>
-                    <div class="reference__box__bottom">
-                        <div class="reference__box__bottom__info">
-                            <div class="reference__box__bottom__info__name">Ewelina i Tomasz Mruk</div>
-                            <div class="reference__box__bottom__info__date">Taldo Furniture, 2021-12-29</div>
-                        </div>
-                        <div class="reference__box__bottom__btn">pobierz pdf</div>
+        </div>
+    </div>
+    <div class="container hero-history-container">
+        <div class="row hero-history">
+            <div class="col-12 col-lg-6">
+                <img src="<?php bloginfo('template_url'); ?>/assets/img/zachod.png" />
+            </div>
+            <div class="col-12 col-lg-6 hero-history__right-col">
+                <div class="hero-history__right-main">
+                    <div class="text-mini">HISTORIE</div>
+                    <div class="hero-history-header">Zachodniopomorskie: Velo Baltica coraz dłuższa</div>
+                    <div class="hero-history-desc">Zakończyła się budowa kolejnych odcinków trasy rowerowej Velo Baltica. W czwartym etapie inwestycji powstały i zostały oznakowane drogi rowerowe w czterech gminach: Międzyzdroje, Dziwnów, Rewal i Trzebiatów.</div>
+                    <div class="name-date">
+                        <div class="hero-history-showup-name">Ewelina i Tomasz Mruk</div>
+                        <div class="mini-hero-history-showup-name">Taldo Furniture, 2021-12-29</div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-</section> -->
+</section>
 
-
-<!-- <section class="reference2">
+<section class="free-consult">
     <div class="container">
-        <div class="row">
-            <div class="col-xl-12 ">
-                <div class="reference2__box">
-                    <div class="reference2__box__picture"></div>
-                    <div class="reference2__box__type-entry">OPINIE</div>
-                    <div class="reference2__box__title">Zysk 200% na przestrzeni 5 lat dzięki działce w Mielnie Marina</div>
-                    <div class="reference2__box__text">Naszą misją jest zabezpieczenie przyszłości finansowej naszych Klientów i spełnianie ich marzeń o posiadaniu własnego kawałka Ziemi w wyjątkowej lokalizacji. Bezpieczeństwo inwestycji gwarantowane jest na każdym jej etapie, o czym przekonało się już ponad tysiąc naszych zadowolonych Klientów.</div>
-                    <div class="reference2__box__bottom">
-                        <div class="reference2__box__bottom__info">
-                            <div class="reference2__box__bottom__info__name">Ewelina i Tomasz Mruk</div>
-                            <div class="reference2__box__bottom__info__date">Taldo Furniture, 2021-12-29</div>
-                        </div>
-                        <div class="reference2__box__bottom__btn">pobierz pdf</div>
-                    </div>
-                </div>
-
-                <div class="reference2__box">
-                    <div class="reference2__box__picture"></div>
-                    <div class="reference2__box__type-entry">OPINIE</div>
-
-                    <div class="reference2__box__text">Naszą misją jest zabezpieczenie przyszłości finansowej naszych Klientów i spełnianie ich marzeń o posiadaniu własnego kawałka Ziemi w wyjątkowej lokalizacji. Bezpieczeństwo inwestycji gwarantowane jest na każdym jej etapie, o czym przekonało się już ponad tysiąc naszych zadowolonych Klientów.</div>
-                    <div class="reference2__box__bottom">
-                        <div class="reference2__box__bottom__info">
-                            <div class="reference2__box__bottom__info__name">Ewelina i Tomasz Mruk</div>
-                            <div class="reference2__box__bottom__info__date">Taldo Furniture, 2021-12-29</div>
-                        </div>
-                        <div class="reference2__box__bottom__btn">pobierz pdf</div>
-                    </div>
-                </div>
-
-                <div class="reference2__box">
-                    <div class="reference2__box__type-entry">OPINIE</div>
-                    <div class="reference2__box__text">Naszą misją jest zabezpieczenie przyszłości finansowej naszych Klientów i spełnianie ich marzeń o posiadaniu własnego kawałka Ziemi w wyjątkowej lokalizacji. Bezpieczeństwo inwestycji gwarantowane jest na każdym jej etapie, o czym przekonało się już ponad tysiąc naszych zadowolonych Klientów.</div>
-                    <div class="reference2__box__bottom">
-                        <div class="reference2__box__bottom__info">
-                            <div class="reference2__box__bottom__info__name">Ewelina i Tomasz Mruk</div>
-                            <div class="reference2__box__bottom__info__date">Taldo Furniture, 2021-12-29</div>
-                        </div>
-                        <div class="reference2__box__bottom__btn">pobierz pdf</div>
-                    </div>
-                </div>
-
-                <div class="reference2__box">
-                    <div class="reference2__box__picture"></div>
-                    <div class="reference2__box__type-entry">OPINIE</div>
-                    <div class="reference2__box__title">Zysk 200% na przestrzeni 5 lat dzięki działce w Mielnie Marina</div>
-                    <div class="reference2__box__text">Naszą misją jest zabezpieczenie przyszłości finansowej naszych Klientów i spełnianie ich marzeń o posiadaniu własnego kawałka Ziemi w wyjątkowej lokalizacji. Bezpieczeństwo inwestycji gwarantowane jest na każdym jej etapie, o czym przekonało się już ponad tysiąc naszych zadowolonych Klientów.</div>
-                    <div class="reference2__box__bottom">
-                        <div class="reference2__box__bottom__info">
-                            <div class="reference2__box__bottom__info__name">Ewelina i Tomasz Mruk</div>
-                            <div class="reference2__box__bottom__info__date">Taldo Furniture, 2021-12-29</div>
-                        </div>
-                        <div class="reference2__box__bottom__btn">pobierz pdf</div>
-                    </div>
-                </div>
-
-                <div class="reference2__box">
-                    <div class="reference2__box__picture"></div>
-                    <div class="reference2__box__type-entry">OPINIE</div>
-                    <div class="reference2__box__title">Zysk 200% na przestrzeni 5 lat dzięki działce w Mielnie Marina</div>
-                    <div class="reference2__box__text">Naszą misją jest zabezpieczenie przyszłości finansowej naszych Klientów i spełnianie ich marzeń o posiadaniu własnego kawałka Ziemi w wyjątkowej lokalizacji. Bezpieczeństwo inwestycji gwarantowane jest na każdym jej etapie, o czym przekonało się już ponad tysiąc naszych zadowolonych Klientów.</div>
-                    <div class="reference2__box__bottom">
-                        <div class="reference2__box__bottom__info">
-                            <div class="reference2__box__bottom__info__name">Ewelina i Tomasz Mruk</div>
-                            <div class="reference2__box__bottom__info__date">Taldo Furniture, 2021-12-29</div>
-                        </div>
-                        <div class="reference2__box__bottom__btn">pobierz pdf</div>
-                    </div>
-                </div>
+        <div class="free-consult__main">
+            <h3>Nie wiesz od czego zacząć?<br>Szukasz czegoś wyjątkowego?</h3>
+            <div class="consult-desc">
+            Wypełnij formularz i umów się na rozmowę z doradcą inwestycyjnym
+            <br>
+            za <span>darmo.</span> Dowiedz się pierwszy o nowych działkach i wybierz 
+            <br>najlepszą i kup nawet z 20% <span>rabatem.</span>
+            </div>
+            <div class="consult-contact">
+                <a href="" class="contact-button">Zamów darmową konsultację</a>
+                <span>lub zadzwon:</span>
+                <a class="contact-phone" href="tel:+48888800800">+48 888 800 800</a>
             </div>
         </div>
     </div>
-</section> -->
+</section>
+
+
 
 <div class="ref">
     <div class="reference2">

@@ -325,7 +325,7 @@ $PlotsFront->getScriptsAndStyles('Resort Sea&golf');
 
                         <div class="plot-baner__content">
                             <h4>Kup działkę na raty</h4>
-                            <a href="<?php the_permalink(1129); ?>" class="btn btn__line">DOWIEDZ SIĘ WIĘCEJ </a>
+                            <a href="<?php the_permalink(1404); ?>" class="btn btn__line">DOWIEDZ SIĘ WIĘCEJ </a>
                         </div>
                     </div>
                 </div>
@@ -359,7 +359,7 @@ $PlotsFront->getScriptsAndStyles('Resort Sea&golf');
 </div>
 
 <div class="form-plots form-main">
-    <?php echo do_shortcode('[contact-form-7 id="1525" title="Formularz działki Sea&golf"]'); ?>
+    <?php echo do_shortcode('[contact-form-7 id="1764" title="Formularz działki SeaGolf"]'); ?>
 </div>
 
 <?php

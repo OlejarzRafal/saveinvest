@@ -4789,6 +4789,9 @@ em {
 .sg-frontpage .sec8-links__box__video-link:nth-last-child(1) {
   pointer-events: none;
 }
+.sg-frontpage .sec8-links__box__video-link:nth-last-child(1) .sec8-links__box__video-link__item {
+  opacity: 0.8;
+}
 .sg-frontpage .sec8-links__box__video-link::before {
   content: "";
   position: relative;
@@ -8893,8 +8896,9 @@ em {
   color: white;
   font-family: "Playfair Display", serif;
 }
-.plots-list .plot-baner__content .bnt {
+.plots-list .plot-baner__content .btn {
   margin-top: 30px;
+  left: -17px;
 }
 .plots-list .plots-nav {
   margin-top: 50px;
@@ -9361,11 +9365,6 @@ em {
   }
 }
 
-@media (max-width: 1199px) {
-  .sea-golf-template-plot-pricing .plots-map {
-    margin-top: 80px;
-  }
-}
 .sea-golf-template-plot-pricing .plots-map .plot-sectors [data-plots-sectors],
 .sea-golf-template-plot-pricing .plots-map .plot-sectors [data-plots-sector],
 .sea-golf-template-plot-pricing .plots-map .plot-sector [data-plots-sectors],
