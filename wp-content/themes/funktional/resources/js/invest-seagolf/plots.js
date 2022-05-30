@@ -11,9 +11,9 @@ $(document).ready(function () {
         $('.area-click__sectors path').css({
             "opacity": "0"
         });
-        $('.area-click__sector path').css({
-            "opacity": "0"
-        });
+        // $('.area-click__sector path').css({
+        //     "opacity": "0"
+        // });
         
         $(".area-hover").hover(
             function () {

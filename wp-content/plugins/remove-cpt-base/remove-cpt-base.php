@@ -3,7 +3,7 @@
 	Plugin Name: Remove CPT base
 	Plugin URI: https://www.paypal.me/jakubnovaksl
 	Description: Remove custom post type base slug from url
-	Version: 5.8
+	Version: 5.9
 	Author: KubiQ
 	Author URI: https://kubiq.sk
 	Text Domain: remove_cpt_base
@@ -34,12 +34,11 @@ class remove_cpt_base{
 	}
 
 	function plugins_loaded(){
-		load_plugin_textdomain( 'remove_cpt_base', FALSE, basename( dirname( __FILE__ ) ) . '/languages/' );
+		load_plugin_textdomain( 'remove_cpt_base', FALSE, basename( __DIR__ ) . '/languages/' );
 	}
 
 	function filter_plugin_actions( $links, $file ){
-		$settings_link = '<a href="options-general.php?page=' . basename( __FILE__ ) . '">' . __('Settings') . '</a>';
-		array_unshift( $links, $settings_link );
+		array_unshift( $links, '<a href="options-general.php?page=' . basename( __FILE__ ) . '">' . __('Settings') . '</a>' );
 		return $links;
 	}
 
@@ -59,9 +58,8 @@ class remove_cpt_base{
 		if( get_current_screen()->id != $this->plugin_admin_page ) return;
 		global $wp_post_types; ?>
 		<div class="wrap">
-			<h2><?php _e( 'Remove base slug from url for these custom post types:', 'remove_cpt_base' ) ?></h2><?php
-			if( isset( $_POST['rcptb_selected_sent'] ) ){
-
+			<h2><?php esc_html_e( 'Remove base slug from url for these custom post types:', 'remove_cpt_base' ) ?></h2><?php
+			if( isset( $_POST['rcptb_selected_sent'] ) && check_admin_referer( 'save_these_settings_' . get_current_user_id(), 'settings_nonce' ) ){
 				if( ! isset( $_POST['rcptb_alternation'] ) || ! is_array( $_POST['rcptb_alternation'] ) ){
 					$alternation = array();
 				}else{
@@ -75,7 +73,11 @@ class remove_cpt_base{
 				}
 
 				foreach( $this->rcptb_selected as $post_type => $active ){
-					$this->rcptb_selected[ $post_type ] = isset( $alternation[ $post_type ] ) ? 1 : 0;
+					if( isset( $wp_post_types[ $post_type ] ) ){
+						$this->rcptb_selected[ $post_type ] = isset( $alternation[ $post_type ] ) ? 1 : 0;
+					}else{
+						unset( $this->rcptb_selected[ $post_type ] );
+					}
 				}
 
 				$this->rcptb_selected_keys = array_keys( $this->rcptb_selected );
@@ -87,6 +89,7 @@ class remove_cpt_base{
 			<br>
 			<form method="POST" action="">
 				<input type="hidden" name="rcptb_selected_sent" value="1">
+				<?php wp_nonce_field( 'save_these_settings_' . get_current_user_id(), 'settings_nonce' ) ?>
 				<table class="widefat" style="width:auto">
 					<tbody><?php
 						foreach( $wp_post_types as $type => $custom_post ){
@@ -94,14 +97,14 @@ class remove_cpt_base{
 								<tr>
 									<td>
 										<label>
-											<input type="checkbox" name="rcptb_selected[<?php echo $custom_post->name ?>]" value="1" <?php echo isset( $this->rcptb_selected[ $custom_post->name ] ) ? 'checked' : '' ?>>
-											<?php echo $custom_post->label ?> (<?php echo $custom_post->name ?>)
+											<input type="checkbox" name="rcptb_selected[<?php echo esc_attr( $custom_post->name ) ?>]" value="1" <?php echo isset( $this->rcptb_selected[ $custom_post->name ] ) ? 'checked' : '' ?>>
+											<?php echo esc_html( $custom_post->label ) ?> (<?php echo esc_html( $custom_post->name ) ?>)
 										</label>
 									</td>
 									<td>
 										<label>
-											<input type="checkbox" name="rcptb_alternation[<?php echo $custom_post->name ?>]" value="1" <?php echo isset( $this->rcptb_selected[ $custom_post->name ] ) && $this->rcptb_selected[ $custom_post->name ] == 1 ? 'checked' : '' ?>>
-											<?php _e( 'alternation', 'remove_cpt_base' ) ?>
+											<input type="checkbox" name="rcptb_alternation[<?php echo esc_attr( $custom_post->name ) ?>]" value="1" <?php echo isset( $this->rcptb_selected[ $custom_post->name ] ) && $this->rcptb_selected[ $custom_post->name ] == 1 ? 'checked' : '' ?>>
+											<?php esc_html_e( 'alternation', 'remove_cpt_base' ) ?>
 										</label>
 									</td>
 								</tr><?php
@@ -110,7 +113,7 @@ class remove_cpt_base{
 					</tbody>
 				</table>
 
-				<p><?php _e( '* if your custom post type children return error 404, then try alternation mode', 'remove_cpt_base' ) ?></p>
+				<p><?php esc_html_e( '* if your custom post type children return error 404, then try alternation mode', 'remove_cpt_base' ) ?></p>
 				<hr>
 				<p class="submit">
 					<input type="submit" class="button-primary" value="<?php _e('Save') ?>">
