@@ -16,7 +16,7 @@ class FunktionalPlotsService {
         return $.ajax({
             url: `${window.FunktionalGlobals.homeUrl}wp-json/funktional-plots/v1/update`,
             method: 'PUT',
-            data: {data}
+            data: {data},
         });
     }
 
@@ -24,7 +24,7 @@ class FunktionalPlotsService {
         return $.ajax({
             url: `${window.FunktionalGlobals.homeUrl}wp-json/funktional-plots/v1/update-multiple`,
             method: 'PUT',
-            data: {data}
+            data: {data},
         });
     }
 
@@ -52,10 +52,11 @@ class FunktionalPlots {
         this.plotsTableBody = $('.funktional-plots__table tbody');
         this.filtersForm = $('.funktional-plots__filters');
         this.rangeSliders = {};
-        this.timeout = setTimeout(() => {});
+        this.availablePlotParams = [];
+        this.timeout = setTimeout(() => {
+        });
 
         this.initFilters(true);
-        this.initEvents();
     }
 
     initEvents() {
@@ -66,12 +67,16 @@ class FunktionalPlots {
 
         this.filtersForm.on('submit', (event) => {
             event.preventDefault();
+            this.plotsTableHead.find('[data-all-plots-data]').val('');
             this.rebuildPlotsTable();
         });
 
-        this.plotsTableHead.find('[data-all-plots-price]').on('input change', (event) => {
+        this.plotsTableHead.find('[data-all-plots-data]').on('input change', (event) => {
             event.preventDefault();
-            this.plotsTableBody.find('[name*="-priceNetto"]').val($(event.target).val());
+
+            const name = $(event.currentTarget).attr('data-all-plots-data');
+
+            this.plotsTableBody.find('[data-edit-param-field][name$="' + name + '"]').val($(event.target).val());
         });
 
         this.plotsTableHead.find('[data-save-all-plots]').on('click', (event) => {
@@ -106,7 +111,7 @@ class FunktionalPlots {
                 } else {
                     filters[filter.name] = [
                         filters[filter.name],
-                        filter.value
+                        filter.value,
                     ]
                 }
             }
@@ -114,7 +119,7 @@ class FunktionalPlots {
 
         return [
             ...Object.keys(filters).map(filterName => ({name: filterName, value: filters[filterName]})),
-            ...Object.keys(this.rangeSliders).map((name) => ({name, value: this.rangeSliders[name].value}))
+            ...Object.keys(this.rangeSliders).map((name) => ({name, value: this.rangeSliders[name].value})),
         ];
     }
 
@@ -150,17 +155,39 @@ class FunktionalPlots {
 
     initFilters(rebuildPlotsTable = false) {
         this.service.getFiltersValues().then((filtersValues) => {
-            this.rebuildFiltersValues(filtersValues);
+            this.availablePlotParams = filtersValues;
+            this.rebuildFiltersValues();
             this.initRangeSliders();
 
             if (rebuildPlotsTable) {
+                this.initTableHeaderFields();
+                this.initEvents();
                 this.rebuildPlotsTable();
             }
         }).catch(this.displayError.bind(this));
     }
 
-    rebuildFiltersValues(filtersValues) {
-        filtersValues.forEach(filterValues => {
+    initTableHeaderFields() {
+        this.plotsTableHead.find('select[data-all-plots-data]').toArray().forEach((select) => {
+            $(select).find('option').remove();
+
+            const name = $(select).attr('data-all-plots-data');
+            const availableValues = this.availablePlotParams.find(params => params.name === name);
+
+            if (availableValues && availableValues.value) {
+                availableValues.value.forEach((option) => {
+                    if (option && option.name && option.value) {
+                        $(select).append($(`<option value="${option.value}">${option.name}</option>`))
+                    }
+                });
+            }
+
+            $(select).val(null);
+        });
+    }
+
+    rebuildFiltersValues() {
+        this.availablePlotParams.forEach(filterValues => {
             const filterEl = this.filtersForm.find(`[name="${filterValues.name}"]`);
 
             if (filterEl && filterEl.length) {
@@ -187,7 +214,7 @@ class FunktionalPlots {
 
                     filterEl.select2({
                         placeholder: 'Wszystkie',
-                        multiple: true
+                        multiple: true,
                     });
 
                     filterEl.val(null).trigger('change');
@@ -217,35 +244,61 @@ class FunktionalPlots {
     }
 
     buildPlotRow(params) {
+        const getPlotEditSelectField = (currentValue, name, postId) => {
+
+            let select = `<select data-edit-param-field name="${postId}-${name}">`;
+            const availableValues = this.availablePlotParams.find(params => params.name === name);
+
+            if (availableValues && availableValues.value) {
+                availableValues.value.forEach((option) => {
+                    if (option && option.name && option.value) {
+                        select += `<option value="${option.value}" ${option.value === currentValue ? 'selected="true"' : ''}>${option.name}</option>`;
+                    }
+                });
+            }
+
+            return select + '</select>';
+        };
+
         return params ? `<tr class="author-self status-publish hentry">
                             <td class="column-primary status-column">
+                                <input type="hidden" name="postId" value="${params.postId}" />
                                 <input type="checkbox" value="true" data-toggle-status ${params.postStatus ? 'checked="true"' : ''}>
                             </td>
                             <td class="column-primary"><strong>${params.investition.label}</strong></td>
                             <td class="column-primary"><strong>${params.sector && params.sector.label ? params.sector.label : '-'}</strong></td>
                             <td class="column-primary"><strong>${params.plotNr}</strong></td>
-                            <td class="column-primary"><strong>${params.plot_type.label}</strong></td>
-                            <td class="column-primary"><strong>${params.status.label}</strong></td>
+                            <td class="column-primary">${getPlotEditSelectField(params.plot_type.value, 'plot_type', params.postId)}</td>
+                            <td class="column-primary">${getPlotEditSelectField(params.status.value, 'status', params.postId)}</td>
                             <td class="column-primary">
-                                <input type="hidden" name="postId" value="${params.postId}" />
-                                <input type="number" name="${params.postId}-priceNetto" value="${params.priceNetto}" />
+                                <input type="number" data-edit-param-field name="${params.postId}-priceNetto" value="${params.priceNetto}" />
                             </td>
-                            <td class="column-primary"><strong>${params.area}</strong></td>
-                            <td class="column-primary"><strong>${params.discount || '-'}</strong></td>
-                            <td class="column-primary"><button data-save-plot class="button action">Zapisz</button></td>
                             <td class="column-primary">
-                                <a class="button action" 
-                                    href="${window.FunktionalGlobals.homeUrl}wp-admin/post.php?action=edit&post=${params.postId}"
-                                    target="_blank">Edytuj</a>
+                                <input type="number" data-edit-param-field name="${params.postId}-area" value="${params.area}" />
+                            </td>
+                            <td class="column-primary">
+                                <input type="number" data-edit-param-field name="${params.postId}-discount" value="${params.discount}" />
+                            </td>
+                            <td class="column-primary">
+                                <button data-save-plot class="button action">Zapisz</button>
+                            </td>
+                            <td class="column-primary">
+                                <a class="button action" target="_blank"
+                                    href="${window.FunktionalGlobals.homeUrl}wp-admin/post.php?action=edit&post=${params.postId}">Edytuj</a>
                                 <a class="button deletion" data-delete-plot href="#">Usuń</a>
                             </td>
                         </tr>` : '';
     };
 
     initEditPlotActions() {
-        this.plotsTableBody.find('[name*="-priceNetto"]').on('input change', (event) => {
+        this.plotsTableBody.find('[data-edit-param-field]').on('input change', (event) => {
             event.preventDefault();
-            this.plotsTableHead.find('[data-all-plots-price]').val('');
+
+            const nameParts = $(event.currentTarget).attr('name').split('-');
+
+            if (nameParts && nameParts.length > 1) {
+                this.plotsTableHead.find('[data-all-plots-data="' + nameParts[1] + '"]').val('');
+            }
         })
 
         this.plotsTableBody.find('[data-save-plot]').on('click', (event) => {
@@ -281,7 +334,7 @@ class FunktionalPlots {
 
             this.service.setPlotStatus(
                 this.getPlotEditData($(event.currentTarget).parent().parent()).plotId,
-                status
+                status,
             ).then(() => {
                 if (status) {
                     toastr.success('Działka została poprawnie aktywowana');
@@ -308,7 +361,7 @@ class FunktionalPlots {
 
     getPlotEditData(plotRow) {
         const plotId = plotRow.find('input[name="postId"]').val();
-        const inputs = plotRow.find('input:not([name="postId"]):not([type="checkbox"])');
+        const inputs = plotRow.find('[data-edit-param-field]');
         const editData = {plotId, fields: {}};
 
         inputs.toArray().forEach(input => {

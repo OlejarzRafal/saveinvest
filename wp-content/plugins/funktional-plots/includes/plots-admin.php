@@ -70,21 +70,30 @@ class PlotsAdmin
             }
         }
 
-        $sql = "SELECT pm.meta_key as name, GROUP_CONCAT(pm.meta_value) as value 
+        $sql = "SELECT pm.meta_key as name, pm.meta_value as value 
                 FROM " . $wpdb->prefix . "postmeta pm
                 INNER JOIN " . $wpdb->prefix . "posts p ON p.ID = pm.post_id
-                WHERE p.post_status = 'publish' AND pm.meta_key IN (" . implode(',', $fieldsNames) . ") GROUP BY pm.meta_key";
+                WHERE p.post_status = 'publish' AND pm.meta_key IN (" . implode(',', $fieldsNames) . ")";
 
         $filtersValues = $wpdb->get_results($sql);
+        $groupedFiltersValues = array();
 
-        foreach ($filtersValues as &$value) {
-            $value->value = explode(',', $value->value);
+        foreach ($filtersValues as $value) {
+            if (!isset($groupedFiltersValues[$value->name])) {
+                $groupedFiltersValues[$value->name] = array();
+            }
 
-            if (in_array($value->name, $numberFields)) {
+            if (!in_array($value->value, $groupedFiltersValues[$value->name])) {
+                array_push($groupedFiltersValues[$value->name], $value->value);
+            }
+        }
+
+        foreach ($groupedFiltersValues as $name => &$values) {
+            if (in_array($name, $numberFields)) {
                 $min = 0;
                 $max = 0;
 
-                foreach ($value->value as $numberValue) {
+                foreach ($values as $numberValue) {
                     if ((int)$numberValue > $max) {
                         $max = (int)$numberValue;
                     }
@@ -94,33 +103,25 @@ class PlotsAdmin
                     }
                 }
 
-                $value->value = array('min' => $min, 'max' => $max);
+                $values = array('min' => $min, 'max' => $max);
             } else {
-                $uniqueValues = array();
-
-                foreach ($value->value as $textValue) {
-                    if (!in_array($textValue, $uniqueValues)) {
-                        $uniqueValues[] = $textValue;
-                    }
-                }
-
-                foreach ($uniqueValues as &$uniqueValue) {
-                    foreach ($plotsAcfArray['fields'] as $field) {
-                        if ($field['name'] === $value->name) {
-                            foreach ($field['choices'] as $choice => $choiceName) {
-                                if ($choice === $uniqueValue) {
-                                    $uniqueValue = array('name' => $choiceName, 'value' => $uniqueValue);
-                                }
-                            }
+                foreach ($plotsAcfArray['fields'] as $field) {
+                    if ($field['name'] === $name) {
+                        foreach ($values as &$value) {
+                            $value = array('name' => $field['choices'][$value], 'value' => $value);
                         }
                     }
                 }
-
-                $value->value = $uniqueValues;
             }
         }
 
-        echo json_encode($filtersValues);
+        $filterData = array();
+
+        foreach ($groupedFiltersValues as $name => $values) {
+            array_push($filterData, array('name' => $name, 'value' => $values));
+        }
+
+        echo json_encode($filterData);
         exit();
     }
 
@@ -132,7 +133,6 @@ class PlotsAdmin
             'post_type' => 'plots',
             'posts_per_page' => -1,
             'post_status' => array('publish', 'private'),
-//           TODO FIX THIS!!
             'meta_query' => $meta_query,
             'orderby' => in_array($data['sort']['sortBy'], array('plotNr', 'discount', 'priceNetto', 'area')) ? 'meta_value_num' : 'meta_value',
             'meta_key' => $data['sort']['sortBy'],
@@ -140,7 +140,7 @@ class PlotsAdmin
         ));
 
         echo json_encode($this->getPlotsObjectFromPosts($plotsPosts));
-        exit();  
+        exit();
     }
 
     public function updatePlot($data, $echo = true)

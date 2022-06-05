@@ -87,6 +87,7 @@
                                     <button class="sorting-buttons_desc" data-sort="plot_type-desc"></button>
                                     <button class="sorting-buttons_asc" data-sort="plot_type-asc"></button>
                                 </div>
+                                <select data-all-plots-data="plot_type"></select>
                             </th>
                             <th scope="col" class="manage-column">
                                 <span>Status</span>
@@ -94,6 +95,7 @@
                                     <button class="sorting-buttons_desc" data-sort="status-desc"></button>
                                     <button class="sorting-buttons_asc" data-sort="status-asc"></button>
                                 </div>
+                                <select data-all-plots-data="status"></select>
                             </th>
                             <th scope="col" class="manage-column">
                                 <span>Cena netto</span>
@@ -101,7 +103,7 @@
                                     <button class="sorting-buttons_desc" data-sort="discount-desc"></button>
                                     <button class="sorting-buttons_asc" data-sort="priceNetto-asc"></button>
                                 </div>
-                                <input data-all-plots-price type="number">
+                                <input data-all-plots-data="priceNetto" type="number">
                             </th>
                             <th scope="col" class="manage-column">
                                 <span>Powierzchnia</span>
@@ -109,6 +111,7 @@
                                     <button class="sorting-buttons_desc" data-sort="area-desc"></button>
                                     <button class="sorting-buttons_asc" data-sort="area-asc"></button>
                                 </div>
+                                <input data-all-plots-data="area" type="number">
                             </th>
                             <th scope="col" class="manage-column">
                                 <span>Rabat</span>
@@ -116,6 +119,7 @@
                                     <button class="sorting-buttons_desc" data-sort="discount-desc"></button>
                                     <button class="sorting-buttons_asc" data-sort="discount-asc"></button>
                                 </div>
+                                <input data-all-plots-data="discount" type="number">
                             </th>
                             <th scope="col" class="manage-column"><button data-save-all-plots class="page-title-action">Zapisz Wszystkie</button></th>
                             <th scope="col" class="manage-column"></th>

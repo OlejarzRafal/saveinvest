@@ -54,9 +54,14 @@
       width: 30px;
     }
 
-    [data-all-plots-price] {
-      max-width: 40%;
-      margin: 0 0 0 10px;
+    [data-all-plots-data] {
+      width: 90%;
+      margin: 10px 0 0;
+    }
+
+    [data-edit-param-field] {
+      width: 100%;
+      max-width: 100%;
     }
 
     .page-title-action {
