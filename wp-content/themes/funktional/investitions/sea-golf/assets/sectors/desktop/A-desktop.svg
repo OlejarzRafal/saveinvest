@@ -10,7 +10,7 @@
                 </g>
             </g>
             <g class="area-click area-click__sector">
-                <g data-plots-plot="1">
+                <g data-plots-plot="1" data-plots-plot-sector="A">
                     <path id="Vector" opacity="0.6" d="M1019.07 968.8L1116.29 1009.89L1075.31 1034.27L1057.33 1034.75L977.102 998.59L977.012 990.12L1019.07 968.8Z" fill="#36B122" stroke="#292827" stroke-width="2" stroke-miterlimit="10" />
                     <text id="1" fill="white" xml:space="preserve" style="white-space: pre" font-family="Mulish" font-size="13" font-weight="bold" letter-spacing="0em">
                         <tspan x="1013" y="994.408">1</tspan>
@@ -172,10 +172,10 @@
                         <tspan x="947" y="958.408">28</tspan>
                     </text>
                 </g>
-                <g data-plots-plot="2">
+                <g data-plots-plot="1" data-plots-plot-sector="B">
                     <path id="Vector_28" opacity="0.6" d="M1019.07 968.8L1116.09 1010.01L1158.06 985.03L1062.27 946.89L1019.07 968.8Z" fill="#36B122" stroke="#292827" stroke-width="2" stroke-miterlimit="10" />
                     <text id="2" fill="white" xml:space="preserve" style="white-space: pre" font-family="Mulish" font-size="13" font-weight="bold" letter-spacing="0em">
-                        <tspan x="1056" y="972.408">2</tspan>
+                        <tspan x="1056" y="972.408">1</tspan>
                     </text>
                 </g>
             </g>

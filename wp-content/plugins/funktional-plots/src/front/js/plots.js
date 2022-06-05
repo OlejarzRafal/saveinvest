@@ -62,12 +62,12 @@ class PlotDataElement {
 
     static prepareParamElementsForPlot(plotData, element) {
         const paramElements = element.find('[data-plot-info-param]');
-        
-        
+
+
         if (!paramElements || !paramElements.length) {
             return;
         }
-        
+
         paramElements.toArray().forEach(paramElement => {
             const param = $(paramElement).attr('data-plot-info-param');
             const conditionAbove = $(paramElement).closest('[data-plot-info-show-if]');
@@ -108,7 +108,7 @@ class PlotDataElement {
             e.preventDefault();
             $('.form-plots .form-plots-number').val(plotData.plotNr);
             $('.form-plots .form-plots-sector').val(sectorName);
-            $('.form-plots-text-number').html("Działka " + "<span>" + sectorName + plotData.plotNr  + "</span>");
+            $('.form-plots-text-number').html('Działka ' + '<span>' + sectorName + plotData.plotNr + '</span>');
             $('.form-plots').show();
         })
         $('.form-plots-close').click((e) => {
@@ -194,11 +194,12 @@ class FunktionalPlotsMap {
 
             if (plot) {
                 const plotNumber = parseInt(plot.attr('data-plots-plot'));
+                const forceSector = plot.attr('data-plots-plot-sector');
 
                 if (event.type === 'click') {
-                    this.showPlotInfo(plotNumber, true);
+                    this.showPlotInfo(plotNumber, forceSector, true);
                 } else if (!this.plotSelected) {
-                    this.showPlotInfo(plotNumber, false);
+                    this.showPlotInfo(plotNumber, forceSector, false);
                 }
             } else {
                 console.error('Selected plot has wrong attribute! Event:', event)
@@ -212,27 +213,6 @@ class FunktionalPlotsMap {
         });
     }
 
-    // setPlotsStatus() {
-    //     window.FunktionalPlots.forEach((plot) => {
-    //         let plotEl;
-    //         if (plot.sector && plot.sector.value && this.sector && this.sector.length && this.sector.attr('data-plots-sector')) {
-    //             const sectorEl = $(`[data-plots-sector="${plot.sector.value}"]`);
-    //             if (sectorEl && sectorEl.length) {
-    //                 plotEl = sectorEl.find(`[data-plots-plot="${plot.plotNr}"]`)
-    //             } else {
-    //                 console.warn('sector element for plot not found! Plot data: ', plot);
-    //             }
-    //         } else if (this.sector) {
-    //             plotEl = $(this.sector).find(`[data-plots-plot="${plot.plotNr}"]`);
-    //         }
-
-    //         if (plotEl && plotEl.length) {
-    //             plotEl.addClass(`plot-status--${plot.status.value}`);
-    //         } else {
-    //             console.warn('plot element not found! Plot data: ', plot);
-    //         }
-    //     })
-    // }
     setPlotsStatus() {
         window.FunktionalPlots.forEach((plot) => {
             let plotEl;
@@ -243,19 +223,26 @@ class FunktionalPlotsMap {
                 if (sectorEl && sectorEl.length) {
                     plotEl = sectorEl.find(`[data-plots-plot="${plot.plotNr}"]`)
                 } else {
-                    console.log(`sector element for plot ${plot} not found!`);
+                    plotEl = this.sector.find(`[data-plots-plot="${plot.plotNr}"][data-plots-plot-sector="${plot.sector.value}"]`);
+
+                    if (!plotEl.length && this.sector.find(`[data-plots-plot="${plot.plotNr}"]:not([data-plots-plot-sector])`).length) {
+                        plotEl = this.sector.find(`[data-plots-plot="${plot.plotNr}"]:not([data-plots-plot-sector])`);
+                    } else if(!plotEl.length) {
+                        console.log(`sector element for plot ${(plot.sector && plot.sector.value) ? plot.sector.value : ''}${plot.plotNr} not found!`, plot);
+                    }
                 }
             } else if (this.sector) {
                 plotEl = $(this.sector).find(`[data-plots-plot="${plot.plotNr}"]`)
             }
 
-            if(plotEl && plotEl.length) {
+            if (plotEl && plotEl.length) {
                 plotEl.addClass(`plot-status--${plot.status.value}`);
             } else {
-                console.log(`plot ${plot} element not found!`);
+                console.log(`plot ${(plot.sector && plot.sector.value) ? plot.sector.value : ''}${plot.plotNr} element not found!`, plot);
             }
         })
     }
+
     handleSelectSector(event) {
         const sector = $(event.currentTarget).attr('data-plots-sector-selector');
         const url = new URL(window.location.href);
@@ -295,8 +282,27 @@ class FunktionalPlotsMap {
         this.hidePlotInfo(true);
     }
 
-    showPlotInfo(plotNr, selectPlot) {
-        const plotData = window.FunktionalPlots.find((plot) => plot.plotNr === plotNr);
+    showPlotInfo(plotNr, forceSector, selectPlot) {
+        const plotData = window.FunktionalPlots.find((plot) => {
+            if (plot.plotNr !== plotNr) {
+                return false;
+            }
+
+            if (
+                (forceSector || this.sector && this.sector.attr('data-plots-sector')) &&
+                (!plot.sector || !plot.sector.value)
+            ) {
+                return false;
+            }
+
+            if (forceSector && plot.sector.value !== forceSector) {
+                return false;
+            } else if (this.sector && this.sector.attr('data-plots-sector') && plot.sector.value !== this.sector.attr('data-plots-sector')) {
+                return false;
+            }
+
+            return true;
+        });
 
         if (!plotData) {
             console[selectPlot ? 'error' : 'warn'](`Plot ${plotNr} data not found!`);
@@ -308,7 +314,7 @@ class FunktionalPlotsMap {
             this.plotInfoModal.addClass('stay-visible');
         }
 
-        this.prepareInfoModalForPlot(plotData);
+        this.prepareInfoModalForPlot(plotData, forceSector);
         this.plotInfoModal.show();
     }
 
@@ -317,7 +323,12 @@ class FunktionalPlotsMap {
             event.preventDefault();
         }
 
-        this.showPlotInfo(this.plotSelected.plotNr + 1, true);
+        if (this.plotSelected.sector && this.plotSelected.sector.value &&
+            this.sector.find(`[data-plots-plot="${this.plotSelected.plotNr}"][data-plots-plot-sector="${this.plotSelected.sector.value}"]`).length) {
+            this.showPlotInfo(this.plotSelected.plotNr + 1, this.plotSelected.sector.value, true);
+        } else {
+            this.showPlotInfo(this.plotSelected.plotNr + 1, null, true);
+        }
     }
 
     showPrevPlotInfo(event) {
@@ -325,7 +336,12 @@ class FunktionalPlotsMap {
             event.preventDefault();
         }
 
-        this.showPlotInfo(this.plotSelected.plotNr - 1, true);
+        if (this.plotSelected.sector && this.plotSelected.sector.value &&
+            this.sector.find(`[data-plots-plot="${this.plotSelected.plotNr}"][data-plots-plot-sector="${this.plotSelected.sector.value}"]`).length) {
+            this.showPlotInfo(this.plotSelected.plotNr - 1, this.plotSelected.sector.value, true);
+        } else {
+            this.showPlotInfo(this.plotSelected.plotNr - 1, null, true);
+        }
     }
 
     hidePlotInfo(withSelected) {
@@ -346,8 +362,10 @@ class FunktionalPlotsMap {
 
         this.plotInfoModal.find('[data-plots-info-on-selected]')[this.plotSelected ? 'show' : 'hide']();
 
-        const prevPlot = window.FunktionalPlots.find((plot) => plot.plotNr === (plotData.plotNr - 1));
-        const nextPlot = window.FunktionalPlots.find((plot) => plot.plotNr === (plotData.plotNr + 1));
+        const prevPlot = window.FunktionalPlots.find((plot) => plot.plotNr === (plotData.plotNr - 1) &&
+            ((!plotData.sector || !plotData.sector.value || !plot.sector || !plot.sector.value) || plot.sector.value === plotData.sector.value));
+        const nextPlot = window.FunktionalPlots.find((plot) => plot.plotNr === (plotData.plotNr + 1) &&
+            ((!plotData.sector || !plotData.sector.value || !plot.sector || !plot.sector.value) || plot.sector.value === plotData.sector.value));
 
         this.plotInfoModal.find('[data-plots-info-prev]')[prevPlot ? 'show' : 'hide']();
         this.plotInfoModal.find('[data-plots-info-next]')[nextPlot ? 'show' : 'hide']();
@@ -443,7 +461,7 @@ class FunktionalPlotsList {
 
         $(selectFilter).select2({
             placeholder: 'Wszystkie',
-            multiple: true
+            multiple: true,
         });
 
         $(selectFilter).val(null).trigger('change');
@@ -592,7 +610,7 @@ class FunktionalPlotsList {
 
         return {
             plots: filteredPlots.slice(this.activePage * this.perPage, (this.activePage * this.perPage) + this.perPage),
-            all: filteredPlots.length
+            all: filteredPlots.length,
         };
     }
 }
