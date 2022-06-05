@@ -52,7 +52,6 @@ class FunktionalPlots {
         this.plotsTableBody = $('.funktional-plots__table tbody');
         this.filtersForm = $('.funktional-plots__filters');
         this.rangeSliders = {};
-        this.availablePlotParams = [];
         this.timeout = setTimeout(() => {
         });
 
@@ -155,8 +154,7 @@ class FunktionalPlots {
 
     initFilters(rebuildPlotsTable = false) {
         this.service.getFiltersValues().then((filtersValues) => {
-            this.availablePlotParams = filtersValues;
-            this.rebuildFiltersValues();
+            this.rebuildFiltersValues(filtersValues);
             this.initRangeSliders();
 
             if (rebuildPlotsTable) {
@@ -172,13 +170,13 @@ class FunktionalPlots {
             $(select).find('option').remove();
 
             const name = $(select).attr('data-all-plots-data');
-            const availableValues = this.availablePlotParams.find(params => params.name === name);
+            const availableValues = window.FunktionalGlobals.availableFields.find(params => params.name === name);
 
-            if (availableValues && availableValues.value) {
-                availableValues.value.forEach((option) => {
-                    if (option && option.name && option.value) {
-                        $(select).append($(`<option value="${option.value}">${option.name}</option>`))
-                    }
+            if (availableValues && availableValues.choices) {
+                Object.keys(availableValues.choices).forEach((choice) => {
+                    const choiceName = availableValues.choices[choice];
+
+                    $(select).append($(`<option value="${choice}">${choiceName}</option>`))
                 });
             }
 
@@ -186,8 +184,8 @@ class FunktionalPlots {
         });
     }
 
-    rebuildFiltersValues() {
-        this.availablePlotParams.forEach(filterValues => {
+    rebuildFiltersValues(filtersValues) {
+        filtersValues.forEach(filterValues => {
             const filterEl = this.filtersForm.find(`[name="${filterValues.name}"]`);
 
             if (filterEl && filterEl.length) {
@@ -247,13 +245,13 @@ class FunktionalPlots {
         const getPlotEditSelectField = (currentValue, name, postId) => {
 
             let select = `<select data-edit-param-field name="${postId}-${name}">`;
-            const availableValues = this.availablePlotParams.find(params => params.name === name);
+            const availableValues = window.FunktionalGlobals.availableFields.find(params => params.name === name);
 
-            if (availableValues && availableValues.value) {
-                availableValues.value.forEach((option) => {
-                    if (option && option.name && option.value) {
-                        select += `<option value="${option.value}" ${option.value === currentValue ? 'selected="true"' : ''}>${option.name}</option>`;
-                    }
+            if (availableValues && availableValues.choices) {
+                Object.keys(availableValues.choices).forEach((choice) => {
+                    const choiceName = availableValues.choices[choice];
+
+                    select += `<option value="${choice}" ${choice === currentValue ? 'selected="true"' : ''}>${choiceName}</option>`;
                 });
             }
 
