@@ -107,8 +107,8 @@ class PlotsAdmin
             } else {
                 foreach ($plotsAcfArray['fields'] as $field) {
                     if ($field['name'] === $name) {
-                        foreach ($values as &$value) {
-                            $value = array('name' => $field['choices'][$value], 'value' => $value);
+                        foreach ($values as $index => $value) {
+                            $values[$index] = array('name' => $field['choices'][$value], 'value' => $value);
                         }
                     }
                 }
@@ -117,8 +117,8 @@ class PlotsAdmin
 
         $filterData = array();
 
-        foreach ($groupedFiltersValues as $name => $values) {
-            array_push($filterData, array('name' => $name, 'value' => $values));
+        foreach ($groupedFiltersValues as $name => $value) {
+            array_push($filterData, array('name' => $name, 'value' => $value));
         }
 
         echo json_encode($filterData);
