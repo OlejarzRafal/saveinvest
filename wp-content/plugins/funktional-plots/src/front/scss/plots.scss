@@ -43,7 +43,7 @@
                 &--sprzedana {
                     path {
                         fill: #b41818;
-                        opacity: 0.8;
+                        // opacity: 0.8;
 
                         &:hover {
                             opacity: 1;
@@ -53,7 +53,7 @@
                 &--wolna {
                     path {
                         fill: #397d03;
-                        opacity: 0.8;
+                        // opacity: 0.8;
                         &:hover {
                             opacity: 1;
                         }
@@ -63,7 +63,7 @@
                 &--zarezerwowana {
                     path {
                         fill: #df9401;
-                        opacity: 0.8;
+                        // opacity: 0.8;
 
                         &:hover {
                             opacity: 1;
@@ -73,13 +73,10 @@
             }
 
             path {
-                // fill: #2b2b2b;
-                // opacity: 0.8;
                 cursor: pointer;
-                transition: 0.3s !important;
+                transition: 0.1s !important;
 
                 &:hover {
-                    // opacity: 0.7;
                 }
             }
 

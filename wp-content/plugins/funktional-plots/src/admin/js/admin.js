@@ -355,6 +355,7 @@ class FunktionalPlots {
                 this.initFilters();
             }
         }).catch(this.displayError.bind(this));
+        this.plotsTableHead.find('[data-all-plots-data]').val('');
     }
 
     getPlotEditData(plotRow) {
