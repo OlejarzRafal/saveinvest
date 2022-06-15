@@ -42,6 +42,7 @@ class FunktionalPlots
         $this->registerInvestitionPagesCpt('osada-karwia', 'Osada Karwia', 'osadakarwia');
         $this->registerInvestitionPagesCpt('osada-dziwnowek', 'Osada Dziwnówek', 'osadadziwnowek');
         $this->registerInvestitionPagesCpt('sea-golf', 'Resort Sea&golf', 'seagolf');
+        $this->registerInvestitionPagesCpt('enklawa-dziwnowek', 'Enklawa Dziwnówek', 'enklawadziwnowek');
     }
 
     public function addInwestitionsMenuItem()

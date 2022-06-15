@@ -15,5 +15,17 @@ import "../scss/invest-enklawadziwnowek.scss";
 // import "../js/invest-seagolf/parallax";
 
 // import "../js/invest-seagolf/plots";
-// import "../js/invest-seagolf/loader";
+
 // import "../js/invest-kladno/nav-scroll";
+
+import "../js/invest-enklawadziwnowek/loader";
+import "../js/invest-enklawadziwnowek/anchor";
+import "../js/invest-enklawadziwnowek/customMap";
+import "../js/invest-enklawadziwnowek/gallery";
+import "../js/invest-enklawadziwnowek/gmaps";
+import "../js/invest-enklawadziwnowek/nav";
+import "../js/invest-enklawadziwnowek/sliders";
+import "../js/invest-enklawadziwnowek/burgerNav";
+import "../js/invest-enklawadziwnowek/scroll-trigger";
+
+

@@ -1,0 +1,60 @@
+.form-showhide {
+    &__p {
+        font-size: 11px;
+        line-height: normal;
+        &--info {
+            margin-top: 20px !important;
+        }
+        &--display {
+            margin-top: 2px !important;
+        }
+    }
+    .rodo {
+        margin-top: 0 !important;
+    }
+    &__btn {
+        font-weight: 700;
+        text-decoration: underline;
+        cursor: pointer;
+    }
+    &__information {
+        margin-top: 10px !important;
+        display: none;
+        &--active {
+            margin-top: 10px;
+            display: block;
+        }
+    }
+    .wpcf7-acceptance {
+        label {
+            margin-top: 10px !important;
+            margin-bottom: 0 !important;
+        }
+    }
+    &__obligatory {
+        color: red;
+    }
+    .wpcf7-list-item {
+        margin: 0;
+    }
+    .wpcf7-list-item-label {
+        user-select: none;
+        display: inline-block;
+        position: relative;
+        top: 3px;
+        left: 17px;
+    }
+    input[type="checkbox"] {
+        width: 10px !important;
+        min-width: 20px;
+        position: relative;
+        top: -6px;
+        left: 0;
+    }
+}
+.mainSection.aboutPage.contactPage .box form label {
+    display: flex;
+}
+.send {
+    margin-bottom: 50px;
+}

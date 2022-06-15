@@ -14,19 +14,29 @@ get_template_part('function-catalog/style-acf-wp');
 
 /*****************************************************************************************************/
 /* CUSTOM POST TYPE & TAXONOMIES */
-get_template_part('function-catalog/custom-post-type');  
+get_template_part('function-catalog/custom-post-type');
 
 /*****************************************************************************************************/
 
 /* CUSTOM POST TYPE & TAXONOMIES */
-get_template_part('function-catalog/acf-options-page');  
+get_template_part('function-catalog/acf-options-page');
 
 /*****************************************************************************************************/
 /* AJAX FUNCTIONS */
-get_template_part('template-blog-cpt/aktualnosc-glownaFunctions');  
-get_template_part('template-blog-cpt/pytania-klientow-glownaFunctions');  
-get_template_part('template-blog-cpt/ekspert-radzi-glownaFunctions');  
-get_template_part('searchFunctions');  
+get_template_part('template-blog-cpt/aktualnosc-glownaFunctions');
+get_template_part('template-blog-cpt/pytania-klientow-glownaFunctions');
+get_template_part('template-blog-cpt/ekspert-radzi-glownaFunctions');
+get_template_part('searchFunctions');
 
-add_theme_support( 'post-thumbnails' );
-add_theme_support( 'title-tag' );
+add_theme_support('post-thumbnails');
+add_theme_support('title-tag');
+
+// Allow SVG
+// function codeless_file_types_to_uploads($file_types)
+// {
+//     $new_filetypes = array();
+//     $new_filetypes['svg'] = 'image/svg+xml';
+//     $file_types = array_merge($file_types, $new_filetypes);
+//     return $file_types;
+// }
+// add_filter('upload_mimes', 'codeless_file_types_to_uploads');

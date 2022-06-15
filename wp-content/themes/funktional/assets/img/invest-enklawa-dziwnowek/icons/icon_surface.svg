@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="92.991" height="66.422" viewBox="0 0 92.991 66.422">
+    <defs>
+        <style>
+            .cls-1,.cls-5,.cls-6{fill:none;stroke:#afa77f;stroke-width:1.4px}.cls-2{clip-path:url(#clip-path)}.cls-3{clip-path:url(#clip-path-2)}.cls-4{clip-path:url(#clip-path-3)}.cls-5{stroke-linecap:square;stroke-linejoin:round}.cls-6{stroke-miterlimit:10}
+        </style>
+        <clipPath id="clip-path">
+            <path id="Rectangle_386" d="M0 0h92.991v66.422H0z" class="cls-1" data-name="Rectangle 386"/>
+        </clipPath>
+        <clipPath id="clip-path-2">
+            <path id="Rectangle_380" d="M0 0h136.996v66.422H0z" class="cls-1" data-name="Rectangle 380"/>
+        </clipPath>
+        <clipPath id="clip-path-3">
+            <path id="Rectangle_235" d="M0 0h89.536v89.536H0z" class="cls-1" data-name="Rectangle 235"/>
+        </clipPath>
+    </defs>
+    <g id="Mask_Group_33" class="cls-2" data-name="Mask Group 33">
+        <g id="Mask_Group_32" class="cls-3" data-name="Mask Group 32" transform="translate(-22.417)">
+            <g id="Group_32" data-name="Group 32" transform="translate(24.145 -11.586)">
+                <g id="Mask_Group_9" class="cls-4" data-name="Mask Group 9">
+                    <g id="Untitled-1-08" transform="translate(1.247 25.376)">
+                        <path id="Path_99" d="M72.054 29.983H90.5L63.145 73.894H3.46l27.358-43.91h12.8" class="cls-5" data-name="Path 99" transform="translate(-3.46 -25.55)"/>
+                        <path id="Line_36" d="M0 16.953V0" class="cls-6" data-name="Line 36" transform="translate(27.175 18.934)"/>
+                        <path id="Line_37" d="M0 17.086V0" class="cls-6" data-name="Line 37" transform="translate(47.818 18.801)"/>
+                        <path id="Path_100" d="M24.073 43.4l4.055-2.41 10.438-6.2 10.205 6.067 4.288 2.543" class="cls-6" data-name="Path 100" transform="translate(-1.003 -22.061)"/>
+                        <path id="Path_101" d="M52.363 38.522V57.5" class="cls-6" data-name="Path 101" transform="translate(2.369 -21.616)"/>
+                        <path id="Path_102" d="M41.582 35.6a6.532 6.532 0 0 1 5.5-3.008h.465a6.332 6.332 0 0 1-.731-2.958 6.549 6.549 0 0 1 13.081 0 6.416 6.416 0 0 1-.548 2.593h.283a6.549 6.549 0 1 1 0 13.081 5.867 5.867 0 0 1-5.551-3.091c-.183-.449-.465-1.463-.465-1.463" class="cls-6" data-name="Path 102" transform="translate(1.084 -23.417)"/>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,190 @@
+.mainSection.aboutPage {
+    background: url(../img/invest-enklawa-dziwnowek/bgs/bg_about_page.jpg)
+        center center no-repeat;
+    background-size: cover;
+    min-height: 100vh;
+
+    @media all and (max-width: 910px) {
+        height: 100%;
+        min-height: 100vh;
+    }
+    @media (max-width: 767px) {
+        min-height: auto;
+    }
+
+    .hello_box {
+        @media all and (max-width: 767px) {
+            background: rgba(230, 224, 214, 0.8);
+            padding: 50px 0;
+            margin-top: 0;
+        }
+        h1 {
+            font-family: $fontLora;
+            font-size: 19px;
+            color: #000;
+            line-height: 1.11;
+            letter-spacing: 3.55px;
+            text-shadow: none;
+            text-transform: uppercase;
+
+            @media all and (max-width: 910px) {
+                font-size: 15px;
+            }
+        }
+        h2 {
+            font-family: $fontLora;
+            font-size: 65px;
+            color: #000;
+            letter-spacing: 1.04px;
+            margin-bottom: 25px;
+
+            @media all and (max-width: 910px) {
+                font-size: 33px;
+            }
+        }
+        p {
+            font-size: 16px;
+            font-family: $fontOpen;
+        }
+    }
+
+    .nav-item.disabled {
+        @media all and (max-width: 910px) {
+            display: none;
+        }
+    }
+
+    .navbar-nav .nav-link {
+        @media all and (min-width: 767px) and (max-width: 1150px) {
+            font-size: 12px;
+            margin: 15px 13px;
+        }
+    }
+
+    .navbar {
+        background: #fff;
+
+        @media all and (min-width: 910px) and (max-width: 1400px) {
+            padding: 0.5rem 1rem 0;
+        }
+
+        .nav-item {
+            &:first-child {
+                .nav-link {
+                    @media all and (max-width: 1150px) {
+                        margin: 15px 0 15px 0;
+                    }
+                    margin: 15px 20px 15px 0;
+                }
+            }
+        }
+
+        &.fixed {
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 9999;
+        }
+    }
+
+    .filler {
+        display: block;
+        width: 106px;
+        height: 1px;
+    }
+
+    .nav-logo {
+        margin: 0 30px;
+        @media all and (max-width: 1150px) {
+            margin: 0 5px;
+        }
+        @media all and (max-width: 1400px) {
+            img {
+                height: 50px;
+            }
+        }
+
+        @media all and (max-width: 910px) {
+            display: none;
+        }
+    }
+}
+
+.listSection.aboutPage {
+    margin: 0 auto 30px;
+    .slick-track {
+        @media (max-width: 1399px) {
+            overflow: scroll;
+        }
+        .slick-slide {
+            @media (max-width: 1399px) {
+                width: 2220px !important;
+                display: flex;
+                flex-wrap: nowrap;
+            }
+            .box {
+                height: 200px;
+                vertical-align: top;
+                margin: auto 17px 40px auto;
+                width: 18%;
+
+                img {
+                    height: 60px;
+                }
+
+                .name {
+                    color: #dbdad8;
+                    margin-top: 10px;
+
+                    p {
+                        margin-top: 10px;
+                        color: #dbdad8;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.disclaimer.aboutPage {
+    color: #111717;
+    font-size: 16px;
+    text-align: center;
+    width: 720px;
+    margin: auto;
+    @media all and (max-width: 800px) {
+        width: 100%;
+        padding: 4%;
+    }
+}
+
+.infoBgSection {
+    .box {
+        height: auto;
+        padding: 4% !important;
+    }
+}
+
+.infoBgSection.right {
+    @media (max-width: 991) {
+        min-height: 700px;
+    }
+    .box {
+        padding: 4%;
+        width: 800px;
+
+        @media all and (max-width: 910px) {
+            width: 100%;
+        }
+
+        &:after {
+            top: 40px;
+            left: -100px;
+        }
+    }
+
+    &.disclaimer {
+        margin-bottom: 30px;
+        background-repeat: no-repeat;
+    }
+}

@@ -8,235 +8,282 @@
 get_template_part('investitions/enklawa-dziwnowek/header');
 ?>
 
-<!-- <div class="sg-about">
+<div class="mainSection aboutPage">
 
-    <section class="header">
-    </section>
-    <section class="sec1-about">
+    <?php get_template_part('investitions/enklawa-dziwnowek/nav-head'); ?>
+    <?php get_template_part('investitions/enklawa-dziwnowek/nav-subpages'); ?>
+
+    <div class="hello_box parallax-top">
         <div class="container">
-            <div class="row row-circle">
-                <div class="col-xxl-6">
-                    <div class="sec1-about__content">
-                        <img class="sec1-about__content__icon" src=" <?php echo get_template_directory_uri(); ?>/assets/img/sea-golf/about/sec-1-icon.svg" alt="ikona" />
-                        <div class="sec1-about__content__info">
-                            <?php if ($sec1_sg_about_title = get_field('sec1_sg_about_title')) : ?>
-                                <h2 class="f-h2 f-h2--f80 f-h2--gold-medium f-h2--fw600-italic"><?php echo $sec1_sg_about_title; ?></h2>
-                            <?php endif; ?>
-                            <?php if ($sec1_sg_about_text = get_field('sec1_sg_about_text')) : ?>
-                                <p class="text-main text-main--white"> <?php echo $sec1_sg_about_text; ?></p>
-                            <?php endif; ?>
+            <div class="col-sm-12">
+                <?php if ($about_enkl_dziwnow_sec1_header = get_field('about_enkl_dziwnow_sec1_header')) : ?>
+                    <h1>
+                        <?php echo $about_enkl_dziwnow_sec1_header; ?>
+                    </h1>
+                <?php endif; ?>
+                <?php if ($about_enkl_dziwnow_sec1_title = get_field('about_enkl_dziwnow_sec1_title')) : ?>
+                    <h2>
+                        <?php echo $about_enkl_dziwnow_sec1_title; ?>
+                    </h2>
+                <?php endif; ?>
+                <?php if ($about_enkl_dziwnow_sec1_text_first = get_field('about_enkl_dziwnow_sec1_text_first')) : ?>
+                    <p>
+                        <?php echo $about_enkl_dziwnow_sec1_text_first; ?>
+                    </p>
+                <?php endif; ?>
+                <?php if ($about_enkl_dziwnow_sec1_text_second = get_field('about_enkl_dziwnow_sec1_text_second')) : ?>
+                    <p>
+                        <?php echo $about_enkl_dziwnow_sec1_text_second; ?>
+                    </p>
+                <?php endif; ?>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="listSection aboutPage">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <?php if ($about_enkl_dziwnow_sec2_title = get_field('about_enkl_dziwnow_sec2_title')) : ?>
+                    <div class="title ek-fadein-dziwnowek">
+                        <?php echo $about_enkl_dziwnow_sec2_title; ?>
+                    </div>
+                <?php endif; ?>
+
+                <div class="row slider">
+                    <div>
+                        <?php if (have_rows('about_enkl_dziwnow_sec2_box_info')) : ?>
+                            <?php while (have_rows('about_enkl_dziwnow_sec2_box_info')) :
+                                the_row(); ?>
+                                <div class="box ek-fadein-dziwnowek">
+                                    <?php
+                                    $about_enkl_dziwnow_sec2_box_info_first_picture = get_sub_field('about_enkl_dziwnow_sec2_box_info_first_picture');
+                                    if ($about_enkl_dziwnow_sec2_box_info_first_picture) : ?>
+                                        <img src="<?php echo esc_url($about_enkl_dziwnow_sec2_box_info_first_picture['url']); ?>" alt="<?php echo esc_attr($about_enkl_dziwnow_sec2_box_info_first_picture['alt']); ?>" />
+                                    <?php endif; ?>
+                                    <div class="name">
+                                        <?php if ($about_enkl_dziwnow_sec2_box_info_first_text = get_sub_field('about_enkl_dziwnow_sec2_box_info_first_text')) : ?>
+                                            <p>
+                                                <?php echo $about_enkl_dziwnow_sec2_box_info_first_text; ?>
+                                            </p>
+                                        <?php endif; ?>
+                                        <?php if ($about_enkl_dziwnow_sec2_box_info_second_text = get_sub_field('about_enkl_dziwnow_sec2_box_info_second_text')) : ?>
+                                            <p>
+                                                <?php echo $about_enkl_dziwnow_sec2_box_info_second_text; ?>
+                                            </p>
+                                        <?php endif; ?>
+                                    </div>
+                                </div>
+                            <?php endwhile; ?>
+                        <?php endif; ?>
+
+                        <!-- <div class="box">
+                            <img src="<?php echo get_template_directory_uri() ?>/assets/img/invest-enklawa-dziwnowek/icons/icon_waves.svg" alt="Icon" />
+                            <div class="name">
+                                <p>
+                                600 m <br> do morza
+                                </p>
+                               
+                                <p>
+                                    Od Twojej działki do piaszczystej plaży i szumu fal dzieli Cię tylko krótki
+                                    spacer
+                                </p>
+                            </div>
                         </div>
+
+                        <div class="box">
+                            <img src="<?php echo get_template_directory_uri() ?>/assets/img/invest-enklawa-dziwnowek/icons/icon_pool.svg" alt="Icon" />
+                            <div class="name">
+                                podgrzewany basen <br> zewnętrzny
+                                <p>
+                                    Spędzaj wolny czas aktywnie, pływając w basenie
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="box">
+                            <img src="<?php echo get_template_directory_uri() ?>/assets/img/invest-enklawa-dziwnowek/icons/icon_near-forest.svg" alt="Icon" />
+                            <div class="name">
+                                bezpośrednio <br> przy lesie
+                                <p>
+                                    Pozwól odpocząć swoim zmysłom wśród zacisza spokojnego i cichego lasu
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="box">
+                            <img src="<?php echo get_template_directory_uri() ?>/assets/img/invest-enklawa-dziwnowek/icons/icon_beach.svg" alt="Icon" />
+                            <div class="name">
+                                8 minut <br> do plaży
+                                <p>
+                                    Spacer na piękną, piaszczystą plażę zajmie Ci zaledwie 8 minut
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="box">
+                            <img src="<?php echo get_template_directory_uri() ?>/assets/img/invest-enklawa-dziwnowek/icons/icon_invest.svg" alt="Icon" />
+                            <div class="name">
+                                Inwestuj <br> i zarabiaj
+                                <p>
+                                    Unikalna lokalizacja sprawia, że inwestycja to bezpieczna i zyskowna lokata
+                                    kapitału
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="box">
+                            <img src="<?php echo get_template_directory_uri() ?>/assets/img/invest-enklawa-dziwnowek/icons/icon_first-lane.svg" alt="Icon" />
+                            <div class="name">
+                                pierwsza linia zabudowy <br> od morza
+                                <p>
+                                    Cieszysz się zyskami z najmu, jeśli inwestujesz w biznes
+                                </p>
+                            </div>
+                        </div>
+
+
+                        <div class="box">
+                            <img src="<?php echo get_template_directory_uri() ?>/assets/img/invest-enklawa-dziwnowek/icons/icon_road.svg" alt="Icon" />
+                            <div class="name">
+                                dojazd drogą <br> asfaltową
+                                <p>
+                                    Dojeżdżasz wygodnymi, nowymi i bezpiecznymi drogami
+                                </p>
+                            </div>
+                        </div>
+
+
+                        <div class="box">
+                            <img src="<?php echo get_template_directory_uri() ?>/assets/img/invest-enklawa-dziwnowek/icons/icon_surface.svg" alt="Icon" />
+                            <div class="name">
+                                powierzchnie <br> od 321 m2
+                                <p>
+                                    Idealna wielkość działek do wypoczynku
+                                </p>
+                            </div>
+                        </div>
+
+
+                        <div class="box">
+                            <img src="<?php echo get_template_directory_uri() ?>/assets/img/invest-enklawa-dziwnowek/icons/icon_fence.svg" alt="Waves" />
+                            <div class="name">
+                                teren <br> ogrodzony
+                                <p>
+                                    Czujesz się bezpiecznie, wiedząc, że cały teren jest ogrodzony
+                                </p>
+                            </div>
+                        </div>
+
+
+                        <div class="box">
+                            <img src="<?php echo get_template_directory_uri() ?>/assets/img/invest-enklawa-dziwnowek/icons/icon_tourist-attractions.svg" alt="Icon" />
+                            <div class="name">
+                                blisko atrakcji <br> turystycznych
+                                <p>
+                                    Zatoka, marina i port - w takim sąsiedztwie nie sposób się nudzić
+                                </p>
+                            </div>
+                        </div> -->
                     </div>
                 </div>
-                <div class="col-xxl-6">
-                    <div class="sec1-about__photo">
-                        <img src=" <?php echo get_template_directory_uri(); ?>/assets/img/sea-golf/about/sec-1-background.jpg" alt="zdjęcie" />
+
+                <div class="row">
+                    <div class="col-sm-12 aboutInvest">
+                        <?php if ($about_enkl_dziwnow_sec2_link_btn = get_field('about_enkl_dziwnow_sec2_link_btn')) : ?>
+                            <a href="<?php echo esc_html($about_enkl_dziwnow_sec2_link_btn); ?>" class="btn">
+                                <?php if ($about_enkl_dziwnow_sec2_text_btn = get_field('about_enkl_dziwnow_sec2_text_btn')) : ?>
+                                    <?php echo esc_html($about_enkl_dziwnow_sec2_text_btn); ?>
+                                <?php endif; ?>
+                            </a>
+                        <?php endif; ?>
                     </div>
                 </div>
             </div>
         </div>
-        <?php if ($sec1_sg_about_text_bottom = get_field('sec1_sg_about_text_bottom')) : ?>
-            <div class="sec1-about__text">
-                <h3 class="f-h3 f-h3--gold-medium f-h3--fw500"><?php echo $sec1_sg_about_text_bottom; ?></h3>
+    </div>
+</div>
+<div class="infoBgSection right disclaimer photoBgSec" style="background:url(<?php echo get_template_directory_uri() ?>/assets/img/invest-enklawa-dziwnowek/bgs/bg_about_page_2.jpg) center bottom no-repeat;
+         background-size:auto;">
+    <div class="box">
+        <?php if ($about_enkl_dziwnow_sec3_title = get_field('about_enkl_dziwnow_sec3_title')) : ?>
+            <div class="title ek-fadein-dziwnowek">
+                <?php echo $about_enkl_dziwnow_sec3_title; ?>
             </div>
         <?php endif; ?>
-    </section>
-    <section class="sec2-info">
-        <div class="sec2-info__letter-s letter-right"></div>
-        <div class="container">
-            <div class="row">
-                <div class="col-xl-7">
-                    <div class="sec2-info__photo">
-                        <?php
-                        $sec2_sg_about_photo = get_field('sec2_sg_about_photo');
-                        if ($sec2_sg_about_photo) : ?>
-                            <img src="<?php echo esc_url($sec2_sg_about_photo['url']); ?>" alt="<?php echo esc_attr($sec2_sg_about_photo['alt']); ?>" />
-                        <?php endif; ?>
-                    </div>
-                </div>
-                <div class="col-xl-5">
-                    <div class="sec2-info__box">
-                        <?php if ($sec2_sg_about_title = get_field('sec2_sg_about_title')) : ?>
-                            <h3 class="f-h3 f-h3--black-dark"><?php echo $sec2_sg_about_title; ?></h3>
-                        <?php endif; ?>
-                        <div class="sec2-info__box__content">
-                            <?php if ($sec2_sg_about_text = get_field('sec2_sg_about_text')) : ?>
-                                <p class="text-main"> <?php echo $sec2_sg_about_text; ?>
-                                </p>
-                            <?php endif; ?>
-                            <?php
-                            $link = get_field('sec2_sg_about_button');
-                            if ($link) :
-                                $link_url = $link['url'];
-                                $link_title = $link['title'];
-                                $link_target = $link['target'] ? $link['target'] : '_self';
-                            ?>
-                                <a class="btn" href="<?php echo esc_url($link_url); ?>" target="<?php echo esc_attr($link_target); ?>"><?php echo esc_html($link_title); ?></a>
-                            <?php endif; ?>
-                        </div>
-                    </div>
-                </div>
-            </div>
+        <div class="description ek-fadein-dziwnowek">
+            <?php if ($about_enkl_dziwnow_sec3_text_first = get_field('about_enkl_dziwnow_sec3_text_first')) : ?>
+                <p>
+                    <?php echo $about_enkl_dziwnow_sec3_text_first; ?>
+                </p>
+            <?php endif; ?>
+            <?php if ($about_enkl_dziwnow_sec3_text_second = get_field('about_enkl_dziwnow_sec3_text_second')) : ?>
+                <p>
+                    <?php echo $about_enkl_dziwnow_sec3_text_second; ?>
+                </p>
+            <?php endif; ?>
+            <?php if ($about_enkl_dziwnow_sec3_text_third = get_field('about_enkl_dziwnow_sec3_text_third')) : ?>
+                <p>
+                    <?php echo $about_enkl_dziwnow_sec3_text_third; ?>
+                </p>
+            <?php endif; ?>
         </div>
-    </section>
-    <section class="sec3-info">
-        <div class="sec3-info__letter-g letter-left"></div>
-        <div class="container">
-            <div class="row">
-                <div class="col-xl-5">
-                    <div class="sec3-info__box">
-                        <?php if ($sec3_sg_about_title = get_field('sec3_sg_about_title')) : ?>
-                            <h3 class="f-h3 f-h3--black-dark"> <?php echo $sec3_sg_about_title; ?></h3>
-                        <?php endif; ?>
-                        <div class="sec3-info__box__content">
-                            <?php if ($sec3_sg_about_text = get_field('sec3_sg_about_text')) : ?>
-                                <p class="text-main"> <?php echo $sec3_sg_about_text; ?></p>
-                            <?php endif; ?>
-                            <?php
-                            $link = get_field('sec3_sg_about_button');
-                            if ($link) :
-                                $link_url = $link['url'];
-                                $link_title = $link['title'];
-                                $link_target = $link['target'] ? $link['target'] : '_self';
-                            ?>
-                                <a class="btn" href="<?php echo esc_url($link_url); ?>" target="<?php echo esc_attr($link_target); ?>"><?php echo esc_html($link_title); ?></a>
-                            <?php endif; ?>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xl-7">
-                    <div class="sec3-info__photo">
-                        <?php
-                        $sec3_sg_about_photo = get_field('sec3_sg_about_photo');
-                        if ($sec3_sg_about_photo) : ?>
-                            <img src="<?php echo esc_url($sec3_sg_about_photo['url']); ?>" alt="<?php echo esc_attr($sec3_sg_about_photo['alt']); ?>" />
-                        <?php endif; ?>
-                    </div>
-                </div>
-            </div>
+    </div>
+</div>
+<?php if ($about_enkl_dziwnow_sec3_text = get_field('about_enkl_dziwnow_sec3_text')) : ?>
+    <div class="disclaimer aboutPage">
+        <?php echo $about_enkl_dziwnow_sec3_text; ?>
+    </div>
+<?php endif; ?>
+<div class="infoSection parallax-bottom">
+    <?php if ($about_enkl_dziwnow_sec4_header_text = get_field('about_enkl_dziwnow_sec4_header_text')) : ?>
+        <div class="text">
+            <?php echo $about_enkl_dziwnow_sec4_header_text; ?>
         </div>
-    </section>
-    <section class="sec4-slider">
-        <div class="sec4-slider__ball parallax"></div>
-        <div class="container">
-            <div class="row">
-                <div class="col-xl-12">
-                    <div class="sec4-slider__slider swiper">
-                        <div class="swiper-wrapper">
-                            <?php if (have_rows('sec4_sg_info_box')) : ?>
-                                <?php while (have_rows('sec4_sg_info_box')) :
-                                    the_row(); ?>
-                                    <div class="swiper-slide">
-                                        <div class="swiper-slide__items">
-                                            <?php
-                                            $sec4_sg_info_box_icon = get_sub_field('sec4_sg_info_box_icon');
-                                            if ($sec4_sg_info_box_icon) : ?>
-                                                <img class="swiper-slide__items__icon" src="<?php echo esc_url($sec4_sg_info_box_icon['url']); ?>" alt="<?php echo esc_attr($sec4_sg_info_box_icon['alt']); ?>" />
-                                            <?php endif; ?>
-                                            <?php if ($sec4_sg_info_box_text = get_sub_field('sec4_sg_info_box_text')) : ?>
-                                                <h6 class="f-h6"> <?php echo $sec4_sg_info_box_text; ?></h6>
-                                            <?php endif; ?>
-                                        </div>
-                                    </div>
-                                <?php endwhile; ?>
-                            <?php endif; ?>
-                        </div>
-                    </div>
-                    <div class="sec4-slider__slider-nav">
-                        <div class="swiper-button-prev"></div>
-                        <div class="swiper-button-next"></div>
-                    </div>
-                    <div class="sec4-slider__box">
-                        <div class="sec4-slider__box__content">
-                            <?php if ($sec4_sg_info_text_bottom = get_field('sec4_sg_info_text_bottom')) : ?>
-                                <div class="sec4-slider__box__content__text">
-                                    <h4 class="f-h4"> <?php echo $sec4_sg_info_text_bottom; ?></h4>
-                                </div>
-                            <?php endif; ?>
-                        </div>
-                    </div>
-                </div>
-            </div>
+    <?php endif; ?>
+    <?php if ($about_enkl_dziwnow_sec4_header_title = get_field('about_enkl_dziwnow_sec4_header_title')) : ?>
+        <div class="title">
+            <?php echo $about_enkl_dziwnow_sec4_header_title; ?>
         </div>
+    <?php endif; ?>
+</div>
+<div class="infoBgSection" style="background:url(<?php echo get_template_directory_uri() ?>/assets/img/invest-enklawa-dziwnowek/bgs/bg_about_page_3.jpg) center center no-repeat;
+         background-size:cover;">
+    <div class="box">
+        <?php if ($about_enkl_dziwnow_sec4_title = get_field('about_enkl_dziwnow_sec4_title')) : ?>
+            <div class="title ek-fadein-dziwnowek">
+                <?php echo $about_enkl_dziwnow_sec4_title; ?>
+            </div>
+        <?php endif; ?>
+        <?php if ($about_enkl_dziwnow_sec4_text = get_field('about_enkl_dziwnow_sec4_text')) : ?>
+            <div class="description ek-fadein-dziwnowek">
+                <?php echo $about_enkl_dziwnow_sec4_text; ?>
+            </div>
+        <?php endif; ?>
+    </div>
+</div>
+<div class="infoBgSection right" style="background:url(<?php echo get_template_directory_uri() ?>/assets/img/invest-enklawa-dziwnowek/bgs/bg_about_page_4.jpg) center center no-repeat;
+         background-size:cover;">
+    <div class="box">
+        <?php if ($about_enkl_dziwnow_sec5_title = get_field('about_enkl_dziwnow_sec5_title')) : ?>
+            <div class="title ek-fadein-dziwnowek">
+                <?php echo $about_enkl_dziwnow_sec5_title; ?>
+            </div>
+        <?php endif; ?>
+        <?php if ($about_enkl_dziwnow_sec5_text = get_field('about_enkl_dziwnow_sec5_text')) : ?>
+            <div class="description ek-fadein-dziwnowek">
+                <?php echo $about_enkl_dziwnow_sec5_text; ?>
+            </div>
+        <?php endif; ?>
+    </div>
+</div>
 
-    </section>
-    <section class="sec5-info">
-        <div class="sec5-info__letter-s letter-right-2"></div>
-        <div class="container">
-            <div class="row">
-                <div class="col-xl-7">
-                    <div class="sec5-info__photo">
-                        <?php
-                        $sec5_sg_about_photo = get_field('sec5_sg_about_photo');
-                        if ($sec5_sg_about_photo) : ?>
-                            <img src="<?php echo esc_url($sec5_sg_about_photo['url']); ?>" alt="<?php echo esc_attr($sec5_sg_about_photo['alt']); ?>" />
-                        <?php endif; ?>
-                    </div>
-                </div>
-                <div class="col-xl-5">
-                    <div class="sec5-info__box">
-                        <?php if ($sec5_sg_about_title = get_field('sec5_sg_about_title')) : ?>
-                            <h3 class="f-h3 f-h3--black-dark"><?php echo $sec5_sg_about_title; ?></h3>
-                        <?php endif; ?>
-                        <div class="sec5-info__box__content">
-                            <?php if ($sec5_sg_about_text = get_field('sec5_sg_about_text')) : ?>
-                                <p class="text-main"><?php echo $sec5_sg_about_text; ?>
-                                </p>
-                            <?php endif; ?>
-                            <?php
-                            $link = get_field('sec5_sg_about_button');
-                            if ($link) :
-                                $link_url = $link['url'];
-                                $link_title = $link['title'];
-                                $link_target = $link['target'] ? $link['target'] : '_self';
-                            ?>
-                                <a class="btn" href="<?php echo esc_url($link_url); ?>" target="<?php echo esc_attr($link_target); ?>"><?php echo esc_html($link_title); ?></a>
-                            <?php endif; ?>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section class="sec6-info">
-        <div class="sec6-info__letter-g letter-left-2"></div>
-        <div class="container">
-            <div class="row">
-                <div class="col-xl-5">
-                    <div class="sec6-info__box"><?php if ($sec6_sg_about_title = get_field('sec6_sg_about_title')) : ?>
-                            <h3 class="f-h3 f-h3--black-dark"> <?php echo $sec6_sg_about_title; ?></h3>
-                        <?php endif; ?>
-                        <div class="sec6-info__box__content">
-                            <?php if ($sec6_sg_about_text = get_field('sec6_sg_about_text')) : ?>
-                                <p class="text-main"><?php echo $sec6_sg_about_text; ?></p>
-                            <?php endif; ?>
-                            <?php
-                            $link = get_field('sec6_sg_about_button');
-                            if ($link) :
-                                $link_url = $link['url'];
-                                $link_title = $link['title'];
-                                $link_target = $link['target'] ? $link['target'] : '_self';
-                            ?>
-                                <a class="btn" href="<?php echo esc_url($link_url); ?>" target="<?php echo esc_attr($link_target); ?>"><?php echo esc_html($link_title); ?></a>
-                            <?php endif; ?>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xl-7">
-                    <div class="sec6-info__photo">
-                        <?php
-                        $sec6_sg_about_photo = get_field('sec6_sg_about_photo');
-                        if ($sec6_sg_about_photo) : ?>
-                            <img src="<?php echo esc_url($sec6_sg_about_photo['url']); ?>" alt="<?php echo esc_attr($sec6_sg_about_photo['alt']); ?>" />
-                        <?php endif; ?>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-
-</div> -->
+<div class="nextPageBox">
+    <a href="<?php echo esc_url(home_url('')); ?>/lokalizacja">
+        <img src="<?php echo get_template_directory_uri() ?>/assets/img/invest-enklawa-dziwnowek/bgs/location_link.jpg" class="img-fluid" alt="" />
+        <div class="button">Lokalizacja</div>
+    </a>
+</div>
 
 <?php
 get_template_part('investitions/enklawa-dziwnowek/footer');

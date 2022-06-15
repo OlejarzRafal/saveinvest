@@ -227,5 +227,19 @@ function funktional_custom_admin_archive_link()
     }
     add_filter('views_edit-pytania_cpt', 'funktional_custom_admin_archive_link_subjects');
 }
+
+
+
 add_action('init', 'funktional_custom_admin_archive_link');
 
+if (function_exists('acf_add_options_page')) {
+
+    acf_add_options_page(array(
+        'page_title' => 'Referencje Enklawa Dziwnowek',
+        'menu_title' => 'Referencje Enklawa Dziwnowek',
+        'menu_slug' => 'references enklawa dziwnowek',
+        'capability' => 'edit_posts',
+        'redirect' => false,
+        'icon_url' => 'dashicons-editor-table',
+    ));
+}

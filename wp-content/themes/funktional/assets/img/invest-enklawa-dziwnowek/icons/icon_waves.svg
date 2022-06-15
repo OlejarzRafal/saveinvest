@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="66.422" height="66.422" viewBox="0 0 66.422 66.422">
+    <defs>
+        <style>
+            .cls-1,.cls-3{fill:none;stroke:#afa77f;stroke-width:1.4px}.cls-2{clip-path:url(#clip-path)}.cls-3{stroke-miterlimit:10}
+        </style>
+        <clipPath id="clip-path">
+            <path id="Rectangle_428" d="M0 0h66.422v66.422H0z" class="cls-1" data-name="Rectangle 428" transform="translate(499 2904.172)"/>
+        </clipPath>
+    </defs>
+    <g id="Mask_Group_61" class="cls-2" data-name="Mask Group 61" transform="translate(-499 -2904.172)">
+        <g id="Untitled-1-02" transform="translate(503 2921.014)">
+            <path id="Path_468" d="M16.968 73.856c4.156 0 4.156 6.757 8.294 6.757s4.156-6.757 8.311-6.757 4.139 6.757 8.294 6.757 4.156-6.757 8.294-6.757 4.156 6.757 8.311 6.757 4.139-6.757 8.294-6.757 4.156 6.757 8.311 6.757" class="cls-3" data-name="Path 468" transform="translate(-16.968 -47.875)"/>
+            <path id="Path_469" d="M16.968 58.21c4.156 0 4.156 6.757 8.294 6.757s4.156-6.757 8.311-6.757 4.139 6.757 8.294 6.757 4.156-6.757 8.294-6.757 4.156 6.757 8.311 6.757 4.139-6.757 8.294-6.757 4.156 6.757 8.311 6.757" class="cls-3" data-name="Path 469" transform="translate(-16.968 -45.219)"/>
+            <path id="Path_470" d="M16.968 42.564c4.156 0 4.156 6.757 8.294 6.757s4.156-6.757 8.311-6.757 4.139 6.757 8.294 6.757 4.156-6.757 8.294-6.757 4.156 6.757 8.311 6.757 4.139-6.757 8.294-6.757 4.156 6.757 8.311 6.757" class="cls-3" data-name="Path 470" transform="translate(-16.968 -42.564)"/>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<data>
+	<node>
+		<id><![CDATA[12]]></id>
+		<title><![CDATA[Strona główna]]></title>
+		<content><![CDATA[]]></content>
+		<imageurl><![CDATA[http://localhost/keden/wp-content/uploads/2022/04/bbb.jpg|http://localhost/keden/wp-content/uploads/2022/04/3.jpg|http://localhost/keden/wp-content/uploads/2022/04/tete.jpg|http://localhost/keden/wp-content/uploads/2022/05/photo1.png|http://localhost/keden/wp-content/uploads/2022/05/slider-top-photo1.png|http://localhost/keden/wp-content/uploads/2022/05/slider-top-photo2.png|http://localhost/keden/wp-content/uploads/2022/05/slider-top-photo3.png|http://localhost/keden/wp-content/uploads/2022/05/slider-top-photo4.png]]></imageurl>
+		<imagefilename><![CDATA[bbb.jpg|3.jpg|tete.jpg|photo1.png|slider-top-photo1.png|slider-top-photo2.png|slider-top-photo3.png|slider-top-photo4.png]]></imagefilename>
+		<imagepath><![CDATA[C:\Program Files\Ampps\www\keden/wp-content/uploads/2022/04/bbb.jpg|C:\Program Files\Ampps\www\keden/wp-content/uploads/2022/04/3.jpg|C:\Program Files\Ampps\www\keden/wp-content/uploads/2022/04/tete.jpg|C:\Program Files\Ampps\www\keden/wp-content/uploads/2022/05/photo1.png|C:\Program Files\Ampps\www\keden/wp-content/uploads/2022/05/slider-top-photo1.png|C:\Program Files\Ampps\www\keden/wp-content/uploads/2022/05/slider-top-photo2.png|C:\Program Files\Ampps\www\keden/wp-content/uploads/2022/05/slider-top-photo3.png|C:\Program Files\Ampps\www\keden/wp-content/uploads/2022/05/slider-top-photo4.png]]></imagepath>
+		<imageid><![CDATA[25|38|39|75|160|161|162|163]]></imageid>
+		<imagetitle><![CDATA[bbb|3|tete|photo1|slider-top-photo1|slider-top-photo2|slider-top-photo3|slider-top-photo4]]></imagetitle>
+		<imagecaption><![CDATA[|||||||]]></imagecaption>
+		<imagedescription><![CDATA[|||||||]]></imagedescription>
+		<imagealttext><![CDATA[|||||||]]></imagealttext>
+		<imagefeatured><![CDATA[]]></imagefeatured>
+		<attachmenturl><![CDATA[]]></attachmenturl>
+		<attachmentfilename><![CDATA[]]></attachmentfilename>
+		<attachmentpath><![CDATA[]]></attachmentpath>
+		<attachmentid><![CDATA[]]></attachmentid>
+		<attachmenttitle><![CDATA[]]></attachmenttitle>
+		<attachmentcaption><![CDATA[]]></attachmentcaption>
+		<attachmentdescription><![CDATA[]]></attachmentdescription>
+		<attachmentalttext><![CDATA[]]></attachmentalttext>
+		<excerpt><![CDATA[]]></excerpt>
+		<date><![CDATA[2022-04-25 09:15:30]]></date>
+		<posttype><![CDATA[page]]></posttype>
+		<permalink><![CDATA[http://localhost/keden/]]></permalink>
+		<status><![CDATA[publish]]></status>
+		<authorid><![CDATA[3]]></authorid>
+		<authorusername><![CDATA[ps]]></authorusername>
+		<authoremail><![CDATA[p.serafinko@funktional.pl]]></authoremail>
+		<authorfirstname><![CDATA[]]></authorfirstname>
+		<authorlastname><![CDATA[]]></authorlastname>
+		<slug><![CDATA[strona-glowna]]></slug>
+		<format><![CDATA[]]></format>
+		<template><![CDATA[front-page.php]]></template>
+		<parent><![CDATA[0]]></parent>
+		<parentslug><![CDATA[0]]></parentslug>
+		<order><![CDATA[0]]></order>
+		<commentstatus><![CDATA[closed]]></commentstatus>
+		<pingstatus><![CDATA[closed]]></pingstatus>
+		<postmodifieddate><![CDATA[2022-06-06 10:46:49]]></postmodifieddate>
+	</node>
+</data>

@@ -11,6 +11,7 @@ module.exports = {
         kladno: "./resources/js/invest-kladno.js",
         karwia: "./resources/js/invest-karwia.js",
         osadadziwnowek: "./resources/js/invest-osadadziwnowek.js",
+        enklawadziwnowek: "./resources/js/invest-enklawadziwnowek.js",
         seagolf: "./resources/js/invest-seagolf.js",
     },
     output: {

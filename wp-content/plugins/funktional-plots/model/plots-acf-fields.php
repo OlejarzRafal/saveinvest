@@ -18,13 +18,15 @@ $plotsAcfArray = array(
             ),
             'choices' => array(
                 // 'Mielno Marina' => 'Mielno Marina',
-                // 'Enklawa Dziwnówek' => 'Enklawa Dziwnówek',
-                // 'Osada Dziwnówek' => 'Osada Dziwnówek',
+               
+               
                 // 'Enklawa Jarosławiec' => 'Enklawa Jarosławiec',
                 // 'Osada Jaworek' => 'Osada Jaworek',
                 'Ostoja Kładno' => 'Ostoja Kładno',
                 'Osada Karwia' => 'Osada Karwia',
                 'Resort Sea&golf' => 'Resort Sea&golf',
+                 'Osada Dziwnówek' => 'Osada Dziwnówek',
+                'Enklawa Dziwnówek' => 'Enklawa Dziwnówek',
             ),
             'return_format' => 'array',
             'default_value' => false,
