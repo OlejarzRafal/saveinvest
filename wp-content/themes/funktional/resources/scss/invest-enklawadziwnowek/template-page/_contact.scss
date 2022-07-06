@@ -1,0 +1,250 @@
+.mainSection.aboutPage.contactPage {
+    background: #eaeaea url(../img/invest-enklawa-dziwnowek/bgs/bg_contact.jpg) center center no-repeat;
+    background-size: cover;
+
+    h1 {
+        font-family: $fontLora;
+        font-size: 65px;
+        color: #5a5a5a;
+        text-align: center;
+        margin: 80px auto;
+        @media all and (max-width: 767px) {
+            font-size: 50px;
+            margin: 60px auto;
+        }
+    }
+
+    .box {
+        color: #5a5a5a;
+        a {
+            color: #5a5a5a;
+            &:hover {
+                color: $colorGold;
+            }
+        }
+
+        .title {
+            font-family: $fontLora;
+            font-size: 44px;
+            @media all and (max-width: 767px) {
+                font-size: 33px;
+            }
+        }
+
+        .disclaimer {
+            font-family: $fontOpen;
+            font-size: 16px;
+        }
+
+        .screen-reader-response {
+            display: none;
+        }
+
+        .wpcf7-mail-sent-ok {
+            color: $colorGold;
+        }
+
+        .wpcf7-validation-errors {
+            color: red;
+        }
+    }
+
+    .row {
+        margin-bottom: 30px;
+    }
+
+    .person {
+        @media all and (max-width: 767px) {
+            text-align: center;
+        }
+
+        .name {
+            margin-top: 20px;
+            font-family: $fontLora;
+            font-size: 25px;
+        }
+
+        .position {
+            font-family: $fontOpen;
+            font-size: 11px;
+            margin: 15px 0;
+            text-transform: uppercase;
+        }
+
+        .phone,
+        .email {
+            font-family: $fontOpen;
+            font-size: 15px;
+        }
+    }
+}
+
+.mapData {
+    background: #fff;
+    height: auto;
+    a {
+        color: #5a5a5a;
+        &:hover {
+            color: $colorGold;
+        }
+    }
+
+    .container-fluid {
+        padding: 0;
+        margin: 0;
+        overflow: hidden;
+    }
+
+    .details {
+        padding: 5%;
+    }
+
+    .logo {
+        margin: auto;
+        text-align: left;
+        @media all and (max-width: 767px) {
+            text-align: center;
+        }
+    }
+
+    address {
+        margin: 80px 0;
+        @media all and (max-width: 910px) {
+            margin: 10px 0;
+        }
+        ul {
+            margin: 20px 0;
+            li {
+                line-height: 27px;
+                font-family: $fontOpen;
+                font-size: 16px;
+                margin: 5px 0;
+            }
+            .important {
+                font-weight: bold;
+            }
+        }
+    }
+
+    #map {
+        width: 100%;
+        min-height: 860px;
+        height: 100%;
+        @media all and (max-width: 767px) {
+            min-height: 400px;
+        }
+    }
+}
+
+.numbersSection {
+    background: url(../img/invest-enklawa-dziwnowek/bgs/bg_contact_numbers.png) center center no-repeat;
+    background-size: cover;
+    width: 100%;
+    min-height: 860px;
+    height: 100%;
+    text-align: center;
+    padding: 10%;
+
+    @media all and (max-width: 767px) {
+        padding: 0%;
+        min-height: auto;
+    }
+
+    .title {
+        font-family: $fontLora;
+        font-size: 65px;
+        color: #eaeaea;
+        margin: 33px 0;
+
+        @media all and (max-width: 767px) {
+            font-size: 40px;
+        }
+    }
+
+    .number {
+        font-family: $fontLora;
+        font-size: 52px;
+        color: #eaeaea;
+        @media (max-width: 1399px) {
+            font-size: 40px;
+        }
+
+        @media all and (max-width: 767px) {
+            font-size: 40px;
+        }
+    }
+
+    .name {
+        font-size: 18px;
+        color: #ccd4de;
+        margin-bottom: 60px;
+        @media all and (max-width: 767px) {
+            margin-bottom: 40px;
+        }
+    }
+}
+
+.quote.contact {
+    font-family: $fontLora;
+    font-size: 25px;
+    line-height: 2.56;
+    letter-spacing: 4px;
+    text-align: center;
+    color: #002333;
+    position: relative;
+    width: 1000px;
+    margin: 150px auto 0;
+    z-index: 1;
+
+    @media all and (max-width: 1040px) {
+        width: 100%;
+    }
+
+    @media all and (max-width: 767px) {
+        font-size: 18px;
+        line-height: 35px;
+        margin: 100px auto 0;
+        padding: 0 15px;
+    }
+
+    &:before {
+        content: "";
+        width: 165px;
+        height: 111px;
+        background: url(../img/invest-enklawa-dziwnowek/quote.png) center center no-repeat;
+        position: absolute;
+        top: -50px;
+        left: -50px;
+        z-index: -1;
+        @media all and (max-width: 767px) {
+            left: 0;
+            background-size: contain;
+            width: 125px;
+            height: 80px;
+        }
+    }
+}
+
+.infoBgSection.right.contact {
+    @media all and (max-width: 910px) {
+        margin: 0;
+    }
+
+    .box {
+        margin-left: auto;
+        margin-right: 15%;
+        height: auto;
+        &:after {
+            top: -40px;
+            left: auto;
+            right: -70px;
+        }
+    }
+}
+
+.aboutSection.contact {
+    min-height: 850px;
+    .box {
+        margin: 50px auto 100px;
+    }
+}

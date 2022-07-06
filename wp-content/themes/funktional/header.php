@@ -126,7 +126,7 @@
                 </div>
                 <div class="nav__menu  nav-blog__menu" id="nav-menu">
                     <ul>
-                        <li><a class="<?php if (strpos($_SERVER['REQUEST_URI'], "/blog") !== false) {; ?> nav-blog__menu--active  <?php }; ?>" href="<?php echo get_home_url(); ?>/blog">BLOG SAVEINVST</a></li>
+                        <li><a class="<?php if (strpos($_SERVER['REQUEST_URI'], "/blog") !== false) {; ?> nav-blog__menu--active  <?php }; ?>" href="<?php echo get_home_url(); ?>/blog">BLOG SAVEINVEST</a></li>
                         <li><a class="<?php if (strpos($_SERVER['REQUEST_URI'], "/aktualnosci-z-terenow") !== false) {; ?> nav-blog__menu--active <?php }; ?>" href="<?php echo get_home_url(); ?>/aktualnosci-z-terenow">AKTUALNOŚCI Z TERENÓW</a></li>
                         <li><a class="<?php if (strpos($_SERVER['REQUEST_URI'], "/ekspert-saveinvest-radzi") !== false) {; ?> nav-blog__menu--active  <?php }; ?>" href="<?php echo get_home_url(); ?>/ekspert-saveinvest-radzi">EXPERT SAVEINVEST</a></li>
                         <li><a class="<?php if (strpos($_SERVER['REQUEST_URI'], "/pytania-klientow") !== false) {; ?> nav-blog__menu--active  <?php }; ?>" href="<?php echo get_home_url(); ?>/pytania-klientow">PYTANIA KLIENTÓW</a></li>

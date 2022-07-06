@@ -1,330 +1,471 @@
-.page-template-front-page {
-    .header {
-        &__content {
-            height: 80px;
-            padding: 10px;
-            background-color: unset;
-            position: fixed;
-            transition: all 0.3s;
-            &.sticky{
-                background: white;
-                transition: all 0.3s;
-                box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.1);
-            }
-        }
-        
-        &__menu {
-            ul {
-                li {
-                    a {
-                        color: $main;
-                        padding: 19px;
-                        width: unset;
-                        &::after {
-                            bottom: 8px;
-                            background-color: white;
-                        }
-                        &:hover {
-                            &::after {
-                                width: calc(100% - 64px);
-                            }
-                        }
-                    }
-                }
-            }
-        }
+main {
+  padding-top: 130px;
+  @media screen and (max-width: $xl) {
+    padding-top: 80px;
+    .gallery-page {
+      padding-top: 160px;
     }
-    .menu-item-home {
-        display: none;
+    .about-page {
+      padding-top: 80px;
     }
+  }
 }
-.header {
-    height: 0px;
-    &__content {
-        background-color: white;
-        height: 130px;
-        position: fixed;
-        top: 0;
-        left: 0;
-        right: 0;
-        z-index: 9999999;
-        &.sticky{
-            box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.1);
-        }
+.gallery-page {
+  padding-top: 260px;
+}
+
+.postid-1283{
+  .dziwnowek-nav{
+    height: 80px;
+    &__home{
+      background-color: transparent;
+      @media screen and (max-width: $xl){
+        background-color: #ffffff;
+      }
     }
-    &__menu {
+    &__home--sticky{
+      height: 80px;
+      background-color: #ffffff;
+      box-shadow: 0px 10px 10px -10px rgba(172, 171, 171, 0.418);
+    }
+  }
+  .dziwnowek-nav.active{
+    transition: 0.5s;
+  }
+  main{
+    padding-top: 0;
+    @media screen and (max-width: $xl){
+      padding-top: 80px;
+    }
+  }
+  .logo-others{
+    display: none;
+  }
+  .dziwnowek-nav__container__box ul .btn-nav .href-style{
+    padding: 28px 20px;
+    color: #000000;
+  }
+  .dziwnowek-nav__container__box ul .btn-nav .href-style::before{
+    bottom: 22px;
+  }
+}
+
+.dziwnowek-nav {
+  height: 130px;
+  background-color: #fff;
+  width: 100%;
+  opacity: 1;
+  position: fixed;
+  z-index: 9999;
+  transition: 0.5s;
+  &--sticky {
+    height: 130px;
+    background: $White;
+    box-shadow: 0px 10px 10px -10px rgba(172, 171, 171, 0.418);
+    transition: 0.5s;
+  }
+  &__container {
+    .logo-others {
+      a {
+        width: 100%;
+      }
+      .main-logo-href {
+        background: url(../img/invest-dziwnowek/logo-page.svg);
+        height: 120px;
+        color: transparent;
+        background-size: auto 80%;
+        background-position: center;
+        background-repeat: no-repeat;
+        user-select: none;
+        display: block;
+        padding: 48px 20px;
+        width: 170px;
+        position: relative;
+      }
+    }
+    .logo-dziwnowek,
+    .logo-dziwnowek-sec {
+      display: none;
+      @media screen and (max-width: $xl) {
+        &.active {
+          display: flex;
+          width: 100%;
+          left: 0;
+          top: 0;
+          margin-right: 0vw;
+          margin-left: 0vw;
+          flex-direction: row;
+          position: relative;
+          background: url(../img/invest-dziwnowek/logo-mobile.png);
+          background-repeat: no-repeat;
+          background-size: 190px 60px;
+          background-position: left;
+          width: 30%;
+          height: 80px;
+          opacity: 1;
+          z-index: 1;
+        }
+        &.none {
+          display: none;
+        }
+      }
+      @media screen and (max-width: $md) {
+        &.active {
+          width: 40%;
+          background-size: 160px 60px;
+        }
+      }
+      @media screen and (max-width: $sm) {
+        &.active {
+          background-size: 150px 50px;
+          width: 100%;
+        }
+      }
+      a {
+        width: 100%;
+        height: auto;
+      }
+      &::after {
+        content: "";
+        display: none;
+      }
+    }
+    &__mobile {
+      a {
         text-decoration: none;
-        color: black;
+        color: #000;
+      }
+      display: none;
+      &.active {
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        left: 0px;
+        top: 0px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
         ul {
-            display: flex;
-            justify-content: center;
-            margin: 0;
-            padding: 0;
-            li {
-                list-style: none;
-                a {
-                    user-select: none;
-                    display: block;
-                    padding: 48px 20px;
-                    width: 170px;
-                    font-size: 17px;
-                    font-weight: 600;
-                    text-decoration: none;
-                    text-transform: uppercase;
-                    text-align: center;
-                    color: #5f7083;
-                    transition: all ease-in-out 0.1s;
-                    position: relative;
-                    &::after {
-                        content: "";
-                        position: absolute;
-                        bottom: 32px;
-                        left: 25%;
-                        height: 2px;
-                        width: 0px;
-                        background-color: #d4c264;
-                        transition: all ease-in-out 0.2s;
-                    }
-                    &:hover {
-                        &::after {
-                            width: 25%;
-                        }
-                    }
-                }
-            }
-            .current-menu-item {
-                a {
-                    &::after {
-                        width: 30px;
-                    }
-                }
-            }
-            .menu-item-home {
-                a {
-                    height: 120px;
-                    color: transparent;
-                    background-image: url("../img/logo-page.svg");
-                    background-size: auto 80%;
-                    background-position: center;
-                    background-repeat: no-repeat;
-                    user-select: none;
-                    &::after {
-                        display: none;
-                    }
-                }
-            }
-        }
-    }
-    &__hamburger,
-    &__title-box,
-    &__logo-box {
-        display: none;
-    }
-}
-@media screen and (max-width: $xl - 1px) {
-    .header__menu ul li a {
-        padding: 48px 8px;
-        width: 140px;
-    }
-}
-@media screen and (max-width: $lg - 1px) {
-    .page-template-front-page {
-        .header {
-            &__content {
-                height: 60px;
-                padding: 0px;
-                background-color: white;
-            }
-            &__menu {
-                &--opened {
-                    .menu {
-                        li {
-                            a {
-                                &::after {
-                                    background-color: #d4c264;
-                                }
-                                &:hover {
-                                    &::after {
-                                        width: 64px;
-                                    }
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-        }
-    }
-    .header {
-        height: 0;
-        &__content {
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: 60px;
-            width: 100%;
-            background-color: white;
-            box-shadow: 0 1px 6px rgba(32, 33, 36, 0.28);
-        }
-        &__logo-box {
-            display: block;
-        }
-        &__logo {
-            height: 40px;
-            margin: 10px 0;
-        }
-        &__title-box {
-            display: block;
-            padding: 0;
-            display: flex;
-            justify-content: flex-end;
-        }
-        &__title {
-            font-size: 12px;
-            padding: 20px 0;
-            text-transform: uppercase;
-            position: relative;
-            color: black;
+          padding: 0;
+          list-style-type: none;
+          display: flex;
+          flex-direction: column;
+          gap: 25px;
+          font-size: 22px;
+          .btn-nav {
             text-align: center;
-            &::after {
-                content: "";
-                position: absolute;
-                bottom: 24px;
-                left: 0;
-                height: 1px;
-                width: 30px;
-                background-color: #afa77f;
-            }
-        }
-        &__menu {
-            width: 100vw;
-            height: 0px;
-            padding: 0px;
-            position: fixed;
-            left: 0;
-            top: 60px;
-            right: 0;
-            bottom: 0;
-            z-index: -1;
-            background-color: white;
-            overflow-y: scroll;
-            overflow-x: hidden;
-            transition: all ease-in-out 0.2s;
-            &--opened {
-                padding: 32px 15px 32px 15px;
-                height: calc(100vh - 60px);
-                .menu {
-                    li {
-                        opacity: 1;
-                        left: 0;
-                        transition: opacity 0.1s ease-in-out 0.3s, left 0.1s ease-in-out 0.3s;
-                        @for $i from 1 through 3 {
-                            &:nth-of-type(#{$i}) {
-                                transition-delay: 0.1 * $i + s;
-                            }
-                        }
-                        @for $i from 4 through 7 {
-                            &:nth-of-type(#{$i}) {
-                                transition-delay: 0.1 * ($i - 1) + s;
-                            }
-                        }
-                        a {
-                            color: $main;
-                            padding: 19px;
-                            width: unset;
-                            &::after {
-                                bottom: 8px;
-                                left: 50%;
-                                transform: translateX(-50%);
-                                background-color: #d4c264;
-                            }
-                            &:hover {
-                                &::after {
-                                    width: 64px;
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-            ul {
-                flex-direction: column;
-                li {
-                    opacity: 0;
-                    position: relative;
-                    left: 100px;
-                }
-                .menu-item-home {
-                    a {
-                        display: none;
-                    }
-                }
-            }
-        }
-        &__hamburger-box {
-            flex: 0 0 28px;
-            max-width: unset;
-        }
-        &__hamburger {
-            display: block;
-            background-color: transparent;
-            -webkit-tap-highlight-color: transparent;
-            outline: none;
-            border: none;
-            padding: 20px 0;
-            width: 28px;
-            position: relative;
-            transition: 0.5s ease-in-out;
-            cursor: pointer;
-            .bars {
-                display: block;
+            &--active {
+              .text-main {
+                // color: $Sand-Light-Very;
                 position: relative;
-                width: 28px;
-                height: 21px;
+                &::before {
+                  content: "";
+                  position: absolute;
+                  bottom: -13px;
+                  left: 50%;
+                  transform: translateX(-50%);
+                  width: 50px;
+                  height: 3px;
+                  background-color: $Sand-Light-Very;
+                }
+              }
             }
-            .bar {
-                display: block;
-                position: absolute;
-                height: 3px;
-                width: 100%;
-                background-color: #afa77f;
-                opacity: 1;
-                left: 0;
-                transform: rotate(0deg);
-                transition: 0.25s ease-in-out;
-                &:nth-child(1) {
-                    top: 0;
-                    transform-origin: left center;
-                }
-                &:nth-child(2) {
-                    top: 9px;
-                    transform-origin: left center;
-                }
-                &:nth-child(3) {
-                    top: 18px;
-                    transform-origin: left center;
-                }
-            }
-            &--opened {
-                .bar {
-                    &:nth-child(1) {
-                        top: -2px;
-                        left: 4px;
-                        transform: rotate(45deg);
-                    }
-                    &:nth-child(2) {
-                        top: 9px;
-                        width: 0%;
-                        opacity: 0;
-                    }
-                    &:nth-child(3) {
-                        top: 18px;
-                        left: 4px;
-                        transform: rotate(-45deg);
-                    }
-                }
-            }
+          }
         }
+      }
     }
+    &__box {
+      @media screen and (max-width: $xl) {
+        display: none !important;
+      }
+      &.none {
+        display: none;
+      }
+      ul {
+        display: flex;
+        justify-content: center;
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+        .btn-nav {
+          .href-style {
+            user-select: none;
+            display: block;
+            padding: 48px 20px;
+            width: 170px;
+            font-size: 17px;
+            font-weight: 600;
+            text-decoration: none;
+            text-transform: uppercase;
+            text-align: center;
+            color: #5f7083;
+            transition: all;
+            position: relative;
+            &::before {
+              content: "";
+              position: absolute;
+              width: 30px;
+              transform: scaleX(0);
+              height: 2px;
+              transition: transform 0.25s ease-out;
+              bottom: 32px;
+              left: 25%;
+              background-color: #d4c264;
+            }
+            &:hover::before {
+              transform: scaleX(1);
+              transform-origin: left;
+            }
+          }
+          &--active {
+            .text-main,
+            .href-style {
+              position: relative;
+              &::before {
+                transform: scaleX(1);
+              }
+            }
+          }
+        }
+      }
+    }
+    &__burger {
+      display: none;
+      @media (max-width: $xl) {
+        position: absolute;
+        top: 32px;
+        left: auto;
+        right: 30px;
+        transform: rotate(0deg);
+        width: 30px;
+        height: 30px;
+        display: block;
+        transition-duration: 0.3s;
+        z-index: 999;
+        &::after {
+          content: "";
+          position: absolute;
+          top: 35%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          width: 170%;
+          height: 150%;
+          z-index: -1;
+        }
+        &::before {
+          content: "";
+          position: absolute;
+          top: 35%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          width: calc(170% + 10px);
+          height: calc(150% + 10px);
+          opacity: 0.15;
+          z-index: -1;
+        }
+        cursor: pointer;
+        span {
+          position: absolute;
+          left: 0;
+          transform: rotate(0deg);
+          height: 2px;
+          width: 100%;
+          display: block;
+          background: #000;
+          border-radius: 0px;
+          opacity: 1;
+          transition: 0.25s ease-in-out;
+        }
+        &--sticky {
+          &::after {
+            display: none;
+          }
+          &::before {
+            display: none;
+          }
+          span {
+            background: $Sand-Dark;
+          }
+        }
+        &.open {
+          &::after {
+            display: none;
+          }
+          &::before {
+            display: none;
+          }
+          span {
+            background: $Sand-Dark;
+          }
+        }
+        span:nth-child(1) {
+          top: 0px;
+        }
+        span:nth-child(2),
+        span:nth-child(3) {
+          top: 10px;
+        }
+        span:nth-child(4) {
+          top: 20px;
+        }
+        &.open span:nth-child(1) {
+          top: 10px;
+          width: 0%;
+          left: 50%;
+        }
+        &.open span:nth-child(2) {
+          visibility: visible;
+          -webkit-transform: rotate(45deg);
+          -moz-transform: rotate(45deg);
+          -o-transform: rotate(45deg);
+          transform: rotate(45deg);
+        }
+        &.open span:nth-child(3) {
+          -webkit-transform: rotate(-45deg);
+          -moz-transform: rotate(-45deg);
+          -o-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+        }
+        &.open span:nth-child(4) {
+          top: 9px;
+          width: 0%;
+          left: 50%;
+        }
+      }
+    }
+  }
+  @media (max-width: $xxxl) {
+    &__container {
+      &__box {
+        ul {
+          .btn-box {
+            gap: 2vw;
+          }
+          .logo-dziwnowek {
+            margin-right: 3vw;
+            margin-left: 3vw;
+          }
+        }
+      }
+    }
+  }
+  @media (max-width: $xxl) {
+    &__container {
+      &__box {
+        ul {
+          .btn-box {
+            .btn-nav {
+              .text-main {
+                font-size: 14px;
+              }
+              &--sticky {
+                .text-main {
+                  font-size: 14px;
+                }
+              }
+            }
+          }
+          .logo-dziwnowek {
+            margin-right: 2.5vw;
+            margin-left: 2.5vw;
+            width: 150px;
+            height: 170px;
+            background-size: 100px 120px;
+          }
+          .logo-dziwnowek-sticky {
+            position: absolute;
+            top: 0px;
+            width: 150px;
+            height: 125px;
+            background-size: 110px 45px;
+            opacity: 0;
+            &--sticky {
+              opacity: 1;
+            }
+          }
+        }
+      }
+    }
+  }
+  @media (max-width: $xl) {
+    .klasa {
+      li {
+        a {
+          opacity: 0;
+          &.visibility {
+            opacity: 1;
+          }
+        }
+      }
+    }
+    height: 80px;
+    &--sticky {
+      height: 80px;
+      background: $White;
+      box-shadow: 0px 10px 10px -10px rgba(172, 171, 171, 0.418);
+      align-items: flex-start;
+      transition: all ease-in-out 0.2s;
+    }
+    &__container {
+      &__box {
+        ul {
+          .btn-box {
+            display: none;
+          }
+          .logo-dziwnowek {
+            position: absolute;
+            left: 15px;
+            top: 0;
+            margin-right: 0vw;
+            margin-left: 0vw;
+            width: 70px;
+            height: 65px;
+            background-size: 50px 57px;
+            opacity: 1;
+            &::after {
+              width: calc(100% + 10px);
+              height: calc(100% + 10px);
+            }
+          }
+          .logo-dziwnowek-sticky {
+            position: absolute;
+            top: 8px;
+            left: 50px;
+            width: 100px;
+            height: 65px;
+            background-size: 100px 50px;
+            opacity: 0;
+            &--sticky {
+              opacity: 1;
+            }
+          }
+        }
+      }
+    }
+    .mobile-logo-href{
+      .mobile-main-logo-href{
+        background: url(../img/invest-dziwnowek/logo-mobile.png);
+        color: transparent;
+        background-size: auto 80%;
+        background-position: center;
+        background-repeat: no-repeat;
+        user-select: none;
+        display: block;
+        padding: 28px 20px;
+        width: 170px;
+        top: 10px;
+        position: relative;
+      }
+    }
+    .mobile-main-href-none{
+      display: none;
+    }
+  }
+  &.active {
+    background: $White;
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    z-index: 99999;
+  }
 }

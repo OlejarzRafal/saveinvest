@@ -67,7 +67,7 @@ get_template_part('investitions/ostoja-kladno/header');
                 <div class="col-xl-7">
                     <div class="around-video__movie">
                         <?php if ($move_sec1_hp_kladno = get_field('move_sec1_hp_kladno')) : ?>
-                            <a data-fancybox="gallery" href="<?php echo $move_sec1_hp_kladno; ?>">
+                            <a  data-fancybox="gallery" href="<?php echo $move_sec1_hp_kladno; ?>">
                                 <?php
                                 $photo_move_sec1_hp_kladno = get_field('photo_move_sec1_hp_kladno');
                                 if ($photo_move_sec1_hp_kladno) : ?>
@@ -110,8 +110,8 @@ get_template_part('investitions/ostoja-kladno/header');
         <!-- wave -->
         <div id="wave-home-3" class="wave wave--3"></div>
         <div id="wave-home-4" class="wave wave--4"></div>
-        <div id="wave-home-5" class="wave wave--5"></div>
-
+        <div id="wave-home-5"  class="wave wave--5"></div>
+        
         <section class="information-ostoja">
             <div class="container">
                 <div class="row">

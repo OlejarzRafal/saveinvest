@@ -8,9 +8,11 @@ const autoprefixer = require("autoprefixer");
 module.exports = {
     entry: {
         main: "./resources/js/index.js",
+        allpage: "./resources/js/all-page.js",
         kladno: "./resources/js/invest-kladno.js",
         karwia: "./resources/js/invest-karwia.js",
         osadadziwnowek: "./resources/js/invest-osadadziwnowek.js",
+        enklawadziwnowek: "./resources/js/invest-enklawadziwnowek.js",
         seagolf: "./resources/js/invest-seagolf.js",
     },
     output: {

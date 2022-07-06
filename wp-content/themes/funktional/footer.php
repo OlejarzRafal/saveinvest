@@ -101,7 +101,8 @@
 <div class="backtotop " id="backtotop">
     <img src="<?php bloginfo('template_url'); ?>/assets/img/arrow-back-top.svg" alt="back to top">
 </div>
-
+<!-- POPUP -->
+<?php get_template_part('template-popup/popup'); ?>
 <?php wp_footer(); ?>
 
 </body>

@@ -1,0 +1,181 @@
+<svg class="plot-sectors__svg" viewBox="0 0 700 440" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <g id="Map_Full-Area-Step-2_Mobile">
+        <g id="Map Fields Main">
+            <g id="Frame" opacity="0.5">
+                <path id="Przykrycie" d="M189.004 321.117L144.536 336.396L7.71094 272.772L64.4933 258.405L76.5795 254.529L256.732 242.442L266.994 242.67L287.29 241.53L519.303 293.391L442.073 338.153L394.303 322.976L395.652 322.331L324.93 299.836L321.898 301.011L283.472 288.675L193.793 319.064L189.004 321.117Z" fill="white" />
+                <path id="Vector 119" opacity="0.8" d="M268.812 244.268C268.082 244.268 267.748 245.94 267.672 246.776C267.596 247.232 267.216 248.19 266.304 248.373C265.392 248.555 265.011 250.273 264.935 251.109L260.147 251.565L257.182 252.249L252.621 252.477V251.793C253.229 251.109 254.446 250.425 251.709 250.425C249.52 250.972 250.797 251.565 251.709 251.793V252.933H246.92V252.021H247.832C248.973 252.021 248.744 249.513 246.008 250.425C243.819 251.155 245.248 251.793 246.236 252.021L246.464 252.933L241.675 253.161V252.477C242.663 251.945 243.91 250.881 240.991 250.881C238.072 250.881 239.775 252.097 240.991 252.705V253.161L237.798 253.618L235.974 253.161H233.238L233.922 251.565C233.618 251.793 234.606 250.881 233.922 249.969C234.652 248.145 233.162 246.776 232.325 246.32C232.706 245.712 232.325 245.18 230.501 244.724C228.13 244.906 227.233 246.472 227.081 247.232C226.776 247.917 225.256 246.548 225.256 249.741C224.526 250.106 224.8 251.565 225.028 252.249V253.618L221.151 253.846L221.379 252.249L220.695 250.425C220.543 249.437 219.738 247.506 217.731 247.688C215.724 247.871 215.678 249.589 215.906 250.425C215.906 251.261 214.31 250.425 215.45 252.705C215.086 252.523 215.602 253.694 215.906 254.302C214.766 255.366 214.31 255.442 214.31 255.442C215.77 253.8 213.246 252.173 211.802 251.565C210.813 250.805 211.802 248.601 209.293 247.46C209.658 246.001 208.077 245.94 207.241 246.092C207.013 246.776 205.645 246.32 205.645 248.145C204.732 248.145 204.504 249.513 204.504 249.969C204.504 250.334 203.136 251.641 202.452 252.249C201.084 252.021 198.393 252.067 198.575 254.074C198.803 256.582 200.172 256.582 201.312 257.494C202.224 258.224 203.82 258.102 204.504 257.95V259.319H204.276V260.003H206.101L207.925 260.231L209.293 260.915L210.205 260.687V262.055H210.889V260.687L211.802 260.915L212.486 261.371H213.17V262.055L214.31 262.511L216.362 262.739L216.819 262.967V264.792L217.503 264.336V263.423H218.415H219.555L221.151 263.879V264.336L221.835 264.792L223.432 265.248L224.116 265.476V267.528L224.8 267.984L225.028 266.388L224.8 266.16L225.256 265.704L226.624 266.388C227.232 266.464 228.449 266.753 228.449 267.3C228.449 267.984 229.133 268.668 230.045 268.896C230.775 269.079 231.565 268.364 231.869 267.984L272.689 255.442V254.758L272.233 253.39L273.373 252.477C273.601 251.641 275.197 252.477 275.197 249.969C276.337 249.969 275.197 249.285 275.653 247.917C276.018 246.822 274.741 245.636 274.057 245.18C273.905 245.332 273.692 245.362 274.057 244.268C274.422 243.173 271.777 243.052 270.408 243.128C270.18 243.508 269.496 243.128 268.812 244.268Z" fill="black" />
+            </g>
+            <g class="area-click area-click__sector">
+                <g data-plots-plot="1">
+                    <path id="Vector" opacity="0.6" d="M302.366 377.124L346.707 395.865L328.017 406.984L319.816 407.203L283.225 390.711L283.184 386.848L302.366 377.124Z" fill="#36B122" stroke="#292827" stroke-width="0.912167" stroke-miterlimit="10" />
+                    <text id="1" fill="white" xml:space="preserve" style="white-space: pre" font-family="Mulish" font-size="5.92908" font-weight="bold" letter-spacing="0em">
+                        <tspan x="299.602" y="388.655">1</tspan>
+                    </text>
+                </g>
+                <g data-plots-plot="8">
+                    <path id="Vector_2" opacity="0.6" d="M269.676 349.199L304.197 363.164L311.59 362.991L328.392 354.763L290.455 340.228L269.676 349.199Z" fill="#36B122" stroke="#292827" stroke-width="0.912167" stroke-miterlimit="10" />
+                    <text id="8" fill="white" xml:space="preserve" style="white-space: pre" font-family="Mulish" font-size="5.92908" font-weight="bold" letter-spacing="0em">
+                        <tspan x="295.043" y="353.081">8</tspan>
+                    </text>
+                </g>
+                <g data-plots-plot="9">
+                    <path id="Vector_3" opacity="0.6" d="M309.067 332.186L290.449 340.226L328.386 354.762L346.511 345.886L309.067 332.186Z" fill="#36B122" stroke="#292827" stroke-width="0.912167" stroke-miterlimit="10" />
+                    <text id="9" fill="white" xml:space="preserve" style="white-space: pre" font-family="Mulish" font-size="5.92908" font-weight="bold" letter-spacing="0em">
+                        <tspan x="313.738" y="344.414">9</tspan>
+                    </text>
+                </g>
+                <g data-plots-plot="10">
+                    <path id="Vector_4" opacity="0.6" d="M363.604 337.518L326.525 324.652L309.07 332.187L346.515 345.888L363.604 337.518Z" fill="#36B122" stroke="#292827" stroke-width="0.912167" stroke-miterlimit="10" />
+                    <text id="10" fill="white" xml:space="preserve" style="white-space: pre" font-family="Mulish" font-size="5.92908" font-weight="bold" letter-spacing="0em">
+                        <tspan x="329.703" y="336.205">10</tspan>
+                    </text>
+                </g>
+                <g data-plots-plot="11">
+                    <path id="Vector_5" opacity="0.6" d="M326.52 324.653L363.599 337.519L379.475 329.743L342.897 317.579L326.52 324.653Z" fill="#36B122" stroke="#292827" stroke-width="0.912167" stroke-miterlimit="10" />
+                    <text id="11" fill="white" xml:space="preserve" style="white-space: pre" font-family="Mulish" font-size="5.92908" font-weight="bold" letter-spacing="0em">
+                        <tspan x="346.117" y="328.454">11</tspan>
+                    </text>
+                </g>
+                <g data-plots-plot="12">
+                    <path id="Vector_6" opacity="0.6" d="M358.305 310.924L342.898 317.578L379.476 329.742L394.399 322.431L358.305 310.924Z" fill="#36B122" stroke="#292827" stroke-width="0.912167" stroke-miterlimit="10" />
+                    <text id="12" fill="white" xml:space="preserve" style="white-space: pre" font-family="Mulish" font-size="5.92908" font-weight="bold" letter-spacing="0em">
+                        <tspan x="362.082" y="320.698">12</tspan>
+                    </text>
+                </g>
+                <g data-plots-plot="13">
+                    <path id="Vector_7" opacity="0.6" d="M238.382 333.688L237.977 336.378L269.674 349.199L290.454 340.228L255.819 326.965L238.382 333.688Z" fill="#36B122" stroke="#292827" stroke-width="0.912167" stroke-miterlimit="10" />
+                    <text id="13" fill="white" xml:space="preserve" style="white-space: pre" font-family="Mulish" font-size="5.92908" font-weight="bold" letter-spacing="0em">
+                        <tspan x="253.082" y="337.118">13</tspan>
+                    </text>
+                </g>
+                <g data-plots-plot="18">
+                    <path id="Vector_8" opacity="0.6" d="M216.337 311.881L195.129 319.055L223.196 330.407L229.946 330.307L247.446 323.748L216.337 311.881Z" fill="#36B122" stroke="#292827" stroke-width="0.912167" stroke-miterlimit="10" />
+                    <text id="18" fill="white" xml:space="preserve" style="white-space: pre" font-family="Mulish" font-size="5.92908" font-weight="bold" letter-spacing="0em">
+                        <tspan x="214.312" y="322.522">18</tspan>
+                    </text>
+                </g>
+                <g data-plots-plot="14">
+                    <path id="Vector_9" opacity="0.6" d="M255.816 326.964L290.451 340.227L309.069 332.186L274.721 319.681L255.816 326.964Z" fill="#36B122" stroke="#292827" stroke-width="0.912167" stroke-miterlimit="10" />
+                    <text id="14" fill="white" xml:space="preserve" style="white-space: pre" font-family="Mulish" font-size="5.92908" font-weight="bold" letter-spacing="0em">
+                        <tspan x="272.695" y="329.363">14</tspan>
+                    </text>
+                </g>
+                <g data-plots-plot="19">
+                    <path id="Vector_10" opacity="0.6" d="M216.336 311.882L247.445 323.749L265.488 316.985L234.529 305.725L216.336 311.882Z" fill="#36B122" stroke="#292827" stroke-width="0.912167" stroke-miterlimit="10" />
+                    <text id="19" fill="white" xml:space="preserve" style="white-space: pre" font-family="Mulish" font-size="5.92908" font-weight="bold" letter-spacing="0em">
+                        <tspan x="233.922" y="315.226">19</tspan>
+                    </text>
+                </g>
+                <g data-plots-plot="15">
+                    <path id="Vector_11" opacity="0.6" d="M292.465 312.84L274.719 319.681L309.066 332.187L326.521 324.652L292.465 312.84Z" fill="#36B122" stroke="#292827" stroke-width="0.912167" stroke-miterlimit="10" />
+                    <text id="15" fill="white" xml:space="preserve" style="white-space: pre" font-family="Mulish" font-size="5.92908" font-weight="bold" letter-spacing="0em">
+                        <tspan x="290.93" y="322.522">15</tspan>
+                    </text>
+                </g>
+                <g data-plots-plot="20">
+                    <path id="Vector_12" opacity="0.6" d="M234.531 305.725L265.49 316.985L282.516 310.6L251.735 299.9L234.531 305.725Z" fill="#36B122" stroke="#292827" stroke-width="0.912167" stroke-miterlimit="10" />
+                    <text id="20" fill="white" xml:space="preserve" style="white-space: pre" font-family="Mulish" font-size="5.92908" font-weight="bold" letter-spacing="0em">
+                        <tspan x="252.172" y="309.297">20</tspan>
+                    </text>
+                </g>
+                <g data-plots-plot="16">
+                    <path id="Vector_13" opacity="0.6" d="M292.457 312.84L326.513 324.653L342.891 317.579L309.177 306.396L292.457 312.84Z" fill="#36B122" stroke="#292827" stroke-width="0.912167" stroke-miterlimit="10" />
+                    <text id="16" fill="white" xml:space="preserve" style="white-space: pre" font-family="Mulish" font-size="5.92908" font-weight="bold" letter-spacing="0em">
+                        <tspan x="307.801" y="315.227">16</tspan>
+                    </text>
+                </g>
+                <g data-plots-plot="21">
+                    <path id="Vector_14" opacity="0.6" d="M251.738 299.9L282.519 310.6L298.601 304.575L268.025 294.386L251.738 299.9Z" fill="#36B122" stroke="#292827" stroke-width="0.912167" stroke-miterlimit="10" />
+                    <text id="21" fill="white" xml:space="preserve" style="white-space: pre" font-family="Mulish" font-size="5.92908" font-weight="bold" letter-spacing="0em">
+                        <tspan x="268.594" y="303.367">21</tspan>
+                    </text>
+                </g>
+                <g data-plots-plot="17">
+                    <path id="Vector_15" opacity="0.6" d="M309.188 306.394L342.901 317.578L358.308 310.923L324.954 300.319L309.188 306.394Z" fill="#36B122" stroke="#292827" stroke-width="0.912167" stroke-miterlimit="10" />
+                    <text id="17" fill="white" xml:space="preserve" style="white-space: pre" font-family="Mulish" font-size="5.92908" font-weight="bold" letter-spacing="0em">
+                        <tspan x="323.773" y="308.839">17</tspan>
+                    </text>
+                </g>
+                <g data-plots-plot="22">
+                    <path id="Vector_16" opacity="0.6" d="M268.02 294.386L298.595 304.575L313.797 298.874L283.453 289.164L268.02 294.386Z" fill="#36B122" stroke="#292827" stroke-width="0.912167" stroke-miterlimit="10" />
+                    <text id="22" fill="white" xml:space="preserve" style="white-space: pre" font-family="Mulish" font-size="5.92908" font-weight="bold" letter-spacing="0em">
+                        <tspan x="284.09" y="297.894">22</tspan>
+                    </text>
+                </g>
+                <g data-plots-plot="3">
+                    <path id="Vector_17" opacity="0.6" d="M322.066 367.131L365.755 384.526L383.346 374.054L340.364 357.858L322.066 367.131Z" fill="#36B122" stroke="#292827" stroke-width="0.912167" stroke-miterlimit="10" />
+                    <text id="3" fill="white" xml:space="preserve" style="white-space: pre" font-family="Mulish" font-size="5.92908" font-weight="bold" letter-spacing="0em">
+                        <tspan x="339.277" y="368.587">3</tspan>
+                    </text>
+                </g>
+                <g data-plots-plot="4">
+                    <path id="Vector_18" opacity="0.6" d="M357.597 349.131L340.375 357.86L383.356 374.056L399.652 364.359L357.597 349.131Z" fill="#36B122" stroke="#292827" stroke-width="0.912167" stroke-miterlimit="10" />
+                    <text id="4" fill="white" xml:space="preserve" style="white-space: pre" font-family="Mulish" font-size="5.92908" font-weight="bold" letter-spacing="0em">
+                        <tspan x="356.617" y="358.554">4</tspan>
+                    </text>
+                </g>
+                <g data-plots-plot="5">
+                    <path id="Vector_19" opacity="0.6" d="M357.586 349.129L399.641 364.358L414.879 355.286L373.567 341.029L357.586 349.129Z" fill="#36B122" stroke="#292827" stroke-width="0.912167" stroke-miterlimit="10" />
+                    <text id="5" fill="white" xml:space="preserve" style="white-space: pre" font-family="Mulish" font-size="5.92908" font-weight="bold" letter-spacing="0em">
+                        <tspan x="373.48" y="350.344">5</tspan>
+                    </text>
+                </g>
+                <g data-plots-plot="6">
+                    <path id="Vector_20" opacity="0.6" d="M373.574 341.03L414.886 355.287L429.166 346.79L388.698 333.358L373.574 341.03Z" fill="#36B122" stroke="#292827" stroke-width="0.912167" stroke-miterlimit="10" />
+                    <text id="6" fill="white" xml:space="preserve" style="white-space: pre" font-family="Mulish" font-size="5.92908" font-weight="bold" letter-spacing="0em">
+                        <tspan x="388.535" y="342.135">6</tspan>
+                    </text>
+                </g>
+                <g data-plots-plot="7">
+                    <path id="Vector_21" opacity="0.6" d="M402.885 326.167L388.691 333.359L429.16 346.791L431.221 345.564L442.578 338.8L402.885 326.167Z" fill="#36B122" stroke="#292827" stroke-width="0.912167" stroke-miterlimit="10" />
+                    <text id="7" fill="white" xml:space="preserve" style="white-space: pre" font-family="Mulish" font-size="5.92908" font-weight="bold" letter-spacing="0em">
+                        <tspan x="402.668" y="334.382">7</tspan>
+                    </text>
+                </g>
+                <g data-plots-plot="23">
+                    <path id="Vector_22" opacity="0.6" d="M186.127 322.754L144.445 336.888L160.65 344.418L202.395 329.508L186.127 322.754Z" fill="#36B122" stroke="#292827" stroke-width="0.912167" stroke-miterlimit="10" />
+                    <text id="23" fill="white" xml:space="preserve" style="white-space: pre" font-family="Mulish" font-size="5.92908" font-weight="bold" letter-spacing="0em">
+                        <tspan x="178.742" y="331.644">23</tspan>
+                    </text>
+                </g>
+                <g data-plots-plot="24">
+                    <path id="Vector_23" opacity="0.6" d="M219.401 336.569L202.394 329.509L160.648 344.418L177.715 352.349L219.401 336.569Z" fill="#36B122" stroke="#292827" stroke-width="0.912167" stroke-miterlimit="10" />
+                    <text id="24" fill="white" xml:space="preserve" style="white-space: pre" font-family="Mulish" font-size="5.92908" font-weight="bold" letter-spacing="0em">
+                        <tspan x="194.25" y="338.941">24</tspan>
+                    </text>
+                </g>
+                <g data-plots-plot="25">
+                    <path id="Vector_24" opacity="0.6" d="M237.297 344L219.405 336.57L177.719 352.351L195.67 360.693L237.297 344Z" fill="#36B122" stroke="#292827" stroke-width="0.912167" stroke-miterlimit="10" />
+                    <text id="25" fill="white" xml:space="preserve" style="white-space: pre" font-family="Mulish" font-size="5.92908" font-weight="bold" letter-spacing="0em">
+                        <tspan x="211.129" y="347.153">25</tspan>
+                    </text>
+                </g>
+                <g data-plots-plot="26">
+                    <path id="Vector_25" opacity="0.6" d="M237.295 343.998L195.668 360.691L214.513 369.447L256.158 351.829L237.295 343.998Z" fill="#36B122" stroke="#292827" stroke-width="0.912167" stroke-miterlimit="10" />
+                    <text id="26" fill="white" xml:space="preserve" style="white-space: pre" font-family="Mulish" font-size="5.92908" font-weight="bold" letter-spacing="0em">
+                        <tspan x="229.824" y="354.904">26</tspan>
+                    </text>
+                </g>
+                <g data-plots-plot="27">
+                    <path id="Vector_26" opacity="0.6" d="M256.153 351.83L214.508 369.449L234.475 378.73L275.906 360.03L256.153 351.83Z" fill="#36B122" stroke="#292827" stroke-width="0.912167" stroke-miterlimit="10" />
+                    <text id="27" fill="white" xml:space="preserve" style="white-space: pre" font-family="Mulish" font-size="5.92908" font-weight="bold" letter-spacing="0em">
+                        <tspan x="248.516" y="363.114">27</tspan>
+                    </text>
+                </g>
+                <g data-plots-plot="28">
+                    <path id="Vector_27" opacity="0.6" d="M294.802 371.219L294.62 367.794L275.911 360.031L234.48 378.731L257.563 389.458L294.802 371.219Z" fill="#36B122" stroke="#292827" stroke-width="0.912167" stroke-miterlimit="10" />
+                    <text id="28" fill="white" xml:space="preserve" style="white-space: pre" font-family="Mulish" font-size="5.92908" font-weight="bold" letter-spacing="0em">
+                        <tspan x="269.504" y="372.237">28</tspan>
+                    </text>
+                </g>
+                <g data-plots-plot="2">
+                    <path id="Vector_28" opacity="0.6" d="M302.367 377.124L346.616 395.919L365.758 384.526L322.07 367.131L302.367 377.124Z" fill="#36B122" stroke="#292827" stroke-width="0.912167" stroke-miterlimit="10" />
+                    <text id="2" fill="white" xml:space="preserve" style="white-space: pre" font-family="Mulish" font-size="5.92908" font-weight="bold" letter-spacing="0em">
+                        <tspan x="319.215" y="378.62">2</tspan>
+                    </text>
+                </g>
+            </g>
+
+        </g>
+    </g>
+</svg>

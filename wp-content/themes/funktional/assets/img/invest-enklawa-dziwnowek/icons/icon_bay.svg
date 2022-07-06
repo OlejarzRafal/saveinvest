@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="80.1" height="80.1" viewBox="0 0 80.1 80.1">
+    <defs>
+        <style>
+            .cls-1{fill:#fbfbfb}.cls-2{clip-path:url(#clip-path)}.cls-3{fill:none;stroke:#afa77f;stroke-miterlimit:10;stroke-width:1.5px}
+        </style>
+        <clipPath id="clip-path">
+            <path id="Rectangle_172" d="M0 0h80.1v80.1H0z" class="cls-1" data-name="Rectangle 172"/>
+        </clipPath>
+    </defs>
+    <g id="Mask_Group_18" class="cls-2" data-name="Mask Group 18">
+        <g id="lokal-24" transform="translate(.201 4.475)">
+            <path id="Path_125" d="M-9.121 28.934c17.934-4.5 42.766 6.238 51.876 18.781" class="cls-3" data-name="Path 125" transform="translate(9.121 2.988)"/>
+            <path id="Path_126" d="M21.153 47.658c2.7 0 2.7 4.4 5.4 4.4s2.707-4.4 5.4-4.4 2.707 4.4 5.413 4.4 2.7-4.4 5.4-4.4 2.707 4.4 5.4 4.4 2.707-4.4 5.413-4.4 2.707 4.4 5.413 4.4 2.707-4.4 5.413-4.4" class="cls-3" data-name="Path 126" transform="translate(9.158 3.013)"/>
+            <path id="Path_127" d="M70.733 59.806c-2.707 0-2.707-4.4-5.4-4.4s-2.707 4.4-5.413 4.4-2.7-4.4-5.4-4.4-2.707 4.4-5.4 4.4-2.707-4.4-5.413-4.4-2.7 4.4-5.4 4.4-2.707-4.4-5.413-4.4-2.707 4.4-5.413 4.4" class="cls-3" data-name="Path 127" transform="translate(9.166 3.022)"/>
+            <path id="Path_128" d="M14.362 18.076V41.8" class="cls-3" data-name="Path 128" transform="translate(4.182 -3.975)"/>
+            <circle id="Ellipse_29" cx="11.585" cy="11.585" r="11.585" class="cls-3" data-name="Ellipse 29" transform="translate(7.196)"/>
+            <path id="Path_129" d="M34.2 26.461v18.672" class="cls-3" data-name="Path 129" transform="translate(9.175 -2.626)"/>
+            <circle id="Ellipse_30" cx="8.505" cy="8.505" r="8.505" class="cls-3" data-name="Ellipse 30" transform="translate(34.867 13.729)"/>
+        </g>
+    </g>
+</svg>

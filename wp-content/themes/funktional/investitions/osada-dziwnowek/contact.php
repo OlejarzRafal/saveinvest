@@ -9,7 +9,7 @@ get_template_part('investitions/osada-dziwnowek/header');
 ?>
 
 <h1 class="invisible-page-header"><?php the_title(); ?></h1>
-<main class="contact-page">
+<main class="contact-page settlement-dziw-page">
     <div class="sections-bg">
 
         <div class="container">
@@ -18,7 +18,7 @@ get_template_part('investitions/osada-dziwnowek/header');
                     <?php
             if( have_rows('section-1') ):
               while ( have_rows('section-1') ) : the_row();?>
-                    <section class="sec1">
+                    <section class="sec1 settlement-dziw">
                         <h2 class="sec1__title"><?php echo get_sub_field('title'); ?></h2>
                         <div class="sec1__text"><?php echo get_sub_field('text'); ?></div>
                         <div class="sec1__form"><?php echo do_shortcode( get_sub_field('form') ); ?></div>
@@ -120,25 +120,30 @@ get_template_part('investitions/osada-dziwnowek/header');
     <?php
     if( have_rows('section-5') ):
       while ( have_rows('section-5') ) : the_row();?>
-    <section class="sec5">
+    <section class="sec5 settlement-dziw">
         <div class="container">
             <div class="row">
                 <div class="sec5__title-box col-12 col-lg-3">
                     <h2 class="sec5__title"><?php echo get_sub_field('title'); ?></h2>
                 </div>
                 <div class="col-12 col-lg-9">
-                    <div id="opinions-carousel" class="sec5__opinions owl-carousel">
+                    <div id="opinions-carousel" class="sec5__opinions contact-opinion-sec5 swiper">
+                    <div class="swiper-wrapper">
                         <?php
                     if( have_rows('opinions') ):
                       while ( have_rows('opinions') ) : the_row();?>
-                        <div class="sec5__opinion-box">
+                        <div class="sec5__opinion-box swiper-slide">
                             <div class="sec5__opinion"><?php echo get_sub_field('opinion'); ?></div>
                             <div class="sec5__client"><?php echo get_sub_field('client'); ?></div>
                         </div>
                         <?php endwhile;
                     endif;
                   ?>
-                    </div>
+                  </div>
+                  </div>
+                    <div class="contact-opinion-swiper-pagination">
+                          <div class="swiper-pagination opinion-dots"></div>
+                      </div>
                 </div>
             </div>
         </div>
@@ -146,6 +151,7 @@ get_template_part('investitions/osada-dziwnowek/header');
     <?php endwhile;
     endif;
   ?>
+  
 
     <?php
     if( have_rows('section-6') ):

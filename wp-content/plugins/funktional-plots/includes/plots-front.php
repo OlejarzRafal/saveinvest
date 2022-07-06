@@ -71,7 +71,8 @@ class PlotsFront
                     $plotData['priceAfterDiscountCount'] = ($plotData['price'] - (($plotData['price'] * $plotData['discount']) / 100));
                     // Różnica
                     $plotData['differenceCount'] = ($plotData['price'] - $plotData['priceAfterDiscountCount']);
-                    $plotData['difference'] = round($plotData['differenceCount']);
+                    // $plotData['difference'] = round($plotData['differenceCount']);
+                    $plotData['difference'] = round($plotData['discount']);
                 } else {
                     // Różnica
                     $plotData['difference'] = "";

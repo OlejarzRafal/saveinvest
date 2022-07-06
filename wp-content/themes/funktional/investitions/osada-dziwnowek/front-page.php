@@ -14,8 +14,8 @@ get_template_part('investitions/osada-dziwnowek/header');
         <div class="hero__slider dziwnowek-swiper swiper">
             <div class="swiper-wrapper">
                 <?php
-                if (have_rows('hero-slider', 1283)) :
-                    while (have_rows('hero-slider', 1283)) : the_row(); ?>
+                if (have_rows('hero-slider')) :
+                    while (have_rows('hero-slider')) : the_row(); ?>
                         <div class="hero__slide swiper-slide">
                             <img class="hero__img" src="<?php echo get_sub_field('hero-slider-img'); ?>" alt="Osada">
                             <div class="container">
@@ -31,7 +31,7 @@ get_template_part('investitions/osada-dziwnowek/header');
         </div>
         <div id="scroll-down-btn" class="hero__scroll"></div>
 
-        <div class="dziwnowek-swiper-pagination">
+                <div class="dziwnowek-swiper-pagination">
                     <div class="swiper-pagination"></div>
                 </div>
                 <div class="dziwnowek-swiper-content-swiper">
@@ -44,9 +44,9 @@ get_template_part('investitions/osada-dziwnowek/header');
     </div>
 
     <?php
-    if (have_rows('section-1', 1283)) :
-        while (have_rows('section-1', 1283)) : the_row(); ?>
-            <section class="sec1">
+    if (have_rows('section-1')) :
+        while (have_rows('section-1')) : the_row(); ?>
+            <section class="sec1 settlement-dziw">
                 <div class="container">
                     <div class="row">
                         <div class="col-12 col-lg-6">
@@ -91,8 +91,8 @@ get_template_part('investitions/osada-dziwnowek/header');
     ?>
 
     <?php
-    if (have_rows('section-2', 1283)) :
-        while (have_rows('section-2', 1283)) : the_row(); ?>
+    if (have_rows('section-2')) :
+        while (have_rows('section-2')) : the_row(); ?>
             <section class="sec2">
                 <div class="container">
                     <div class="row">
@@ -122,8 +122,8 @@ get_template_part('investitions/osada-dziwnowek/header');
     ?>
 
     <?php
-    if (have_rows('section-icons', 1283)) :
-        while (have_rows('section-icons', 1283)) : the_row(); ?>
+    if (have_rows('section-icons')) :
+        while (have_rows('section-icons')) : the_row(); ?>
             <section class="secicons secicons--front" style="background-image: url('<?php echo get_sub_field('background'); ?>');">
                 <div class="container">
                     <div class="secicons__box">
@@ -160,8 +160,8 @@ get_template_part('investitions/osada-dziwnowek/header');
         <div class="container">
 
             <?php
-            if (have_rows('section-4', 1283)) :
-                while (have_rows('section-4', 1283)) : the_row(); ?>
+            if (have_rows('section-4')) :
+                while (have_rows('section-4')) : the_row(); ?>
                     <section class="secrepeat">
                         <div class="row">
                             <div class="secrepeat__content-box col-12 col-lg-7 col-xl-6">
@@ -184,8 +184,8 @@ get_template_part('investitions/osada-dziwnowek/header');
             ?>
 
             <?php
-            if (have_rows('section-5', 1283)) :
-                while (have_rows('section-5', 1283)) : the_row(); ?>
+            if (have_rows('section-5')) :
+                while (have_rows('section-5')) : the_row(); ?>
                     <section class="secrepeat secrepeat--right">
                         <div class="row">
                             <div class="secrepeat__content-box col-12 col-lg-6">
@@ -211,23 +211,23 @@ get_template_part('investitions/osada-dziwnowek/header');
 
 
     <section class="sneakmenu">
-        <a class="sneakmenu__item sneakmenu__item--1" href="<?php the_permalink('10'); ?>">
+        <a class="sneakmenu__item sneakmenu__item--1" href="<?php the_permalink('1727'); ?>">
             <span class="sneakmenu__name">Lokalizacja</span>
             <span class="sneakmenu__text">Zobacz gdzie dokładnie znajduje się osada.</span>
         </a>
-        <a class="sneakmenu__item sneakmenu__item--2" href="<?php the_permalink('12'); ?>">
+        <a class="sneakmenu__item sneakmenu__item--2" href="<?php the_permalink('1726'); ?>">
             <span class="sneakmenu__name">Ceny działek</span>
             <span class="sneakmenu__text">Sprawdź jak korzystne są ceny działek.</span>
         </a>
-        <a class="sneakmenu__item sneakmenu__item--3" href="<?php the_permalink('14'); ?>">
+        <a class="sneakmenu__item sneakmenu__item--3" style="filter: grayscale(70%); pointer-events: none;"  href="<?php the_permalink('14'); ?>">
             <span class="sneakmenu__name">Zyskaj</span>
             <span class="sneakmenu__text">Dowiedz się dlaczego ta inwestycja się opłaca.</span>
         </a>
     </section>
 
     <?php
-    if (have_rows('section-7', 1283)) :
-        while (have_rows('section-7', 1283)) : the_row(); ?>
+    if (have_rows('section-7')) :
+        while (have_rows('section-7')) : the_row(); ?>
             <section class="sec7">
                 <div class="container">
                     <div class="row">
@@ -250,10 +250,11 @@ get_template_part('investitions/osada-dziwnowek/header');
                                         endif;
                                         ?>
                                     </div>
-                                </div>
+                                    </div> 
                             </div>
-
-
+                            <div class="opinion-swiper-pagination">
+                                        <div class="swiper-pagination opinion-dots"></div>
+                                    </div>
                         </div>
 
                         <div class="col-12 col-lg-6">
@@ -284,8 +285,8 @@ get_template_part('investitions/osada-dziwnowek/header');
     ?>
 
     <?php
-    if (have_rows('section-last', 1283)) :
-        while (have_rows('section-last', 1283)) : the_row(); ?>
+    if (have_rows('section-last')) :
+        while (have_rows('section-last')) : the_row(); ?>
             <section class="seclast">
                 <div class="container">
                     <div class="row">

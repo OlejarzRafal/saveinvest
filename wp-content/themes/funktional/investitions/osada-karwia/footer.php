@@ -170,3 +170,9 @@ wp_footer();
 </footer>
 
 </body>
+
+
+<!-- POPUP -->
+<?php get_template_part('template-popup/popup'); ?>
+
+

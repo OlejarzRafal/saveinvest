@@ -14,7 +14,7 @@ get_template_part('investitions/osada-dziwnowek/header');
   <?php
     if( have_rows('section-1') ):
       while ( have_rows('section-1') ) : the_row();?>
-        <section class="sec1" style="background-image: url('<?php echo get_sub_field('bg-img'); ?>')">
+        <section class="sec1 settlement-dziw" style="background-image: url('<?php echo get_sub_field('bg-img'); ?>')">
           <div class="container">
             <div class="row">
               <div class="col-12 col-lg-6">
@@ -61,11 +61,12 @@ get_template_part('investitions/osada-dziwnowek/header');
         <section class="secicons secicons--carousel" style="background-image: url('<?php echo get_sub_field('background'); ?>');">
           <div class="container">
             <div class="secicons__box">
-              <div id="location-carousel" class="secicons__adventages owl-carousel">
+              <div id="location-carousel" class="secicons__adventages localization-dziwnowek swiper">
+              <div class="swiper-wrapper">
                 <?php
                   if( have_rows('advantages') ):
                     while ( have_rows('advantages') ) : the_row();?>
-                      <div class="secicons__item">
+                      <div class="secicons__locitem swiper-slide">
                         <img class="secicons__icon" src="<?php echo get_sub_field('icon'); ?>">
                         <div class="secicons__advantage">
                           <?php echo get_sub_field('advantage'); ?>
@@ -79,6 +80,13 @@ get_template_part('investitions/osada-dziwnowek/header');
                     <?php endwhile;
                   endif;
                 ?>
+              </div>
+              <div class="dziwnowek-localization-swiper">
+                    <span>
+                        <div class="swiper-button-prev"></div>
+                    </span>
+                    <div class="swiper-button-next"></div>
+                </div>
               </div>
             </div>
           </div>

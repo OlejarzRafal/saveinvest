@@ -1,16 +1,475 @@
-<svg class="plot-sectors__svg" viewBox="0 0 700 440" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <g id="Map_Full-Area-Step-1_Mobile">
-        <g id="Map Fields Main">
-            <g data-plots-sector-selector="A">
-                <path id="Vector" opacity="0.6" d="M144.879 336.275L313.583 414.848L442.102 338.827L392.53 323.074L393.669 322.391L324.75 300.248L321.593 301.479L282.856 289.169L194.917 318.61L188.86 321.133L144.879 336.275Z" fill="#36B122" />
-                <text id="Sektor A" fill="white" xml:space="preserve" style="white-space: pre" font-family="Mulish" font-size="13.6826" font-weight="bold" letter-spacing="0em">
-                    <tspan x="265.391" y="342.017">Sektor A</tspan>
-                </text>
-            </g>
-            <g id="Frame" opacity="0.5">
-                <path id="Subtract" fill-rule="evenodd" clip-rule="evenodd" d="M144.529 336.396L188.998 321.117L193.787 319.065L282.851 289.164L321.568 301.477L324.748 300.249L393.695 322.393L392.586 323.074L442.095 338.827L519.299 293.391L287.284 241.53L266.988 242.67L256.726 242.442L76.5722 254.529L64.4859 258.405L7.70312 272.772L144.529 336.396ZM267.68 246.776C267.756 245.94 268.091 244.268 268.82 244.268C269.254 243.545 269.688 243.433 270.005 243.351C270.189 243.304 270.333 243.267 270.417 243.128C271.785 243.052 274.43 243.173 274.065 244.268C273.701 245.362 273.913 245.332 274.065 245.18C274.75 245.636 276.027 246.822 275.662 247.917C275.453 248.543 275.579 249.026 275.667 249.365C275.772 249.768 275.824 249.969 275.206 249.969C275.206 251.587 274.541 251.814 274.008 251.995C273.715 252.095 273.462 252.181 273.381 252.477L272.241 253.39L272.697 254.758V255.442L231.877 267.984C231.573 268.364 230.783 269.079 230.053 268.897C229.141 268.668 228.457 267.984 228.457 267.3C228.457 266.753 227.24 266.464 226.632 266.388L225.264 265.704L224.808 266.16L225.036 266.388L224.808 267.984L224.124 267.528V265.476L223.44 265.248L221.843 264.792L221.159 264.336V263.88L219.563 263.423H218.423H217.511V264.336L216.827 264.792V262.967L216.37 262.739L214.318 262.511L213.178 262.055V261.371H212.494L211.81 260.915L210.897 260.687V262.055H210.213V260.687L209.301 260.915L207.933 260.231L206.108 260.003H204.284V259.319H204.512V257.95C203.828 258.102 202.232 258.224 201.32 257.494C201.037 257.268 200.74 257.098 200.45 256.932C199.571 256.428 198.755 255.96 198.583 254.074C198.401 252.067 201.092 252.021 202.46 252.249C203.144 251.641 204.512 250.334 204.512 249.969C204.512 249.513 204.74 248.145 205.652 248.145C205.652 246.981 206.209 246.745 206.672 246.549C206.934 246.438 207.166 246.34 207.249 246.092C208.085 245.94 209.666 246.001 209.301 247.46C210.862 248.17 211.069 249.291 211.241 250.22C211.345 250.785 211.436 251.278 211.81 251.565C213.254 252.173 215.778 253.8 214.318 255.442C214.318 255.442 214.774 255.366 215.914 254.302C215.61 253.694 215.093 252.523 215.458 252.705C214.722 251.234 215.126 251.06 215.505 250.897C215.714 250.808 215.914 250.722 215.914 250.425C215.686 249.589 215.732 247.871 217.739 247.689C219.746 247.506 220.551 249.437 220.703 250.425L221.387 252.249L221.159 253.846L225.036 253.618V252.249C224.808 251.565 224.534 250.106 225.264 249.741C225.264 247.549 225.981 247.507 226.528 247.474C226.778 247.46 226.993 247.447 227.089 247.232C227.241 246.472 228.138 244.906 230.509 244.724C232.334 245.18 232.714 245.712 232.334 246.32C233.17 246.776 234.66 248.145 233.93 249.969C234.427 250.632 234.04 251.296 233.909 251.521C233.86 251.605 233.847 251.627 233.93 251.565L233.246 253.162H235.982L237.807 253.618L240.999 253.162V252.705C239.783 252.097 238.08 250.881 240.999 250.881C243.918 250.881 242.672 251.945 241.683 252.477V253.162L246.472 252.934L246.244 252.021C245.256 251.793 243.827 251.155 246.016 250.425C248.753 249.513 248.981 252.021 247.84 252.021H246.928V252.934H251.717V251.793C250.805 251.565 249.528 250.972 251.717 250.425C254.022 250.425 253.523 250.91 252.945 251.472C252.836 251.578 252.725 251.685 252.629 251.793V252.477L257.19 252.249L260.155 251.565L264.944 251.109C265.02 250.273 265.4 248.555 266.312 248.373C267.224 248.19 267.604 247.232 267.68 246.776Z" fill="white" />
-            </g>
-
+<svg class="plot-sectors__svg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 768 2433">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="Rectangle_722" data-name="Rectangle 722" width="768" height="2433" fill="none" stroke="#707070" stroke-width="1"/>
+    </clipPath>
+    <clipPath id="clip-path-2">
+      <rect id="Rectangle_589" data-name="Rectangle 589" width="1703" height="2457" transform="translate(0 0)" fill="none"/>
+    </clipPath>
+  </defs>
+  <g id="Mask_Group_1062" data-name="Mask Group 1062" clip-path="url(#clip-path)">
+    <g id="Mask_Group_4" data-name="Mask Group 4" transform="translate(-429.001)" clip-path="url(#clip-path-2)">
+      <g id="Group_1239" data-name="Group 1239" transform="translate(439.262 1090.528)">
+        <g id="basen_i_plac" data-name="basen i plac" transform="translate(300.931 386.382)">
+          <path id="plac_zabaw" data-name="plac zabaw" d="M11017.6,6256.325l40.837,70.939,12.939-20.825-2.728-76.932Z" transform="translate(-10992.417 -6171.386)" fill="#fff" opacity="0.25"/>
+          <path id="pool" d="M10989.2,6205.3l25.066,43.586,50.988-26.762-.958-52.481-6-5.679Z" transform="translate(-10989.201 -6163.964)" fill="#fff" opacity="0.25"/>
         </g>
+        <path id="bikes" d="M11024.3,5810.927l25.021-64.042,8.962-9.335,2.614,73.377Z" transform="translate(-10692.245 -5729.288)" fill="#fff" opacity="0.25"/>
+        <g id="Group_1210" data-name="Group 1210">
+         <g  data-plots-plot="1" id="_1" data-name="1" transform="translate(386.79 6.518)">
+            <path id="_1-2" data-name="1" d="M943.025,1425.655l1.345,47.086,5.586,5.692,32.6-1.035-1.035-53.815Z" transform="translate(-943.025 -1423.583)" fill="gray" opacity="0.75"/>
+            <text id="_1-3" data-name="1" transform="translate(18.679 29.105)" fill="#fff" font-size="12" font-family="Lora-Regular, Lora" letter-spacing="0.02em"><tspan x="0" y="0">1</tspan></text>
+          </g>
+         <g  data-plots-plot="22" id="_22" data-name="22" transform="translate(389.207 80.163)">
+            <path id="_22-2" data-name="22" d="M11093.771,6062.174l-1.018-33.98,5.776-6.626,35.763-.935,1.36,40.054Z" transform="translate(-11092.753 -6020.634)" fill="gray" opacity="0.75"/>
+            <text id="_22-3" data-name="22" transform="matrix(0.999, -0.035, 0.035, 0.999, 15.109, 26.916)" fill="#fff" font-size="13" font-family="Lora-Regular, Lora" letter-spacing="0.02em"><tspan x="0" y="0">22</tspan></text>
+          </g>
+         <g  data-plots-plot="23" id="_23" data-name="23" transform="translate(390.082 121.53)">
+            <path id="_23-2" data-name="23" d="M11094.5,6061.21l-.764-34.4,41.872-1.522,1.634,33.967Z" transform="translate(-11093.739 -6025.283)" fill="gray" opacity="0.75"/>
+            <text id="_23-3" data-name="23" transform="matrix(0.999, -0.035, 0.035, 0.999, 14.609, 22.772)" fill="#fff" font-size="13" font-family="Lora-Regular, Lora" letter-spacing="0.02em"><tspan x="0" y="0">23</tspan></text>
+          </g>
+         <g  data-plots-plot="24" id="_24" data-name="24" transform="translate(390.969 156.652)">
+            <path id="_24-2" data-name="24" d="M11094.5,6061.167l-.764-34.405,42.3-1.869,1.2,34.317Z" transform="translate(-11093.739 -6024.893)" fill="gray" opacity="0.75"/>
+            <text id="_24-3" data-name="24" transform="matrix(0.999, -0.035, 0.035, 0.999, 15.085, 22.093)" fill="#fff" font-size="12" font-family="Lora-Regular, Lora" letter-spacing="0.02em"><tspan x="0" y="0">24</tspan></text>
+          </g>
+         <g  data-plots-plot="25" id="_25" data-name="25" transform="translate(391.855 192.122)">
+            <path id="_25-2" data-name="25" d="M11094.5,6061.167l-.764-34.405,42.3-1.869,1.2,34.317Z" transform="translate(-11093.739 -6024.893)" fill="gray" opacity="0.75"/>
+            <text id="_25-3" data-name="25" transform="matrix(0.999, -0.035, 0.035, 0.999, 15.24, 22.191)" fill="#fff" font-size="13" font-family="Lora-Regular, Lora" letter-spacing="0.02em"><tspan x="0" y="0">25</tspan></text>
+          </g>
+         <g  data-plots-plot="26" id="_26" data-name="26" transform="translate(393.063 227.293)">
+            <path id="_26-2" data-name="26" d="M11094.1,6060.6v-34.713l42.276-1.336.981,34.614Z" transform="translate(-11094.101 -6024.556)" fill="gray" opacity="0.75"/>
+            <text id="_26-3" data-name="26" transform="matrix(0.999, -0.035, 0.035, 0.999, 15.054, 22.362)" fill="#fff" font-size="12" font-family="Lora-Regular, Lora" letter-spacing="0.02em"><tspan x="0" y="0">26</tspan></text>
+          </g>
+         <g  data-plots-plot="27" id="_27" data-name="27" transform="translate(393.95 262.605)">
+            <path id="_27-2" data-name="27" d="M11094.1,6060.585v-34.714l42.742-1.494.518,34.771Z" transform="translate(-11094.101 -6024.377)" fill="gray" opacity="0.75"/>
+            <text id="_27-3" data-name="27" transform="matrix(0.999, -0.035, 0.035, 0.999, 15.349, 21.582)" fill="#fff" font-size="12" font-family="Lora-Regular, Lora" letter-spacing="0.02em"><tspan x="0" y="0">27</tspan></text>
+          </g>
+         <g  data-plots-plot="28" id="_28" data-name="28" transform="translate(394.66 298.85)">
+            <path id="_28-2" data-name="28" d="M11096.23,6059.7l-1.329-34.346,42.188-1.1,1.214,33.462Z" transform="translate(-11094.901 -6024.253)" fill="gray" opacity="0.75"/>
+            <text id="_28-3" data-name="28" transform="matrix(0.999, -0.035, 0.035, 0.999, 15.098, 19.925)" fill="#fff" font-size="12" font-family="Lora-Regular, Lora" letter-spacing="0.02em"><tspan x="0" y="0">28</tspan></text>
+          </g>
+         <g  data-plots-plot="29" id="_29" data-name="29" transform="translate(395.635 333.504)">
+            <path id="_29-2" data-name="29" d="M11096,6106.2l.844,34.155,42.884-1.619-1.266-34.406Z" transform="translate(-11096.002 -6104.332)" fill="gray" opacity="0.75"/>
+            <text id="_29-3" data-name="29" transform="matrix(0.999, -0.035, 0.035, 0.999, 15.247, 21.932)" fill="#fff" font-size="12" font-family="Lora-Regular, Lora" letter-spacing="0.02em"><tspan x="0" y="0">29</tspan></text>
+          </g>
+         <g  data-plots-plot="30" id="_30" data-name="30" transform="translate(397.094 369.198)">
+            <path id="_30-2" data-name="30" d="M11096.316,6059.74l-.67-33.5,42.075-1.657,1,34.013Z" transform="translate(-11095.646 -6024.585)" fill="gray" opacity="0.75"/>
+            <text id="_30-3" data-name="30" transform="matrix(0.999, -0.035, 0.035, 0.999, 14.578, 20.431)" fill="#fff" font-size="12" font-family="Lora-Regular, Lora" letter-spacing="0.02em"><tspan x="0" y="0">30</tspan></text>
+          </g>
+         <g  data-plots-plot="21" id="_21" data-name="21" transform="translate(432.627 78.636)">
+            <path id="_21-2" data-name="21" d="M11094.123,6062.2l-1.405-40.1,36.653-1.189,5.824,5.521v34.234Z" transform="translate(-11092.718 -6020.912)" fill="gray" opacity="0.75"/>
+            <text id="_21-3" data-name="21" transform="matrix(0.999, -0.035, 0.035, 0.999, 14.625, 26.611)" fill="#fff" font-size="13" font-family="Lora-Regular, Lora" letter-spacing="0.02em"><tspan x="0" y="0">21</tspan></text>
+          </g>
+         <g  data-plots-plot="13" id="_13" data-name="13" transform="translate(440.54 367.431)">
+            <g id="Group_1136" data-name="Group 1136" transform="translate(0 0)">
+              <path id="_13-2" data-name="13" d="M11096.291,6060.264l-1.649-34.308,42.069-1.363.994,34.125Z" transform="translate(-11094.642 -6024.593)" fill="gray" opacity="0.75"/>
+              <text id="_13-3" data-name="13" transform="matrix(0.999, -0.035, 0.035, 0.999, 17.299, 21.406)" fill="#fff" font-size="13" font-family="Lora-Regular, Lora" letter-spacing="0.02em"><tspan x="0" y="0">13</tspan></text>
+            </g>
+          </g>
+         <g  data-plots-plot="14" id="_14" data-name="14" transform="translate(439.856 331.983)">
+            <path id="_14-2" data-name="14" d="M11141.517,5979.666l-.646-34.614,42.186-1.436.488,34.362Z" transform="translate(-11140.87 -5943.617)" fill="gray" opacity="0.75"/>
+            <text id="_14-3" data-name="14" transform="matrix(0.999, -0.035, 0.035, 0.999, 16.914, 22.565)" fill="#fff" font-size="13" font-family="Lora-Regular, Lora" letter-spacing="0.02em"><tspan x="0" y="0">14</tspan></text>
+          </g>
+         <g  data-plots-plot="15" id="_15" data-name="15" transform="translate(438.802 296.753)">
+            <path id="Path_1497" data-name="Path 1497" d="M11095.676,6059.227l-.994-33.351,41.634-1.989,1.105,34.346Z" transform="translate(-11094.682 -6023.887)" fill="gray" opacity="0.75"/>
+            <text id="_15-2" data-name="15" transform="matrix(0.999, -0.035, 0.035, 0.999, 15.768, 21.185)" fill="#fff" font-size="13" font-family="Lora-Regular, Lora" letter-spacing="0.02em"><tspan x="0" y="0">15</tspan></text>
+          </g>
+         <g  data-plots-plot="16" id="_16" data-name="16" transform="translate(437.597 261.16)">
+            <path id="_16-2" data-name="16" d="M11095.368,6060.884l-1.047-34.829,41.823-1.308.979,34.761Z" transform="translate(-11094.321 -6024.748)" fill="gray" opacity="0.75"/>
+            <text id="_16-3" data-name="16" transform="matrix(0.999, -0.035, 0.035, 0.999, 15.519, 21.225)" fill="#fff" font-size="12" font-family="Lora-Regular, Lora" letter-spacing="0.02em"><tspan x="0" y="0">16</tspan></text>
+          </g>
+         <g  data-plots-plot="17" id="_17" data-name="17" transform="translate(436.71 225.69)">
+            <path id="_17-2" data-name="17" d="M11095.368,6060.884l-1.047-34.829,41.823-1.308.979,34.761Z" transform="translate(-11094.321 -6024.748)" fill="gray" opacity="0.75"/>
+            <text id="_17-3" data-name="17" transform="matrix(0.999, -0.035, 0.035, 0.999, 15.971, 21.363)" fill="#fff" font-size="13" font-family="Lora-Regular, Lora" letter-spacing="0.02em"><tspan x="0" y="0">17</tspan></text>
+          </g>
+         <g  data-plots-plot="18" id="_18" data-name="18" transform="translate(435.824 190.339)">
+            <path id="_18-2" data-name="18" d="M11095.368,6060.9l-1.047-34.83,41.412-1.189,1.1,34.316Z" transform="translate(-11094.321 -6024.882)" fill="gray" opacity="0.75"/>
+            <text id="_18-3" data-name="18" transform="matrix(0.999, -0.035, 0.035, 0.999, 15.853, 22.146)" fill="#fff" font-size="13" font-family="Lora-Regular, Lora" letter-spacing="0.02em"><tspan x="0" y="0">18</tspan></text>
+          </g>
+         <g  data-plots-plot="19" id="_19" data-name="19" transform="translate(434.867 154.873)">
+            <path id="_19-2" data-name="19" d="M11095.092,6060.7l-.849-34.15,41.5-1.66,1.1,34.317Z" transform="translate(-11094.243 -6024.885)" fill="gray" opacity="0.75"/>
+            <text id="_19-3" data-name="19" transform="matrix(0.999, -0.035, 0.035, 0.999, 15.484, 22.054)" fill="#fff" font-size="12" font-family="Lora-Regular, Lora" letter-spacing="0.02em"><tspan x="0" y="0">19</tspan></text>
+          </g>
+         <g  data-plots-plot="20" id="_20" data-name="20" transform="translate(433.854 119.836)">
+            <path id="_20-2" data-name="20" d="M11095.076,6060.752l-.975-33.68,41.457-1.7,1.281,33.888Z" transform="translate(-11094.102 -6025.374)" fill="gray" opacity="0.75"/>
+            <text id="_20-3" data-name="20" transform="matrix(0.999, -0.035, 0.035, 0.999, 13.697, 22.635)" fill="#fff" font-size="13" font-family="Lora-Regular, Lora" letter-spacing="0.02em"><tspan x="0" y="0">20</tspan></text>
+          </g>
+         <g  data-plots-plot="2" id="_2" data-name="2" transform="translate(427.152 3.825)">
+            <path id="_2-2" data-name="2" d="M988.542,1423.236l.931,53.4,38.81-.931,7.449-7.658-1.242-47.5Z" transform="translate(-988.542 -1420.546)" fill="gray" opacity="0.75"/>
+            <text id="_2-3" data-name="2" transform="translate(20.538 32.798)" fill="#fff" font-size="13" font-family="Lora-Regular, Lora" letter-spacing="0.02em"><tspan x="0" y="0">2</tspan></text>
+          </g>
+         <g  data-plots-plot="3" id="_3" data-name="3" transform="translate(492.556)">
+            <path id="_3-2" data-name="3" d="M1062.3,1419.13l1.8,67.726,56.277-1.47-2.088-69.153Z" transform="translate(-1062.3 -1416.232)" fill="gray" opacity="0.75"/>
+            <text id="_3-3" data-name="3" transform="translate(25.931 41.943)" fill="#fff" font-size="13" font-family="Lora-Regular, Lora" letter-spacing="0.02em"><tspan x="0" y="0">3</tspan></text>
+          </g>
+         <g  data-plots-plot="4" id="_4" data-name="4" transform="translate(494.419 70.473)">
+            <path id="_4-2" data-name="4" d="M1064.4,1496.845l1.138,33.842,56.007-.922-.742-34.058Z" transform="translate(-1064.4 -1495.706)" fill="gray" opacity="0.75"/>
+            <text id="_4-3" data-name="4" transform="translate(25.95 21.128)" fill="#fff" font-size="13" font-family="Lora-Regular, Lora" letter-spacing="0.02em"><tspan x="0" y="0">4</tspan></text>
+          </g>
+         <g  data-plots-plot="5" id="_5" data-name="5" transform="translate(495.562 106.077)">
+            <path id="_5-2" data-name="5" d="M1065.69,1536.684s.639,34.576.95,34.576,56.2-1.862,56.2-1.862l-1.26-33.54Z" transform="translate(-1065.69 -1535.858)" fill="gray" opacity="0.75"/>
+            <text id="_5-3" data-name="5" transform="translate(25.678 21.88)" fill="#fff" font-size="13" font-family="Lora-Regular, Lora" letter-spacing="0.02em"><tspan x="0" y="0">5</tspan></text>
+          </g>
+         <g  data-plots-plot="6" id="_6" data-name="6" transform="translate(496.591 141.054)">
+            <path id="_6-2" data-name="6" d="M1067.489,1610.912l-.638-34.369,56.2-1.241.932,33.945Z" transform="translate(-1066.85 -1575.302)" fill="gray" opacity="0.75"/>
+            <text id="_6-3" data-name="6" transform="translate(24.408 21.373)" fill="#fff" font-size="12" font-family="Lora-Regular, Lora" letter-spacing="0.02em"><tspan x="0" y="0">6</tspan></text>
+          </g>
+         <g  data-plots-plot="7" id="_7" data-name="7" transform="translate(497.832 176.448)">
+            <path id="_7-2" data-name="7" d="M1068.871,1650.1l-.62-33.43,55.781-1.449.734,34.163Z" transform="translate(-1068.25 -1615.216)" fill="gray" opacity="0.75"/>
+            <text id="_7-3" data-name="7" transform="translate(24.884 20.449)" fill="#fff" font-size="11" font-family="Lora-Regular, Lora" letter-spacing="0.02em"><tspan x="0" y="0">7</tspan></text>
+          </g>
+         <g  data-plots-plot="8" id="_8" data-name="8" transform="translate(498.973 211.742)">
+            <path id="_8-2" data-name="8" d="M1070.364,1690.516l-.828-34.36,55.368-1.138.682,33.987Z" transform="translate(-1069.536 -1655.018)" fill="gray" opacity="0.75"/>
+            <text id="_8-3" data-name="8" transform="translate(24.8 20.852)" fill="#fff" font-size="13" font-family="Lora-Regular, Lora" letter-spacing="0.02em"><tspan x="0" y="0">8</tspan></text>
+          </g>
+         <g  data-plots-plot="9" id="_9" data-name="9" transform="translate(499.807 247.244)">
+            <path id="_9-2" data-name="9" d="M1070.994,1729.518h56.992l-1.726-34.463-55.782,1.346Z" transform="translate(-1070.477 -1695.055)" fill="gray" opacity="0.75"/>
+            <text id="_9-3" data-name="9" transform="translate(23.852 18.045)" fill="#fff" font-size="12" font-family="Lora-Regular, Lora" letter-spacing="0.02em"><tspan x="0" y="0">9</tspan></text>
+          </g>
+         <g  data-plots-plot="10" id="_10" data-name="10" transform="translate(501.042 282.84)">
+            <path id="_10-2" data-name="10" d="M1072.846,1770.332l-.976-34,56.3-1.139.1,33.79Z" transform="translate(-1071.87 -1735.197)" fill="gray" opacity="0.75"/>
+            <text id="_10-3" data-name="10" transform="translate(19.554 19.693)" fill="#fff" font-size="12" font-family="Lora-Regular, Lora" letter-spacing="0.02em"><tspan x="0" y="0">10</tspan></text>
+          </g>
+         <g  data-plots-plot="11" id="_11" data-name="11" transform="translate(501.663 317.927)">
+            <path id="_11-2" data-name="11" d="M1072.57,1775.9l.621,34.256,56.236-1.3s-.765-34.091-.975-34.091S1072.57,1775.9,1072.57,1775.9Z" transform="translate(-1072.57 -1774.766)" fill="gray" opacity="0.75"/>
+            <text id="_11-3" data-name="11" transform="translate(20.759 20.962)" fill="#fff" font-size="12" font-family="Lora-Regular, Lora" letter-spacing="0.02em"><tspan x="0" y="0">11</tspan></text>
+          </g>
+         <g  data-plots-plot="12" id="_12" data-name="12" transform="translate(502.594 353.634)">
+            <path id="_12-2" data-name="12" d="M1073.62,1816.068l.62,34.256,56.382-1.655-1.324-33.635Z" transform="translate(-1073.62 -1815.033)" fill="gray" opacity="0.75"/>
+            <text id="_12-3" data-name="12" transform="translate(19.484 22.612)" fill="#fff" font-size="13" font-family="Lora-Regular, Lora" letter-spacing="0.02em"><tspan x="0" y="0">12</tspan></text>
+          </g>
+         <g  data-plots-plot="31" id="_31" data-name="31" transform="translate(317.901 82.181)">
+            <path id="_31-2" data-name="31" d="M865.337,1542.633h51.443l-1.175-33.723H878.9Z" transform="translate(-865.337 -1508.91)" fill="gray" opacity="0.75"/>
+            <text id="_31-3" data-name="31" transform="matrix(0.999, -0.035, 0.035, 0.999, 20.996, 21.313)" fill="#fff" font-size="13" font-family="Lora-Regular, Lora" letter-spacing="0.02em"><tspan x="0" y="0">31</tspan></text>
+          </g>
+         <g  data-plots-plot="32" id="_32" data-name="32" transform="translate(301.72 116.81)">
+            <path id="_32-2" data-name="32" d="M9521.09,5895.855l68.8-.995-1.175-34.9-51.806.452Z" transform="translate(-9521.09 -5859.962)" fill="gray" opacity="0.75"/>
+            <text id="_32-3" data-name="32" transform="matrix(0.999, -0.035, 0.035, 0.999, 35.948, 22.197)" fill="#fff" font-size="13" font-family="Lora-Regular, Lora" letter-spacing="0.02em"><tspan x="0" y="0">32</tspan></text>
+          </g>
+         <g  data-plots-plot="33" id="_33" data-name="33" transform="translate(285.221 152.685)">
+            <path id="_33-2" data-name="33" d="M9498.76,5936.883l15.077-35.861,70.229-.6.967,34.2Z" transform="translate(-9498.76 -5900.418)" fill="gray" opacity="0.75"/>
+            <text id="_33-3" data-name="33" transform="matrix(0.999, -0.035, 0.035, 0.999, 39.623, 21.685)" fill="#fff" font-size="12" font-family="Lora-Regular, Lora" letter-spacing="0.02em"><tspan x="0" y="0">33</tspan></text>
+          </g>
+         <g  data-plots-plot="34" id="_34" data-name="34" transform="translate(333.404 188.414)">
+            <path id="_34-2" data-name="34" d="M9556.822,5941.65v41.138h33.027l6.348-5.994-1.177-36.083Z" transform="translate(-9556.822 -5940.71)" fill="gray" opacity="0.75"/>
+            <text id="_34-3" data-name="34" transform="matrix(0.999, -0.035, 0.035, 0.999, 12.176, 25.856)" fill="#fff" font-size="12" font-family="Lora-Regular, Lora" letter-spacing="0.02em"><tspan x="0" y="0">34</tspan></text>
+          </g>
+         <g  data-plots-plot="35" id="_35" data-name="35" transform="translate(280.682 189.209)">
+            <path id="_35-2" data-name="35" d="M9530.828,5996.136l17.267-12.378v-42.15l-48.21,2.04-2.519,6.5Z" transform="translate(-9497.366 -5941.607)" fill="gray" opacity="0.75"/>
+            <text id="_35-3" data-name="35" transform="matrix(0.999, -0.035, 0.035, 0.999, 23.207, 25.06)" fill="#fff" font-size="12" font-family="Lora-Regular, Lora" letter-spacing="0.02em"><tspan x="0" y="0">35</tspan></text>
+          </g>
+         <g  data-plots-plot="36" id="_36" data-name="36" transform="translate(256.693 199.575)">
+            <path id="_36-2" data-name="36" d="M9527.151,5998.373l-27.962,19.862-28.879-40.032,19.1-13.446,5.193-11.459Z" transform="translate(-9470.311 -5953.298)" fill="gray" opacity="0.75"/>
+            <text id="_36-3" data-name="36" transform="matrix(0.999, -0.035, 0.035, 0.999, 20.352, 37.758)" fill="#fff" font-size="12" font-family="Lora-Regular, Lora" letter-spacing="0.02em"><tspan x="0" y="0">36</tspan></text>
+          </g>
+         <g  data-plots-plot="37" id="_37" data-name="37" transform="translate(227.663 225.098)">
+            <path id="_37-2" data-name="37" d="M9467.063,6042.281l-29.488-40.338,27.962-19.863,29.392,40.2Z" transform="translate(-9437.575 -5982.08)" fill="gray" opacity="0.75"/>
+            <text id="_37-3" data-name="37" transform="matrix(0.999, -0.035, 0.035, 0.999, 22.009, 33.482)" fill="#fff" font-size="12" font-family="Lora-Regular, Lora" letter-spacing="0.02em"><tspan x="0" y="0">37</tspan></text>
+          </g>
+         <g  data-plots-plot="38" id="_38" data-name="38" transform="translate(199.288 246.174)">
+            <path id="_38-2" data-name="38" d="M9466.87,6041.9l-29.293-39.992,28.071-20.059,29.073,40.228Z" transform="translate(-9437.577 -5981.849)" fill="gray" opacity="0.75"/>
+            <text id="_38-3" data-name="38" transform="matrix(0.999, -0.035, 0.035, 0.999, 21.119, 32.832)" fill="#fff" font-size="12" font-family="Lora-Regular, Lora" letter-spacing="0.02em"><tspan x="0" y="0">38</tspan></text>
+          </g>
+         <g  data-plots-plot="39" id="_39" data-name="39" transform="translate(170.668 266.619)">
+            <path id="_39-2" data-name="39" d="M9466.483,6041.835l-29.184-39.573,27.743-20.358,29.249,40.222Z" transform="translate(-9437.3 -5981.904)" fill="gray" opacity="0.75"/>
+            <text id="_39-3" data-name="39" transform="matrix(0.999, -0.035, 0.035, 0.999, 20.363, 32.786)" fill="#fff" font-size="12" font-family="Lora-Regular, Lora" letter-spacing="0.02em"><tspan x="0" y="0">39</tspan></text>
+          </g>
+         <g  data-plots-plot="40" id="_40" data-name="40" transform="translate(141.944 287.285)">
+            <path id="_40-2" data-name="40" d="M9466.246,6043.022l-29.339-40.338,27.809-20.474,29.185,40.338Z" transform="translate(-9436.907 -5982.21)" fill="gray" opacity="0.75"/>
+            <text id="_40-3" data-name="40" transform="matrix(0.999, -0.035, 0.035, 0.999, 20.548, 34.408)" fill="#fff" font-size="13" font-family="Lora-Regular, Lora" letter-spacing="0.02em"><tspan x="0" y="0">40</tspan></text>
+          </g>
+         <g  data-plots-plot="41" id="_41" data-name="41" transform="translate(118.414 308.367)">
+            <path id="_41-2" data-name="41" d="M9460.86,6041.866l-18.488-30.711,1.527-16.2,21.391-14.974,29.031,40.184-14.208,11Z" transform="translate(-9442.372 -5979.985)" fill="gray" opacity="0.75"/>
+            <text id="_41-3" data-name="41" transform="matrix(0.999, -0.035, 0.035, 0.999, 16.64, 36.317)" fill="#fff" font-size="13" font-family="Lora-Regular, Lora" letter-spacing="0.02em"><tspan x="0" y="0">41</tspan></text>
+          </g>
+         <g  data-plots-plot="42" id="_42" data-name="42" transform="translate(0 254.579)">
+            <path id="_42-2" data-name="42" d="M9226.979,6098.905l-46.145-79.605,1.984-3.972,92.441,56.075Z" transform="translate(-9180.835 -6015.328)" fill="gray" opacity="0.75"/>
+            <text id="_42-3" data-name="42" transform="matrix(0.999, -0.035, 0.035, 0.999, 39.83, 52.018)" fill="#fff" font-size="13" font-family="Lora-Regular, Lora" letter-spacing="0.02em"><tspan x="0" y="0">42</tspan></text>
+          </g>
+         <g  data-plots-plot="43" id="_43" data-name="43" transform="translate(47.216 311.424)">
+            <path id="_43-2" data-name="43" d="M9251.2,6136.883l-17.115-29.183,48.437-28.266,21.851,12.223-1.224,15.28Z" transform="translate(-9234.081 -6079.434)" fill="gray" opacity="0.75"/>
+            <text id="_43-3" data-name="43" transform="matrix(0.999, -0.035, 0.035, 0.999, 23.473, 29.649)" fill="#fff" font-size="12" font-family="Lora-Regular, Lora" letter-spacing="0.02em"><tspan x="0" y="0">43</tspan></text>
+          </g>
+         <g  data-plots-plot="44" id="_44" data-name="44" transform="translate(64.943 340.909)">
+            <path id="_44-2" data-name="44" d="M9272.249,6173.342l-18.179-31.17,52.405-29.489,18.947,30.253Z" transform="translate(-9254.07 -6112.683)" fill="gray" opacity="0.75"/>
+            <text id="_44-3" data-name="44" transform="matrix(0.999, -0.035, 0.035, 0.999, 26.284, 32.195)" fill="#fff" font-size="13" font-family="Lora-Regular, Lora" letter-spacing="0.02em"><tspan x="0" y="0">44</tspan></text>
+          </g>
+         <g  data-plots-plot="45" id="_45" data-name="45" transform="translate(83.889 382.32)">
+            <path id="_45-2" data-name="45" d="M9292.856,6210.111l-17.419-30.254,36.366-20.474,16.959,30.253Z" transform="translate(-9275.438 -6159.383)" fill="gray" opacity="0.75"/>
+            <text id="_45-3" data-name="45" transform="matrix(0.999, -0.035, 0.035, 0.999, 18.852, 28.028)" fill="#fff" font-size="13" font-family="Lora-Regular, Lora" letter-spacing="0.02em"><tspan x="0" y="0">45</tspan></text>
+          </g>
+         <g  data-plots-plot="50" id="_50" data-name="50" transform="translate(120.706 361.189)">
+            <path id="_50-2" data-name="50" d="M9334.376,6186.024l-17.417-30.254,35.893-20.217,17.735,30Z" transform="translate(-9316.959 -6135.554)" fill="gray" opacity="0.75"/>
+            <text id="_50-3" data-name="50" transform="matrix(0.999, -0.035, 0.035, 0.999, 17.831, 29.671)" fill="#fff" font-size="13" font-family="Lora-Regular, Lora" letter-spacing="0.02em"><tspan x="0" y="0">50</tspan></text>
+          </g>
+         <g  data-plots-plot="49" id="_49" data-name="49" transform="translate(139.349 392.406)">
+            <path id="_49-2" data-name="49" d="M9337.981,6191.536l17.876,30.865,35.293-20.932-17.876-30.712Z" transform="translate(-9337.981 -6170.757)" fill="gray" opacity="0.75"/>
+            <text id="_49-3" data-name="49" transform="matrix(0.999, -0.035, 0.035, 0.999, 18.092, 28.479)" fill="#fff" font-size="12" font-family="Lora-Regular, Lora" letter-spacing="0.02em"><tspan x="0" y="0">49</tspan></text>
+          </g>
+         <g  data-plots-plot="48" id="_48" data-name="48" transform="translate(157.838 424.807)">
+            <path id="_48-2" data-name="48" d="M9358.832,6227.766l18.641,32.087,30.1-16.96,2.447-8.247L9394.28,6207.3Z" transform="translate(-9358.832 -6207.297)" fill="gray" opacity="0.75"/>
+            <text id="_48-3" data-name="48" transform="matrix(0.999, -0.035, 0.035, 0.999, 20.113, 29.771)" fill="#fff" font-size="12" font-family="Lora-Regular, Lora" letter-spacing="0.02em"><tspan x="0" y="0">48</tspan></text>
+          </g>
+         <g  data-plots-plot="47" id="_47" data-name="47" transform="translate(120.71 445.998)">
+            <path id="_47-2" data-name="47" d="M9316.963,6251.86l15.737,27.655,8.4,2.139,30.863-18.334-18.653-32.126Z" transform="translate(-9316.963 -6231.194)" fill="gray" opacity="0.75"/>
+            <text id="_47-3" data-name="47" transform="matrix(0.999, -0.035, 0.035, 0.999, 20.715, 29.836)" fill="#fff" font-size="12" font-family="Lora-Regular, Lora" letter-spacing="0.02em"><tspan x="0" y="0">47</tspan></text>
+          </g>
+         <g  data-plots-plot="46" id="_46" data-name="46" transform="translate(102.523 414.077)">
+            <path id="_46-2" data-name="46" d="M9296.451,6216.455l17.419,29.49,35.908-20.169-17.506-30.579Z" transform="translate(-9296.451 -6195.197)" fill="gray" opacity="0.75"/>
+            <text id="_46-3" data-name="46" transform="matrix(0.999, -0.035, 0.035, 0.999, 19.449, 28.976)" fill="#fff" font-size="12" font-family="Lora-Regular, Lora" letter-spacing="0.02em"><tspan x="0" y="0">46</tspan></text>
+          </g>
+         <g  data-plots-plot="61" id="_61" data-name="61" transform="translate(207.3 388.345)">
+            <path id="_61-2" data-name="61" d="M9414.612,6185.519l31.5-19.342,22.525,40.081-25.628,15.494-9.534-2.384Z" transform="translate(-9414.612 -6166.177)" fill="gray" opacity="0.75"/>
+            <text id="_61-3" data-name="61" transform="matrix(0.999, -0.035, 0.035, 0.999, 20.57, 32.496)" fill="#fff" font-size="12" font-family="Lora-Regular, Lora" letter-spacing="0.02em"><tspan x="0" y="0">61</tspan></text>
+          </g>
+         <g  data-plots-plot="60" id="_60" data-name="60" transform="translate(239.737 371.417)">
+            <path id="_60-2" data-name="60" d="M9451.191,6164.249l28.914-17.161,22.861,39.324-28.6,17.082Z" transform="translate(-9451.191 -6147.088)" fill="gray" opacity="0.75"/>
+            <text id="_60-3" data-name="60" transform="matrix(0.999, -0.035, 0.035, 0.999, 18.267, 32.752)" fill="#fff" font-size="13" font-family="Lora-Regular, Lora" letter-spacing="0.02em"><tspan x="0" y="0">60</tspan></text>
+          </g>
+         <g  data-plots-plot="59" id="_59" data-name="59" transform="translate(269.665 353.933)">
+            <path id="_59-2" data-name="59" d="M9484.941,6143.686l28.8-16.316,23.544,39.815-29.148,16.573Z" transform="translate(-9484.941 -6127.369)" fill="gray" opacity="0.75"/>
+            <text id="_59-3" data-name="59" transform="matrix(0.999, -0.035, 0.035, 0.999, 19.887, 31.483)" fill="#fff" font-size="12" font-family="Lora-Regular, Lora" letter-spacing="0.02em"><tspan x="0" y="0">59</tspan></text>
+          </g>
+         <g  data-plots-plot="58" id="_58" data-name="58" transform="translate(299.858 336.393)">
+            <path id="_58-2" data-name="58" d="M9518.991,6124.136l28.854-16.546,22.788,39.587-28.552,16.947Z" transform="translate(-9518.991 -6107.59)" fill="gray" opacity="0.75"/>
+            <text id="_58-3" data-name="58" transform="matrix(0.999, -0.035, 0.035, 0.999, 19.07, 30.398)" fill="#fff" font-size="12" font-family="Lora-Regular, Lora" letter-spacing="0.02em"><tspan x="0" y="0">58</tspan></text>
+          </g>
+         <g  data-plots-plot="57" id="_57" data-name="57" transform="translate(323.809 324.281)">
+            <path id="_57-2" data-name="57" d="M9546,6095.154l29.031,49.658,17.572-9.779,5.807-10.39-1.07-30.711Z" transform="translate(-9546.001 -6093.932)" fill="gray" opacity="0.75"/>
+            <text id="_57-3" data-name="57" transform="matrix(0.999, -0.035, 0.035, 0.999, 23.23, 25.636)" fill="#fff" font-size="12" font-family="Lora-Regular, Lora" letter-spacing="0.02em"><tspan x="0" y="0">57</tspan></text>
+          </g>
+         <g  data-plots-plot="56" id="_56" data-name="56" transform="translate(303.641 289.6)">
+            <path id="_56-2" data-name="56" d="M9542.663,6089.2l-19.406-32.851,70.134-1.527,1.222,33.156Z" transform="translate(-9523.257 -6054.821)" fill="gray" opacity="0.75"/>
+            <text id="_56-3" data-name="56" transform="matrix(0.999, -0.035, 0.035, 0.999, 40.793, 22.216)" fill="#fff" font-size="12" font-family="Lora-Regular, Lora" letter-spacing="0.02em"><tspan x="0" y="0">56</tspan></text>
+          </g>
+         <g  data-plots-plot="55" id="_55" data-name="55" transform="translate(297.989 250.633)">
+            <path id="_55-2" data-name="55" d="M9522.077,6050.145l-5.194-8.863,41.1-29.03,27.657-1.376,6.568,5.654.916,31.628Z" transform="translate(-9516.883 -6010.876)" fill="gray" opacity="0.75"/>
+            <text id="_55-3" data-name="55" transform="matrix(0.999, -0.035, 0.035, 0.999, 46.723, 25.818)" fill="#fff" font-size="13" font-family="Lora-Regular, Lora" letter-spacing="0.02em"><tspan x="0" y="0">55</tspan></text>
+          </g>
+         <g  data-plots-plot="54" id="_54" data-name="54" transform="translate(269.665 281.962)">
+            <path id="_54-2" data-name="54" d="M9484.941,6065.939l27.4-19.732,30.864,52.714-29.311,17Z" transform="translate(-9484.941 -6046.207)" fill="gray" opacity="0.75"/>
+            <text id="_54-3" data-name="54" transform="matrix(0.999, -0.035, 0.035, 0.999, 24.517, 42.372)" fill="#fff" font-size="13" font-family="Lora-Regular, Lora" letter-spacing="0.02em"><tspan x="0" y="0">54</tspan></text>
+          </g>
+         <g  data-plots-plot="53" id="_53" data-name="53" transform="translate(241.386 302.537)">
+            <path id="_53-2" data-name="53" d="M9453.051,6089.273l27.491-19.863,28.811,49.836-28.811,16.847Z" transform="translate(-9453.051 -6069.41)" fill="gray" opacity="0.75"/>
+            <text id="_53-3" data-name="53" transform="matrix(0.999, -0.035, 0.035, 0.999, 23.39, 38.537)" fill="#fff" font-size="12" font-family="Lora-Regular, Lora" letter-spacing="0.02em"><tspan x="0" y="0">53</tspan></text>
+          </g>
+         <g  data-plots-plot="52" id="_52" data-name="52" transform="translate(212.939 322.549)">
+            <path id="_52-2" data-name="52" d="M9447.3,6156.127l28.213-16.875-27.213-47.273-27.328,20.074Z" transform="translate(-9420.97 -6091.978)" fill="gray" opacity="0.75"/>
+            <text id="_52-3" data-name="52" transform="matrix(0.999, -0.035, 0.035, 0.999, 20.092, 37.254)" fill="#fff" font-size="13" font-family="Lora-Regular, Lora" letter-spacing="0.02em"><tspan x="0" y="0">52</tspan></text>
+          </g>
+         <g  data-plots-plot="51" id="_51" data-name="51" transform="translate(185.848 342.505)">
+            <path id="_51-2" data-name="51" d="M9392.007,6133.164l-1.588,9.629,20.062,35.56,31.949-18.972-25.387-44.9Z" transform="translate(-9390.419 -6114.484)" fill="gray" opacity="0.75"/>
+            <text id="_51-3" data-name="51" transform="matrix(0.999, -0.035, 0.035, 0.999, 17.375, 37.65)" fill="#fff" font-size="13" font-family="Lora-Regular, Lora" letter-spacing="0.02em"><tspan x="0" y="0">51</tspan></text>
+          </g>
+         <g  data-plots-plot="87" id="_87" data-name="87" transform="translate(503.596 388.244)">
+            <path id="_87-2" data-name="87" d="M1074.75,1816.656l1.1,34.317,54.9-.655v-35.255Z" transform="translate(-1074.75 -1815.064)" fill="gray" opacity="0.75"/>
+            <text id="_87-3" data-name="87" transform="translate(17.616 21.584)" fill="#fff" font-size="12" font-family="Lora-Regular, Lora" letter-spacing="0.02em"><tspan x="0" y="0">87</tspan></text>
+          </g>
+         <g  data-plots-plot="88" id="_88" data-name="88" transform="translate(504.864 423.72)">
+            <path id="_88-2" data-name="88" d="M1076.18,1816.445l1,38.476,56.761,17.114-3.027-56.963Z" transform="translate(-1076.18 -1815.071)" fill="gray" opacity="0.75"/>
+            <text id="_88-3" data-name="88" transform="translate(15.631 26.898)" fill="#fff" font-size="12" font-family="Lora-Regular, Lora" letter-spacing="0.02em"><tspan x="0" y="0">88</tspan></text>
+          </g>
+         <g  data-plots-plot="89" id="_89" data-name="89" transform="translate(506.655 465.884)">
+            <path id="_89-2" data-name="89" d="M1076.18,1816.62l4.189,56.5,6.7,8.01,21.116,5.534,17.039-56.359Z" transform="translate(-1076.18 -1816.62)" fill="gray" opacity="0.75"/>
+            <text id="_89-3" data-name="89" transform="translate(13.779 37.939)" fill="#fff" font-size="12" font-family="Lora-Regular, Lora" letter-spacing="0.02em"><tspan x="0" y="0">89</tspan></text>
+          </g>
+         <g  data-plots-plot="96" id="_96" data-name="96" transform="translate(513.468 550.045)">
+            <path id="_96-2" data-name="96" d="M1068.05,1835.42l3.932,47.33,35.283,6.03,11.173-38.8Z" transform="translate(-1068.05 -1835.42)" fill="gray" opacity="0.75"/>
+            <text id="_96-3" data-name="96" transform="translate(16.553 32.811)" fill="#fff" font-size="13" font-family="Lora-Regular, Lora" letter-spacing="0.02em"><tspan x="0" y="0">96</tspan></text>
+          </g>
+         <g  data-plots-plot="97" id="_97" data-name="97" transform="translate(553.66 564.756)">
+            <path id="_97-2" data-name="97" d="M1068.2,1843.01l-11.65,39.175,49.409,7.461,4.765-27.849-3.5-6.99Z" transform="translate(-1056.552 -1843.01)" fill="gray" opacity="0.75"/>
+            <text id="_97-3" data-name="97" transform="translate(19.93 27.854)" fill="#fff" font-size="13" font-family="Lora-Regular, Lora" letter-spacing="0.02em"><tspan x="0" y="0">97</tspan></text>
+          </g>
+         <g  data-plots-plot="103" id="_103" data-name="103" transform="translate(612.94 582.858)">
+            <path id="_103-2" data-name="103" d="M1086.082,1814.38l-6.247,4.355L1070.6,1877.5l54.675,9.015,9.466-57.175Z" transform="translate(-1070.597 -1814.38)" fill="gray" opacity="0.75"/>
+            <text id="_103-3" data-name="103" transform="translate(19.69 39.788)" fill="#fff" font-size="12" font-family="Lora-Regular, Lora" letter-spacing="0.02em"><tspan x="0" y="0">103</tspan></text>
+          </g>
+         <g  data-plots-plot="105" id="_105" data-name="105" transform="translate(607.225 646.686)">
+            <path id="_105-2" data-name="105" d="M1076.142,1847.36l-5.546,33.873,50.456,8.614,5.468-33.711Z" transform="translate(-1070.596 -1847.36)" fill="gray" opacity="0.75"/>
+            <text id="_105-3" data-name="105" transform="translate(16.631 23.958)" fill="#fff" font-size="13" font-family="Lora-Regular, Lora" letter-spacing="0.02em"><tspan x="0" y="0">105</tspan></text>
+          </g>
+         <g  data-plots-plot="107" id="_107" data-name="107" transform="translate(601.757 681.899)">
+            <path id="_107-2" data-name="107" d="M1076.582,1848.07l-5.153,33.718,49.713,8.138,5.853-33.567Z" transform="translate(-1071.429 -1848.07)" fill="gray" opacity="0.75"/>
+            <text id="_107-3" data-name="107" transform="translate(17.523 23.215)" fill="#fff" font-size="12" font-family="Lora-Regular, Lora" letter-spacing="0.02em"><tspan x="0" y="0">107</tspan></text>
+          </g>
+         <g  data-plots-plot="109" id="_109" data-name="109" transform="translate(596.499 717.519)">
+            <path id="_109-2" data-name="109" d="M1076.652,1848.24l-5.153,33.047,49.658,8.656,5.458-33.861Z" transform="translate(-1071.499 -1848.24)" fill="gray" opacity="0.75"/>
+            <text id="_109-3" data-name="109" transform="translate(15.587 23.064)" fill="#fff" font-size="12" font-family="Lora-Regular, Lora" letter-spacing="0.02em"><tspan x="0" y="0">109</tspan></text>
+          </g>
+         <g  data-plots-plot="111" id="_111" data-name="111" transform="translate(590.896 752.59)">
+            <path id="_111-2" data-name="111" d="M1076.585,1848.79l-4.817,28.79,5.825,4.929,43.592,7.5,5.138-33.828Z" transform="translate(-1071.768 -1848.79)" fill="gray" opacity="0.75"/>
+            <text id="_111-3" data-name="111" transform="translate(19.216 22.576)" fill="#fff" font-size="12" font-family="Lora-Regular, Lora" letter-spacing="0.02em"><tspan x="0" y="0">111</tspan></text>
+          </g>
+         <g  data-plots-plot="106" id="_106" data-name="106" transform="translate(658.657 655.554)">
+            <path id="_106-2" data-name="106" d="M1076.142,1847.36l-5.546,33.873,50.456,8.614,4.693-33.962Z" transform="translate(-1070.596 -1847.36)" fill="gray" opacity="0.75"/>
+            <text id="_106-3" data-name="106" transform="translate(14.614 23.844)" fill="#fff" font-size="12" font-family="Lora-Regular, Lora" letter-spacing="0.02em"><tspan x="0" y="0">106</tspan></text>
+          </g>
+         <g  data-plots-plot="108" id="_108" data-name="108" transform="translate(652.449 690.136)">
+            <path id="_108-2" data-name="108" d="M1076.142,1847.36l-5.546,33.873,50.456,8.614,4.693-33.962Z" transform="translate(-1070.596 -1847.36)" fill="gray" opacity="0.75"/>
+            <text id="_108-3" data-name="108" transform="translate(14.729 23.844)" fill="#fff" font-size="12" font-family="Lora-Regular, Lora" letter-spacing="0.02em"><tspan x="0" y="0">108</tspan></text>
+          </g>
+         <g  data-plots-plot="110" id="_110" data-name="110" transform="translate(647.129 725.606)">
+            <path id="_110-2" data-name="110" d="M1076.142,1847.36l-5.546,33.873,50.456,8.614,4.693-33.962Z" transform="translate(-1070.596 -1847.36)" fill="gray" opacity="0.75"/>
+            <text id="_110-3" data-name="110" transform="translate(16.135 23.844)" fill="#fff" font-size="12" font-family="Lora-Regular, Lora" letter-spacing="0.02em"><tspan x="0" y="0">110</tspan></text>
+          </g>
+         <g  data-plots-plot="112" id="_112" data-name="112" transform="translate(641.286 761.005)">
+            <path id="_112-2" data-name="112" d="M1075.9,1848.28l-5.308,33.055,50.456,8.614,4.693-33.962Z" transform="translate(-1070.594 -1848.28)" fill="gray" opacity="0.75"/>
+            <text id="_112-3" data-name="112" transform="translate(16.367 23.029)" fill="#fff" font-size="12" font-family="Lora-Regular, Lora" letter-spacing="0.02em"><tspan x="0" y="0">112</tspan></text>
+          </g>
+         <g  data-plots-plot="102" id="_102" data-name="102" transform="translate(531.159 744.581)">
+            <path id="_102-2" data-name="102" d="M1067.23,1843.82l2.838,35.388,40.347,6,5.825-33.2Z" transform="translate(-1067.23 -1843.82)" fill="gray" opacity="0.75"/>
+            <text id="_102-3" data-name="102" transform="translate(11.217 24.492)" fill="#fff" font-size="13" font-family="Lora-Regular, Lora" letter-spacing="0.02em"><tspan x="0" y="0">102</tspan></text>
+          </g>
+         <g  data-plots-plot="101" id="_101" data-name="101" transform="translate(528.499 708.224)">
+            <path id="_101-2" data-name="101" d="M1067.23,1843.82l2.838,35.388,49.126,7.843,5.388-33.495Z" transform="translate(-1067.23 -1843.82)" fill="gray" opacity="0.75"/>
+            <text id="_101-3" data-name="101" transform="translate(16.829 25.265)" fill="#fff" font-size="12" font-family="Lora-Regular, Lora" letter-spacing="0.02em"><tspan x="0" y="0">101</tspan></text>
+          </g>
+         <g  data-plots-plot="100" id="_100" data-name="100" transform="translate(524.952 671.703)">
+            <path id="_100-2" data-name="100" d="M1067.23,1843.82l2.838,35.388,58.058,8.977,5.388-33.349Z" transform="translate(-1067.23 -1843.82)" fill="gray" opacity="0.75"/>
+            <text id="_100-3" data-name="100" transform="translate(19.436 25.43)" fill="#fff" font-size="12" font-family="Lora-Regular, Lora" letter-spacing="0.02em"><tspan x="0" y="0">100</tspan></text>
+          </g>
+         <g  data-plots-plot="99" id="_99" data-name="99" transform="translate(521.405 635.485)">
+            <path id="_99-2" data-name="99" d="M1067.23,1843.82l2.838,35.388,67.649,10.434,5.111-33.7Z" transform="translate(-1067.23 -1843.82)" fill="gray" opacity="0.75"/>
+            <text id="_99-3" data-name="99" transform="translate(27.238 26.292)" fill="#fff" font-size="13" font-family="Lora-Regular, Lora" letter-spacing="0.02em"><tspan x="0" y="0">99</tspan></text>
+          </g>
+         <g  data-plots-plot="98" id="_98" data-name="98" transform="translate(517.69 599.128)">
+            <path id="_98-2" data-name="98" d="M1067.23,1843.82l3.2,35.388,76.746,11.65,4.952-33.35Z" transform="translate(-1067.23 -1843.82)" fill="gray" opacity="0.75"/>
+            <text id="_98-3" data-name="98" transform="translate(31.067 27.178)" fill="#fff" font-size="13" font-family="Lora-Regular, Lora" letter-spacing="0.02em"><tspan x="0" y="0">98</tspan></text>
+          </g>
+         <g  data-plots-plot="104" id="_104" data-name="104" transform="translate(668.858 598.214)">
+            <path id="_104-2" data-name="104" d="M1079.8,1826.24l-8.849,56.683,45.594,7.73,7.618-46.714-2.577-5.377Z" transform="translate(-1070.95 -1826.24)" fill="gray" opacity="0.75"/>
+            <text id="_104-3" data-name="104" transform="translate(15.31 36.073)" fill="#fff" font-size="13" font-family="Lora-Regular, Lora" letter-spacing="0.02em"><tspan x="0" y="0">104</tspan></text>
+          </g>
+         <g  data-plots-plot="90" id="_90" data-name="90" transform="translate(539.678 480.005)">
+            <path id="_90-2" data-name="90" d="M1092.585,1821.39l-16.164,57.087,32.33,9.611,17.039-56.5Z" transform="translate(-1076.421 -1821.39)" fill="gray" opacity="0.75"/>
+            <text id="_90-3" data-name="90" transform="translate(14.867 38.119)" fill="#fff" font-size="13" font-family="Lora-Regular, Lora" letter-spacing="0.02em"><tspan x="0" y="0">90</tspan></text>
+          </g>
+         <g  data-plots-plot="91" id="_91" data-name="91" transform="translate(573.374 489.759)">
+            <path id="_91-2" data-name="91" d="M1092.585,1821.39l-16.164,57.087,32.33,9.611,17.039-56.5Z" transform="translate(-1076.421 -1821.39)" fill="gray" opacity="0.75"/>
+            <text id="_91-3" data-name="91" transform="translate(16.693 37.119)" fill="#fff" font-size="12" font-family="Lora-Regular, Lora" letter-spacing="0.02em"><tspan x="0" y="0">91</tspan></text>
+          </g>
+         <g  data-plots-plot="92" id="_92" data-name="92" transform="translate(607.069 500.533)">
+            <path id="_92-2" data-name="92" d="M1093.055,1822.54l-16.636,56.062,32.33,9.611,17.039-56.5Z" transform="translate(-1076.419 -1822.54)" fill="gray" opacity="0.75"/>
+            <text id="_92-3" data-name="92" transform="translate(15.465 35.212)" fill="#fff" font-size="12" font-family="Lora-Regular, Lora" letter-spacing="0.02em"><tspan x="0" y="0">92</tspan></text>
+          </g>
+         <g  data-plots-plot="93" id="_93" data-name="93" transform="translate(640.765 510.287)">
+            <path id="_93-2" data-name="93" d="M1093.055,1822.54l-16.636,56.062,32.33,9.611,17.039-56.5Z" transform="translate(-1076.419 -1822.54)" fill="gray" opacity="0.75"/>
+            <text id="_93-3" data-name="93" transform="translate(14.436 35.212)" fill="#fff" font-size="12" font-family="Lora-Regular, Lora" letter-spacing="0.02em"><tspan x="0" y="0">93</tspan></text>
+          </g>
+         <g  data-plots-plot="94" id="_94" data-name="94" transform="translate(674.461 520.042)" opacity="0.93">
+            <path id="_94-2" data-name="94" d="M1093.055,1822.54l-16.636,56.062,32.33,9.611,17.039-56.5Z" transform="translate(-1076.419 -1822.54)" fill="gray" opacity="0.75"/>
+            <text id="_94-3" data-name="94" transform="translate(15.43 35.212)" fill="#fff" font-size="12" font-family="Lora-Regular, Lora" letter-spacing="0.02em"><tspan x="0" y="0">94</tspan></text>
+          </g>
+         <g  data-plots-plot="95" id="_95" data-name="95" transform="translate(708.027 529.663)">
+            <path id="_95-2" data-name="95" d="M1093.728,1822.39l-16.456,56.8,34.806,10.777,9.466-59.125Z" transform="translate(-1077.272 -1822.39)" fill="gray" opacity="0.75"/>
+            <text id="_95-3" data-name="95" transform="translate(15.546 34.459)" fill="#fff" font-size="12" font-family="Lora-Regular, Lora" letter-spacing="0.02em"><tspan x="0" y="0">95</tspan></text>
+          </g>
+         <g  data-plots-plot="65" id="_65" data-name="65" transform="translate(242.515 446.453)">
+            <path id="_65-2" data-name="65" d="M11115.623,6076.759l-23.3-40.53,2.763-8.391,25.729-15.13,26.616,45.61Z" transform="translate(-11092.322 -6012.708)" fill="gray" opacity="0.75"/>
+            <text id="_65-3" data-name="65" transform="matrix(0.999, -0.035, 0.035, 0.999, 17.923, 36.27)" fill="#fff" font-size="12" font-family="Lora-Regular, Lora" letter-spacing="0.02em"><tspan x="0" y="0">65</tspan></text>
+          </g>
+         <g  data-plots-plot="67" id="_67" data-name="67" transform="translate(152.944 494.936)">
+            <path id="_67-2" data-name="67" d="M11107.555,6062.833l-15.243-26.979,2.762-8.393,32.248-18.078,18.554,31.584Z" transform="translate(-11092.312 -6009.384)" fill="gray" opacity="0.75"/>
+            <text id="_67-3" data-name="67" transform="matrix(0.999, -0.035, 0.035, 0.999, 18.573, 29.441)" fill="#fff" font-size="12" font-family="Lora-Regular, Lora" letter-spacing="0.02em"><tspan x="0" y="0">67</tspan></text>
+          </g>
+         <g  data-plots-plot="66" id="_66" data-name="66" transform="translate(188.936 477.263)">
+            <path id="_66-2" data-name="66" d="M11104.9,6062.044l-18-31.7,28.712-16.9,8.063,2.208,15.24,26.726Z" transform="translate(-11086.902 -6013.453)" fill="gray" opacity="0.75"/>
+            <text id="_66-3" data-name="66" transform="matrix(0.999, -0.035, 0.035, 0.999, 18.09, 27.749)" fill="#fff" font-size="13" font-family="Lora-Regular, Lora" letter-spacing="0.02em"><tspan x="0" y="0">66</tspan></text>
+          </g>
+         <g  data-plots-plot="64" id="_64" data-name="64" transform="translate(266.459 493.026)">
+            <path id="_64-2" data-name="64" d="M11131.311,6094.107l-8.835-2.04-34.149-59.041,31.8-18.8,37.432,64.249Z" transform="translate(-11088.326 -6014.229)" fill="gray" opacity="0.75"/>
+            <text id="_64-3" data-name="64" transform="matrix(0.999, -0.035, 0.035, 0.999, 25.028, 42.901)" fill="#fff" font-size="12" font-family="Lora-Regular, Lora" letter-spacing="0.02em"><tspan x="0" y="0">64</tspan></text>
+          </g>
+         <g  data-plots-plot="62" id="_62" data-name="62" transform="translate(272.001 428.57)">
+            <path id="_62-2" data-name="62" d="M11115.2,6076.854l-26.623-46.2,29.595-17.113,26.7,46.06Z" transform="translate(-11088.576 -6013.54)" fill="gray" opacity="0.75"/>
+            <text id="_62-3" data-name="62" transform="matrix(0.999, -0.035, 0.035, 0.999, 21.295, 35.53)" fill="#fff" font-size="12" font-family="Lora-Regular, Lora" letter-spacing="0.02em"><tspan x="0" y="0">62</tspan></text>
+          </g>
+         <g  data-plots-plot="69" id="_69" data-name="69" transform="translate(208.089 507.629)">
+            <path id="_69-2" data-name="69" d="M11105.085,6059.178l-16.584-28.856,33.81-19.625,16.676,28.6Z" transform="translate(-11088.501 -6010.697)" fill="gray" opacity="0.75"/>
+            <text id="_69-3" data-name="69" transform="matrix(0.999, -0.035, 0.035, 0.999, 18.445, 29.306)" fill="#fff" font-size="13" font-family="Lora-Regular, Lora" letter-spacing="0.02em"><tspan x="0" y="0">69</tspan></text>
+          </g>
+         <g  data-plots-plot="68" id="_68" data-name="68" transform="translate(169.123 527.617)">
+            <path id="_68-2" data-name="68" d="M11105.09,6058.787l-16.531-29.462,37.988-22.086,16.566,29.043Z" transform="translate(-11088.559 -6007.238)" fill="gray" opacity="0.75"/>
+            <text id="_68-3" data-name="68" transform="matrix(0.999, -0.035, 0.035, 0.999, 19.396, 28.822)" fill="#fff" font-size="13" font-family="Lora-Regular, Lora" letter-spacing="0.02em"><tspan x="0" y="0">68</tspan></text>
+          </g>
+         <g  data-plots-plot="71" id="_71" data-name="71" transform="translate(186.639 557.791)">
+            <path id="_71-2" data-name="71" d="M11104.708,6058.063l-16.395-28.627,37.8-22.168,16.648,28.712Z" transform="translate(-11088.313 -6007.267)" fill="gray" opacity="0.75"/>
+            <text id="_71-3" data-name="71" transform="matrix(0.999, -0.035, 0.035, 0.999, 21.849, 28.72)" fill="#fff" font-size="13" font-family="Lora-Regular, Lora" letter-spacing="0.02em"><tspan x="0" y="0">71</tspan></text>
+          </g>
+         <g  data-plots-plot="72" id="_72" data-name="72" transform="translate(203.478 587.693)">
+            <path id="_72-2" data-name="72" d="M11101.779,6051.753l-13.478-22.346,38.283-22.418,28.033,48.25Z" transform="translate(-11088.302 -6006.989)" fill="gray" opacity="0.75"/>
+            <text id="_72-3" data-name="72" transform="matrix(0.999, -0.035, 0.035, 0.999, 20.596, 31.557)" fill="#fff" font-size="12" font-family="Lora-Regular, Lora" letter-spacing="0.02em"><tspan x="0" y="0">72</tspan></text>
+          </g>
+         <g  data-plots-plot="73" id="_73" data-name="73" transform="translate(242.523 567.6)">
+            <path id="_73-2" data-name="73" d="M11116.236,6078.245l-27.9-48.462,34.2-19.455,42.3,71.672Z" transform="translate(-11088.333 -6010.328)" fill="gray" opacity="0.75"/>
+            <text id="_73-3" data-name="73" transform="matrix(0.999, -0.035, 0.035, 0.999, 26.667, 43.787)" fill="#fff" font-size="13" font-family="Lora-Regular, Lora" letter-spacing="0.02em"><tspan x="0" y="0">73</tspan></text>
+          </g>
+         <g  data-plots-plot="74" id="_74" data-name="74" transform="translate(298.42 584.606)">
+            <path id="_74-2" data-name="74" d="M11109.768,6066.84l-21.4-36.808,31.008-17.525,33.35,57.205Z" transform="translate(-11088.368 -6012.506)" fill="gray" opacity="0.75"/>
+            <text id="_74-3" data-name="74" transform="matrix(0.999, -0.035, 0.035, 0.999, 24.148, 33.276)" fill="#fff" font-size="12" font-family="Lora-Regular, Lora" letter-spacing="0.02em"><tspan x="0" y="0">74</tspan></text>
+          </g>
+         <g  data-plots-plot="75" id="_75" data-name="75" transform="translate(330.025 566.428)">
+            <path id="_75-2" data-name="75" d="M11121.559,6088.338l-33.216-58.212,29.725-16.8,45.456,77.9Z" transform="translate(-11088.343 -6013.323)" fill="gray" opacity="0.75"/>
+            <text id="_75-3" data-name="75" transform="matrix(0.999, -0.035, 0.035, 0.999, 29.427, 51.458)" fill="#fff" font-size="12" font-family="Lora-Regular, Lora" letter-spacing="0.02em"><tspan x="0" y="0">75</tspan></text>
+          </g>
+         <g  data-plots-plot="76" id="_76" data-name="76" transform="translate(360.171 541.823)">
+            <path id="_76-2" data-name="76" d="M11110.916,6068.422l-22.579-39.179,42.358-23.669h10.447l-.737,49.6Z" transform="translate(-11088.337 -6005.575)" fill="gray" opacity="0.75"/>
+            <text id="_76-3" data-name="76" transform="matrix(0.999, -0.035, 0.035, 0.999, 22.095, 36.168)" fill="#fff" font-size="12" font-family="Lora-Regular, Lora" letter-spacing="0.02em"><tspan x="0" y="0">76</tspan></text>
+          </g>
+         <g  data-plots-plot="77" id="_77" data-name="77" transform="translate(413.253 541.825)">
+            <path id="_77-2" data-name="77" d="M11092.2,6055.175l1.325-49.6,38.21,2.812,3.755,4.306v33.352l-5.964,4.308v6.405Z" transform="translate(-11092.203 -6005.578)" fill="gray" opacity="0.75"/>
+            <text id="_77-3" data-name="77" transform="matrix(0.999, -0.035, 0.035, 0.999, 15.101, 30.928)" fill="#fff" font-size="13" font-family="Lora-Regular, Lora" letter-spacing="0.02em"><tspan x="0" y="0">77</tspan></text>
+          </g>
+         <g  data-plots-plot="78" id="_78" data-name="78" transform="translate(383.741 592.568)">
+            <path id="_78-2" data-name="78" d="M11081.338,6050.923l-22.418-39,28.711-13.123,49.039,1.987-.664,53.619Z" transform="translate(-11058.92 -5998.804)" fill="gray" opacity="0.75"/>
+            <text id="_78-3" data-name="78" transform="matrix(0.999, -0.035, 0.035, 0.999, 39.428, 30.642)" fill="#fff" font-size="12" font-family="Lora-Regular, Lora" letter-spacing="0.02em"><tspan x="0" y="0">78</tspan></text>
+          </g>
+         <g  data-plots-plot="80" id="_80" data-name="80" transform="translate(469.18 545.528)">
+            <path id="_80-2" data-name="80" d="M11137.764,6058.666l-4.417-47.263-37.562-2.648-3.755,4.306-.76,32.686,5.521,4.307v6.958Z" transform="translate(-11091.271 -6008.755)" fill="gray" opacity="0.75"/>
+            <text id="_80-3" data-name="80" transform="matrix(0.999, -0.035, 0.035, 0.999, 14.926, 26.291)" fill="#fff" font-size="12" font-family="Lora-Regular, Lora" letter-spacing="0.02em"><tspan x="0" y="0">80</tspan></text>
+          </g>
+         <g  data-plots-plot="79" id="_79" data-name="79" transform="translate(463.015 594.796)">
+            <path id="_79-2" data-name="79" d="M11088.2,6068.177v-53.893l52.79,1.326,4.855,56.1Z" transform="translate(-11088.2 -6014.285)" fill="gray" opacity="0.75"/>
+            <text id="_79-3" data-name="79" transform="matrix(0.999, -0.035, 0.035, 0.999, 21.227, 31.966)" fill="#fff" font-size="12" font-family="Lora-Regular, Lora" letter-spacing="0.02em"><tspan x="0" y="0">79</tspan></text>
+          </g>
+         <g  data-plots-plot="70" id="_70" data-name="70" transform="translate(225.236 537.318)">
+            <path id="_70-2" data-name="70" d="M11104.742,6058.19l-16.9-28.883,34.15-20.129,16.9,29.307Z" transform="translate(-11087.838 -6009.179)" fill="gray" opacity="0.75"/>
+            <text id="_70-3" data-name="70" transform="matrix(0.999, -0.035, 0.035, 0.999, 18.673, 28.861)" fill="#fff" font-size="13" font-family="Lora-Regular, Lora" letter-spacing="0.02em"><tspan x="0" y="0">70</tspan></text>
+          </g>
+         <g  data-plots-plot="63" id="_63" data-name="63" transform="translate(299.163 475.722)">
+            <path id="_63-2" data-name="63" d="M11125.712,6095.06l-37.5-64.27,29.394-17.075,37.785,63.988Z" transform="translate(-11088.207 -6013.715)" fill="gray" opacity="0.75"/>
+            <text id="_63-3" data-name="63" transform="matrix(0.999, -0.035, 0.035, 0.999, 25.027, 43.36)" fill="#fff" font-size="12" font-family="Lora-Regular, Lora" letter-spacing="0.02em"><tspan x="0" y="0">63</tspan></text>
+          </g>
+         <g  data-plots-plot="85" id="_85" data-name="85" transform="translate(397.879 404.283)">
+            <path id="_85-2" data-name="85" d="M11095.859,6060.222l-.328-34.373,42.411-1.7,1.044,34.372Z" transform="translate(-11095.531 -6024.15)" fill="gray" opacity="0.75"/>
+            <text id="_85-3" data-name="85" transform="matrix(0.999, -0.035, 0.035, 0.999, 15.193, 20.798)" fill="#fff" font-size="12" font-family="Lora-Regular, Lora" letter-spacing="0.02em"><tspan x="0" y="0">85</tspan></text>
+          </g>
+         <g  data-plots-plot="86" id="_86" data-name="86" transform="translate(441.801 402.385)">
+            <path id="_86-2" data-name="86" d="M11095.716,6058.278l-.654-34.634,42.149-1.634.982,34.573Z" transform="translate(-11095.062 -6022.01)" fill="gray" opacity="0.75"/>
+            <text id="_86-3" data-name="86" transform="matrix(0.999, -0.035, 0.035, 0.999, 15.4, 23.703)" fill="#fff" font-size="13" font-family="Lora-Regular, Lora" letter-spacing="0.02em"><tspan x="0" y="0">86</tspan></text>
+          </g>
+         <g  data-plots-plot="83" id="_83" data-name="83" transform="translate(442.623 438.196)">
+            <g id="Group_1217" data-name="Group 1217" transform="translate(0 0)">
+              <path id="_83-2" data-name="83" d="M11096.711,6060.4l-.717-34.7,42.205-1.306,1.44,34.438Z" transform="translate(-11095.994 -6024.396)" fill="gray" opacity="0.75"/>
+              <text id="_83-3" data-name="83" transform="matrix(0.999, -0.035, 0.035, 0.999, 14.693, 20.584)" fill="#fff" font-size="12" font-family="Lora-Regular, Lora" letter-spacing="0.02em"><tspan x="0" y="0">83</tspan></text>
+            </g>
+          </g>
+         <g  data-plots-plot="84" id="_84" data-name="84" transform="translate(398.45 439.439)">
+            <path id="_84-2" data-name="84" d="M11097.351,6061.13l-1.176-34.829,43.063-1.5.85,34.634Z" transform="translate(-11096.175 -6024.797)" fill="gray" opacity="0.75"/>
+            <text id="_84-3" data-name="84" transform="matrix(0.999, -0.035, 0.035, 0.999, 14.636, 20.224)" fill="#fff" font-size="12" font-family="Lora-Regular, Lora" letter-spacing="0.02em"><tspan x="0" y="0">84</tspan></text>
+          </g>
+         <g  data-plots-plot="85" id="_85-4" data-name="85" transform="translate(399.848 475.121)">
+            <path id="_85-5" data-name="85" d="M11096.771,6065.663l-1.021-39.841,42.478-1.783,1.36,49.1-37.039-2.549Z" transform="translate(-11095.751 -6024.038)" fill="gray" opacity="0.75"/>
+            <text id="_85-6" data-name="85" transform="matrix(0.999, -0.035, 0.035, 0.999, 14.997, 27.106)" fill="#fff" font-size="12" font-family="Lora-Regular, Lora" letter-spacing="0.02em"><tspan x="0" y="0">85</tspan></text>
+          </g>
+         <g  data-plots-plot="82" id="_82" data-name="82" transform="translate(443.852 473.424)">
+            <path id="_82-2" data-name="82" d="M11095.906,6062.752l-1.529-49.186,42.563-1.444,3.99,46.637-5.436,6.71Z" transform="translate(-11094.377 -6012.123)" fill="gray" opacity="0.75"/>
+            <text id="_82-3" data-name="82" transform="matrix(0.999, -0.035, 0.035, 0.999, 16.266, 29.688)" fill="#fff" font-size="12" font-family="Lora-Regular, Lora" letter-spacing="0.02em"><tspan x="0" y="0">82</tspan></text>
+          </g>
+        </g>
+      </g>
     </g>
+  </g>
 </svg>

@@ -30,9 +30,9 @@ form {
             border-bottom: 2px solid $gold;
         }
     }
-    span.your-email,
-    span.your-name,
-    span.your-phone{
+    span[data-name="your-name"],
+    span[data-name="your-email"],
+    span[data-name="your-phone"]{
         position: relative;
         &:before {
             content: "";
@@ -47,14 +47,14 @@ form {
             z-index: 9;
         }
     }
-    span.your-email{
+    span[data-name="your-email"]{
         &:before{
             background-image: url("../img/ico-message.svg");
             background-size: contain;
             background-position: left center;
         }
     }
-    span.your-phone{
+    span[data-name="your-phone"]{
         &:before{
             background-image: url("../img/ico-phone.svg");
             background-size: contain;

@@ -1,9 +1,9 @@
 <div class="ekspertRadzi__post news-post">
-    <div class="news-post__number">
+    <!-- <div class="news-post__number">
         <?php if ($numer_wpisu_ekspert_radzi = get_field('numer_wpisu_ekspert_radzi')) : ?>
             <?php echo esc_html($numer_wpisu_ekspert_radzi); ?>
         <?php endif; ?>
-    </div>
+    </div> -->
     <div class="news-post__content">
         <div class="news-post__terms post-terms">
             <?php
