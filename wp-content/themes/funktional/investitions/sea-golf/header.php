@@ -38,8 +38,8 @@
                                             LOKALIZACJA
                                         </a>
                                     </li>
-                                    <li class="btn-nav <?php if (strpos($_SERVER['REQUEST_URI'], "/dzialki/seagolf/ceny-dzialek/") !== false) {; ?> btn-nav--active  <?php }; ?>">
-                                        <a href="<?php echo get_home_url(); ?>/dzialki/seagolf/ceny-dzialek/" class="text-main text-main--fw700 text-main--f13 text-main--ls5 text-main--white">
+                                    <li class="btn-nav <?php if (strpos($_SERVER['REQUEST_URI'], "/dzialki/seagolf/ceny-dzialek/?sector=A") !== false) {; ?> btn-nav--active  <?php }; ?>">
+                                        <a href="<?php echo get_home_url(); ?>/dzialki/seagolf/ceny-dzialek/?sector=A" class="text-main text-main--fw700 text-main--f13 text-main--ls5 text-main--white">
                                             CENY DZIAŁEK
                                         </a>
                                     </li>

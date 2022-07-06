@@ -26,7 +26,7 @@ $PlotsFront->getScriptsAndStyles('Resort Sea&golf');
             </div>
             <!-- DIFFERENCE -->
             <div class="plotModal-difference" data-plot-info-show-if="discount">
-                <p>TANIEJ O <span data-plot-info-param="difference"></span> zł</p>
+                <p>TANIEJ O <span data-plot-info-param="difference"></span> %</p>
             </div>
             <!-- CONTENT -->
             <div class="plotModal-content">
@@ -101,8 +101,26 @@ $PlotsFront->getScriptsAndStyles('Resort Sea&golf');
 
     <!-- FOR SECTORS -->
     <div class="plot-sectors">
+        <!-- ALL -->
+        <div class="plot-sectors__all">
+            <div data-plots-sectors>
+                <div class="plot-sectors__desktop"><?php if ($sg_pricing_header_text = get_field('sg_pricing_header_text')) : ?>
+                        <div class="plot-sectors__desktop__apla">
+                            <div class="text-main text-main--white"><?php echo $sg_pricing_header_text; ?></div>
+                        </div>
+                    <?php endif; ?>
+                    <img class="plot-sectors__img" src="<?= get_theme_file_uri('/investitions/sea-golf/assets/sectors/desktop/All-desktop.jpg') ?>">
+                    <?= file_get_contents(get_theme_file_path('/investitions/sea-golf/assets/sectors/desktop/All-desktop.svg')) ?>
+                </div>
+                <div class="plot-sectors__mobile  plot-sectors__all__mobile">
+                    <img class="plot-sectors__img" src="<?= get_theme_file_uri('/investitions/sea-golf/assets/sectors/mobile/All-mobile.png') ?>">
+                    <?= file_get_contents(get_theme_file_path('/investitions/sea-golf/assets/sectors/mobile/All-mobile.svg')) ?>
+                </div>
+            </div>
+        </div>
+        <!-- SINGLE -->
         <div class="plot-sector__single">
-            <div data-plots-sector>
+            <div data-plots-sector="A">
                 <div class="plot-sectors__desktop">
                     <img class="plot-sectors__img " src="<?= get_theme_file_uri('/investitions/sea-golf/assets/sectors/desktop/A-desktop.jpg') ?>">
                     <?= file_get_contents(get_theme_file_path('/investitions/sea-golf/assets/sectors/desktop/A-desktop.svg')) ?>
@@ -296,7 +314,7 @@ $PlotsFront->getScriptsAndStyles('Resort Sea&golf');
                             <img src="<?php bloginfo('template_url'); ?>/assets/img/prices-qaulity-logo-new/image1.svg" alt="20 lat doświadczenia">
                         </div>
                         <div class="plot-difference" data-plot-info-show-if="discount">
-                            <p>TANIEJ O <span data-plot-info-param="difference"></span> zł</p>
+                            <p>TANIEJ O <span data-plot-info-param="difference"></span> %</p>
                         </div>
                     </div>
                 </div>

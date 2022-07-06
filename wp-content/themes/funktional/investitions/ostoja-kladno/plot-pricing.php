@@ -26,7 +26,7 @@ $PlotsFront->getScriptsAndStyles('Ostoja Kładno');
             </div>
             <!-- DIFFERENCE -->
             <div class="plotModal-difference" data-plot-info-show-if="discount">
-                <p>TANIEJ O <span data-plot-info-param="difference"></span> zł</p>
+                <p>TANIEJ O <span data-plot-info-param="difference"></span> %</p>
             </div>
             <!-- CONTENT -->
             <div class="plotModal-content">
@@ -291,7 +291,7 @@ $PlotsFront->getScriptsAndStyles('Ostoja Kładno');
                             <img src="<?php bloginfo('template_url'); ?>/assets/img/prices-qaulity-logo/image2small.svg" alt="gwarancja najwyższej jakości">
                         </div>
                         <div class="plot-difference" data-plot-info-show-if="discount">
-                            <p>TANIEJ O <span data-plot-info-param="difference"></span> zł</p>
+                            <p>TANIEJ O <span data-plot-info-param="difference"></span> %</p>
                         </div>
                     </div>
                 </div>

@@ -1,5 +1,5 @@
 <?php
-$dont_include = array(1, 2, 6, 7);  // IDs not to include
+$dont_include = array(1, 2, 6, 7, 9, 10, 11 );  // IDs not to include
 $args = array(
     'exclude'      => $dont_include,
     'orderby'      => 'login',

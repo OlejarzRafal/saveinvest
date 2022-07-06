@@ -1,0 +1,13 @@
+.carousel-opinion {
+    .swiper-pagination {
+        display: flex;
+        bottom: -30px;
+        left: 35px;
+        .swiper-pagination-bullet-active {
+            background-color: $colorGold;
+        }
+    }
+}
+.swiper {
+    overflow: visible;
+}

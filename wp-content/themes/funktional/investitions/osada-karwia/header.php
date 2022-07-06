@@ -12,7 +12,7 @@
     <?php wp_head(); ?>
 </head>
 
-<body <?php body_class(); ?>>
+<body <?php body_class(); ?> data-popup_main_color="#bf9875">
     <!-- Preload -->
     <div class="karwia-loader">
         <?php require_once(__DIR__ . '/preloader.php'); ?>

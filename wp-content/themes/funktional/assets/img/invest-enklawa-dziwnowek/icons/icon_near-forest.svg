@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="66.422" height="66.422" viewBox="0 0 66.422 66.422">
+    <defs>
+        <style>
+            .cls-1,.cls-3{fill:none;stroke:#afa77f;stroke-width:1.4px}.cls-2{clip-path:url(#clip-path)}.cls-3{stroke-miterlimit:10}
+        </style>
+        <clipPath id="clip-path">
+            <path id="Rectangle_6" d="M0 0h66.422v66.422H0z" class="cls-1" data-name="Rectangle 6"/>
+        </clipPath>
+    </defs>
+    <g id="Mask_Group_3" class="cls-2" data-name="Mask Group 3">
+        <g id="Untitled-1-04" transform="translate(3.407 2.581)">
+            <path id="Line_10" d="M0 0v29.771" class="cls-3" data-name="Line 10" transform="translate(41 18.959)"/>
+            <path id="Path_78" d="M48.157 37.641a9.5 9.5 0 0 1 8.213-4.731 9.529 9.529 0 0 1 5.664-8.7 9.33 9.33 0 0 1 3.848-.816 9.529 9.529 0 0 1 9.529 9.513 9.529 9.529 0 1 1-9.511 9.848 2.226 2.226 0 0 1 0-.333" class="cls-3" data-name="Path 78" transform="translate(-24.817 -23.396)"/>
+            <path id="Path_79" d="M66.781 46.151a9.513 9.513 0 0 1-9.513 9.529 8.88 8.88 0 0 1-3.332-.6" class="cls-3" data-name="Path 79" transform="translate(-25.797 -27.258)"/>
+            <path id="Path_80" d="M35.173 24.721L20.045 61.4H50.3z" class="cls-3" data-name="Path 80" transform="translate(-20.045 -18.386)"/>
+            <path id="Line_11" d="M0 0v30.304" class="cls-3" data-name="Line 11" transform="translate(15.127 33.537)"/>
+        </g>
+    </g>
+</svg>

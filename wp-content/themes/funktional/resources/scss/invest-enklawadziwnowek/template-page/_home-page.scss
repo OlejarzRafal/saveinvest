@@ -1,0 +1,992 @@
+.mainSection {
+    // background: url(../../img/bgs/bg_main-top.jpg) center center no-repeat;
+    // background: url(assets/img/invest-enklawa-dziwnowek/bgs/bg_main-top.jpg) center center no-repeat;
+    background: url(../img/invest-enklawa-dziwnowek/bgs/bg_main-top.png) center
+        center no-repeat;
+    background-size: cover;
+    width: 100%;
+    min-height: 995px;
+    height: 100%;
+    position: relative;
+    @media (max-width: 1199px) {
+        min-height: 850px;
+    }
+
+    &.jsFix {
+        padding-top: 87px;
+    }
+
+    @media all and (max-width: 910px) {
+        // height: 100vh;
+        // min-height: 60vh;
+    }
+    @media (max-width: 767px) {
+        min-height:600px;
+        background: url(../img/invest-enklawa-dziwnowek/bgs/bg_main-top-mobile.png) center
+        center no-repeat;
+    }
+
+    nav {
+        ul {
+            li {
+                display: inline-block;
+
+                @media all and (max-width: 910px) {
+                    text-align: center;
+                    margin: 10px 0;
+                }
+            }
+        }
+    }
+
+    .nav-head {
+        height: 50px;
+        background: #121825;
+        border-bottom: 2px solid #bd9b64;
+        text-align: center;
+        overflow: hidden;
+
+        @media all and (max-width: 910px) {
+            display: none;
+        }
+
+        ul {
+            li {
+                border-left: 1px solid #3a455c;
+                margin: 0 -2px;
+
+                &:last-child {
+                    border-right: 1px solid #3a455c;
+                }
+
+                &:hover {
+                    background: #2a303b;
+                }
+
+                a {
+                    display: block;
+                    height: 48px;
+                    line-height: 48px;
+                    font-size: 12px;
+                    text-decoration: none;
+                    text-transform: uppercase;
+                    color: #9fa9c0;
+                    position: relative;
+                    padding: 0 29px;
+                    transition: background 0.8s cubic-bezier(0.12, 0.49, 0, 1)
+                        0s;
+
+                    img {
+                        transition: 0.4s;
+                        display: inline-block;
+                        margin-right: 10px;
+                        filter: grayscale(100%) brightness(80%) sepia(70%)
+                            hue-rotate(-190deg) saturate(250%) contrast(0.8);
+                    }
+
+                    &:hover {
+                        img {
+                            transition: 0.4s;
+                            filter: none;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .navbar-expand-md {
+        z-index: 9;
+
+        header {
+            display: none;
+        }
+
+        @media all and (max-width: 910px) {
+            background: #fff;
+            header {
+                display: block;
+            }
+            .navbar-nav {
+                padding: 30px 0;
+            }
+        }
+
+        &.fixed {
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 9999;
+            background: #fff;
+        }
+    }
+
+    .navbar-nav .nav-link {
+        display: inline-block;
+        font-size: 17px;
+        font-weight: 600;
+        text-decoration: none;
+        text-transform: uppercase;
+        color: #5d7082;
+        position: relative;
+        margin: 15px 35px;
+        transition: background 0.3s, color 0.3s;
+        letter-spacing: 1.36px;
+
+        @media all and (max-width: 1400px) {
+            font-size: 14px;
+            margin: 10px 26px;
+        }
+
+        @media all and (max-width: 910px) {
+            margin: 0;
+        }
+
+        &:before {
+            content: "";
+            width: 20px;
+            height: 1px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            margin-left: -10px;
+            margin-top: 15px;
+            background: #bf9e66;
+            transform: scale3d(0, 2, 1);
+            transform-origin: 0 50%;
+            transition: transform 0.3s;
+            transition-timing-function: cubic-bezier(1, 0.68, 0.16, 0.9);
+        }
+
+        &:hover {
+            &:before {
+                transform: scale3d(1, 1, 1);
+            }
+        }
+
+        &.active {
+            color: $colorGold;
+        }
+
+        &.disabled {
+            opacity: 0.7;
+            pointer-events: none;
+
+            @media all and (max-width: 910px) {
+                display: none;
+            }
+        }
+    }
+
+    .logo {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        max-width: 600px;
+        margin: 60px auto;
+
+        @media all and (max-width: 910px) {
+            display: none;
+        }
+    }
+
+    .hello_box {
+        position: absolute;
+        bottom: 70px;
+        left: 150px;
+        max-width: 1110px;
+
+        @media all and (max-width: 1420px) {
+            width: 100%;
+            max-width: 100%;
+            left: 0;
+        }
+        @media all and (max-width: 767px) {
+            position: relative;
+            bottom: 0;
+            top: 6%;
+        }
+        @media (max-width: 575px) {
+            margin-top: 35px;
+        }
+
+        h1 {
+            text-shadow: 0 3px 3px #000000;
+            font-family: $fontLora;
+            font-size: 48px;
+            color: #fff;
+            letter-spacing: 1.04px;
+
+            @media all and (max-width: 910px) {
+                font-size: 33px;
+            }
+            @media (max-width: 575px) {
+                font-size: 30px;
+            }
+        }
+    }
+}
+
+.quoteSection {
+    color: #fff;
+    background: #1f2b4c;
+    min-height: 300px;
+    width: calc(100% - 200px);
+    padding: 100px 0;
+    margin: -30px auto 30px;
+    font-family: $fontLora;
+    z-index: 10;
+    position: relative;
+
+    @media all and (max-width: 992px) {
+        width: 100%;
+    }
+    @media (max-width: 575px) {
+        padding: 50px 0;
+    }
+
+    .quote {
+        font-size: 37px;
+        line-height: 1.51;
+        letter-spacing: 1.52px;
+        position: relative;
+        padding-left: 133px;
+        font-style: italic;
+        @media all and (max-width: 1400px) {
+            padding-left: 40px;
+            padding-top: 20px;
+            font-size: 30px;
+        }
+
+        @media all and (max-width: 992px) {
+            padding-left: 0;
+        }
+        @media (max-width: 575px) {
+            font-size: 26px;
+        }
+
+        &:before {
+            content: "";
+            width: 165px;
+            height: 111px;
+            background: url(../img/invest-enklawa-dziwnowek/apostrophes.svg)
+                center center no-repeat;
+            position: absolute;
+            top: -50px;
+            left: 0;
+            @media (max-width: 575px) {
+                width: 100px;
+                height: 53px;
+                top: -40px;
+                background-size: contain;
+            }
+        }
+    }
+
+    .name {
+        font-size: 20px;
+        margin-top: 30px;
+        width: 224px;
+        margin-left: auto;
+    }
+
+    .picture {
+        text-align: left;
+        @media (max-width: 575px) {
+            margin-left: 7%;
+        }
+        img {
+            max-height: 270px !important;
+        }
+    }
+
+    .content {
+        padding: 25px 7%;
+    }
+
+    .position {
+        font-family: $fontOpen;
+        line-height: 2.53;
+        letter-spacing: 1.95px;
+        color: #b4c7dc;
+        font-size: 15px;
+        text-transform: uppercase;
+    }
+}
+
+.videoSection {
+    color: #5a5a5a;
+    min-height: 300px;
+    width: calc(100% - 200px);
+    padding: 5% 0;
+    margin: 30px auto;
+    font-family: $fontLora;
+    font-size: 22px;
+    font-style: italic;
+    @media (max-width: 575px) {
+        padding: 0;
+    }
+    iframe {
+        width: 100%;
+        height: 100%;
+        @media (max-width: 1399px) {
+            width: 120%;
+        }
+        @media (max-width: 1199px) {
+            width: 100%;
+            height: 47vw;
+        }
+    }
+
+    @media all and (max-width: 992px) {
+        width: 100%;
+    }
+
+    p {
+        margin: 30px 0;
+    }
+}
+
+.listSection {
+    color: #fff;
+    background: #1f2b4c;
+    min-height: 300px;
+    width: 100%;
+    padding: 5% 0;
+    margin: 30px auto;
+    font-family: $fontLora;
+
+    .title {
+        font-size: 48px;
+        line-height: 1.4;
+        letter-spacing: 0.96px;
+        text-align: center;
+        color: #eaeaea;
+        margin: 0 0 60px;
+
+        @media all and (max-width: 767px) {
+            font-size: 30px;
+            margin: 30px 0 50px;
+        }
+        @media (max-width: 575px) {
+            font-size: 26px;
+        }
+    }
+
+    .box {
+        text-align: center;
+        width: 19%;
+        margin: auto auto 40px auto;
+        display: inline-block;
+
+        @media all and (max-width: 992px) {
+            width: 32.333%;
+        }
+
+        .name {
+            color: #bfbfbf;
+            font-family: $fontOpen;
+        }
+    }
+
+    .aboutInvest {
+        text-align: center;
+    }
+
+    .btn {
+        text-transform: uppercase;
+        font-family: $fontOpen;
+        font-size: 16px;
+        letter-spacing: 1.6px;
+        color: $colorGold;
+        position: relative;
+        z-index: 999;
+        vertical-align: middle;
+        line-height: 43px;
+        margin: auto;
+
+        &:before {
+            transition: 0.3s width;
+            position: absolute;
+            width: 20%;
+            height: 42px;
+            z-index: -1;
+            left: -5px;
+            content: "";
+            background: rgba(255, 255, 255, 0.1);
+        }
+
+        &:after {
+            content: "";
+            position: absolute;
+            right: -5px;
+            top: 22px;
+            background: url(../img/invest-enklawa-dziwnowek/arrow_full.svg)
+                center center no-repeat;
+            width: 15px;
+            height: 11px;
+            transform: scale(0.7);
+        }
+
+        &:hover {
+            &:before {
+                transition: 0.3s width;
+                width: calc(50% + 15px);
+            }
+        }
+    }
+}
+
+.infoSection {
+    text-align: center;
+    font-family: $fontLora;
+    margin: 100px auto;
+    width: 970px;
+
+    @media all and (max-width: 992px) {
+        width: 100%;
+    }
+
+    @media all and (max-width: 555px) {
+        margin: 5% 0;
+    }
+
+    .title {
+        font-size: 80px;
+        line-height: 1.2;
+        color: #002333;
+
+        @media all and (max-width: 767px) {
+            font-size: 50px;
+        }
+        @media all and (max-width: 575px) {
+            font-size: 35px;
+        }
+    }
+
+    .text {
+        color: #5a5a5a;
+        font-size: 19px;
+        line-height: 1.84;
+        letter-spacing: 3.55px;
+        margin: 20px auto;
+
+        @media all and (max-width: 767px) {
+            padding: 0 3%;
+        }
+    }
+}
+
+.infoBgSection {
+    position: relative;
+    background: url(../img/invest-enklawa-dziwnowek/bgs/bg_about.jpg) center
+        center no-repeat;
+    background-size: cover;
+    height: 650px;
+    width: calc(100% - 100px);
+
+    @media all and (max-width: 992px) {
+        width: 100%;
+        height: auto;
+        background-size: 10%;
+    }
+
+    .box {
+        width: 780px;
+        height: auto;
+        background-color: #fbfbfb;
+        margin-left: auto;
+        margin-right: 5%;
+        position: relative;
+        top: 50%;
+        transform: translateY(-50%);
+        padding: 3% 7%;
+        text-align: center;
+
+        @media all and (max-width: 992px) {
+            width: 100%;
+            height: 100%;
+            padding: 10%;
+            top: 0;
+            transform: none;
+        }
+
+        &:after {
+            position: absolute;
+            content: "";
+            background: url(../img/invest-enklawa-dziwnowek/waves.svg) center
+                center no-repeat;
+            width: 180px;
+            height: 74px;
+            right: -120px;
+            top: 100px;
+
+            @media (max-width: 1199px) {
+                right: -130px;
+            }
+
+            @media all and (max-width: 992px) {
+                display: none;
+            }
+        }
+
+        .title {
+            font-family: $fontLora;
+            font-size: 21px;
+            line-height: 1.52;
+            color: #5a5a5a;
+        }
+
+        .description {
+            font-family: $fontOpen;
+            font-size: 16px;
+            line-height: 1.88;
+            letter-spacing: 0.4px;
+            text-align: center;
+            color: #5a5a5a;
+            margin: 20px 0;
+        }
+
+        .btn {
+            text-transform: uppercase;
+            font-family: $fontOpen;
+            font-size: 16px;
+            letter-spacing: 1.6px;
+            color: $colorGold;
+            position: relative;
+            z-index: 999;
+            vertical-align: middle;
+            line-height: 43px;
+
+            &:before {
+                transition: 0.3s width;
+                position: absolute;
+                width: 20%;
+                height: 42px;
+                z-index: -1;
+                left: -15px;
+                content: "";
+                background: #f5f1ec;
+            }
+
+            &:hover {
+                &:before {
+                    transition: 0.3s width;
+                    width: calc(50% + 30px);
+                }
+            }
+        }
+    }
+
+    &.right {
+        background: url(../img/invest-enklawa-dziwnowek/bgs/bg_playground.jpg)
+            center center no-repeat;
+        background-size: cover;
+        height: 650px;
+        width: calc(100% - 100px);
+        margin: 100px 0 100px 100px;
+
+        @media all and (max-width: 992px) {
+            width: 100%;
+            min-height: 670px;
+            height: 100%;
+            margin: 100px 0;
+            background-position: bottom;
+            background-size: contain;
+        }
+
+        @media all and (max-width: 555px) {
+            margin: 30px 0;
+        }
+
+        .box {
+            margin-left: 5%;
+            margin-right: auto;
+            height: auto;
+
+            @media all and (min-width: 992px) and (max-width: 1600px) {
+                margin-left: 10%;
+            }
+            @media all and (max-width: 992px) {
+                width: 100% !important;
+                height: 100%;
+                margin: 0;
+            }
+
+            @media all and (max-width: 767px) {
+                margin-left: 0;
+            }
+
+            &:after {
+                position: absolute;
+                content: "";
+                background: url(../img/invest-enklawa-dziwnowek/waves_2.svg)
+                    center center no-repeat;
+                right: auto;
+                left: -66px;
+                top: 100px;
+
+                @media all and (max-width: 1900px) {
+                    left: -160px !important;
+                }
+            }
+        }
+    }
+}
+
+.chooseSection {
+    width: 100%;
+    display: grid;
+    grid-gap: 0;
+    grid-template-columns: repeat(3, 33.333%);
+    @media all and (max-width: 992px) {
+        grid-template-columns: none;
+    }
+    a{
+        &:nth-child(3){
+            pointer-events: none;
+        }
+    }
+
+    .box {
+        position: relative;
+        background: url(../img/invest-enklawa-dziwnowek/bgs/location.jpg) center
+            center no-repeat;
+        // height: 585px;
+        height: 30vw;
+        z-index: 9;
+
+        @media all and (max-width: 992px) {
+            height: 300px;
+        }
+
+        &:before {
+            position: absolute;
+            width: 100%;
+            opacity: 0;
+            transition: 0.3s opacity;
+            content: "";
+            background: rgba(20, 46, 71, 0.7);
+            z-index: 0;
+            left: 0;
+            height: 100%;
+        }
+
+        &:hover {
+            .title {
+                transform: translateY(-60px);
+                transition: 0.3s;
+            }
+
+            .description {
+                opacity: 1;
+                transition: 0.3s;
+            }
+
+            &:before {
+                opacity: 1;
+                transition: 0.3s opacity;
+            }
+        }
+
+        .title {
+            position: absolute;
+            bottom: 100px;
+            left: 50px;
+            color: #e6e6e6;
+            font-size: 55px;
+            font-family: $fontLora;
+            line-height: 1.22;
+            letter-spacing: 1.38px;
+            transition: 0.3s;
+            @media (max-width: 1399px) {
+                font-size: 38px;
+            }
+
+            @media all and (max-width: 992px) {
+                font-size: 43px;
+                left: 5%;
+            }
+        }
+        .description {
+            position: absolute;
+            color: #d1d4d6;
+            bottom: 105px;
+            font-family: $fontOpen;
+            font-size: 16px;
+            left: 13%;
+            opacity: 0;
+            transition: 0.1s;
+
+            @media all and (max-width: 992px) {
+                left: 6%;
+                width: calc(100% - 13%);
+            }
+        }
+    }
+}
+
+.aboutSection {
+    background: url(../img/invest-enklawa-dziwnowek/bgs/bg_ocean.jpg) center
+        center no-repeat;
+    background-size: cover;
+    width: 100%;
+    min-height: 1150px;
+    height: 100%;
+
+    @media all and (max-width: 767px) {
+        padding-bottom: 50px;
+    }
+
+    .box {
+        width: 80%;
+        margin: 200px auto 100px;
+        background: #fbfbfb;
+        height: auto;
+        color: #5a5a5a;
+        padding: 60px 100px;
+        @media (max-width: 1199px) {
+            margin: 50px auto;
+        }
+
+        @media all and (max-width: 992px) {
+            margin: 100px auto;
+            height: 100%;
+            padding: 5%;
+        }
+        @media all and (max-width: 767px) {
+            width: 100%;
+            margin: 50px auto;
+        }
+
+        .title {
+            font-family: $fontLora;
+            font-size: 56px;
+            color: #002333;
+            margin-top: 30px;
+
+            @media all and (max-width: 992px) {
+                margin-top: 0;
+            }
+        }
+
+        .description {
+            font-family: $fontLora;
+            font-size: 20px;
+            margin-right: 50px;
+
+            @media all and (max-width: 992px) {
+                margin: auto;
+            }
+        }
+
+        .awards {
+            ul {
+                margin: 30px 0;
+                display: flex;
+                align-items: center;
+                justify-items: center;
+                text-align: center;
+
+                @media all and (max-width: 767px) {
+                    display: flex;
+                    text-align: center;
+                    flex-wrap: wrap;
+                    justify-content: center;
+                    gap: 20px;
+                }
+
+                li {
+                    width: 20%;
+                    margin: 30px 5%;
+                    img {
+                        height: 100%;
+                        width: 100%;
+                    }
+
+                    @media all and (max-width: 767px) {
+                        width: 112px;
+                        margin: 0px;
+                    }
+                }
+            }
+        }
+
+        .opinion {
+            font-family: $fontOpen;
+            font-size: 19px;
+            line-height: 35px;
+            font-style: italic;
+            padding-left: 40px;
+            margin-top: -10px;
+            text-align: left;
+
+            @media all and (max-width: 992px) {
+                padding-left: 10px;
+            }
+
+            .name {
+                margin-top: 22px;
+                font-size: 21px;
+                font-style: normal;
+            }
+        }
+
+        .slider {
+            .slick-list.draggable {
+                border-left: 2px solid #c2c7cb;
+                height: calc(100% - 10px);
+
+                @media all and (max-width: 992px) {
+                    border-left: none;
+                    margin: 30px 0;
+                }
+            }
+
+            .slick-dots {
+                text-align: left;
+                margin-left: 35px;
+                @media all and (max-width: 992px) {
+                    margin-left: 0;
+                    text-align: center;
+                }
+
+                li {
+                    button {
+                        border-color: #c2c7cb;
+                    }
+                }
+
+                .slick-active {
+                    button {
+                        border-color: $colorGold;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.nextPageBox {
+    position: relative;
+    margin-left: auto;
+    width: 400px;
+    margin-right: 185px;
+    margin-bottom: 150px;
+
+    img {
+        z-index: 1;
+        position: relative;
+    }
+
+    &:after {
+        position: absolute;
+        content: "";
+        background: url(../img/invest-enklawa-dziwnowek/waves_3.png) center
+            center no-repeat;
+        right: auto;
+        left: -81px;
+        top: 20px;
+        width: 180px;
+        height: 81px;
+        z-index: 0;
+    }
+
+    @media all and (max-width: 767px) {
+        margin: 0 0 50px;
+        width: 100%;
+    }
+
+    &:hover {
+        .button {
+            &:before {
+                width: 100%;
+                transition: 0.3s;
+            }
+        }
+    }
+
+    .button {
+        background: #ffffff;
+        border: solid 1px #d8cba4;
+        width: 309px;
+        height: 64px;
+        text-transform: uppercase;
+        font-size: 24px;
+        font-family: $fontOpen;
+        position: absolute;
+        bottom: -31px;
+        right: -50px;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: $colorGold;
+        z-index: 1;
+
+        @media all and (max-width: 767px) {
+            right: 0;
+            bottom: -20px;
+        }
+
+        &:before {
+            position: absolute;
+            content: "";
+            background: #f5f1ec;
+            width: 0;
+            height: 100%;
+            left: 0;
+            top: 0;
+            transition: 0.3s;
+            z-index: -1;
+        }
+
+        &:after {
+            content: "";
+            position: absolute;
+            right: 18%;
+            top: 26px;
+            background: url(../img/invest-enklawa-dziwnowek/arrow_full.svg)
+                center center no-repeat;
+            width: 15px;
+            height: 11px;
+        }
+    }
+}
+
+footer {
+    height: 100%;
+    min-height: 660px;
+    width: 100%;
+    background: #000;
+    color: #929da2;
+    padding: 5% 0;
+
+    a {
+        color: $colorGold;
+        font-size: 16px;
+        font-family: $fontOpen;
+        text-transform: uppercase;
+
+        &:hover {
+            color: #c0c6c9;
+            text-decoration: none;
+        }
+    }
+
+    ul {
+        margin: 20px 0;
+
+        &:first-child {
+            margin: 0;
+        }
+
+        li {
+            margin-bottom: 10px;
+
+            &:first-child {
+                color: #c0c6c9;
+            }
+        }
+    }
+}

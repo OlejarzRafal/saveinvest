@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="70.003" height="70.003" viewBox="0 0 70.003 70.003">
+    <defs>
+        <style>
+            .cls-1{fill:#fbfbfb}.cls-2{clip-path:url(#clip-path)}.cls-3,.cls-4{fill:none;stroke:#afa77f;stroke-miterlimit:10;stroke-width:1.5px}.cls-4{stroke-linecap:round}
+        </style>
+        <clipPath id="clip-path">
+            <path id="Path_11" d="M0 0h70v70H0z" class="cls-1" data-name="Path 11"/>
+        </clipPath>
+    </defs>
+    <g id="Mask_Group_20" class="cls-2" data-name="Mask Group 20">
+        <g id="lokal-08" transform="translate(1.984 13.411)">
+            <circle id="Ellipse_31" cx="10.475" cy="10.475" r="10.475" class="cls-3" data-name="Ellipse 31" transform="translate(0 23.444)"/>
+            <circle id="Ellipse_32" cx="10.475" cy="10.475" r="10.475" class="cls-3" data-name="Ellipse 32" transform="translate(43.804 23.444)"/>
+            <path id="Path_140" d="M45.926 50.859l6.585-19.541 1.113-4.627h-7.7" class="cls-3" data-name="Path 140" transform="translate(-8.64 -16.994)"/>
+            <path id="Path_141" d="M51.127 31.647H26.543l-1.475 3.273 19.474 16.268 16.47.188h.55L52.24 33.725z" class="cls-3" data-name="Path 141" transform="translate(-7.256 -17.323)"/>
+            <path id="Line_49" d="M6.438 0L0 14.297" class="cls-3" data-name="Line 49" transform="translate(17.811 3.299)"/>
+            <path id="Path_142" d="M17.238 50.224L30.986 19.6c5.727-.255 10.1-1.636 10.1-3.3" class="cls-4" data-name="Path 142" transform="translate(-6.737 -16.305)"/>
+            <path id="Line_50" d="M0 0h73.686" class="cls-3" data-name="Line 50" transform="translate(0 54.628)"/>
+        </g>
+    </g>
+</svg>

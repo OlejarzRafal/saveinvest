@@ -46,7 +46,7 @@ function funktional_ajax_filtration_ekspertRadzi(){
             'orderby' => 'date', 
             'order' => 'DESC',
             'paged' => $_GET['page'],
-            'author_name' => $expertTaxQuery,
+            'author'  => $expertTaxQuery,
             'tax_query' =>  array(
                 $subjectTaxQuery
             ),              

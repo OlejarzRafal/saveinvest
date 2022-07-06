@@ -1,0 +1,11 @@
+.threeImages{
+    img{
+        width: 100%;
+        max-width: 510px;
+        display: block;
+        margin: 0 auto;
+        @media screen and (max-width: 991px){
+            margin-bottom: 30px;
+        }
+    }
+}

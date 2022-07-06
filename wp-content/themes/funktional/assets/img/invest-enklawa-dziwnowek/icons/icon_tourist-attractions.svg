@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="60.029" height="52.274" viewBox="0 0 60.029 52.274">
+    <defs>
+        <style>
+            .cls-1{fill:none;stroke:#afa77f;stroke-linecap:round;stroke-miterlimit:10;stroke-width:1.4px}
+        </style>
+    </defs>
+    <g id="Group_1032" data-name="Group 1032" transform="translate(-1526.161 -2854.117)">
+        <g id="Group_482" data-name="Group 482" transform="translate(1566.854 2856.647)">
+            <path id="Line_70" d="M0 0l18.497 4.255" class="cls-1" data-name="Line 70" transform="translate(0 8.329)"/>
+            <path id="Line_71" d="M0 5.273L18.288 0" class="cls-1" data-name="Line 71"/>
+        </g>
+        <g id="Group_485" data-name="Group 485" transform="translate(1527 2856.647)">
+            <path id="Line_70-2" d="M18.497 0L0 4.255" class="cls-1" data-name="Line 70" transform="translate(0 8.329)"/>
+            <path id="Line_71-2" d="M18.287 5.273L0 0" class="cls-1" data-name="Line 71" transform="translate(.209)"/>
+        </g>
+        <path id="Path_583" d="M33.2 7.979v5.532l8.075 40.451H16.487l8.074-40.451V8.139" class="cls-1" data-name="Path 583" transform="translate(1527.32 2851.729)"/>
+        <path id="Line_74" d="M0 0h12.687" class="cls-1" data-name="Line 74" transform="translate(1549.857 2865.859)"/>
+        <path id="Path_584" d="M24.034 7.975h8.889" class="cls-1" data-name="Path 584" transform="translate(1527.723 2851.729)"/>
+        <path id="Line_75" d="M0 0h24.787" class="cls-1" data-name="Line 75" transform="translate(1543.807 2890.565)"/>
+        <path id="Line_76" d="M37.247 0H0" class="cls-1" data-name="Line 76" transform="translate(1537.577 2905.691)"/>
+        <path id="Line_77" d="M0 0h18.442" class="cls-1" data-name="Line 77" transform="translate(1546.979 2890.565)"/>
+        <path id="Path_585" d="M24.161 8.917a3.688 3.688 0 0 1-.126-.7 5.158 5.158 0 0 1-.021-.421 4.466 4.466 0 0 1 8.931 0c0 .147-.011.284-.021.421a3.687 3.687 0 0 1-.126.7" class="cls-1" data-name="Path 585" transform="translate(1527.721 2851.482)"/>
+        <path id="Line_78" d="M0 2.387V0" class="cls-1" data-name="Line 78" transform="translate(1556.2 2863.473)"/>
+    </g>
+</svg>

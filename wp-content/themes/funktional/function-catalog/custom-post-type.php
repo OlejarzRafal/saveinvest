@@ -22,6 +22,15 @@ function funktional_custom_post_type()
             'dashicons-welcome-write-blog', // icon_url
             5   // position
         );
+        add_menu_page(
+            'Referencje', //Page Title
+            'Referencje', //Menu Title
+            'manage_options', //Capability
+            'references_cpt', //Page slug
+            'admin_page_html', //Callback to print html
+            'dashicons-welcome-write-blog', // icon_url
+            6   // position
+        );
     }
     add_action('admin_menu', 'add_admin_page');
 
@@ -130,6 +139,109 @@ function funktional_custom_post_type()
         'rewrite' => array('slug' => 'blog', 'with_front' => false),
     );
     register_post_type('pytania_cpt', $pytania_args);
+
+    //historie klientów
+    $stories = array(
+        'name'                => _x('Historie klientów', 'Post Type General Name'),
+        'singular_name'       => _x('Historie klientów', 'Post Type Singular Name'),
+        'menu_name'           => __('Historie klientów'),
+        'all_items'           => __('Historie klientów'),
+        'view_item'           => __('Zobacz'),
+        'add_new_item'        => __('Dodaj'),
+        'add_new'             => __('Dodaj nowy'),
+        'edit_item'           => __('Edytuj'),
+        'search_items'        => __('Szukaj'),
+    );
+    $stories_args = array(
+        'label'               => __('stories'),
+        'labels'              => $stories,
+        'supports'            => array('title', 'editor', 'thumbnail', 'custom-fields', 'page-attributes','excerpt','author'),
+        'hierarchical'        => true,
+        'public'              => true,
+        'show_ui'             => true,
+        'show_in_menu'        => true,
+        'show_in_nav_menus'   => true,
+        'show_in_admin_bar'   => true,
+        'menu_icon'           => 'dashicons-welcome-write-blog',
+        'menu_position'       => 1,
+        'can_export'          => true,
+        'has_archive'         => false,
+        'exclude_from_search' => false,
+        'publicly_queryable'  => true,
+        'capability_type'     => 'post',
+        'show_in_rest' => true,
+        'show_in_menu' => 'references_cpt',
+    );
+    register_post_type('stories_cpt', $stories_args);
+    
+    //referencje
+    $referencesPosts = array(
+        'name'                => _x('Referencje', 'Post Type General Name'),
+        'singular_name'       => _x('Referencje', 'Post Type Singular Name'),
+        'menu_name'           => __('Referencje'),
+        'all_items'           => __('Referencje'),
+        'view_item'           => __('Zobacz'),
+        'add_new_item'        => __('Dodaj'),
+        'add_new'             => __('Dodaj nowy'),
+        'edit_item'           => __('Edytuj'),
+        'search_items'        => __('Szukaj'),
+    );
+    $referencesPosts_args = array(
+        'label'               => __('referencesPost'),
+        'labels'              => $referencesPosts,
+        'supports'            => array('title', 'editor', 'thumbnail', 'custom-fields', 'page-attributes','excerpt','author'),
+        'hierarchical'        => true,
+        'public'              => true,
+        'show_ui'             => true,
+        'show_in_menu'        => true,
+        'show_in_nav_menus'   => true,
+        'show_in_admin_bar'   => true,
+        'menu_icon'           => 'dashicons-welcome-write-blog',
+        'menu_position'       => 1,
+        'can_export'          => true,
+        'has_archive'         => false,
+        'exclude_from_search' => false,
+        'publicly_queryable'  => true,
+        'capability_type'     => 'post',
+        'show_in_rest' => true,
+        'show_in_menu' => 'references_cpt',
+    );
+    register_post_type('referencespost_cpt',  $referencesPosts_args);
+    
+    //referencje
+    $charitySupport = array(
+        'name'                => _x('Wsparcie charytatywne', 'Post Type General Name'),
+        'singular_name'       => _x('Wsparcie charytatywne', 'Post Type Singular Name'),
+        'menu_name'           => __('Wsparcie charytatywne'),
+        'all_items'           => __('Wsparcie charytatywne'),
+        'view_item'           => __('Zobacz'),
+        'add_new_item'        => __('Dodaj'),
+        'add_new'             => __('Dodaj nowy'),
+        'edit_item'           => __('Edytuj'),
+        'search_items'        => __('Szukaj'),
+    );
+    $charitySupport_args = array(
+        'label'               => __('charitySupport'),
+        'labels'              => $charitySupport,
+        'supports'            => array('title', 'editor', 'thumbnail', 'custom-fields', 'page-attributes','excerpt','author'),
+        'hierarchical'        => true,
+        'public'              => true,
+        'show_ui'             => true,
+        'show_in_menu'        => true,
+        'show_in_nav_menus'   => true,
+        'show_in_admin_bar'   => true,
+        'menu_icon'           => 'dashicons-welcome-write-blog',
+        'menu_position'       => 1,
+        'can_export'          => true,
+        'has_archive'         => false,
+        'exclude_from_search' => false,
+        'publicly_queryable'  => true,
+        'capability_type'     => 'post',
+        'show_in_rest' => true,
+        'show_in_menu' => 'references_cpt',
+    );
+    register_post_type('charitysupport_cpt',  $charitySupport_args);
+
 }
 add_action('init', 'funktional_custom_post_type', 0);
 

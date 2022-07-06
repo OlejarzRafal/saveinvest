@@ -3,7 +3,7 @@ wp_footer();
 ?>
 
 <footer>
-<div class="footer">
+<div class="footer settlement-dziw">
         <div class="container">
             <div class="row">
                 <div class="col-lg-3 col-md-4 col-sm-6 col-12">

@@ -7,144 +7,126 @@
 
 get_template_part('investitions/enklawa-dziwnowek/header');
 ?>
-<div class="sg-gallery">
-    <section class="sg-gallery-seagolf">
+<div class="mainSection aboutPage galleryPage">
+
+    <?php get_template_part('investitions/enklawa-dziwnowek/nav-head'); ?>
+    <?php get_template_part('investitions/enklawa-dziwnowek/nav-subpages'); ?>
+
+    <div class="box">
         <div class="container">
-            <div class="row">
-                <div class="col-xl-12">
-                    <?php if ($title_galleria_seagolf = get_field('title_galleria_seagolf')) : ?>
-                        <div class="sg-gallery-seagolf__title">
-                            <div class="sg-gallery-seagolf__title__box">
-                                <h5 class="f-h5">
-                                    <?php echo $title_galleria_seagolf; ?>
-                                </h5>
-                                <?php if ($title_bottom_galleria_seagolf = get_field('title_bottom_galleria_seagolf')) : ?>
-                                    <p class="text-main text-main--white text-main--fw400 text-main--f24 ">
-                                        <?php echo $title_bottom_galleria_seagolf; ?>
-                                    </p>
-                                <?php endif; ?>
-                            </div>
-                        </div>
-                    <?php endif; ?>
-                    <ul class="category sg-fadein-seagolf">
-                        <li class="category__item active" data-filter="all"> <span>WSZYSTKIE</span></li>
-                        <li class="category__item" data-filter="picture"> <span>ZDJĘCIA I WIZUALIZACJE</span></li>
-                        <li class="category__item" data-filter="video"> <span>FILMY</span></li>
-                    </ul>
-
-
-                    <div class="gallery">
-
-                        <!-- ZDJĘCIA -->
-                        <?php
-                        $images = get_field('photo_sg_gallery');
-                        if ($images) : ?>
-                            <?php foreach ($images as $image) : ?>
-                                <div class="gallery__item picture order-2" data-sort="value">
-                                    <a data-fancybox="gallery" href="<?php echo esc_url($image['url']); ?>">
-                                        <img class="gallery__img" src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" />
-                                    </a>
-                                </div>
-                            <?php endforeach; ?>
-                        <?php endif; ?>
-
-                        <!-- FILMY -->
-                        <?php
-                        $videos = get_field('movie_sg_gallery');
-                        if ($videos) : ?>
-                            <?php foreach ($videos as $video) :
-                                $data_type = pathinfo($video['url'], PATHINFO_EXTENSION);
-                                if ($data_type == 'mp4') : ?>
-
-                                    <div class="gallery__item gallery__item--video  video order-1" data-sort="value">
-                                        <a data-fancybox="gallery" href="<?php echo $video['url']; ?>">
-                                            <video class="gallery__img">
-                                                <source src="<?php echo $video['url']; ?>" type="video/mp4">
-                                            </video>
-                                        </a>
-                                    </div>
-                                <?php endif; ?>
-                            <?php endforeach; ?>
-                        <?php endif; ?>
-                        <?php if (have_rows('movie_youtube_sg_gallery')) : ?>
-                            <?php while (have_rows('movie_youtube_sg_gallery')) : the_row();
-                                $ytLinkUrl = get_sub_field('link_movie_youtube_sg_gallery');
-                                // $ytThubnail = get_sub_field('miniaturka');
-                                $ytLinkThubnail = parse_url($ytLinkUrl);
-                                parse_str($ytLinkThubnail['query'], $query);
-
-                            ?>
-                                <div class="gallery__item gallery__item--video  video order-1 yt-video" data-sort="value">
-                                    <a class="yt-video-link" data-fancybox="gallery" style="background-image:url(https://i.ytimg.com/vi/<?= $query['v'] ?>/hqdefault.jpg)" href="<?= $ytLinkUrl ?>"></a>
-                                </div>
-
-                            <?php endwhile; ?>
-                        <?php endif; ?>
-                    </div>
-                </div>
+            <div class="col-sm-12">
+                <?php if ($gallery_enkl_dziwnow_header = get_field('gallery_enkl_dziwnow_header')) : ?>
+                    <h1 class="ek-fadein-dziwnowek">
+                        <?php echo $gallery_enkl_dziwnow_header; ?>
+                    </h1>
+                <?php endif; ?>
+                <?php if ($gallery_enkl_dziwnow_tekst = get_field('gallery_enkl_dziwnow_tekst')) : ?>
+                    <h2 class="ek-fadein-dziwnowek">
+                        <?php echo $gallery_enkl_dziwnow_tekst; ?>
+                    </h2>
+                <?php endif; ?>
             </div>
         </div>
-    </section>
+    </div>
+
+    <div class="gallerySection">
+
+        <div class="filter ek-fadein-dziwnowek" id="filter">
+            <ul>
+                <li>
+                    <a class="all active" data-filter="allItem">
+                        Wszystkie
+                    </a>
+                </li>
+                <li>
+                    <a class="pictures" data-filter="pictures">
+                        Zdjęcia
+                    </a>
+                </li>
+                <li>
+                    <a class="visual" data-filter="visualizations">
+                        Wizualizacje
+                    </a>
+                </li>
+                <li>
+                    <a class="movies" data-filter="movies">
+                        Filmy
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="container">
+            <div class="row" id="grid">
+                <?php
+                $images = get_field('gallery');
+                if ($images) : ?>
+                    <?php foreach ($images as $image) : ?>
+                        <div class="element col-sm-6 col-md-3" data-category="pictures">
+                            <a href="<?php echo $image['sizes']['large']; ?>" data-fancybox="gallery">
+                                <img src="<?php echo $image['sizes']['medium']; ?>" alt="<?php echo $image['alt']; ?>" class="img-fluid" />
+                            </a>
+                        </div>
+                    <?php endforeach; ?>
+                <?php endif; ?>
+
+                <?php
+                $gallery_visualizations = get_field('gallery_visualizations');
+                if ($gallery_visualizations) : ?>
+
+                    <?php foreach ($gallery_visualizations as $image) : ?>
+                        <div class="element col-sm-6 col-md-3" data-category="visualizations">
+                            <a href="<?php echo $image['sizes']['large']; ?>" data-fancybox="gallery">
+                                <img src="<?php echo $image['sizes']['medium']; ?>" alt="<?php echo $image['alt']; ?>" class="img-fluid" />
+                            </a>
+                        </div>
+                    <?php endforeach; ?>
+                <?php endif; ?>
+
+                <?php if (have_rows('filmy')) : ?>
+                    <?php while (have_rows('filmy')) : the_row();
+                        $ytOrMp4 = get_sub_field('youtube_czy_mp4');
+                        if ($ytOrMp4 == "youtube") {
+                            $link = get_sub_field('youtube_link');
+                            $ytLinkThubnail = parse_url($link);
+                            parse_str($ytLinkThubnail['query'], $query);
+                        } else {
+                            $link = get_sub_field('mp4');
+                        }
+                    ?>
+                        <?php if ($ytOrMp4 == "youtube") : ?>
+                            <div class="element col-sm-6 col-md-3 yt-movie" data-category="movies">
+                                <a href="<?= $link ?>" data-fancybox="gallery">
+                                    <img src="https://i.ytimg.com/vi/<?= $query['v'] ?>/hqdefault.jpg" alt="">
+                                </a>
+                            </div>
+                        <?php endif; ?>
+                        <?php if ($ytOrMp4 == "mp4") : ?>
+                            <div class="element col-sm-6 col-md-3 standard-movie" data-category="movies">
+                                <a href="<?= $link['url'] ?>" data-fancybox="gallery">
+                                    <video class="gallery__img">
+                                        <source src="<?= $link['url'] ?>" type="video/mp4">
+                                    </video>
+                                </a>
+                            </div>
+                        <?php endif; ?>
+                    <?php endwhile; ?>
+                <?php endif; ?>
+            </div>
+        </div>
+        <div class="disclaimer">
+            <?php echo get_field('gallery_description'); ?>
+        </div>
+
+    </div>
 </div>
-<script>
-    if (document.querySelector('.category')) {
-        var cat = document.querySelector('.category');
-        var catItems = cat.querySelectorAll('.category__item');
 
-        catItems[0].addEventListener('click', function() {
-            filterSelection('all');
-        });
-        catItems[1].addEventListener('click', function() {
-            filterSelection('picture');
-        });
-        catItems[2].addEventListener('click', function() {
-            filterSelection('video');
-        });
-
-        filterSelection('all');
-
-        function filterSelection(c) {
-            var x, i;
-            x = document.getElementsByClassName('gallery__item');
-            if (c == 'all') c = '';
-            for (i = 0; i < x.length; i++) {
-                removeClass(x[i], 'show');
-                if (x[i].className.indexOf(c) > -1) addClass(x[i], 'show');
-            }
-        }
-
-        function addClass(element, name) {
-            var i, arr1, arr2;
-            arr1 = element.className.split(' ');
-            arr2 = name.split(' ');
-            for (i = 0; i < arr2.length; i++) {
-                if (arr1.indexOf(arr2[i]) == -1) {
-                    element.className += ' ' + arr2[i];
-                }
-            }
-        }
-
-        function removeClass(element, name) {
-            var i, arr1, arr2;
-            arr1 = element.className.split(' ');
-            arr2 = name.split(' ');
-            for (i = 0; i < arr2.length; i++) {
-                while (arr1.indexOf(arr2[i]) > -1) {
-                    arr1.splice(arr1.indexOf(arr2[i]), 1);
-                }
-            }
-            element.className = arr1.join(' ');
-        }
-
-        for (var i = 0; i < catItems.length; i++) {
-            catItems[i].addEventListener('click', function() {
-                var current = document.getElementsByClassName('active');
-                current[0].className = current[0].className.replace(' active', '');
-                this.className += ' active';
-            });
-        }
-    }
-</script>
+<div class="nextPageBox">
+    <a href="<?php echo esc_url(home_url('')); ?>/dzialki/enklawadziwnowek/kontakt">
+        <img src="<?php echo get_template_directory_uri() ?>/assets/img/invest-enklawa-dziwnowek/preview_contact.jpg" class="img-fluid" alt="" />
+        <div class="button">Kontakt</div>
+    </a>
+</div>
 
 <?php
 get_template_part('investitions/enklawa-dziwnowek/footer');

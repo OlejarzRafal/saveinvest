@@ -72,7 +72,7 @@ get_header();  ?>
                                     Wszyscy
                                 </li>
                                 <?php
-                                $dont_include = array(1,2,6,7);  // IDs not to include
+                                $dont_include = array(1, 2, 6, 7, 9, 10, 11 );   // IDs not to include
                                 $args = array(
                                     'exclude'      => $dont_include,
                                     'orderby'      => 'login',
@@ -85,7 +85,7 @@ get_header();  ?>
                                     <?php
                                     $expert_id =  $expert->ID;
                                     $expert_image = get_field('zdjecie_autora', 'user_' .  $expert_id); ?>
-                                    <li id="experts--<?php echo $expert->display_name; ?>" class="news-filter__item news-filter__item--expert ekspertRadzi__expertsTerm" data-expert="<?php echo $expert->display_name; ?>">
+                                    <li id="experts--<?php echo $expert->display_name; ?>" class="news-filter__item news-filter__item--expert ekspertRadzi__expertsTerm" data-expert="<?php echo $expert_id; ?>">
                                         <div class="news-filter__itemImg">
                                             <img src="<?php echo esc_url($expert_image['url']); ?>" alt="<?php echo esc_attr($expert_image['alt']); ?>" />
                                         </div>

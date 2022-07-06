@@ -11,7 +11,81 @@ global $PlotsFront;
 $PlotsFront->getScriptsAndStyles('Enklawa Dziwnowek');
 ?>
 
+<div class="mainSection   pricesPage">
+    <?php get_template_part('investitions/enklawa-dziwnowek/nav-head'); ?>
+    <?php get_template_part('investitions/enklawa-dziwnowek/nav-subpages'); ?>
+</div>
+
+
+
+
 <section class="plots-map" data-plots-map>
+
+
+    <!-- INFO PAGE -->
+    <div class="plots-map__infopage">
+        <div class="introSection">
+            <div class="subtitle">
+                Przy pięknym lesie, tuż obok morza
+            </div>
+            <div class="title">
+                Działki pośród natury
+            </div>
+            <div class="did_u_know">
+                Czy wiesz, że w ostatnim roku 375 000 turystów odwiedziło Dziwnów?<br>
+                Nie musisz inwestować 1 000 000 zł, żeby stać się właścicielem działki.
+            </div>
+
+            <div class="description">
+                Enklawa Dziwnówek to luksusowy kompleks działek budowlanych, położonych 600 m od morza. Przyszłe
+                ogrodzone
+                osiedle będzie posiadać ogrodzony basen zewnętrzny, oświetlenie, portiernię z ochroną, wspólny plac
+                zabaw
+                dla dzieci. Działki zostaną uzbrojone w prąd, wodę, gaz, a drogi wewnętrzne zostaną wykonane z kostki
+                brukowej.
+                <div class="arrow">
+                    <img src="<?php echo get_template_directory_uri() ?>/assets/img/invest-enklawa-dziwnowek/icons/arrow_down2.svg" alt="" />
+                </div>
+            </div>
+        </div>
+        <div class="elements">
+            <div class="bikes elements__item ">
+                <div class="imageBox">
+                    <img src="<?php echo get_template_directory_uri() ?>/assets/img/invest-enklawa-dziwnowek/preview_bikes.jpg" alt="Plac zabaw" class="img-fluid" />
+                    <div class="name">
+                        portiernia i rowerownia
+                    </div>
+                </div>
+            </div>
+
+            <div class="pool elements__item">
+                <div class="imageBox ">
+                    <img src="<?php echo get_template_directory_uri() ?>/assets/img/invest-enklawa-dziwnowek/preview_pool.jpg" alt="Plac zabaw" class="img-fluid" />
+                    <div class="name">
+                        basen
+                    </div>
+                </div>
+            </div>
+
+            <div class="playground elements__item">
+                <div class="imageBox">
+                    <img src="<?php echo get_template_directory_uri() ?>/assets/img/invest-enklawa-dziwnowek/preview_playground.png" alt="Plac zabaw" class="img-fluid" />
+                    <div class="name">
+                        Plac zabaw
+                    </div>
+                </div>
+            </div>
+            <div class="seaandbeach">
+                <img src="<?php echo get_template_directory_uri() ?>/assets/img/invest-enklawa-dziwnowek/beach_n_sea.jpg" alt="Morze i plaża" class="img-fluid" />
+                <div class="name">
+                    Morze i plaża
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
     <!-- MODAL -->
     <div data-plots-info class="plotModal">
         <div class="plotModal__item" data-plot-class-param="status">
@@ -26,7 +100,7 @@ $PlotsFront->getScriptsAndStyles('Enklawa Dziwnowek');
             </div>
             <!-- DIFFERENCE -->
             <div class="plotModal-difference" data-plot-info-show-if="discount">
-                <p>TANIEJ O <span data-plot-info-param="difference"></span> zł</p>
+                <p>TANIEJ O <span data-plot-info-param="difference"></span> %</p>
             </div>
             <!-- CONTENT -->
             <div class="plotModal-content">
@@ -39,15 +113,15 @@ $PlotsFront->getScriptsAndStyles('Enklawa Dziwnowek');
                         <div class="plotModal-status__number" data-plot-info-param="sector|plotNr"></div>
                         <div class="plotModal-status__status">
                             <div data-plot-info-show-if="status=wolna">
-                                <img class="status-ico" src="<?= get_theme_file_uri('/investitions/sea-golf/assets/check.png') ?>">
+                                <img class="status-ico" src="<?= get_theme_file_uri('/investitions/ostoja-kladno/assets/check.png') ?>">
                                 <span>wolna</span>
                             </div>
                             <div data-plot-info-show-if="status=sprzedana">
-                                <img class="status-ico" src="<?= get_theme_file_uri('/investitions/sea-golf/assets/x-circle.png') ?>">
+                                <img class="status-ico" src="<?= get_theme_file_uri('/investitions/ostoja-kladno/assets/x-circle.png') ?>">
                                 <span>sprzedana</span>
                             </div>
                             <div data-plot-info-show-if="status=zarezerwowana">
-                                <img class="status-ico" src="<?= get_theme_file_uri('/investitions/sea-golf/assets/lock.png') ?>">
+                                <img class="status-ico" src="<?= get_theme_file_uri('/investitions/ostoja-kladno/assets/lock.png') ?>">
                                 <span>zarezerwowana</sp>
                             </div>
                         </div>
@@ -101,78 +175,26 @@ $PlotsFront->getScriptsAndStyles('Enklawa Dziwnowek');
 
     <!-- FOR SECTORS -->
     <div class="plot-sectors">
-        <!-- ALL -->
         <div class="plot-sectors__all">
-            <div data-plots-sectors>
-                <div class="plot-sectors__desktop"><?php if ($sg_pricing_header_text = get_field('sg_pricing_header_text')) : ?>
-                        <div class="plot-sectors__desktop__apla">
-                            <div class="text-main text-main--white"><?php echo $sg_pricing_header_text; ?></div>
-                        </div>
-                    <?php endif; ?>
-                    <img class="plot-sectors__img" src="<?= get_theme_file_uri('/investitions/sea-golf/assets/sectors/desktop/All-desktop.jpg') ?>">
-                    <?= file_get_contents(get_theme_file_path('/investitions/sea-golf/assets/sectors/desktop/All-desktop.svg')) ?>
-                </div>
-                <div class="plot-sectors__mobile  plot-sectors__all__mobile">
-                    <img class="plot-sectors__img" src="<?= get_theme_file_uri('/investitions/sea-golf/assets/sectors/mobile/All-mobile.png') ?>">
-                    <?= file_get_contents(get_theme_file_path('/investitions/sea-golf/assets/sectors/mobile/All-mobile.svg')) ?>
-                </div>
-            </div>
-        </div>
-        <!-- SINGLE -->
-        <div class="plot-sector__single">
-            <div data-plots-sector="A">
+            <!-- ALL -->
+            <div data-plots-sector>
                 <div class="plot-sectors__desktop">
-                    <img class="plot-sectors__img " src="<?= get_theme_file_uri('/investitions/sea-golf/assets/sectors/desktop/A-desktop.jpg') ?>">
-                    <?= file_get_contents(get_theme_file_path('/investitions/sea-golf/assets/sectors/desktop/A-desktop.svg')) ?>
+                    <img class="plot-sectors__img" src="<?= get_theme_file_uri('/investitions/enklawa-dziwnowek/assets/sectors/desktop/all-desktop.jpeg') ?>">
+                    <?= file_get_contents(get_theme_file_path('/investitions/enklawa-dziwnowek/assets/sectors/desktop/all-desktop.svg')) ?>
                 </div>
-                <div class="plot-sectors__mobile plot-sectors__single__mobile">
-                    <img class="plot-sectors__img" src="<?= get_theme_file_uri('/investitions/sea-golf/assets/sectors/mobile/A-mobile.png') ?>">
-                    <?= file_get_contents(get_theme_file_path('/investitions/sea-golf/assets/sectors/mobile/A-mobile.svg')) ?>
+                <div class="plot-sectors__mobile">
+                    <img class="plot-sectors__img" src="<?= get_theme_file_uri('/investitions/enklawa-dziwnowek/assets/sectors/mobile/All-mobile.jpg') ?>">
+                    <?= file_get_contents(get_theme_file_path('/investitions/enklawa-dziwnowek/assets/sectors/mobile/all-mobile.svg')) ?>
+                    <!-- <div class="plot-sectors__mobile__info">
+                        Przesuń mapę w bok, <br>
+                        aby zobaczyć więcej działek
+                    </div> -->
                 </div>
-
-                <div class="plot-sectors__backMainMap">
-                    <div data-plots-back-to-sectors>
-                        <p>WRÓĆ DO MAPY SEKTORÓW</p>
-                    </div>
-                </div>
-                <div class="plot-sectors__name">
-                    <div class="container">
-                        <!-- <h2 class="f-h2">Sektor A</h2> -->
-                    </div>
-                </div>
-
             </div>
         </div>
     </div>
 </section>
 
-<!-- ****************************** -->
-<!-- ****************************** -->
-<!-- INFO O DOSTĘPNOŚCI-->
-<!-- ****************************** -->
-<!-- ****************************** -->
-<!-- <section plots-collected-info>
-    <div class="container">
-        <div class="row">
-            <div class="col">Sektor</div>
-            <div class="col">A</div>
-            <div class="col">B</div>
-            <div class="col">C</div>
-        </div>
-        <div class="row">
-            <div class="col">Liczba działek</div>
-            <div class="col"><span plots-collected-count-by-sector="A"></span></div>
-            <div class="col"><span plots-collected-count-by-sector="B"></span></div>
-            <div class="col"><span plots-collected-count-by-sector="C"></span></div>
-        </div>
-        <div class="row">
-            <div class="col">Wolne</div>
-            <div class="col"><span plots-collected-available-count-by-sector="A"></span></div>
-            <div class="col"><span plots-collected-available-count-by-sector="B"></span></div>
-            <div class="col"><span plots-collected-available-count-by-sector="C"></span></div>
-        </div>
-    </div>
-</section> -->
 
 <!-- ****************************** -->
 <!-- ****************************** -->
@@ -188,17 +210,23 @@ $PlotsFront->getScriptsAndStyles('Enklawa Dziwnowek');
                     <div class="row">
                         <div class="col-xl-10 col-lg-12">
                             <div class="plots-list__header__desc">
-                                <?php if ($sg_pricing_title = get_field('sg_pricing_title')) : ?>
-                                    <h2 class="f-h2 f-h2--black-dark"> <?php echo $sg_pricing_title; ?></h2>
-                                <?php endif; ?>
-                                <?php if ($sg_pricing_text = get_field('sg_pricing_text')) : ?>
-                                    <div class="text-main"><?php echo $sg_pricing_text; ?></div>
-                                <?php endif; ?>
+                                <h2 class="f-h2">Lista działek</h2>
+                                <div class="text-main">
+
+                                    Wszystkie podane ceny są cenami netto. Do ceny netto należy doliczyć 23% podatku VAT. Przedsiębiorca
+                                    otrzymuje zwrot podatku VAT w ciągu 30 lub 60 dni od wystąpienia o zwrot do urzędu skarbowego.
+                                    Nakłady
+                                    inwestycyjne związane z budową i utrzymaniem basenu oraz utwardzeniem kostką brukową zostaną
+                                    podzielone
+                                    na wszystkich właścicieli.
+
+                                </div>
+
                             </div>
                         </div>
                         <div class="col-xl-2 col-lg-0">
                             <div class="plots-list__header__img">
-                                <img src="<?php bloginfo('template_url'); ?>/assets/img/invest-karwia/price/image2big.svg" alt="gwarancja najwyższej jakości">
+                                <img src="<?php bloginfo('template_url'); ?>/assets/img/prices-qaulity-logo/image2big.svg" alt="gwarancja najwyższej jakości">
                             </div>
                         </div>
                     </div>
@@ -256,15 +284,15 @@ $PlotsFront->getScriptsAndStyles('Enklawa Dziwnowek');
                             <div class="plot-status__number" data-plot-info-param="sector|plotNr"></div>
                             <div class="plot-status__status">
                                 <div data-plot-info-show-if="status=wolna">
-                                    <img class="status-ico" src="<?= get_theme_file_uri('/investitions/sea-golf/assets/check.png') ?>">
+                                    <img class="status-ico" src="<?= get_theme_file_uri('/investitions/ostoja-kladno/assets/check.png') ?>">
                                     <span>wolna</span>
                                 </div>
                                 <div data-plot-info-show-if="status=sprzedana">
-                                    <img class="status-ico" src="<?= get_theme_file_uri('/investitions/sea-golf/assets/x-circle.png') ?>">
+                                    <img class="status-ico" src="<?= get_theme_file_uri('/investitions/ostoja-kladno/assets/x-circle.png') ?>">
                                     <span>sprzedana</span>
                                 </div>
                                 <div data-plot-info-show-if="status=zarezerwowana">
-                                    <img class="status-ico" src="<?= get_theme_file_uri('/investitions/sea-golf/assets/lock.png') ?>">
+                                    <img class="status-ico" src="<?= get_theme_file_uri('/investitions/ostoja-kladno/assets/lock.png') ?>">
                                     <span>zarezerwowana</sp>
                                 </div>
                             </div>
@@ -309,23 +337,23 @@ $PlotsFront->getScriptsAndStyles('Enklawa Dziwnowek');
                             </a>
                         </div>
                         <div class="plot-quality">
-                            <img src="<?php bloginfo('template_url'); ?>/assets/img/prices-qaulity-logo-new/image3.svg" alt="1000 zadowolonych klientów">
-                            <img src="<?php bloginfo('template_url'); ?>/assets/img/prices-qaulity-logo-new/image2small.svg" alt="gwarancja najwyższej jakości">
-                            <img src="<?php bloginfo('template_url'); ?>/assets/img/prices-qaulity-logo-new/image1.svg" alt="20 lat doświadczenia">
+                            <img src="<?php bloginfo('template_url'); ?>/assets/img/prices-qaulity-logo/image1.svg" alt="17 lat doświadczenia">
+                            <img src="<?php bloginfo('template_url'); ?>/assets/img/prices-qaulity-logo/image3.svg" alt="700 zadowolonych klientów">
+                            <img src="<?php bloginfo('template_url'); ?>/assets/img/prices-qaulity-logo/image2small.svg" alt="gwarancja najwyższej jakości">
                         </div>
                         <div class="plot-difference" data-plot-info-show-if="discount">
-                            <p>TANIEJ O <span data-plot-info-param="difference"></span> zł</p>
+                            <p>TANIEJ O <span data-plot-info-param="difference"></span> %</p>
                         </div>
                     </div>
                 </div>
 
                 <div data-plot-list-baner-template>
                     <div class="plot-baner">
-                        <img class="status-ico" src="<?= get_theme_file_uri('/investitions/sea-golf/assets/baner.jpg') ?>">
+                        <img class="status-ico" src="<?= get_theme_file_uri('/investitions/ostoja-kladno/assets/baner.png') ?>">
 
                         <div class="plot-baner__content">
                             <h4>Kup działkę na raty</h4>
-                            <a href="<?php the_permalink(1404); ?>" class="btn btn__line">DOWIEDZ SIĘ WIĘCEJ </a>
+                            <a href="<?php the_permalink(369); ?>" class="btn btn__line">DOWIEDZ SIĘ WIĘCEJ </a>
                         </div>
                     </div>
                 </div>
@@ -345,9 +373,9 @@ $PlotsFront->getScriptsAndStyles('Enklawa Dziwnowek');
                                 Do ceny netto należy doliczyć 23% podatku VAT. Przedsiębiorca otrzymuje zwrot podatku VAT w ciągu 30 lub 60 dni od wystąpienia o zwrot do urzędu skarbowego. Nakłady inwestycyjne związane z budową basenu i części rekreacyjnej oraz utwardzeniem drogi wewnętrznej zostaną podzielone na wszystkich właścicieli działek.
                             </div>
                             <div class="plots-bottom-info__logos">
-                                <img src="<?php bloginfo('template_url'); ?>/assets/img/prices-qaulity-logo-new/image3.svg" alt="1000 zadowolonych klientów">
-                                <img src="<?php bloginfo('template_url'); ?>/assets/img/prices-qaulity-logo-new/image2small.svg" alt="gwarancja najwyższej jakości">
-                                <img src="<?php bloginfo('template_url'); ?>/assets/img/prices-qaulity-logo-new/image1.svg" alt="20 lat doświadczenia">
+                                <img src="<?php bloginfo('template_url'); ?>/assets/img/prices-qaulity-logo/image3.svg" alt="700 zadowolonych klientów">
+                                <img src="<?php bloginfo('template_url'); ?>/assets/img/prices-qaulity-logo/image2small.svg" alt="gwarancja najwyższej jakości">
+                                <img src="<?php bloginfo('template_url'); ?>/assets/img/prices-qaulity-logo/image1.svg" alt="17 lat doświadczenia">
                             </div>
                         </div>
                     </div>
@@ -358,9 +386,9 @@ $PlotsFront->getScriptsAndStyles('Enklawa Dziwnowek');
     </div>
 </div>
 
-<!-- <div class="form-plots form-main">
-    <?php echo do_shortcode('[contact-form-7 id="1764" title="Formularz działki SeaGolf"]'); ?>
-</div> -->
+<div class="form-plots form-main">
+    <?php echo do_shortcode('[contact-form-7 id="4002" title="Formularz działki Enklawa Dziwnowek"]'); ?>
+</div>
 
 <?php
 get_template_part('investitions/enklawa-dziwnowek/footer');

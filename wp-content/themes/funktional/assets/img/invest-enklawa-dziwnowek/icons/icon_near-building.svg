@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="82.7" height="62.461" viewBox="0 0 82.7 62.461">
+    <defs>
+        <style>
+            .cls-1,.cls-2,.cls-3,.cls-4{fill:none;stroke:#afa77f;stroke-width:1.5px}.cls-1,.cls-2{stroke-miterlimit:10}.cls-2,.cls-3{stroke-linecap:square}.cls-3{stroke-miterlimit:16}
+        </style>
+    </defs>
+    <g id="Group_78" data-name="Group 78" transform="translate(0 .75)">
+        <path id="Line_41" d="M0 22.064V0" class="cls-1" data-name="Line 41" transform="translate(22.332 38.9)"/>
+        <path id="Line_42" d="M0 22.231V0" class="cls-1" data-name="Line 42" transform="translate(49.197 38.733)"/>
+        <path id="Line_43" d="M0 0h81.776" class="cls-1" data-name="Line 43" transform="translate(0 60.962)"/>
+        <path id="Line_44" d="M9.4 0H0" class="cls-2" data-name="Line 44" transform="translate(15.979 31.29)"/>
+        <path id="Line_45" d="M34.345 0H0" class="cls-3" data-name="Line 45" transform="translate(47.605 31.287)"/>
+        <g id="Group_76" data-name="Group 76" transform="translate(16.986 30.843)">
+            <path id="Path_136" d="M7.693-60.6l5.27-3.135 13.584-8.056L39.828-63.9l5.572 3.3" class="cls-1" data-name="Path 136" transform="translate(-7.693 71.794)"/>
+        </g>
+        <path id="Line_46" d="M0 22.681V0" class="cls-1" data-name="Line 46" transform="translate(60.329 7.978)"/>
+        <path id="Path_139" d="M0 22.935V.251" class="cls-4" data-name="Path 139" transform="translate(72.617 7.725)"/>
+        <path id="Path_138" d="M22.243-69.192V-94.4h16.946v30.852" class="cls-1" data-name="Path 138" transform="translate(13.381 94.404)"/>
+        <path id="Line_48" d="M0 0h12.219" class="cls-4" data-name="Line 48" transform="translate(60.157 9.15)"/>
+    </g>
+</svg>

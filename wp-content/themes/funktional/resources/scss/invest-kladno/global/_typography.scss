@@ -11,6 +11,15 @@ $lg: 991px;
 $md: 767px;
 $sm: 575px;
 
+.popup-wrap{
+    .popup{
+        &__header1{
+            font-family: $brygada;
+        }
+    }
+}
+
+
 /*styl-fonts*/
 h2 {
     font-size: 56px;

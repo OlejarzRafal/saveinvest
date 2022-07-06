@@ -1,0 +1,17 @@
+
+/*
+-!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+it must be added on every investment
+set the font for the header here
+
+-!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+*/
+
+.popup-wrap {
+    .popup {
+        &__header1 {
+            font-family:$brygada;
+        }
+    }
+}

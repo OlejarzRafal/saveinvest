@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="65.203" height="62.588" viewBox="0 0 65.203 62.588">
+    <defs>
+        <style>
+            .cls-1,.cls-2{fill:none;stroke:#afa77f;stroke-miterlimit:10;stroke-width:1.4px}.cls-2{stroke-dasharray:3.02 3.02}
+        </style>
+    </defs>
+    <g id="Untitled-1-06" transform="translate(.771 1.897)">
+        <path id="Line_18" d="M0 0h63.661" class="cls-1" data-name="Line 18" transform="translate(0 59.991)"/>
+        <path id="Line_19" d="M0 0h2.256" class="cls-1" data-name="Line 19" transform="translate(0 50.484)"/>
+        <path id="Line_20" d="M0 0h52.319" class="cls-2" data-name="Line 20" transform="translate(6.799 50.484)"/>
+        <path id="Line_21" d="M0 0h2.256" class="cls-1" data-name="Line 21" transform="translate(61.404 50.484)"/>
+        <path id="Line_22" d="M0 0h63.661" class="cls-1" data-name="Line 22" transform="translate(0 40.977)"/>
+        <path id="Path_87" d="M50.621 30.818v22.519" class="cls-1" data-name="Path 87" transform="translate(-18.79 -17.926)"/>
+        <path id="Path_88" d="M41.544 21.79a6.453 6.453 0 1 0 6.438 6.378 6.453 6.453 0 1 0 6.438-6.438 6.393 6.393 0 0 0-3.971-5.942 6.183 6.183 0 0 0-2.467-.5 6.438 6.438 0 0 0-6.438 6.5z" class="cls-1" data-name="Path 88" transform="translate(-16.152 -15.291)"/>
+        <path id="Path_89" d="M21.04 15.491l-8.484 23.542h16.983z" class="cls-1" data-name="Path 89" transform="translate(-12.33 -15.325)"/>
+        <path id="Line_23" d="M0 0v17.028" class="cls-1" data-name="Line 23" transform="translate(8.71 18.382)"/>
+        <path id="Path_90" d="M76.712 15.491l-8.5 23.542h17z" class="cls-1" data-name="Path 90" transform="translate(-21.776 -15.325)"/>
+        <path id="Line_24" d="M0 0v17.028" class="cls-1" data-name="Line 24" transform="translate(54.936 18.382)"/>
+    </g>
+</svg>

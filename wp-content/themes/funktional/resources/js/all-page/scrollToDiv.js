@@ -12,7 +12,7 @@ if ($(window).width() > 767) {
           {
             scrollTop: target.offset().top - 150,
           },
-          3000
+          2000
         );
         return false;
       }
@@ -32,7 +32,7 @@ if ($(window).width() > 767) {
           {
             scrollTop: target.offset().top - 50,
           },
-          3000
+          2000
         );
         return false;
       }

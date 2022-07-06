@@ -1,0 +1,50 @@
+$color__orange: #FFA640;
+@mixin border-radius($r1, $r2, $r3, $r4) {
+  -webkit-border-top-left-radius: $r1;
+  -webkit-border-top-right-radius: $r2;
+  -webkit-border-bottom-right-radius: $r4;
+  -webkit-border-bottom-left-radius: $r3;
+  -moz-border-radius-topleft: $r1;
+  -moz-border-radius-topright: $r2;
+  -moz-border-radius-bottomright: $r4;
+  -moz-border-radius-bottomleft: $r3;
+  border-top-left-radius: $r1;
+  border-top-right-radius: $r2;
+  border-bottom-right-radius: $r4;
+  border-bottom-left-radius: $r3;
+}
+
+@mixin box-sizing() {
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+
+@mixin transition($type, $time1, $bezier, $time2) {
+  -webkit-transition: $type $time1 $bezier $time2;
+  -moz-transition: $type $time1 $bezier $time2;
+  -o-transition: $type $time1 $bezier $time2;
+  transition: $type $time1 $bezier $time2;
+}
+
+@mixin transition2($type, $time1, $bezier, $time2, $typeB, $timeB1, $bezierB, $timeB2) {
+  -webkit-transition: $type $time1 $bezier $time2, $typeB $timeB1 $bezierB $timeB2;
+  -moz-transition: $type $time1 $bezier $time2, $typeB $timeB1 $bezierB $timeB2;
+  -o-transition: $type $time1 $bezier $time2, $typeB $timeB1 $bezierB $timeB2;
+  transition: $type $time1 $bezier $time2, $typeB $timeB1 $bezierB $timeB2;
+}
+
+@mixin transition-delay($time) {
+  -webkit-transition-delay: $time;
+  -moz-transition-delay: $time;
+  -o-transition-delay: $time;
+  transition-delay: $time;
+}
+
+@mixin transform($method, $extra) {
+  -webkit-transform: $method $extra;
+  -moz-transform: $method $extra;
+  transform: $method $extra;
+}
+
+/*   Resolution  */

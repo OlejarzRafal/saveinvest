@@ -1,0 +1,114 @@
+// style by the name of subpage or name template
+
+// OSADA KARWIA
+.osada-karwia-template {
+    .popup-wrap {
+        .popup-form {
+            form {
+                .form-group {
+                    input {
+                        &.label-up {
+                            border-bottom: 1px solid #bf9875;
+                        }
+                    }
+                }
+                input[type="submit"] {
+                    background-color: #bf9875;
+                }
+            }
+        }
+        .popup-widget {
+            background: #ffffff;
+            &__ico {
+                svg {
+                    path {
+                        fill: #BF9875 !important;
+                        &:first-child {
+                            fill: none !important;
+                            stroke: #BF9875;
+                        }
+                    }
+                }
+            }
+            &__text {
+                color:#BF9875;
+            }
+        }
+    }
+}
+
+// OSTOJA KLADNO
+.ostoja-kladno-template {
+    .popup-wrap {
+        .popup-form {
+            form {
+                .form-group {
+                    input {
+                        &.label-up {
+                            // border-bottom: 1px solid red;
+                        }
+                    }
+                }
+                input[type="submit"] {
+                    background-color: #0b345a;
+                }
+            }
+        }
+        .popup-widget {
+            background: #ffffff;
+            border: 1px solid #0b345a;
+            &__ico {
+                svg {
+                    path {
+                        fill: #0b345a !important;
+                        &:first-child {
+                            fill: none !important;
+                            stroke: #0b345a;
+                        }
+                    }
+                }
+            }
+            &__text {
+                color: #0b345a;
+            }
+        }
+    }
+}
+
+// SEA & GOLF
+.sea-golf-template {
+    .popup-wrap {
+        .popup-form {
+            form {
+                .form-group {
+                    input {
+                        &.label-up {
+                            border-bottom: 1px solid #aa7f10;
+                        }
+                    }
+                }
+                input[type="submit"] {
+                    background-color: #aa7f10;
+                }
+            }
+        }
+        .popup-widget {
+            background: #ffffff;
+            border: 1px solid #aa7f10;
+            &__ico {
+                svg {
+                    path {
+                        fill: #aa7f10 !important;
+                        &:first-child {
+                            fill: none !important;
+                            stroke: #aa7f10;
+                        }
+                    }
+                }
+            }
+            &__text {
+                color: #aa7f10;
+            }
+        }
+    }
+}

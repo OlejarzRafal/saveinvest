@@ -1,4 +1,4 @@
-.contact-page {
+.contact-page{
     .sections-bg {
         padding: 88px 0 160px 0;
         background-image: url("../img/contact-bg.png");
@@ -9,8 +9,38 @@
     }
     .first-sections {
         // margin-bottom: 200px;
-        margin-bottom: 80px;
+        // margin-bottom: 80px;
+        margin-bottom: 130px;
     }
+    
+    #wpcf7-f1822-o1{
+        form span.your-email:before, form span.your-name:before, form span.your-phone:before {
+            left: 12px;
+        }
+        .rodo{
+            padding-left: 20px;
+        }
+        .form-showhide__p{
+            margin-bottom: 10px;
+            margin-top: 22px;
+            max-width: 470px;
+        }
+        @media screen and (max-width: $md){
+            .wpcf7-text{
+                padding-top: 20px;
+                padding-bottom: 20px;
+            }
+            .wpcf7-list-item{
+                input{
+                    margin: 0;
+                }
+            }
+        }
+    }
+
+
+    
+
     .sec1,
     .sec2 {
         &__title {
@@ -92,6 +122,7 @@
     .sec3 {
         background-color: white;
         padding: 96px 0;
+        margin-top: 0;
         &__img-container {
             display: flex;
             align-items: center;
@@ -125,7 +156,8 @@
             color: $main;
         }
     }
-    .sec5 {
+    .sec5{
+        position: relative;
         background-color: #e7edef;
         padding: 160px 0 224px 0;
         &__title-box {
@@ -156,21 +188,21 @@
                 z-index: 2;
                 background-color: #c6cdca;
             }
-            .owl {
-                &-dots {
-                    position: absolute;
-                    bottom: -36px;
-                }
-                &-dot {
-                    height: 13px;
-                    width: 13px;
-                    background-color: #d1d1d1;
-                    margin-right: 18px;
-                    &.active {
-                        background-color: #cbb284;
-                    }
-                }
-            }
+            // .owl {
+            //     &-dots {
+            //         position: absolute;
+            //         bottom: -36px;
+            //     }
+            //     &-dot {
+            //         height: 13px;
+            //         width: 13px;
+            //         background-color: #d1d1d1;
+            //         margin-right: 18px;
+            //         &.active {
+            //             background-color: #cbb284;
+            //         }
+            //     }
+            // }
         }
         &__opinion {
             font-size: 16px;
@@ -186,6 +218,49 @@
             line-height: 2.22;
             letter-spacing: 1.03px;
             color: $main;
+        }
+
+        .swiper-pagination{
+            @media screen and (max-width: $lg){
+                text-align: left;
+            }
+        }
+    
+        .swiper-pagination-bullet {
+            height: 13px;
+            width: 13px;
+            background-color: #d1d1d1;
+            margin-right: 18px;
+            opacity: 0.8;
+            border-radius: 0;
+            &.swiper-pagination-bullet-active{
+                    background-color: #cbb284;
+                    opacity: 1;
+            }
+        }
+    
+        .swiper-pagination.opinion-dots.swiper-pagination-clickable.swiper-pagination-bullets.swiper-pagination-horizontal {
+            bottom: -36px;
+            // display: flex;
+            text-align: left;
+            padding-left: 150px;
+            @media screen and (max-width: $xxxl){
+                padding-left: 80px;
+            }
+            @media screen and (max-width: $xl){
+                padding-left: 45px;
+            }
+            @media screen and (max-width: $lg){
+                padding-left: 80px;
+                bottom: -36px;
+            }
+            @media screen and (max-width: $md){
+                padding-left: 45px;
+                bottom: -36px;
+            }
+            @media screen and (max-width: $sm){
+                bottom: -50px;
+            }
         }
     }
     .sec6 {
@@ -359,4 +434,9 @@
             }
         }
     }
+    @media screen and (min-width: 1400px) {
+        .container {
+          max-width: 1360px !important;
+        }
+      }
 }

@@ -1,18 +1,18 @@
 
 //STICKY
 
-window.onscroll = function() {
-	stickyFrontPage()
-};
-var navbar = document.querySelector('.header__content');
+// window.onscroll = function() {
+// 	stickyFrontPage()
+// };
+// var navbar = document.querySelector('.header__content');
 
-function stickyFrontPage() {
-	if (window.pageYOffset > 1) {
-	  navbar.classList.add("sticky")
-	} else {
-	  navbar.classList.remove("sticky");
-	}
-  }
+// function stickyFrontPage() {
+// 	if (window.pageYOffset > 1) {
+// 	  navbar.classList.add("sticky")
+// 	} else {
+// 	  navbar.classList.remove("sticky");
+// 	}
+//   }
 
 // Scroll down btn
 
@@ -47,7 +47,7 @@ if (scrollBtn) {
 
 // Hamburger menu
 
-// const button = document.getElementById('menu-btn');
+const button = document.getElementById('menu-btn');
 // const menu = document.getElementById('main-menu');
 // button.addEventListener('click', function() {
 // 	if (button.classList.contains('header__hamburger--opened') == false) {
@@ -59,62 +59,62 @@ if (scrollBtn) {
 // 	}
 // });
 
-// if (document.querySelector('.category')) {
-// 	var cat = document.querySelector('.category');
-// 	var catItems = cat.querySelectorAll('.category__item');
+if (document.querySelector('.category')) {
+	var cat = document.querySelector('.category');
+	var catItems = cat.querySelectorAll('.category__item');
 
-// 	catItems[0].addEventListener('click', function() {
-// 		filterSelection('all');
-// 	});
-// 	catItems[1].addEventListener('click', function() {
-// 		filterSelection('picture');
-// 	});
-// 	catItems[2].addEventListener('click', function() {
-// 		filterSelection('visualization');
-// 	});
-// 	catItems[3].addEventListener('click', function() {
-// 		filterSelection('video');
-// 	});
+	catItems[0].addEventListener('click', function() {
+		filterSelection('all');
+	});
+	catItems[1].addEventListener('click', function() {
+		filterSelection('picture');
+	});
+	catItems[2].addEventListener('click', function() {
+		filterSelection('visualization');
+	});
+	catItems[3].addEventListener('click', function() {
+		filterSelection('video');
+	});
 
-// 	filterSelection('all');
-// 	function filterSelection(c) {
-// 		var x, i;
-// 		x = document.getElementsByClassName('gallery__item');
-// 		if (c == 'all') c = '';
-// 		for (i = 0; i < x.length; i++) {
-// 			removeClass(x[i], 'show');
-// 			if (x[i].className.indexOf(c) > -1) addClass(x[i], 'show');
-// 		}
-// 	}
+	filterSelection('all');
+	function filterSelection(c) {
+		var x, i;
+		x = document.getElementsByClassName('gallery__item');
+		if (c == 'all') c = '';
+		for (i = 0; i < x.length; i++) {
+			removeClass(x[i], 'show');
+			if (x[i].className.indexOf(c) > -1) addClass(x[i], 'show');
+		}
+	}
 
-// 	function addClass(element, name) {
-// 		var i, arr1, arr2;
-// 		arr1 = element.className.split(' ');
-// 		arr2 = name.split(' ');
-// 		for (i = 0; i < arr2.length; i++) {
-// 			if (arr1.indexOf(arr2[i]) == -1) {
-// 				element.className += ' ' + arr2[i];
-// 			}
-// 		}
-// 	}
+	function addClass(element, name) {
+		var i, arr1, arr2;
+		arr1 = element.className.split(' ');
+		arr2 = name.split(' ');
+		for (i = 0; i < arr2.length; i++) {
+			if (arr1.indexOf(arr2[i]) == -1) {
+				element.className += ' ' + arr2[i];
+			}
+		}
+	}
 
-// 	function removeClass(element, name) {
-// 		var i, arr1, arr2;
-// 		arr1 = element.className.split(' ');
-// 		arr2 = name.split(' ');
-// 		for (i = 0; i < arr2.length; i++) {
-// 			while (arr1.indexOf(arr2[i]) > -1) {
-// 				arr1.splice(arr1.indexOf(arr2[i]), 1);
-// 			}
-// 		}
-// 		element.className = arr1.join(' ');
-// 	}
+	function removeClass(element, name) {
+		var i, arr1, arr2;
+		arr1 = element.className.split(' ');
+		arr2 = name.split(' ');
+		for (i = 0; i < arr2.length; i++) {
+			while (arr1.indexOf(arr2[i]) > -1) {
+				arr1.splice(arr1.indexOf(arr2[i]), 1);
+			}
+		}
+		element.className = arr1.join(' ');
+	}
 
-// 	for (var i = 0; i < catItems.length; i++) {
-// 		catItems[i].addEventListener('click', function() {
-// 			var current = document.getElementsByClassName('active');
-// 			current[0].className = current[0].className.replace(' active', '');
-// 			this.className += ' active';
-// 		});
-// 	}
-// }
+	for (var i = 0; i < catItems.length; i++) {
+		catItems[i].addEventListener('click', function() {
+			var current = document.getElementsByClassName('active');
+			current[0].className = current[0].className.replace(' active', '');
+			this.className += ' active';
+		});
+	}
+}

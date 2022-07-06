@@ -1,0 +1,192 @@
+.enklawa-dziwnowek-template-plot-pricing {
+    .plots-map {
+        .plot-sectors {
+            [data-plots-sector] {
+                // min-height: 2748px;
+                height: 2771px;
+                position: relative;
+                overflow: hidden;
+                @media (max-width: 992px) {
+                    height: 2090px;
+                }
+            }
+            &__img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                object-position: center;
+                position: absolute;
+                left: 0;
+                top: 0;
+            }
+            &__svg {
+                position: absolute !important;
+                width: 1920px;
+                left: 50%;
+                transform: translate(-50%);
+                @media (max-width: 992px) {
+                    height: 2090px;
+                }
+            }
+
+            &__desktop {
+                @media (max-width: 767px) {
+                    display: none;
+                }
+            }
+            &__mobile {
+                display: flex;
+                width: 768px;
+                &__info {
+                    position: absolute;
+                    left: 15px;
+                    top: 90px;
+                    padding: 10px 50px 10px 20px;
+                    background-color: #fff;
+                    color: #0b345a;
+                    font-weight: 600;
+                    display: flex;
+                    align-items: center;
+                    background: rgba(255, 255, 255, 0.89) url(../img/invest-kladno/ico/arrow-right-grant.png);
+                    background-position: 95%;
+                    background-repeat: no-repeat;
+                    img {
+                        margin-left: 20px;
+                    }
+                }
+                @media (min-width: 768px) {
+                    display: none;
+                }
+            }
+            @media (max-width: 767px) {
+                [data-plots-sector] {
+                    height: 2433px;
+                    overflow-x: scroll;
+                }
+                &__img {
+                    position: relative !important;
+                }
+                &__svg {
+                    width: 768px !important;
+                    height: 2433px;
+                    right: auto;
+                    left:auto;
+                    transform: translate(0);
+                }
+            }
+        }
+
+        .introSection {
+            position: absolute;
+            top: 15%;
+            left: 0;
+            right: 0;
+            margin: 100px auto;
+            width: 970px;
+            min-height: 415px;
+            height: auto;
+            background: rgba(255, 255, 255, 0.9);
+            text-align: center;
+            padding: 4% 5%;
+            z-index: 9;
+
+            
+            .subtitle {
+                font-family: $fontOpen;
+                font-size: 19px;
+                color: #002333;
+            }
+
+            .title {
+                font-size: 48px;
+                font-family: $fontLora;
+                color: #002333;
+            }
+
+            .did_u_know {
+                font-family: $fontOpen;
+                font-size: 15px;
+                color: #111717;
+                font-weight: bold;
+            }
+
+            .description {
+                font-size: 16px;
+                font-family: $fontOpen;
+                color: #5a5a5a;
+                margin: 20px 0 0;
+
+                .arrow {
+                    margin: 25px 0 0;
+                }
+            }
+            @media all and (max-width: 991px) {
+                width: 100%;
+                top: 2%;
+                min-height: auto;
+                .title{
+                    font-size:32px;
+                }
+                .description{
+                    font-size:14px;
+                }
+            }
+            @media(max-width:767px){
+                position: relative;
+                margin: 0;
+            }
+        }
+        .elements {
+            @media(max-width:992px){
+                display: none;
+            }
+            &__item {
+                position: fixed;
+                left: 37%;
+                z-index: -1;
+                opacity: 0;
+                &--open {
+                    z-index: 999;
+                    opacity: 1;
+                }
+            }
+            img {
+                border: 3px solid #fff;
+            }
+            .imageBox {
+                position: absolute;
+                width: 350px;
+                height: 196px;
+                margin-left: auto;
+                right: 5%;
+                top: 201px;
+                z-index: 9;
+            }
+            .seaandbeach {
+                position: absolute;
+                right: 5%;
+                top: 201px;
+                z-index: 9;
+            }
+            .name {
+                position: absolute;
+                width: 171px;
+                height: 32px;
+                background-color: #333d6b;
+                color: #fff;
+                font-family: $fontOpen;
+                font-size: 12px;
+                padding-top: 8px;
+                text-align: center;
+                right: -20px;
+                bottom: -10px;
+                text-transform: uppercase;
+
+                @media all and (max-width: 400px) {
+                    right: 0;
+                    bottom: -5px;
+                }
+            }
+        }
+    }
+}

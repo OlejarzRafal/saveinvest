@@ -14,7 +14,7 @@ get_template_part('investitions/osada-dziwnowek/header');
     <?php
     if( have_rows('section-1') ):
       while ( have_rows('section-1') ) : the_row();?>
-    <section class="sec1">
+    <section class="sec1 settlement-dziw">
         <div class="sec1__img-box">
             <img class="sec1__img" src="<?php echo get_sub_field('img'); ?>"
                 alt="<?php echo get_sub_field('title'); ?>">

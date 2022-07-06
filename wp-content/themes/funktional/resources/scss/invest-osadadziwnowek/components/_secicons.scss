@@ -29,6 +29,13 @@
         font-size: 15px;
         margin-bottom: 32px;
     }
+    &__locitem {
+        text-align: center;
+        line-height: 1.8;
+        color: white;
+        font-size: 15px;
+        margin-bottom: 32px;
+    }
     &__icon {
         max-width: 154px;
         width: 100%;
@@ -111,8 +118,8 @@
             }
         }
         .secicons__item {
-            width: 100%;
-            flex: 100%;
+            // width: 100%;
+            // flex: 100%;
         }
         .secicons__icon {
             margin: auto;
@@ -136,6 +143,9 @@
     }
     @media screen and (max-width: $md - 1px) {
         &__item {
+            flex: 50% !important;
+        }
+        &__loctem {
             flex: 50% !important;
         }
         &--number {

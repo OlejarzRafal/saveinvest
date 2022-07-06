@@ -25,6 +25,7 @@ function add_theme_assets()
     }
     else if (get_post_type(get_queried_object_id()) === 'osada-karwia') {
         wp_enqueue_style('karwiacss', get_template_directory_uri() . '/assets/css/karwia.css', false, 1, 'all');
+        
     }
     else if (get_post_type(get_queried_object_id()) === 'osada-dziwnowek') {
         wp_enqueue_style('osadadziwnowekcss', get_template_directory_uri() . '/assets/css/osadadziwnowek.css', false, 1, 'all');
@@ -36,9 +37,10 @@ function add_theme_assets()
         wp_enqueue_style('enklawadziwnowekcss', get_template_directory_uri() . '/assets/css/enklawadziwnowek.css', false, 1, 'all');
     }
     else {
-        // to na pewno w else?
         wp_enqueue_style('style', get_template_directory_uri() . '/assets/css/main.css', false, 1, 'all');
     }
+
+    wp_enqueue_style('karwiaPopupCss', get_template_directory_uri() . '/assets/css/allpage.css', false, 1, 'all');
 
     /////////////////
     // SCRIPTS
@@ -59,9 +61,12 @@ function add_theme_assets()
     else if (get_post_type(get_queried_object_id()) === 'enklawa-dziwnowek') {
         wp_enqueue_script('enklawadziwnowekjs', get_stylesheet_directory_uri() . '/assets/js/enklawadziwnowek.js', array(), null, true);
     }
-
+    else{
+        wp_enqueue_script('main', get_template_directory_uri() . '/assets/js/main.js', array('jquery'), 1, true);
+    }
     // saveinvest page&blog
-    wp_enqueue_script('main', get_template_directory_uri() . '/assets/js/main.js', array('jquery'), 1, true);
+    wp_enqueue_script('popupjs', get_template_directory_uri() . '/assets/js/allpage.js', array('jquery'), 1, true);
+   
 }
 
 add_action('wp_enqueue_scripts', 'add_theme_assets');

@@ -121,7 +121,7 @@ wp_footer();
                         <div class="footer-box__info footer-box__map">
                             <a class="text-main text-main--white text-main--fw500 text-main--f12 text-main--ls4" href="<?php the_permalink(1392); ?>">STRONA GŁÓWNA
                             </a>
-                            <a class="text-main text-main--white text-main--fw500 text-main--f12 text-main--ls4" href="<?php the_permalink(1393); ?>">CENY DZIAŁEK
+                            <a class="text-main text-main--white text-main--fw500 text-main--f12 text-main--ls4" href="https://saveinvest.pl/dzialki/seagolf/ceny-dzialek/?sector=A">CENY DZIAŁEK
                             </a>
                             <a class="text-main text-main--white text-main--fw500 text-main--f12 text-main--ls4" href="<?php the_permalink(1407); ?>">O RESORCIE
                             </a>
@@ -165,3 +165,6 @@ wp_footer();
     </section>
 </footer>
 </body>
+
+<!-- POPUP -->
+<?php get_template_part('template-popup/popup'); ?>
