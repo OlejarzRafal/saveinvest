@@ -206,6 +206,25 @@ $plotsAcfArray = array(
             'append' => '',
             'maxlength' => '',
         ),
+        array(
+            'key' => 'field_6206bafd9cabc',
+            'label' => 'Data obowiązywania rabatu',
+            'name' => 'discount_date',
+            'type' => 'text',
+            'instructions' => '',
+            'required' => 0,
+            'conditional_logic' => 0,
+            'wrapper' => array(
+                'width' => '20',
+                'class' => 'hidden',
+                'id' => '',
+            ),
+            'default_value' => '',
+            'placeholder' => '',
+            'prepend' => '',
+            'append' => '',
+            'maxlength' => '',
+        ),
     ),
     'location' => array(
         array(

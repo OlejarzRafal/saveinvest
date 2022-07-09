@@ -54,15 +54,18 @@ class PlotsFront
     private function calculatePlotPrices($plotData)
     {
         $investition = $plotData['investition']['value'];
+        $date_utc = (int) (time() - date("Z"));
 
         switch ($investition) {
             case 'INVESTITION':
                 // TODO do something special for some investitions!
                 break;
             default:
-                $plotData['area'] = (float)$plotData['area'];
-                $plotData['price'] = (float)$plotData['priceNetto'] * (float)$plotData['area'];
-                $plotData['discount'] = (float)$plotData['discount'];
+                $hasPromotionByDate = $plotData['discount_date'] !== '' ? (int) $plotData['discount_date'] >= $date_utc : true;
+
+                $plotData['area'] = (float) $plotData['area'];
+                $plotData['price'] = (float) $plotData['priceNetto'] * (float) $plotData['area'];
+                $plotData['discount'] = $hasPromotionByDate ? (float) $plotData['discount'] : 0;
                 $plotData['type'] = $plotData['plot_type'];
 
                 // RABAT 

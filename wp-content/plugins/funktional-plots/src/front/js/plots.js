@@ -1,5 +1,6 @@
 import $ from 'jquery';
 import 'select2';
+import * as moment from 'moment-timezone';
 
 class PlotDataElement {
     static prepareConditionalElementsForPlot(plotData, element) {
@@ -77,20 +78,37 @@ class PlotDataElement {
                 return;
             }
 
-            const getPlotDataParam = (plotParamData) => {
+            const getPlotDataParam = (plotParamData, type = 'string') => {
+                const getFormattedDate = (date) => {
+                    try {
+                        if (!date) {
+                            return '';
+                        } else {
+                            const momentDate = moment(parseInt(date) * 1000);
+
+                            return momentDate.isValid() ? momentDate.tz('Europe/Warsaw').format('HH:mm DD-MM-YYYY') : '';
+                        }
+                    } catch (e) {
+                        console.warn('error creating date from date:', date, ' status: ', e);
+                        return '';
+                    }
+                };
+
                 if (!plotParamData) {
                     return '';
                 }
 
-                return typeof plotParamData === 'object' ? plotParamData.label : plotParamData;
+                return type === 'date' ?
+                    (typeof plotParamData === 'object' ?  getFormattedDate(plotParamData.label) : getFormattedDate(plotParamData)) :
+                    (typeof plotParamData === 'object' ? plotParamData.label : plotParamData);
             }
 
             if (param.includes('|')) {
                 const params = param.split('|');
 
-                $(paramElement).text(params.map((param) => getPlotDataParam(plotData[param])).join(''));
+                $(paramElement).text(params.map((param) => getPlotDataParam(plotData[param], $(paramElement).attr('data-plot-info-param-type'))).join(''));
             } else {
-                $(paramElement).text(getPlotDataParam(plotData[param]));
+                $(paramElement).text(getPlotDataParam(plotData[param], $(paramElement).attr('data-plot-info-param-type')));
             }
         });
 

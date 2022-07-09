@@ -34,6 +34,12 @@ $PlotsFront->getScriptsAndStyles('Resort Sea&golf');
                     <img data-plot-info-image src="">
                 </figure>
                 <div class="plotModal-content__desc">
+                    <div data-plot-info-show-if="discount">
+                        <div data-plot-info-show-if="discount_date" class="plotModal-discount-for-date">
+                            <span>promołszyn trwa do: </span>
+                            <span data-plot-info-param="discount_date" data-plot-info-param-type="date"></span>
+                        </div>
+                    </div>
 
                     <div class="plotModal-status">
                         <div class="plotModal-status__number" data-plot-info-param="sector|plotNr"></div>

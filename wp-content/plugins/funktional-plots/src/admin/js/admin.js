@@ -2,6 +2,34 @@ import $ from 'jquery';
 import toastr from 'toastr';
 import DoubleSlider from 'double-slider';
 import 'select2';
+import * as moment from 'moment-timezone';
+import 'gemini-datepicker';
+
+
+// DATEPICKER LOCALE CONFIG
+(function (factory, jQuery) {
+    typeof define === 'function' && define.amd ? define('datepicker.en-US', ['jquery'], factory) : factory(typeof exports === 'object' ? require('jquery') : jQuery);
+})(function ($) {
+    $.fn.datepicker.lang['pl-PL'] = {
+        days: ['Niedziela', 'Poniedziałek', 'Wtorek', 'Środa', 'Czwartek', 'Piątek', 'Sobota'],
+        daysMin: ['Nie', 'Pon', 'Wt', 'Śr', 'Czw', 'Pt', 'Sob'],
+        months: ['Styczeń', 'Luty', 'Marzec', 'Kwiecień', 'Maj', 'Czerwiec', 'Lipiec', 'Sierpień', 'Wrzesień', 'Październik', 'Listopad', 'Grudzień'],
+        monthsShort: ['Sty', 'Lut', 'Mar', 'Kwi', 'Maj', 'Cze', 'Lip', 'Sie', 'Wrz', 'Paź', 'Lis', 'Gru'],
+        yearSuffix: '',
+        monthSuffix: '',
+        todaySuffix: 'Dziś',
+        dateInputPlaceholder: 'Wybierz datę',
+        rangeStartInputPlaceholder: 'Od',
+        rangeEndPlaceholder: 'Do',
+        dateTimeInputPlaceholder: 'Wybierz godzinę',
+        rangeStartTimeInputPlaceholder: 'Od',
+        rangeEndTimeInputPlaceholder: 'Do',
+        nowDateButton: 'Teraz',
+        confirmDateButton: 'Zapisz',
+        cancelTimeButton: 'Anuluj',
+        clearButton: 'Reset'
+    };
+}, $);
 
 class FunktionalPlotsService {
     getFiltersValues() {
@@ -182,6 +210,20 @@ class FunktionalPlots {
 
             $(select).val(null);
         });
+
+        this.plotsTableHead.find('input[data-datepicker-field]').toArray().forEach((dateField) => {
+            $(dateField).datepicker({
+                lang : 'pl-PL',
+                type: 'datetime',
+                format: 'HH:mm dd-MM-yyyy',
+                placeholder: '',
+                onChange: $(dateField).attr('data-all-plots-data') ? (event) => {
+                    this.plotsTableBody.find(`[data-edit-param-field][name$="-${$(event.currentTarget).attr('data-all-plots-data')}"]`).datepicker('setDate', event.newDate);
+                } : () => {}
+            });
+
+            $('.gmi-picker-panel.gmi-date-picker').addClass('header-picker');
+        });
     }
 
     rebuildFiltersValues(filtersValues) {
@@ -225,6 +267,7 @@ class FunktionalPlots {
         clearTimeout(this.timeout);
 
         this.timeout = setTimeout(() => {
+            this.plotsTableBody.find('input[data-datepicker-field]').datepicker('destroy');
             this.plotsTableBody.html('');
 
             this.service.getPlots(this.getFilters(), this.getSortData()).then((plotsData) => {
@@ -236,6 +279,15 @@ class FunktionalPlots {
     appendPlotsToTable(plotsData) {
         plotsData.forEach((plotData) => {
             this.plotsTableBody.append(this.buildPlotRow(plotData));
+        });
+
+        this.plotsTableBody.find('input[data-datepicker-field]').toArray().forEach((dateField) => {
+            $(dateField).datepicker({
+                lang : 'pl-PL',
+                type: 'datetime',
+                format: 'HH:mm dd-MM-yyyy',
+                placeholder: ''
+            });
         });
 
         this.initEditPlotActions();
@@ -258,6 +310,21 @@ class FunktionalPlots {
             return select + '</select>';
         };
 
+        const getFormattedDate = (date) => {
+            try {
+                if (!date) {
+                    return '';
+                } else {
+                    const momentDate = moment(parseInt(date) * 1000);
+
+                    return momentDate.isValid() ? momentDate.tz('Europe/Warsaw').format('HH:mm DD-MM-YYYY') : '';
+                }
+            } catch (e) {
+                console.warn('error creating date from date:', date, ' status: ', e);
+                return '';
+            }
+        };
+
         return params ? `<tr class="author-self status-publish hentry">
                             <td class="column-primary status-column">
                                 <input type="hidden" name="postId" value="${params.postId}" />
@@ -276,6 +343,10 @@ class FunktionalPlots {
                             </td>
                             <td class="column-primary">
                                 <input type="number" data-edit-param-field name="${params.postId}-discount" value="${params.discount}" />
+                            </td>  
+                            <td class="column-primary">
+                                <input data-edit-param-field name="${params.postId}-discount_date"
+                                        value="${getFormattedDate(params.discount_date)}" type="text" data-datepicker-field>
                             </td>
                             <td class="column-primary">
                                 <button data-save-plot class="button action">Zapisz</button>
@@ -364,7 +435,8 @@ class FunktionalPlots {
         const editData = {plotId, fields: {}};
 
         inputs.toArray().forEach(input => {
-            editData.fields[$(input).attr('name').replace(`${plotId}-`, '')] = $(input).val();
+            editData.fields[$(input).attr('name').replace(`${plotId}-`, '')] =
+                $(input).is('[data-datepicker-field]') && $(input).val() ? moment($(input).val(), 'HH:mm DD-MM-YYYY').unix() : $(input).val();
         });
 
         return editData;

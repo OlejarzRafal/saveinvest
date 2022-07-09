@@ -1,5 +1,6 @@
 @import "../../../node_modules/toastr/build/toastr.min.css";
 @import "../../../node_modules/select2/dist/css/select2.min.css";
+@import "../../../node_modules/gemini-datepicker/dist/css/jquery.datepicker.min.css";
 
 .funktional-plots {
   &__filters {
@@ -48,6 +49,10 @@
   &__table {
     input {
       max-width: 90%;
+
+      &[data-datepicker-field] {
+        background: white !important;
+      }
     }
 
     .status-column {

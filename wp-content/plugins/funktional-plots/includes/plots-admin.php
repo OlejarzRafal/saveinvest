@@ -131,7 +131,7 @@ class PlotsAdmin
 
         $plotsPosts = get_posts(array(
             'post_type' => 'plots',
-            'posts_per_page' => -1,
+            'posts_per_page' => 100,
             'post_status' => array('publish', 'private'),
             'meta_query' => $meta_query,
             'orderby' => in_array($data['sort']['sortBy'], array('plotNr', 'discount', 'priceNetto', 'area')) ? 'meta_value_num' : 'meta_value',

@@ -121,6 +121,10 @@
                                 </div>
                                 <input data-all-plots-data="discount" type="number">
                             </th>
+                            <th scope="col" class="manage-column">
+                                <span>Data obowiązywania rabatu</span>
+                                <input data-all-plots-data="discount_date" type="text" data-datepicker-field>
+                            </th>
                             <th scope="col" class="manage-column"><button data-save-all-plots class="page-title-action">Zapisz Wszystkie</button></th>
                             <th scope="col" class="manage-column"></th>
                         </tr>
