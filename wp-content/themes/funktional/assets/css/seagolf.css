@@ -6319,6 +6319,23 @@ set the font for the header here
       .plotModal .plotModal-difference p span {
         font-weight: bold;
         font-size: 20px; }
+  .plotModal .plotModal-discount-for-date {
+    position: absolute;
+    background: #b41818;
+    left: 229px;
+    top: -22px;
+    height: 44px;
+    color: white;
+    width: calc(100% - 228px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 500;
+    font-size: 14px;
+    flex-direction: column;
+    font-size: 14px; }
+    .plotModal .plotModal-discount-for-date [data-plot-info-param] {
+      font-weight: 700; }
   .plotModal .plotModal-content {
     display: flex; }
     .plotModal .plotModal-content__img {

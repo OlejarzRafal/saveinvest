@@ -177,15 +177,15 @@ class PlotsAdmin
 
     public function addBackToPlotsLink()
     {
-        echo '<script>
-                (function($) {
-                  $(document).ready(function () {
-                      if ($(".acf-postbox .postbox-header > h2").length && $(".acf-postbox .postbox-header > h2").text() === "Działka") {
-                         jQuery("h1.wp-heading-inline + .page-title-action").after("<a href=\\"' . admin_url('/admin.php?page=plots') . '\\" class=\\"page-title-action\\">Powrót do listy działek</a>")
-                      }
-                  })
-                })(jQuery);
-        </script>';
+        // echo '<script>
+        //         (function($) {
+        //           $(document).ready(function () {
+        //               if ($(".acf-postbox .postbox-header > h2").length && $(".acf-postbox .postbox-header > h2").text() === "Działka") {
+        //                  jQuery("h1.wp-heading-inline + .page-title-action").after("<a href=\\"' . admin_url('/admin.php?page=plots') . '\\" class=\\"page-title-action\\">Powrót do listy działek</a>")
+        //               }
+        //           })
+        //         })(jQuery);
+        // </script>';
     }
 
     private function getPlotsObjectFromPosts($plotsPosts)

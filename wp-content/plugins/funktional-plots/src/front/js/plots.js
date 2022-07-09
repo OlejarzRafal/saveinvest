@@ -86,7 +86,7 @@ class PlotDataElement {
                         } else {
                             const momentDate = moment(parseInt(date) * 1000);
 
-                            return momentDate.isValid() ? momentDate.tz('Europe/Warsaw').format('HH:mm DD-MM-YYYY') : '';
+                            return momentDate.isValid() ? momentDate.tz('Europe/Warsaw').format('DD-MM-YYYY') : '';
                         }
                     } catch (e) {
                         console.warn('error creating date from date:', date, ' status: ', e);

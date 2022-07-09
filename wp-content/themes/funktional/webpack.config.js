@@ -100,7 +100,7 @@ module.exports = {
         new BrowserSyncPlugin({
             host: "localhost",
             port: 3000,
-            proxy: "http://localhost/saveinvest",
+            proxy: "http://localhost/gitsaveinvest",
             files: ["*.php"],
             injectChanges: true,
             notify: true,

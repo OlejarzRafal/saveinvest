@@ -1,5 +1,5 @@
 .plotModal {
-    border: 1px solid  $gold-dark;
+    border: 1px solid $gold-dark;
     position: relative;
     padding: 36px;
     width: 780px;
@@ -19,6 +19,10 @@
             .plotModal-status {
                 color: #b41818;
             }
+            // .plotModal-difference,
+            // .plotModal-discount-for-date{
+            //     display: none !important;
+            // }
         }
     }
 
@@ -78,6 +82,25 @@
             }
         }
     }
+    .plotModal-discount-for-date {
+        position: absolute;
+        background: rgb(180,24,24);
+        left: 229px;
+        top: -22px;
+        height: 44px;
+        color: rgb(255, 255, 255);
+        width: calc(100% - 228px);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: 500;
+        font-size: 14px;
+        flex-direction: column;
+        font-size: 14px;
+        [data-plot-info-param]{
+            font-weight: 700;
+        } 
+    }
     .plotModal-content {
         display: flex;
         &__img {
@@ -95,7 +118,7 @@
             align-items: center;
             gap: 20px;
             &__number {
-                font-family:$playfair;
+                font-family: $playfair;
                 font-weight: normal;
                 font-size: 56px;
                 line-height: 66px;
@@ -213,24 +236,23 @@
                 background-color: white;
                 transition: all 0.2s;
                 font-weight: bold;
-                border:1px solid $gold-dark;
+                border: 1px solid $gold-dark;
                 span {
                     display: block;
                     margin-left: 15px;
                     position: relative;
-                
                 }
                 svg {
                     path {
-                        stroke:  $gold-dark;
+                        stroke: $gold-dark;
                     }
                 }
-                &:hover{
+                &:hover {
                     background-color: $gold-dark;
-                    color:white;
+                    color: white;
                     svg {
                         path {
-                            stroke:  white;
+                            stroke: white;
                         }
                     }
                 }
@@ -242,8 +264,8 @@
         left: 15px !important;
     }
     @media (max-width: 767px) {
-        &.stay-visible{
-            box-shadow:0px 0px 100vw 100vh rgba(0,0,0,0.7);
+        &.stay-visible {
+            box-shadow: 0px 0px 100vw 100vh rgba(0, 0, 0, 0.7);
         }
         width: calc(100% - 30px);
         .plotModal-btn {
@@ -279,11 +301,11 @@
                 }
                 &__desc {
                     gap: 5px;
-                    .plot-desc{
-                        &__rate{
-                            &__beforeDiscount{
-                                &:before{
-                                    top:7px;
+                    .plot-desc {
+                        &__rate {
+                            &__beforeDiscount {
+                                &:before {
+                                    top: 7px;
                                 }
                             }
                         }
