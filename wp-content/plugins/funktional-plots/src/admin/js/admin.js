@@ -3,33 +3,10 @@ import toastr from 'toastr';
 import DoubleSlider from 'double-slider';
 import 'select2';
 import * as moment from 'moment-timezone';
-import 'gemini-datepicker';
+import flatpickr from "flatpickr";
+import { Polish } from "flatpickr/dist/l10n/pl.js"
 
-
-// DATEPICKER LOCALE CONFIG
-(function (factory, jQuery) {
-    typeof define === 'function' && define.amd ? define('datepicker.en-US', ['jquery'], factory) : factory(typeof exports === 'object' ? require('jquery') : jQuery);
-})(function ($) {
-    $.fn.datepicker.lang['pl-PL'] = {
-        days: ['Niedziela', 'Poniedziałek', 'Wtorek', 'Środa', 'Czwartek', 'Piątek', 'Sobota'],
-        daysMin: ['Nie', 'Pon', 'Wt', 'Śr', 'Czw', 'Pt', 'Sob'],
-        months: ['Styczeń', 'Luty', 'Marzec', 'Kwiecień', 'Maj', 'Czerwiec', 'Lipiec', 'Sierpień', 'Wrzesień', 'Październik', 'Listopad', 'Grudzień'],
-        monthsShort: ['Sty', 'Lut', 'Mar', 'Kwi', 'Maj', 'Cze', 'Lip', 'Sie', 'Wrz', 'Paź', 'Lis', 'Gru'],
-        yearSuffix: '',
-        monthSuffix: '',
-        todaySuffix: 'Dziś',
-        dateInputPlaceholder: 'Wybierz datę',
-        rangeStartInputPlaceholder: 'Od',
-        rangeEndPlaceholder: 'Do',
-        dateTimeInputPlaceholder: 'Wybierz godzinę',
-        rangeStartTimeInputPlaceholder: 'Od',
-        rangeEndTimeInputPlaceholder: 'Do',
-        nowDateButton: 'Teraz',
-        confirmDateButton: 'Zapisz',
-        cancelTimeButton: 'Anuluj',
-        clearButton: 'Reset'
-    };
-}, $);
+flatpickr.localize(Polish);
 
 class FunktionalPlotsService {
     getFiltersValues() {
@@ -212,14 +189,21 @@ class FunktionalPlots {
         });
 
         this.plotsTableHead.find('input[data-datepicker-field]').toArray().forEach((dateField) => {
-            $(dateField).datepicker({
-                lang : 'pl-PL',
-                type: 'datetime',
-                format: 'HH:mm dd-MM-yyyy',
-                placeholder: '',
-                onChange: $(dateField).attr('data-all-plots-data') ? (event) => {
-                    this.plotsTableBody.find(`[data-edit-param-field][name$="-${$(event.currentTarget).attr('data-all-plots-data')}"]`).datepicker('setDate', event.newDate);
-                } : () => {}
+            const dateFieldFlatpickr = flatpickr(dateField, {
+                enableTime: true,
+                dateFormat: "H:i d-m-Y",
+                defaultDate: '',
+                time_24hr: true,
+                onChange: ([selectedDate]) => {
+                    this.plotsTableBody.find(`[data-edit-param-field][name$="-${$(dateField).attr('data-all-plots-data')}"]`).toArray().forEach(flatpickrEl => {
+                        flatpickrEl._flatpickr.setDate(selectedDate);
+                    });
+                },
+                onClose: () => {
+                    this.plotsTableBody.find(`[data-edit-param-field][name$="-${$(dateField).attr('data-all-plots-data')}"]`).toArray().forEach(flatpickrEl => {
+                        flatpickrEl._flatpickr.setDate(dateFieldFlatpickr.selectedDates[0]);
+                    });
+                }
             });
 
             $('.gmi-picker-panel.gmi-date-picker').addClass('header-picker');
@@ -267,7 +251,9 @@ class FunktionalPlots {
         clearTimeout(this.timeout);
 
         this.timeout = setTimeout(() => {
-            this.plotsTableBody.find('input[data-datepicker-field]').datepicker('destroy');
+            this.plotsTableBody.find('input[data-datepicker-field]').toArray().forEach(flatpickrEl => {
+                flatpickrEl._flatpickr.destroy();
+            });
             this.plotsTableBody.html('');
 
             this.service.getPlots(this.getFilters(), this.getSortData()).then((plotsData) => {
@@ -282,11 +268,11 @@ class FunktionalPlots {
         });
 
         this.plotsTableBody.find('input[data-datepicker-field]').toArray().forEach((dateField) => {
-            $(dateField).datepicker({
-                lang : 'pl-PL',
-                type: 'datetime',
-                format: 'HH:mm dd-MM-yyyy',
-                placeholder: ''
+            flatpickr(dateField, {
+                enableTime: true,
+                dateFormat: "H:i d-m-Y",
+                defaultDate: '',
+                time_24hr: true
             });
         });
 
