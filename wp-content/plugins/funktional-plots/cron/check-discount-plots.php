@@ -3,6 +3,8 @@ require_once("./../../../../wp-load.php");
 
 date_default_timezone_set("Europe/Warsaw");
 
+header('x-litespeed-purge: *');
+
 $REPORT_MAIL_LIST = array(
     'testdevtom7@gmail.com'
 );

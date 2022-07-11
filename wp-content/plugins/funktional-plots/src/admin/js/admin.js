@@ -8,6 +8,10 @@ import { Polish } from "flatpickr/dist/l10n/pl.js"
 
 flatpickr.localize(Polish);
 
+const USERS_WITH_DATE_TIME_PICKER = [
+    'r.olejarz@funktional.pl',
+]
+
 class FunktionalPlotsService {
     getFiltersValues() {
         return $.post(`${window.FunktionalGlobals.homeUrl}wp-json/funktional-plots/v1/filters`);
@@ -57,9 +61,8 @@ class FunktionalPlots {
         this.plotsTableBody = $('.funktional-plots__table tbody');
         this.filtersForm = $('.funktional-plots__filters');
         this.rangeSliders = {};
-        this.timeout = setTimeout(() => {
-        });
-
+        this.timeout = setTimeout(() => {});
+        this.enableTime = USERS_WITH_DATE_TIME_PICKER.indexOf(window.FunktionalGlobals.currentUser) !== -1;
         this.initFilters(true);
     }
 
@@ -190,10 +193,10 @@ class FunktionalPlots {
 
         this.plotsTableHead.find('input[data-datepicker-field]').toArray().forEach((dateField) => {
             const dateFieldFlatpickr = flatpickr(dateField, {
-                enableTime: true,
-                dateFormat: "H:i d-m-Y",
+                enableTime: this.enableTime,
+                dateFormat: this.enableTime ? "H:i d-m-Y" : "d-m-Y",
                 defaultDate: '',
-                time_24hr: true,
+                time_24hr: this.enableTime,
                 onChange: ([selectedDate]) => {
                     this.plotsTableBody.find(`[data-edit-param-field][name$="-${$(dateField).attr('data-all-plots-data')}"]`).toArray().forEach(flatpickrEl => {
                         flatpickrEl._flatpickr.setDate(selectedDate);
@@ -269,10 +272,10 @@ class FunktionalPlots {
 
         this.plotsTableBody.find('input[data-datepicker-field]').toArray().forEach((dateField) => {
             flatpickr(dateField, {
-                enableTime: true,
-                dateFormat: "H:i d-m-Y",
+                enableTime: this.enableTime,
+                dateFormat: this.enableTime ? "H:i d-m-Y" : "d-m-Y",
                 defaultDate: '',
-                time_24hr: true
+                time_24hr: this.enableTime,
             });
         });
 
@@ -303,7 +306,8 @@ class FunktionalPlots {
                 } else {
                     const momentDate = moment(parseInt(date) * 1000);
 
-                    return momentDate.isValid() ? momentDate.tz('Europe/Warsaw').format('HH:mm DD-MM-YYYY') : '';
+                    return momentDate.isValid() ? momentDate.tz('Europe/Warsaw')
+                        .format(this.enableTime ? 'HH:mm DD-MM-YYYY' : 'DD-MM-YYYY') : '';
                 }
             } catch (e) {
                 console.warn('error creating date from date:', date, ' status: ', e);
@@ -421,8 +425,15 @@ class FunktionalPlots {
         const editData = {plotId, fields: {}};
 
         inputs.toArray().forEach(input => {
-            editData.fields[$(input).attr('name').replace(`${plotId}-`, '')] =
-                $(input).is('[data-datepicker-field]') && $(input).val() ? moment($(input).val(), 'HH:mm DD-MM-YYYY').unix() : $(input).val();
+            if ($(input).is('[data-datepicker-field]')) {
+                if (this.enableTime) {
+                    editData.fields[$(input).attr('name').replace(`${plotId}-`, '')] = moment($(input).val(), 'HH:mm DD-MM-YYYY').unix();
+                } else {
+                    editData.fields[$(input).attr('name').replace(`${plotId}-`, '')] = moment($(input).val(), 'DD-MM-YYYY').endOf('day').unix();
+                }
+            } else {
+                editData.fields[$(input).attr('name').replace(`${plotId}-`, '')] = $(input).val();
+            }
         });
 
         return editData;

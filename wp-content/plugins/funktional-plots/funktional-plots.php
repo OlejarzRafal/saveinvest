@@ -97,8 +97,11 @@ class FunktionalPlots
     {
         require(__DIR__ . '/model/plots-acf-fields.php');
 
+        $currentUser = wp_get_current_user();
+
         echo '<script>
                 window.FunktionalGlobals = {
+                    currentUser: "' . ($currentUser->user_email ? $currentUser->user_email : '') . '",
                     homeUrl: "' . home_url('/') . '",
                     adminUrl: "' . admin_url('/') . '",
                     postDeleteNonceUrl: "' . wp_nonce_url(admin_url('/post.php?post=postIdReplace&action=trash&_wpnonce=9d6899c866')) . '",
