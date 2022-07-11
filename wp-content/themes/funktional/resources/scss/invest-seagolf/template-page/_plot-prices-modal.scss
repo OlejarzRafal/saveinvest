@@ -19,16 +19,13 @@
             .plotModal-status {
                 color: #b41818;
             }
-            // .plotModal-difference,
-            // .plotModal-discount-for-date{
-            //     display: none !important;
-            // }
         }
     }
 
     .plotModal-close {
         position: absolute;
-        top: 20px;
+        // top: 20px;
+        top: 35px;
         right: 18px;
         cursor: pointer;
         img {
@@ -81,25 +78,6 @@
                 font-size: 20px;
             }
         }
-    }
-    .plotModal-discount-for-date {
-        position: absolute;
-        background: rgb(180,24,24);
-        left: 229px;
-        top: -22px;
-        height: 44px;
-        color: rgb(255, 255, 255);
-        width: calc(100% - 228px);
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-weight: 500;
-        font-size: 14px;
-        flex-direction: column;
-        font-size: 14px;
-        [data-plot-info-param]{
-            font-weight: 700;
-        } 
     }
     .plotModal-content {
         display: flex;
@@ -287,6 +265,8 @@
             }
         }
         .plotModal-content {
+            flex-direction: column;
+            align-items: center;
             &__desc {
                 margin-left: 0;
             }
@@ -339,6 +319,7 @@
                 }
             }
         }
+       
         .plotModal-arrows {
             &__next {
                 right: 4px;
@@ -346,6 +327,10 @@
             &__prev {
                 left: 4px;
             }
+        }
+        .plotModal-close {
+            top: 10px;
+            right: 10px;
         }
     }
 }

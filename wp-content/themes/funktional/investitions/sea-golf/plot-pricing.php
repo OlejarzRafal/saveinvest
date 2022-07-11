@@ -30,12 +30,14 @@ $PlotsFront->getScriptsAndStyles('Resort Sea&golf');
                     <p>TANIEJ O <span data-plot-info-param="difference"></span> %</p>
                 </div>
                 <!-- DISCOUNT DATE -->
-                <div data-plot-info-show-if="discount_date" class="plotModal-discount-for-date">
-                    <div>
-                        <span>Rabat trwa do:&nbsp</span>
-                        <span data-plot-info-param="discount_date" data-plot-info-param-type="date"></span>
+                <div data-plot-info-show-if="discount">
+                    <div data-plot-info-show-if="discount_date" class="plotModal-discount-for-date">
+                        <div>
+                            Rabat <span data-plot-info-param="differenceCount"></span> zł obowiązuje do:&nbsp
+                            <span data-plot-info-param="discount_date" data-plot-info-param-type="date"></span>
+                        </div>
+                        <span>Tylko rezerwacja gwarantuje utrzymanie rabatu.</span>
                     </div>
-                    <span>Tylko rezerwacja gwarantuje utrzymanie rabatu.</span>
                 </div>
             </div>
             <!-- CONTENT -->

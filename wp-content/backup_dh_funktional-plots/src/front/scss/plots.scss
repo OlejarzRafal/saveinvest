@@ -17,41 +17,15 @@
 
     [data-plots-info] {
         display: none;
-        position: fixed;
+        position: absolute;
         left: 100px;
-        top: 160px;
+        top: 100px;
         z-index: 3;
         background: #ffffff;
         pointer-events: none;
 
         &.stay-visible {
             pointer-events: all;
-        }
-        .plotModal-discount-for-date {
-            position: absolute;
-            background: rgb(180, 24, 24);
-            left: 229px;
-            top: -22px;
-            height: 44px;
-            color: rgb(255, 255, 255);
-            width: calc(100% - 228px);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-weight: 500;
-            font-size: 14px;
-            flex-direction: column;
-            [data-plot-info-param="discount_date"] {
-                font-weight: 700;
-            }
-            opacity: 0 !important;
-            @media (max-width: 767px) {
-                left: -1px;
-                width: calc(100% + 2px);
-                top: auto;
-                bottom: -30px;
-                font-size: 13px;
-            }
         }
     }
 
@@ -62,8 +36,7 @@
         // top: 0;
     }
 
-    .plot-sectors,
-    .plot-sector {
+    .plot-sectors,.plot-sector {
         &__svg {
             max-width: 1920px;
             .plot-status {

@@ -24,9 +24,21 @@ $PlotsFront->getScriptsAndStyles('Osada Karwia');
             <div data-plots-info-on-selected data-plots-info-close class="plotModal-close">
                 <img src="<?php bloginfo('template_url'); ?>/assets/img/invest-kladno/ico/close.png" alt="close">
             </div>
-            <!-- DIFFERENCE -->
-            <div class="plotModal-difference" data-plot-info-show-if="discount">
-                <p>TANIEJ O <span data-plot-info-param="difference"></span> %</p>
+            <div data-plot-info-show-if="status!=sprzedana">
+                <!-- DIFFERENCE -->
+                <div data-plot-info-show-if="discount" class="plotModal-difference ">
+                    <p>TANIEJ O <span data-plot-info-param="difference"></span> %</p>
+                </div>
+                <!-- DISCOUNT DATE -->
+                <div data-plot-info-show-if="discount">
+                    <div data-plot-info-show-if="discount_date" class="plotModal-discount-for-date">
+                        <div>
+                            Rabat <span data-plot-info-param="differenceCount"></span> zł obowiązuje do:&nbsp
+                            <span data-plot-info-param="discount_date" data-plot-info-param-type="date"></span>
+                        </div>
+                        <span>Tylko rezerwacja gwarantuje utrzymanie rabatu.</span>
+                    </div>
+                </div>
             </div>
             <!-- CONTENT -->
             <div class="plotModal-content">

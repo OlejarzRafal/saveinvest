@@ -1,12 +1,15 @@
 <?php
 require_once("./../../../../wp-load.php");
+
 date_default_timezone_set("Europe/Warsaw");
 
 $REPORT_MAIL_LIST = array(
-    'pietruha132@gmail.com'
+    'testdevtom7@gmail.com'
 );
 
-$date_utc = (int) (time() - date("Z"));
+// $date_utc = (int) (time() - date("Z"));
+$date_utc = (int) time();
+echo 'data aktualna: ' . $date_utc . '<br>';
 
 $meta_query = array(
     array(
@@ -31,11 +34,13 @@ $plotsPosts = get_posts(array(
 $plotsWithOutdatedPromotion = array();
 
 foreach ($plotsPosts as $plotsPost) {
+    echo 'data ustawiona w wp: ' . (int) get_field('discount_date', $plotsPost->ID) . '<br><br>';
     $promotionIsOutdated = (int) get_field('discount_date', $plotsPost->ID) < $date_utc;
-
     if ($promotionIsOutdated) {
-        //    update_field('discount_date', '', $plotsPost->ID);
-        //    update_field('discount', '', $plotsPost->ID);
+        echo 'po promocji!!! <br><br>';
+
+        update_field('discount_date', '', $plotsPost->ID);
+        update_field('discount', '', $plotsPost->ID);
 
         array_push($plotsWithOutdatedPromotion, array(
             'investition' => get_field('investition', $plotsPost->ID),
@@ -46,6 +51,7 @@ foreach ($plotsPosts as $plotsPost) {
         ));
     }
 }
+
 
 $plotsWithOutdatedPromotionHtml = '<h4>Skończył się rabat dla: </h4><ul>';
 foreach ($plotsWithOutdatedPromotion as $plot) {
