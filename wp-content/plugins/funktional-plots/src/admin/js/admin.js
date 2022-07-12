@@ -426,10 +426,12 @@ class FunktionalPlots {
 
         inputs.toArray().forEach(input => {
             if ($(input).is('[data-datepicker-field]')) {
-                if (this.enableTime) {
-                    editData.fields[$(input).attr('name').replace(`${plotId}-`, '')] = moment($(input).val(), 'HH:mm DD-MM-YYYY').unix();
+                if (!$(input).val()) {
+                    editData.fields[$(input).attr('name').replace(`${plotId}-`, '')] = '';
                 } else {
-                    editData.fields[$(input).attr('name').replace(`${plotId}-`, '')] = moment($(input).val(), 'DD-MM-YYYY').endOf('day').unix();
+                    const momentDate = this.enableTime ? moment($(input).val(), 'HH:mm DD-MM-YYYY') : moment($(input).val(), 'DD-MM-YYYY').endOf('day');
+
+                    editData.fields[$(input).attr('name').replace(`${plotId}-`, '')] = momentDate.isValid() ? momentDate.unix() : '';
                 }
             } else {
                 editData.fields[$(input).attr('name').replace(`${plotId}-`, '')] = $(input).val();

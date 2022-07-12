@@ -7,6 +7,9 @@ header('x-litespeed-purge: *');
 
 $REPORT_MAIL_LIST = array(
     'testdevtom7@gmail.com'
+    // 'b.antos@saveinvest.pl',
+    // 'dzialki@saveinvest.pl',
+    // 'a.setlak@saveinvest.pl'
 );
 
 // $date_utc = (int) (time() - date("Z"));
@@ -41,9 +44,6 @@ foreach ($plotsPosts as $plotsPost) {
     if ($promotionIsOutdated) {
         echo 'po promocji!!! <br><br>';
 
-        update_field('discount_date', '', $plotsPost->ID);
-        update_field('discount', '', $plotsPost->ID);
-
         array_push($plotsWithOutdatedPromotion, array(
             'investition' => get_field('investition', $plotsPost->ID),
             'sector' => get_field('sector', $plotsPost->ID),
@@ -51,18 +51,23 @@ foreach ($plotsPosts as $plotsPost) {
             'discount_date' => get_field('discount_date', $plotsPost->ID),
             'discount' => get_field('discount', $plotsPost->ID),
         ));
+
+        update_field('discount_date', '', $plotsPost->ID);
+        update_field('discount', '', $plotsPost->ID);
     }
 }
 
 
 $plotsWithOutdatedPromotionHtml = '<h4>Skończył się rabat dla: </h4><ul>';
 foreach ($plotsWithOutdatedPromotion as $plot) {
-    $plotsWithOutdatedPromotionHtml .= '<li>' . $plot['investition']['label'] . ' ' . $plot['sector']['label'] . $plot['plotNr'] . ' (' . $plot['discount'] . '% do ' . date('H:i d-m-Y', $plot['discount_date']) . ')' . '</li>';
+    $plotsWithOutdatedPromotionHtml .= '<li>' . $plot['investition']['label'] . ' / działka  - ' . $plot['sector']['label'] . $plot['plotNr'] . ' (' . $plot['discount'] . '% do ' . date(' d-m-Y', $plot['discount_date']) . ')' . '</li>';
 }
 $plotsWithOutdatedPromotionHtml .= '</ul>';
 
 echo 'true';
 
+$mailHeaders = array('Content-Type: text/html; charset=UTF-8');
+
 foreach ($REPORT_MAIL_LIST as $mailTo) {
-    wp_mail($mailTo, 'Skończył się rabat', $plotsWithOutdatedPromotionHtml);
+    wp_mail($mailTo, 'Skończył się rabat', $plotsWithOutdatedPromotionHtml, $mailHeaders);
 }
